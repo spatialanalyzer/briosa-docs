@@ -1,0 +1,326 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7.5rem 0 6.5rem;
+  background:
+    linear-gradient(115deg, rgba(7, 22, 32, 0.98), rgba(11, 30, 42, 0.94)),
+    radial-gradient(circle at 80% 20%, rgba(24, 212, 188, 0.28), transparent 36%);
+  color: #f5fbfd;
+}
+
+.glow {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  right: -8rem;
+  top: -13rem;
+  border: 1px solid rgba(101, 242, 215, 0.3);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 5rem rgba(20, 182, 173, 0.035),
+    0 0 0 10rem rgba(20, 182, 173, 0.025);
+}
+
+.heroGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(17rem, 0.75fr);
+  gap: 5rem;
+  align-items: center;
+}
+
+.heroCopy h1 {
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(3.1rem, 6.2vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: #f7fcfd;
+}
+
+.eyebrow,
+.kicker {
+  margin: 0 0 1.1rem;
+  color: #5de4d0;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 42rem;
+  margin: 1.8rem 0 2.2rem;
+  color: #b8ced7;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.actions :global(.button--primary) {
+  border-color: #31d6c0;
+  background: #31d6c0;
+  color: #071a21;
+}
+
+.actions :global(.button--primary:hover) {
+  border-color: #68eedb;
+  background: #68eedb;
+  color: #071a21;
+}
+
+.actions :global(.button--outline) {
+  border-color: #5f7985;
+  color: #e6f5f7;
+}
+
+.targetCard {
+  padding: 1.7rem;
+  border: 1px solid rgba(135, 219, 215, 0.22);
+  border-radius: 1.2rem;
+  background: rgba(11, 35, 45, 0.72);
+  box-shadow: 0 2rem 5rem rgba(1, 11, 16, 0.32);
+  backdrop-filter: blur(14px);
+}
+
+.liveDot {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: #47e0b7;
+  box-shadow: 0 0 0 0.3rem rgba(71, 224, 183, 0.12);
+}
+
+.cardLabel {
+  display: inline;
+  color: #91b3bd;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.targetVersion {
+  margin: 1.15rem 0 1.4rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #f6ffff;
+}
+
+.targetCard dl {
+  margin: 0;
+}
+
+.targetCard dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(143, 197, 204, 0.13);
+}
+
+.targetCard dt {
+  color: #83a2ac;
+}
+
+.targetCard dd {
+  margin: 0;
+  color: #e4f0f2;
+  text-align: right;
+}
+
+.section,
+.operationsSection {
+  padding: 6.5rem 0;
+}
+
+.sectionHeading {
+  max-width: 47rem;
+  margin-bottom: 3rem;
+}
+
+.sectionHeading h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -0.035em;
+}
+
+.sectionHeading > p:last-child {
+  color: var(--briosa-muted);
+  font-size: 1.08rem;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: stretch;
+}
+
+.flowNode {
+  display: flex;
+  min-height: 11rem;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid var(--briosa-border);
+  border-radius: 0.85rem;
+  background: var(--briosa-surface);
+}
+
+.flowNode span {
+  color: var(--ifm-color-primary);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+}
+
+.flowNode strong {
+  margin: auto 0 0.45rem;
+  color: var(--ifm-heading-color);
+  font-size: 1.03rem;
+}
+
+.flowNode small {
+  color: var(--briosa-muted);
+  line-height: 1.45;
+}
+
+.flowArrow {
+  display: grid;
+  width: 2.2rem;
+  place-items: center;
+  color: var(--ifm-color-primary);
+  font-size: 1.3rem;
+}
+
+.operationsSection {
+  background: var(--briosa-soft);
+}
+
+.operationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.operationCard {
+  display: flex;
+  min-height: 15rem;
+  flex-direction: column;
+  padding: 1.6rem;
+  border: 1px solid var(--briosa-border);
+  border-radius: 1rem;
+  background: var(--briosa-surface);
+  color: inherit;
+  box-shadow: 0 0.8rem 2.6rem rgba(2, 21, 29, 0.06);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease;
+}
+
+.operationCard:hover {
+  border-color: var(--ifm-color-primary);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.operationCard > span {
+  color: var(--ifm-color-primary);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.76rem;
+}
+
+.operationCard h3 {
+  margin: 1rem 0 0.8rem;
+  overflow-wrap: anywhere;
+  font-size: 1.3rem;
+}
+
+.operationCard p {
+  color: var(--briosa-muted);
+}
+
+.operationCard strong {
+  margin-top: auto;
+  color: var(--ifm-color-primary);
+  font-size: 0.88rem;
+}
+
+.disclaimer {
+  padding: 4rem 0;
+  border-top: 1px solid var(--briosa-border);
+}
+
+.disclaimer :global(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.disclaimer h2 {
+  font-size: 1.55rem;
+}
+
+.disclaimer p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--briosa-muted);
+}
+
+.disclaimer a {
+  flex: none;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .targetCard {
+    max-width: 32rem;
+  }
+
+  .flow {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .flowArrow {
+    width: auto;
+    height: 1rem;
+    transform: rotate(90deg);
+  }
+
+  .flowNode {
+    min-height: 9rem;
+  }
+
+  .operationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .disclaimer :global(.container) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .operationCard {
+    transition: none;
+  }
+}
