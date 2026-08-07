@@ -3,6 +3,8 @@ title: MP command catalog
 description: Browse the evolving, exact-target catalog of SpatialAnalyzer MP commands and their Briosa support status.
 ---
 
+import Link from '@docusaurus/Link';
+
 # MP command catalog
 
 This catalog describes the retained SpatialAnalyzer MP command surface for each
@@ -10,28 +12,28 @@ exact target Briosa reviews. It is broader than the Briosa API: it will include
 supported commands, commands being evaluated for v1, and commands Briosa does
 not plan or cannot implement.
 
-The first target is SpatialAnalyzer `2026.1.0529.7`.
-
 :::important[Catalog entries are not API]
 
 Only an entry explicitly marked **Supported** describes a committed Briosa
 operation. The authoritative contracts and operation registry live in the
-[Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/main/targets/2026.1.0529.7).
+[Briosa server repository](https://github.com/spatialanalyzer/briosa).
 For a running server, `DiscoveryService/ListCapabilities` reports the subset
 currently admitted by policy.
 
 :::
 
-## Browse SA 2026.1.0529.7
+## Browse exact targets
 
-| Command group | Published commands | Current contents |
-| --- | ---: | --- |
-| [Current application context](./2026.1.0529.7/current-context.md) | 4 | working directory, active collection, active units, and working frame |
-| [Collection inspection](./2026.1.0529.7/collection-inspection.md) | 2 | collection count and indexed collection names |
-
-These first pages cover the six MP commands currently supported by Briosa.
-Additional logical groups will be added as the retained command inventory is
-reviewed and dispositioned during v0.x development.
+<div className="catalog-group-grid">
+  <Link
+    className="catalog-group-card"
+    to="/docs/mp-command-catalog/2026.1.0529.7/overview">
+    <span className="catalog-group-kicker">Current catalog target</span>
+    <strong>SpatialAnalyzer 2026.1.0529.7</strong>
+    <p>Browse the SA-native group hierarchy and currently published command entries.</p>
+    <span className="catalog-group-link">Open target catalog →</span>
+  </Link>
+</div>
 
 ## How to read status
 
@@ -50,11 +52,11 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Coverage during v0.x
 
-The catalog is being built content-first in logical command groups, so absence
-from these pages currently means only that the group has not been published.
-It is not a support, exclusion, or SpatialAnalyzer-availability claim.
+The catalog is being built content-first in SpatialAnalyzer's exact-target
+group hierarchy. Absence from the published pages currently means only that a
+group has not been documented; it is not a support, exclusion, or
+SpatialAnalyzer-availability claim.
 
-Before the SA `2026.1.0529.7` v1 documentation freeze, every retained command
-identity will need a reviewed entry and no command may remain **Under review**.
-The disposition work is tracked in
-[`spatialanalyzer/briosa#152`](https://github.com/spatialanalyzer/briosa/issues/152).
+Before an exact target reaches its v1 documentation freeze, every retained
+command identity will need a reviewed entry and no command may remain **Under
+review**.

@@ -19,6 +19,9 @@
   --briosa-soft: #f0f6f5;
   --briosa-border: #d9e5e5;
   --briosa-muted: #526b72;
+  --briosa-supported-background: #e8f7f2;
+  --briosa-supported-border: #89cdbb;
+  --briosa-supported-text: #126b5d;
 }
 
 [data-theme='dark'] {
@@ -38,6 +41,9 @@
   --briosa-soft: #0a1b23;
   --briosa-border: #213943;
   --briosa-muted: #9fb5bd;
+  --briosa-supported-background: #102f2a;
+  --briosa-supported-border: #357e70;
+  --briosa-supported-text: #8cebd5;
 }
 
 .navbar {
@@ -78,4 +84,205 @@
 
 code {
   border: 1px solid var(--briosa-border);
+}
+
+.catalog-path {
+  margin-top: -0.6rem;
+  color: var(--briosa-muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.catalog-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
+}
+
+.catalog-group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
+}
+
+.catalog-summary-card,
+.catalog-group-card {
+  border: 1px solid var(--briosa-border);
+  border-radius: 0.75rem;
+  background: var(--briosa-surface);
+  padding: 1.1rem 1.2rem;
+}
+
+.catalog-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.catalog-summary-card span,
+.catalog-group-kicker {
+  color: var(--briosa-muted);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.catalog-summary-card strong {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.catalog-summary-card small {
+  color: var(--briosa-muted);
+}
+
+.catalog-group-card {
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.catalog-group-card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0.5rem 1.4rem rgba(9, 40, 46, 0.08);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.catalog-group-card:focus-visible,
+.catalog-tree-branch summary:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.catalog-group-card strong {
+  margin-top: 0.4rem;
+  font-size: 1.12rem;
+}
+
+.catalog-group-card p {
+  margin: 0.6rem 0 1rem;
+  color: var(--briosa-muted);
+  font-size: 0.92rem;
+}
+
+.catalog-group-link {
+  margin-top: auto;
+  color: var(--ifm-link-color);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.catalog-context-grid,
+.catalog-command-meta {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.catalog-context-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.catalog-command-meta {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.catalog-context-grid > div,
+.catalog-command-meta > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-left: 3px solid var(--briosa-border);
+  padding: 0.2rem 0 0.2rem 0.8rem;
+}
+
+.catalog-context-grid span,
+.catalog-command-meta span {
+  color: var(--briosa-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.catalog-context-grid strong,
+.catalog-command-meta code {
+  overflow-wrap: anywhere;
+}
+
+.catalog-status {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.catalog-status--supported {
+  border-color: var(--briosa-supported-border);
+  background: var(--briosa-supported-background);
+  color: var(--briosa-supported-text);
+}
+
+.catalog-tree {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.catalog-tree-branch {
+  border: 1px solid var(--briosa-border);
+  border-radius: 0.65rem;
+  background: var(--briosa-surface);
+  padding: 0.8rem 1rem;
+}
+
+.catalog-tree-branch summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.catalog-tree-branch summary span {
+  float: right;
+  color: var(--briosa-muted);
+  font-size: 0.82rem;
+  font-weight: 550;
+}
+
+.catalog-tree-branch ul {
+  margin: 0.8rem 0 0.2rem;
+}
+
+@media (max-width: 700px) {
+  .catalog-context-grid,
+  .catalog-command-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-tree-branch summary span {
+    display: block;
+    float: none;
+    margin: 0.25rem 0 0 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog-group-card {
+    transition: none;
+  }
 }
