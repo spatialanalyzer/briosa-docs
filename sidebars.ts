@@ -44,7 +44,10 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Contribute',
-      items: ['contributing/documentation'],
+      items: [
+        'contributing/documentation',
+        'contributing/mp-command-catalog',
+      ],
     },
   ],
 };

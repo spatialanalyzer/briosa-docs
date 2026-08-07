@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://spatialanalyzer.github.io/briosa-docs/catalog/schemas/v1/target.schema.json",
+  "title": "Briosa MP catalog exact-target manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "exact_target",
+    "publication_phase",
+    "record_directory",
+    "coverage"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "../../schemas/v1/target.schema.json"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "exact_target": {
+      "type": "string",
+      "pattern": "^[0-9]+(?:\\.[0-9]+)+$"
+    },
+    "publication_phase": {
+      "enum": [
+        "v0_development",
+        "v1_release"
+      ]
+    },
+    "record_directory": {
+      "const": "commands"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expected_command_count",
+        "require_complete"
+      ],
+      "properties": {
+        "expected_command_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "require_complete": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "type": "object",
+        "properties": {
+          "publication_phase": {
+            "const": "v1_release"
+          }
+        }
+      },
+      "then": {
+        "type": "object",
+        "properties": {
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "require_complete": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
