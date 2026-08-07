@@ -16,7 +16,7 @@ Documentation work follows the same issue-driven workflow as the server:
 ## Review checklist
 
 - Does the protobuf contract or handwritten operation registry support every API claim?
-- Does catalog content follow the [MP command catalog model](./mp-command-catalog.md)
+- Does catalog content follow the [MP command catalog authoring guide](./mp-command-catalog.md)
   without presenting planned or unsupported work as API?
 - Is the exact SpatialAnalyzer target explicit where compatibility matters?
 - Are runtime observations described as evidence rather than vendor guarantees?

@@ -24,6 +24,21 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'MP command catalog',
+      items: [
+        'mp-command-catalog/overview',
+        {
+          type: 'category',
+          label: 'SA 2026.1.0529.7',
+          items: [
+            'mp-command-catalog/2026.1.0529.7/current-context',
+            'mp-command-catalog/2026.1.0529.7/collection-inspection',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Operations',
       items: [
         'operations/overview',

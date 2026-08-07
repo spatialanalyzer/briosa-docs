@@ -24,6 +24,24 @@ const operations = [
     detail: 'Resolve a zero-based collection index to its name.',
     href: '/docs/operations/get-i-th-collection-name',
   },
+  {
+    service: 'ConstructionOperations',
+    rpc: 'GetActiveCollectionName',
+    detail: 'Read the name of the currently active collection.',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-active-collection-name',
+  },
+  {
+    service: 'UtilityOperations',
+    rpc: 'GetActiveUnits',
+    detail: 'Read the active length, angular, and temperature units.',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-active-units',
+  },
+  {
+    service: 'UtilityOperations',
+    rpc: 'GetWorkingFrameProperties',
+    detail: 'Read the current frame name, collection, and typed working frame.',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-working-frame-properties',
+  },
 ];
 
 function HomepageHeader() {
@@ -64,7 +82,7 @@ function HomepageHeader() {
               </div>
               <div>
                 <dt>Surface</dt>
-                <dd>3 read-only MPs</dd>
+                <dd>6 read-only MPs</dd>
               </div>
               <div>
                 <dt>Default binding</dt>
@@ -126,7 +144,7 @@ function Operations() {
       <div className="container">
         <div className={styles.sectionHeading}>
           <p className={styles.kicker}>Small, reviewed surface</p>
-          <Heading as="h2">Start with three read-only operations</Heading>
+          <Heading as="h2">Explore six read-only operations</Heading>
           <p>
             Each supported MP is a handwritten vertical slice with a protobuf
             contract, server and worker mapping, tests, policy metadata, and

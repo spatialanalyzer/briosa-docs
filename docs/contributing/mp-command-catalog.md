@@ -1,120 +1,61 @@
 ---
-title: MP command catalog model
+title: Author MP command catalog pages
 ---
 
-# MP command catalog model
+# Author MP command catalog pages
 
-The MP command catalog documents every retained command identity for one exact
-SpatialAnalyzer target, including commands Briosa does not support. Its purpose
-is to answer four separate questions:
+The MP command catalog will document every retained command identity for each
+supported exact SpatialAnalyzer target. It includes commands Briosa supports,
+commands still under review, and commands the project ultimately does not plan
+to support.
 
-1. Does Briosa support this command now?
-2. Has the project selected it for the v1 surface?
-3. If it is not supported, what is its reviewed disposition and recommended
-   alternative?
-4. What validation limitations qualify the record?
+The catalog is currently content-first. Work through real command groups before
+introducing a permanent metadata model, generated index, or completeness
+validator.
 
-:::caution Documentation is not runtime policy
+## Group related commands
 
-Catalog records do not define protobuf, generate operations, admit commands at
-runtime, create client methods, or impose Briosa build completeness. The
-handwritten source in
-[`spatialanalyzer/briosa`](https://github.com/spatialanalyzer/briosa) remains
-authoritative. Static documentation code in this repository is the only
-permitted consumer of catalog data.
+Create pages around a coherent MP category, subcategory, or user workflow. A
+page should contain several commands when they share enough context to be
+understood together. Split a page when the commands have materially different
+purposes or the result is difficult to navigate.
 
-:::
+Do not create one page per retained command by default. A supported operation
+may still have a separate usage guide when it needs request examples, response
+semantics, or operational cautions beyond its catalog entry.
 
-## Files and identity
+## Write each command section
 
-Each exact target has a manifest at
-`catalog/sa/<exact-target>/target.json` and one JSON record per command below
-its `commands` directory.
+Use the exact MP step as the section heading so Docusaurus produces a readable
+command anchor. State the exact target and current public status. Then include
+the facts a user needs:
 
-- `command_id` is the exact `inventory_key` from the retained Briosa
-  exact-target inventory. It is unique within the target and does not change
-  when a title or disposition changes.
-- `slug` is an explicit, lowercase ASCII path made from kebab-case segments.
-  The record path below `commands` must equal `<slug>.json`.
-- Slugs are chosen once, must be unique within the target, and remain stable
-  after publication. Do not recompute a published slug from a changed MP title.
-- When otherwise natural slugs collide, add a short, meaningful category or
-  source qualifier. Do not use array position as identity.
-- `exact_target`, `mp_step`, and `category_path` preserve the target and MP
-  terminology carried by the curated evidence.
+- the Briosa RPC and operation ID when the command is supported;
+- a concise project-authored explanation of what the command represents;
+- the reviewed rationale when it is deferred, excluded, or SDK unavailable;
+- a recommended alternative, workaround, or a clear statement that none is
+  known when Briosa does not support it; and
+- links to authoritative Briosa source, reviewed decisions, and safe curated
+  evidence where they materially help the reader.
 
-The retained inventory is identity and evidence, not an allowlist, backlog, or
-support decision.
+Avoid duplicating detailed operation guides. Link to them from the catalog
+entry instead.
 
-## Status vocabulary
+## Keep support language precise
 
-The `status` field uses one of these public values:
+Only a command implemented by the committed handwritten protobuf and operation
+registry may be labeled **Supported**. **Selected for v1** means planned, not
+callable. **Under review** is a temporary v0.x disposition, not API. **Deferred
+beyond v1**, **Intentionally excluded**, and **SDK unavailable** are unsupported
+statuses and need a useful explanation.
 
-| Value | Supported now? | Selected for v1? | Meaning |
-| --- | --- | --- | --- |
-| `supported` | yes | delivered | A reviewed handwritten Briosa operation exists. |
-| `selected_for_v1` | no | yes | Implementation is planned for v1 but is not yet API. |
-| `under_review` | no | undecided | Temporary v0.x disposition while evidence and policy are reviewed. |
-| `deferred_beyond_v1` | no | no | Potentially useful, but intentionally outside the v1 surface. |
-| `intentionally_excluded` | no | no | Reviewed policy, safety, scope, or product reasons exclude it. |
-| `sdk_unavailable` | no | no | The exact-target SDK surface cannot implement the MP command as reviewed. |
+Catalog membership, retained inventory membership, and a passing documentation
+build never create Briosa runtime behavior. `DiscoveryService/ListCapabilities`
+remains the authority for what a running process currently admits.
 
-Only `supported` makes a current runtime-support claim. It requires a stable
-Briosa operation ID and a link to authoritative source under the same exact
-target. `selected_for_v1` requires a related implementation or coherent-batch
-issue, but must never be described as callable.
+## Preserve the evidence boundary
 
-`under_review` is valid while the target manifest is in `v0_development`.
-Before the manifest can move to `v1_release`, both `under_review` and
-`selected_for_v1` must reach zero and complete catalog coverage must be
-enforced.
-
-## Validation qualification
-
-Validation is independent from status. `validation.qualifiers` currently
-accepts only `at_risk`, which records a missing fixture, third-party product,
-hardware dependency, license, or unexecuted licensed scenario. It does not
-turn an unsupported command into a supported one, and it does not by itself
-justify exclusion. `validation.summary` states what was and was not proved.
-
-## Rationale and recommendations
-
-Every record has concise, project-authored `rationale` and a reviewed
-`decision_reference`. Every status other than `supported` also requires one
-of:
-
-- `alternative`: use another supported operation or product capability;
-- `workaround`: achieve the outcome through a documented multi-step or manual
-  workflow; or
-- `none_known`: state clearly that the project knows of no safe alternative.
-
-`supported` records use `not_applicable` and identify the operation instead.
-Do not copy vendor descriptions into the rationale or recommendation.
-
-## Evidence and review references
-
-References must be public HTTPS links to curated material in the
-`spatialanalyzer` GitHub organization. Link to exact-target inventory facts,
-authoritative Briosa source, reviewed issues or discussions, and non-sensitive
-licensed-validation observations. Never link or copy raw installed MP
-documentation, raw generated SDK samples, proprietary binaries, local paths,
-credentials, or licensed customer data.
-
-The review authority for this target is
-[`spatialanalyzer/briosa#152`](https://github.com/spatialanalyzer/briosa/issues/152).
-Disposition changes should land there in coherent batches before their catalog
-records are changed here.
-
-## Validation
-
-The JSON schemas live under `catalog/schemas/v1`. Run:
-
-```text
-npm run validate:catalog
-npm run test:catalog
-```
-
-The validator checks schemas, record paths, target consistency, unique IDs and
-slugs, coverage policy, and final-v1 status rules. These checks protect the
-documentation dataset only; passing them cannot create or expand Briosa
-behavior.
+Write concise project-authored facts and explanations. Do not copy installed MP
+documentation or generated SDK samples, and do not publish proprietary
+binaries, local paths, credentials, raw arguments, returned application data,
+or licensed customer data.
