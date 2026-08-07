@@ -30,9 +30,32 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'SA 2026.1.0529.7',
+          link: {
+            type: 'doc',
+            id: 'mp-command-catalog/2026.1.0529.7/overview',
+          },
           items: [
-            'mp-command-catalog/2026.1.0529.7/current-context',
-            'mp-command-catalog/2026.1.0529.7/collection-inspection',
+            'mp-command-catalog/2026.1.0529.7/group-hierarchy',
+            'mp-command-catalog/2026.1.0529.7/analysis-operations',
+            {
+              type: 'category',
+              label: 'Construction Operations',
+              items: [
+                'mp-command-catalog/2026.1.0529.7/construction-operations/collections',
+              ],
+            },
+            'mp-command-catalog/2026.1.0529.7/file-operations',
+            {
+              type: 'category',
+              label: 'Utility Operations',
+              link: {
+                type: 'doc',
+                id: 'mp-command-catalog/2026.1.0529.7/utility-operations',
+              },
+              items: [
+                'mp-command-catalog/2026.1.0529.7/utility-operations/units',
+              ],
+            },
           ],
         },
       ],

@@ -20,8 +20,19 @@ repository settings.
   capability source in `spatialanalyzer/briosa`.
 - Retained inventories and historical evidence may support documentation
   review, but their membership never establishes support or v1 selection.
-- Organize catalog content as logical category or workflow pages containing
-  several related MP commands. Do not default to one page per command.
+- Preserve the exact target's SpatialAnalyzer MP group hierarchy as the primary
+  catalog information architecture. For an SDK-observed command, split the
+  maintainer-provided output filename on underscores: the first segment is the
+  root group and each later segment is a subgroup. For example,
+  `ConstructionOperations_BSplines.txt` maps to
+  `Construction Operations / B-Splines`.
+- Use workflow pages only as secondary cross-links. Do not move a command out
+  of its SA group to create a Briosa-specific primary grouping, and do not
+  default to one page per command.
+- Some documentation-only records and installed-document paths use labels that
+  differ from the SDK-output hierarchy. Preserve the evidence and resolve those
+  placements through reviewed catalog work instead of silently inventing a
+  crosswalk.
 - Keep the catalog content-first while its information architecture matures.
   Do not introduce a separate command-data schema, generated index, or
   catalog-specific validation framework without a focused reviewed issue.

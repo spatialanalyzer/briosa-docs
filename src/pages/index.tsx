@@ -28,19 +28,19 @@ const operations = [
     service: 'ConstructionOperations',
     rpc: 'GetActiveCollectionName',
     detail: 'Read the name of the currently active collection.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-active-collection-name',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/construction-operations/collections#get-active-collection-name',
   },
   {
     service: 'UtilityOperations',
     rpc: 'GetActiveUnits',
     detail: 'Read the active length, angular, and temperature units.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-active-units',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/utility-operations/units#get-active-units',
   },
   {
     service: 'UtilityOperations',
     rpc: 'GetWorkingFrameProperties',
     detail: 'Read the current frame name, collection, and typed working frame.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/current-context#get-working-frame-properties',
+    href: '/docs/mp-command-catalog/2026.1.0529.7/utility-operations#get-working-frame-properties',
   },
 ];
 

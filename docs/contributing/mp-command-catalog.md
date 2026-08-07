@@ -13,16 +13,35 @@ The catalog is currently content-first. Work through real command groups before
 introducing a permanent metadata model, generated index, or completeness
 validator.
 
-## Group related commands
+## Preserve the SpatialAnalyzer group path
 
-Create pages around a coherent MP category, subcategory, or user workflow. A
-page should contain several commands when they share enough context to be
-understood together. Split a page when the commands have materially different
-purposes or the result is difficult to navigate.
+SpatialAnalyzer already groups MP commands, and that hierarchy belongs to the
+exact SA target. For SDK-observed commands, the maintainer-provided output
+filename records the path:
 
-Do not create one page per retained command by default. A supported operation
-may still have a separate usage guide when it needs request examples, response
-semantics, or operational cautions beyond its catalog entry.
+- `ConstructionOperations.txt` means `Construction Operations`;
+- `ConstructionOperations_BSplines.txt` means
+  `Construction Operations / B-Splines`; and
+- each additional underscore-delimited segment adds another subgroup level.
+
+Use that hierarchy as the primary catalog navigation. A workflow page may link
+to commands from several groups, but it must not replace or obscure their
+SpatialAnalyzer paths.
+
+The group path plus MP step disambiguates repeated command names. Do not assume
+that an MP step name is globally unique.
+
+Use one page per SA group path as the starting point. A very large group may be
+split across presentation pages later, but every page must continue to show the
+same full SA group path. Do not create one page per retained command by
+default. A supported operation may still have a separate usage guide when it
+needs request examples, response semantics, or operational cautions beyond its
+catalog entry.
+
+Some documentation-only inventory records use installed-document categories
+that do not exactly match the SDK-output filenames. Keep their observed path
+and raise the placement for review; do not silently normalize it into another
+group.
 
 ## Write each command section
 
