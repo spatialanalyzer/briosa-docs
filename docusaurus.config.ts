@@ -61,6 +61,11 @@ const config: Config = {
           position: 'left',
         },
         {
+          to: '/docs/mp-command-catalog/overview',
+          label: 'MP catalog',
+          position: 'left',
+        },
+        {
           href: 'https://github.com/spatialanalyzer/briosa',
           label: 'Server',
           position: 'right',
@@ -80,6 +85,7 @@ const config: Config = {
           items: [
             {label: 'Get started', to: '/docs/getting-started/prerequisites'},
             {label: 'Operations', to: '/docs/operations/overview'},
+            {label: 'MP command catalog', to: '/docs/mp-command-catalog/overview'},
             {label: 'Runtime model', to: '/docs/concepts/readiness'},
           ],
         },

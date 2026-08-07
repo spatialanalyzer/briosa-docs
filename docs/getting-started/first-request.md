@@ -27,7 +27,7 @@ grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.DiscoveryService/ListCapabilit
 
 For a ready baseline, `readyForMp` is `true`, execution readiness is
 `EXECUTION_READY`, both runtime identity claims are exact matches, and the
-capability list contains the three documented operations.
+capability list contains the six documented operations.
 
 ## Invoke a read-only MP
 

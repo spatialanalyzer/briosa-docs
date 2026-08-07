@@ -7,10 +7,24 @@ repository settings.
 
 - `spatialanalyzer/briosa` defines public protobuf contracts, supported
   operations, exact-target compatibility, and runtime behavior.
-- This repository explains that surface. Never make prose, examples, or
-  navigation the accidental source of truth for protocol semantics.
-- Document only committed, supported behavior. In-progress branches, retained
-  inventories, and historical evidence are not public API.
+- This repository explains that surface and publishes the complete,
+  exact-target MP command catalog. Never make prose, examples, navigation, or
+  catalog pages the accidental source of truth for protocol semantics.
+- Product and operation guidance may describe only committed, supported Briosa
+  behavior. The MP command catalog may also document selected, under-review,
+  deferred, intentionally excluded, and SDK-unavailable commands when each
+  entry is clearly labeled and traces to a reviewed disposition.
+- A catalog entry does not make a command part of the Briosa API. Only the
+  `supported` catalog status is a runtime-support claim, and it must agree with
+  authoritative handwritten protobuf, operation registration, and runtime
+  capability source in `spatialanalyzer/briosa`.
+- Retained inventories and historical evidence may support documentation
+  review, but their membership never establishes support or v1 selection.
+- Organize catalog content as logical category or workflow pages containing
+  several related MP commands. Do not default to one page per command.
+- Keep the catalog content-first while its information architecture matures.
+  Do not introduce a separate command-data schema, generated index, or
+  catalog-specific validation framework without a focused reviewed issue.
 - Preserve MP terminology where the source contract does.
 
 ## Intellectual property and positioning
@@ -23,6 +37,9 @@ repository settings.
 - Do not imply affiliation, endorsement, or support by Hexagon.
 - Do not copy vendor text wholesale or commit proprietary binaries, licensed
   data, machine-specific paths, credentials, or raw arguments/results.
+- Catalog entries must contain concise project-authored facts, rationale, and
+  recommendations. Reference only safe, committed project evidence; never
+  publish raw installed documentation or generated SDK samples.
 
 ## Site development
 

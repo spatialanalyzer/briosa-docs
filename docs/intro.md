@@ -23,17 +23,24 @@ SpatialAnalyzer must be installed, licensed, and running separately.
 ## Current supported surface
 
 The current product targets exactly SpatialAnalyzer `2026.1.0529.7` and
-implements three read-only MP operations:
+implements six read-only MP operations:
 
 | gRPC RPC | MP step | Input | Output |
 | --- | --- | --- | --- |
 | `FileOperations/GetWorkingDirectory` | `Get Working Directory` | none | `directory` |
 | `AnalysisOperations/GetNumberOfCollections` | `Get Number of Collections` | none | `total_count` |
 | `AnalysisOperations/GetIThCollectionName` | `Get i-th Collection Name` | `collection_index` | `resultant_name` |
+| `ConstructionOperations/GetActiveCollectionName` | `Get Active Collection Name` | none | `currently_active_collection_name` |
+| `UtilityOperations/GetActiveUnits` | `Get Active Units` | none | `length`, `angular`, `temperature` |
+| `UtilityOperations/GetWorkingFrameProperties` | `Get Working Frame Properties` | none | `frame_name`, `collection_name`, `working_frame` |
 
 That is the complete supported MP surface for this baseline. Inventory records,
 reference evidence, historical code, and in-progress branches do not add
 supported operations.
+
+The [MP command catalog](./mp-command-catalog/overview.md) will document the
+complete retained exact-target command surface, including commands Briosa does
+not support.
 
 ## Where the contract lives
 
