@@ -1,8 +1,8 @@
 ---
-title: Readiness is more than connection
+title: Readiness Is More Than Connection
 ---
 
-# Readiness is more than connection
+# Readiness Is More Than Connection
 
 `ConnectEx` success is attachment evidence, not proof that the SDK execution
 channel can run an MP.
@@ -21,9 +21,9 @@ true:
 The probe uses the normal serialized SDK path, confirms MP success and expected
 output shape, and discards the working-directory value.
 
-## Health names
+## Health Names
 
-| Service name | Meaning |
+| Service Name | Meaning |
 | --- | --- |
 | `briosa.liveness` | The public host is serving. Worker and SA state do not affect it. |
 | `briosa.readiness` | The current worker generation is ready to accept MP work. |

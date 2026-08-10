@@ -19,7 +19,7 @@ Building Briosa from source additionally requires the .NET SDK selected by the
 server repository's `global.json`. Building this website requires Node.js 24,
 but Node.js is not required to run the Briosa server.
 
-:::warning[Match the exact release]
+:::warning[Match the Exact Release]
 
 A Briosa product is locked to one exact SA release. A machine may have several
 releases installed, but the configured target, activated SDK, and connected
@@ -27,7 +27,7 @@ application identities must agree before Briosa admits MP work.
 
 :::
 
-## Use a clean SDK ownership state
+## Use a Clean SDK Ownership State
 
 When several SpatialAnalyzer instances are open, only the first eligible
 instance owns the SDK communication ports. Closing it does not transfer
@@ -37,7 +37,7 @@ If ownership is uncertain, stop Briosa and other SDK clients, close every
 SpatialAnalyzer instance, start exactly one matching instance, wait for it to
 finish starting, and then start Briosa.
 
-## Network boundary
+## Network Boundary
 
 The baseline endpoint is unencrypted HTTP/2 on `127.0.0.1:50051`. It is
 intentionally loopback-only. Remote authentication, authorization, TLS, and

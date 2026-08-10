@@ -10,37 +10,37 @@ const operations = [
     service: 'FileOperations',
     rpc: 'GetWorkingDirectory',
     detail: 'Read the current SpatialAnalyzer working directory.',
-    href: '/docs/operations/get-working-directory',
+    href: '/api/grpc/get-working-directory',
   },
   {
     service: 'AnalysisOperations',
     rpc: 'GetNumberOfCollections',
     detail: 'Read the number of collections in the active SA job.',
-    href: '/docs/operations/get-number-of-collections',
+    href: '/api/grpc/get-number-of-collections',
   },
   {
     service: 'AnalysisOperations',
-    rpc: 'GetIThCollectionName',
+    rpc: 'GetIthCollectionName',
     detail: 'Resolve a zero-based collection index to its name.',
-    href: '/docs/operations/get-i-th-collection-name',
+    href: '/api/grpc/get-ith-collection-name',
   },
   {
     service: 'ConstructionOperations',
     rpc: 'GetActiveCollectionName',
     detail: 'Read the name of the currently active collection.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/construction-operations/collections#get-active-collection-name',
+    href: '/api/grpc',
   },
   {
     service: 'UtilityOperations',
     rpc: 'GetActiveUnits',
     detail: 'Read the active length, angular, and temperature units.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/utility-operations/units#get-active-units',
+    href: '/api/grpc',
   },
   {
     service: 'UtilityOperations',
     rpc: 'GetWorkingFrameProperties',
     detail: 'Read the current frame name, collection, and typed working frame.',
-    href: '/docs/mp-command-catalog/2026.1.0529.7/utility-operations#get-working-frame-properties',
+    href: '/api/grpc',
   },
 ];
 
@@ -52,7 +52,7 @@ function HomepageHeader() {
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Open-source · Apache-2.0</p>
-            <Heading as="h1">SpatialAnalyzer MPs, through a clear gRPC boundary.</Heading>
+            <Heading as="h1">SpatialAnalyzer MPs Through a Clear gRPC Boundary</Heading>
             <p className={styles.lead}>
               Briosa turns reviewed SpatialAnalyzer MP operations into strongly
               typed, language-neutral RPCs while keeping COM state isolated in
@@ -66,14 +66,14 @@ function HomepageHeader() {
               </Link>
               <Link
                 className="button button--outline button--secondary button--lg"
-                to="/docs/operations/overview">
+                to="/api">
                 Explore operations
               </Link>
             </div>
           </div>
           <aside className={styles.targetCard} aria-label="Current support summary">
             <span className={styles.liveDot} aria-hidden="true" />
-            <p className={styles.cardLabel}>Current exact target</p>
+            <p className={styles.cardLabel}>Current Exact Target</p>
             <p className={styles.targetVersion}>SA 2026.1.0529.7</p>
             <dl>
               <div>
@@ -85,7 +85,7 @@ function HomepageHeader() {
                 <dd>6 read-only MPs</dd>
               </div>
               <div>
-                <dt>Default binding</dt>
+                <dt>Default Binding</dt>
                 <dd>Loopback</dd>
               </div>
             </dl>
@@ -101,8 +101,8 @@ function Architecture() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.sectionHeading}>
-          <p className={styles.kicker}>One deliberate boundary</p>
-          <Heading as="h2">Built to contain the hard parts</Heading>
+          <p className={styles.kicker}>One Deliberate Boundary</p>
+          <Heading as="h2">Built to Contain the Hard Parts</Heading>
           <p>
             Clients see ordinary gRPC. Briosa owns process supervision,
             serialized SDK execution, and explicit outcomes.
@@ -111,19 +111,19 @@ function Architecture() {
         <div className={styles.flow} aria-label="Briosa request flow">
           <div className={styles.flowNode}>
             <span>01</span>
-            <strong>Your client</strong>
+            <strong>Your Client</strong>
             <small>.NET, JavaScript, Python, or any gRPC stack</small>
           </div>
           <div className={styles.flowArrow} aria-hidden="true">→</div>
           <div className={styles.flowNode}>
             <span>02</span>
-            <strong>Briosa host</strong>
+            <strong>Briosa Host</strong>
             <small>Typed contracts, policy, discovery, and diagnostics</small>
           </div>
           <div className={styles.flowArrow} aria-hidden="true">→</div>
           <div className={styles.flowNode}>
             <span>03</span>
-            <strong>Supervised worker</strong>
+            <strong>Supervised Worker</strong>
             <small>One serialized STA and one active SDK connection</small>
           </div>
           <div className={styles.flowArrow} aria-hidden="true">→</div>
@@ -143,8 +143,8 @@ function Operations() {
     <section className={styles.operationsSection}>
       <div className="container">
         <div className={styles.sectionHeading}>
-          <p className={styles.kicker}>Small, reviewed surface</p>
-          <Heading as="h2">Explore six read-only operations</Heading>
+          <p className={styles.kicker}>Small, Reviewed Surface</p>
+          <Heading as="h2">Explore Six Read-Only Operations</Heading>
           <p>
             Each supported MP is a handwritten vertical slice with a protobuf
             contract, server and worker mapping, tests, policy metadata, and
@@ -157,7 +157,7 @@ function Operations() {
               <span>{operation.service}</span>
               <Heading as="h3">{operation.rpc}</Heading>
               <p>{operation.detail}</p>
-              <strong>Read operation →</strong>
+              <strong>Read Operation →</strong>
             </Link>
           ))}
         </div>
@@ -171,7 +171,7 @@ function Disclaimer() {
     <section className={styles.disclaimer}>
       <div className="container">
         <div>
-          <Heading as="h2">Independent by design</Heading>
+          <Heading as="h2">Independent by Design</Heading>
           <p>
             SpatialAnalyzer and the SA SDK are Hexagon products. Briosa is an
             independent open-source project and is not affiliated with,
@@ -187,7 +187,7 @@ function Disclaimer() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="A gRPC bridge for SpatialAnalyzer MPs"
+      title="A gRPC Bridge for SpatialAnalyzer MPs"
       description="Briosa exposes reviewed SpatialAnalyzer MP operations through strongly typed, language-neutral gRPC contracts.">
       <HomepageHeader />
       <main>
