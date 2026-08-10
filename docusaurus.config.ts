@@ -1,6 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs';
+import type {Options as RedirectsPluginOptions} from '@docusaurus/plugin-client-redirects';
 
 const config: Config = {
   title: 'Briosa',
@@ -30,6 +32,86 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'grpc',
+        path: 'api/grpc',
+        routeBasePath: 'api/grpc',
+        sidebarPath: './sidebarsGrpc.ts',
+        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+      } satisfies DocsPluginOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dotnet',
+        path: 'api/dotnet',
+        routeBasePath: 'api/dotnet',
+        sidebarPath: './sidebarsDotnet.ts',
+        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+      } satisfies DocsPluginOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'python',
+        path: 'api/python',
+        routeBasePath: 'api/python',
+        sidebarPath: './sidebarsPython.ts',
+        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+      } satisfies DocsPluginOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'javascript',
+        path: 'api/javascript',
+        routeBasePath: 'api/javascript',
+        sidebarPath: './sidebarsJavascript.ts',
+        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+      } satisfies DocsPluginOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'catalog',
+        path: 'mp-command-catalog',
+        routeBasePath: 'mp-command-catalog',
+        sidebarPath: './sidebarsCatalog.ts',
+        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+      } satisfies DocsPluginOptions,
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {from: '/docs/operations/overview', to: '/api/grpc'},
+          {from: '/docs/operations/get-working-directory', to: '/api/grpc/get-working-directory'},
+          {from: '/docs/operations/get-number-of-collections', to: '/api/grpc/get-number-of-collections'},
+          {from: '/docs/operations/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
+          {from: '/api/get-working-directory', to: '/api/grpc/get-working-directory'},
+          {from: '/api/get-number-of-collections', to: '/api/grpc/get-number-of-collections'},
+          {from: '/api/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
+          {from: '/api/grpc/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
+          {from: '/docs/mp-command-catalog/overview', to: '/mp-command-catalog'},
+          {
+            from: '/docs/mp-command-catalog/2026.1.0529.7/overview',
+            to: '/mp-command-catalog/2026.1.0529.7/overview',
+          },
+          {
+            from: '/docs/mp-command-catalog/2026.1.0529.7/group-hierarchy',
+            to: '/mp-command-catalog/2026.1.0529.7/group-hierarchy',
+          },
+          {
+            from: '/docs/mp-command-catalog/2026.1.0529.7/file-operations',
+            to: '/mp-command-catalog/2026.1.0529.7/file-operations',
+          },
+        ],
+      } satisfies RedirectsPluginOptions,
+    ],
+  ],
   themeConfig: {
     metadata: [
       {
@@ -56,24 +138,49 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          to: '/docs/operations/overview',
-          label: 'Operations',
+          type: 'dropdown',
           position: 'left',
+          label: 'API Reference',
+          to: '/api',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'grpcSidebar',
+              docsPluginId: 'grpc',
+              label: 'gRPC API',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'dotnetSidebar',
+              docsPluginId: 'dotnet',
+              label: '.NET API',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'pythonSidebar',
+              docsPluginId: 'python',
+              label: 'Python API',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'javascriptSidebar',
+              docsPluginId: 'javascript',
+              label: 'JavaScript and TypeScript API',
+            },
+          ],
         },
         {
-          to: '/docs/mp-command-catalog/overview',
-          label: 'MP catalog',
+          type: 'docSidebar',
+          sidebarId: 'catalogSidebar',
+          docsPluginId: 'catalog',
           position: 'left',
+          label: 'MP Catalog',
         },
         {
           href: 'https://github.com/spatialanalyzer/briosa',
-          label: 'Server',
           position: 'right',
-        },
-        {
-          href: 'https://github.com/spatialanalyzer/briosa-docs',
-          label: 'GitHub',
-          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'Briosa on GitHub',
         },
       ],
     },
@@ -83,25 +190,34 @@ const config: Config = {
         {
           title: 'Learn',
           items: [
-            {label: 'Get started', to: '/docs/getting-started/prerequisites'},
-            {label: 'Operations', to: '/docs/operations/overview'},
-            {label: 'MP command catalog', to: '/docs/mp-command-catalog/overview'},
-            {label: 'Runtime model', to: '/docs/concepts/readiness'},
+            {label: 'Get Started', to: '/docs/getting-started/prerequisites'},
+            {label: 'API Reference', to: '/api'},
+            {label: 'MP Command Catalog', to: '/mp-command-catalog'},
+            {label: 'Runtime Model', to: '/docs/concepts/readiness'},
           ],
         },
         {
           title: 'Project',
           items: [
-            {label: 'Briosa server', href: 'https://github.com/spatialanalyzer/briosa'},
             {label: 'Roadmap', href: 'https://github.com/orgs/spatialanalyzer/projects/1'},
             {label: 'Governance', href: 'https://github.com/spatialanalyzer/governance'},
+          ],
+        },
+        {
+          title: 'Repositories',
+          items: [
+            {label: 'Briosa Server', href: 'https://github.com/spatialanalyzer/briosa'},
+            {label: '.NET Client', href: 'https://github.com/spatialanalyzer/briosa-dotnet'},
+            {label: 'Python Client', href: 'https://github.com/spatialanalyzer/briosa-py'},
+            {label: 'JavaScript Client', href: 'https://github.com/spatialanalyzer/briosa-js'},
+            {label: 'Documentation', href: 'https://github.com/spatialanalyzer/briosa-docs'},
           ],
         },
         {
           title: 'Community',
           items: [
             {label: 'Discussions', href: 'https://github.com/orgs/spatialanalyzer/discussions'},
-            {label: 'Report a docs issue', href: 'https://github.com/spatialanalyzer/briosa-docs/issues/new'},
+            {label: 'Report a Docs Issue', href: 'https://github.com/spatialanalyzer/briosa-docs/issues/new'},
           ],
         },
       ],
@@ -110,6 +226,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['csharp', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
 };

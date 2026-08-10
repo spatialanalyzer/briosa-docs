@@ -1,0 +1,14 @@
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+
+const sidebars: SidebarsConfig = {
+  pythonSidebar: [
+    'overview',
+    {
+      type: 'category',
+      label: 'File Operations',
+      items: ['get-working-directory'],
+    },
+  ],
+};
+
+export default sidebars;

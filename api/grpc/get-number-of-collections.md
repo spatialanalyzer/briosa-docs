@@ -7,7 +7,7 @@ title: GetNumberOfCollections
 Implements the `Get Number of Collections` MP for exact target
 `2026.1.0529.7`.
 
-| Contract item | Value |
+| Contract Item | Value |
 | --- | --- |
 | Service | `briosa.AnalysisOperations` |
 | RPC | `GetNumberOfCollections` |

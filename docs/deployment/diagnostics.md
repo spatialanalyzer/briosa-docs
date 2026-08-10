@@ -1,13 +1,13 @@
 ---
-title: Diagnostics and recovery
+title: Diagnostics and Recovery
 ---
 
-# Diagnostics and recovery
+# Diagnostics and Recovery
 
 Start with safe state names from health and discovery. Do not capture complete
 logs or application values in a public report.
 
-| Observed state | Meaning | Action |
+| Observed State | Meaning | Action |
 | --- | --- | --- |
 | Liveness serves; readiness does not; connection is disconnected, connecting, or faulted | SpatialAnalyzer is absent, starting, unreachable, or the worker could not attach | Stop Briosa, start one licensed exact-target SA instance, wait for startup, then restart Briosa |
 | Identity evidence is unavailable | Briosa cannot establish one exact runtime identity | Establish the missing claim; do not invent evidence |

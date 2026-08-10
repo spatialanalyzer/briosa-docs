@@ -1,13 +1,13 @@
 ---
-title: Health and discovery
+title: Health and Discovery
 ---
 
-# Health and discovery
+# Health and Discovery
 
 Briosa exposes standard gRPC health checks plus a low-sensitivity discovery
 service.
 
-## Health checks
+## Health Checks
 
 | Service | Use |
 | --- | --- |
