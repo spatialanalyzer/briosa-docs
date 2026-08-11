@@ -120,11 +120,10 @@ the form each application expects. Briosa owns the SDK sequence, checks the MP
 result, retrieves the output, and translates failures into the selected
 client's documented error model.
 
-:::note[Client Libraries Are Under Development]
+:::note[Status: Next]
 
-The Briosa calls above show the accepted direction for the first-party client
-APIs. The .NET, Python, and JavaScript clients will be documented with complete
-installation and usage examples as their packages become available.
+The Briosa calls above show the client APIs planned for the coordinated `v0.2`
+implementation. They are not available in the current bootstrap packages.
 
 :::
 
@@ -195,8 +194,10 @@ for the complete callable surface today.
 - [Check the prerequisites](./getting-started/prerequisites)
 - [Run the matching Briosa server](./getting-started/run-the-server)
 - [Make the first request](./getting-started/first-request)
+- [Understand the client lifecycle](./concepts/client-lifecycle)
 - [Browse the MP Command Catalog](/mp-command-catalog)
 
 The committed API contracts and operation registry in the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa) define
-the supported API. This site explains that behavior but does not define it.
+the currently implemented API. Pages marked `Next` define a proposed public
+contract for a coordinated delivery until the matching code is released.

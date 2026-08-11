@@ -5,6 +5,11 @@ const sidebars: SidebarsConfig = {
     'overview',
     {
       type: 'category',
+      label: 'Lifecycle',
+      items: ['lifecycle'],
+    },
+    {
+      type: 'category',
       label: 'File Operations',
       items: ['get-working-directory'],
     },

@@ -8,7 +8,7 @@ description: Call SpatialAnalyzer's Get Working Directory MP command from the Br
 Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
 `Directory` output as a JavaScript string.
 
-:::note[Client API Under Development]
+:::note[Status: Next]
 
 This page describes the reviewed public API planned for the first supported
 Briosa JavaScript package release. Pre-release package checkouts may still
@@ -20,7 +20,7 @@ expose a temporary bootstrap interface.
 | --- | --- |
 | MP Command | [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) |
 | SpatialAnalyzer Group | File Operations |
-| Briosa Status | **Current** |
+| MP Command Status | **Current** |
 | Package Export | `getWorkingDirectory` |
 | MP Inputs | None |
 | Return Value | `Promise<string>` |
@@ -39,9 +39,9 @@ await briosa.start();
 const workingDirectory = await getWorkingDirectory(briosa);
 ```
 
-`start()` must complete before the command is called. It starts or joins a
-compatible Briosa session and verifies that SpatialAnalyzer is ready for MP
-execution.
+`start()` must complete before the command is called. It launches an owned
+server or connects to the configured external server, then verifies that
+SpatialAnalyzer is ready for MP execution.
 
 ## Signature
 
@@ -69,4 +69,5 @@ SpatialAnalyzer command was stopped, and the client does not automatically
 replay a call with an uncertain outcome.
 
 - [gRPC operation](/api/grpc/get-working-directory)
+- [`BriosaClient` lifecycle](./lifecycle)
 - [Understanding execution outcomes](/docs/concepts/execution-outcomes)

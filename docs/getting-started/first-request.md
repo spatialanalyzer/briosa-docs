@@ -17,11 +17,10 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 start one matching SpatialAnalyzer instance, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client Libraries Are Under Development]
+:::note[Status: Next]
 
-These examples show the accepted direction for the first-party .NET, Python,
-and JavaScript client APIs. Complete package installation instructions will be
-added as the first supported client releases become available.
+These examples show the Lifecycle Foundation and idiomatic command APIs planned
+for Briosa `v0.2`. They are not available in the current bootstrap packages.
 
 :::
 
@@ -33,7 +32,7 @@ Select your programming language:
   <TabItem value="dotnet" label=".NET (C#)" default>
 
 ```csharp
-using Briosa.Client;
+using Briosa;
 
 await using var briosa = new BriosaClient();
 await briosa.StartAsync();
@@ -84,6 +83,11 @@ application's lifetime. Start it once, handle individual MP command failures
 without automatically stopping it, and dispose of it during application
 shutdown. Client cleanup does not close SpatialAnalyzer or discard work open in
 the SpatialAnalyzer application.
+
+To connect to a Briosa server managed elsewhere in your application, supply an
+endpoint during client construction. The MP command call remains the same. See
+[Start Briosa](./run-the-server#connect-to-a-server-you-manage) for each
+language's construction example.
 
 :::caution[Treat Returned Values as Application Data]
 

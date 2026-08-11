@@ -17,11 +17,11 @@ your application.
 This keeps server paths, processes, compatibility checks, and connection setup
 out of ordinary application code.
 
-:::note[Client-Managed Startup Is Under Development]
+:::note[Status: Next]
 
-The .NET, Python, and JavaScript client libraries are still implementing this
-experience. Installation and release-specific setup instructions will be added
-as the first supported packages and server distributions become available.
+This page shows the Lifecycle Foundation planned for Briosa `v0.2`. The
+coordinated server and client implementations are not available in the current
+bootstrap packages.
 
 :::
 
@@ -48,9 +48,9 @@ sequence:
   <TabItem value="dotnet" label=".NET (C#)" default>
 
 ```csharp
-using Briosa.Client;
+using Briosa;
 
-var briosa = new BriosaClient();
+await using var briosa = new BriosaClient();
 await briosa.StartAsync();
 ```
 
@@ -78,7 +78,7 @@ await briosa.start();
 </Tabs>
 
 The startup operation completes only after the client has established a usable
-local Briosa session. It is responsible for:
+local Briosa session. It:
 
 - Selecting a Briosa distribution for the exact SpatialAnalyzer target
 - Starting the local Briosa server
@@ -89,6 +89,64 @@ local Briosa session. It is responsible for:
 After startup succeeds, the application can invoke supported MP commands. A
 failed startup leaves MP commands unavailable rather than connecting the
 application to an unverified server.
+
+The parameterless examples use a client-owned server. Your application does not
+need to choose an endpoint or manage the server process. When the client is
+cleaned up, it stops only the server generation it launched. It never closes
+SpatialAnalyzer.
+
+## Connect to a Server You Manage
+
+If your application or an operator starts Briosa separately, supply its
+loopback endpoint when creating the client. Startup performs the same
+verification, but cleanup releases only the client connection and leaves the
+external server running. The v0.2 clients reject non-loopback endpoints.
+
+<Tabs groupId="briosa-client-language" queryString="client-language">
+  <TabItem value="dotnet" label=".NET (C#)" default>
+
+```csharp
+using Briosa;
+
+await using var briosa = new BriosaClient(
+    BriosaClientOptions.External(
+        new Uri("http://127.0.0.1:50051")));
+
+await briosa.StartAsync();
+```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+from briosa import BriosaClient, BriosaClientOptions
+
+
+briosa = BriosaClient(
+    BriosaClientOptions(
+        endpoint="http://127.0.0.1:50051",
+    )
+)
+await briosa.start()
+```
+
+  </TabItem>
+  <TabItem value="typescript" label="JavaScript / TypeScript">
+
+```ts
+import { createBriosaClient } from '@spatialanalyzer/briosa';
+
+const briosa = createBriosaClient({
+  endpoint: 'http://127.0.0.1:50051',
+});
+await briosa.start();
+```
+
+  </TabItem>
+</Tabs>
+
+See [Start, Use, and Stop Briosa](../concepts/client-lifecycle) for readiness,
+restart, timeout, cancellation, and ownership behavior.
 
 ## Use Briosa from Another Language
 

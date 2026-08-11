@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
       label: 'Core Concepts',
       items: [
         'concepts/exact-targets',
+        'concepts/client-lifecycle',
         'concepts/readiness',
         'concepts/execution-outcomes',
         'concepts/single-tenant-model',

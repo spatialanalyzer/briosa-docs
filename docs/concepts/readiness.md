@@ -4,6 +4,14 @@ title: Readiness Is More Than Connection
 
 # Readiness Is More Than Connection
 
+The first-party clients perform these checks as part of start. Application code
+does not need to call health or discovery services directly before every MP
+command. Startup succeeds only after one fully verified session is ready, and
+the client then admits only the capabilities reported for that session.
+
+See [Start, Use, and Stop Briosa](./client-lifecycle) for the application-facing
+lifecycle.
+
 `ConnectEx` success is attachment evidence, not proof that the SDK execution
 channel can run an MP.
 

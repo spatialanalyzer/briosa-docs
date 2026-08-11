@@ -15,6 +15,10 @@ package release. Until then, these pages describe the reviewed public contract
 being implemented. Pre-release package checkouts may still expose temporary
 bootstrap interfaces.
 
+Start with the [`BriosaClient` lifecycle](/api/javascript/lifecycle) to choose a
+client-owned or externally managed server and understand startup, command
+admission, stop, restart, and cleanup.
+
 For task-oriented examples, start with
 [Run your first MP command](/docs/getting-started/first-request). For the
 underlying service contract, use the [gRPC API Reference](/api/grpc).

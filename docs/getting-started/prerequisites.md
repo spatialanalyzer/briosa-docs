@@ -6,14 +6,14 @@ title: Prerequisites
 
 For the current exact target you need:
 
-- a Windows x64 workstation;
-- SpatialAnalyzer `2026.1.0529.7` and its matching SDK, installed separately;
-- a valid SpatialAnalyzer license for the operations you intend to perform;
-- exactly one eligible SpatialAnalyzer instance running before Briosa starts;
-- no competing Briosa worker, ObjectiveSA probe, SDK experiment, or other SDK
-  client attached to that instance; and
-- a gRPC client such as
-  [grpcurl](https://github.com/fullstorydev/grpcurl) for the source workflow.
+- A Windows x64 workstation
+- SpatialAnalyzer `2026.1.0529.7` and its matching SDK, installed separately
+- A valid SpatialAnalyzer license for the operations you intend to perform
+- Exactly one eligible SpatialAnalyzer instance running before Briosa starts
+- No competing Briosa worker, ObjectiveSA probe, SDK experiment, or other SDK
+  client attached to that instance
+- A first-party Briosa client, or a gRPC client such as
+  [grpcurl](https://github.com/fullstorydev/grpcurl) for the source workflow
 
 Building Briosa from source additionally requires the .NET SDK selected by the
 server repository's `global.json`. Building this website requires Node.js 24,
@@ -43,5 +43,10 @@ The baseline endpoint is unencrypted HTTP/2 on `127.0.0.1:50051`. It is
 intentionally loopback-only. Remote authentication, authorization, TLS, and
 command-risk policy are not established; do not widen the binding, expose it
 through a tunnel, or place it on a shared network.
+
+The default client-owned lifecycle chooses its own loopback endpoint. You need
+to work with an endpoint directly only when you choose to run the Briosa server
+yourself. See [Start, Use, and Stop Briosa](../concepts/client-lifecycle) for the
+two supported modes.
 
 [Run the server →](./run-the-server)

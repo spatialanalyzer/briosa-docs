@@ -8,7 +8,7 @@ description: Call SpatialAnalyzer's Get Working Directory MP command from the Br
 Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
 `Directory` output as a Python string.
 
-:::note[Client API Under Development]
+:::note[Status: Next]
 
 This page describes the reviewed public API planned for the first supported
 Briosa Python package release. Pre-release package checkouts may still expose a
@@ -20,7 +20,7 @@ temporary bootstrap interface.
 | --- | --- |
 | MP Command | [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) |
 | SpatialAnalyzer Group | File Operations |
-| Briosa Status | **Current** |
+| MP Command Status | **Current** |
 | Client | `BriosaClient` |
 | Method | `get_working_directory` |
 | MP Inputs | None |
@@ -65,4 +65,5 @@ was stopped, and the client does not automatically replay a call with an
 uncertain outcome.
 
 - [gRPC operation](/api/grpc/get-working-directory)
+- [`BriosaClient` lifecycle](./lifecycle)
 - [Understanding execution outcomes](/docs/concepts/execution-outcomes)
