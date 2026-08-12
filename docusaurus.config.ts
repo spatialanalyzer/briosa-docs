@@ -41,6 +41,13 @@ const config: Config = {
         routeBasePath: 'api/grpc',
         sidebarPath: './sidebarsGrpc.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+        versions: {
+          current: {
+            label: 'Next',
+            banner: 'none',
+            badge: true,
+          },
+        },
       } satisfies DocsPluginOptions,
     ],
     [
@@ -51,6 +58,13 @@ const config: Config = {
         routeBasePath: 'api/dotnet',
         sidebarPath: './sidebarsDotnet.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+        versions: {
+          current: {
+            label: 'Next',
+            banner: 'none',
+            badge: true,
+          },
+        },
       } satisfies DocsPluginOptions,
     ],
     [
@@ -61,6 +75,13 @@ const config: Config = {
         routeBasePath: 'api/python',
         sidebarPath: './sidebarsPython.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+        versions: {
+          current: {
+            label: 'Next',
+            banner: 'none',
+            badge: true,
+          },
+        },
       } satisfies DocsPluginOptions,
     ],
     [
@@ -71,6 +92,13 @@ const config: Config = {
         routeBasePath: 'api/javascript',
         sidebarPath: './sidebarsJavascript.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
+        versions: {
+          current: {
+            label: 'Next',
+            banner: 'none',
+            badge: true,
+          },
+        },
       } satisfies DocsPluginOptions,
     ],
     [
@@ -177,6 +205,30 @@ const config: Config = {
           label: 'MP Catalog',
         },
         {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'grpc',
+          position: 'right',
+          className: 'api-version-dropdown api-version-dropdown--grpc',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'dotnet',
+          position: 'right',
+          className: 'api-version-dropdown api-version-dropdown--dotnet',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'python',
+          position: 'right',
+          className: 'api-version-dropdown api-version-dropdown--python',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'javascript',
+          position: 'right',
+          className: 'api-version-dropdown api-version-dropdown--javascript',
+        },
+        {
           href: 'https://github.com/spatialanalyzer/briosa',
           position: 'right',
           className: 'header-github-link',
@@ -226,7 +278,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['csharp', 'python', 'typescript'],
+      additionalLanguages: ['csharp', 'protobuf', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
 };

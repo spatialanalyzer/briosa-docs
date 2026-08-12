@@ -1,6 +1,6 @@
 ---
 title: Run Your First MP Command
-description: Start Briosa and call a familiar SpatialAnalyzer MP command from a first-party client library.
+description: Start a ready Briosa session and call a familiar SpatialAnalyzer MP command from a first-party client library.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,19 +9,18 @@ import TabItem from '@theme/TabItem';
 # Run Your First MP Command
 
 This example calls SpatialAnalyzer's `Get Working Directory` MP command and
-returns the result through a Briosa client library. It demonstrates the normal
-application flow: create a client, start Briosa, call an MP command, and clean
-up the client-owned Briosa session.
+returns the result through a Briosa client library. The default startup call
+prepares the server, SDK, and a fresh SpatialAnalyzer application before the MP
+command runs.
 
 Before continuing, install and license the supported SpatialAnalyzer release,
-start one matching SpatialAnalyzer instance, and complete the
+close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client Libraries Are Under Development]
+:::note[Status: Next]
 
-These examples show the accepted direction for the first-party .NET, Python,
-and JavaScript client APIs. Complete package installation instructions will be
-added as the first supported client releases become available.
+These examples show the Lifecycle Foundation and idiomatic command APIs planned
+for Briosa `v0.2`. They are not available in the current bootstrap packages.
 
 :::
 
@@ -33,7 +32,7 @@ Select your programming language:
   <TabItem value="dotnet" label=".NET (C#)" default>
 
 ```csharp
-using Briosa.Client;
+using Briosa;
 
 await using var briosa = new BriosaClient();
 await briosa.StartAsync();
@@ -70,20 +69,24 @@ const workingDirectory = await getWorkingDirectory(briosa);
   </TabItem>
 </Tabs>
 
-The startup call selects and launches the matching Briosa server, waits until
-MP execution is ready, verifies compatibility, and loads the operations
-available to the application. The MP call then returns the command's `Directory`
-output as an ordinary language-native string.
+The startup call launches the exact-target Briosa server, starts its
+disconnected SDK, launches a fresh exact-target SpatialAnalyzer application,
+connects the SDK, and waits for MP execution readiness. The MP call then
+returns the command's `Directory` output as an ordinary language-native string.
 
-These short examples use each language's asynchronous resource scope so the
-client-owned Briosa session is cleaned up when the scope ends, including when
-an exception leaves the scope.
+These examples use each language's asynchronous resource scope so the local
+Briosa server, SDK generation, and client resources are cleaned up when the
+scope ends, including when an exception leaves the scope. SpatialAnalyzer is
+left running and retains any open work.
 
 In a long-running application, the Briosa client normally lives for the
 application's lifetime. Start it once, handle individual MP command failures
 without automatically stopping it, and dispose of it during application
-shutdown. Client cleanup does not close SpatialAnalyzer or discard work open in
-the SpatialAnalyzer application.
+shutdown.
+
+Use the language client's startup options when you need to attach to an
+eligible application that is already running or deliberately delay SDK,
+application, or connection startup.
 
 :::caution[Treat Returned Values as Application Data]
 
@@ -103,17 +106,24 @@ published Briosa protobuf contracts and call the same operation:
 briosa.FileOperations/GetWorkingDirectory
 ```
 
-For a local Development server with gRPC reflection enabled, `grpcurl` can make
-the call directly:
+Before making that call, a direct gRPC application must:
+
+1. Start a compatible local Briosa server.
+2. Call `StartSpatialAnalyzerSdk`.
+3. Optionally call `LaunchSpatialAnalyzer` when it needs a fresh application.
+4. Call `ConnectToSpatialAnalyzer` and require `ready_for_mp = true`.
+
+Starting the server or SDK alone is not enough. See the
+[gRPC lifecycle API](/api/grpc/lifecycle) and
+[Health and Discovery](../deployment/health-and-discovery) for the complete
+contract.
+
+For a local development server with gRPC reflection enabled, `grpcurl` can make
+the MP call after those lifecycle steps complete:
 
 ```powershell
 grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory
 ```
-
-A direct gRPC application is responsible for starting a compatible Briosa
-server, checking readiness, verifying compatibility, discovering available
-operations, and handling typed operation failures. See
-[Health and discovery](../deployment/health-and-discovery) for those details.
 
 The authoritative protobuf contracts are published by the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/main/targets/2026.1.0529.7/proto/briosa).

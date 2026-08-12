@@ -8,7 +8,7 @@ description: Call SpatialAnalyzer's Get Working Directory MP command from the Br
 Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
 `Directory` output as a .NET string.
 
-:::note[Client API Under Development]
+:::note[Status: Next]
 
 This page describes the reviewed public API planned for the first supported
 Briosa .NET package release. Pre-release package checkouts may still expose a
@@ -20,7 +20,7 @@ temporary bootstrap interface.
 | --- | --- |
 | MP Command | [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) |
 | SpatialAnalyzer Group | File Operations |
-| Briosa Status | **Current** |
+| MP Command Status | **Current** |
 | Client | `BriosaClient` |
 | Method | `GetWorkingDirectoryAsync` |
 | MP Inputs | None |
@@ -29,7 +29,7 @@ temporary bootstrap interface.
 ## Example
 
 ```csharp
-using Briosa.Client;
+using Briosa;
 
 await using var briosa = new BriosaClient();
 await briosa.StartAsync();
@@ -37,9 +37,9 @@ await briosa.StartAsync();
 string workingDirectory = await briosa.GetWorkingDirectoryAsync();
 ```
 
-`StartAsync()` must complete before the command is called. It starts or joins a
-compatible Briosa session and verifies that SpatialAnalyzer is ready for MP
-execution.
+`StartAsync()` must complete before the command is called. Its default procedure
+launches the local server, SDK, and a fresh SpatialAnalyzer application, then
+connects and verifies MP readiness.
 
 ## Signature
 
@@ -65,4 +65,5 @@ SpatialAnalyzer command was stopped, and the client does not automatically
 replay a call with an uncertain outcome.
 
 - [gRPC operation](/api/grpc/get-working-directory)
+- [`BriosaClient` lifecycle](./lifecycle)
 - [Understanding execution outcomes](/docs/concepts/execution-outcomes)

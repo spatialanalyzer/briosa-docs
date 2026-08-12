@@ -11,6 +11,30 @@ the Briosa server. Use the [.NET](/api/dotnet),
 [JavaScript/TypeScript](/api/javascript) reference when working
 through a first-party client library.
 
+:::warning[Local-Only API]
+
+Current releases and the v1 contract expose this API only through a loopback
+endpoint on the same Windows machine as SpatialAnalyzer. Do not bind, proxy, or
+tunnel the server onto a network. Authenticated remote Briosa connections are
+[planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156).
+
+:::
+
+## Lifecycle Control Plane
+
+The public server can be live without an active SpatialAnalyzer application or
+SA SDK. The planned [lifecycle services](/api/grpc/lifecycle) let a local caller
+manage those resources independently. `briosa.SpatialAnalyzerLifecycle`
+observes, launches, and closes an owned application.
+`briosa.SpatialAnalyzerSdkLifecycle` starts, connects, reconnects, stops,
+diagnoses, and recovers Briosa's isolated SDK generation.
+
+MP services remain unavailable until an explicit connection verifies the exact
+runtime identities and execution channel. Starting or recovering an SDK leaves
+it disconnected. If the SDK is closed externally, its state records the
+incident and exposes safe recovery without command replay. Stopping the public
+server never closes SpatialAnalyzer.
+
 ## Supported Operations
 
 The current exact target exposes six handwritten read-only MP operations.

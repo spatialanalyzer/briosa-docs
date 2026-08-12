@@ -34,7 +34,10 @@ The package binds cleartext HTTP/2 to `127.0.0.1:50051` by default:
 ```
 
 Keep the endpoint loopback-only. The baseline has no remote client
-authentication, per-operation authorization, or TLS configuration.
+authentication, per-operation authorization, or TLS configuration. Deploying
+Briosa beside SpatialAnalyzer on another machine and connecting to it securely
+is [planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156),
+not supported by current releases or the v1 contract.
 
 The execution watchdog defaults to 30 seconds. A caller deadline or
 cancellation stops that caller from waiting; it does not prove that synchronous

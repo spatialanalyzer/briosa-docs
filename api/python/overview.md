@@ -15,6 +15,18 @@ package release. Until then, these pages describe the reviewed public contract
 being implemented. Pre-release package checkouts may still expose temporary
 bootstrap interfaces.
 
+:::note[Local-Only in v1]
+
+The Python client launches Briosa only on the same Windows machine as
+SpatialAnalyzer. Secure remote connections are
+[planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156).
+
+:::
+
+Start with the [`BriosaClient` lifecycle](/api/python/lifecycle) to understand
+default startup, explicit SDK and SA control, command admission, recovery,
+stop, restart, and cleanup.
+
 For task-oriented examples, start with
 [Run your first MP command](/docs/getting-started/first-request). For the
 underlying service contract, use the [gRPC API Reference](/api/grpc).
