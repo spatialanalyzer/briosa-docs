@@ -1,25 +1,243 @@
 ---
 title: BriosaClient Lifecycle
-description: Configure, start, stop, restart, and dispose of the Briosa .NET client.
+description: Complete Next contract for independently managing Briosa, SpatialAnalyzer, and the SpatialAnalyzer SDK from .NET.
+sidebar_label: Overview and Types
 ---
 
 # `BriosaClient` Lifecycle
 
-`BriosaClient` is the application-scoped entry point for the .NET client. It is
-dormant after construction and admits MP command methods only after
-`StartAsync()` establishes a verified session.
+`BriosaClient` controls three separate resources. By default,
+[`StartAsync()`](./start.md) launches the local Briosa server, starts a
+disconnected SDK generation, launches a fresh SpatialAnalyzer application,
+connects the SDK, and waits for MP readiness. The individual lifecycle methods
+remain available for explicit control, diagnosis, and recovery.
 
-:::note[Status: Next]
+## Methods
 
-This page defines the .NET lifecycle API planned for Briosa `v0.2`. It is the
-public contract for the coordinated implementation and is not available in the
-current bootstrap package.
+| Resource | Method | Result | Purpose |
+| --- | --- | --- | --- |
+| Briosa | [`StartAsync`](./start.md) | `Task` | Launch the local server and complete the default ready-for-MP startup procedure |
+| SpatialAnalyzer | [`GetSpatialAnalyzerStateAsync`](./get-spatial-analyzer-state.md) | `Task<SpatialAnalyzerLifecycleState>` | Read application and ownership state |
+| SpatialAnalyzer | [`LaunchSpatialAnalyzerAsync`](./launch-spatial-analyzer.md) | `Task<SpatialAnalyzerLifecycleState>` | Launch the server's approved exact-target application |
+| SpatialAnalyzer | [`CloseOwnedSpatialAnalyzerAsync`](./close-owned-spatial-analyzer.md) | `Task<SpatialAnalyzerLifecycleState>` | Close only an application launched by this server |
+| SA SDK | [`GetSpatialAnalyzerSdkStateAsync`](./get-spatial-analyzer-sdk-state.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Diagnose SDK process, connection, readiness, and recovery state |
+| SA SDK | [`StartSpatialAnalyzerSdkAsync`](./start-spatial-analyzer-sdk.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Start a new disconnected SDK generation |
+| SA SDK | [`ConnectToSpatialAnalyzerAsync`](./connect-to-spatial-analyzer.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Connect the current SDK to local SpatialAnalyzer and prove MP readiness |
+| SA SDK | [`ReconnectToSpatialAnalyzerAsync`](./reconnect-to-spatial-analyzer.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Retry local connection and readiness with the current healthy SDK generation |
+| SA SDK | [`StopSpatialAnalyzerSdkAsync`](./stop-spatial-analyzer-sdk.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Stop Briosa's SDK generation while leaving the application running |
+| SA SDK | [`RecoverSpatialAnalyzerSdkAsync`](./recover-spatial-analyzer-sdk.md) | `Task<SpatialAnalyzerSdkLifecycleState>` | Replace a lost or faulted SDK generation and leave it disconnected |
+| Briosa | [`StopAsync`](./stop.md) | `Task` | End the client session and stop only an owned Briosa server |
+| Briosa | [`DisposeAsync`](./dispose-async.md) | `ValueTask` | Perform final client cleanup |
 
-:::
+## Client Construction
 
-## Client-Owned Server
+```csharp
+public sealed record BriosaClientOptions
+{
+    public TimeSpan? CommandTimeout { get; init; }
+}
 
-The parameterless constructor selects the normal client-owned mode:
+public sealed record SpatialAnalyzerLaunchOptions
+{
+    public string? JobFilePath { get; init; }
+    public string? QuickStartInstrumentName { get; init; }
+    public bool StartMinimized { get; init; }
+}
+
+public sealed record BriosaStartOptions
+{
+    public bool StartSpatialAnalyzerSdk { get; init; } = true;
+    public bool LaunchSpatialAnalyzer { get; init; } = true;
+    public bool ConnectToSpatialAnalyzer { get; init; } = true;
+    public SpatialAnalyzerLaunchOptions LaunchOptions { get; init; } = new();
+    public TimeSpan StartupTimeout { get; init; } = TimeSpan.FromSeconds(30);
+
+    public static BriosaStartOptions Default { get; } = new();
+}
+
+public sealed partial class BriosaClient : IAsyncDisposable
+{
+    public BriosaClient(BriosaClientOptions? options = null);
+}
+```
+
+Construction is dormant. `StartAsync()` locates and launches the matching
+Briosa server on an owned loopback endpoint. Direct control of a manually
+started server uses the public gRPC API rather than a separate first-party
+client construction mode.
+
+`BriosaStartOptions.StartupTimeout` defaults to 30 seconds and bounds the
+complete startup procedure requested by that call. SpatialAnalyzer launch,
+SDK connection, identity verification, and readiness probing retain their own
+server-configured safety bounds. `CommandTimeout` defaults to `null`, meaning
+the client adds no MP-command deadline.
+
+The three startup switches are independent except that connecting requires the
+same startup call to start an SDK generation. Launch options must remain at
+their defaults when application launch is disabled. `JobFilePath` and
+`QuickStartInstrumentName` are mutually exclusive.
+
+## SpatialAnalyzer Application State
+
+```csharp
+public sealed record SpatialAnalyzerLifecycleState
+{
+    public ulong StateRevision { get; init; }
+    public SpatialAnalyzerApplicationState ApplicationState { get; init; }
+    public SpatialAnalyzerOwnership Ownership { get; init; }
+    public int? ApplicationGeneration { get; init; }
+    public string? DiagnosticCode { get; init; }
+}
+
+public enum SpatialAnalyzerApplicationState
+{
+    Unspecified,
+    NotRunning,
+    Starting,
+    Running,
+    Closing,
+    Exited,
+    Ambiguous,
+    Faulted,
+}
+
+public enum SpatialAnalyzerOwnership
+{
+    Unspecified,
+    None,
+    External,
+    ServerLaunched,
+}
+```
+
+## SpatialAnalyzer SDK State
+
+```csharp
+public sealed record SpatialAnalyzerSdkLifecycleState
+{
+    public ulong StateRevision { get; init; }
+    public SpatialAnalyzerSdkState SdkState { get; init; }
+    public int? SdkGeneration { get; init; }
+    public int? ApplicationGeneration { get; init; }
+    public SpatialAnalyzerConnectionState ConnectionState { get; init; }
+    public SpatialAnalyzerExecutionReadinessState ExecutionReadinessState { get; init; }
+    public bool ReadyForMp { get; init; }
+    public SpatialAnalyzerSdkRecoveryState RecoveryState { get; init; }
+    public SpatialAnalyzerSdkIncident? LastIncident { get; init; }
+    public string? DiagnosticCode { get; init; }
+}
+
+public sealed record SpatialAnalyzerSdkIncident
+{
+    public int SdkGeneration { get; init; }
+    public SpatialAnalyzerSdkTerminationKind TerminationKind { get; init; }
+    public ExecutionDisposition? ExecutionDisposition { get; init; }
+    public Guid? OperationId { get; init; }
+    public string? DiagnosticCode { get; init; }
+}
+
+public enum SpatialAnalyzerSdkState
+{
+    Unspecified,
+    Stopped,
+    Starting,
+    Running,
+    Connecting,
+    Verifying,
+    Ready,
+    Stopping,
+    Recovering,
+    Faulted,
+}
+
+public enum SpatialAnalyzerSdkRecoveryState
+{
+    Unspecified,
+    NotRequired,
+    RecoveryAvailable,
+    OperatorActionRequired,
+    Blocked,
+}
+
+public enum SpatialAnalyzerSdkTerminationKind
+{
+    Unspecified,
+    StartFailed,
+    SdkProcessExited,
+    SdkConnectionLost,
+    WorkerProcessExited,
+    ControlChannelLost,
+    WatchdogTerminated,
+}
+
+public enum SpatialAnalyzerSdkRecoveryMode
+{
+    ReplaceWithoutReplay,
+}
+
+public enum SpatialAnalyzerConnectionState
+{
+    Unspecified,
+    Disconnected,
+    Connecting,
+    Connected,
+    Faulted,
+    Stopping,
+}
+
+public enum SpatialAnalyzerExecutionReadinessState
+{
+    Unspecified,
+    Unverified,
+    Verifying,
+    ExecutionReady,
+    CompetingClientSuspected,
+    OperatorRecoveryRequired,
+}
+
+public enum ExecutionDisposition
+{
+    Unspecified,
+    NotStarted,
+    StartedOutcomeUnknown,
+    Completed,
+}
+```
+
+These enums preserve the public gRPC terms. In particular,
+`StartedOutcomeUnknown` is not converted to a generic connectivity error.
+
+The client retains application and SDK generations and supplies generation
+guards automatically. Callers never pass process IDs or generation values.
+
+## Lifecycle Errors
+
+```csharp
+public sealed class BriosaSpatialAnalyzerException : BriosaException
+{
+    public SpatialAnalyzerLifecycleFailureKind Kind { get; }
+    public string DiagnosticCode { get; }
+    public LifecycleRecoveryGuidance RecoveryGuidance { get; }
+    public SpatialAnalyzerLifecycleState State { get; }
+}
+
+public sealed class BriosaSpatialAnalyzerSdkException : BriosaException
+{
+    public SpatialAnalyzerSdkLifecycleFailureKind Kind { get; }
+    public string DiagnosticCode { get; }
+    public LifecycleRecoveryGuidance RecoveryGuidance { get; }
+    public SpatialAnalyzerSdkLifecycleState State { get; }
+}
+```
+
+The client decodes the typed lifecycle error detail returned by the relevant
+service. An SDK identity mismatch maps to `BriosaCompatibilityException`;
+other SDK lifecycle failures map to `BriosaSpatialAnalyzerSdkException`.
+Transport cancellation remains `OperationCanceledException`. MP-operation
+failures continue to use the operation exception hierarchy; an SDK incident is
+also visible through `GetSpatialAnalyzerSdkStateAsync()`.
+
+## Complete Example
 
 ```csharp
 using Briosa;
@@ -28,119 +246,8 @@ await using var briosa = new BriosaClient();
 await briosa.StartAsync();
 
 string workingDirectory = await briosa.GetWorkingDirectoryAsync();
-
-await briosa.StopAsync();
 ```
 
-`StartAsync()` locates and launches the exact-target Briosa server, chooses an
-owned loopback endpoint, verifies the session, and captures its capabilities.
-`StopAsync()` terminates only that owned server generation and leaves the client
-available for another start.
-
-## Externally Managed Server
-
-Use `BriosaClientOptions.External()` when your application or an operator owns
-the server. The endpoint must be loopback in v0.2:
-
-```csharp
-using Briosa;
-
-await using var briosa = new BriosaClient(
-    BriosaClientOptions.External(
-        new Uri("http://127.0.0.1:50051")));
-
-await briosa.StartAsync();
-string workingDirectory = await briosa.GetWorkingDirectoryAsync();
-```
-
-Disposal releases the client connection but does not terminate the external
-server.
-
-## Public API
-
-```csharp
-public sealed record BriosaClientOptions
-{
-    public static BriosaClientOptions ClientOwned { get; }
-
-    public static BriosaClientOptions External(Uri endpoint);
-
-    public TimeSpan StartupTimeout { get; init; }
-
-    public TimeSpan? CommandTimeout { get; init; }
-}
-
-public sealed partial class BriosaClient : IAsyncDisposable
-{
-    public BriosaClient(BriosaClientOptions? options = null);
-
-    public Task StartAsync(
-        CancellationToken cancellationToken = default);
-
-    public Task StopAsync(
-        CancellationToken cancellationToken = default);
-
-    public ValueTask DisposeAsync();
-}
-```
-
-Omitting `options` is equivalent to `BriosaClientOptions.ClientOwned`.
-`StartupTimeout` defaults to 30 seconds. `CommandTimeout` defaults to `null`,
-which means the client adds no command deadline.
-
-Options are immutable after construction. To change a timeout, derive a new
-record value before creating the client:
-
-```csharp
-var options = BriosaClientOptions.ClientOwned with
-{
-    StartupTimeout = TimeSpan.FromSeconds(45),
-    CommandTimeout = null,
-};
-
-await using var briosa = new BriosaClient(options);
-```
-
-## Command Admission
-
-MP methods are available only after `StartAsync()` completes. Startup verifies
-server liveness, MP readiness, exact-target identity, protocol identity, and
-the admitted capability set as one operation.
-
-Calling an MP method without a ready session throws
-`BriosaLifecycleException`. Calling a method omitted from the admitted
-capability set throws `BriosaCapabilityException`. Neither failure submits an
-MP command.
-
-## Stop and Disposal
-
-`StopAsync()` is reusable. After it completes, another `StartAsync()` creates
-and verifies a new session. Calling stop while already dormant succeeds without
-creating work.
-
-`DisposeAsync()` performs final asynchronous cleanup and permanently disposes
-the client. It follows the same ownership rules as stop. Starting or calling an
-MP method after disposal throws `ObjectDisposedException`.
-
-The cancellation token controls how long that caller waits. Once cleanup has
-started, owned-resource cleanup continues within its bound even if the wait is
-cancelled.
-
-## Lifecycle Failures
-
-Lifecycle failures use handwritten .NET exceptions:
-
-| Exception | Meaning |
-| --- | --- |
-| `BriosaLifecycleException` | The current client state cannot admit the requested work |
-| `BriosaStartupException` | A server could not be located, launched, reached, or made ready |
-| `BriosaCompatibilityException` | The server target or protocol identity does not match this package |
-| `BriosaCapabilityException` | The ready server does not admit the requested operation |
-| `OperationCanceledException` | The caller cancelled its wait |
-
-A failed start cleans up any partially launched owned server and returns the
-client to its reusable dormant state. External servers are never terminated by
-client cleanup.
-
-- [Understand the shared lifecycle](/docs/concepts/client-lifecycle)
-- [Run your first MP command](/docs/getting-started/first-request)
+This is the default fresh-application procedure. Pass `BriosaStartOptions` to
+select a different startup sequence or controlled application launch inputs.
+Ordinary client stop or disposal never closes SpatialAnalyzer.

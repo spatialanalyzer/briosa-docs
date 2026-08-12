@@ -31,6 +31,17 @@ This makes it easier to bring SpatialAnalyzer into the rest of your software:
 - Add SpatialAnalyzer capabilities without making every application an SA SDK
   integration project
 
+:::note[Local-Only Today]
+
+Current Briosa releases, including the planned v1 contract, run beside
+SpatialAnalyzer on the same Windows machine. The client communicates with the
+Briosa server through a loopback endpoint, and Briosa connects its SDK to the
+local SpatialAnalyzer application. Secure connections to Briosa servers on
+other machines are [planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156),
+not supported today.
+
+:::
+
 ## First-Party Clients for Popular Runtimes
 
 Briosa is more than a server protocol. The project is building dedicated client

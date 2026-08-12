@@ -38,7 +38,7 @@ async with BriosaClient() as briosa:
 
 Entering the asynchronous context starts a compatible Briosa session and
 verifies that SpatialAnalyzer is ready for MP execution. Exiting the context
-cleans up the client-owned session.
+cleans up the local Briosa session and SDK while leaving SpatialAnalyzer open.
 
 ## Signature
 

@@ -1,13 +1,21 @@
 ---
-title: Start, Use, and Stop Briosa
-description: Understand how a Briosa client prepares a verified session and safely cleans it up.
+title: Manage Briosa, SDK, and SpatialAnalyzer Lifecycles
+description: Understand how the Briosa server, SpatialAnalyzer application, and SpatialAnalyzer SDK are managed independently.
 ---
 
-# Start, Use, and Stop Briosa
+# Manage Briosa, SDK, and SpatialAnalyzer Lifecycles
 
-The Briosa clients give your application one predictable way to prepare
-SpatialAnalyzer automation, use it, and clean it up. You create a client, start
-it, call MP commands, and stop it when your application is finished.
+Briosa keeps three resources independently manageable:
+
+| Resource | What It Provides | What Stopping It Does Not Do |
+| --- | --- | --- |
+| Briosa server | The local API and lifecycle control plane | It does not close SpatialAnalyzer |
+| SpatialAnalyzer application | The desktop application that owns your SA data and MP environment | It does not automatically start the SA SDK |
+| SpatialAnalyzer SDK | Briosa's isolated path for executing MP commands | It does not close SpatialAnalyzer or stop the public server |
+
+This separation lets you keep the control plane available without starting SA,
+restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
+when your client exits.
 
 :::note[Status: Next]
 
@@ -17,130 +25,151 @@ with the matching Briosa server release.
 
 :::
 
-Creating a client does not launch a process or contact a server. All external
-work begins with the explicit asynchronous start operation. This makes startup
-failures visible at a predictable point and prevents an ordinary MP command
-from unexpectedly starting infrastructure.
+## Starting the Server Does Not Start SA
 
-## Choose Who Runs the Briosa Server
+Starting `Briosa.Server.exe` manually starts only the local gRPC server. It does
+not create an SA SDK instance, launch SpatialAnalyzer, or call `ConnectEx`.
 
-The same lifecycle supports two ways to run Briosa:
+This gives direct gRPC users explicit control over every lifecycle transition.
+The server can remain available for status and recovery calls even when neither
+the SDK nor SpatialAnalyzer is running.
 
-| Mode | Best Fit | What the Client Owns |
-| --- | --- | --- |
-| Client-owned server | Most desktop applications, scripts, and first-time users | The exact Briosa server process launched for this client |
-| Externally managed server | Applications or operators that start Briosa themselves | The client connection only |
+The current release is local-only. The server listens on loopback, and its SDK
+connects to local SpatialAnalyzer with `ConnectEx("localhost", ...)`. Secure
+remote Briosa connections are
+[planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156).
 
-### Client-Owned Server
+## The Default Client Startup Is Convenient
 
-This is the default. The client locates the server distribution for its exact
-SpatialAnalyzer target, chooses an available loopback endpoint, launches the
-server, verifies it, and remembers that it owns that server generation.
+The first-party clients provide a default startup procedure for the most common
+case. Calling `StartAsync()` in .NET or `start()` in Python and JavaScript:
 
-When the client stops, it also stops only the Briosa server process it launched.
-Your application does not need to choose a port or manage the server process.
+1. Launches the matching local Briosa server.
+2. Starts a new disconnected SA SDK instance.
+3. Launches a fresh exact-target SpatialAnalyzer application.
+4. Connects the SDK to local SpatialAnalyzer.
+5. Verifies runtime identity and MP execution readiness.
 
-### Externally Managed Server
+The call returns only when MP commands are ready. Startup options can disable
+any of the SDK-start, application-launch, or connection phases. This supports
+attaching to an eligible application that is already running, starting a
+disconnected SDK for later use, launching SA without starting the SDK, or
+starting only the Briosa control plane.
 
-Supply a loopback endpoint when another part of your application or an operator
-starts the Briosa server. The client connects to that endpoint and performs the
-same readiness and compatibility checks as client-owned mode. The v0.2 clients
-reject non-loopback endpoints because Briosa has not yet established its remote
-security model.
+When application launch is selected, clients can request a local SA job file,
+an instrument quick-start for a new job, or a minimized window. Briosa does not
+accept an executable path, arbitrary process arguments, or launch-time MP
+execution from clients.
 
-Stopping the client releases its connection but never terminates the supplied
-server. The system that started the server remains responsible for it.
+## Explicit gRPC Lifecycle Sequence
 
-## SpatialAnalyzer Remains Separate
+Direct gRPC users control the same resources through separate RPCs:
 
-Both modes make the same v0.2 assumption: SpatialAnalyzer is installed and
-licensed separately, and the matching SpatialAnalyzer application is already
-running before the client starts.
+1. Call `StartSpatialAnalyzerSdk` to create Briosa's SDK instance. It starts in
+   `RUNNING` and `DISCONNECTED` state.
+2. Optionally call `LaunchSpatialAnalyzer` to start a fresh exact-target SA
+   application. You can skip this step when an eligible application is already
+   running. The request may select one local job file or one quick-start
+   instrument and may start the window minimized.
+3. Call `ConnectToSpatialAnalyzer`. The SDK calls
+   `ConnectEx("localhost", ...)`, verifies the connected runtime, proves the MP
+   execution channel, and opens MP admission.
 
-The client does not install, launch, close, or forcefully terminate
-SpatialAnalyzer. Stopping Briosa does not close an open SA job or discard work
-in the SpatialAnalyzer application.
+Starting the SDK never launches or connects to SpatialAnalyzer. Launching
+SpatialAnalyzer never connects the SDK. A separate connect call is always
+required before MP work.
 
-## What Start Verifies
+## Choosing the SpatialAnalyzer Application
 
-The start operation does more than open a connection. Before it allows an MP
-command, the client:
+You may start the matching SpatialAnalyzer release yourself or ask Briosa to
+launch its approved exact-target application.
 
-1. Locates or launches the selected Briosa server
-2. Confirms that the server is responding
-3. Waits until the server is ready to execute MP commands
-4. Verifies the exact SpatialAnalyzer target and the locked protocol identity
-5. Captures the operations admitted by the running server
+An application you started remains externally owned. Briosa may connect to it,
+but will not close it. When Briosa launches SpatialAnalyzer, it retains the
+exact process identity so a later explicit close can affect only that process.
 
-The client publishes the new session only after every check succeeds. An MP
-command called before startup completes fails through the client lifecycle
-error boundary and is not sent to the server.
+Launching a fresh application never closes an existing SpatialAnalyzer or SDK
+process. If another application already owns the SDK ports, launch fails and
+requires the user to resolve the conflict. Machine-wide process termination is
+not part of the current lifecycle contract.
 
-The captured operation list is checked again for each client method. If the
-running server does not admit that method, the call fails locally as a
-capability error before an MP command is submitted.
+The SA SDK cannot select an arbitrary local window. The first eligible
+SpatialAnalyzer application owns the SDK communication ports. Briosa fails
+closed when it cannot identify a compatible, unambiguous target.
 
-## Stop, Restart, and Final Cleanup
+## Connection and Readiness Are Separate Claims
 
-The explicit stop operation closes command admission, releases the current
-connection, and performs bounded cleanup of resources the client owns. It
-leaves the client dormant so the same client can be started again later.
+`ConnectEx` success proves only that the SDK attached to a SpatialAnalyzer
+application. `ConnectToSpatialAnalyzer` also verifies that the activated SDK
+and connected application match the exact Briosa target, then proves the MP
+execution channel within a bounded watchdog.
 
-Every new start creates and verifies a new session, even when it reconnects to
-the same external endpoint. Compatibility or readiness from an earlier session
-is never assumed to remain valid.
+MP methods become available only when the SDK reports `READY` and
+`ready_for_mp` is true.
 
-Each language also offers its normal asynchronous resource-management pattern:
+## Diagnose and Recover the SDK
 
-- .NET supports `IAsyncDisposable`
-- Python supports `aclose()` and `async with`
-- JavaScript supports `Symbol.asyncDispose` and `await using`
+The SA SDK is a separate process and can disappear while Briosa and
+SpatialAnalyzer remain running. Briosa closes MP admission and records an SDK
+incident when it loses the SDK engine, worker, connection, or control channel.
 
-These conveniences follow the same ownership rules as explicit stop. They do
-not add another way to execute MP commands, and they never close
-SpatialAnalyzer.
+The SDK-state API reports:
 
-## Timeouts, Cancellation, and Startup Failure
+- Which SDK generation failed
+- What caused the loss
+- Whether recovery is available or operator action is required
+- Whether an affected command definitely did not start or may have completed
+  with an unknown outcome
 
-Startup has its own timeout because preparing a verified session is different
-from running an MP command. The default startup timeout is 30 seconds. A client
-may also have an optional command timeout; by default, the client adds no extra
-command deadline.
+Use the language client's state method to inspect that information:
 
-Cancelling a caller's wait does not turn partial startup into a usable session.
-If client-owned startup fails, the client performs bounded cleanup of the exact
-server process it launched. If external startup fails, the client releases its
-own connection and leaves the supplied server running.
+| Language | State Method |
+| --- | --- |
+| .NET | `GetSpatialAnalyzerSdkStateAsync()` |
+| Python | `get_spatial_analyzer_sdk_state()` |
+| JavaScript/TypeScript | `getSpatialAnalyzerSdkState()` |
 
-After failure, the client returns to its reusable dormant state. Fix the cause
-and call start again. No partial or unverified session is retained.
+Use reconnect when the current SDK generation is still healthy but its SA
+connection or readiness needs to be re-established. Reconnect calls
+`ConnectEx("localhost", ...)` again on that same SDK generation.
 
-Once stop or cleanup begins, owned-resource cleanup continues within its bound
-even if one caller stops waiting. Cancellation never changes which resources
-the client is allowed to terminate.
+Use recovery when the SDK or its worker is unhealthy. Recovery replaces the
+failed generation and leaves the replacement `RUNNING` and `DISCONNECTED`.
+Call the connect method afterward to establish MP readiness.
 
-## Overlapping Lifecycle Calls
+Neither reconnect nor recovery retries an interrupted MP command. If the last
+incident reports `STARTED_OUTCOME_UNKNOWN`, inspect or reconcile
+SpatialAnalyzer state before deciding whether to issue that command again.
 
-The client coordinates lifecycle calls so only one session can be active:
+## Stop Resources Deliberately
 
-- Concurrent starts share one startup attempt
-- Cancelling one start caller does not cancel a startup still awaited by another
-  caller
-- Starting an already ready client succeeds without creating another session
-- Stop requested during startup prevents that partial session from being
-  published and cleans it up
-- Concurrent stops share one cleanup operation
-- Commands are accepted only while one fully verified session is ready
+The SDK stop method closes MP admission and ends the current SDK generation.
+SpatialAnalyzer and the Briosa server remain running.
 
-Callers that depend on MP command order should still await those commands in
-sequence. A concurrency-safe client does not make SpatialAnalyzer execute MP
-commands in parallel.
+Closing SpatialAnalyzer is never part of ordinary client cleanup. Briosa will
+close only an application that the current server can prove it launched, and
+only after an explicit close request.
 
-## Language API References
+Client stop or disposal shuts down the server that the client launched and its
+SDK generation, but leaves SpatialAnalyzer open. This remains true when the
+default client startup procedure launched the SA application.
 
-- [.NET lifecycle API](/api/dotnet/lifecycle)
-- [Python lifecycle API](/api/python/lifecycle)
-- [JavaScript and TypeScript lifecycle API](/api/javascript/lifecycle)
+## Timeouts and Overlapping Calls
 
-For the server checks behind startup, see
-[Readiness Is More Than Connection](./readiness).
+Client startup options expose one overall startup timeout. Application launch,
+SDK startup, connection, identity verification, recovery, and MP execution
+retain separate server-configured safety bounds. Cancelling a caller's wait
+does not reverse a transition that may already have occurred. Query application
+or SDK state before trying another transition.
+
+The server serializes application and SDK lifecycle transitions. A conflicting
+request fails clearly instead of racing another launch, start, connect,
+reconnect, stop, recovery, or close.
+
+## API References
+
+- [gRPC lifecycle APIs](/api/grpc/lifecycle)
+- [.NET lifecycle APIs](/api/dotnet/lifecycle)
+- [Python lifecycle APIs](/api/python/lifecycle)
+- [JavaScript and TypeScript lifecycle APIs](/api/javascript/lifecycle)
+- [Readiness Is More Than Connection](./readiness)

@@ -37,9 +37,9 @@ await briosa.StartAsync();
 string workingDirectory = await briosa.GetWorkingDirectoryAsync();
 ```
 
-`StartAsync()` must complete before the command is called. It launches an owned
-server or connects to the configured external server, then verifies that
-SpatialAnalyzer is ready for MP execution.
+`StartAsync()` must complete before the command is called. Its default procedure
+launches the local server, SDK, and a fresh SpatialAnalyzer application, then
+connects and verifies MP readiness.
 
 ## Signature
 
