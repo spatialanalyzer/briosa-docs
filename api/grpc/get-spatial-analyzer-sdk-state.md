@@ -71,7 +71,7 @@ Example after SDK loss during an admitted MP command:
       "sdkGeneration": 7,
       "terminationKind": "SPATIAL_ANALYZER_SDK_TERMINATION_KIND_SDK_PROCESS_EXITED",
       "executionDisposition": "EXECUTION_DISPOSITION_STARTED_OUTCOME_UNKNOWN",
-      "operationId": "15fcb35d-78bd-4cab-91a8-7ae64a936b1f",
+      "operationId": "file_operations.get_working_directory",
       "diagnosticCode": "sdk-process-exited-during-execution"
     },
     "diagnosticCode": "sdk-recovery-available"

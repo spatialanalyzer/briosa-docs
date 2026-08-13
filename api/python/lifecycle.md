@@ -130,7 +130,7 @@ class SpatialAnalyzerSdkIncident:
     sdk_generation: int
     termination_kind: SpatialAnalyzerSdkTerminationKind
     execution_disposition: ExecutionDisposition | None
-    operation_id: UUID | None
+    operation_id: str | None
     diagnostic_code: str | None
 
 
