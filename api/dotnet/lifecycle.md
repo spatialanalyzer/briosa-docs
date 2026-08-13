@@ -132,7 +132,7 @@ public sealed record SpatialAnalyzerSdkIncident
     public int SdkGeneration { get; init; }
     public SpatialAnalyzerSdkTerminationKind TerminationKind { get; init; }
     public ExecutionDisposition? ExecutionDisposition { get; init; }
-    public Guid? OperationId { get; init; }
+    public string? OperationId { get; init; }
     public string? DiagnosticCode { get; init; }
 }
 
