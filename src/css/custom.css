@@ -22,6 +22,18 @@
   --briosa-current-background: #e8f7f2;
   --briosa-current-border: #89cdbb;
   --briosa-current-text: #126b5d;
+  --briosa-next-background: #eaf2ff;
+  --briosa-next-border: #8cb3e8;
+  --briosa-next-text: #1f579a;
+  --briosa-uncommitted-background: #fff6dd;
+  --briosa-uncommitted-border: #dbba63;
+  --briosa-uncommitted-text: #76550a;
+  --briosa-excluded-background: #f5eded;
+  --briosa-excluded-border: #caa4a4;
+  --briosa-excluded-text: #7a3030;
+  --briosa-unavailable-background: #f1edfa;
+  --briosa-unavailable-border: #ad9bd2;
+  --briosa-unavailable-text: #594184;
 }
 
 [data-theme='dark'] {
@@ -44,6 +56,18 @@
   --briosa-current-background: #102f2a;
   --briosa-current-border: #357e70;
   --briosa-current-text: #8cebd5;
+  --briosa-next-background: #132944;
+  --briosa-next-border: #446f9f;
+  --briosa-next-text: #a9cff9;
+  --briosa-uncommitted-background: #332b15;
+  --briosa-uncommitted-border: #75632c;
+  --briosa-uncommitted-text: #f4d582;
+  --briosa-excluded-background: #321f23;
+  --briosa-excluded-border: #75454d;
+  --briosa-excluded-text: #efb2bb;
+  --briosa-unavailable-background: #261f3b;
+  --briosa-unavailable-border: #67588d;
+  --briosa-unavailable-text: #d0bff5;
 }
 
 .navbar {
@@ -244,10 +268,49 @@ code {
   color: var(--briosa-current-text);
 }
 
+.catalog-status--next {
+  border-color: var(--briosa-next-border);
+  background: var(--briosa-next-background);
+  color: var(--briosa-next-text);
+}
+
+.catalog-status--uncommitted {
+  border-color: var(--briosa-uncommitted-border);
+  background: var(--briosa-uncommitted-background);
+  color: var(--briosa-uncommitted-text);
+}
+
+.catalog-status--excluded {
+  border-color: var(--briosa-excluded-border);
+  background: var(--briosa-excluded-background);
+  color: var(--briosa-excluded-text);
+}
+
+.catalog-status--sdk-unavailable {
+  border-color: var(--briosa-unavailable-border);
+  background: var(--briosa-unavailable-background);
+  color: var(--briosa-unavailable-text);
+}
+
 .catalog-status--undecided {
   border-color: var(--briosa-border);
   background: var(--briosa-soft);
   color: var(--briosa-muted);
+}
+
+.catalog-command-table {
+  display: table;
+  width: 100%;
+}
+
+.catalog-command-table th,
+.catalog-command-table td {
+  vertical-align: top;
+}
+
+.catalog-command-table td:first-child {
+  min-width: 14rem;
+  font-weight: 650;
 }
 
 .header-github-link {

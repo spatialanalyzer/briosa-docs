@@ -16,14 +16,14 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Accumulator Math Operations</strong><span>8 observations · 1 group path</span></summary>
 
-- Root group — 8
+- [Root group — 8](./accumulator-math-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Analysis Operations</strong><span>122 observations · 2 group paths</span></summary>
 
-- Root group — 112
+- [Root group — 112](./analysis-operations.md)
 - Geometry Fit Profiles — 10
 
 </details>
@@ -69,21 +69,21 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Dimension Operations</strong><span>20 observations · 1 group path</span></summary>
 
-- Root group — 20
+- [Root group — 20](./dimension-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Event Operations</strong><span>6 observations · 1 group path</span></summary>
 
-- Root group — 6
+- [Root group — 6](./event-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Excel Direct Connect</strong><span>17 observations · 3 group paths</span></summary>
 
-- Root group — 8
+- [Root group — 8](./excel-direct-connect.md)
 - Read — 4
 - Write — 5
 
@@ -116,7 +116,7 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Google Sheets Operations</strong><span>19 observations · 3 group paths</span></summary>
 
-- Root group — 8
+- [Root group — 8](./google-sheets-operations.md)
 - Google Sheets Read Operations — 5
 - Google Sheets Write Operations — 6
 
@@ -139,34 +139,35 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>MP Subroutines</strong><span>4 observations · 1 group path</span></summary>
 
-- Root group — 4
+- [Root group — 4](./mp-subroutines.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>MP Task Overview</strong><span>11 observations · 1 group path</span></summary>
 
-- Root group — 11
+- [Root group — 11](./mp-task-overview.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>MS Office Reporting Operations</strong><span>13 observations · 1 group path</span></summary>
 
-- Root group — 13
+- [Root group — 13](./ms-office-reporting-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Process Flow Operations</strong><span>23 observations · 1 group path</span></summary>
 
-- Root group — 23
+- [Root group — 23](./process-flow-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Relationship Operations</strong><span>114 observations · 4 group paths</span></summary>
 
+- [Open the 55 reviewed Wave A crossover commands](./relationship-operations.md)
 - Root group — 55
 - Pipe Relationships — 8
 - Relationship Attributes — 41
@@ -177,7 +178,7 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Reporting Operations</strong><span>73 observations · 3 group paths</span></summary>
 
-- Root group — 46
+- [Root group — 46](./reporting-operations.md)
 - Custom Report Tables — 13
 - Report Bar — 14
 
@@ -200,21 +201,21 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Scalar Math Operations</strong><span>21 observations · 1 group path</span></summary>
 
-- Root group — 21
+- [Root group — 21](./scalar-math-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Scale Bar Operations</strong><span>5 observations · 1 group path</span></summary>
 
-- Root group — 5
+- [Root group — 5](./scale-bar-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Utility Operations</strong><span>89 observations · 8 group paths</span></summary>
 
-- Root group — 31
+- [Root group — 31](./utility-operations.md)
 - Folders — 5
 - Language — 3
 - Network — 6
@@ -228,14 +229,14 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Variables</strong><span>41 observations · 1 group path</span></summary>
 
-- Root group — 41
+- [Root group — 41](./variables.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Vector Operations</strong><span>25 observations · 2 group paths</span></summary>
 
-- Root group — 18
+- [Root group — 18](./vector-operations.md)
 - Vector Math Operations — 7
 
 </details>
@@ -243,7 +244,7 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>View Control</strong><span>50 observations · 6 group paths</span></summary>
 
-- Root group — 13
+- [Root group — 13](./view-control.md)
 - Colors — 7
 - Hide/Show Operations — 19
 - Highlight Operations — 3

@@ -32,3 +32,9 @@ For task-oriented examples, start with
 underlying service contract, use the [gRPC API Reference](/api/grpc).
 
 [View the JavaScript client repository](https://github.com/spatialanalyzer/briosa-js)
+
+## Wave A Next APIs
+
+The sidebar's **Wave A MP Commands (Next)** section defines the planned
+JavaScript functions and TypeScript input/result shapes for all selected
+commands, including reviewed defaults, examples, and gRPC links.
