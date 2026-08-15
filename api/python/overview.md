@@ -32,3 +32,9 @@ For task-oriented examples, start with
 underlying service contract, use the [gRPC API Reference](/api/grpc).
 
 [View the Python client repository](https://github.com/spatialanalyzer/briosa-py)
+
+## Wave A Next APIs
+
+The sidebar's **Wave A MP Commands (Next)** section defines the planned flat
+`BriosaClient` coroutines for all selected commands, including Python types,
+reviewed defaults, return shapes, examples, and links to the gRPC contract.

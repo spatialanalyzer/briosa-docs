@@ -64,3 +64,12 @@ real-SA validation status, and user documentation.
 
 The authoritative contracts live in the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/main/targets/2026.1.0529.7/proto/briosa).
+
+## Wave A Next Contracts
+
+The sidebar's **Wave A MP Commands (Next)** section defines the gRPC service,
+RPC, operation ID, request fields, result fields, MP argument mapping, and
+reviewed defaults for every operation selected in the first catalog wave.
+Those entries are implementation contracts, not a claim that the current
+server already exposes them. Each one links back to its reviewed catalog
+disposition and forward to the three client-library expressions.

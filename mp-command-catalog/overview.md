@@ -13,13 +13,14 @@ exact target Briosa reviews. It is broader than the Briosa API: it will include
 current commands, commands planned for the next release, commands without a
 release commitment, and commands Briosa does not plan or cannot implement.
 
-:::important[Catalog Entries Are Not API]
+:::important[Status Determines Availability]
 
-Only an entry explicitly marked **Current** describes a committed Briosa
-operation. The authoritative contracts and operation registry live in the
-[Briosa server repository](https://github.com/spatialanalyzer/briosa).
-For a running server, `DiscoveryService/ListCapabilities` reports the subset
-currently admitted by policy.
+**Current** entries are callable today. **Next** entries link to reviewed API
+contracts that the server and client libraries still need to implement. The
+authoritative implemented contracts and operation registry live in the
+[Briosa server repository](https://github.com/spatialanalyzer/briosa). For a
+running server, `DiscoveryService/ListCapabilities` reports the subset currently
+admitted by policy.
 
 :::
 
@@ -47,7 +48,7 @@ its reviewed SA availability, group history, signature revisions, Briosa
 support, and replacement guidance when applicable. This keeps one searchable
 command result even when the same signature appears in several SA releases.
 
-[View the canonical File Operations command format →](./commands/file-operations.md)
+[Search and filter the Wave A command index →](./commands/index.md)
 
 ## How to Read Status
 
@@ -60,15 +61,19 @@ command result even when the same signature appears in several SA releases.
 | **Excluded** | A reviewed product, policy, safety, or scope decision excludes it. |
 | **SDK Unavailable** | The reviewed exact-target SDK surface cannot implement it. |
 
-An **At risk** note qualifies validation evidence independently from support
+An **At Risk** note qualifies validation evidence independently from support
 status. A missing fixture, hardware dependency, license, or unexecuted licensed
 scenario does not by itself make a command intentionally excluded.
 
 ## Coverage While the Catalog Is Incomplete
 
-The catalog is being built content-first in SpatialAnalyzer's exact-target
-group hierarchy. Absence from the published pages currently means only that a
-group has not been documented; it is not a support, exclusion, or
+Wave A publishes complete dispositions for 18 retained source groups. Those
+records appear under 19 MP Editor root groups because 58 relationship-scoped
+records were retained with the Analysis source set; 55 have exact Relationship
+Operations paths in SA 2026.1.0529.7 and three are documentation-only. The
+remaining groups are still being built content-first in SpatialAnalyzer's
+exact-target hierarchy. Absence from the published pages means only that a
+future wave has not documented the group; it is not a support, exclusion, or
 SpatialAnalyzer-availability claim.
 
 Before an exact target reaches a documentation freeze, every retained command

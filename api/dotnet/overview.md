@@ -32,3 +32,9 @@ For task-oriented examples, start with
 underlying service contract, use the [gRPC API Reference](/api/grpc).
 
 [View the .NET client repository](https://github.com/spatialanalyzer/briosa-dotnet)
+
+## Wave A Next APIs
+
+The sidebar's **Wave A MP Commands (Next)** section defines the planned flat
+`BriosaClient` methods for all selected commands, including parameter types,
+reviewed defaults, return shapes, examples, and links to the gRPC contract.
