@@ -425,7 +425,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationships_empty_to_clear_all` | `repeated CollectionObjectName` | `Relationships (Empty to clear all)` | Required |
+| Request | 1 | `relationships_empty_to_clear_all` | `repeated CollectionItemName` | `Relationships (Empty to clear all)` | Required |
 | Request | 2 | `high_light_relationships` | `bool` | `HighLight Relationships?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -433,7 +433,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc HighlightRelationships(HighlightRelationshipsRequest) returns (HighlightRelationshipsResult);
 
 message HighlightRelationshipsRequest {
-  repeated CollectionObjectName relationships_empty_to_clear_all = 1;
+  repeated CollectionItemName relationships_empty_to_clear_all = 1;
   optional bool high_light_relationships = 2;
 }
 
@@ -1245,7 +1245,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `callout_view_to_show` | `CollectionObjectName` | `Callout View To Show` | Required |
+| Request | 1 | `callout_view_to_show` | `CollectionItemName` | `Callout View To Show` | Required |
 | Request | 2 | `show_callout_view` | `bool` | `Show Callout View?` | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1253,7 +1253,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc ShowHideCalloutView(ShowHideCalloutViewRequest) returns (ShowHideCalloutViewResult);
 
 message ShowHideCalloutViewRequest {
-  optional CollectionObjectName callout_view_to_show = 1;
+  optional CollectionItemName callout_view_to_show = 1;
   optional bool show_callout_view = 2;
 }
 
@@ -1282,7 +1282,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `dimension_name` | `CollectionObjectName` | `Dimension Name` | Required |
+| Request | 1 | `dimension_name` | `CollectionItemName` | `Dimension Name` | Required |
 | Request | 2 | `show_dimension` | `bool` | `Show Dimension?` | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1290,7 +1290,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc ShowHideDimension(ShowHideDimensionRequest) returns (ShowHideDimensionResult);
 
 message ShowHideDimensionRequest {
-  optional CollectionObjectName dimension_name = 1;
+  optional CollectionItemName dimension_name = 1;
   optional bool show_dimension = 2;
 }
 
@@ -1397,7 +1397,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 2 | `points` | `repeated PointName` | `Points` | Required |
 | Request | 3 | `objects` | `repeated CollectionObjectName` | `Objects` | Required |
 | Request | 4 | `instruments` | `repeated CollectionInstrumentId` | `Instruments` | Required |
-| Request | 5 | `feature_checks` | `repeated CollectionObjectName` | `Feature Checks` | Required |
+| Request | 5 | `feature_checks` | `repeated CollectionItemName` | `Feature Checks` | Required |
 | Request | 6 | `datums` | `repeated CollectionObjectName` | `Datums` | Required |
 | Request | 7 | `collections` | `repeated string` | `Collections` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -1410,7 +1410,7 @@ message ShowItemsInTreeRequest {
   repeated PointName points = 2;
   repeated CollectionObjectName objects = 3;
   repeated CollectionInstrumentId instruments = 4;
-  repeated CollectionObjectName feature_checks = 5;
+  repeated CollectionItemName feature_checks = 5;
   repeated CollectionObjectName datums = 6;
   repeated string collections = 7;
 }
@@ -1553,7 +1553,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `feature_check_name_list` | `repeated CollectionObjectName` | `Feature Check Name List` | Required |
+| Request | 1 | `feature_check_name_list` | `repeated CollectionItemName` | `Feature Check Name List` | Required |
 | Request | 2 | `show` | `bool` | `Show?` | false |
 | Request | 3 | `highlight` | `bool` | `Highlight?` | false |
 | Request | 4 | `set_inspection_view` | `bool` | `Set Inspection View?` | false |
@@ -1563,7 +1563,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc ShowHideAnnotationsForFeatureChecks(ShowHideAnnotationsForFeatureChecksRequest) returns (ShowHideAnnotationsForFeatureChecksResult);
 
 message ShowHideAnnotationsForFeatureChecksRequest {
-  repeated CollectionObjectName feature_check_name_list = 1;
+  repeated CollectionItemName feature_check_name_list = 1;
   optional bool show = 2;
   optional bool highlight = 3;
   optional bool set_inspection_view = 4;

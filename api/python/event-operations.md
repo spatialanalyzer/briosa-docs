@@ -56,7 +56,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `event_list` | `Iterable[CollectionObjectName]` | `Event List` | Required |
+| `event_list` | `Iterable[CollectionItemName]` | `Event List` | Required |
 | `file_path` | `FileReference` | `File Path` | Required |
 | `decimal_precision` | `int` | `Decimal Precision` | 6 |
 | `overwrite_existing_file` | `bool` | `Overwrite existing file?` | false |
@@ -68,7 +68,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def export_event_ref_list(
     self,
-    event_list: Iterable[CollectionObjectName],
+    event_list: Iterable[CollectionItemName],
     file_path: FileReference,
     *,
     decimal_precision: int = 6,
@@ -93,27 +93,27 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `event_list` | `Iterable[CollectionObjectName]` | `Event List` | Required |
+| `event_list` | `Iterable[CollectionItemName]` | `Event List` | Required |
 | `event_index` | `int` | `Event Index` | 0 |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
-| `resultant_item` | `CollectionObjectName` | `Resultant Item` |
+| `resultant_item` | `CollectionItemName` | `Resultant Item` |
 
 ```python
 async def get_ith_event_from_event_ref_list(
     self,
-    event_list: Iterable[CollectionObjectName],
+    event_list: Iterable[CollectionItemName],
     *,
     event_index: int = 0,
-) -> CollectionObjectName: ...
+) -> CollectionItemName: ...
 ```
 
 ```python
 await briosa.get_ith_event_from_event_ref_list(event_list=...)
 ```
 
-Returns the MP output `Resultant Item` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
+Returns the MP output `Resultant Item` directly as `CollectionItemName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
 ## Get Number of Events in Event Ref List
@@ -126,7 +126,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `event_list` | `Iterable[CollectionObjectName]` | `Event List` | Required |
+| `event_list` | `Iterable[CollectionItemName]` | `Event List` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_number_of_events_in_event_ref_list(
     self,
-    event_list: Iterable[CollectionObjectName],
+    event_list: Iterable[CollectionItemName],
 ) -> int: ...
 ```
 

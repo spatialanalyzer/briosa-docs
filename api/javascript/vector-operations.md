@@ -66,7 +66,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `treatIndividually` | `boolean` | `Treat Individually?` | false |
-| `colorizationOptionsUsesModeOnly` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorizationOptionsUsesModeOnly` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface AutoRangeAndSetVectorGroupColorizationAllInput {
   readonly treatIndividually?: boolean;
-  readonly colorizationOptionsUsesModeOnly?: Color;
+  readonly colorizationOptionsUsesModeOnly?: ColorizationOptions;
 }
 
 function autoRangeAndSetVectorGroupColorizationAll(
@@ -104,7 +104,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | --- | --- | --- | --- |
 | `vectorGroupsToBeSet` | `Iterable<CollectionVectorGroupName>` | `Vector Groups to be Set` | Required |
 | `treatIndividually` | `boolean` | `Treat Individually?` | false |
-| `colorizationOptionsUsesModeOnly` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorizationOptionsUsesModeOnly` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -114,7 +114,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 export interface AutoRangeAndSetVectorGroupColorizationSelectedInput {
   readonly vectorGroupsToBeSet: Iterable<CollectionVectorGroupName>;
   readonly treatIndividually?: boolean;
-  readonly colorizationOptionsUsesModeOnly?: Color;
+  readonly colorizationOptionsUsesModeOnly?: ColorizationOptions;
 }
 
 function autoRangeAndSetVectorGroupColorizationSelected(
@@ -548,7 +548,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -556,7 +556,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetVectorGroupColorizationOptionsAllInput {
-  readonly colorizationOptions?: Color;
+  readonly colorizationOptions?: ColorizationOptions;
 }
 
 function setVectorGroupColorizationOptionsAll(
@@ -584,7 +584,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `vectorGroupsToBeSet` | `Iterable<CollectionVectorGroupName>` | `Vector Groups to be Set` | Required |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -593,7 +593,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetVectorGroupColorizationOptionsSelectedInput {
   readonly vectorGroupsToBeSet: Iterable<CollectionVectorGroupName>;
-  readonly colorizationOptions?: Color;
+  readonly colorizationOptions?: ColorizationOptions;
 }
 
 function setVectorGroupColorizationOptionsSelected(

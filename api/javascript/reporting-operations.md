@@ -26,7 +26,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `charts` | `Iterable<CollectionObjectName>` | `Chart(s)` | Required |
+| `charts` | `Iterable<CollectionItemName>` | `Chart(s)` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -35,7 +35,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddChartsToReportBarInput {
-  readonly charts: Iterable<CollectionObjectName>;
+  readonly charts: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -102,7 +102,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `customTablesToReport` | `Iterable<CollectionObjectName>` | `Custom Table(s) To Report` | Required |
+| `customTablesToReport` | `Iterable<CollectionItemName>` | `Custom Table(s) To Report` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -111,7 +111,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddCustomTablesToReportBarInput {
-  readonly customTablesToReport: Iterable<CollectionObjectName>;
+  readonly customTablesToReport: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -176,7 +176,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `events` | `Iterable<CollectionObjectName>` | `Event(s)` | Required |
+| `events` | `Iterable<CollectionItemName>` | `Event(s)` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -185,7 +185,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddEventsToReportBarInput {
-  readonly events: Iterable<CollectionObjectName>;
+  readonly events: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -213,7 +213,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `featureChecks` | `Iterable<CollectionObjectName>` | `Feature Check(s)` | Required |
+| `featureChecks` | `Iterable<CollectionItemName>` | `Feature Check(s)` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -222,7 +222,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddFeatureChecksToReportBarInput {
-  readonly featureChecks: Iterable<CollectionObjectName>;
+  readonly featureChecks: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -332,7 +332,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictures` | `Iterable<CollectionObjectName>` | `Picture(s)` | Required |
+| `pictures` | `Iterable<CollectionItemName>` | `Picture(s)` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -341,7 +341,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddPicturesToReportBarInput {
-  readonly pictures: Iterable<CollectionObjectName>;
+  readonly pictures: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -369,7 +369,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable<CollectionObjectName>` | `Relationship(s)` | Required |
+| `relationships` | `Iterable<CollectionItemName>` | `Relationship(s)` | Required |
 | `clearExisting` | `boolean` | `Clear Existing?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -378,7 +378,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface AddRelationshipsToReportBarInput {
-  readonly relationships: Iterable<CollectionObjectName>;
+  readonly relationships: Iterable<CollectionItemName>;
   readonly clearExisting?: boolean;
 }
 
@@ -447,7 +447,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -455,7 +455,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface CaptureCurrentViewInput {
-  readonly pictureName: CollectionObjectName;
+  readonly pictureName: CollectionItemName;
 }
 
 function captureCurrentView(
@@ -612,7 +612,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `saReportsToCombine` | `Iterable<CollectionObjectName>` | `SA Reports to Combine` | Required |
+| `saReportsToCombine` | `Iterable<CollectionItemName>` | `SA Reports to Combine` | Required |
 | `outputSaReportName` | `CollectionObjectName` | `Output SA Report Name` | Required |
 | `showReport` | `boolean` | `Show Report?` | false |
 
@@ -622,7 +622,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface CombineSaReportsInput {
-  readonly saReportsToCombine: Iterable<CollectionObjectName>;
+  readonly saReportsToCombine: Iterable<CollectionItemName>;
   readonly outputSaReportName: CollectionObjectName;
   readonly showReport?: boolean;
 }
@@ -702,8 +702,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `title` | `Iterable<string>` | `Title` | Required |
 | `graphicalViewOptions` | `ReportViewOptions` | `Graphical View Options` | Required |
 | `itemsToReport` | `Iterable<CollectionObjectName>` | `Items To Report` | Required |
-| `relationshipsToReport` | `Iterable<CollectionObjectName>` | `Relationships To Report` | Required |
-| `eventsToReport` | `Iterable<CollectionObjectName>` | `Events To Report` | Required |
+| `relationshipsToReport` | `Iterable<CollectionItemName>` | `Relationships To Report` | Required |
+| `eventsToReport` | `Iterable<CollectionItemName>` | `Events To Report` | Required |
 | `reportOutputOptions` | `ReportOutputOptions` | `Report Output Options` | ::My Report |
 | `reportPageSettingsSaReportOnly` | `ReportPageSettings` | `Report Page Settings ( SA Report only )` | Portrait |
 | `generateNow` | `boolean` | `Generate Now?` | false |
@@ -719,8 +719,8 @@ export interface DefineReportTemplateInput {
   readonly title: Iterable<string>;
   readonly graphicalViewOptions: ReportViewOptions;
   readonly itemsToReport: Iterable<CollectionObjectName>;
-  readonly relationshipsToReport: Iterable<CollectionObjectName>;
-  readonly eventsToReport: Iterable<CollectionObjectName>;
+  readonly relationshipsToReport: Iterable<CollectionItemName>;
+  readonly eventsToReport: Iterable<CollectionItemName>;
   readonly reportOutputOptions?: ReportOutputOptions;
   readonly reportPageSettingsSaReportOnly?: ReportPageSettings;
   readonly generateNow?: boolean;
@@ -821,7 +821,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -829,7 +829,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface DeletePictureInput {
-  readonly pictureName: CollectionObjectName;
+  readonly pictureName: CollectionItemName;
 }
 
 function deletePicture(
@@ -1335,7 +1335,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | --- | --- | --- | --- |
 | `asciiFilePath` | `FileReference` | `ASCII File Path` | Required |
 | `chartTitleOverride` | `string` | `Chart Title Override` | Empty |
-| `outputPictureName` | `CollectionObjectName` | `Output Picture Name` | Required |
+| `outputPictureName` | `CollectionItemName` | `Output Picture Name` | Required |
 | `showChartDialog` | `boolean` | `Show Chart Dialog?` | false |
 | `plotAdditionalXyValue` | `boolean` | `Plot Additional XY Value?` | false |
 | `xValue` | `number` | `X Value` | 0.000000 |
@@ -1349,7 +1349,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 export interface MakeUtilityChartInput {
   readonly asciiFilePath: FileReference;
   readonly chartTitleOverride?: string;
-  readonly outputPictureName: CollectionObjectName;
+  readonly outputPictureName: CollectionItemName;
   readonly showChartDialog?: boolean;
   readonly plotAdditionalXyValue?: boolean;
   readonly xValue?: number;
@@ -1657,7 +1657,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `reportName` | `CollectionObjectName` | `Report Name` | Required |
+| `reportName` | `CollectionItemName` | `Report Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1665,7 +1665,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface RefreshCalloutViewsInSaReportInput {
-  readonly reportName: CollectionObjectName;
+  readonly reportName: CollectionItemName;
 }
 
 function refreshCalloutViewsInSaReport(
@@ -1757,8 +1757,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `originalPictureName` | `CollectionObjectName` | `Original Picture Name` | Required |
-| `newPictureName` | `CollectionObjectName` | `New Picture Name` | Required |
+| `originalPictureName` | `CollectionItemName` | `Original Picture Name` | Required |
+| `newPictureName` | `CollectionItemName` | `New Picture Name` | Required |
 | `overwriteIfExists` | `boolean` | `Overwrite if exists?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1767,8 +1767,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface RenamePictureInput {
-  readonly originalPictureName: CollectionObjectName;
-  readonly newPictureName: CollectionObjectName;
+  readonly originalPictureName: CollectionItemName;
+  readonly newPictureName: CollectionItemName;
   readonly overwriteIfExists?: boolean;
 }
 
@@ -2442,7 +2442,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 | `scale` | `number` | `Scale` | 100.000000 |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -2451,7 +2451,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetScaleForPictureInput {
-  readonly pictureName: CollectionObjectName;
+  readonly pictureName: CollectionItemName;
   readonly scale?: number;
 }
 

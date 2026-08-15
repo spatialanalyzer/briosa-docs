@@ -679,8 +679,8 @@ This coroutine is part of the next Python package contract.
 | `k0008_operator_identifier` | `int` | `K0008: Operator Identifier` | -1 |
 | `k0010_machine_identifier` | `int` | `K0010: Machine Identifier` | -1 |
 | `k0012_gage_identifier` | `int` | `K0012: Gage Identifier` | -1 |
-| `relationship_list` | `Iterable[CollectionObjectName]` | `Relationship List` | Required |
-| `feature_check_list` | `Iterable[CollectionObjectName]` | `Feature Check List` | Required |
+| `relationship_list` | `Iterable[CollectionItemName]` | `Relationship List` | Required |
+| `feature_check_list` | `Iterable[CollectionItemName]` | `Feature Check List` | Required |
 | `vector_group_list` | `Iterable[CollectionObjectName]` | `Vector Group List` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -706,8 +706,8 @@ async def export_qdas_characteristics(
     k0008_operator_identifier: int = -1,
     k0010_machine_identifier: int = -1,
     k0012_gage_identifier: int = -1,
-    relationship_list: Iterable[CollectionObjectName],
-    feature_check_list: Iterable[CollectionObjectName],
+    relationship_list: Iterable[CollectionItemName],
+    feature_check_list: Iterable[CollectionItemName],
     vector_group_list: Iterable[CollectionObjectName],
 ) -> None: ...
 ```
@@ -919,7 +919,7 @@ This coroutine is part of the next Python package contract.
 | `vector_groups_to_export` | `Iterable[CollectionVectorGroupName]` | `Vector group(s) to export` | Required |
 | `overwrite_existing_file_false_append` | `bool` | `Overwrite existing file? (FALSE = Append)` | true |
 | `use_full_precision_scientific_notation` | `bool` | `Use Full Precision (Scientific Notation)?` | false |
-| `vector_name_format` | `Vector` | `Vector Name Format` | Required |
+| `vector_name_format` | `ExportVectorNameFormat` | `Vector Name Format` | Required |
 | `include_vector_length` | `bool` | `Include Vector Length?` | true |
 
 | Result Value | Python Type | Exact MP Output |
@@ -934,7 +934,7 @@ async def export_vector_container_to_ascii_file(
     *,
     overwrite_existing_file_false_append: bool = True,
     use_full_precision_scientific_notation: bool = False,
-    vector_name_format: Vector,
+    vector_name_format: ExportVectorNameFormat,
     include_vector_length: bool = True,
 ) -> None: ...
 ```
@@ -2275,8 +2275,8 @@ This coroutine is part of the next Python package contract.
 | `k0008_operator_identifier` | `int` | `K0008: Operator Identifier` | -1 |
 | `k0010_machine_identifier` | `int` | `K0010: Machine Identifier` | -1 |
 | `k0012_gage_identifier` | `int` | `K0012: Gage Identifier` | -1 |
-| `relationship_list` | `Iterable[CollectionObjectName]` | `Relationship List` | Required |
-| `feature_check_list` | `Iterable[CollectionObjectName]` | `Feature Check List` | Required |
+| `relationship_list` | `Iterable[CollectionItemName]` | `Relationship List` | Required |
+| `feature_check_list` | `Iterable[CollectionItemName]` | `Feature Check List` | Required |
 | `vector_group_list` | `Iterable[CollectionObjectName]` | `Vector Group List` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2301,8 +2301,8 @@ async def prepare_qdas_data_list(
     k0008_operator_identifier: int = -1,
     k0010_machine_identifier: int = -1,
     k0012_gage_identifier: int = -1,
-    relationship_list: Iterable[CollectionObjectName],
-    feature_check_list: Iterable[CollectionObjectName],
+    relationship_list: Iterable[CollectionItemName],
+    feature_check_list: Iterable[CollectionItemName],
     vector_group_list: Iterable[CollectionObjectName],
 ) -> None: ...
 ```
@@ -2668,11 +2668,11 @@ This coroutine is part of the next Python package contract.
 | — | None | — |
 
 ```python
-async def terminate_all_running_m_ps(self) -> None: ...
+async def terminate_all_running_mps(self) -> None: ...
 ```
 
 ```python
-await briosa.terminate_all_running_m_ps()
+await briosa.terminate_all_running_mps()
 ```
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain

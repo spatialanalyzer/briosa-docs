@@ -742,8 +742,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `k0008OperatorIdentifier` | `number` | `K0008: Operator Identifier` | -1 |
 | `k0010MachineIdentifier` | `number` | `K0010: Machine Identifier` | -1 |
 | `k0012GageIdentifier` | `number` | `K0012: Gage Identifier` | -1 |
-| `relationshipList` | `Iterable<CollectionObjectName>` | `Relationship List` | Required |
-| `featureCheckList` | `Iterable<CollectionObjectName>` | `Feature Check List` | Required |
+| `relationshipList` | `Iterable<CollectionItemName>` | `Relationship List` | Required |
+| `featureCheckList` | `Iterable<CollectionItemName>` | `Feature Check List` | Required |
 | `vectorGroupList` | `Iterable<CollectionObjectName>` | `Vector Group List` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -767,8 +767,8 @@ export interface ExportQdasCharacteristicsInput {
   readonly k0008OperatorIdentifier?: number;
   readonly k0010MachineIdentifier?: number;
   readonly k0012GageIdentifier?: number;
-  readonly relationshipList: Iterable<CollectionObjectName>;
-  readonly featureCheckList: Iterable<CollectionObjectName>;
+  readonly relationshipList: Iterable<CollectionItemName>;
+  readonly featureCheckList: Iterable<CollectionItemName>;
   readonly vectorGroupList: Iterable<CollectionObjectName>;
 }
 
@@ -1016,7 +1016,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `vectorGroupsToExport` | `Iterable<CollectionVectorGroupName>` | `Vector group(s) to export` | Required |
 | `overwriteExistingFileFalseAppend` | `boolean` | `Overwrite existing file? (FALSE = Append)` | true |
 | `useFullPrecisionScientificNotation` | `boolean` | `Use Full Precision (Scientific Notation)?` | false |
-| `vectorNameFormat` | `Vector` | `Vector Name Format` | Required |
+| `vectorNameFormat` | `ExportVectorNameFormat` | `Vector Name Format` | Required |
 | `includeVectorLength` | `boolean` | `Include Vector Length?` | true |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1029,7 +1029,7 @@ export interface ExportVectorContainerToAsciiFileInput {
   readonly vectorGroupsToExport: Iterable<CollectionVectorGroupName>;
   readonly overwriteExistingFileFalseAppend?: boolean;
   readonly useFullPrecisionScientificNotation?: boolean;
-  readonly vectorNameFormat: Vector;
+  readonly vectorNameFormat: ExportVectorNameFormat;
   readonly includeVectorLength?: boolean;
 }
 
@@ -2544,8 +2544,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `k0008OperatorIdentifier` | `number` | `K0008: Operator Identifier` | -1 |
 | `k0010MachineIdentifier` | `number` | `K0010: Machine Identifier` | -1 |
 | `k0012GageIdentifier` | `number` | `K0012: Gage Identifier` | -1 |
-| `relationshipList` | `Iterable<CollectionObjectName>` | `Relationship List` | Required |
-| `featureCheckList` | `Iterable<CollectionObjectName>` | `Feature Check List` | Required |
+| `relationshipList` | `Iterable<CollectionItemName>` | `Relationship List` | Required |
+| `featureCheckList` | `Iterable<CollectionItemName>` | `Feature Check List` | Required |
 | `vectorGroupList` | `Iterable<CollectionObjectName>` | `Vector Group List` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -2568,8 +2568,8 @@ export interface PrepareQdasDataListInput {
   readonly k0008OperatorIdentifier?: number;
   readonly k0010MachineIdentifier?: number;
   readonly k0012GageIdentifier?: number;
-  readonly relationshipList: Iterable<CollectionObjectName>;
-  readonly featureCheckList: Iterable<CollectionObjectName>;
+  readonly relationshipList: Iterable<CollectionItemName>;
+  readonly featureCheckList: Iterable<CollectionItemName>;
   readonly vectorGroupList: Iterable<CollectionObjectName>;
 }
 

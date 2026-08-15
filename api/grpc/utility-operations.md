@@ -103,14 +103,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `item_list` | `repeated CollectionObjectName` | `Item List` | Required |
+| Request | 1 | `item_list` | `repeated CollectionItemName` | `Item List` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc DeleteItems(DeleteItemsRequest) returns (DeleteItemsResult);
 
 message DeleteItemsRequest {
-  repeated CollectionObjectName item_list = 1;
+  repeated CollectionItemName item_list = 1;
 }
 
 message DeleteItemsResult {
@@ -783,7 +783,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `item_list` | `repeated CollectionObjectName` | `Item List` | Required |
+| Request | 1 | `item_list` | `repeated CollectionItemName` | `Item List` | Required |
 | Request | 2 | `instruments` | `repeated CollectionInstrumentId` | `Instruments` | Required |
 | Request | 3 | `lock_items` | `bool` | `Lock Items?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -792,7 +792,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc LockUnlockSelectedItems(LockUnlockSelectedItemsRequest) returns (LockUnlockSelectedItemsResult);
 
 message LockUnlockSelectedItemsRequest {
-  repeated CollectionObjectName item_list = 1;
+  repeated CollectionItemName item_list = 1;
   repeated CollectionInstrumentId instruments = 2;
   optional bool lock_items = 3;
 }
@@ -822,8 +822,8 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_ref_list` | `repeated CollectionObjectName` | `Relationship Ref List` | Required |
-| Request | 2 | `feature_check_ref_list` | `repeated CollectionObjectName` | `Feature Check Ref List` | Required |
+| Request | 1 | `relationship_ref_list` | `repeated CollectionItemName` | `Relationship Ref List` | Required |
+| Request | 2 | `feature_check_ref_list` | `repeated CollectionItemName` | `Feature Check Ref List` | Required |
 | Request | 3 | `datum_ref_list` | `repeated CollectionObjectName` | `Datum Ref List` | Required |
 | Request | 4 | `lock_out_trapping` | `bool` | `Lock Out Trapping?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -832,8 +832,8 @@ intentionally absent. The server validates required presence before enqueue.
 rpc LockUnlockTrappingControl(LockUnlockTrappingControlRequest) returns (LockUnlockTrappingControlResult);
 
 message LockUnlockTrappingControlRequest {
-  repeated CollectionObjectName relationship_ref_list = 1;
-  repeated CollectionObjectName feature_check_ref_list = 2;
+  repeated CollectionItemName relationship_ref_list = 1;
+  repeated CollectionItemName feature_check_ref_list = 2;
   repeated CollectionObjectName datum_ref_list = 3;
   optional bool lock_out_trapping = 4;
 }

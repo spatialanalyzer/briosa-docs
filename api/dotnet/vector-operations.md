@@ -61,7 +61,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `treatIndividually` | `bool` | `Treat Individually?` | false |
-| `colorizationOptionsUsesModeOnly` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorizationOptionsUsesModeOnly` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task AutoRangeAndSetVectorGroupColorizationAllAsync(
     bool treatIndividually,
-    Color colorizationOptionsUsesModeOnly,
+    ColorizationOptions colorizationOptionsUsesModeOnly,
     CancellationToken cancellationToken = default);
 ```
 
@@ -93,7 +93,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | --- | --- | --- | --- |
 | `vectorGroupsToBeSet` | `IEnumerable<CollectionVectorGroupName>` | `Vector Groups to be Set` | Required |
 | `treatIndividually` | `bool` | `Treat Individually?` | false |
-| `colorizationOptionsUsesModeOnly` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorizationOptionsUsesModeOnly` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -103,7 +103,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 public Task AutoRangeAndSetVectorGroupColorizationSelectedAsync(
     IEnumerable<CollectionVectorGroupName> vectorGroupsToBeSet,
     bool treatIndividually,
-    Color colorizationOptionsUsesModeOnly,
+    ColorizationOptions colorizationOptionsUsesModeOnly,
     CancellationToken cancellationToken = default);
 ```
 
@@ -508,7 +508,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -516,7 +516,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetVectorGroupColorizationOptionsAllAsync(
-    Color colorizationOptions,
+    ColorizationOptions colorizationOptions,
     CancellationToken cancellationToken = default);
 ```
 
@@ -538,7 +538,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `vectorGroupsToBeSet` | `IEnumerable<CollectionVectorGroupName>` | `Vector Groups to be Set` | Required |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -547,7 +547,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetVectorGroupColorizationOptionsSelectedAsync(
     IEnumerable<CollectionVectorGroupName> vectorGroupsToBeSet,
-    Color colorizationOptions,
+    ColorizationOptions colorizationOptions,
     CancellationToken cancellationToken = default);
 ```
 

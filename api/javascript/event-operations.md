@@ -61,7 +61,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `Iterable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `Iterable<CollectionItemName>` | `Event List` | Required |
 | `filePath` | `FileReference` | `File Path` | Required |
 | `decimalPrecision` | `number` | `Decimal Precision` | 6 |
 | `overwriteExistingFile` | `boolean` | `Overwrite existing file?` | false |
@@ -72,7 +72,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface ExportEventRefListInput {
-  readonly eventList: Iterable<CollectionObjectName>;
+  readonly eventList: Iterable<CollectionItemName>;
   readonly filePath: FileReference;
   readonly decimalPrecision?: number;
   readonly overwriteExistingFile?: boolean;
@@ -102,16 +102,16 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `Iterable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `Iterable<CollectionItemName>` | `Event List` | Required |
 | `eventIndex` | `number` | `Event Index` | 0 |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
-| `resultantItem` | `CollectionObjectName` | `Resultant Item` |
+| `resultantItem` | `CollectionItemName` | `Resultant Item` |
 
 ```ts
 export interface GetIthEventFromEventRefListInput {
-  readonly eventList: Iterable<CollectionObjectName>;
+  readonly eventList: Iterable<CollectionItemName>;
   readonly eventIndex?: number;
 }
 
@@ -119,14 +119,14 @@ function getIthEventFromEventRefList(
   briosa: BriosaClient,
   input: GetIthEventFromEventRefListInput,
   options?: BriosaCallOptions,
-): Promise<CollectionObjectName>;
+): Promise<CollectionItemName>;
 ```
 
 ```ts
 await getIthEventFromEventRefList(briosa, { eventList: ... });
 ```
 
-Returns the MP output `Resultant Item` directly as `CollectionObjectName`. `BriosaCallOptions` remains separate from MP input and
+Returns the MP output `Resultant Item` directly as `CollectionItemName`. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Events in Event Ref List
@@ -139,7 +139,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `Iterable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `Iterable<CollectionItemName>` | `Event List` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -147,7 +147,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetNumberOfEventsInEventRefListInput {
-  readonly eventList: Iterable<CollectionObjectName>;
+  readonly eventList: Iterable<CollectionItemName>;
 }
 
 function getNumberOfEventsInEventRefList(

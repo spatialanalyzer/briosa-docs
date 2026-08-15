@@ -74,7 +74,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `treat_individually` | `bool` | `Treat Individually?` | false |
-| Request | 2 | `colorization_options_uses_mode_only` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| Request | 2 | `colorization_options_uses_mode_only` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -82,7 +82,7 @@ rpc AutoRangeAndSetVectorGroupColorizationAll(AutoRangeAndSetVectorGroupColoriza
 
 message AutoRangeAndSetVectorGroupColorizationAllRequest {
   optional bool treat_individually = 1;
-  optional Color colorization_options_uses_mode_only = 2;
+  optional ColorizationOptions colorization_options_uses_mode_only = 2;
 }
 
 message AutoRangeAndSetVectorGroupColorizationAllResult {
@@ -112,7 +112,7 @@ intentionally absent. The server validates required presence before enqueue.
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_groups_to_be_set` | `repeated CollectionVectorGroupName` | `Vector Groups to be Set` | Required |
 | Request | 2 | `treat_individually` | `bool` | `Treat Individually?` | false |
-| Request | 3 | `colorization_options_uses_mode_only` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| Request | 3 | `colorization_options_uses_mode_only` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -121,7 +121,7 @@ rpc AutoRangeAndSetVectorGroupColorizationSelected(AutoRangeAndSetVectorGroupCol
 message AutoRangeAndSetVectorGroupColorizationSelectedRequest {
   repeated CollectionVectorGroupName vector_groups_to_be_set = 1;
   optional bool treat_individually = 2;
-  optional Color colorization_options_uses_mode_only = 3;
+  optional ColorizationOptions colorization_options_uses_mode_only = 3;
 }
 
 message AutoRangeAndSetVectorGroupColorizationSelectedResult {
@@ -548,14 +548,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `colorization_options` | `Color` | `Colorization Options` | Red |
+| Request | 1 | `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc SetVectorGroupColorizationOptionsAll(SetVectorGroupColorizationOptionsAllRequest) returns (SetVectorGroupColorizationOptionsAllResult);
 
 message SetVectorGroupColorizationOptionsAllRequest {
-  optional Color colorization_options = 1;
+  optional ColorizationOptions colorization_options = 1;
 }
 
 message SetVectorGroupColorizationOptionsAllResult {
@@ -584,7 +584,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_groups_to_be_set` | `repeated CollectionVectorGroupName` | `Vector Groups to be Set` | Required |
-| Request | 2 | `colorization_options` | `Color` | `Colorization Options` | Red |
+| Request | 2 | `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -592,7 +592,7 @@ rpc SetVectorGroupColorizationOptionsSelected(SetVectorGroupColorizationOptionsS
 
 message SetVectorGroupColorizationOptionsSelectedRequest {
   repeated CollectionVectorGroupName vector_groups_to_be_set = 1;
-  optional Color colorization_options = 2;
+  optional ColorizationOptions colorization_options = 2;
 }
 
 message SetVectorGroupColorizationOptionsSelectedResult {

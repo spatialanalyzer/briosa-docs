@@ -311,21 +311,21 @@ This coroutine is part of the next Python package contract.
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
-| `double_list_variable` | `float` | `Double List Variable` |
+| `double_list_variable` | `list[float]` | `Double List Variable` |
 
 ```python
 async def get_named_double_list_variable(
     self,
     *,
     name: str = '',
-) -> float: ...
+) -> list[float]: ...
 ```
 
 ```python
 await briosa.get_named_double_list_variable()
 ```
 
-Returns the MP output `Double List Variable` directly as `float`. Normal asyncio cancellation and timeout tools remain
+Returns the MP output `Double List Variable` directly as `list[float]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
 ## Get Named Double List Variable Min/Max
@@ -442,7 +442,7 @@ This coroutine is part of the next Python package contract.
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
-| `value` | `list[CollectionObjectName]` | `Value` |
+| `value` | `list[CollectionItemName]` | `Value` |
 
 ```python
 async def get_relationship_ref_list_variable(
@@ -473,7 +473,7 @@ This coroutine is part of the next Python package contract.
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
-| `value` | `list[CollectionObjectName]` | `Value` |
+| `value` | `list[CollectionItemName]` | `Value` |
 
 ```python
 async def get_report_items_reference_list_variable(
@@ -854,7 +854,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `str` | `Name` | Empty |
-| `double_list_variable` | `float` | `Double List Variable` | Required |
+| `double_list_variable` | `Iterable[float]` | `Double List Variable` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -865,7 +865,7 @@ async def set_named_double_list_variable(
     self,
     *,
     name: str = '',
-    double_list_variable: float,
+    double_list_variable: Iterable[float],
 ) -> None: ...
 ```
 
@@ -953,7 +953,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `str` | `Name` | Empty |
-| `value` | `Iterable[CollectionObjectName]` | `Value` | Required |
+| `value` | `Iterable[CollectionItemName]` | `Value` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -964,7 +964,7 @@ async def set_relationship_ref_list_variable(
     self,
     *,
     name: str = '',
-    value: Iterable[CollectionObjectName],
+    value: Iterable[CollectionItemName],
 ) -> None: ...
 ```
 
@@ -986,7 +986,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `str` | `Name` | Empty |
-| `value` | `Iterable[CollectionObjectName]` | `Value` | Required |
+| `value` | `Iterable[CollectionItemName]` | `Value` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -997,7 +997,7 @@ async def set_report_items_reference_list_variable(
     self,
     *,
     name: str = '',
-    value: Iterable[CollectionObjectName],
+    value: Iterable[CollectionItemName],
 ) -> None: ...
 ```
 

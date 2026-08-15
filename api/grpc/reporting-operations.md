@@ -34,7 +34,7 @@ the public surface of the handwritten client libraries.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `charts` | `repeated CollectionObjectName` | `Chart(s)` | Required |
+| Request | 1 | `charts` | `repeated CollectionItemName` | `Chart(s)` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -42,7 +42,7 @@ the public surface of the handwritten client libraries.
 rpc AddChartsToReportBar(AddChartsToReportBarRequest) returns (AddChartsToReportBarResult);
 
 message AddChartsToReportBarRequest {
-  repeated CollectionObjectName charts = 1;
+  repeated CollectionItemName charts = 1;
   optional bool clear_existing = 2;
 }
 
@@ -110,7 +110,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `custom_tables_to_report` | `repeated CollectionObjectName` | `Custom Table(s) To Report` | Required |
+| Request | 1 | `custom_tables_to_report` | `repeated CollectionItemName` | `Custom Table(s) To Report` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -118,7 +118,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc AddCustomTablesToReportBar(AddCustomTablesToReportBarRequest) returns (AddCustomTablesToReportBarResult);
 
 message AddCustomTablesToReportBarRequest {
-  repeated CollectionObjectName custom_tables_to_report = 1;
+  repeated CollectionItemName custom_tables_to_report = 1;
   optional bool clear_existing = 2;
 }
 
@@ -184,7 +184,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `events` | `repeated CollectionObjectName` | `Event(s)` | Required |
+| Request | 1 | `events` | `repeated CollectionItemName` | `Event(s)` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -192,7 +192,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc AddEventsToReportBar(AddEventsToReportBarRequest) returns (AddEventsToReportBarResult);
 
 message AddEventsToReportBarRequest {
-  repeated CollectionObjectName events = 1;
+  repeated CollectionItemName events = 1;
   optional bool clear_existing = 2;
 }
 
@@ -221,7 +221,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `feature_checks` | `repeated CollectionObjectName` | `Feature Check(s)` | Required |
+| Request | 1 | `feature_checks` | `repeated CollectionItemName` | `Feature Check(s)` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -229,7 +229,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc AddFeatureChecksToReportBar(AddFeatureChecksToReportBarRequest) returns (AddFeatureChecksToReportBarResult);
 
 message AddFeatureChecksToReportBarRequest {
-  repeated CollectionObjectName feature_checks = 1;
+  repeated CollectionItemName feature_checks = 1;
   optional bool clear_existing = 2;
 }
 
@@ -340,7 +340,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `pictures` | `repeated CollectionObjectName` | `Picture(s)` | Required |
+| Request | 1 | `pictures` | `repeated CollectionItemName` | `Picture(s)` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -348,7 +348,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc AddPicturesToReportBar(AddPicturesToReportBarRequest) returns (AddPicturesToReportBarResult);
 
 message AddPicturesToReportBarRequest {
-  repeated CollectionObjectName pictures = 1;
+  repeated CollectionItemName pictures = 1;
   optional bool clear_existing = 2;
 }
 
@@ -377,7 +377,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationships` | `repeated CollectionObjectName` | `Relationship(s)` | Required |
+| Request | 1 | `relationships` | `repeated CollectionItemName` | `Relationship(s)` | Required |
 | Request | 2 | `clear_existing` | `bool` | `Clear Existing?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -385,7 +385,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc AddRelationshipsToReportBar(AddRelationshipsToReportBarRequest) returns (AddRelationshipsToReportBarResult);
 
 message AddRelationshipsToReportBarRequest {
-  repeated CollectionObjectName relationships = 1;
+  repeated CollectionItemName relationships = 1;
   optional bool clear_existing = 2;
 }
 
@@ -455,14 +455,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| Request | 1 | `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc CaptureCurrentView(CaptureCurrentViewRequest) returns (CaptureCurrentViewResult);
 
 message CaptureCurrentViewRequest {
-  optional CollectionObjectName picture_name = 1;
+  optional CollectionItemName picture_name = 1;
 }
 
 message CaptureCurrentViewResult {
@@ -628,7 +628,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `sa_reports_to_combine` | `repeated CollectionObjectName` | `SA Reports to Combine` | Required |
+| Request | 1 | `sa_reports_to_combine` | `repeated CollectionItemName` | `SA Reports to Combine` | Required |
 | Request | 2 | `output_sa_report_name` | `CollectionObjectName` | `Output SA Report Name` | Required |
 | Request | 3 | `show_report` | `bool` | `Show Report?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -637,7 +637,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc CombineSaReports(CombineSaReportsRequest) returns (CombineSaReportsResult);
 
 message CombineSaReportsRequest {
-  repeated CollectionObjectName sa_reports_to_combine = 1;
+  repeated CollectionItemName sa_reports_to_combine = 1;
   optional CollectionObjectName output_sa_report_name = 2;
   optional bool show_report = 3;
 }
@@ -718,8 +718,8 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 2 | `title` | `repeated string` | `Title` | Required |
 | Request | 3 | `graphical_view_options` | `ReportViewOptions` | `Graphical View Options` | Required |
 | Request | 4 | `items_to_report` | `repeated CollectionObjectName` | `Items To Report` | Required |
-| Request | 5 | `relationships_to_report` | `repeated CollectionObjectName` | `Relationships To Report` | Required |
-| Request | 6 | `events_to_report` | `repeated CollectionObjectName` | `Events To Report` | Required |
+| Request | 5 | `relationships_to_report` | `repeated CollectionItemName` | `Relationships To Report` | Required |
+| Request | 6 | `events_to_report` | `repeated CollectionItemName` | `Events To Report` | Required |
 | Request | 7 | `report_output_options` | `ReportOutputOptions` | `Report Output Options` | ::My Report |
 | Request | 8 | `report_page_settings_sa_report_only` | `ReportPageSettings` | `Report Page Settings ( SA Report only )` | Portrait |
 | Request | 9 | `generate_now` | `bool` | `Generate Now?` | false |
@@ -734,8 +734,8 @@ message DefineReportTemplateRequest {
   repeated string title = 2;
   optional ReportViewOptions graphical_view_options = 3;
   repeated CollectionObjectName items_to_report = 4;
-  repeated CollectionObjectName relationships_to_report = 5;
-  repeated CollectionObjectName events_to_report = 6;
+  repeated CollectionItemName relationships_to_report = 5;
+  repeated CollectionItemName events_to_report = 6;
   optional ReportOutputOptions report_output_options = 7;
   optional ReportPageSettings report_page_settings_sa_report_only = 8;
   optional bool generate_now = 9;
@@ -837,14 +837,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| Request | 1 | `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc DeletePicture(DeletePictureRequest) returns (DeletePictureResult);
 
 message DeletePictureRequest {
-  optional CollectionObjectName picture_name = 1;
+  optional CollectionItemName picture_name = 1;
 }
 
 message DeletePictureResult {
@@ -1358,7 +1358,7 @@ intentionally absent. The server validates required presence before enqueue.
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `ascii_file_path` | `FileReference` | `ASCII File Path` | Required |
 | Request | 2 | `chart_title_override` | `string` | `Chart Title Override` | Empty |
-| Request | 3 | `output_picture_name` | `CollectionObjectName` | `Output Picture Name` | Required |
+| Request | 3 | `output_picture_name` | `CollectionItemName` | `Output Picture Name` | Required |
 | Request | 4 | `show_chart_dialog` | `bool` | `Show Chart Dialog?` | false |
 | Request | 5 | `plot_additional_xy_value` | `bool` | `Plot Additional XY Value?` | false |
 | Request | 6 | `x_value` | `double` | `X Value` | 0.000000 |
@@ -1372,7 +1372,7 @@ rpc MakeUtilityChart(MakeUtilityChartRequest) returns (MakeUtilityChartResult);
 message MakeUtilityChartRequest {
   optional FileReference ascii_file_path = 1;
   optional string chart_title_override = 2;
-  optional CollectionObjectName output_picture_name = 3;
+  optional CollectionItemName output_picture_name = 3;
   optional bool show_chart_dialog = 4;
   optional bool plot_additional_xy_value = 5;
   optional double x_value = 6;
@@ -1682,14 +1682,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `report_name` | `CollectionObjectName` | `Report Name` | Required |
+| Request | 1 | `report_name` | `CollectionItemName` | `Report Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc RefreshCalloutViewsInSaReport(RefreshCalloutViewsInSaReportRequest) returns (RefreshCalloutViewsInSaReportResult);
 
 message RefreshCalloutViewsInSaReportRequest {
-  optional CollectionObjectName report_name = 1;
+  optional CollectionItemName report_name = 1;
 }
 
 message RefreshCalloutViewsInSaReportResult {
@@ -1786,8 +1786,8 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `original_picture_name` | `CollectionObjectName` | `Original Picture Name` | Required |
-| Request | 2 | `new_picture_name` | `CollectionObjectName` | `New Picture Name` | Required |
+| Request | 1 | `original_picture_name` | `CollectionItemName` | `Original Picture Name` | Required |
+| Request | 2 | `new_picture_name` | `CollectionItemName` | `New Picture Name` | Required |
 | Request | 3 | `overwrite_if_exists` | `bool` | `Overwrite if exists?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1795,8 +1795,8 @@ intentionally absent. The server validates required presence before enqueue.
 rpc RenamePicture(RenamePictureRequest) returns (RenamePictureResult);
 
 message RenamePictureRequest {
-  optional CollectionObjectName original_picture_name = 1;
-  optional CollectionObjectName new_picture_name = 2;
+  optional CollectionItemName original_picture_name = 1;
+  optional CollectionItemName new_picture_name = 2;
   optional bool overwrite_if_exists = 3;
 }
 
@@ -1818,7 +1818,7 @@ intentionally absent. The server validates required presence before enqueue.
 | MP Command | [Save Chart to JPeg file](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) |
 | Service | `briosa.ReportingOperations` |
 | RPC | `SaveChartToJPegFile` |
-| Operation ID | `reporting_operations.save_chart_to_j_peg_file` |
+| Operation ID | `reporting_operations.save_chart_to_jpeg_file` |
 | Route | `/briosa.ReportingOperations/SaveChartToJPegFile` |
 | Validation | Portable contract review |
 | Automatic Replay | Prohibited; no operation-specific replay proof is committed |
@@ -2471,7 +2471,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| Request | 1 | `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 | Request | 2 | `scale` | `double` | `Scale` | 100.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2479,7 +2479,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetScaleForPicture(SetScaleForPictureRequest) returns (SetScaleForPictureResult);
 
 message SetScaleForPictureRequest {
-  optional CollectionObjectName picture_name = 1;
+  optional CollectionItemName picture_name = 1;
   optional double scale = 2;
 }
 

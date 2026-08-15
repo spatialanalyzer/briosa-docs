@@ -91,7 +91,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `itemList` | `Iterable<CollectionObjectName>` | `Item List` | Required |
+| `itemList` | `Iterable<CollectionItemName>` | `Item List` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface DeleteItemsInput {
-  readonly itemList: Iterable<CollectionObjectName>;
+  readonly itemList: Iterable<CollectionItemName>;
 }
 
 function deleteItems(
@@ -745,7 +745,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `itemList` | `Iterable<CollectionObjectName>` | `Item List` | Required |
+| `itemList` | `Iterable<CollectionItemName>` | `Item List` | Required |
 | `instruments` | `Iterable<CollectionInstrumentId>` | `Instruments` | Required |
 | `lockItems` | `boolean` | `Lock Items?` | false |
 
@@ -755,7 +755,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface LockUnlockSelectedItemsInput {
-  readonly itemList: Iterable<CollectionObjectName>;
+  readonly itemList: Iterable<CollectionItemName>;
   readonly instruments: Iterable<CollectionInstrumentId>;
   readonly lockItems?: boolean;
 }
@@ -784,8 +784,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipRefList` | `Iterable<CollectionObjectName>` | `Relationship Ref List` | Required |
-| `featureCheckRefList` | `Iterable<CollectionObjectName>` | `Feature Check Ref List` | Required |
+| `relationshipRefList` | `Iterable<CollectionItemName>` | `Relationship Ref List` | Required |
+| `featureCheckRefList` | `Iterable<CollectionItemName>` | `Feature Check Ref List` | Required |
 | `datumRefList` | `Iterable<CollectionObjectName>` | `Datum Ref List` | Required |
 | `lockOutTrapping` | `boolean` | `Lock Out Trapping?` | false |
 
@@ -795,8 +795,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface LockUnlockTrappingControlInput {
-  readonly relationshipRefList: Iterable<CollectionObjectName>;
-  readonly featureCheckRefList: Iterable<CollectionObjectName>;
+  readonly relationshipRefList: Iterable<CollectionItemName>;
+  readonly featureCheckRefList: Iterable<CollectionItemName>;
   readonly datumRefList: Iterable<CollectionObjectName>;
   readonly lockOutTrapping?: boolean;
 }

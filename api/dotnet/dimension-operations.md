@@ -108,7 +108,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimensionName` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimensionName` | `CollectionItemName` | `Dimension Name` | Required |
 | `enableNominal` | `bool` | `Enable Nominal` | false |
 | `enableHigh` | `bool` | `Enable High` | false |
 | `enableLow` | `bool` | `Enable Low` | false |
@@ -122,7 +122,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetDimensionToleranceAsync(
-    CollectionObjectName dimensionName,
+    CollectionItemName dimensionName,
     bool enableNominal = false,
     bool enableHigh = false,
     bool enableLow = false,

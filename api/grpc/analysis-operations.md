@@ -179,7 +179,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 14 | `generate_event` | `bool` | `Generate Event` | false |
 | Request | 15 | `file_path_for_csv_text_report_requires_show_interface_true` | `FileReference` | `File Path for CSV Text Report (requires Show Interface = TRUE)` | Required |
 | Result | 1 | `transform_in_working` | `Transform` | `Transform in Working` | — |
-| Result | 2 | `optimum_transform` | `Transform` | `Optimum Transform` | — |
+| Result | 2 | `optimum_transform` | `WorldTransform` | `Optimum Transform` | — |
 | Result | 3 | `rms_deviation` | `double` | `RMS Deviation` | — |
 | Result | 4 | `maximum_absolute_deviation` | `double` | `Maximum Absolute Deviation` | — |
 | Result | 5 | `number_of_unknowns` | `int32` | `Number of Unknowns` | — |
@@ -210,7 +210,7 @@ message BestFitTransformationGroupToGroupRequest {
 
 message BestFitTransformationGroupToGroupResult {
   optional Transform transform_in_working = 1;
-  optional Transform optimum_transform = 2;
+  optional WorldTransform optimum_transform = 2;
   optional double rms_deviation = 3;
   optional double maximum_absolute_deviation = 4;
   optional int32 number_of_unknowns = 5;
@@ -511,7 +511,7 @@ intentionally absent. The server validates required presence before enqueue.
 | MP Command | [Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) |
 | Service | `briosa.AnalysisOperations` |
 | RPC | `GetBSplineProperties` |
-| Operation ID | `analysis_operations.get_b_spline_properties` |
+| Operation ID | `analysis_operations.get_bspline_properties` |
 | Route | `/briosa.AnalysisOperations/GetBSplineProperties` |
 | Validation | Portable contract review |
 | Automatic Replay | Prohibited; no operation-specific replay proof is committed |
@@ -1503,7 +1503,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Result | 4 | `uy` | `double` | `Uy` | — |
 | Result | 5 | `uz` | `double` | `Uz` | — |
 | Result | 6 | `umag` | `double` | `Umag` | — |
-| Result | 7 | `position_tolerance` | `Vector` | `Position Tolerance` | — |
+| Result | 7 | `position_tolerance` | `ToleranceVectorOptions` | `Position Tolerance` | — |
 | Result | 8 | `component_weights` | `Vector` | `Component Weights` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1521,7 +1521,7 @@ message GetPointPropertiesResult {
   optional double uy = 4;
   optional double uz = 5;
   optional double umag = 6;
-  optional Vector position_tolerance = 7;
+  optional ToleranceVectorOptions position_tolerance = 7;
   optional Vector component_weights = 8;
   MpExecutionDetails execution = 1000;
 }
@@ -1658,7 +1658,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Result | 14 | `low_z_tolerance` | `double` | `Low Z Tolerance` | — |
 | Result | 15 | `use_low_mag_tolerance` | `bool` | `Use Low Mag Tolerance?` | — |
 | Result | 16 | `low_mag_tolerance` | `double` | `Low Mag Tolerance` | — |
-| Result | 17 | `vector_tolerance` | `Vector` | `Vector Tolerance` | — |
+| Result | 17 | `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1685,7 +1685,7 @@ message GetPointToleranceResult {
   optional double low_z_tolerance = 14;
   optional bool use_low_mag_tolerance = 15;
   optional double low_mag_tolerance = 16;
-  optional Vector vector_tolerance = 17;
+  optional ToleranceVectorOptions vector_tolerance = 17;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -2006,7 +2006,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 3 | `do_conventional_fit` | `bool` | `Do Conventional Fit` | false |
 | Request | 4 | `rms_tolerance_0_0_for_none` | `double` | `RMS Tolerance (0.0 for none)` | 0.000000 |
 | Request | 5 | `maximum_absolute_tolerance_0_0_for_none` | `double` | `Maximum Absolute Tolerance (0.0 for none)` | 0.000000 |
-| Result | 1 | `optimum_transform` | `Transform` | `Optimum Transform` | — |
+| Result | 1 | `optimum_transform` | `WorldTransform` | `Optimum Transform` | — |
 | Result | 2 | `rms_deviation` | `double` | `RMS Deviation` | — |
 | Result | 3 | `maximum_absolute_deviation` | `double` | `Maximum Absolute Deviation` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2023,7 +2023,7 @@ message GroupToSurfaceFitRequest {
 }
 
 message GroupToSurfaceFitResult {
-  optional Transform optimum_transform = 1;
+  optional WorldTransform optimum_transform = 1;
   optional double rms_deviation = 2;
   optional double maximum_absolute_deviation = 3;
   MpExecutionDetails execution = 1000;
@@ -3295,7 +3295,7 @@ intentionally absent. The server validates required presence before enqueue.
 | MP Command | [Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) |
 | Service | `briosa.AnalysisOperations` |
 | RPC | `ReverseBSplines` |
-| Operation ID | `analysis_operations.reverse_b_splines` |
+| Operation ID | `analysis_operations.reverse_bsplines` |
 | Route | `/briosa.AnalysisOperations/ReverseBSplines` |
 | Validation | Portable contract review |
 | Automatic Replay | Prohibited; no operation-specific replay proof is committed |
@@ -3550,14 +3550,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `colorization_options` | `Color` | `Colorization Options` | Red |
+| Request | 1 | `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc SetDefaultColorizationOptions(SetDefaultColorizationOptionsRequest) returns (SetDefaultColorizationOptionsResult);
 
 message SetDefaultColorizationOptionsRequest {
-  optional Color colorization_options = 1;
+  optional ColorizationOptions colorization_options = 1;
 }
 
 message SetDefaultColorizationOptionsResult {
@@ -3629,7 +3629,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `geometry_type` | `GeometryType` | `Geometry Type` | Required |
-| Request | 2 | `relationship_ref_list` | `repeated CollectionObjectName` | `Relationship Ref List` | Required |
+| Request | 2 | `relationship_ref_list` | `repeated CollectionItemName` | `Relationship Ref List` | Required |
 | Request | 3 | `fit_profile_name` | `string` | `Fit Profile Name` | Empty |
 | Request | 4 | `apply_cardinal_point_settings` | `bool` | `Apply Cardinal Point Settings` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -3639,7 +3639,7 @@ rpc SetGeometryRelationshipFitProfile(SetGeometryRelationshipFitProfileRequest) 
 
 message SetGeometryRelationshipFitProfileRequest {
   optional GeometryType geometry_type = 1;
-  repeated CollectionObjectName relationship_ref_list = 2;
+  repeated CollectionItemName relationship_ref_list = 2;
   optional string fit_profile_name = 3;
   optional bool apply_cardinal_point_settings = 4;
 }
@@ -3791,7 +3791,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 1 | `point_name_list` | `repeated PointName` | `Point Name List` | Required |
 | Request | 2 | `planar_offset` | `double` | `Planar Offset` | 0.000000 |
 | Request | 3 | `radial_offset` | `double` | `Radial Offset` | 0.000000 |
-| Request | 4 | `position_tolerance` | `Vector` | `Position Tolerance` | Required |
+| Request | 4 | `position_tolerance` | `ToleranceVectorOptions` | `Position Tolerance` | Required |
 | Request | 5 | `component_weights` | `Vector` | `Component Weights` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3802,7 +3802,7 @@ message SetPointPropertiesRequest {
   repeated PointName point_name_list = 1;
   optional double planar_offset = 2;
   optional double radial_offset = 3;
-  optional Vector position_tolerance = 4;
+  optional ToleranceVectorOptions position_tolerance = 4;
   optional Vector component_weights = 5;
 }
 
@@ -4096,7 +4096,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_transform` | `repeated CollectionObjectName` | `Objects to Transform` | Required |
-| Request | 2 | `delta_transform` | `Transform` | `Delta Transform` | Required |
+| Request | 2 | `delta_transform` | `WorldTransform` | `Delta Transform` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -4104,7 +4104,7 @@ rpc TransformObjectsByDeltaWorldTransformOperator(TransformObjectsByDeltaWorldTr
 
 message TransformObjectsByDeltaWorldTransformOperatorRequest {
   repeated CollectionObjectName objects_to_transform = 1;
-  optional Transform delta_transform = 2;
+  optional WorldTransform delta_transform = 2;
 }
 
 message TransformObjectsByDeltaWorldTransformOperatorResult {

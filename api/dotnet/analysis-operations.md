@@ -151,7 +151,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
 | `TransformInWorking` | `Transform` | `Transform in Working` |
-| `OptimumTransform` | `Transform` | `Optimum Transform` |
+| `OptimumTransform` | `WorldTransform` | `Optimum Transform` |
 | `RmsDeviation` | `double` | `RMS Deviation` |
 | `MaximumAbsoluteDeviation` | `double` | `Maximum Absolute Deviation` |
 | `NumberOfUnknowns` | `int` | `Number of Unknowns` |
@@ -163,7 +163,7 @@ public sealed record BestFitTransformationGroupToGroupResult
 {
     public required Transform TransformInWorking { get; init; }
 
-    public required Transform OptimumTransform { get; init; }
+    public required WorldTransform OptimumTransform { get; init; }
 
     public required double RmsDeviation { get; init; }
 
@@ -1408,7 +1408,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `Uy` | `double` | `Uy` |
 | `Uz` | `double` | `Uz` |
 | `Umag` | `double` | `Umag` |
-| `PositionTolerance` | `Vector` | `Position Tolerance` |
+| `PositionTolerance` | `ToleranceVectorOptions` | `Position Tolerance` |
 | `ComponentWeights` | `Vector` | `Component Weights` |
 
 ```csharp
@@ -1426,7 +1426,7 @@ public sealed record GetPointPropertiesResult
 
     public required double Umag { get; init; }
 
-    public required Vector PositionTolerance { get; init; }
+    public required ToleranceVectorOptions PositionTolerance { get; init; }
 
     public required Vector ComponentWeights { get; init; }
 }
@@ -1569,7 +1569,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `LowZTolerance` | `double` | `Low Z Tolerance` |
 | `UseLowMagTolerance` | `bool` | `Use Low Mag Tolerance?` |
 | `LowMagTolerance` | `double` | `Low Mag Tolerance` |
-| `VectorTolerance` | `Vector` | `Vector Tolerance` |
+| `VectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```csharp
 public sealed record GetPointToleranceResult
@@ -1606,7 +1606,7 @@ public sealed record GetPointToleranceResult
 
     public required double LowMagTolerance { get; init; }
 
-    public required Vector VectorTolerance { get; init; }
+    public required ToleranceVectorOptions VectorTolerance { get; init; }
 }
 
 public Task<GetPointToleranceResult> GetPointToleranceAsync(
@@ -1907,14 +1907,14 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
-| `OptimumTransform` | `Transform` | `Optimum Transform` |
+| `OptimumTransform` | `WorldTransform` | `Optimum Transform` |
 | `RmsDeviation` | `double` | `RMS Deviation` |
 | `MaximumAbsoluteDeviation` | `double` | `Maximum Absolute Deviation` |
 
 ```csharp
 public sealed record GroupToSurfaceFitResult
 {
-    public required Transform OptimumTransform { get; init; }
+    public required WorldTransform OptimumTransform { get; init; }
 
     public required double RmsDeviation { get; init; }
 
@@ -3290,7 +3290,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -3298,7 +3298,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetDefaultColorizationOptionsAsync(
-    Color colorizationOptions,
+    ColorizationOptions colorizationOptions,
     CancellationToken cancellationToken = default);
 ```
 
@@ -3357,7 +3357,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `geometryType` | `GeometryType` | `Geometry Type` | Required |
-| `relationshipRefList` | `IEnumerable<CollectionObjectName>` | `Relationship Ref List` | Required |
+| `relationshipRefList` | `IEnumerable<CollectionItemName>` | `Relationship Ref List` | Required |
 | `fitProfileName` | `string` | `Fit Profile Name` | Empty |
 | `applyCardinalPointSettings` | `bool` | `Apply Cardinal Point Settings` | false |
 
@@ -3368,7 +3368,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetGeometryRelationshipFitProfileAsync(
     GeometryType geometryType,
-    IEnumerable<CollectionObjectName> relationshipRefList,
+    IEnumerable<CollectionItemName> relationshipRefList,
     string fitProfileName = "",
     bool applyCardinalPointSettings = false,
     CancellationToken cancellationToken = default);
@@ -3495,7 +3495,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `pointNameList` | `IEnumerable<PointName>` | `Point Name List` | Required |
 | `planarOffset` | `double` | `Planar Offset` | 0.000000 |
 | `radialOffset` | `double` | `Radial Offset` | 0.000000 |
-| `positionTolerance` | `Vector` | `Position Tolerance` | Required |
+| `positionTolerance` | `ToleranceVectorOptions` | `Position Tolerance` | Required |
 | `componentWeights` | `Vector` | `Component Weights` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -3507,7 +3507,7 @@ public Task SetPointPropertiesAsync(
     IEnumerable<PointName> pointNameList,
     double planarOffset,
     double radialOffset,
-    Vector positionTolerance,
+    ToleranceVectorOptions positionTolerance,
     Vector componentWeights,
     CancellationToken cancellationToken = default);
 ```
@@ -3765,7 +3765,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `objectsToTransform` | `IEnumerable<CollectionObjectName>` | `Objects to Transform` | Required |
-| `deltaTransform` | `Transform` | `Delta Transform` | Required |
+| `deltaTransform` | `WorldTransform` | `Delta Transform` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -3774,7 +3774,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task TransformObjectsByDeltaWorldTransformOperatorAsync(
     IEnumerable<CollectionObjectName> objectsToTransform,
-    Transform deltaTransform,
+    WorldTransform deltaTransform,
     CancellationToken cancellationToken = default);
 ```
 

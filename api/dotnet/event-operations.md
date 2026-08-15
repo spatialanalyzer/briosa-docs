@@ -56,7 +56,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `IEnumerable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `IEnumerable<CollectionItemName>` | `Event List` | Required |
 | `filePath` | `FileReference` | `File Path` | Required |
 | `decimalPrecision` | `int` | `Decimal Precision` | 6 |
 | `overwriteExistingFile` | `bool` | `Overwrite existing file?` | false |
@@ -67,7 +67,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task ExportEventRefListAsync(
-    IEnumerable<CollectionObjectName> eventList,
+    IEnumerable<CollectionItemName> eventList,
     FileReference filePath,
     int decimalPrecision = 6,
     bool overwriteExistingFile = false,
@@ -91,16 +91,16 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `IEnumerable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `IEnumerable<CollectionItemName>` | `Event List` | Required |
 | `eventIndex` | `int` | `Event Index` | 0 |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
-| `ResultantItem` | `CollectionObjectName` | `Resultant Item` |
+| `ResultantItem` | `CollectionItemName` | `Resultant Item` |
 
 ```csharp
-public Task<CollectionObjectName> GetIthEventFromEventRefListAsync(
-    IEnumerable<CollectionObjectName> eventList,
+public Task<CollectionItemName> GetIthEventFromEventRefListAsync(
+    IEnumerable<CollectionItemName> eventList,
     int eventIndex = 0,
     CancellationToken cancellationToken = default);
 ```
@@ -109,7 +109,7 @@ public Task<CollectionObjectName> GetIthEventFromEventRefListAsync(
 await briosa.GetIthEventFromEventRefListAsync(eventList: eventList);
 ```
 
-Returns the MP output `Resultant Item` directly as `CollectionObjectName`. Caller cancellation does not prove that
+Returns the MP output `Resultant Item` directly as `CollectionItemName`. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Events in Event Ref List
@@ -122,7 +122,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `eventList` | `IEnumerable<CollectionObjectName>` | `Event List` | Required |
+| `eventList` | `IEnumerable<CollectionItemName>` | `Event List` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<int> GetNumberOfEventsInEventRefListAsync(
-    IEnumerable<CollectionObjectName> eventList,
+    IEnumerable<CollectionItemName> eventList,
     CancellationToken cancellationToken = default);
 ```
 

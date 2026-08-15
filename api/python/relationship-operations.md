@@ -26,7 +26,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable[CollectionObjectName]` | `Relationships` | Required |
+| `relationships` | `Iterable[CollectionItemName]` | `Relationships` | Required |
 | `enable` | `bool` | `Enable?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -36,7 +36,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def enable_disable_relationships_for_optimization(
     self,
-    relationships: Iterable[CollectionObjectName],
+    relationships: Iterable[CollectionItemName],
     *,
     enable: bool = False,
 ) -> None: ...
@@ -841,7 +841,7 @@ This coroutine is part of the next Python package contract.
 | `low_z_tolerance` | `float` | `Low Z Tolerance` |
 | `use_low_mag_tolerance` | `bool` | `Use Low Mag Tolerance?` |
 | `low_mag_tolerance` | `float` | `Low Mag Tolerance` |
-| `vector_tolerance` | `Vector` | `Vector Tolerance` |
+| `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -862,7 +862,7 @@ class GetRelationshipToleranceVectorTypeResult:
     low_z_tolerance: float
     use_low_mag_tolerance: bool
     low_mag_tolerance: float
-    vector_tolerance: Vector
+    vector_tolerance: ToleranceVectorOptions
 
 async def get_relationship_tolerance_vector_type(
     self,
@@ -1589,7 +1589,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable[CollectionObjectName]` | `Relationships` | Required |
+| `relationships` | `Iterable[CollectionItemName]` | `Relationships` | Required |
 | `dormant_status` | `bool` | `Dormant Status` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1599,7 +1599,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_dormant_status(
     self,
-    relationships: Iterable[CollectionObjectName],
+    relationships: Iterable[CollectionItemName],
     *,
     dormant_status: bool = False,
 ) -> None: ...
@@ -1656,7 +1656,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `orientation_vector_constraint` | `Vector` | `Orientation Vector Constraint` | Required |
+| `orientation_vector_constraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1666,7 +1666,7 @@ This coroutine is part of the next Python package contract.
 async def set_relationship_orientation_fit_constraints_vector_type(
     self,
     relationship_name: CollectionObjectName,
-    orientation_vector_constraint: Vector,
+    orientation_vector_constraint: ToleranceVectorOptions,
 ) -> None: ...
 ```
 
@@ -1718,7 +1718,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `position_vector_constraint` | `Vector` | `Position Vector Constraint` | Required |
+| `position_vector_constraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1728,7 +1728,7 @@ This coroutine is part of the next Python package contract.
 async def set_relationship_position_fit_constraints_vector_type(
     self,
     relationship_name: CollectionObjectName,
-    position_vector_constraint: Vector,
+    position_vector_constraint: ToleranceVectorOptions,
 ) -> None: ...
 ```
 
@@ -1920,7 +1920,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `vector_tolerance` | `Vector` | `Vector Tolerance` | Required |
+| `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1930,7 +1930,7 @@ This coroutine is part of the next Python package contract.
 async def set_relationship_tolerance_vector_type(
     self,
     relationship_name: CollectionObjectName,
-    vector_tolerance: Vector,
+    vector_tolerance: ToleranceVectorOptions,
 ) -> None: ...
 ```
 
@@ -1957,7 +1957,7 @@ This coroutine is part of the next Python package contract.
 | `min_pts_count_per_voxel` | `int` | `Min Pts Count Per Voxel` | 3 |
 | `voxel_rendering_diameter_1_0_fast` | `float` | `Voxel Rendering Diameter % (-1.0 fast)` | 125.000000 |
 | `surface_analysis_mode` | `SurfaceAnalysisMode` | `Surface Analysis Mode` | Relationship |
-| `colorization_options` | `Color` | `Colorization Options` | Red |
+| `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 | `show_color_bar_in_view` | `bool` | `Show Color Bar in View?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1974,7 +1974,7 @@ async def set_relationship_voxel_cloud_display(
     min_pts_count_per_voxel: int = 3,
     voxel_rendering_diameter_1_0_fast: float = 125.000000,
     surface_analysis_mode: SurfaceAnalysisMode = SurfaceAnalysisMode.DEFAULT,
-    colorization_options: Color = Color.DEFAULT,
+    colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
     show_color_bar_in_view: bool = False,
 ) -> None: ...
 ```
