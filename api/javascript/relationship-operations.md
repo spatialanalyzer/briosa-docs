@@ -1323,7 +1323,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 | `showInReport` | `boolean` | `Show in Report` | true |
-| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | `optimizationDeltaWeight` | `number` | `Optimization: Delta Weight` | 0.000000 |
 | `optimizationOutOfToleranceWeight` | `number` | `Optimization: Out of Tolerance Weight` | 0.000000 |
 
@@ -1520,8 +1520,8 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | 0.000000 |
-| `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | 0.000000 |
+| `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
+| `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1815,7 +1815,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | 0.000000 |
+| `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2115,7 +2115,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |

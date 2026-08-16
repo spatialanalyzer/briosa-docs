@@ -1323,7 +1323,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 | Input | `Relationship Name` | Collection Object Name | See MP definition | Required |
 | Input | `Criteria` | String | Empty | Empty |
 | Input | `Show in Report` | Boolean | true | true |
-| Input | `Tolerance Options` | ToleranceScalarOptions | 0.000000 | 0.000000 |
+| Input | `Tolerance Options` | ToleranceScalarOptions | 0.000000 | Both limits disabled |
 | Input | `Optimization: Delta Weight` | Double | 0.000000 | 0.000000 |
 | Input | `Optimization: Out of Tolerance Weight` | Double | 0.000000 | 0.000000 |
 
@@ -1458,8 +1458,8 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Relationship Name` | Collection Object Name | See MP definition | Required |
-| Input | `Angle Between Vectors Fit Constraints` | FitConstraintScalarOptions | 0.000000 | 0.000000 |
-| Input | `Mutual Perpendicular Length Fit Constraints` | FitConstraintScalarOptions | 0.000000 | 0.000000 |
+| Input | `Angle Between Vectors Fit Constraints` | FitConstraintScalarOptions | 0.000000 | Both limits disabled |
+| Input | `Mutual Perpendicular Length Fit Constraints` | FitConstraintScalarOptions | 0.000000 | Both limits disabled |
 
 ### Briosa Disposition
 
@@ -1685,7 +1685,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Relationship Name` | Collection Object Name | See MP definition | Required |
-| Input | `Fit Constraint Options` | FitConstraintScalarOptions | 0.000000 | 0.000000 |
+| Input | `Fit Constraint Options` | FitConstraintScalarOptions | 0.000000 | Both limits disabled |
 
 ### Briosa Disposition
 
@@ -1896,7 +1896,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 | Direction | Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Relationship Name` | Collection Object Name | See MP definition | Required |
-| Input | `Tolerance Options` | ToleranceScalarOptions | 0.000000 | 0.000000 |
+| Input | `Tolerance Options` | ToleranceScalarOptions | 0.000000 | Both limits disabled |
 
 ### Briosa Disposition
 

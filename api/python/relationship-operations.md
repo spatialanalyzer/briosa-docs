@@ -1117,7 +1117,7 @@ async def set_geom_relationship_auto_vectors_nominal_avn(
     relationship_name: CollectionObjectName,
     *,
     create_auto_vectors_avn: bool = False,
-    points_type: PointFilterInputType = PointFilterInputType.DEFAULT,
+    points_type: PointFilterInputType = PointFilterInputType.CARDINAL_POINTS,
     use_vector_group_custom_prefix: bool = False,
     vector_group_custom_prefix: str = '',
 ) -> None: ...
@@ -1180,7 +1180,7 @@ This coroutine is part of the next Python package contract.
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
 | `criteria` | `str` | `Criteria` | Empty |
 | `show_in_report` | `bool` | `Show in Report` | true |
-| `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | `optimization_delta_weight` | `float` | `Optimization: Delta Weight` | 0.000000 |
 | `optimization_out_of_tolerance_weight` | `float` | `Optimization: Out of Tolerance Weight` | 0.000000 |
 
@@ -1195,7 +1195,7 @@ async def set_geom_relationship_criteria(
     *,
     criteria: str = '',
     show_in_report: bool = True,
-    tolerance_options: ToleranceScalarOptions = 0.000000,
+    tolerance_options: ToleranceScalarOptions = ToleranceScalarOptions.DEFAULT,
     optimization_delta_weight: float = 0.000000,
     optimization_out_of_tolerance_weight: float = 0.000000,
 ) -> None: ...
@@ -1356,8 +1356,8 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | 0.000000 |
-| `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | 0.000000 |
+| `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
+| `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1368,8 +1368,8 @@ async def set_object_to_object_direction_relationship_fit_constraints(
     self,
     relationship_name: CollectionObjectName,
     *,
-    angle_between_vectors_fit_constraints: FitConstraintScalarOptions = 0.000000,
-    mutual_perpendicular_length_fit_constraints: FitConstraintScalarOptions = 0.000000,
+    angle_between_vectors_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
+    mutual_perpendicular_length_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -1623,7 +1623,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | 0.000000 |
+| `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1634,7 +1634,7 @@ async def set_relationship_fit_constraints_scalar_type(
     self,
     relationship_name: CollectionObjectName,
     *,
-    fit_constraint_options: FitConstraintScalarOptions = 0.000000,
+    fit_constraint_options: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -1887,7 +1887,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1898,7 +1898,7 @@ async def set_relationship_tolerance_scalar_type(
     self,
     relationship_name: CollectionObjectName,
     *,
-    tolerance_options: ToleranceScalarOptions = 0.000000,
+    tolerance_options: ToleranceScalarOptions = ToleranceScalarOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -1973,7 +1973,7 @@ async def set_relationship_voxel_cloud_display(
     voxel_size_1_0_autodetect: float = -1.000000,
     min_pts_count_per_voxel: int = 3,
     voxel_rendering_diameter_1_0_fast: float = 125.000000,
-    surface_analysis_mode: SurfaceAnalysisMode = SurfaceAnalysisMode.DEFAULT,
+    surface_analysis_mode: SurfaceAnalysisMode = SurfaceAnalysisMode.RELATIONSHIP,
     colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
     show_color_bar_in_view: bool = False,
 ) -> None: ...
@@ -2041,7 +2041,7 @@ async def set_relationship_weights_normalized(
     self,
     collection_name: CollectionName,
     *,
-    pick_weighting_mode: RelWeightingMode = RelWeightingMode.DEFAULT,
+    pick_weighting_mode: RelWeightingMode = RelWeightingMode.NORMALIZE_EQUATION_COUNT,
 ) -> None: ...
 ```
 

@@ -581,7 +581,7 @@ async def sort_vectors(
     source_vectors: Iterable[VectorName],
     *,
     sort_method: str = "Magnitude",
-    coordinate_system: CoordinateSystemType = CoordinateSystemType.DEFAULT,
+    coordinate_system: CoordinateSystemType = CoordinateSystemType.CARTESIAN,
     primary_sort_coordinate: str = "X (R)",
     secondary_sort_coordinate: str = "Y (Theta)",
     tertiary_sort_coordinate: str = "Z (Phi)",

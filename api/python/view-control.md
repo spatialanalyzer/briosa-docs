@@ -65,7 +65,7 @@ This coroutine is part of the next Python package contract.
 async def center_graphics_about_objects(
     self,
     *,
-    object_type: ObjectType = ObjectType.DEFAULT,
+    object_type: ObjectType = ObjectType.ANY,
     collection_wildcard_criteria: str = "*",
     object_wildcard_criteria: str = "*",
 ) -> None: ...
@@ -146,7 +146,7 @@ async def define_point_of_view(
     origin_x: float = 0.000000,
     origin_y: float = 0.000000,
     restore_render_mode: bool = False,
-    rendering_mode: RenderModeType = RenderModeType.DEFAULT,
+    rendering_mode: RenderModeType = RenderModeType.WIREFRAME,
 ) -> None: ...
 ```
 
@@ -1062,7 +1062,7 @@ async def show_hide_by_object_type(
     *,
     all_collections: bool = False,
     specific_collection: CollectionName,
-    object_type_to_show_hide: ObjectType = ObjectType.DEFAULT,
+    object_type_to_show_hide: ObjectType = ObjectType.ANY,
     hide_show_false: bool = True,
 ) -> None: ...
 ```

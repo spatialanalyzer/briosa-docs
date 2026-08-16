@@ -1212,7 +1212,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 | `showInReport` | `bool` | `Show in Report` | true |
-| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | `optimizationDeltaWeight` | `double` | `Optimization: Delta Weight` | 0.000000 |
 | `optimizationOutOfToleranceWeight` | `double` | `Optimization: Out of Tolerance Weight` | 0.000000 |
 
@@ -1225,7 +1225,7 @@ public Task SetGeomRelationshipCriteriaAsync(
     CollectionObjectName relationshipName,
     string criteria = "",
     bool showInReport = true,
-    ToleranceScalarOptions toleranceOptions = 0.000000,
+    ToleranceScalarOptions toleranceOptions = default,
     double optimizationDeltaWeight = 0.000000,
     double optimizationOutOfToleranceWeight = 0.000000,
     CancellationToken cancellationToken = default);
@@ -1379,8 +1379,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | 0.000000 |
-| `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | 0.000000 |
+| `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
+| `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1389,8 +1389,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetObjectToObjectDirectionRelationshipFitConstraintsAsync(
     CollectionObjectName relationshipName,
-    FitConstraintScalarOptions angleBetweenVectorsFitConstraints = 0.000000,
-    FitConstraintScalarOptions mutualPerpendicularLengthFitConstraints = 0.000000,
+    FitConstraintScalarOptions angleBetweenVectorsFitConstraints = default,
+    FitConstraintScalarOptions mutualPerpendicularLengthFitConstraints = default,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1632,7 +1632,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | 0.000000 |
+| `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1641,7 +1641,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipFitConstraintsScalarTypeAsync(
     CollectionObjectName relationshipName,
-    FitConstraintScalarOptions fitConstraintOptions = 0.000000,
+    FitConstraintScalarOptions fitConstraintOptions = default,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1884,7 +1884,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1893,7 +1893,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipToleranceScalarTypeAsync(
     CollectionObjectName relationshipName,
-    ToleranceScalarOptions toleranceOptions = 0.000000,
+    ToleranceScalarOptions toleranceOptions = default,
     CancellationToken cancellationToken = default);
 ```
 

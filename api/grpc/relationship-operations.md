@@ -1313,7 +1313,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
 | Request | 2 | `criteria` | `string` | `Criteria` | Empty |
 | Request | 3 | `show_in_report` | `bool` | `Show in Report` | true |
-| Request | 4 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| Request | 4 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | Request | 5 | `optimization_delta_weight` | `double` | `Optimization: Delta Weight` | 0.000000 |
 | Request | 6 | `optimization_out_of_tolerance_weight` | `double` | `Optimization: Out of Tolerance Weight` | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -1510,8 +1510,8 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | 0.000000 |
-| Request | 3 | `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | 0.000000 |
+| Request | 2 | `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
+| Request | 3 | `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1805,7 +1805,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | 0.000000 |
+| Request | 2 | `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -2105,7 +2105,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | 0.000000 |
+| Request | 2 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
