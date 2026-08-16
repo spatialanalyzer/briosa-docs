@@ -660,8 +660,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `k0008OperatorIdentifier` | `int` | `K0008: Operator Identifier` | -1 |
 | `k0010MachineIdentifier` | `int` | `K0010: Machine Identifier` | -1 |
 | `k0012GageIdentifier` | `int` | `K0012: Gage Identifier` | -1 |
-| `relationshipList` | `IEnumerable<CollectionObjectName>` | `Relationship List` | Required |
-| `featureCheckList` | `IEnumerable<CollectionObjectName>` | `Feature Check List` | Required |
+| `relationshipList` | `IEnumerable<CollectionItemName>` | `Relationship List` | Required |
+| `featureCheckList` | `IEnumerable<CollectionItemName>` | `Feature Check List` | Required |
 | `vectorGroupList` | `IEnumerable<CollectionObjectName>` | `Vector Group List` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -685,8 +685,8 @@ public Task ExportQdasCharacteristicsAsync(
     int k0008OperatorIdentifier,
     int k0010MachineIdentifier,
     int k0012GageIdentifier,
-    IEnumerable<CollectionObjectName> relationshipList,
-    IEnumerable<CollectionObjectName> featureCheckList,
+    IEnumerable<CollectionItemName> relationshipList,
+    IEnumerable<CollectionItemName> featureCheckList,
     IEnumerable<CollectionObjectName> vectorGroupList,
     CancellationToken cancellationToken = default);
 ```
@@ -892,7 +892,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `vectorGroupsToExport` | `IEnumerable<CollectionVectorGroupName>` | `Vector group(s) to export` | Required |
 | `overwriteExistingFileFalseAppend` | `bool` | `Overwrite existing file? (FALSE = Append)` | true |
 | `useFullPrecisionScientificNotation` | `bool` | `Use Full Precision (Scientific Notation)?` | false |
-| `vectorNameFormat` | `Vector` | `Vector Name Format` | Required |
+| `vectorNameFormat` | `ExportVectorNameFormat` | `Vector Name Format` | Required |
 | `includeVectorLength` | `bool` | `Include Vector Length?` | true |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -905,7 +905,7 @@ public Task ExportVectorContainerToAsciiFileAsync(
     IEnumerable<CollectionVectorGroupName> vectorGroupsToExport,
     bool overwriteExistingFileFalseAppend,
     bool useFullPrecisionScientificNotation,
-    Vector vectorNameFormat,
+    ExportVectorNameFormat vectorNameFormat,
     bool includeVectorLength = true,
     CancellationToken cancellationToken = default);
 ```
@@ -2188,8 +2188,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `k0008OperatorIdentifier` | `int` | `K0008: Operator Identifier` | -1 |
 | `k0010MachineIdentifier` | `int` | `K0010: Machine Identifier` | -1 |
 | `k0012GageIdentifier` | `int` | `K0012: Gage Identifier` | -1 |
-| `relationshipList` | `IEnumerable<CollectionObjectName>` | `Relationship List` | Required |
-| `featureCheckList` | `IEnumerable<CollectionObjectName>` | `Feature Check List` | Required |
+| `relationshipList` | `IEnumerable<CollectionItemName>` | `Relationship List` | Required |
+| `featureCheckList` | `IEnumerable<CollectionItemName>` | `Feature Check List` | Required |
 | `vectorGroupList` | `IEnumerable<CollectionObjectName>` | `Vector Group List` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2212,8 +2212,8 @@ public Task PrepareQdasDataListAsync(
     int k0008OperatorIdentifier,
     int k0010MachineIdentifier,
     int k0012GageIdentifier,
-    IEnumerable<CollectionObjectName> relationshipList,
-    IEnumerable<CollectionObjectName> featureCheckList,
+    IEnumerable<CollectionItemName> relationshipList,
+    IEnumerable<CollectionItemName> featureCheckList,
     IEnumerable<CollectionObjectName> vectorGroupList,
     CancellationToken cancellationToken = default);
 ```

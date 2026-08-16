@@ -84,7 +84,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `item_list` | `Iterable[CollectionObjectName]` | `Item List` | Required |
+| `item_list` | `Iterable[CollectionItemName]` | `Item List` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def delete_items(
     self,
-    item_list: Iterable[CollectionObjectName],
+    item_list: Iterable[CollectionItemName],
 ) -> None: ...
 ```
 
@@ -665,7 +665,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `item_list` | `Iterable[CollectionObjectName]` | `Item List` | Required |
+| `item_list` | `Iterable[CollectionItemName]` | `Item List` | Required |
 | `instruments` | `Iterable[CollectionInstrumentId]` | `Instruments` | Required |
 | `lock_items` | `bool` | `Lock Items?` | false |
 
@@ -676,7 +676,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def lock_unlock_selected_items(
     self,
-    item_list: Iterable[CollectionObjectName],
+    item_list: Iterable[CollectionItemName],
     instruments: Iterable[CollectionInstrumentId],
     *,
     lock_items: bool = False,
@@ -700,8 +700,8 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_ref_list` | `Iterable[CollectionObjectName]` | `Relationship Ref List` | Required |
-| `feature_check_ref_list` | `Iterable[CollectionObjectName]` | `Feature Check Ref List` | Required |
+| `relationship_ref_list` | `Iterable[CollectionItemName]` | `Relationship Ref List` | Required |
+| `feature_check_ref_list` | `Iterable[CollectionItemName]` | `Feature Check Ref List` | Required |
 | `datum_ref_list` | `Iterable[CollectionObjectName]` | `Datum Ref List` | Required |
 | `lock_out_trapping` | `bool` | `Lock Out Trapping?` | false |
 
@@ -712,8 +712,8 @@ This coroutine is part of the next Python package contract.
 ```python
 async def lock_unlock_trapping_control(
     self,
-    relationship_ref_list: Iterable[CollectionObjectName],
-    feature_check_ref_list: Iterable[CollectionObjectName],
+    relationship_ref_list: Iterable[CollectionItemName],
+    feature_check_ref_list: Iterable[CollectionItemName],
     datum_ref_list: Iterable[CollectionObjectName],
     *,
     lock_out_trapping: bool = False,

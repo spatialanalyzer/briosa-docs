@@ -62,7 +62,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `treat_individually` | `bool` | `Treat Individually?` | false |
-| `colorization_options_uses_mode_only` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorization_options_uses_mode_only` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ async def auto_range_and_set_vector_group_colorization_all(
     self,
     *,
     treat_individually: bool = False,
-    colorization_options_uses_mode_only: Color = Color.DEFAULT,
+    colorization_options_uses_mode_only: ColorizationOptions = ColorizationOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -96,7 +96,7 @@ This coroutine is part of the next Python package contract.
 | --- | --- | --- | --- |
 | `vector_groups_to_be_set` | `Iterable[CollectionVectorGroupName]` | `Vector Groups to be Set` | Required |
 | `treat_individually` | `bool` | `Treat Individually?` | false |
-| `colorization_options_uses_mode_only` | `Color` | `Colorization Options (Uses Mode Only)` | Red |
+| `colorization_options_uses_mode_only` | `ColorizationOptions` | `Colorization Options (Uses Mode Only)` | Red |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ async def auto_range_and_set_vector_group_colorization_selected(
     vector_groups_to_be_set: Iterable[CollectionVectorGroupName],
     *,
     treat_individually: bool = False,
-    colorization_options_uses_mode_only: Color = Color.DEFAULT,
+    colorization_options_uses_mode_only: ColorizationOptions = ColorizationOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -496,7 +496,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorization_options` | `Color` | `Colorization Options` | Red |
+| `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -506,7 +506,7 @@ This coroutine is part of the next Python package contract.
 async def set_vector_group_colorization_options_all(
     self,
     *,
-    colorization_options: Color = Color.DEFAULT,
+    colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -528,7 +528,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `vector_groups_to_be_set` | `Iterable[CollectionVectorGroupName]` | `Vector Groups to be Set` | Required |
-| `colorization_options` | `Color` | `Colorization Options` | Red |
+| `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -539,7 +539,7 @@ async def set_vector_group_colorization_options_selected(
     self,
     vector_groups_to_be_set: Iterable[CollectionVectorGroupName],
     *,
-    colorization_options: Color = Color.DEFAULT,
+    colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
 ) -> None: ...
 ```
 

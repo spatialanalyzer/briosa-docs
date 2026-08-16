@@ -34,7 +34,7 @@ the public surface of the handwritten client libraries.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationships` | `repeated CollectionObjectName` | `Relationships` | Required |
+| Request | 1 | `relationships` | `repeated CollectionItemName` | `Relationships` | Required |
 | Request | 2 | `enable` | `bool` | `Enable?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -42,7 +42,7 @@ the public surface of the handwritten client libraries.
 rpc EnableDisableRelationshipsForOptimization(EnableDisableRelationshipsForOptimizationRequest) returns (EnableDisableRelationshipsForOptimizationResult);
 
 message EnableDisableRelationshipsForOptimizationRequest {
-  repeated CollectionObjectName relationships = 1;
+  repeated CollectionItemName relationships = 1;
   optional bool enable = 2;
 }
 
@@ -255,7 +255,7 @@ message GetGeomRelationshipCriteriaResult {
   optional double optimization_out_of_tolerance_weight = 7;
   optional string is_within_tolerance = 8;
   optional bool has_uncertainty = 9;
-  optional double uncertainty = 10;
+  double uncertainty = 10;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -930,7 +930,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Result | 14 | `low_z_tolerance` | `double` | `Low Z Tolerance` | — |
 | Result | 15 | `use_low_mag_tolerance` | `bool` | `Use Low Mag Tolerance?` | — |
 | Result | 16 | `low_mag_tolerance` | `double` | `Low Mag Tolerance` | — |
-| Result | 17 | `vector_tolerance` | `Vector` | `Vector Tolerance` | — |
+| Result | 17 | `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -957,7 +957,7 @@ message GetRelationshipToleranceVectorTypeResult {
   optional double low_z_tolerance = 14;
   optional bool use_low_mag_tolerance = 15;
   optional double low_mag_tolerance = 16;
-  optional Vector vector_tolerance = 17;
+  optional ToleranceVectorOptions vector_tolerance = 17;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -1767,7 +1767,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationships` | `repeated CollectionObjectName` | `Relationships` | Required |
+| Request | 1 | `relationships` | `repeated CollectionItemName` | `Relationships` | Required |
 | Request | 2 | `dormant_status` | `bool` | `Dormant Status` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1775,7 +1775,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipDormantStatus(SetRelationshipDormantStatusRequest) returns (SetRelationshipDormantStatusResult);
 
 message SetRelationshipDormantStatusRequest {
-  repeated CollectionObjectName relationships = 1;
+  repeated CollectionItemName relationships = 1;
   optional bool dormant_status = 2;
 }
 
@@ -1842,7 +1842,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `orientation_vector_constraint` | `Vector` | `Orientation Vector Constraint` | Required |
+| Request | 2 | `orientation_vector_constraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1850,7 +1850,7 @@ rpc SetRelationshipOrientationFitConstraintsVectorType(SetRelationshipOrientatio
 
 message SetRelationshipOrientationFitConstraintsVectorTypeRequest {
   optional CollectionObjectName relationship_name = 1;
-  optional Vector orientation_vector_constraint = 2;
+  optional ToleranceVectorOptions orientation_vector_constraint = 2;
 }
 
 message SetRelationshipOrientationFitConstraintsVectorTypeResult {
@@ -1914,7 +1914,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `position_vector_constraint` | `Vector` | `Position Vector Constraint` | Required |
+| Request | 2 | `position_vector_constraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1922,7 +1922,7 @@ rpc SetRelationshipPositionFitConstraintsVectorType(SetRelationshipPositionFitCo
 
 message SetRelationshipPositionFitConstraintsVectorTypeRequest {
   optional CollectionObjectName relationship_name = 1;
-  optional Vector position_vector_constraint = 2;
+  optional ToleranceVectorOptions position_vector_constraint = 2;
 }
 
 message SetRelationshipPositionFitConstraintsVectorTypeResult {
@@ -2142,7 +2142,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
-| Request | 2 | `vector_tolerance` | `Vector` | `Vector Tolerance` | Required |
+| Request | 2 | `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -2150,7 +2150,7 @@ rpc SetRelationshipToleranceVectorType(SetRelationshipToleranceVectorTypeRequest
 
 message SetRelationshipToleranceVectorTypeRequest {
   optional CollectionObjectName relationship_name = 1;
-  optional Vector vector_tolerance = 2;
+  optional ToleranceVectorOptions vector_tolerance = 2;
 }
 
 message SetRelationshipToleranceVectorTypeResult {
@@ -2184,7 +2184,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 4 | `min_pts_count_per_voxel` | `int32` | `Min Pts Count Per Voxel` | 3 |
 | Request | 5 | `voxel_rendering_diameter_1_0_fast` | `double` | `Voxel Rendering Diameter % (-1.0 fast)` | 125.000000 |
 | Request | 6 | `surface_analysis_mode` | `SurfaceAnalysisMode` | `Surface Analysis Mode` | Relationship |
-| Request | 7 | `colorization_options` | `Color` | `Colorization Options` | Red |
+| Request | 7 | `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 | Request | 8 | `show_color_bar_in_view` | `bool` | `Show Color Bar in View?` | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2198,7 +2198,7 @@ message SetRelationshipVoxelCloudDisplayRequest {
   optional int32 min_pts_count_per_voxel = 4;
   optional double voxel_rendering_diameter_1_0_fast = 5;
   optional SurfaceAnalysisMode surface_analysis_mode = 6;
-  optional Color colorization_options = 7;
+  optional ColorizationOptions colorization_options = 7;
   optional bool show_color_bar_in_view = 8;
 }
 

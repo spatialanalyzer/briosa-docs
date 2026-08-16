@@ -118,7 +118,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `dimension_name` | `CollectionObjectName` | `Dimension Name` | Required |
+| Request | 1 | `dimension_name` | `CollectionItemName` | `Dimension Name` | Required |
 | Request | 2 | `enable_nominal` | `bool` | `Enable Nominal` | false |
 | Request | 3 | `enable_high` | `bool` | `Enable High` | false |
 | Request | 4 | `enable_low` | `bool` | `Enable Low` | false |
@@ -131,7 +131,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetDimensionTolerance(SetDimensionToleranceRequest) returns (SetDimensionToleranceResult);
 
 message SetDimensionToleranceRequest {
-  optional CollectionObjectName dimension_name = 1;
+  optional CollectionItemName dimension_name = 1;
   optional bool enable_nominal = 2;
   optional bool enable_high = 3;
   optional bool enable_low = 4;

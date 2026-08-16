@@ -366,7 +366,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipsEmptyToClearAll` | `IEnumerable<CollectionObjectName>` | `Relationships (Empty to clear all)` | Required |
+| `relationshipsEmptyToClearAll` | `IEnumerable<CollectionItemName>` | `Relationships (Empty to clear all)` | Required |
 | `highLightRelationships` | `bool` | `HighLight Relationships?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -375,7 +375,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task HighlightRelationshipsAsync(
-    IEnumerable<CollectionObjectName> relationshipsEmptyToClearAll,
+    IEnumerable<CollectionItemName> relationshipsEmptyToClearAll,
     bool highLightRelationships = false,
     CancellationToken cancellationToken = default);
 ```
@@ -1054,7 +1054,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `calloutViewToShow` | `CollectionObjectName` | `Callout View To Show` | Required |
+| `calloutViewToShow` | `CollectionItemName` | `Callout View To Show` | Required |
 | `showCalloutView` | `bool` | `Show Callout View?` | true |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1063,7 +1063,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task ShowHideCalloutViewAsync(
-    CollectionObjectName calloutViewToShow,
+    CollectionItemName calloutViewToShow,
     bool showCalloutView = true,
     CancellationToken cancellationToken = default);
 ```
@@ -1085,7 +1085,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimensionName` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimensionName` | `CollectionItemName` | `Dimension Name` | Required |
 | `showDimension` | `bool` | `Show Dimension?` | true |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1094,7 +1094,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task ShowHideDimensionAsync(
-    CollectionObjectName dimensionName,
+    CollectionItemName dimensionName,
     bool showDimension = true,
     CancellationToken cancellationToken = default);
 ```
@@ -1182,7 +1182,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `points` | `IEnumerable<PointName>` | `Points` | Required |
 | `objects` | `IEnumerable<CollectionObjectName>` | `Objects` | Required |
 | `instruments` | `IEnumerable<CollectionInstrumentId>` | `Instruments` | Required |
-| `featureChecks` | `IEnumerable<CollectionObjectName>` | `Feature Checks` | Required |
+| `featureChecks` | `IEnumerable<CollectionItemName>` | `Feature Checks` | Required |
 | `datums` | `IEnumerable<CollectionObjectName>` | `Datums` | Required |
 | `collections` | `IEnumerable<string>` | `Collections` | Required |
 
@@ -1196,7 +1196,7 @@ public Task ShowItemsInTreeAsync(
     IEnumerable<PointName> points,
     IEnumerable<CollectionObjectName> objects,
     IEnumerable<CollectionInstrumentId> instruments,
-    IEnumerable<CollectionObjectName> featureChecks,
+    IEnumerable<CollectionItemName> featureChecks,
     IEnumerable<CollectionObjectName> datums,
     IEnumerable<string> collections,
     CancellationToken cancellationToken = default);
@@ -1314,7 +1314,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `featureCheckNameList` | `IEnumerable<CollectionObjectName>` | `Feature Check Name List` | Required |
+| `featureCheckNameList` | `IEnumerable<CollectionItemName>` | `Feature Check Name List` | Required |
 | `show` | `bool` | `Show?` | false |
 | `highlight` | `bool` | `Highlight?` | false |
 | `setInspectionView` | `bool` | `Set Inspection View?` | false |
@@ -1325,7 +1325,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task ShowHideAnnotationsForFeatureChecksAsync(
-    IEnumerable<CollectionObjectName> featureCheckNameList,
+    IEnumerable<CollectionItemName> featureCheckNameList,
     bool show = false,
     bool highlight = false,
     bool setInspectionView = false,

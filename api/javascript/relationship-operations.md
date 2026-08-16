@@ -26,7 +26,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable<CollectionObjectName>` | `Relationships` | Required |
+| `relationships` | `Iterable<CollectionItemName>` | `Relationships` | Required |
 | `enable` | `boolean` | `Enable?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -35,7 +35,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface EnableDisableRelationshipsForOptimizationInput {
-  readonly relationships: Iterable<CollectionObjectName>;
+  readonly relationships: Iterable<CollectionItemName>;
   readonly enable?: boolean;
 }
 
@@ -944,7 +944,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `lowZTolerance` | `number` | `Low Z Tolerance` |
 | `useLowMagTolerance` | `boolean` | `Use Low Mag Tolerance?` |
 | `lowMagTolerance` | `number` | `Low Mag Tolerance` |
-| `vectorTolerance` | `Vector` | `Vector Tolerance` |
+| `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```ts
 export interface GetRelationshipToleranceVectorTypeResult {
@@ -964,7 +964,7 @@ export interface GetRelationshipToleranceVectorTypeResult {
   readonly lowZTolerance: number;
   readonly useLowMagTolerance: boolean;
   readonly lowMagTolerance: number;
-  readonly vectorTolerance: Vector;
+  readonly vectorTolerance: ToleranceVectorOptions;
 }
 
 export interface GetRelationshipToleranceVectorTypeInput {
@@ -1777,7 +1777,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable<CollectionObjectName>` | `Relationships` | Required |
+| `relationships` | `Iterable<CollectionItemName>` | `Relationships` | Required |
 | `dormantStatus` | `boolean` | `Dormant Status` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1786,7 +1786,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipDormantStatusInput {
-  readonly relationships: Iterable<CollectionObjectName>;
+  readonly relationships: Iterable<CollectionItemName>;
   readonly dormantStatus?: boolean;
 }
 
@@ -1852,7 +1852,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `orientationVectorConstraint` | `Vector` | `Orientation Vector Constraint` | Required |
+| `orientationVectorConstraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1861,7 +1861,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetRelationshipOrientationFitConstraintsVectorTypeInput {
   readonly relationshipName: CollectionObjectName;
-  readonly orientationVectorConstraint: Vector;
+  readonly orientationVectorConstraint: ToleranceVectorOptions;
 }
 
 function setRelationshipOrientationFitConstraintsVectorType(
@@ -1924,7 +1924,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `positionVectorConstraint` | `Vector` | `Position Vector Constraint` | Required |
+| `positionVectorConstraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1933,7 +1933,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetRelationshipPositionFitConstraintsVectorTypeInput {
   readonly relationshipName: CollectionObjectName;
-  readonly positionVectorConstraint: Vector;
+  readonly positionVectorConstraint: ToleranceVectorOptions;
 }
 
 function setRelationshipPositionFitConstraintsVectorType(
@@ -2152,7 +2152,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `vectorTolerance` | `Vector` | `Vector Tolerance` | Required |
+| `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2161,7 +2161,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetRelationshipToleranceVectorTypeInput {
   readonly relationshipName: CollectionObjectName;
-  readonly vectorTolerance: Vector;
+  readonly vectorTolerance: ToleranceVectorOptions;
 }
 
 function setRelationshipToleranceVectorType(
@@ -2194,7 +2194,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `minPtsCountPerVoxel` | `number` | `Min Pts Count Per Voxel` | 3 |
 | `voxelRenderingDiameter10Fast` | `number` | `Voxel Rendering Diameter % (-1.0 fast)` | 125.000000 |
 | `surfaceAnalysisMode` | `SurfaceAnalysisMode` | `Surface Analysis Mode` | Relationship |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 | `showColorBarInView` | `boolean` | `Show Color Bar in View?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -2209,7 +2209,7 @@ export interface SetRelationshipVoxelCloudDisplayInput {
   readonly minPtsCountPerVoxel?: number;
   readonly voxelRenderingDiameter10Fast?: number;
   readonly surfaceAnalysisMode?: SurfaceAnalysisMode;
-  readonly colorizationOptions?: Color;
+  readonly colorizationOptions?: ColorizationOptions;
   readonly showColorBarInView?: boolean;
 }
 

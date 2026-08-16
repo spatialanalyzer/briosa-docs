@@ -168,7 +168,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
 | `transformInWorking` | `Transform` | `Transform in Working` |
-| `optimumTransform` | `Transform` | `Optimum Transform` |
+| `optimumTransform` | `WorldTransform` | `Optimum Transform` |
 | `rmsDeviation` | `number` | `RMS Deviation` |
 | `maximumAbsoluteDeviation` | `number` | `Maximum Absolute Deviation` |
 | `numberOfUnknowns` | `number` | `Number of Unknowns` |
@@ -178,7 +178,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface BestFitTransformationGroupToGroupResult {
   readonly transformInWorking: Transform;
-  readonly optimumTransform: Transform;
+  readonly optimumTransform: WorldTransform;
   readonly rmsDeviation: number;
   readonly maximumAbsoluteDeviation: number;
   readonly numberOfUnknowns: number;
@@ -1531,7 +1531,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `uy` | `number` | `Uy` |
 | `uz` | `number` | `Uz` |
 | `umag` | `number` | `Umag` |
-| `positionTolerance` | `Vector` | `Position Tolerance` |
+| `positionTolerance` | `ToleranceVectorOptions` | `Position Tolerance` |
 | `componentWeights` | `Vector` | `Component Weights` |
 
 ```ts
@@ -1542,7 +1542,7 @@ export interface GetPointPropertiesResult {
   readonly uy: number;
   readonly uz: number;
   readonly umag: number;
-  readonly positionTolerance: Vector;
+  readonly positionTolerance: ToleranceVectorOptions;
   readonly componentWeights: Vector;
 }
 
@@ -1695,7 +1695,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `lowZTolerance` | `number` | `Low Z Tolerance` |
 | `useLowMagTolerance` | `boolean` | `Use Low Mag Tolerance?` |
 | `lowMagTolerance` | `number` | `Low Mag Tolerance` |
-| `vectorTolerance` | `Vector` | `Vector Tolerance` |
+| `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```ts
 export interface GetPointToleranceResult {
@@ -1715,7 +1715,7 @@ export interface GetPointToleranceResult {
   readonly lowZTolerance: number;
   readonly useLowMagTolerance: boolean;
   readonly lowMagTolerance: number;
-  readonly vectorTolerance: Vector;
+  readonly vectorTolerance: ToleranceVectorOptions;
 }
 
 export interface GetPointToleranceInput {
@@ -2052,13 +2052,13 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
-| `optimumTransform` | `Transform` | `Optimum Transform` |
+| `optimumTransform` | `WorldTransform` | `Optimum Transform` |
 | `rmsDeviation` | `number` | `RMS Deviation` |
 | `maximumAbsoluteDeviation` | `number` | `Maximum Absolute Deviation` |
 
 ```ts
 export interface GroupToSurfaceFitResult {
-  readonly optimumTransform: Transform;
+  readonly optimumTransform: WorldTransform;
   readonly rmsDeviation: number;
   readonly maximumAbsoluteDeviation: number;
 }
@@ -3613,7 +3613,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -3621,7 +3621,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetDefaultColorizationOptionsInput {
-  readonly colorizationOptions?: Color;
+  readonly colorizationOptions?: ColorizationOptions;
 }
 
 function setDefaultColorizationOptions(
@@ -3692,7 +3692,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `geometryType` | `GeometryType` | `Geometry Type` | Required |
-| `relationshipRefList` | `Iterable<CollectionObjectName>` | `Relationship Ref List` | Required |
+| `relationshipRefList` | `Iterable<CollectionItemName>` | `Relationship Ref List` | Required |
 | `fitProfileName` | `string` | `Fit Profile Name` | Empty |
 | `applyCardinalPointSettings` | `boolean` | `Apply Cardinal Point Settings` | false |
 
@@ -3703,7 +3703,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetGeometryRelationshipFitProfileInput {
   readonly geometryType: GeometryType;
-  readonly relationshipRefList: Iterable<CollectionObjectName>;
+  readonly relationshipRefList: Iterable<CollectionItemName>;
   readonly fitProfileName?: string;
   readonly applyCardinalPointSettings?: boolean;
 }
@@ -3854,7 +3854,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `pointNameList` | `Iterable<PointName>` | `Point Name List` | Required |
 | `planarOffset` | `number` | `Planar Offset` | 0.000000 |
 | `radialOffset` | `number` | `Radial Offset` | 0.000000 |
-| `positionTolerance` | `Vector` | `Position Tolerance` | Required |
+| `positionTolerance` | `ToleranceVectorOptions` | `Position Tolerance` | Required |
 | `componentWeights` | `Vector` | `Component Weights` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3866,7 +3866,7 @@ export interface SetPointPropertiesInput {
   readonly pointNameList: Iterable<PointName>;
   readonly planarOffset?: number;
   readonly radialOffset?: number;
-  readonly positionTolerance: Vector;
+  readonly positionTolerance: ToleranceVectorOptions;
   readonly componentWeights: Vector;
 }
 
@@ -4160,7 +4160,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `objectsToTransform` | `Iterable<CollectionObjectName>` | `Objects to Transform` | Required |
-| `deltaTransform` | `Transform` | `Delta Transform` | Required |
+| `deltaTransform` | `WorldTransform` | `Delta Transform` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -4169,7 +4169,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface TransformObjectsByDeltaWorldTransformOperatorInput {
   readonly objectsToTransform: Iterable<CollectionObjectName>;
-  readonly deltaTransform: Transform;
+  readonly deltaTransform: WorldTransform;
 }
 
 function transformObjectsByDeltaWorldTransformOperator(

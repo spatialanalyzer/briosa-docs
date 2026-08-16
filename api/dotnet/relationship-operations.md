@@ -27,7 +27,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `IEnumerable<CollectionObjectName>` | `Relationships` | Required |
+| `relationships` | `IEnumerable<CollectionItemName>` | `Relationships` | Required |
 | `enable` | `bool` | `Enable?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -36,7 +36,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task EnableDisableRelationshipsForOptimizationAsync(
-    IEnumerable<CollectionObjectName> relationships,
+    IEnumerable<CollectionItemName> relationships,
     bool enable = false,
     CancellationToken cancellationToken = default);
 ```
@@ -871,7 +871,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `LowZTolerance` | `double` | `Low Z Tolerance` |
 | `UseLowMagTolerance` | `bool` | `Use Low Mag Tolerance?` |
 | `LowMagTolerance` | `double` | `Low Mag Tolerance` |
-| `VectorTolerance` | `Vector` | `Vector Tolerance` |
+| `VectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```csharp
 public sealed record GetRelationshipToleranceVectorTypeResult
@@ -908,7 +908,7 @@ public sealed record GetRelationshipToleranceVectorTypeResult
 
     public required double LowMagTolerance { get; init; }
 
-    public required Vector VectorTolerance { get; init; }
+    public required ToleranceVectorOptions VectorTolerance { get; init; }
 }
 
 public Task<GetRelationshipToleranceVectorTypeResult> GetRelationshipToleranceVectorTypeAsync(
@@ -1600,7 +1600,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `IEnumerable<CollectionObjectName>` | `Relationships` | Required |
+| `relationships` | `IEnumerable<CollectionItemName>` | `Relationships` | Required |
 | `dormantStatus` | `bool` | `Dormant Status` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1609,7 +1609,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipDormantStatusAsync(
-    IEnumerable<CollectionObjectName> relationships,
+    IEnumerable<CollectionItemName> relationships,
     bool dormantStatus = false,
     CancellationToken cancellationToken = default);
 ```
@@ -1663,7 +1663,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `orientationVectorConstraint` | `Vector` | `Orientation Vector Constraint` | Required |
+| `orientationVectorConstraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1672,7 +1672,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipOrientationFitConstraintsVectorTypeAsync(
     CollectionObjectName relationshipName,
-    Vector orientationVectorConstraint,
+    ToleranceVectorOptions orientationVectorConstraint,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1723,7 +1723,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `positionVectorConstraint` | `Vector` | `Position Vector Constraint` | Required |
+| `positionVectorConstraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1732,7 +1732,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipPositionFitConstraintsVectorTypeAsync(
     CollectionObjectName relationshipName,
-    Vector positionVectorConstraint,
+    ToleranceVectorOptions positionVectorConstraint,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1915,7 +1915,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
-| `vectorTolerance` | `Vector` | `Vector Tolerance` | Required |
+| `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1924,7 +1924,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipToleranceVectorTypeAsync(
     CollectionObjectName relationshipName,
-    Vector vectorTolerance,
+    ToleranceVectorOptions vectorTolerance,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1951,7 +1951,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `minPtsCountPerVoxel` | `int` | `Min Pts Count Per Voxel` | 3 |
 | `voxelRenderingDiameter10Fast` | `double` | `Voxel Rendering Diameter % (-1.0 fast)` | 125.000000 |
 | `surfaceAnalysisMode` | `SurfaceAnalysisMode` | `Surface Analysis Mode` | Relationship |
-| `colorizationOptions` | `Color` | `Colorization Options` | Red |
+| `colorizationOptions` | `ColorizationOptions` | `Colorization Options` | Red |
 | `showColorBarInView` | `bool` | `Show Color Bar in View?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1966,7 +1966,7 @@ public Task SetRelationshipVoxelCloudDisplayAsync(
     int minPtsCountPerVoxel,
     double voxelRenderingDiameter10Fast,
     SurfaceAnalysisMode surfaceAnalysisMode,
-    Color colorizationOptions,
+    ColorizationOptions colorizationOptions,
     bool showColorBarInView = false,
     CancellationToken cancellationToken = default);
 ```

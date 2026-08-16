@@ -113,7 +113,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimensionName` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimensionName` | `CollectionItemName` | `Dimension Name` | Required |
 | `enableNominal` | `boolean` | `Enable Nominal` | false |
 | `enableHigh` | `boolean` | `Enable High` | false |
 | `enableLow` | `boolean` | `Enable Low` | false |
@@ -127,7 +127,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetDimensionToleranceInput {
-  readonly dimensionName: CollectionObjectName;
+  readonly dimensionName: CollectionItemName;
   readonly enableNominal?: boolean;
   readonly enableHigh?: boolean;
   readonly enableLow?: boolean;

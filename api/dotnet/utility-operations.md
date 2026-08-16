@@ -84,7 +84,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `itemList` | `IEnumerable<CollectionObjectName>` | `Item List` | Required |
+| `itemList` | `IEnumerable<CollectionItemName>` | `Item List` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task DeleteItemsAsync(
-    IEnumerable<CollectionObjectName> itemList,
+    IEnumerable<CollectionItemName> itemList,
     CancellationToken cancellationToken = default);
 ```
 
@@ -656,7 +656,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `itemList` | `IEnumerable<CollectionObjectName>` | `Item List` | Required |
+| `itemList` | `IEnumerable<CollectionItemName>` | `Item List` | Required |
 | `instruments` | `IEnumerable<CollectionInstrumentId>` | `Instruments` | Required |
 | `lockItems` | `bool` | `Lock Items?` | false |
 
@@ -666,7 +666,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task LockUnlockSelectedItemsAsync(
-    IEnumerable<CollectionObjectName> itemList,
+    IEnumerable<CollectionItemName> itemList,
     IEnumerable<CollectionInstrumentId> instruments,
     bool lockItems = false,
     CancellationToken cancellationToken = default);
@@ -689,8 +689,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipRefList` | `IEnumerable<CollectionObjectName>` | `Relationship Ref List` | Required |
-| `featureCheckRefList` | `IEnumerable<CollectionObjectName>` | `Feature Check Ref List` | Required |
+| `relationshipRefList` | `IEnumerable<CollectionItemName>` | `Relationship Ref List` | Required |
+| `featureCheckRefList` | `IEnumerable<CollectionItemName>` | `Feature Check Ref List` | Required |
 | `datumRefList` | `IEnumerable<CollectionObjectName>` | `Datum Ref List` | Required |
 | `lockOutTrapping` | `bool` | `Lock Out Trapping?` | false |
 
@@ -700,8 +700,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task LockUnlockTrappingControlAsync(
-    IEnumerable<CollectionObjectName> relationshipRefList,
-    IEnumerable<CollectionObjectName> featureCheckRefList,
+    IEnumerable<CollectionItemName> relationshipRefList,
+    IEnumerable<CollectionItemName> featureCheckRefList,
     IEnumerable<CollectionObjectName> datumRefList,
     bool lockOutTrapping = false,
     CancellationToken cancellationToken = default);

@@ -366,7 +366,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships_empty_to_clear_all` | `Iterable[CollectionObjectName]` | `Relationships (Empty to clear all)` | Required |
+| `relationships_empty_to_clear_all` | `Iterable[CollectionItemName]` | `Relationships (Empty to clear all)` | Required |
 | `high_light_relationships` | `bool` | `HighLight Relationships?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -376,7 +376,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def highlight_relationships(
     self,
-    relationships_empty_to_clear_all: Iterable[CollectionObjectName],
+    relationships_empty_to_clear_all: Iterable[CollectionItemName],
     *,
     high_light_relationships: bool = False,
 ) -> None: ...
@@ -1084,7 +1084,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `callout_view_to_show` | `CollectionObjectName` | `Callout View To Show` | Required |
+| `callout_view_to_show` | `CollectionItemName` | `Callout View To Show` | Required |
 | `show_callout_view` | `bool` | `Show Callout View?` | true |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1094,7 +1094,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def show_hide_callout_view(
     self,
-    callout_view_to_show: CollectionObjectName,
+    callout_view_to_show: CollectionItemName,
     *,
     show_callout_view: bool = True,
 ) -> None: ...
@@ -1117,7 +1117,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimension_name` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimension_name` | `CollectionItemName` | `Dimension Name` | Required |
 | `show_dimension` | `bool` | `Show Dimension?` | true |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1127,7 +1127,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def show_hide_dimension(
     self,
-    dimension_name: CollectionObjectName,
+    dimension_name: CollectionItemName,
     *,
     show_dimension: bool = True,
 ) -> None: ...
@@ -1220,7 +1220,7 @@ This coroutine is part of the next Python package contract.
 | `points` | `Iterable[PointName]` | `Points` | Required |
 | `objects` | `Iterable[CollectionObjectName]` | `Objects` | Required |
 | `instruments` | `Iterable[CollectionInstrumentId]` | `Instruments` | Required |
-| `feature_checks` | `Iterable[CollectionObjectName]` | `Feature Checks` | Required |
+| `feature_checks` | `Iterable[CollectionItemName]` | `Feature Checks` | Required |
 | `datums` | `Iterable[CollectionObjectName]` | `Datums` | Required |
 | `collections` | `Iterable[str]` | `Collections` | Required |
 
@@ -1236,7 +1236,7 @@ async def show_items_in_tree(
     points: Iterable[PointName],
     objects: Iterable[CollectionObjectName],
     instruments: Iterable[CollectionInstrumentId],
-    feature_checks: Iterable[CollectionObjectName],
+    feature_checks: Iterable[CollectionItemName],
     datums: Iterable[CollectionObjectName],
     collections: Iterable[str],
 ) -> None: ...
@@ -1359,7 +1359,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `feature_check_name_list` | `Iterable[CollectionObjectName]` | `Feature Check Name List` | Required |
+| `feature_check_name_list` | `Iterable[CollectionItemName]` | `Feature Check Name List` | Required |
 | `show` | `bool` | `Show?` | false |
 | `highlight` | `bool` | `Highlight?` | false |
 | `set_inspection_view` | `bool` | `Set Inspection View?` | false |
@@ -1371,7 +1371,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def show_hide_annotations_for_feature_checks(
     self,
-    feature_check_name_list: Iterable[CollectionObjectName],
+    feature_check_name_list: Iterable[CollectionItemName],
     *,
     show: bool = False,
     highlight: bool = False,

@@ -751,8 +751,8 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 13 | `k0008_operator_identifier` | `int32` | `K0008: Operator Identifier` | -1 |
 | Request | 14 | `k0010_machine_identifier` | `int32` | `K0010: Machine Identifier` | -1 |
 | Request | 15 | `k0012_gage_identifier` | `int32` | `K0012: Gage Identifier` | -1 |
-| Request | 16 | `relationship_list` | `repeated CollectionObjectName` | `Relationship List` | Required |
-| Request | 17 | `feature_check_list` | `repeated CollectionObjectName` | `Feature Check List` | Required |
+| Request | 16 | `relationship_list` | `repeated CollectionItemName` | `Relationship List` | Required |
+| Request | 17 | `feature_check_list` | `repeated CollectionItemName` | `Feature Check List` | Required |
 | Request | 18 | `vector_group_list` | `repeated CollectionObjectName` | `Vector Group List` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -775,8 +775,8 @@ message ExportQdasCharacteristicsRequest {
   optional int32 k0008_operator_identifier = 13;
   optional int32 k0010_machine_identifier = 14;
   optional int32 k0012_gage_identifier = 15;
-  repeated CollectionObjectName relationship_list = 16;
-  repeated CollectionObjectName feature_check_list = 17;
+  repeated CollectionItemName relationship_list = 16;
+  repeated CollectionItemName feature_check_list = 17;
   repeated CollectionObjectName vector_group_list = 18;
 }
 
@@ -1025,7 +1025,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 2 | `vector_groups_to_export` | `repeated CollectionVectorGroupName` | `Vector group(s) to export` | Required |
 | Request | 3 | `overwrite_existing_file_false_append` | `bool` | `Overwrite existing file? (FALSE = Append)` | true |
 | Request | 4 | `use_full_precision_scientific_notation` | `bool` | `Use Full Precision (Scientific Notation)?` | false |
-| Request | 5 | `vector_name_format` | `Vector` | `Vector Name Format` | Required |
+| Request | 5 | `vector_name_format` | `ExportVectorNameFormat` | `Vector Name Format` | Required |
 | Request | 6 | `include_vector_length` | `bool` | `Include Vector Length?` | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1037,7 +1037,7 @@ message ExportVectorContainerToAsciiFileRequest {
   repeated CollectionVectorGroupName vector_groups_to_export = 2;
   optional bool overwrite_existing_file_false_append = 3;
   optional bool use_full_precision_scientific_notation = 4;
-  optional Vector vector_name_format = 5;
+  optional ExportVectorNameFormat vector_name_format = 5;
   optional bool include_vector_length = 6;
 }
 
@@ -2583,8 +2583,8 @@ intentionally absent. The server validates required presence before enqueue.
 | Request | 12 | `k0008_operator_identifier` | `int32` | `K0008: Operator Identifier` | -1 |
 | Request | 13 | `k0010_machine_identifier` | `int32` | `K0010: Machine Identifier` | -1 |
 | Request | 14 | `k0012_gage_identifier` | `int32` | `K0012: Gage Identifier` | -1 |
-| Request | 15 | `relationship_list` | `repeated CollectionObjectName` | `Relationship List` | Required |
-| Request | 16 | `feature_check_list` | `repeated CollectionObjectName` | `Feature Check List` | Required |
+| Request | 15 | `relationship_list` | `repeated CollectionItemName` | `Relationship List` | Required |
+| Request | 16 | `feature_check_list` | `repeated CollectionItemName` | `Feature Check List` | Required |
 | Request | 17 | `vector_group_list` | `repeated CollectionObjectName` | `Vector Group List` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2606,8 +2606,8 @@ message PrepareQdasDataListRequest {
   optional int32 k0008_operator_identifier = 12;
   optional int32 k0010_machine_identifier = 13;
   optional int32 k0012_gage_identifier = 14;
-  repeated CollectionObjectName relationship_list = 15;
-  repeated CollectionObjectName feature_check_list = 16;
+  repeated CollectionItemName relationship_list = 15;
+  repeated CollectionItemName feature_check_list = 16;
   repeated CollectionObjectName vector_group_list = 17;
 }
 
@@ -3010,7 +3010,7 @@ intentionally absent. The server validates required presence before enqueue.
 | MP Command | [Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) |
 | Service | `briosa.FileOperations` |
 | RPC | `TerminateAllRunningMPs` |
-| Operation ID | `file_operations.terminate_all_running_m_ps` |
+| Operation ID | `file_operations.terminate_all_running_mps` |
 | Route | `/briosa.FileOperations/TerminateAllRunningMPs` |
 | Validation | Portable contract review |
 | Automatic Replay | Prohibited; no operation-specific replay proof is committed |

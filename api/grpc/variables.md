@@ -362,7 +362,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Result | 1 | `double_list_variable` | `double` | `Double List Variable` | — |
+| Result | 1 | `double_list_variable` | `repeated double` | `Double List Variable` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -373,7 +373,7 @@ message GetNamedDoubleListVariableRequest {
 }
 
 message GetNamedDoubleListVariableResult {
-  optional double double_list_variable = 1;
+  repeated double double_list_variable = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -512,7 +512,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Result | 1 | `value` | `repeated CollectionObjectName` | `Value` | — |
+| Result | 1 | `value` | `repeated CollectionItemName` | `Value` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -523,7 +523,7 @@ message GetRelationshipRefListVariableRequest {
 }
 
 message GetRelationshipRefListVariableResult {
-  repeated CollectionObjectName value = 1;
+  repeated CollectionItemName value = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -549,7 +549,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Result | 1 | `value` | `repeated CollectionObjectName` | `Value` | — |
+| Result | 1 | `value` | `repeated CollectionItemName` | `Value` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -560,7 +560,7 @@ message GetReportItemsReferenceListVariableRequest {
 }
 
 message GetReportItemsReferenceListVariableResult {
-  repeated CollectionObjectName value = 1;
+  repeated CollectionItemName value = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -993,7 +993,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Request | 2 | `double_list_variable` | `double` | `Double List Variable` | Required |
+| Request | 2 | `double_list_variable` | `repeated double` | `Double List Variable` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1001,7 +1001,7 @@ rpc SetNamedDoubleListVariable(SetNamedDoubleListVariableRequest) returns (SetNa
 
 message SetNamedDoubleListVariableRequest {
   optional string name = 1;
-  optional double double_list_variable = 2;
+  repeated double double_list_variable = 2;
 }
 
 message SetNamedDoubleListVariableResult {
@@ -1104,7 +1104,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Request | 2 | `value` | `repeated CollectionObjectName` | `Value` | Required |
+| Request | 2 | `value` | `repeated CollectionItemName` | `Value` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1112,7 +1112,7 @@ rpc SetRelationshipRefListVariable(SetRelationshipRefListVariableRequest) return
 
 message SetRelationshipRefListVariableRequest {
   optional string name = 1;
-  repeated CollectionObjectName value = 2;
+  repeated CollectionItemName value = 2;
 }
 
 message SetRelationshipRefListVariableResult {
@@ -1141,7 +1141,7 @@ intentionally absent. The server validates required presence before enqueue.
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name` | `string` | `Name` | Empty |
-| Request | 2 | `value` | `repeated CollectionObjectName` | `Value` | Required |
+| Request | 2 | `value` | `repeated CollectionItemName` | `Value` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
@@ -1149,7 +1149,7 @@ rpc SetReportItemsReferenceListVariable(SetReportItemsReferenceListVariableReque
 
 message SetReportItemsReferenceListVariableRequest {
   optional string name = 1;
-  repeated CollectionObjectName value = 2;
+  repeated CollectionItemName value = 2;
 }
 
 message SetReportItemsReferenceListVariableResult {

@@ -69,7 +69,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `event_list` | `repeated CollectionObjectName` | `Event List` | Required |
+| Request | 1 | `event_list` | `repeated CollectionItemName` | `Event List` | Required |
 | Request | 2 | `file_path` | `FileReference` | `File Path` | Required |
 | Request | 3 | `decimal_precision` | `int32` | `Decimal Precision` | 6 |
 | Request | 4 | `overwrite_existing_file` | `bool` | `Overwrite existing file?` | false |
@@ -79,7 +79,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc ExportEventRefList(ExportEventRefListRequest) returns (ExportEventRefListResult);
 
 message ExportEventRefListRequest {
-  repeated CollectionObjectName event_list = 1;
+  repeated CollectionItemName event_list = 1;
   optional FileReference file_path = 2;
   optional int32 decimal_precision = 3;
   optional bool overwrite_existing_file = 4;
@@ -110,21 +110,21 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `event_list` | `repeated CollectionObjectName` | `Event List` | Required |
+| Request | 1 | `event_list` | `repeated CollectionItemName` | `Event List` | Required |
 | Request | 2 | `event_index` | `int32` | `Event Index` | 0 |
-| Result | 1 | `resultant_item` | `CollectionObjectName` | `Resultant Item` | — |
+| Result | 1 | `resultant_item` | `CollectionItemName` | `Resultant Item` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc GetIthEventFromEventRefList(GetIthEventFromEventRefListRequest) returns (GetIthEventFromEventRefListResult);
 
 message GetIthEventFromEventRefListRequest {
-  repeated CollectionObjectName event_list = 1;
+  repeated CollectionItemName event_list = 1;
   optional int32 event_index = 2;
 }
 
 message GetIthEventFromEventRefListResult {
-  optional CollectionObjectName resultant_item = 1;
+  optional CollectionItemName resultant_item = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
@@ -149,7 +149,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `event_list` | `repeated CollectionObjectName` | `Event List` | Required |
+| Request | 1 | `event_list` | `repeated CollectionItemName` | `Event List` | Required |
 | Result | 1 | `total_count` | `int32` | `Total Count` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -157,7 +157,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetNumberOfEventsInEventRefList(GetNumberOfEventsInEventRefListRequest) returns (GetNumberOfEventsInEventRefListResult);
 
 message GetNumberOfEventsInEventRefListRequest {
-  repeated CollectionObjectName event_list = 1;
+  repeated CollectionItemName event_list = 1;
 }
 
 message GetNumberOfEventsInEventRefListResult {

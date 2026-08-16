@@ -156,7 +156,7 @@ This coroutine is part of the next Python package contract.
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
 | `transform_in_working` | `Transform` | `Transform in Working` |
-| `optimum_transform` | `Transform` | `Optimum Transform` |
+| `optimum_transform` | `WorldTransform` | `Optimum Transform` |
 | `rms_deviation` | `float` | `RMS Deviation` |
 | `maximum_absolute_deviation` | `float` | `Maximum Absolute Deviation` |
 | `number_of_unknowns` | `int` | `Number of Unknowns` |
@@ -167,7 +167,7 @@ This coroutine is part of the next Python package contract.
 @dataclass(frozen=True, slots=True, kw_only=True)
 class BestFitTransformationGroupToGroupResult:
     transform_in_working: Transform
-    optimum_transform: Transform
+    optimum_transform: WorldTransform
     rms_deviation: float
     maximum_absolute_deviation: float
     number_of_unknowns: int
@@ -493,14 +493,14 @@ class GetBSplinePropertiesResult:
     range_max: float
     length: float
 
-async def get_b_spline_properties(
+async def get_bspline_properties(
     self,
     b_spline_name: CollectionObjectName,
 ) -> GetBSplinePropertiesResult: ...
 ```
 
 ```python
-await briosa.get_b_spline_properties(b_spline_name=...)
+await briosa.get_bspline_properties(b_spline_name=...)
 ```
 
 Returns the 6 MP outputs in the named `GetBSplinePropertiesResult` value. Multiple outputs use a frozen, slotted,
@@ -1382,7 +1382,7 @@ This coroutine is part of the next Python package contract.
 | `uy` | `float` | `Uy` |
 | `uz` | `float` | `Uz` |
 | `umag` | `float` | `Umag` |
-| `position_tolerance` | `Vector` | `Position Tolerance` |
+| `position_tolerance` | `ToleranceVectorOptions` | `Position Tolerance` |
 | `component_weights` | `Vector` | `Component Weights` |
 
 ```python
@@ -1394,7 +1394,7 @@ class GetPointPropertiesResult:
     uy: float
     uz: float
     umag: float
-    position_tolerance: Vector
+    position_tolerance: ToleranceVectorOptions
     component_weights: Vector
 
 async def get_point_properties(
@@ -1531,7 +1531,7 @@ This coroutine is part of the next Python package contract.
 | `low_z_tolerance` | `float` | `Low Z Tolerance` |
 | `use_low_mag_tolerance` | `bool` | `Use Low Mag Tolerance?` |
 | `low_mag_tolerance` | `float` | `Low Mag Tolerance` |
-| `vector_tolerance` | `Vector` | `Vector Tolerance` |
+| `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` |
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
@@ -1552,7 +1552,7 @@ class GetPointToleranceResult:
     low_z_tolerance: float
     use_low_mag_tolerance: bool
     low_mag_tolerance: float
-    vector_tolerance: Vector
+    vector_tolerance: ToleranceVectorOptions
 
 async def get_point_tolerance(
     self,
@@ -1851,14 +1851,14 @@ This coroutine is part of the next Python package contract.
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
-| `optimum_transform` | `Transform` | `Optimum Transform` |
+| `optimum_transform` | `WorldTransform` | `Optimum Transform` |
 | `rms_deviation` | `float` | `RMS Deviation` |
 | `maximum_absolute_deviation` | `float` | `Maximum Absolute Deviation` |
 
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class GroupToSurfaceFitResult:
-    optimum_transform: Transform
+    optimum_transform: WorldTransform
     rms_deviation: float
     maximum_absolute_deviation: float
 
@@ -3061,14 +3061,14 @@ This coroutine is part of the next Python package contract.
 | — | None | — |
 
 ```python
-async def reverse_b_splines(
+async def reverse_bsplines(
     self,
     b_spline_list: Iterable[CollectionObjectName],
 ) -> None: ...
 ```
 
 ```python
-await briosa.reverse_b_splines(b_spline_list=...)
+await briosa.reverse_bsplines(b_spline_list=...)
 ```
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
@@ -3275,7 +3275,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `colorization_options` | `Color` | `Colorization Options` | Red |
+| `colorization_options` | `ColorizationOptions` | `Colorization Options` | Red |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -3285,7 +3285,7 @@ This coroutine is part of the next Python package contract.
 async def set_default_colorization_options(
     self,
     *,
-    colorization_options: Color = Color.DEFAULT,
+    colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
 ) -> None: ...
 ```
 
@@ -3346,7 +3346,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `geometry_type` | `GeometryType` | `Geometry Type` | Required |
-| `relationship_ref_list` | `Iterable[CollectionObjectName]` | `Relationship Ref List` | Required |
+| `relationship_ref_list` | `Iterable[CollectionItemName]` | `Relationship Ref List` | Required |
 | `fit_profile_name` | `str` | `Fit Profile Name` | Empty |
 | `apply_cardinal_point_settings` | `bool` | `Apply Cardinal Point Settings` | false |
 
@@ -3358,7 +3358,7 @@ This coroutine is part of the next Python package contract.
 async def set_geometry_relationship_fit_profile(
     self,
     geometry_type: GeometryType,
-    relationship_ref_list: Iterable[CollectionObjectName],
+    relationship_ref_list: Iterable[CollectionItemName],
     *,
     fit_profile_name: str = '',
     apply_cardinal_point_settings: bool = False,
@@ -3491,7 +3491,7 @@ This coroutine is part of the next Python package contract.
 | `point_name_list` | `Iterable[PointName]` | `Point Name List` | Required |
 | `planar_offset` | `float` | `Planar Offset` | 0.000000 |
 | `radial_offset` | `float` | `Radial Offset` | 0.000000 |
-| `position_tolerance` | `Vector` | `Position Tolerance` | Required |
+| `position_tolerance` | `ToleranceVectorOptions` | `Position Tolerance` | Required |
 | `component_weights` | `Vector` | `Component Weights` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -3505,7 +3505,7 @@ async def set_point_properties(
     *,
     planar_offset: float = 0.000000,
     radial_offset: float = 0.000000,
-    position_tolerance: Vector,
+    position_tolerance: ToleranceVectorOptions,
     component_weights: Vector,
 ) -> None: ...
 ```
@@ -3768,7 +3768,7 @@ This coroutine is part of the next Python package contract.
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `objects_to_transform` | `Iterable[CollectionObjectName]` | `Objects to Transform` | Required |
-| `delta_transform` | `Transform` | `Delta Transform` | Required |
+| `delta_transform` | `WorldTransform` | `Delta Transform` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -3778,7 +3778,7 @@ This coroutine is part of the next Python package contract.
 async def transform_objects_by_delta_world_transform_operator(
     self,
     objects_to_transform: Iterable[CollectionObjectName],
-    delta_transform: Transform,
+    delta_transform: WorldTransform,
 ) -> None: ...
 ```
 

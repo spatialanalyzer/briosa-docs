@@ -294,10 +294,10 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
-| `DoubleListVariable` | `double` | `Double List Variable` |
+| `DoubleListVariable` | `double[]` | `Double List Variable` |
 
 ```csharp
-public Task<double> GetNamedDoubleListVariableAsync(
+public Task<double[]> GetNamedDoubleListVariableAsync(
     string name = "",
     CancellationToken cancellationToken = default);
 ```
@@ -306,7 +306,7 @@ public Task<double> GetNamedDoubleListVariableAsync(
 await briosa.GetNamedDoubleListVariableAsync();
 ```
 
-Returns the MP output `Double List Variable` directly as `double`. Caller cancellation does not prove that
+Returns the MP output `Double List Variable` directly as `double[]`. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
 ## Get Named Double List Variable Min/Max
@@ -418,7 +418,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
-| `Value` | `CollectionObjectName[]` | `Value` |
+| `Value` | `CollectionItemName[]` | `Value` |
 
 ```csharp
 public Task<CollectionObjectName[]> GetRelationshipRefListVariableAsync(
@@ -430,7 +430,7 @@ public Task<CollectionObjectName[]> GetRelationshipRefListVariableAsync(
 await briosa.GetRelationshipRefListVariableAsync();
 ```
 
-Returns the MP output `Value` directly as `CollectionObjectName[]`. Caller cancellation does not prove that
+Returns the MP output `Value` directly as `CollectionItemName[]`. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
 ## Get Report Items Reference List Variable
@@ -447,7 +447,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
-| `Value` | `CollectionObjectName[]` | `Value` |
+| `Value` | `CollectionItemName[]` | `Value` |
 
 ```csharp
 public Task<CollectionObjectName[]> GetReportItemsReferenceListVariableAsync(
@@ -459,7 +459,7 @@ public Task<CollectionObjectName[]> GetReportItemsReferenceListVariableAsync(
 await briosa.GetReportItemsReferenceListVariableAsync();
 ```
 
-Returns the MP output `Value` directly as `CollectionObjectName[]`. Caller cancellation does not prove that
+Returns the MP output `Value` directly as `CollectionItemName[]`. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
 ## Get String Ref List Variable
@@ -804,7 +804,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `doubleListVariable` | `double` | `Double List Variable` | Required |
+| `doubleListVariable` | `IEnumerable<double>` | `Double List Variable` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -813,7 +813,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetNamedDoubleListVariableAsync(
     string name,
-    double doubleListVariable,
+    IEnumerable<double> doubleListVariable,
     CancellationToken cancellationToken = default);
 ```
 
@@ -897,7 +897,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `value` | `IEnumerable<CollectionObjectName>` | `Value` | Required |
+| `value` | `IEnumerable<CollectionItemName>` | `Value` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -906,7 +906,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetRelationshipRefListVariableAsync(
     string name,
-    IEnumerable<CollectionObjectName> value,
+    IEnumerable<CollectionItemName> value,
     CancellationToken cancellationToken = default);
 ```
 
@@ -928,7 +928,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `value` | `IEnumerable<CollectionObjectName>` | `Value` | Required |
+| `value` | `IEnumerable<CollectionItemName>` | `Value` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -937,7 +937,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 ```csharp
 public Task SetReportItemsReferenceListVariableAsync(
     string name,
-    IEnumerable<CollectionObjectName> value,
+    IEnumerable<CollectionItemName> value,
     CancellationToken cancellationToken = default);
 ```
 

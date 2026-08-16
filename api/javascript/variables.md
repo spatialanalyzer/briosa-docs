@@ -347,7 +347,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
-| `doubleListVariable` | `number` | `Double List Variable` |
+| `doubleListVariable` | `readonly number[]` | `Double List Variable` |
 
 ```ts
 export interface GetNamedDoubleListVariableInput {
@@ -358,14 +358,14 @@ function getNamedDoubleListVariable(
   briosa: BriosaClient,
   input?: GetNamedDoubleListVariableInput,
   options?: BriosaCallOptions,
-): Promise<number>;
+): Promise<readonly number[]>;
 ```
 
 ```ts
 await getNamedDoubleListVariable(briosa);
 ```
 
-Returns the MP output `Double List Variable` directly as `number`. `BriosaCallOptions` remains separate from MP input and
+Returns the MP output `Double List Variable` directly as `readonly number[]`. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
 ## Get Named Double List Variable Min/Max
@@ -494,7 +494,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
-| `value` | `readonly CollectionObjectName[]` | `Value` |
+| `value` | `readonly CollectionItemName[]` | `Value` |
 
 ```ts
 export interface GetRelationshipRefListVariableInput {
@@ -512,7 +512,7 @@ function getRelationshipRefListVariable(
 await getRelationshipRefListVariable(briosa);
 ```
 
-Returns the MP output `Value` directly as `readonly CollectionObjectName[]`. `BriosaCallOptions` remains separate from MP input and
+Returns the MP output `Value` directly as `readonly CollectionItemName[]`. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
 ## Get Report Items Reference List Variable
@@ -529,7 +529,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
-| `value` | `readonly CollectionObjectName[]` | `Value` |
+| `value` | `readonly CollectionItemName[]` | `Value` |
 
 ```ts
 export interface GetReportItemsReferenceListVariableInput {
@@ -547,7 +547,7 @@ function getReportItemsReferenceListVariable(
 await getReportItemsReferenceListVariable(briosa);
 ```
 
-Returns the MP output `Value` directly as `readonly CollectionObjectName[]`. `BriosaCallOptions` remains separate from MP input and
+Returns the MP output `Value` directly as `readonly CollectionItemName[]`. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
 ## Get String Ref List Variable
@@ -958,7 +958,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `doubleListVariable` | `number` | `Double List Variable` | Required |
+| `doubleListVariable` | `Iterable<number>` | `Double List Variable` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -967,7 +967,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetNamedDoubleListVariableInput {
   readonly name?: string;
-  readonly doubleListVariable: number;
+  readonly doubleListVariable: Iterable<number>;
 }
 
 function setNamedDoubleListVariable(
@@ -1069,7 +1069,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `value` | `Iterable<CollectionObjectName>` | `Value` | Required |
+| `value` | `Iterable<CollectionItemName>` | `Value` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1078,7 +1078,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetRelationshipRefListVariableInput {
   readonly name?: string;
-  readonly value: Iterable<CollectionObjectName>;
+  readonly value: Iterable<CollectionItemName>;
 }
 
 function setRelationshipRefListVariable(
@@ -1106,7 +1106,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
 | `name` | `string` | `Name` | Empty |
-| `value` | `Iterable<CollectionObjectName>` | `Value` | Required |
+| `value` | `Iterable<CollectionItemName>` | `Value` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1115,7 +1115,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 ```ts
 export interface SetReportItemsReferenceListVariableInput {
   readonly name?: string;
-  readonly value: Iterable<CollectionObjectName>;
+  readonly value: Iterable<CollectionItemName>;
 }
 
 function setReportItemsReferenceListVariable(

@@ -103,7 +103,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimension_name` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimension_name` | `CollectionItemName` | `Dimension Name` | Required |
 | `enable_nominal` | `bool` | `Enable Nominal` | false |
 | `enable_high` | `bool` | `Enable High` | false |
 | `enable_low` | `bool` | `Enable Low` | false |
@@ -118,7 +118,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_dimension_tolerance(
     self,
-    dimension_name: CollectionObjectName,
+    dimension_name: CollectionItemName,
     *,
     enable_nominal: bool = False,
     enable_high: bool = False,

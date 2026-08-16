@@ -27,7 +27,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `charts` | `IEnumerable<CollectionObjectName>` | `Chart(s)` | Required |
+| `charts` | `IEnumerable<CollectionItemName>` | `Chart(s)` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -36,7 +36,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddChartsToReportBarAsync(
-    IEnumerable<CollectionObjectName> charts,
+    IEnumerable<CollectionItemName> charts,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -91,7 +91,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `customTablesToReport` | `IEnumerable<CollectionObjectName>` | `Custom Table(s) To Report` | Required |
+| `customTablesToReport` | `IEnumerable<CollectionItemName>` | `Custom Table(s) To Report` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -100,7 +100,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddCustomTablesToReportBarAsync(
-    IEnumerable<CollectionObjectName> customTablesToReport,
+    IEnumerable<CollectionItemName> customTablesToReport,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -153,7 +153,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `events` | `IEnumerable<CollectionObjectName>` | `Event(s)` | Required |
+| `events` | `IEnumerable<CollectionItemName>` | `Event(s)` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -162,7 +162,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddEventsToReportBarAsync(
-    IEnumerable<CollectionObjectName> events,
+    IEnumerable<CollectionItemName> events,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -184,7 +184,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `featureChecks` | `IEnumerable<CollectionObjectName>` | `Feature Check(s)` | Required |
+| `featureChecks` | `IEnumerable<CollectionItemName>` | `Feature Check(s)` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -193,7 +193,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddFeatureChecksToReportBarAsync(
-    IEnumerable<CollectionObjectName> featureChecks,
+    IEnumerable<CollectionItemName> featureChecks,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -285,7 +285,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictures` | `IEnumerable<CollectionObjectName>` | `Picture(s)` | Required |
+| `pictures` | `IEnumerable<CollectionItemName>` | `Picture(s)` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -294,7 +294,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddPicturesToReportBarAsync(
-    IEnumerable<CollectionObjectName> pictures,
+    IEnumerable<CollectionItemName> pictures,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -316,7 +316,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `IEnumerable<CollectionObjectName>` | `Relationship(s)` | Required |
+| `relationships` | `IEnumerable<CollectionItemName>` | `Relationship(s)` | Required |
 | `clearExisting` | `bool` | `Clear Existing?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -325,7 +325,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task AddRelationshipsToReportBarAsync(
-    IEnumerable<CollectionObjectName> relationships,
+    IEnumerable<CollectionItemName> relationships,
     bool clearExisting = false,
     CancellationToken cancellationToken = default);
 ```
@@ -382,7 +382,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -390,7 +390,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task CaptureCurrentViewAsync(
-    CollectionObjectName pictureName,
+    CollectionItemName pictureName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -525,7 +525,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `saReportsToCombine` | `IEnumerable<CollectionObjectName>` | `SA Reports to Combine` | Required |
+| `saReportsToCombine` | `IEnumerable<CollectionItemName>` | `SA Reports to Combine` | Required |
 | `outputSaReportName` | `CollectionObjectName` | `Output SA Report Name` | Required |
 | `showReport` | `bool` | `Show Report?` | false |
 
@@ -535,7 +535,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task CombineSaReportsAsync(
-    IEnumerable<CollectionObjectName> saReportsToCombine,
+    IEnumerable<CollectionItemName> saReportsToCombine,
     CollectionObjectName outputSaReportName,
     bool showReport = false,
     CancellationToken cancellationToken = default);
@@ -603,8 +603,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 | `title` | `IEnumerable<string>` | `Title` | Required |
 | `graphicalViewOptions` | `ReportViewOptions` | `Graphical View Options` | Required |
 | `itemsToReport` | `IEnumerable<CollectionObjectName>` | `Items To Report` | Required |
-| `relationshipsToReport` | `IEnumerable<CollectionObjectName>` | `Relationships To Report` | Required |
-| `eventsToReport` | `IEnumerable<CollectionObjectName>` | `Events To Report` | Required |
+| `relationshipsToReport` | `IEnumerable<CollectionItemName>` | `Relationships To Report` | Required |
+| `eventsToReport` | `IEnumerable<CollectionItemName>` | `Events To Report` | Required |
 | `reportOutputOptions` | `ReportOutputOptions` | `Report Output Options` | ::My Report |
 | `reportPageSettingsSaReportOnly` | `ReportPageSettings` | `Report Page Settings ( SA Report only )` | Portrait |
 | `generateNow` | `bool` | `Generate Now?` | false |
@@ -620,8 +620,8 @@ public Task DefineReportTemplateAsync(
     IEnumerable<string> title,
     ReportViewOptions graphicalViewOptions,
     IEnumerable<CollectionObjectName> itemsToReport,
-    IEnumerable<CollectionObjectName> relationshipsToReport,
-    IEnumerable<CollectionObjectName> eventsToReport,
+    IEnumerable<CollectionItemName> relationshipsToReport,
+    IEnumerable<CollectionItemName> eventsToReport,
     ReportOutputOptions reportOutputOptions,
     ReportPageSettings reportPageSettingsSaReportOnly,
     bool generateNow = false,
@@ -704,7 +704,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -712,7 +712,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task DeletePictureAsync(
-    CollectionObjectName pictureName,
+    CollectionItemName pictureName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1140,7 +1140,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 | --- | --- | --- | --- |
 | `asciiFilePath` | `FileReference` | `ASCII File Path` | Required |
 | `chartTitleOverride` | `string` | `Chart Title Override` | Empty |
-| `outputPictureName` | `CollectionObjectName` | `Output Picture Name` | Required |
+| `outputPictureName` | `CollectionItemName` | `Output Picture Name` | Required |
 | `showChartDialog` | `bool` | `Show Chart Dialog?` | false |
 | `plotAdditionalXyValue` | `bool` | `Plot Additional XY Value?` | false |
 | `xValue` | `double` | `X Value` | 0.000000 |
@@ -1154,7 +1154,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 public Task<bool> MakeUtilityChartAsync(
     FileReference asciiFilePath,
     string chartTitleOverride,
-    CollectionObjectName outputPictureName,
+    CollectionItemName outputPictureName,
     bool showChartDialog = false,
     bool plotAdditionalXyValue = false,
     double xValue = 0.000000,
@@ -1414,7 +1414,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `reportName` | `CollectionObjectName` | `Report Name` | Required |
+| `reportName` | `CollectionItemName` | `Report Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1422,7 +1422,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task RefreshCalloutViewsInSaReportAsync(
-    CollectionObjectName reportName,
+    CollectionItemName reportName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1500,8 +1500,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `originalPictureName` | `CollectionObjectName` | `Original Picture Name` | Required |
-| `newPictureName` | `CollectionObjectName` | `New Picture Name` | Required |
+| `originalPictureName` | `CollectionItemName` | `Original Picture Name` | Required |
+| `newPictureName` | `CollectionItemName` | `New Picture Name` | Required |
 | `overwriteIfExists` | `bool` | `Overwrite if exists?` | false |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1510,8 +1510,8 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task RenamePictureAsync(
-    CollectionObjectName originalPictureName,
-    CollectionObjectName newPictureName,
+    CollectionItemName originalPictureName,
+    CollectionItemName newPictureName,
     bool overwriteIfExists = false,
     CancellationToken cancellationToken = default);
 ```
@@ -2083,7 +2083,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictureName` | `CollectionObjectName` | `Picture Name` | Required |
+| `pictureName` | `CollectionItemName` | `Picture Name` | Required |
 | `scale` | `double` | `Scale` | 100.000000 |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2092,7 +2092,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetScaleForPictureAsync(
-    CollectionObjectName pictureName,
+    CollectionItemName pictureName,
     double scale = 100.000000,
     CancellationToken cancellationToken = default);
 ```

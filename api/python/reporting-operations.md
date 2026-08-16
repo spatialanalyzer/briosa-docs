@@ -26,7 +26,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `charts` | `Iterable[CollectionObjectName]` | `Chart(s)` | Required |
+| `charts` | `Iterable[CollectionItemName]` | `Chart(s)` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -36,7 +36,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_charts_to_report_bar(
     self,
-    charts: Iterable[CollectionObjectName],
+    charts: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -94,7 +94,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `custom_tables_to_report` | `Iterable[CollectionObjectName]` | `Custom Table(s) To Report` | Required |
+| `custom_tables_to_report` | `Iterable[CollectionItemName]` | `Custom Table(s) To Report` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -104,7 +104,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_custom_tables_to_report_bar(
     self,
-    custom_tables_to_report: Iterable[CollectionObjectName],
+    custom_tables_to_report: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -160,7 +160,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `events` | `Iterable[CollectionObjectName]` | `Event(s)` | Required |
+| `events` | `Iterable[CollectionItemName]` | `Event(s)` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -170,7 +170,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_events_to_report_bar(
     self,
-    events: Iterable[CollectionObjectName],
+    events: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -193,7 +193,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `feature_checks` | `Iterable[CollectionObjectName]` | `Feature Check(s)` | Required |
+| `feature_checks` | `Iterable[CollectionItemName]` | `Feature Check(s)` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -203,7 +203,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_feature_checks_to_report_bar(
     self,
-    feature_checks: Iterable[CollectionObjectName],
+    feature_checks: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -300,7 +300,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `pictures` | `Iterable[CollectionObjectName]` | `Picture(s)` | Required |
+| `pictures` | `Iterable[CollectionItemName]` | `Picture(s)` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -310,7 +310,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_pictures_to_report_bar(
     self,
-    pictures: Iterable[CollectionObjectName],
+    pictures: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -333,7 +333,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationships` | `Iterable[CollectionObjectName]` | `Relationship(s)` | Required |
+| `relationships` | `Iterable[CollectionItemName]` | `Relationship(s)` | Required |
 | `clear_existing` | `bool` | `Clear Existing?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -343,7 +343,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def add_relationships_to_report_bar(
     self,
-    relationships: Iterable[CollectionObjectName],
+    relationships: Iterable[CollectionItemName],
     *,
     clear_existing: bool = False,
 ) -> None: ...
@@ -403,7 +403,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -412,7 +412,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def capture_current_view(
     self,
-    picture_name: CollectionObjectName,
+    picture_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -547,7 +547,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `sa_reports_to_combine` | `Iterable[CollectionObjectName]` | `SA Reports to Combine` | Required |
+| `sa_reports_to_combine` | `Iterable[CollectionItemName]` | `SA Reports to Combine` | Required |
 | `output_sa_report_name` | `CollectionObjectName` | `Output SA Report Name` | Required |
 | `show_report` | `bool` | `Show Report?` | false |
 
@@ -558,7 +558,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def combine_sa_reports(
     self,
-    sa_reports_to_combine: Iterable[CollectionObjectName],
+    sa_reports_to_combine: Iterable[CollectionItemName],
     output_sa_report_name: CollectionObjectName,
     *,
     show_report: bool = False,
@@ -629,8 +629,8 @@ This coroutine is part of the next Python package contract.
 | `title` | `Iterable[str]` | `Title` | Required |
 | `graphical_view_options` | `ReportViewOptions` | `Graphical View Options` | Required |
 | `items_to_report` | `Iterable[CollectionObjectName]` | `Items To Report` | Required |
-| `relationships_to_report` | `Iterable[CollectionObjectName]` | `Relationships To Report` | Required |
-| `events_to_report` | `Iterable[CollectionObjectName]` | `Events To Report` | Required |
+| `relationships_to_report` | `Iterable[CollectionItemName]` | `Relationships To Report` | Required |
+| `events_to_report` | `Iterable[CollectionItemName]` | `Events To Report` | Required |
 | `report_output_options` | `ReportOutputOptions` | `Report Output Options` | ::My Report |
 | `report_page_settings_sa_report_only` | `ReportPageSettings` | `Report Page Settings ( SA Report only )` | Portrait |
 | `generate_now` | `bool` | `Generate Now?` | false |
@@ -647,8 +647,8 @@ async def define_report_template(
     title: Iterable[str],
     graphical_view_options: ReportViewOptions,
     items_to_report: Iterable[CollectionObjectName],
-    relationships_to_report: Iterable[CollectionObjectName],
-    events_to_report: Iterable[CollectionObjectName],
+    relationships_to_report: Iterable[CollectionItemName],
+    events_to_report: Iterable[CollectionItemName],
     *,
     report_output_options: ReportOutputOptions = ReportOutputOptions.DEFAULT,
     report_page_settings_sa_report_only: ReportPageSettings = ReportPageSettings.DEFAULT,
@@ -734,7 +734,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -743,7 +743,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def delete_picture(
     self,
-    picture_name: CollectionObjectName,
+    picture_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -1187,7 +1187,7 @@ This coroutine is part of the next Python package contract.
 | --- | --- | --- | --- |
 | `ascii_file_path` | `FileReference` | `ASCII File Path` | Required |
 | `chart_title_override` | `str` | `Chart Title Override` | Empty |
-| `output_picture_name` | `CollectionObjectName` | `Output Picture Name` | Required |
+| `output_picture_name` | `CollectionItemName` | `Output Picture Name` | Required |
 | `show_chart_dialog` | `bool` | `Show Chart Dialog?` | false |
 | `plot_additional_xy_value` | `bool` | `Plot Additional XY Value?` | false |
 | `x_value` | `float` | `X Value` | 0.000000 |
@@ -1203,7 +1203,7 @@ async def make_utility_chart(
     ascii_file_path: FileReference,
     *,
     chart_title_override: str = '',
-    output_picture_name: CollectionObjectName,
+    output_picture_name: CollectionItemName,
     show_chart_dialog: bool = False,
     plot_additional_xy_value: bool = False,
     x_value: float = 0.000000,
@@ -1476,7 +1476,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `report_name` | `CollectionObjectName` | `Report Name` | Required |
+| `report_name` | `CollectionItemName` | `Report Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1485,7 +1485,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def refresh_callout_views_in_sa_report(
     self,
-    report_name: CollectionObjectName,
+    report_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -1564,8 +1564,8 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `original_picture_name` | `CollectionObjectName` | `Original Picture Name` | Required |
-| `new_picture_name` | `CollectionObjectName` | `New Picture Name` | Required |
+| `original_picture_name` | `CollectionItemName` | `Original Picture Name` | Required |
+| `new_picture_name` | `CollectionItemName` | `New Picture Name` | Required |
 | `overwrite_if_exists` | `bool` | `Overwrite if exists?` | false |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1575,8 +1575,8 @@ This coroutine is part of the next Python package contract.
 ```python
 async def rename_picture(
     self,
-    original_picture_name: CollectionObjectName,
-    new_picture_name: CollectionObjectName,
+    original_picture_name: CollectionItemName,
+    new_picture_name: CollectionItemName,
     *,
     overwrite_if_exists: bool = False,
 ) -> None: ...
@@ -1607,7 +1607,7 @@ This coroutine is part of the next Python package contract.
 | — | None | — |
 
 ```python
-async def save_chart_to_j_peg_file(
+async def save_chart_to_jpeg_file(
     self,
     chart_to_save: ChartName,
     file_to_save_to: FileReference,
@@ -1615,7 +1615,7 @@ async def save_chart_to_j_peg_file(
 ```
 
 ```python
-await briosa.save_chart_to_j_peg_file(chart_to_save=..., file_to_save_to=...)
+await briosa.save_chart_to_jpeg_file(chart_to_save=..., file_to_save_to=...)
 ```
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
@@ -2179,7 +2179,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `picture_name` | `CollectionObjectName` | `Picture Name` | Required |
+| `picture_name` | `CollectionItemName` | `Picture Name` | Required |
 | `scale` | `float` | `Scale` | 100.000000 |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2189,7 +2189,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_scale_for_picture(
     self,
-    picture_name: CollectionObjectName,
+    picture_name: CollectionItemName,
     *,
     scale: float = 100.000000,
 ) -> None: ...

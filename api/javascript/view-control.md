@@ -406,7 +406,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipsEmptyToClearAll` | `Iterable<CollectionObjectName>` | `Relationships (Empty to clear all)` | Required |
+| `relationshipsEmptyToClearAll` | `Iterable<CollectionItemName>` | `Relationships (Empty to clear all)` | Required |
 | `highLightRelationships` | `boolean` | `HighLight Relationships?` | false |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -415,7 +415,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface HighlightRelationshipsInput {
-  readonly relationshipsEmptyToClearAll: Iterable<CollectionObjectName>;
+  readonly relationshipsEmptyToClearAll: Iterable<CollectionItemName>;
   readonly highLightRelationships?: boolean;
 }
 
@@ -1218,7 +1218,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `calloutViewToShow` | `CollectionObjectName` | `Callout View To Show` | Required |
+| `calloutViewToShow` | `CollectionItemName` | `Callout View To Show` | Required |
 | `showCalloutView` | `boolean` | `Show Callout View?` | true |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1227,7 +1227,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface ShowHideCalloutViewInput {
-  readonly calloutViewToShow: CollectionObjectName;
+  readonly calloutViewToShow: CollectionItemName;
   readonly showCalloutView?: boolean;
 }
 
@@ -1255,7 +1255,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `dimensionName` | `CollectionObjectName` | `Dimension Name` | Required |
+| `dimensionName` | `CollectionItemName` | `Dimension Name` | Required |
 | `showDimension` | `boolean` | `Show Dimension?` | true |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1264,7 +1264,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface ShowHideDimensionInput {
-  readonly dimensionName: CollectionObjectName;
+  readonly dimensionName: CollectionItemName;
   readonly showDimension?: boolean;
 }
 
@@ -1370,7 +1370,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 | `points` | `Iterable<PointName>` | `Points` | Required |
 | `objects` | `Iterable<CollectionObjectName>` | `Objects` | Required |
 | `instruments` | `Iterable<CollectionInstrumentId>` | `Instruments` | Required |
-| `featureChecks` | `Iterable<CollectionObjectName>` | `Feature Checks` | Required |
+| `featureChecks` | `Iterable<CollectionItemName>` | `Feature Checks` | Required |
 | `datums` | `Iterable<CollectionObjectName>` | `Datums` | Required |
 | `collections` | `Iterable<string>` | `Collections` | Required |
 
@@ -1384,7 +1384,7 @@ export interface ShowItemsInTreeInput {
   readonly points: Iterable<PointName>;
   readonly objects: Iterable<CollectionObjectName>;
   readonly instruments: Iterable<CollectionInstrumentId>;
-  readonly featureChecks: Iterable<CollectionObjectName>;
+  readonly featureChecks: Iterable<CollectionItemName>;
   readonly datums: Iterable<CollectionObjectName>;
   readonly collections: Iterable<string>;
 }
@@ -1526,7 +1526,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `featureCheckNameList` | `Iterable<CollectionObjectName>` | `Feature Check Name List` | Required |
+| `featureCheckNameList` | `Iterable<CollectionItemName>` | `Feature Check Name List` | Required |
 | `show` | `boolean` | `Show?` | false |
 | `highlight` | `boolean` | `Highlight?` | false |
 | `setInspectionView` | `boolean` | `Set Inspection View?` | false |
@@ -1537,7 +1537,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface ShowHideAnnotationsForFeatureChecksInput {
-  readonly featureCheckNameList: Iterable<CollectionObjectName>;
+  readonly featureCheckNameList: Iterable<CollectionItemName>;
   readonly show?: boolean;
   readonly highlight?: boolean;
   readonly setInspectionView?: boolean;
