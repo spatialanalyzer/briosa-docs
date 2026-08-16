@@ -651,7 +651,7 @@ async def define_report_template(
     events_to_report: Iterable[CollectionItemName],
     *,
     report_output_options: ReportOutputOptions = ReportOutputOptions.DEFAULT,
-    report_page_settings_sa_report_only: ReportPageSettings = ReportPageSettings.DEFAULT,
+    report_page_settings_sa_report_only: ReportPageSettings = ReportPageSettings.PORTRAIT,
     generate_now: bool = False,
     show_generated_report: bool = False,
 ) -> None: ...
@@ -1953,7 +1953,7 @@ async def set_point_group_report_options(
     self,
     point_group: CollectionObjectName,
     *,
-    coordinate_system: CoordinateSystemType = CoordinateSystemType.DEFAULT,
+    coordinate_system: CoordinateSystemType = CoordinateSystemType.CARTESIAN,
     show_x_component: bool = True,
     show_y_component: bool = True,
     show_z_component: bool = True,

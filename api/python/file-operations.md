@@ -1299,8 +1299,8 @@ async def import_ascii_predefined_formats(
     ascii_file_path: FileReference,
     file_format: AsciiFileFormat,
     *,
-    units: DistanceUnits = DistanceUnits.DEFAULT,
-    angular_units: AngularUnits = AngularUnits.DEFAULT,
+    units: DistanceUnits = DistanceUnits.INCHES,
+    angular_units: AngularUnits = AngularUnits.DEGREES,
     group_name: CollectionObjectName,
     import_as_cloud: bool = False,
     ensure_new_point_group: bool = True,
@@ -1342,8 +1342,8 @@ async def import_ascii_predefined_frame_set_formats(
     ascii_file_path: FileReference,
     file_format: AsciiFileFormat,
     *,
-    units: DistanceUnits = DistanceUnits.DEFAULT,
-    angular_units: AngularUnits = AngularUnits.DEFAULT,
+    units: DistanceUnits = DistanceUnits.INCHES,
+    angular_units: AngularUnits = AngularUnits.DEGREES,
     frame_set_container_name: CollectionObjectName,
     ensure_unique_name: bool = True,
 ) -> None: ...
@@ -1388,7 +1388,7 @@ async def import_e57_file(
     automatically_close_converter: bool = True,
     prioritize_color_over_intensity: bool = True,
     import_scan_blocks_as_separate_clouds: bool = False,
-    units: DistanceUnits = DistanceUnits.DEFAULT,
+    units: DistanceUnits = DistanceUnits.INCHES,
 ) -> None: ...
 ```
 
@@ -1875,7 +1875,7 @@ async def import_stl_file(
     self,
     stl_file_path: FileReference,
     *,
-    units: DistanceUnits = DistanceUnits.DEFAULT,
+    units: DistanceUnits = DistanceUnits.MILLIMETERS,
     import_mesh: bool = True,
     import_point_cloud: bool = False,
 ) -> None: ...

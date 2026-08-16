@@ -944,12 +944,12 @@ This coroutine is part of the next Python package contract.
 async def set_active_units(
     self,
     *,
-    length: DistanceUnits = DistanceUnits.DEFAULT,
+    length: DistanceUnits = DistanceUnits.INCHES,
     display_inch_fractions: bool = False,
     inch_fraction_denominator: float = 16.000000,
     simplify_inch_fraction: bool = True,
-    temperature: TemperatureUnits = TemperatureUnits.DEFAULT,
-    angular: AngularUnits = AngularUnits.DEFAULT,
+    temperature: TemperatureUnits = TemperatureUnits.FAHRENHEIT,
+    angular: AngularUnits = AngularUnits.DEGREES,
 ) -> None: ...
 ```
 
