@@ -55,6 +55,1392 @@ The request preserves MP input order and the result preserves MP output order.
 Unsupported MP-only branch targets or UI selectors listed in the catalog are
 intentionally absent. The server validates required presence before enqueue.
 
+## Wave B Root-Group Types
+
+```proto
+enum GeometryRelationshipPointEditMode {
+  GEOMETRY_RELATIONSHIP_POINT_EDIT_MODE_UNSPECIFIED = 0;
+  GEOMETRY_RELATIONSHIP_POINT_EDIT_MODE_POINT_LIST = 1;
+  GEOMETRY_RELATIONSHIP_POINT_EDIT_MODE_POINT_GRAPH = 2;
+  GEOMETRY_RELATIONSHIP_POINT_EDIT_MODE_SUB_SAMPLER_SETTINGS = 3;
+}
+
+message GeometryRelationshipOutlierFilterMetrics {
+  double first_pass_rms_error = 1;
+  double first_pass_maximum_error = 2;
+  double first_pass_minimum_error = 3;
+  double first_pass_average_error = 4;
+  double final_pass_rms_error = 5;
+  double final_pass_maximum_error = 6;
+  double final_pass_minimum_error = 7;
+  double final_pass_average_error = 8;
+  int32 total_input_point_count = 9;
+  int32 exclude_point_count = 10;
+}
+
+message RelationshipWatchWindowUdpSettings {
+  optional bool enabled = 1;
+  optional bool broadcast = 2;
+  optional string ip_address = 3;
+  optional int32 port = 4;
+}
+```
+
+## Generate Geometry Relationship Summary
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GenerateGeometryRelationshipSummary` |
+| Operation ID | `relationship_operations.generate_geometry_relationship_summary` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc GenerateGeometryRelationshipSummary(GenerateGeometryRelationshipSummaryRequest) returns (GenerateGeometryRelationshipSummaryResult);
+message GenerateGeometryRelationshipSummaryRequest {
+  repeated CollectionItemName relationship_ref_list = 1;
+  optional string summary_table_name = 2;
+}
+message GenerateGeometryRelationshipSummaryResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The list is required and `summary_table_name` defaults to
+`Geometry Relationship Summary`.
+
+## Edit Geometry Relationship Point List
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `EditGeometryRelationshipPointList` |
+| Operation ID | `relationship_operations.edit_geometry_relationship_point_list` |
+| Validation | At Risk - Interactive relationship fixture |
+
+```proto
+rpc EditGeometryRelationshipPointList(EditGeometryRelationshipPointListRequest) returns (EditGeometryRelationshipPointListResult);
+message EditGeometryRelationshipPointListRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional GeometryRelationshipPointEditMode point_edit_mode = 2;
+}
+message EditGeometryRelationshipPointListResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The mode defaults to `POINT_LIST`. The call opens the corresponding SA dialog;
+a deadline or cancellation does not prove that the interaction stopped.
+
+## Filter Geometry Relationship Outlier Cloud Points
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `FilterGeometryRelationshipOutlierCloudPoints` |
+| Operation ID | `relationship_operations.filter_geometry_relationship_outlier_cloud_points` |
+| Validation | At Risk - Cloud relationship fixture |
+
+```proto
+rpc FilterGeometryRelationshipOutlierCloudPoints(FilterGeometryRelationshipOutlierCloudPointsRequest) returns (FilterGeometryRelationshipOutlierCloudPointsResult);
+message FilterGeometryRelationshipOutlierCloudPointsRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional double sigma_threshold = 2;
+  optional bool modify_existing_input_clouds = 3;
+}
+message FilterGeometryRelationshipOutlierCloudPointsResult {
+  optional GeometryRelationshipOutlierFilterMetrics metrics = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The threshold defaults to `3`; cloud mutation defaults to `false`. All ten
+exact outputs are preserved in `metrics`.
+
+## Relationship Watch Window Template
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `RelationshipWatchWindowTemplate` |
+| Operation ID | `relationship_operations.relationship_watch_window_template` |
+| Validation | At Risk - Watch-window relationship fixture |
+
+```proto
+rpc RelationshipWatchWindowTemplate(RelationshipWatchWindowTemplateRequest) returns (RelationshipWatchWindowTemplateResult);
+message RelationshipWatchWindowTemplateRequest {
+  optional CollectionObjectName watch_window_template_name = 1;
+  optional int32 linear_precision = 2;
+  optional int32 angular_precision = 3;
+  optional Font font = 4;
+  optional Color text_color = 5;
+  optional Color background_color = 6;
+  optional Color highlight_color = 7;
+  optional bool show_deviation_x_rx = 8;
+  optional bool show_deviation_y_ry = 9;
+  optional bool show_deviation_z_rz = 10;
+  optional bool show_deviation_magnitude = 11;
+  optional RelationshipWatchWindowUdpSettings udp_network_transmit_settings = 12;
+  optional bool transparent_background = 13;
+  optional bool hide_units = 14;
+}
+message RelationshipWatchWindowTemplateResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Omitted fields use the complete exact MP defaults. UDP transmission is disabled
+by default; broadcast is enabled, the address is empty, and the port is
+`10000`.
+
+## Make Point to Point Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakePointToPointRelationship` |
+| Operation ID | `relationship_operations.make_point_to_point_relationship` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc MakePointToPointRelationship(MakePointToPointRelationshipRequest) returns (MakePointToPointRelationshipResult);
+message MakePointToPointRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional PointName first_point_name = 2;
+  optional PointName second_point_name = 3;
+  optional ToleranceVectorOptions tolerance = 4;
+  optional ToleranceVectorOptions constraint = 5;
+}
+message MakePointToPointRelationshipResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Omitting the two option messages uses their distinct exact MP tolerance and
+constraint defaults. Briosa adds no Point or constraint preflight.
+
+## Make Frame to Frame Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeFrameToFrameRelationship` |
+| Operation ID | `relationship_operations.make_frame_to_frame_relationship` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc MakeFrameToFrameRelationship(MakeFrameToFrameRelationshipRequest) returns (MakeFrameToFrameRelationshipResult);
+message MakeFrameToFrameRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName first_frame_name = 2;
+  optional CollectionObjectName second_frame_name = 3;
+  optional ToleranceScalarOptions orientation_tolerance = 4;
+  optional ToleranceVectorOptions position_tolerance = 5;
+}
+message MakeFrameToFrameRelationshipResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Omitting either tolerance message uses the exact all-limits-disabled zero
+default. None of these six RPCs is automatically replayed.
+
+## Dynamic Relationship Types
+
+```proto
+enum DynamicPointMode {
+  DYNAMIC_POINT_MODE_UNSPECIFIED = 0;
+  DYNAMIC_POINT_MODE_INTERSECTION_LINE_AND_PLANE = 1;
+  DYNAMIC_POINT_MODE_INTERSECTION_CYLINDER_AND_PLANE = 2;
+  DYNAMIC_POINT_MODE_INTERSECTION_CONE_AND_PLANE = 3;
+  DYNAMIC_POINT_MODE_INTERSECTION_THREE_PLANES = 4;
+  DYNAMIC_POINT_MODE_MID_POINT_PERPENDICULAR_TO_TWO_LINES = 5;
+}
+enum DynamicLineMode {
+  DYNAMIC_LINE_MODE_UNSPECIFIED = 0;
+  DYNAMIC_LINE_MODE_CONE_AXIS = 1;
+  DYNAMIC_LINE_MODE_CYLINDER_AXIS = 2;
+  DYNAMIC_LINE_MODE_INTERSECTION_OF_TWO_PLANES = 3;
+  DYNAMIC_LINE_MODE_BISECT_TWO_LINES = 4;
+  DYNAMIC_LINE_MODE_SLOT_CENTERLINE_ALONG_LENGTH = 5;
+}
+enum DynamicPlaneMode {
+  DYNAMIC_PLANE_MODE_UNSPECIFIED = 0;
+  DYNAMIC_PLANE_MODE_BISECT_TWO_PLANES = 1;
+  DYNAMIC_PLANE_MODE_TWO_CONES_HOLD_NORMAL_TO_BEST_FIT_PLANE = 2;
+  DYNAMIC_PLANE_MODE_TWO_CONES_HOLD_NORMAL_TO_FIRST_CONE_AXIS = 3;
+  DYNAMIC_PLANE_MODE_TWO_CONES_HOLD_NORMAL_TO_SECOND_CONE_AXIS = 4;
+  DYNAMIC_PLANE_MODE_CONE_AND_CYLINDER_HOLD_NORMAL_TO_BEST_FIT_PLANE = 5;
+  DYNAMIC_PLANE_MODE_CONE_AND_CYLINDER_HOLD_NORMAL_TO_CONE_AXIS = 6;
+  DYNAMIC_PLANE_MODE_CONE_AND_CYLINDER_HOLD_NORMAL_TO_CYLINDER_AXIS = 7;
+  DYNAMIC_PLANE_MODE_OFFSET_PLANE_FROM_PLANE = 8;
+}
+enum DynamicCircleMode {
+  DYNAMIC_CIRCLE_MODE_UNSPECIFIED = 0;
+  DYNAMIC_CIRCLE_MODE_CYLINDER_AND_PLANE_HOLD_PLANE_NORMAL = 1;
+  DYNAMIC_CIRCLE_MODE_CYLINDER_AND_PLANE_HOLD_CYLINDER_AXIS = 2;
+  DYNAMIC_CIRCLE_MODE_CONE_AND_PLANE_HOLD_PLANE_NORMAL = 3;
+  DYNAMIC_CIRCLE_MODE_CONE_AND_PLANE_HOLD_CONE_AXIS = 4;
+  DYNAMIC_CIRCLE_MODE_SPHERE_AND_PLANE_INTERSECTION = 5;
+  DYNAMIC_CIRCLE_MODE_TWO_CONES_INTERSECTION = 6;
+  DYNAMIC_CIRCLE_MODE_CONE_AND_CYLINDER_INTERSECTION = 7;
+}
+enum DynamicEllipseMode {
+  DYNAMIC_ELLIPSE_MODE_UNSPECIFIED = 0;
+  DYNAMIC_ELLIPSE_MODE_CYLINDER_AND_PLANE_INTERSECTION = 1;
+  DYNAMIC_ELLIPSE_MODE_CONE_AND_PLANE_INTERSECTION = 2;
+}
+```
+
+The worker maps `DYNAMIC_PLANE_MODE_TWO_CONES_HOLD_NORMAL_TO_FIRST_CONE_AXIS`
+to SA's exact misspelled `Twp Cones...` SDK literal.
+
+## Make Points to Objects Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakePointsToObjectsRelationship` |
+| Operation ID | `relationship_operations.make_points_to_objects_relationship` |
+| Validation | At Risk - Points and objects fixture |
+
+```proto
+rpc MakePointsToObjectsRelationship(MakePointsToObjectsRelationshipRequest) returns (MakePointsToObjectsRelationshipResult);
+message MakePointsToObjectsRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated PointName points_in_relationship = 2;
+  repeated CollectionObjectName objects_in_relationship = 3;
+  optional ProjectionOptions projection_options = 4;
+  optional bool auto_update_a_vector_group = 5;
+}
+message MakePointsToObjectsRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The two lists are required. Omitted projection options use `Object To Probe
+Vectors` with every projection option disabled; Vector Group auto-update
+defaults to `false`.
+
+## Make Points to Points Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakePointsToPointsRelationship` |
+| Operation ID | `relationship_operations.make_points_to_points_relationship` |
+| Validation | At Risk - Paired-points fixture |
+
+```proto
+rpc MakePointsToPointsRelationship(MakePointsToPointsRelationshipRequest) returns (MakePointsToPointsRelationshipResult);
+message MakePointsToPointsRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated PointName nominal_points = 2;
+  repeated PointName measured_points = 3;
+  optional bool auto_update_a_vector_group = 4;
+  optional ToleranceVectorOptions tolerance = 5;
+  optional ToleranceVectorOptions constraint = 6;
+}
+message MakePointsToPointsRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+Both Point lists are required. Auto-update defaults to `false`. Omitted
+tolerance and constraint messages use their distinct exact MP defaults.
+
+## Make Groups to Objects Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGroupsToObjectsRelationship` |
+| Operation ID | `relationship_operations.make_groups_to_objects_relationship` |
+| Validation | At Risk - Groups and objects fixture |
+
+```proto
+rpc MakeGroupsToObjectsRelationship(MakeGroupsToObjectsRelationshipRequest) returns (MakeGroupsToObjectsRelationshipResult);
+message MakeGroupsToObjectsRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated CollectionObjectName point_groups_in_relationship = 2;
+  repeated CollectionObjectName objects_in_relationship = 3;
+  optional ProjectionOptions projection_options = 4;
+  optional bool auto_update_a_vector_group = 5;
+}
+message MakeGroupsToObjectsRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The two lists are required. Projection and auto-update use the same exact
+defaults as `MakePointsToObjectsRelationship`.
+
+## Make Object to Object Direction Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeObjectToObjectDirectionRelationship` |
+| Operation ID | `relationship_operations.make_object_to_object_direction_relationship` |
+| Validation | At Risk - Geometry fixture |
+
+```proto
+rpc MakeObjectToObjectDirectionRelationship(MakeObjectToObjectDirectionRelationshipRequest) returns (MakeObjectToObjectDirectionRelationshipResult);
+message MakeObjectToObjectDirectionRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName first_object_in_relationship = 2;
+  optional CollectionObjectName second_object_in_relationship = 3;
+  optional double nominal_angle = 4;
+}
+message MakeObjectToObjectDirectionRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+All three identities are required. `nominal_angle` defaults to `0`.
+
+## Make Point Clouds to Objects Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakePointCloudsToObjectsRelationship` |
+| Operation ID | `relationship_operations.make_point_clouds_to_objects_relationship` |
+| Validation | At Risk - Cloud fixture |
+
+```proto
+rpc MakePointCloudsToObjectsRelationship(MakePointCloudsToObjectsRelationshipRequest) returns (MakePointCloudsToObjectsRelationshipResult);
+message MakePointCloudsToObjectsRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated CollectionObjectName point_clouds_in_relationship = 2;
+  repeated CollectionObjectName objects_in_relationship = 3;
+  optional ProjectionOptions projection_options = 4;
+  optional bool auto_update_a_vector_group = 5;
+}
+message MakePointCloudsToObjectsRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+Both lists are required. Projection and auto-update preserve the exact defaults.
+
+## Make Group to Group Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGroupToGroupRelationship` |
+| Operation ID | `relationship_operations.make_group_to_group_relationship` |
+| Validation | At Risk - Paired-groups fixture |
+
+```proto
+rpc MakeGroupToGroupRelationship(MakeGroupToGroupRelationshipRequest) returns (MakeGroupToGroupRelationshipResult);
+message MakeGroupToGroupRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName first_group_name = 2;
+  optional CollectionObjectName second_group_name = 3;
+  optional bool auto_update_a_vector_group = 4;
+  optional ToleranceVectorOptions tolerance = 5;
+  optional ToleranceVectorOptions constraint = 6;
+}
+message MakeGroupToGroupRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+Omitted auto-update, tolerance, and constraint fields use the same exact
+defaults as the paired-Point form.
+
+## Make Group to Nominal Group Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGroupToNominalGroupRelationship` |
+| Operation ID | `relationship_operations.make_group_to_nominal_group_relationship` |
+| Validation | At Risk - Nominal-group fixture |
+
+```proto
+rpc MakeGroupToNominalGroupRelationship(MakeGroupToNominalGroupRelationshipRequest) returns (MakeGroupToNominalGroupRelationshipResult);
+message MakeGroupToNominalGroupRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName nominal_group_name = 2;
+  optional CollectionObjectName measured_group_name = 3;
+  optional bool auto_update_a_vector_group = 4;
+  optional bool use_closest_point = 5;
+  optional bool display_closest_point_watch_window = 6;
+  optional bool use_view_zooming_with_proximity = 7;
+  optional bool ignore_points_beyond_threshold = 8;
+  optional double proximity_threshold = 9;
+  optional ToleranceVectorOptions tolerance = 10;
+  optional ToleranceVectorOptions constraint = 11;
+  optional double fit_weight = 12;
+}
+message MakeGroupToNominalGroupRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The exact defaults are auto-update `false`, closest-point matching `true`, the
+three display/threshold controls `false`, threshold `0.01`, the standard
+Relationship tolerance and constraint defaults, and fit weight `1`.
+
+## Make Average Point Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeAveragePointRelationship` |
+| Operation ID | `relationship_operations.make_average_point_relationship` |
+| Validation | At Risk - Average-point fixture |
+
+```proto
+rpc MakeAveragePointRelationship(MakeAveragePointRelationshipRequest) returns (MakeAveragePointRelationshipResult);
+message MakeAveragePointRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated PointName points_in_relationship = 2;
+  optional PointName average_point_name = 3;
+  optional PointName nominal_point_name = 4;
+}
+message MakeAveragePointRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The Point list is required. The Average Point and Nominal Point identities are
+independently optional.
+
+## Make Geometry Fit Only Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGeometryFitOnlyRelationship` |
+| Operation ID | `relationship_operations.make_geometry_fit_only_relationship` |
+| Validation | At Risk - Geometry-fit fixture |
+
+```proto
+rpc MakeGeometryFitOnlyRelationship(MakeGeometryFitOnlyRelationshipRequest) returns (MakeGeometryFitOnlyRelationshipResult);
+message MakeGeometryFitOnlyRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  repeated CollectionObjectName point_groups_to_fit = 2;
+  optional GeometryType geometry_type = 3;
+  optional CollectionObjectName resulting_object_name = 4;
+  optional string fit_profile_name = 5;
+}
+message MakeGeometryFitOnlyRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+Relationship identity, Point Groups, and geometry type are required. The
+resulting object and fit-profile inputs are optional.
+
+## Make Geometry Fit and Compare to Nominal Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGeometryFitAndCompareToNominalRelationship` |
+| Operation ID | `relationship_operations.make_geometry_fit_and_compare_to_nominal_relationship` |
+| Validation | At Risk - Geometry-fit fixture |
+
+```proto
+rpc MakeGeometryFitAndCompareToNominalRelationship(MakeGeometryFitAndCompareToNominalRelationshipRequest) returns (MakeGeometryFitAndCompareToNominalRelationshipResult);
+message MakeGeometryFitAndCompareToNominalRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName nominal_geometry = 2;
+  repeated CollectionObjectName point_groups_to_fit = 3;
+  optional CollectionObjectName resulting_object_name = 4;
+  optional string fit_profile_name = 5;
+}
+message MakeGeometryFitAndCompareToNominalRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The first three inputs are required. For both geometry-fit RPCs, MP result code
+`4` remains a completed partial-success outcome in `execution`; it is not
+collapsed into complete success or transport failure. No RPC is automatically
+replayed.
+
+## Relationship Fit and Statistics Types
+
+```proto
+enum SolverMode {
+  SOLVER_MODE_UNSPECIFIED = 0;
+  SOLVER_MODE_GAUSS_NEWTON = 1;
+  SOLVER_MODE_LEVENBERG_MARQUARDT = 2;
+  SOLVER_MODE_GAUSS_NEWTON_WITH_GRADIENT_SEARCH = 3;
+  SOLVER_MODE_DIRECT_SEARCH = 4;
+}
+
+message FitDofOptions {
+  optional bool allow_x = 1;
+  optional bool allow_y = 2;
+  optional bool allow_z = 3;
+  optional bool allow_rx = 4;
+  optional bool allow_ry = 5;
+  optional bool allow_rz = 6;
+  optional bool rotate_about_centroid = 7;
+}
+```
+
+Omitted `FitDofOptions` allows every translation and rotation and rotates about
+the centroid, matching all seven exact `true` values.
+
+## Make Geometry Compare Only Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeGeometryCompareOnlyRelationship` |
+| Operation ID | `relationship_operations.make_geometry_compare_only_relationship` |
+| Validation | At Risk - Geometry fixture |
+
+```proto
+rpc MakeGeometryCompareOnlyRelationship(MakeGeometryCompareOnlyRelationshipRequest) returns (MakeGeometryCompareOnlyRelationshipResult);
+message MakeGeometryCompareOnlyRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName nominal_geometry = 2;
+  optional CollectionObjectName measured_geometry = 3;
+}
+message MakeGeometryCompareOnlyRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+All three identities are required.
+
+## Make Dynamic Point Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeDynamicPointRelationship` |
+| Operation ID | `relationship_operations.make_dynamic_point_relationship` |
+| Validation | At Risk - Dynamic-geometry fixture |
+
+```proto
+rpc MakeDynamicPointRelationship(MakeDynamicPointRelationshipRequest) returns (MakeDynamicPointRelationshipResult);
+message MakeDynamicPointRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional DynamicPointMode construction_mode = 2;
+  optional CollectionObjectName first_reference_geometry = 3;
+  optional CollectionObjectName second_reference_geometry = 4;
+  optional CollectionObjectName third_reference_geometry = 5;
+}
+message MakeDynamicPointRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The first two references are required, while the third is optional and is used
+by construction modes that need it. The mode defaults to line/Plane
+intersection.
+
+## Make Dynamic Line Relationship
+
+```proto
+rpc MakeDynamicLineRelationship(MakeDynamicLineRelationshipRequest) returns (MakeDynamicLineRelationshipResult);
+message MakeDynamicLineRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional DynamicLineMode construction_mode = 2;
+  optional CollectionObjectName first_reference_geometry = 3;
+  optional CollectionObjectName second_reference_geometry = 4;
+}
+message MakeDynamicLineRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The mode defaults to `INTERSECTION_OF_TWO_PLANES`; both references are required.
+The operation ID is `relationship_operations.make_dynamic_line_relationship`.
+
+## Make Dynamic Plane Relationship
+
+```proto
+rpc MakeDynamicPlaneRelationship(MakeDynamicPlaneRelationshipRequest) returns (MakeDynamicPlaneRelationshipResult);
+message MakeDynamicPlaneRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional DynamicPlaneMode construction_mode = 2;
+  optional CollectionObjectName first_reference_geometry = 3;
+  optional CollectionObjectName second_reference_geometry = 4;
+  optional double offset_plane_offset = 5;
+}
+message MakeDynamicPlaneRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The mode defaults to `BISECT_TWO_PLANES`, the offset defaults to `0`, and the
+operation ID is `relationship_operations.make_dynamic_plane_relationship`.
+
+## Make Dynamic Circle Relationship
+
+```proto
+rpc MakeDynamicCircleRelationship(MakeDynamicCircleRelationshipRequest) returns (MakeDynamicCircleRelationshipResult);
+message MakeDynamicCircleRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional DynamicCircleMode construction_mode = 2;
+  optional CollectionObjectName first_reference_geometry = 3;
+  optional CollectionObjectName second_reference_geometry = 4;
+}
+message MakeDynamicCircleRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The default mode is `CYLINDER_AND_PLANE_HOLD_PLANE_NORMAL`; the operation ID is
+`relationship_operations.make_dynamic_circle_relationship`.
+
+## Make Dynamic Ellipse Relationship
+
+```proto
+rpc MakeDynamicEllipseRelationship(MakeDynamicEllipseRelationshipRequest) returns (MakeDynamicEllipseRelationshipResult);
+message MakeDynamicEllipseRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional DynamicEllipseMode construction_mode = 2;
+  optional CollectionObjectName first_reference_geometry = 3;
+  optional CollectionObjectName second_reference_geometry = 4;
+}
+message MakeDynamicEllipseRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The default is `CYLINDER_AND_PLANE_INTERSECTION`; the operation ID is
+`relationship_operations.make_dynamic_ellipse_relationship`.
+
+## Make Vector Group To Vector Group Relationship
+
+```proto
+rpc MakeVectorGroupToVectorGroupRelationship(MakeVectorGroupToVectorGroupRelationshipRequest) returns (MakeVectorGroupToVectorGroupRelationshipResult);
+message MakeVectorGroupToVectorGroupRelationshipRequest {
+  optional CollectionObjectName new_vg_to_vg_relationship = 1;
+  optional CollectionObjectName reference_vector_group = 2;
+  optional CollectionObjectName corresponding_vector_group = 3;
+  optional bool set_opposing_vector_group_polarity = 4;
+}
+message MakeVectorGroupToVectorGroupRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+All identities are required, polarity defaults to `true`, and the operation ID
+is `relationship_operations.make_vector_group_to_vector_group_relationship`.
+
+## Set Vector Group To Vector Group Cylindrical Zone
+
+```proto
+rpc SetVectorGroupToVectorGroupCylindricalZone(SetVectorGroupToVectorGroupCylindricalZoneRequest) returns (SetVectorGroupToVectorGroupCylindricalZoneResult);
+message SetVectorGroupToVectorGroupCylindricalZoneRequest {
+  optional CollectionObjectName vg_to_vg_relationship = 1;
+  optional double radial_offset = 2;
+  optional double minimum_axial_offset = 3;
+  optional double maximum_axial_offset = 4;
+}
+message SetVectorGroupToVectorGroupCylindricalZoneResult { MpExecutionDetails execution = 1000; }
+```
+
+The three offsets default to `1`, `-10`, and `10`. The operation ID is
+`relationship_operations.set_vector_group_to_vector_group_cylindrical_zone`.
+
+## Set Vector Group To Vector Group Fit Weights
+
+```proto
+rpc SetVectorGroupToVectorGroupFitWeights(SetVectorGroupToVectorGroupFitWeightsRequest) returns (SetVectorGroupToVectorGroupFitWeightsResult);
+message SetVectorGroupToVectorGroupFitWeightsRequest {
+  optional CollectionObjectName vg_to_vg_relationship = 1;
+  optional double minimum_gap = 2;
+  optional double minimum_gap_fit_weight = 3;
+  optional double maximum_gap = 4;
+  optional double maximum_gap_fit_weight = 5;
+  optional double nominal_gap = 6;
+  optional double nominal_gap_fit_weight = 7;
+}
+message SetVectorGroupToVectorGroupFitWeightsResult { MpExecutionDetails execution = 1000; }
+```
+
+The gap defaults are `0`; the minimum and maximum weights default to `10`, and
+the nominal weight defaults to `1`. The operation ID is
+`relationship_operations.set_vector_group_to_vector_group_fit_weights`.
+
+## Set Vector Group To Vector Group Fit Gradient Factor
+
+```proto
+rpc SetVectorGroupToVectorGroupFitGradientFactor(SetVectorGroupToVectorGroupFitGradientFactorRequest) returns (SetVectorGroupToVectorGroupFitGradientFactorResult);
+message SetVectorGroupToVectorGroupFitGradientFactorRequest {
+  optional CollectionObjectName vg_to_vg_relationship = 1;
+  optional double fit_gradient_factor = 2;
+}
+message SetVectorGroupToVectorGroupFitGradientFactorResult { MpExecutionDetails execution = 1000; }
+```
+
+The factor defaults to `50`. The operation ID is
+`relationship_operations.set_vector_group_to_vector_group_fit_gradient_factor`.
+All ten RPCs prohibit automatic replay.
+
+## Set Vector Group To Vector Group Relative Polarity
+
+```proto
+rpc SetVectorGroupToVectorGroupRelativePolarity(SetVectorGroupToVectorGroupRelativePolarityRequest) returns (SetVectorGroupToVectorGroupRelativePolarityResult);
+message SetVectorGroupToVectorGroupRelativePolarityRequest {
+  optional CollectionObjectName vg_to_vg_relationship = 1;
+  optional bool set_opposing_vector_group_polarity = 2;
+}
+message SetVectorGroupToVectorGroupRelativePolarityResult { MpExecutionDetails execution = 1000; }
+```
+
+Polarity defaults to `true`. The operation ID is
+`relationship_operations.set_vector_group_to_vector_group_relative_polarity`.
+
+## Delete Relationship
+
+```proto
+rpc DeleteRelationship(DeleteRelationshipRequest) returns (DeleteRelationshipResult);
+message DeleteRelationshipRequest { optional CollectionObjectName relationship_name = 1; }
+message DeleteRelationshipResult { MpExecutionDetails execution = 1000; }
+```
+
+The identity is required. The operation ID is
+`relationship_operations.delete_relationship`; the server adds no confirmation.
+
+## Set Optimization Search Options
+
+```proto
+rpc SetOptimizationSearchOptions(SetOptimizationSearchOptionsRequest) returns (SetOptimizationSearchOptionsResult);
+message SetOptimizationSearchOptionsRequest { optional int32 max_number_of_step_size_reduction = 1; }
+message SetOptimizationSearchOptionsResult { MpExecutionDetails execution = 1000; }
+```
+
+The exact default is `5`. The operation ID is
+`relationship_operations.set_optimization_search_options`.
+
+## Set Optimization Perturbation Parameters
+
+```proto
+rpc SetOptimizationPerturbationParameters(SetOptimizationPerturbationParametersRequest) returns (SetOptimizationPerturbationParametersResult);
+message SetOptimizationPerturbationParametersRequest {
+  optional double length_perturbation = 1;
+  optional double angular_perturbation = 2;
+  optional double damping = 3;
+}
+message SetOptimizationPerturbationParametersResult { MpExecutionDetails execution = 1000; }
+```
+
+Defaults are `0.0001`, `0.0001`, and `1`. The worker maps `damping` to the
+exact SDK argument label, including its trailing space. The operation ID is
+`relationship_operations.set_optimization_perturbation_parameters`.
+
+## Do Relationship Fit
+
+```proto
+rpc DoRelationshipFit(DoRelationshipFitRequest) returns (DoRelationshipFitResult);
+message DoRelationshipFitRequest {
+  optional string collection_containing_relationships = 1;
+  repeated CollectionObjectName objects_to_move = 2;
+  repeated CollectionInstrumentId instruments_to_move = 3;
+  optional SolverMode solver_mode = 4;
+  optional FitDofOptions motion_to_allow = 5;
+  optional bool enable_randomized_start = 6;
+  optional bool use_fit_dialog = 7;
+}
+message DoRelationshipFitResult {
+  optional Transform transform_in_reference = 1;
+  optional WorldTransform transform_in_working = 2;
+  optional WorldTransform transform_in_world = 3;
+  optional double fit_objective_value = 4;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The Collection is required; either or both move lists may be supplied. Solver
+defaults to Gauss-Newton, all motion is enabled about the centroid, randomized
+start and the fit dialog default to `false`, and both `WorldTransform` outputs
+retain their scale. The operation ID is
+`relationship_operations.do_relationship_fit`.
+
+## Move Collections by Minimizing Relationships
+
+```proto
+rpc MoveCollectionsByMinimizingRelationships(MoveCollectionsByMinimizingRelationshipsRequest) returns (MoveCollectionsByMinimizingRelationshipsResult);
+message MoveCollectionsByMinimizingRelationshipsRequest {
+  repeated string collections_to_move = 1;
+  repeated CollectionObjectName relationships_to_minimize = 2;
+  optional SolverMode solver_mode = 3;
+  optional FitDofOptions motion_to_allow = 4;
+  optional bool use_fit_dialog = 5;
+  optional double convergence_threshold = 6;
+}
+message MoveCollectionsByMinimizingRelationshipsResult { MpExecutionDetails execution = 1000; }
+```
+
+Both lists are required. The exact SA 2026.1 convergence default is `0`; the
+dialog remains off. The operation ID is
+`relationship_operations.move_collections_by_minimizing_relationships`.
+
+## Get General Relationship Statistics
+
+```proto
+rpc GetGeneralRelationshipStatistics(GetGeneralRelationshipStatisticsRequest) returns (GetGeneralRelationshipStatisticsResult);
+message GetGeneralRelationshipStatisticsRequest { optional CollectionObjectName relationship_name = 1; }
+message GetGeneralRelationshipStatisticsResult {
+  optional double absolute_max_deviation = 1;
+  optional double rms = 2;
+  optional bool has_signed_deviation = 3;
+  optional double signed_max_deviation = 4;
+  optional double signed_min_deviation = 5;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The operation ID is `relationship_operations.get_general_relationship_statistics`.
+
+## Get Points to Objects Relationship Statistics
+
+```proto
+rpc GetPointsToObjectsRelationshipStatistics(GetPointsToObjectsRelationshipStatisticsRequest) returns (GetPointsToObjectsRelationshipStatisticsResult);
+message GetPointsToObjectsRelationshipStatisticsRequest { optional CollectionObjectName relationship_name = 1; }
+message GetPointsToObjectsRelationshipStatisticsResult {
+  optional double absolute_max_deviation = 1;
+  optional double max_deviation = 2;
+  optional double min_deviation = 3;
+  optional double avg_deviation = 4;
+  optional double rms = 5;
+  optional int32 candidate_point_count = 6;
+  optional int32 sampled_point_count = 7;
+  optional int32 rejected_point_count = 8;
+  optional int32 used_point_count = 9;
+  optional int32 out_of_tolerance_point_count = 10;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+All ten SA 2026.1 outputs are preserved. The operation ID is
+`relationship_operations.get_points_to_objects_relationship_statistics`.
+
+## Start/Stop Relationship Trapping
+
+```proto
+rpc StartStopRelationshipTrapping(StartStopRelationshipTrappingRequest) returns (StartStopRelationshipTrappingResult);
+message StartStopRelationshipTrappingRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionInstrumentId instrument_id = 2;
+  optional bool start_trapping = 3;
+}
+message StartStopRelationshipTrappingResult { MpExecutionDetails execution = 1000; }
+```
+
+Both identities are required; `start_trapping` defaults to `false` (stop). The
+operation ID is `relationship_operations.start_stop_relationship_trapping`.
+
+## Get Point to Point Relationship Statistics
+
+```proto
+rpc GetPointToPointRelationshipStatistics(GetPointToPointRelationshipStatisticsRequest) returns (GetPointToPointRelationshipStatisticsResult);
+message GetPointToPointRelationshipStatisticsRequest { optional CollectionObjectName relationship_name = 1; }
+message GetPointToPointRelationshipStatisticsResult {
+  optional double delta_x = 1;
+  optional double delta_y = 2;
+  optional double delta_z = 3;
+  optional double delta_magnitude = 4;
+  optional CollectionObjectName reference_frame = 5;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The operation ID is
+`relationship_operations.get_point_to_point_relationship_statistics`. All ten
+RPCs prohibit automatic replay.
+
+## Associated-Data and Auto-Filter Types
+
+```proto
+message PointNameList {
+  repeated PointName values = 1;
+}
+
+message CollectionObjectNameList {
+  repeated CollectionObjectName values = 1;
+}
+
+message FilterProximitySettings {
+  optional double surface_inclusion_proximity = 1;
+  optional double edge_exclusion_proximity = 2;
+  optional double planar_inclusion_proximity = 3;
+  optional double planar_exclusion_proximity = 4;
+  optional double radial_inclusion_proximity = 5;
+  optional double geometry_extraction_tolerance = 6;
+  optional OffsetDirectionType surface_proximity_mode = 7;
+  optional OffsetDirectionType planar_proximity_mode = 8;
+  optional OffsetDirectionType radial_proximity_mode = 9;
+  optional bool project_to_plane = 10;
+  optional bool assert_plane_boundaries = 11;
+}
+
+message RelationshipAssociatedData {
+  string relationship_type = 1;
+  repeated PointName individual_points = 2;
+  repeated CollectionObjectName point_groups = 3;
+  repeated CollectionObjectName point_clouds = 4;
+  repeated CollectionObjectName objects = 5;
+}
+
+message PointsToPointsRelationshipAssociatedData {
+  repeated PointName nominal_points = 1;
+  repeated PointName actual_points = 2;
+}
+```
+
+`FilterProximitySettings` replaces the excluded MP-only value-construction
+helper. Its exact defaults are `0.1`, `0.1`, `0.5`, `0.1`, `0.1`, `0.01`,
+`BOTH` for all three modes, `true`, and `false`. `CloudThinningOptions` is the
+shared type documented with Construction Operations / Point Clouds. The list
+wrapper messages preserve omitted-versus-supplied presence where the MP setter
+can treat those cases differently.
+
+## Set Group To Nominal Group View Zooming
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `SetGroupToNominalGroupViewZooming` |
+| Operation ID | `relationship_operations.set_group_to_nominal_group_view_zooming` |
+| Validation | At Risk - nominal-group Relationship fixture |
+
+```proto
+rpc SetGroupToNominalGroupViewZooming(SetGroupToNominalGroupViewZoomingRequest) returns (SetGroupToNominalGroupViewZoomingResult);
+message SetGroupToNominalGroupViewZoomingRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional bool use_closest_point = 2;
+  optional bool show_closest_point_watch_window = 3;
+  optional bool use_view_zooming = 4;
+  optional bool ignore_points_beyond_threshold = 5;
+  optional double proximity_threshold = 6;
+}
+message SetGroupToNominalGroupViewZoomingResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The five defaults are `true`, `false`, `true`, `true`, and `0.01`.
+
+## Set Relationship Associated Data
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `SetRelationshipAssociatedData` |
+| Operation ID | `relationship_operations.set_relationship_associated_data` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc SetRelationshipAssociatedData(SetRelationshipAssociatedDataRequest) returns (SetRelationshipAssociatedDataResult);
+message SetRelationshipAssociatedDataRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional PointNameList individual_points = 2;
+  optional CollectionObjectNameList point_groups = 3;
+  optional CollectionObjectNameList point_clouds = 4;
+  optional CollectionObjectNameList objects = 5;
+  optional bool ignore_empty_arguments = 6;
+}
+message SetRelationshipAssociatedDataResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Omitted list messages do not call the corresponding SDK setter.
+`ignore_empty_arguments` defaults to `true`.
+
+## Get Relationship Associated Data
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetRelationshipAssociatedData` |
+| Operation ID | `relationship_operations.get_relationship_associated_data` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc GetRelationshipAssociatedData(GetRelationshipAssociatedDataRequest) returns (GetRelationshipAssociatedDataResult);
+message GetRelationshipAssociatedDataRequest {
+  optional CollectionObjectName relationship_name = 1;
+}
+message GetRelationshipAssociatedDataResult {
+  optional RelationshipAssociatedData associated_data = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+All five exact outputs are preserved.
+
+## Set Points to Points Relationship Associated Data
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `SetPointsToPointsRelationshipAssociatedData` |
+| Operation ID | `relationship_operations.set_points_to_points_relationship_associated_data` |
+| Validation | At Risk - paired-Points Relationship fixture |
+
+```proto
+rpc SetPointsToPointsRelationshipAssociatedData(SetPointsToPointsRelationshipAssociatedDataRequest) returns (SetPointsToPointsRelationshipAssociatedDataResult);
+message SetPointsToPointsRelationshipAssociatedDataRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional PointNameList nominal_points = 2;
+  optional PointNameList actual_points = 3;
+  optional bool ignore_empty_arguments = 4;
+}
+message SetPointsToPointsRelationshipAssociatedDataResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+## Get Points to Points Relationship Associated Data
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetPointsToPointsRelationshipAssociatedData` |
+| Operation ID | `relationship_operations.get_points_to_points_relationship_associated_data` |
+| Validation | At Risk - paired-Points Relationship fixture |
+
+```proto
+rpc GetPointsToPointsRelationshipAssociatedData(GetPointsToPointsRelationshipAssociatedDataRequest) returns (GetPointsToPointsRelationshipAssociatedDataResult);
+message GetPointsToPointsRelationshipAssociatedDataRequest {
+  optional CollectionObjectName relationship_name = 1;
+}
+message GetPointsToPointsRelationshipAssociatedDataResult {
+  optional PointsToPointsRelationshipAssociatedData associated_data = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+## Auto Filter Clouds to Nominal Geometry 3D
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `AutoFilterCloudsToNominalGeometry3D` |
+| Operation ID | `relationship_operations.auto_filter_clouds_to_nominal_geometry_3d` |
+| Validation | At Risk - cloud and Relationship fixture |
+
+```proto
+rpc AutoFilterCloudsToNominalGeometry3D(AutoFilterCloudsToNominalGeometry3DRequest) returns (AutoFilterCloudsToNominalGeometry3DResult);
+message AutoFilterCloudsToNominalGeometry3DRequest {
+  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated CollectionObjectName clouds = 2;
+  optional CloudThinningOptions cloud_thinning_settings = 3;
+  optional FilterProximitySettings filter_proximity_settings_3d = 4;
+  optional bool use_feature_specific_filter_settings = 5;
+}
+message AutoFilterCloudsToNominalGeometry3DResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The two lists are required. Omitted option messages use their exact defaults;
+feature-specific filtering defaults to `false`.
+
+## Auto Filter Clouds to Nominal Geometry 2D
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `AutoFilterCloudsToNominalGeometry2D` |
+| Operation ID | `relationship_operations.auto_filter_clouds_to_nominal_geometry_2d` |
+| Validation | At Risk - cloud and Relationship fixture |
+
+```proto
+rpc AutoFilterCloudsToNominalGeometry2D(AutoFilterCloudsToNominalGeometry2DRequest) returns (AutoFilterCloudsToNominalGeometry2DResult);
+message AutoFilterCloudsToNominalGeometry2DRequest {
+  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated CollectionObjectName clouds = 2;
+  optional CloudThinningOptions cloud_thinning_settings = 3;
+  optional FilterProximitySettings filter_proximity_settings_2d = 4;
+  optional double geometry_extraction_tolerance = 5;
+  optional bool use_feature_specific_filter_settings = 6;
+}
+message AutoFilterCloudsToNominalGeometry2DResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+`geometry_extraction_tolerance` defaults to `0.01`. The feature-specific flag
+is an exact SA 2026.1 input absent from ObjectiveSA's older target.
+
+## Auto Filter Points to Nominal Geometry 3D
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `AutoFilterPointsToNominalGeometry3D` |
+| Operation ID | `relationship_operations.auto_filter_points_to_nominal_geometry_3d` |
+| Validation | At Risk - Point and Relationship fixture |
+
+```proto
+rpc AutoFilterPointsToNominalGeometry3D(AutoFilterPointsToNominalGeometry3DRequest) returns (AutoFilterPointsToNominalGeometry3DResult);
+message AutoFilterPointsToNominalGeometry3DRequest {
+  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated PointName points = 2;
+  optional FilterProximitySettings filter_proximity_settings_3d = 3;
+}
+message AutoFilterPointsToNominalGeometry3DResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+## Auto Filter Points/Groups/Clouds to Surface Faces
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `AutoFilterPointsGroupsCloudsToSurfaceFaces` |
+| Operation ID | `relationship_operations.auto_filter_points_groups_clouds_to_surface_faces` |
+| Validation | At Risk - Point, Group, Cloud, and Surface fixture |
+
+```proto
+rpc AutoFilterPointsGroupsCloudsToSurfaceFaces(AutoFilterPointsGroupsCloudsToSurfaceFacesRequest) returns (AutoFilterPointsGroupsCloudsToSurfaceFacesResult);
+message AutoFilterPointsGroupsCloudsToSurfaceFacesRequest {
+  optional PointNameList points = 1;
+  optional CollectionObjectNameList groups = 2;
+  optional CollectionObjectNameList clouds = 3;
+  optional double surface_offset = 4;
+  optional double edge_offset = 5;
+  optional OffsetDirectionType offset_direction = 6;
+  optional bool enforce_max_points_per_face_in_output = 7;
+  optional int32 max_points_per_face = 8;
+  repeated CollectionObjectName surfaces = 9;
+  optional CloudThinningOptions cloud_thinning_settings = 10;
+  optional string output_cloud_base_name = 11;
+  optional bool use_face_ids_for_suffix = 12;
+}
+message AutoFilterPointsGroupsCloudsToSurfaceFacesResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The defaults are `0.1`, `0.1`, `BOTH`, `false`, `0`, the shared thinning
+default, `InspAutoFilteredCloud`, and `true`. Surfaces are required. None of
+these operations is automatically replayed.
+
+## Extract Geometry From Point Clouds
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `ExtractGeometryFromPointClouds` |
+| Operation ID | `relationship_operations.extract_geometry_from_point_clouds` |
+| Validation | At Risk - Cloud and geometry-extraction fixture |
+
+```proto
+rpc ExtractGeometryFromPointClouds(ExtractGeometryFromPointCloudsRequest) returns (ExtractGeometryFromPointCloudsResult);
+message ExtractGeometryFromPointCloudsRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional GeometryType geometry_type = 2;
+  optional CollectionObjectName cloud_name = 3;
+  optional PointNameList bounding_points = 4;
+  repeated PointName seed_points = 5;
+  optional double tolerance = 6;
+  optional bool reverse_normal = 7;
+  optional int32 planar_point_count = 8;
+}
+message ExtractGeometryFromPointCloudsResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Geometry type defaults to `CIRCLE`; tolerance, normal reversal, and planar
+Point count default to `0.1`, `false`, and `1000`. This operation has no
+ObjectiveSA parity because it was added after ObjectiveSA's SA target.
+
+## Create Points to Objects Map
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `CreatePointsToObjectsMap` |
+| Operation ID | `relationship_operations.create_points_to_objects_map` |
+| Validation | At Risk - Points-to-objects map fixture |
+
+```proto
+rpc CreatePointsToObjectsMap(CreatePointsToObjectsMapRequest) returns (CreatePointsToObjectsMapResult);
+message CreatePointsToObjectsMapRequest {
+  optional PointNameList points = 1;
+  optional CollectionObjectNameList groups = 2;
+  repeated CollectionObjectName objects = 3;
+  optional double proximity_tolerance = 4;
+  optional string points_to_objects_map_name = 5;
+}
+message CreatePointsToObjectsMapResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Objects and the map name are required. Points and Groups are independently
+optional, and the tolerance defaults to `0`. The server retains no map state.
+
+## Get Objects From Points to Objects Map (Point List)
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetObjectsFromPointsToObjectsMapPointList` |
+| Operation ID | `relationship_operations.get_objects_from_points_to_objects_map_point_list` |
+| Validation | At Risk - Points-to-objects map fixture |
+
+```proto
+rpc GetObjectsFromPointsToObjectsMapPointList(GetObjectsFromPointsToObjectsMapPointListRequest) returns (GetObjectsFromPointsToObjectsMapPointListResult);
+message GetObjectsFromPointsToObjectsMapPointListRequest {
+  optional string points_to_objects_map_name = 1;
+  repeated PointName points = 2;
+}
+message GetObjectsFromPointsToObjectsMapPointListResult {
+  repeated CollectionObjectName objects = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The exact SA 2026.1 SDK uses a Point Name Ref List even though installed prose
+describes an older singular-Point input.
+
+## Compute Geometry Relationship Uncertainties
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `ComputeGeometryRelationshipUncertainties` |
+| Operation ID | `relationship_operations.compute_geometry_relationship_uncertainties` |
+| Validation | At Risk - uncertainty Relationship fixture |
+
+```proto
+rpc ComputeGeometryRelationshipUncertainties(ComputeGeometryRelationshipUncertaintiesRequest) returns (ComputeGeometryRelationshipUncertaintiesResult);
+message ComputeGeometryRelationshipUncertaintiesRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional bool display_results = 2;
+}
+message ComputeGeometryRelationshipUncertaintiesResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+`display_results` defaults to `false`. SA may make the Relationship dormant
+after computing uncertainty; the server does not reverse that native effect.
+
+## Make Cloud to Swatch Relationship
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `MakeCloudToSwatchRelationship` |
+| Operation ID | `relationship_operations.make_cloud_to_swatch_relationship` |
+| Validation | At Risk - Cloud and Swatch Relationship fixture |
+
+```proto
+rpc MakeCloudToSwatchRelationship(MakeCloudToSwatchRelationshipRequest) returns (MakeCloudToSwatchRelationshipResult);
+message MakeCloudToSwatchRelationshipRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional CollectionObjectName input_cloud_name = 2;
+  optional string surface_face_list = 3;
+  optional PointName reference_point = 4;
+  optional double maximum_radial_offset = 5;
+  optional double minimum_axial_offset = 6;
+  optional double maximum_axial_offset = 7;
+  optional CollectionObjectName cardinal_point_group_name = 8;
+}
+message MakeCloudToSwatchRelationshipResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The three offsets default to `0.125`, `-0.125`, and `0.125`. The remaining
+identities and exact `Surface Face List` string are required. None of these
+operations is automatically replayed.
+
+## Final Reconciled Subgroup Types
+
+```proto
+message SigmoidalGapFitConstraints {
+  bool use_sigmoidal_gap_constraints = 1;
+  double minimum_gap_boundary = 2;
+  double minimum_gap_weight = 3;
+  double maximum_gap_boundary = 4;
+  double maximum_gap_weight = 5;
+  double nominal_gap = 6;
+  double nominal_gap_weight = 7;
+  double gradient_steepness_factor = 8;
+}
+
+message RelationshipStatusFlags {
+  bool dormant = 1;
+  bool success = 2;
+  bool measured = 3;
+  bool failed = 4;
+  bool unmeasured = 5;
+}
+```
+
+The status flags are preserved independently and are not collapsed into a
+Briosa enum.
+
+## Get Relationship Sigmoidal Gap Fit Constraints
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetRelationshipSigmoidalGapFitConstraints` |
+| Operation ID | `relationship_operations.get_relationship_sigmoidal_gap_fit_constraints` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc GetRelationshipSigmoidalGapFitConstraints(GetRelationshipSigmoidalGapFitConstraintsRequest) returns (GetRelationshipSigmoidalGapFitConstraintsResult);
+message GetRelationshipSigmoidalGapFitConstraintsRequest {
+  optional CollectionObjectName relationship_name = 1;
+}
+message GetRelationshipSigmoidalGapFitConstraintsResult {
+  optional SigmoidalGapFitConstraints constraints = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+The RPC uses the exact MP word `Sigmoidal` and returns all eight exact values.
+
+## Set Object to Object Direction Relationship Tolerances
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `SetObjectToObjectDirectionRelationshipTolerances` |
+| Operation ID | `relationship_operations.set_object_to_object_direction_relationship_tolerances` |
+| Validation | At Risk - object-direction Relationship fixture |
+
+```proto
+rpc SetObjectToObjectDirectionRelationshipTolerances(SetObjectToObjectDirectionRelationshipTolerancesRequest) returns (SetObjectToObjectDirectionRelationshipTolerancesResult);
+message SetObjectToObjectDirectionRelationshipTolerancesRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional ToleranceScalarOptions angle_between_vectors_tolerances = 2;
+  optional ToleranceScalarOptions mutual_perpendicular_length_tolerances = 3;
+}
+message SetObjectToObjectDirectionRelationshipTolerancesResult {
+  MpExecutionDetails execution = 1000;
+}
+```
+
+Each omitted tolerance value uses the exact all-limits-disabled zero default.
+
+## Get Geom Relationship Criteria Name List
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetGeomRelationshipCriteriaNameList` |
+| Operation ID | `relationship_operations.get_geom_relationship_criteria_name_list` |
+| Validation | At Risk - geometry Relationship fixture |
+
+```proto
+rpc GetGeomRelationshipCriteriaNameList(GetGeomRelationshipCriteriaNameListRequest) returns (GetGeomRelationshipCriteriaNameListResult);
+message GetGeomRelationshipCriteriaNameListRequest {
+  optional CollectionObjectName relationship_name = 1;
+  optional bool include_all_criteria = 2;
+}
+message GetGeomRelationshipCriteriaNameListResult {
+  repeated string criteria_name_list = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+`include_all_criteria` defaults to `false`.
+
+## Get Relationship Status
+
+| Contract Item | Value |
+| --- | --- |
+| Status | Next |
+| RPC | `GetRelationshipStatus` |
+| Operation ID | `relationship_operations.get_relationship_status` |
+| Validation | At Risk - Relationship fixture |
+
+```proto
+rpc GetRelationshipStatus(GetRelationshipStatusRequest) returns (GetRelationshipStatusResult);
+message GetRelationshipStatusRequest {
+  optional CollectionObjectName relationship_name = 1;
+}
+message GetRelationshipStatusResult {
+  optional RelationshipStatusFlags status = 1;
+  MpExecutionDetails execution = 1000;
+}
+```
+
+No assumption is made that the five SA flags are mutually exclusive. None of
+these operations is automatically replayed.
+
 ## Geom Relationship Ignore Input Points
 
 <span className="catalog-status catalog-status--next">Next</span>

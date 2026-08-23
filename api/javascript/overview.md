@@ -38,3 +38,17 @@ underlying service contract, use the [gRPC API Reference](/api/grpc).
 The sidebar's **Wave A MP Commands (Next)** section defines the planned
 JavaScript functions and TypeScript input/result shapes for all selected
 commands, including reviewed defaults, examples, and gRPC links.
+
+The **Wave B MP Commands (Next)** section currently adds the reviewed Cloud and
+Mesh Operations functions, the Construction Operations root functions, and the
+BSpines, Callout Views and Callouts, Circles, Collections, Cones, Cylinders,
+Ellipses, Ellipsoids, Folders, Frames, Lines, Other MP Types, Perimeters,
+Planes, Point Clouds, Points and Groups, Polygonized Surfaces, Scale Bars,
+Spheres, Surfaces, and Vectors and Vector Groups subgroups, plus GDT Analysis,
+GDT Construction, and 171 selected operations from 175 reviewed Instrument
+Operations root and subgroup
+commands, plus all twenty-five Robot Calibration Appliance Node Operations and
+all thirty-three Robot Operations functions, plus fifty selected functions from
+all fifty-five reviewed Wave B Relationship Operations root commands, plus four
+final reconciled subgroup functions,
+including their shared value types.

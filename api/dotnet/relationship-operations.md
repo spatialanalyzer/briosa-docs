@@ -48,6 +48,980 @@ await briosa.EnableDisableRelationshipsForOptimizationAsync(relationships: relat
 Completes without a command value. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
+## Wave B Root-Group Types
+
+```csharp
+public enum GeometryRelationshipPointEditMode
+{
+    PointList,
+    PointGraph,
+    SubSamplerSettings,
+}
+
+public sealed record GeometryRelationshipOutlierFilterMetrics(
+    double FirstPassRmsError,
+    double FirstPassMaximumError,
+    double FirstPassMinimumError,
+    double FirstPassAverageError,
+    double FinalPassRmsError,
+    double FinalPassMaximumError,
+    double FinalPassMinimumError,
+    double FinalPassAverageError,
+    int TotalInputPointCount,
+    int ExcludePointCount);
+
+public sealed record RelationshipWatchWindowUdpSettings
+{
+    public bool Enabled { get; init; }
+    public bool Broadcast { get; init; } = true;
+    public string IpAddress { get; init; } = "";
+    public int Port { get; init; } = 10000;
+}
+
+public sealed record RelationshipWatchWindowTemplateOptions
+{
+    public int LinearPrecision { get; init; } = 4;
+    public int AngularPrecision { get; init; } = 3;
+    public Font Font { get; init; } = new();
+    public Color TextColor { get; init; } = new(0, 0, 255);
+    public Color BackgroundColor { get; init; } = new(255, 255, 255);
+    public Color HighlightColor { get; init; } = new(255, 0, 0);
+    public bool ShowDeviationXRx { get; init; } = true;
+    public bool ShowDeviationYRy { get; init; } = true;
+    public bool ShowDeviationZRz { get; init; } = true;
+    public bool ShowDeviationMagnitude { get; init; } = true;
+    public RelationshipWatchWindowUdpSettings UdpNetworkTransmitSettings { get; init; } = new();
+    public bool TransparentBackground { get; init; }
+    public bool HideUnits { get; init; }
+}
+```
+
+## Generate Geometry Relationship Summary
+
+[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
+
+```csharp
+public Task GenerateGeometryRelationshipSummaryAsync(
+    IEnumerable<CollectionItemName> relationshipRefList,
+    string summaryTableName = "Geometry Relationship Summary",
+    CancellationToken cancellationToken = default);
+```
+
+## Edit Geometry Relationship Point List
+
+[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
+
+```csharp
+public Task EditGeometryRelationshipPointListAsync(
+    CollectionObjectName relationshipName,
+    GeometryRelationshipPointEditMode pointEditMode = GeometryRelationshipPointEditMode.PointList,
+    CancellationToken cancellationToken = default);
+```
+
+The method opens an SA dialog. Cancellation does not prove that the interaction
+stopped.
+
+## Filter Geometry Relationship Outlier Cloud Points
+
+[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+
+```csharp
+public Task<GeometryRelationshipOutlierFilterMetrics> FilterGeometryRelationshipOutlierCloudPointsAsync(
+    CollectionObjectName relationshipName,
+    double sigmaThreshold = 3.0,
+    bool modifyExistingInputClouds = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Relationship Watch Window Template
+
+[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
+
+```csharp
+public Task RelationshipWatchWindowTemplateAsync(
+    CancellationToken cancellationToken = default);
+
+public Task RelationshipWatchWindowTemplateAsync(
+    CollectionObjectName? watchWindowTemplateName,
+    RelationshipWatchWindowTemplateOptions? options = null,
+    CancellationToken cancellationToken = default);
+```
+
+The shorter overload uses every exact MP default. `null` options preserve every
+default while allowing a caller-supplied template identity.
+
+## Make Point to Point Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
+
+```csharp
+public Task MakePointToPointRelationshipAsync(
+    CollectionObjectName relationshipName,
+    PointName firstPointName,
+    PointName secondPointName,
+    ToleranceVectorOptions? tolerance = null,
+    ToleranceVectorOptions? constraint = null,
+    CancellationToken cancellationToken = default);
+```
+
+The server maps omitted option values to the distinct exact MP tolerance and
+constraint defaults.
+
+## Make Frame to Frame Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
+
+```csharp
+public Task MakeFrameToFrameRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstFrameName,
+    CollectionObjectName secondFrameName,
+    ToleranceScalarOptions? orientationTolerance = null,
+    ToleranceVectorOptions? positionTolerance = null,
+    CancellationToken cancellationToken = default);
+```
+
+Omitted tolerance values use the exact all-limits-disabled defaults. These
+methods retain no Relationship state and are never automatically replayed.
+
+## Dynamic Relationship Types
+
+```csharp
+public enum DynamicPointMode
+{
+    IntersectionLineAndPlane,
+    IntersectionCylinderAndPlane,
+    IntersectionConeAndPlane,
+    IntersectionThreePlanes,
+    MidPointPerpendicularToTwoLines,
+}
+
+public enum DynamicLineMode
+{
+    ConeAxis,
+    CylinderAxis,
+    IntersectionOfTwoPlanes,
+    BisectTwoLines,
+    SlotCenterlineAlongLength,
+}
+
+public enum DynamicPlaneMode
+{
+    BisectTwoPlanes,
+    TwoConesHoldNormalToBestFitPlane,
+    TwoConesHoldNormalToFirstConeAxis,
+    TwoConesHoldNormalToSecondConeAxis,
+    ConeAndCylinderHoldNormalToBestFitPlane,
+    ConeAndCylinderHoldNormalToConeAxis,
+    ConeAndCylinderHoldNormalToCylinderAxis,
+    OffsetPlaneFromPlane,
+}
+
+public enum DynamicCircleMode
+{
+    CylinderAndPlaneHoldPlaneNormal,
+    CylinderAndPlaneHoldCylinderAxis,
+    ConeAndPlaneHoldPlaneNormal,
+    ConeAndPlaneHoldConeAxis,
+    SphereAndPlaneIntersection,
+    TwoConesIntersection,
+    ConeAndCylinderIntersection,
+}
+
+public enum DynamicEllipseMode
+{
+    CylinderAndPlaneIntersection,
+    ConeAndPlaneIntersection,
+}
+```
+
+`TwoConesHoldNormalToFirstConeAxis` maps internally to SA's exact misspelled
+`Twp Cones...` SDK literal.
+
+## Make Points to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
+
+```csharp
+public Task MakePointsToObjectsRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<PointName> pointsInRelationship,
+    IEnumerable<CollectionObjectName> objectsInRelationship,
+    ProjectionOptions? projectionOptions = null,
+    bool autoUpdateAVectorGroup = false,
+    CancellationToken cancellationToken = default);
+```
+
+`null` projection options use the exact `Object To Probe Vectors` default with
+all projection controls disabled.
+
+## Make Points to Points Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
+
+```csharp
+public Task MakePointsToPointsRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<PointName> nominalPoints,
+    IEnumerable<PointName> measuredPoints,
+    bool autoUpdateAVectorGroup = false,
+    ToleranceVectorOptions? tolerance = null,
+    ToleranceVectorOptions? constraint = null,
+    CancellationToken cancellationToken = default);
+```
+
+Omitted tolerance and constraint values use their distinct exact MP defaults.
+
+## Make Groups to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
+
+```csharp
+public Task MakeGroupsToObjectsRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<CollectionObjectName> pointGroupsInRelationship,
+    IEnumerable<CollectionObjectName> objectsInRelationship,
+    ProjectionOptions? projectionOptions = null,
+    bool autoUpdateAVectorGroup = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Object to Object Direction Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
+
+```csharp
+public Task MakeObjectToObjectDirectionRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstObjectInRelationship,
+    CollectionObjectName secondObjectInRelationship,
+    double nominalAngle = 0.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Point Clouds to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
+
+```csharp
+public Task MakePointCloudsToObjectsRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<CollectionObjectName> pointCloudsInRelationship,
+    IEnumerable<CollectionObjectName> objectsInRelationship,
+    ProjectionOptions? projectionOptions = null,
+    bool autoUpdateAVectorGroup = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Group to Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
+
+```csharp
+public Task MakeGroupToGroupRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstGroupName,
+    CollectionObjectName secondGroupName,
+    bool autoUpdateAVectorGroup = false,
+    ToleranceVectorOptions? tolerance = null,
+    ToleranceVectorOptions? constraint = null,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Group to Nominal Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+
+```csharp
+public Task MakeGroupToNominalGroupRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName nominalGroupName,
+    CollectionObjectName measuredGroupName,
+    bool autoUpdateAVectorGroup = false,
+    bool useClosestPoint = true,
+    bool displayClosestPointWatchWindow = false,
+    bool useViewZoomingWithProximity = false,
+    bool ignorePointsBeyondThreshold = false,
+    double proximityThreshold = 0.01,
+    ToleranceVectorOptions? tolerance = null,
+    ToleranceVectorOptions? constraint = null,
+    double fitWeight = 1.0,
+    CancellationToken cancellationToken = default);
+```
+
+The defaults avoid opening the watch window or changing view zoom while
+preserving closest-point matching.
+
+## Make Average Point Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-average-point-relationship)
+
+```csharp
+public Task MakeAveragePointRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<PointName> pointsInRelationship,
+    PointName? averagePointName = null,
+    PointName? nominalPointName = null,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Geometry Fit Only Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+
+```csharp
+public Task MakeGeometryFitOnlyRelationshipAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<CollectionObjectName> pointGroupsToFit,
+    GeometryType geometryType,
+    CollectionObjectName? resultingObjectName = null,
+    string? fitProfileName = null,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Geometry Fit and Compare to Nominal Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+
+```csharp
+public Task MakeGeometryFitAndCompareToNominalRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName nominalGeometry,
+    IEnumerable<CollectionObjectName> pointGroupsToFit,
+    CollectionObjectName? resultingObjectName = null,
+    string? fitProfileName = null,
+    CancellationToken cancellationToken = default);
+```
+
+The client preserves MP partial success through the normal Briosa execution
+outcome model. These methods retain no Relationship state and never
+automatically replay uncertain work.
+
+## Relationship Fit and Statistics Types
+
+```csharp
+public enum SolverMode
+{
+    GaussNewton,
+    LevenbergMarquardt,
+    GaussNewtonWithGradientSearch,
+    DirectSearch,
+}
+
+public sealed record FitDofOptions
+{
+    public bool AllowX { get; init; } = true;
+    public bool AllowY { get; init; } = true;
+    public bool AllowZ { get; init; } = true;
+    public bool AllowRx { get; init; } = true;
+    public bool AllowRy { get; init; } = true;
+    public bool AllowRz { get; init; } = true;
+    public bool RotateAboutCentroid { get; init; } = true;
+}
+
+public sealed record RelationshipFitResult(
+    Transform TransformInReference,
+    WorldTransform TransformInWorking,
+    WorldTransform TransformInWorld,
+    double FitObjectiveValue);
+
+public sealed record GeneralRelationshipStatistics(
+    double AbsoluteMaxDeviation,
+    double Rms,
+    bool HasSignedDeviation,
+    double SignedMaxDeviation,
+    double SignedMinDeviation);
+
+public sealed record PointsToObjectsRelationshipStatistics(
+    double AbsoluteMaxDeviation,
+    double MaxDeviation,
+    double MinDeviation,
+    double AvgDeviation,
+    double Rms,
+    int CandidatePointCount,
+    int SampledPointCount,
+    int RejectedPointCount,
+    int UsedPointCount,
+    int OutOfTolerancePointCount);
+
+public sealed record PointToPointRelationshipStatistics(
+    double DeltaX,
+    double DeltaY,
+    double DeltaZ,
+    double DeltaMagnitude,
+    CollectionObjectName ReferenceFrame);
+```
+
+`WorldTransform` preserves the scale returned with each working/world matrix.
+
+## Make Geometry Compare Only Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
+
+```csharp
+public Task MakeGeometryCompareOnlyRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName nominalGeometry,
+    CollectionObjectName measuredGeometry,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Dynamic Point Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
+
+```csharp
+public Task MakeDynamicPointRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstReferenceGeometry,
+    CollectionObjectName secondReferenceGeometry,
+    DynamicPointMode constructionMode = DynamicPointMode.IntersectionLineAndPlane,
+    CollectionObjectName? thirdReferenceGeometry = null,
+    CancellationToken cancellationToken = default);
+```
+
+The third reference is optional unless the selected construction mode needs it.
+
+## Make Dynamic Line Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
+
+```csharp
+public Task MakeDynamicLineRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstReferenceGeometry,
+    CollectionObjectName secondReferenceGeometry,
+    DynamicLineMode constructionMode = DynamicLineMode.IntersectionOfTwoPlanes,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Dynamic Plane Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
+
+```csharp
+public Task MakeDynamicPlaneRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstReferenceGeometry,
+    CollectionObjectName secondReferenceGeometry,
+    DynamicPlaneMode constructionMode = DynamicPlaneMode.BisectTwoPlanes,
+    double offsetPlaneOffset = 0.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Dynamic Circle Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
+
+```csharp
+public Task MakeDynamicCircleRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstReferenceGeometry,
+    CollectionObjectName secondReferenceGeometry,
+    DynamicCircleMode constructionMode = DynamicCircleMode.CylinderAndPlaneHoldPlaneNormal,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Dynamic Ellipse Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
+
+```csharp
+public Task MakeDynamicEllipseRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName firstReferenceGeometry,
+    CollectionObjectName secondReferenceGeometry,
+    DynamicEllipseMode constructionMode = DynamicEllipseMode.CylinderAndPlaneIntersection,
+    CancellationToken cancellationToken = default);
+```
+
+## Make Vector Group To Vector Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
+
+```csharp
+public Task MakeVectorGroupToVectorGroupRelationshipAsync(
+    CollectionObjectName newVgToVgRelationship,
+    CollectionObjectName referenceVectorGroup,
+    CollectionObjectName correspondingVectorGroup,
+    bool setOpposingVectorGroupPolarity = true,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Vector Group To Vector Group Cylindrical Zone
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+
+```csharp
+public Task SetVectorGroupToVectorGroupCylindricalZoneAsync(
+    CollectionObjectName vgToVgRelationship,
+    double radialOffset = 1.0,
+    double minimumAxialOffset = -10.0,
+    double maximumAxialOffset = 10.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Vector Group To Vector Group Fit Weights
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+
+```csharp
+public Task SetVectorGroupToVectorGroupFitWeightsAsync(
+    CollectionObjectName vgToVgRelationship,
+    double minimumGap = 0.0,
+    double minimumGapFitWeight = 10.0,
+    double maximumGap = 0.0,
+    double maximumGapFitWeight = 10.0,
+    double nominalGap = 0.0,
+    double nominalGapFitWeight = 1.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Vector Group To Vector Group Fit Gradient Factor
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+
+```csharp
+public Task SetVectorGroupToVectorGroupFitGradientFactorAsync(
+    CollectionObjectName vgToVgRelationship,
+    double fitGradientFactor = 50.0,
+    CancellationToken cancellationToken = default);
+```
+
+These methods retain no Relationship state and never automatically replay
+uncertain work.
+
+## Set Vector Group To Vector Group Relative Polarity
+
+```csharp
+public Task SetVectorGroupToVectorGroupRelativePolarityAsync(
+    CollectionObjectName vgToVgRelationship,
+    bool setOpposingVectorGroupPolarity = true,
+    CancellationToken cancellationToken = default);
+```
+
+## Delete Relationship
+
+```csharp
+public Task DeleteRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+The client adds no confirmation prompt.
+
+## Set Optimization Search Options
+
+```csharp
+public Task SetOptimizationSearchOptionsAsync(
+    int maxNumberOfStepSizeReduction = 5,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Optimization Perturbation Parameters
+
+```csharp
+public Task SetOptimizationPerturbationParametersAsync(
+    double lengthPerturbation = 0.0001,
+    double angularPerturbation = 0.0001,
+    double damping = 1.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Do Relationship Fit
+
+[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/relationship-operations#do-relationship-fit)
+
+```csharp
+public Task<RelationshipFitResult> DoRelationshipFitAsync(
+    string collectionContainingRelationships,
+    IEnumerable<CollectionObjectName> objectsToMove,
+    IEnumerable<CollectionInstrumentId> instrumentsToMove,
+    SolverMode solverMode = SolverMode.GaussNewton,
+    FitDofOptions? motionToAllow = null,
+    bool enableRandomizedStart = false,
+    bool useFitDialog = false,
+    CancellationToken cancellationToken = default);
+```
+
+Pass an empty sequence for either move category that is not used. `null` motion
+options allow every degree of freedom about the centroid. No fit dialog is
+shown by default.
+
+## Move Collections by Minimizing Relationships
+
+[MP command](/mp-command-catalog/commands/relationship-operations#move-collections-by-minimizing-relationships) · [gRPC contract](/api/grpc/relationship-operations#move-collections-by-minimizing-relationships)
+
+```csharp
+public Task MoveCollectionsByMinimizingRelationshipsAsync(
+    IEnumerable<string> collectionsToMove,
+    IEnumerable<CollectionObjectName> relationshipsToMinimize,
+    SolverMode solverMode = SolverMode.GaussNewton,
+    FitDofOptions? motionToAllow = null,
+    bool useFitDialog = false,
+    double convergenceThreshold = 0.0,
+    CancellationToken cancellationToken = default);
+```
+
+## Get General Relationship Statistics
+
+```csharp
+public Task<GeneralRelationshipStatistics> GetGeneralRelationshipStatisticsAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+## Get Points to Objects Relationship Statistics
+
+```csharp
+public Task<PointsToObjectsRelationshipStatistics> GetPointsToObjectsRelationshipStatisticsAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+The result includes SA 2026.1's `AvgDeviation` output.
+
+## Start/Stop Relationship Trapping
+
+```csharp
+public Task StartStopRelationshipTrappingAsync(
+    CollectionObjectName relationshipName,
+    CollectionInstrumentId instrumentId,
+    bool startTrapping = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Get Point to Point Relationship Statistics
+
+```csharp
+public Task<PointToPointRelationshipStatistics> GetPointToPointRelationshipStatisticsAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+These methods retain no Relationship or optimizer state and never
+automatically replay uncertain work.
+
+## Associated-Data and Auto-Filter Types
+
+```csharp
+public sealed record FilterProximitySettings(
+    double SurfaceInclusionProximity = 0.1,
+    double EdgeExclusionProximity = 0.1,
+    double PlanarInclusionProximity = 0.5,
+    double PlanarExclusionProximity = 0.1,
+    double RadialInclusionProximity = 0.1,
+    double GeometryExtractionTolerance = 0.01,
+    OffsetDirectionType SurfaceProximityMode = OffsetDirectionType.Both,
+    OffsetDirectionType PlanarProximityMode = OffsetDirectionType.Both,
+    OffsetDirectionType RadialProximityMode = OffsetDirectionType.Both,
+    bool ProjectToPlane = true,
+    bool AssertPlaneBoundaries = false);
+
+public sealed record RelationshipAssociatedData(
+    string RelationshipType,
+    IReadOnlyList<PointName> IndividualPoints,
+    IReadOnlyList<CollectionObjectName> PointGroups,
+    IReadOnlyList<CollectionObjectName> PointClouds,
+    IReadOnlyList<CollectionObjectName> Objects);
+
+public sealed record PointsToPointsRelationshipAssociatedData(
+    IReadOnlyList<PointName> NominalPoints,
+    IReadOnlyList<PointName> ActualPoints);
+```
+
+Constructing `FilterProximitySettings` locally replaces the excluded MP-only
+`Make Auto Filter Proximity Settings` helper. `CloudThinningOptions` is the
+shared client value documented with Construction Operations / Point Clouds.
+
+## Set Group To Nominal Group View Zooming
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+
+```csharp
+public Task SetGroupToNominalGroupViewZoomingAsync(
+    CollectionObjectName relationshipName,
+    bool useClosestPoint = true,
+    bool showClosestPointWatchWindow = false,
+    bool useViewZooming = true,
+    bool ignorePointsBeyondThreshold = true,
+    double proximityThreshold = 0.01,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-associated-data)
+
+```csharp
+public Task SetRelationshipAssociatedDataAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<PointName>? individualPoints = null,
+    IEnumerable<CollectionObjectName>? pointGroups = null,
+    IEnumerable<CollectionObjectName>? pointClouds = null,
+    IEnumerable<CollectionObjectName>? objects = null,
+    bool ignoreEmptyArguments = true,
+    CancellationToken cancellationToken = default);
+```
+
+`null` omits that exact SDK setter; a supplied empty sequence remains a
+supplied list. The client retains no associated-data state.
+
+## Get Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-associated-data)
+
+```csharp
+public Task<RelationshipAssociatedData> GetRelationshipAssociatedDataAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+## Set Points to Points Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
+
+```csharp
+public Task SetPointsToPointsRelationshipAssociatedDataAsync(
+    CollectionObjectName relationshipName,
+    IEnumerable<PointName>? nominalPoints = null,
+    IEnumerable<PointName>? actualPoints = null,
+    bool ignoreEmptyArguments = true,
+    CancellationToken cancellationToken = default);
+```
+
+## Get Points to Points Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
+
+```csharp
+public Task<PointsToPointsRelationshipAssociatedData> GetPointsToPointsRelationshipAssociatedDataAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+## Auto Filter Clouds to Nominal Geometry 3D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+
+```csharp
+public Task AutoFilterCloudsToNominalGeometry3DAsync(
+    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<CollectionObjectName> clouds,
+    CloudThinningOptions? cloudThinningSettings = null,
+    FilterProximitySettings? filterProximitySettings3D = null,
+    bool useFeatureSpecificFilterSettings = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Auto Filter Clouds to Nominal Geometry 2D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+
+```csharp
+public Task AutoFilterCloudsToNominalGeometry2DAsync(
+    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<CollectionObjectName> clouds,
+    CloudThinningOptions? cloudThinningSettings = null,
+    FilterProximitySettings? filterProximitySettings2D = null,
+    double geometryExtractionTolerance = 0.01,
+    bool useFeatureSpecificFilterSettings = false,
+    CancellationToken cancellationToken = default);
+```
+
+The feature-specific flag is part of the exact SA 2026.1 command even though
+it is absent from ObjectiveSA's SA 2024.1 implementation.
+
+## Auto Filter Points to Nominal Geometry 3D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+
+```csharp
+public Task AutoFilterPointsToNominalGeometry3DAsync(
+    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<PointName> points,
+    FilterProximitySettings? filterProximitySettings3D = null,
+    CancellationToken cancellationToken = default);
+```
+
+## Auto Filter Points/Groups/Clouds to Surface Faces
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+
+```csharp
+public Task AutoFilterPointsGroupsCloudsToSurfaceFacesAsync(
+    IEnumerable<CollectionObjectName> surfaces,
+    IEnumerable<PointName>? points = null,
+    IEnumerable<CollectionObjectName>? groups = null,
+    IEnumerable<CollectionObjectName>? clouds = null,
+    double surfaceOffset = 0.1,
+    double edgeOffset = 0.1,
+    OffsetDirectionType offsetDirection = OffsetDirectionType.Both,
+    bool enforceMaxPointsPerFaceInOutput = false,
+    int maxPointsPerFace = 0,
+    CloudThinningOptions? cloudThinningSettings = null,
+    string outputCloudBaseName = "InspAutoFilteredCloud",
+    bool useFaceIdsForSuffix = true,
+    CancellationToken cancellationToken = default);
+```
+
+The required Surface list comes first so all remaining inputs can preserve
+their MP defaults. These methods do not preflight SA state or replay uncertain
+work.
+
+## Extract Geometry From Point Clouds
+
+[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
+
+```csharp
+public Task ExtractGeometryFromPointCloudsAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName cloudName,
+    IEnumerable<PointName> seedPoints,
+    GeometryType geometryType = GeometryType.Circle,
+    IEnumerable<PointName>? boundingPoints = null,
+    double tolerance = 0.1,
+    bool reverseNormal = false,
+    int planarPointCount = 1000,
+    CancellationToken cancellationToken = default);
+```
+
+This SA 2026.1 operation has no ObjectiveSA SA 2024.1 counterpart.
+
+## Create Points to Objects Map
+
+[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/relationship-operations#create-points-to-objects-map)
+
+```csharp
+public Task CreatePointsToObjectsMapAsync(
+    string pointsToObjectsMapName,
+    IEnumerable<CollectionObjectName> objects,
+    IEnumerable<PointName>? points = null,
+    IEnumerable<CollectionObjectName>? groups = null,
+    double proximityTolerance = 0.0,
+    CancellationToken cancellationToken = default);
+```
+
+The map remains owned by SA. The client retains no local map registry or
+intermediate workflow state.
+
+## Get Objects From Points to Objects Map (Point List)
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+
+```csharp
+public Task<IReadOnlyList<CollectionObjectName>> GetObjectsFromPointsToObjectsMapPointListAsync(
+    string pointsToObjectsMapName,
+    IEnumerable<PointName> points,
+    CancellationToken cancellationToken = default);
+```
+
+This method follows the exact SA 2026.1 Point-list binding.
+
+## Compute Geometry Relationship Uncertainties
+
+[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
+
+```csharp
+public Task ComputeGeometryRelationshipUncertaintiesAsync(
+    CollectionObjectName relationshipName,
+    bool displayResults = false,
+    CancellationToken cancellationToken = default);
+```
+
+SA may make the Relationship dormant after computing uncertainty.
+
+## Make Cloud to Swatch Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+
+```csharp
+public Task MakeCloudToSwatchRelationshipAsync(
+    CollectionObjectName relationshipName,
+    CollectionObjectName inputCloudName,
+    string surfaceFaceList,
+    PointName referencePoint,
+    CollectionObjectName cardinalPointGroupName,
+    double maximumRadialOffset = 0.125,
+    double minimumAxialOffset = -0.125,
+    double maximumAxialOffset = 0.125,
+    CancellationToken cancellationToken = default);
+```
+
+This exact-target operation has no ObjectiveSA implementation. The client adds
+no Swatch preflight and never automatically replays uncertain work.
+
+## Final Reconciled Subgroup Types
+
+```csharp
+public sealed record SigmoidalGapFitConstraints(
+    bool UseSigmoidalGapConstraints,
+    double MinimumGapBoundary,
+    double MinimumGapWeight,
+    double MaximumGapBoundary,
+    double MaximumGapWeight,
+    double NominalGap,
+    double NominalGapWeight,
+    double GradientSteepnessFactor);
+
+public sealed record RelationshipStatusFlags(
+    bool Dormant,
+    bool Success,
+    bool Measured,
+    bool Failed,
+    bool Unmeasured);
+```
+
+## Get Relationship Sigmoidal Gap Fit Constraints
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+
+```csharp
+public Task<SigmoidalGapFitConstraints> GetRelationshipSigmoidalGapFitConstraintsAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+The method uses the exact MP word `Sigmoidal` and returns all eight values.
+
+## Set Object to Object Direction Relationship Tolerances
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+
+```csharp
+public Task SetObjectToObjectDirectionRelationshipTolerancesAsync(
+    CollectionObjectName relationshipName,
+    ToleranceScalarOptions? angleBetweenVectorsTolerances = null,
+    ToleranceScalarOptions? mutualPerpendicularLengthTolerances = null,
+    CancellationToken cancellationToken = default);
+```
+
+Omitted tolerance values use the exact all-limits-disabled zero defaults.
+
+## Get Geom Relationship Criteria Name List
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
+
+```csharp
+public Task<IReadOnlyList<string>> GetGeomRelationshipCriteriaNameListAsync(
+    CollectionObjectName relationshipName,
+    bool includeAllCriteria = false,
+    CancellationToken cancellationToken = default);
+```
+
+## Get Relationship Status
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-status)
+
+```csharp
+public Task<RelationshipStatusFlags> GetRelationshipStatusAsync(
+    CollectionObjectName relationshipName,
+    CancellationToken cancellationToken = default);
+```
+
+All five raw SA flags are returned without an invented client status enum.
+These methods retain no Relationship state and never replay uncertain work.
+
 ## Geom Relationship Ignore Input Points
 
 :::note[Status: Next]
