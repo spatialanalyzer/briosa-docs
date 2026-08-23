@@ -17,7 +17,7 @@ toc_max_heading_level: 2
 
 ```proto
 message ConstructScaleBarRequest {
-  optional CollectionObjectName scale_bar_name = 1;
+  optional CollectionItemName scale_bar_name = 1;
   optional PointName begin_target = 2;
   optional PointName end_target = 3;
   optional double length = 4;

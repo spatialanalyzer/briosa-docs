@@ -74,8 +74,8 @@ message GdtOptions {
   bool use_high_points = 1;
   bool extrapolate_axial_extent = 2;
   bool exclude_from_auto_evaluation = 3;
-  GdtDistanceBetweenMode distance_between_mode = 4;
-  GdtEvaluationMethod evaluation_method = 5;
+  optional GdtDistanceBetweenMode distance_between_mode = 4;
+  optional GdtEvaluationMethod evaluation_method = 5;
   bool create_actual_features = 6;
   bool create_solved_points = 7;
   double cross_section_criteria = 8;
@@ -353,9 +353,10 @@ message GetGdtExtendedOptionsResult {
 ```
 
 Set defaults are `false`, `true`, `true`, `Centroid`, `None`, `false`, `false`,
-`0.039370`, and `true` in field order. A licensed read probe confirmed that
-`GetGdtOptions` returns all nine corresponding values; `Evaluation Method` is
-the working exact SDK output name.
+`0.039370`, and `true` in field order. `GetGdtOptions` returns the seven Boolean
+and numeric values exposed by the exact MP command. It does not return Distance
+Between Mode or Evaluation Method, so those optional fields remain absent in a
+get result.
 
 Extended settings default to enabled with `Least Squares` for every geometry.
 The getter deliberately returns only the enable flag because that is the only

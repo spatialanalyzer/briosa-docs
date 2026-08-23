@@ -95,8 +95,8 @@ public sealed record GdtOptions(
     bool UseHighPoints,
     bool ExtrapolateAxialExtent,
     bool ExcludeFromAutoEvaluation,
-    GdtDistanceBetweenMode DistanceBetweenMode,
-    GdtEvaluationMethod EvaluationMethod,
+    GdtDistanceBetweenMode? DistanceBetweenMode,
+    GdtEvaluationMethod? EvaluationMethod,
     bool CreateActualFeatures,
     bool CreateSolvedPoints,
     double CrossSectionCriteria,
@@ -331,8 +331,9 @@ public Task<GdtOptions> GetGdtOptionsAsync(
 var options = await briosa.GdtOperations.GetGdtOptionsAsync();
 ```
 
-Licensed validation confirmed all nine result properties, including
-`DistanceBetweenMode` and `EvaluationMethod`.
+The exact getter returns seven properties. `DistanceBetweenMode` and
+`EvaluationMethod` are `null` because the MP command does not expose them as
+outputs.
 
 ## SetGdtOptionsAsync
 

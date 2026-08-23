@@ -100,8 +100,8 @@ class GdtOptions:
     use_high_points: bool
     extrapolate_axial_extent: bool
     exclude_from_auto_evaluation: bool
-    distance_between_mode: GdtDistanceBetweenMode
-    evaluation_method: GdtEvaluationMethod
+    distance_between_mode: GdtDistanceBetweenMode | None
+    evaluation_method: GdtEvaluationMethod | None
     create_actual_features: bool
     create_solved_points: bool
     cross_section_criteria: float
@@ -338,9 +338,10 @@ await briosa.gdt_operations.set_gdt_extended_options()
 extended_options_enabled = await briosa.gdt_operations.get_gdt_extended_options()
 ```
 
-A licensed probe confirmed all nine `GdtOptions` properties. The extended
-getter returns only `Use Extended Options`; each setter geometry accepts only
-its documented subset of the shared extended-method enum.
+The exact getter returns seven `GdtOptions` properties;
+`distance_between_mode` and `evaluation_method` are `None`. The extended getter
+returns only `Use Extended Options`; each setter geometry accepts only its
+documented subset of the shared extended-method enum.
 
 ## Reporting and Annotation Refresh
 

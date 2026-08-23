@@ -40,6 +40,7 @@ message LrSelfTestResult {
   bool passed_mirror_offset_standard_deviation_threshold = 10;
   bool passed_mirror_mean_quality_threshold = 11;
   bool passed_overall = 12;
+  MpExecutionDetails execution = 1000;
 }
 
 message LrFlipTestResult {
@@ -165,12 +166,8 @@ SA documents the operation for Nikon APDIS MV400 LR models.
 [MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 ```proto
-rpc LrSelfTest(LrSelfTestRequest) returns (LrSelfTestResponse);
+rpc LrSelfTest(LrSelfTestRequest) returns (LrSelfTestResult);
 message LrSelfTestRequest { optional CollectionInstrumentId instrument = 1; }
-message LrSelfTestResponse {
-  optional LrSelfTestResult result = 1;
-  MpExecutionDetails execution = 1000;
-}
 ```
 
 ## LR Self Test - Linearization
@@ -191,9 +188,9 @@ message LrSelfTestLinearizationResult {
 [MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 ```proto
-rpc LrSelfTestFlipTest(LrSelfTestFlipTestRequest) returns (LrSelfTestFlipTestResponse);
+rpc LrSelfTestFlipTest(LrSelfTestFlipTestRequest) returns (LrSelfTestFlipTestResult);
 message LrSelfTestFlipTestRequest { optional CollectionInstrumentId instrument = 1; }
-message LrSelfTestFlipTestResponse {
+message LrSelfTestFlipTestResult {
   optional LrFlipTestResult result = 1;
   MpExecutionDetails execution = 1000;
 }
@@ -204,13 +201,13 @@ message LrSelfTestFlipTestResponse {
 [MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 ```proto
-rpc LrSelfTestLoSep(LrSelfTestLoSepRequest) returns (LrSelfTestLoSepResponse);
+rpc LrSelfTestLoSep(LrSelfTestLoSepRequest) returns (LrSelfTestLoSepResult);
 message LrSelfTestLoSepRequest {
   optional CollectionInstrumentId instrument = 1;
   optional int32 region = 2;
   optional int32 num_range_measurements = 3;
 }
-message LrSelfTestLoSepResponse {
+message LrSelfTestLoSepResult {
   optional LrLoSeparationTestResult result = 1;
   MpExecutionDetails execution = 1000;
 }

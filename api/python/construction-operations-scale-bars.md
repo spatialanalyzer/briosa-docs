@@ -11,7 +11,7 @@ toc_max_heading_level: 2
 ```python
 async def construct_scale_bar(
     self,
-    scale_bar_name: CollectionObjectName,
+    scale_bar_name: CollectionItemName,
     begin_target: PointName,
     end_target: PointName,
     *,

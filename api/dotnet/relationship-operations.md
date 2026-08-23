@@ -755,7 +755,7 @@ public Task SetGroupToNominalGroupViewZoomingAsync(
 
 ```csharp
 public Task SetRelationshipAssociatedDataAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     IEnumerable<PointName>? individualPoints = null,
     IEnumerable<CollectionObjectName>? pointGroups = null,
     IEnumerable<CollectionObjectName>? pointClouds = null,
@@ -773,7 +773,7 @@ supplied list. The client retains no associated-data state.
 
 ```csharp
 public Task<RelationshipAssociatedData> GetRelationshipAssociatedDataAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -783,7 +783,7 @@ public Task<RelationshipAssociatedData> GetRelationshipAssociatedDataAsync(
 
 ```csharp
 public Task SetPointsToPointsRelationshipAssociatedDataAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     IEnumerable<PointName>? nominalPoints = null,
     IEnumerable<PointName>? actualPoints = null,
     bool ignoreEmptyArguments = true,
@@ -796,7 +796,7 @@ public Task SetPointsToPointsRelationshipAssociatedDataAsync(
 
 ```csharp
 public Task<PointsToPointsRelationshipAssociatedData> GetPointsToPointsRelationshipAssociatedDataAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -806,7 +806,7 @@ public Task<PointsToPointsRelationshipAssociatedData> GetPointsToPointsRelations
 
 ```csharp
 public Task AutoFilterCloudsToNominalGeometry3DAsync(
-    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<CollectionItemName> autoFilterTargetRelationships,
     IEnumerable<CollectionObjectName> clouds,
     CloudThinningOptions? cloudThinningSettings = null,
     FilterProximitySettings? filterProximitySettings3D = null,
@@ -820,7 +820,7 @@ public Task AutoFilterCloudsToNominalGeometry3DAsync(
 
 ```csharp
 public Task AutoFilterCloudsToNominalGeometry2DAsync(
-    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<CollectionItemName> autoFilterTargetRelationships,
     IEnumerable<CollectionObjectName> clouds,
     CloudThinningOptions? cloudThinningSettings = null,
     FilterProximitySettings? filterProximitySettings2D = null,
@@ -838,7 +838,7 @@ it is absent from ObjectiveSA's SA 2024.1 implementation.
 
 ```csharp
 public Task AutoFilterPointsToNominalGeometry3DAsync(
-    IEnumerable<CollectionObjectName> autoFilterTargetRelationships,
+    IEnumerable<CollectionItemName> autoFilterTargetRelationships,
     IEnumerable<PointName> points,
     FilterProximitySettings? filterProximitySettings3D = null,
     CancellationToken cancellationToken = default);
@@ -875,7 +875,7 @@ work.
 
 ```csharp
 public Task ExtractGeometryFromPointCloudsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CollectionObjectName cloudName,
     IEnumerable<PointName> seedPoints,
     GeometryType geometryType = GeometryType.Circle,
@@ -924,7 +924,7 @@ This method follows the exact SA 2026.1 Point-list binding.
 
 ```csharp
 public Task ComputeGeometryRelationshipUncertaintiesAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool displayResults = false,
     CancellationToken cancellationToken = default);
 ```
@@ -937,7 +937,7 @@ SA may make the Relationship dormant after computing uncertainty.
 
 ```csharp
 public Task MakeCloudToSwatchRelationshipAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CollectionObjectName inputCloudName,
     string surfaceFaceList,
     PointName referencePoint,
@@ -978,7 +978,7 @@ public sealed record RelationshipStatusFlags(
 
 ```csharp
 public Task<SigmoidalGapFitConstraints> GetRelationshipSigmoidalGapFitConstraintsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -990,7 +990,7 @@ The method uses the exact MP word `Sigmoidal` and returns all eight values.
 
 ```csharp
 public Task SetObjectToObjectDirectionRelationshipTolerancesAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ToleranceScalarOptions? angleBetweenVectorsTolerances = null,
     ToleranceScalarOptions? mutualPerpendicularLengthTolerances = null,
     CancellationToken cancellationToken = default);
@@ -1004,7 +1004,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 
 ```csharp
 public Task<IReadOnlyList<string>> GetGeomRelationshipCriteriaNameListAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool includeAllCriteria = false,
     CancellationToken cancellationToken = default);
 ```
@@ -1015,7 +1015,7 @@ public Task<IReadOnlyList<string>> GetGeomRelationshipCriteriaNameListAsync(
 
 ```csharp
 public Task<RelationshipStatusFlags> GetRelationshipStatusAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1032,7 +1032,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1040,7 +1040,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task GeomRelationshipIgnoreInputPointsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1061,7 +1061,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1069,7 +1069,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task GeomRelationshipReuseIgnoredInputPointsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1090,7 +1090,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1115,7 +1115,7 @@ public sealed record GetGeomRelationshipAutoVectorsResult
 }
 
 public Task<GetGeomRelationshipAutoVectorsResult> GetGeomRelationshipAutoVectorsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1136,7 +1136,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1144,7 +1144,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<PointName[]> GetGeomRelationshipCardinalPointsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1165,7 +1165,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -1206,7 +1206,7 @@ public sealed record GetGeomRelationshipCriteriaResult
 }
 
 public Task<GetGeomRelationshipCriteriaResult> GetGeomRelationshipCriteriaAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     string criteria = "",
     CancellationToken cancellationToken = default);
 ```
@@ -1228,7 +1228,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1236,7 +1236,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<PointName> GetGeomRelationshipMeasuredAvgPointAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1257,7 +1257,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1265,7 +1265,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<CollectionObjectName> GetGeomRelationshipMeasuredGeometryAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1286,7 +1286,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1294,7 +1294,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<PointName> GetGeomRelationshipNominalAvgPointAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1315,7 +1315,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1323,7 +1323,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<CollectionObjectName> GetGeomRelationshipNominalGeometryAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1344,7 +1344,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1363,7 +1363,7 @@ public sealed record GetGeomRelationshipPointListResult
 }
 
 public Task<GetGeomRelationshipPointListResult> GetGeomRelationshipPointListAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1384,7 +1384,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1392,7 +1392,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<CollectionObjectName> GetGeomRelationshipProjectionPlaneAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1413,7 +1413,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1435,7 +1435,7 @@ public sealed record GetPipeRelationshipCutStatusResult
 }
 
 public Task<GetPipeRelationshipCutStatusResult> GetPipeRelationshipCutStatusAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1456,7 +1456,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1496,7 +1496,7 @@ public sealed record GetPipeRelationshipPropertiesResult
 }
 
 public Task<GetPipeRelationshipPropertiesResult> GetPipeRelationshipPropertiesAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1517,7 +1517,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1551,7 +1551,7 @@ public sealed record GetPipeRelationshipWeightsResult
 }
 
 public Task<GetPipeRelationshipWeightsResult> GetPipeRelationshipWeightsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1572,7 +1572,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1597,7 +1597,7 @@ public sealed record GetRelationshipFitConstraintsScalarTypeResult
 }
 
 public Task<GetRelationshipFitConstraintsScalarTypeResult> GetRelationshipFitConstraintsScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1618,7 +1618,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1640,7 +1640,7 @@ public sealed record GetRelationshipOutlierRejectionScalarTypeResult
 }
 
 public Task<GetRelationshipOutlierRejectionScalarTypeResult> GetRelationshipOutlierRejectionScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1661,7 +1661,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1686,7 +1686,7 @@ public sealed record GetRelationshipProjectionOptionsResult
 }
 
 public Task<GetRelationshipProjectionOptionsResult> GetRelationshipProjectionOptionsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1707,7 +1707,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1715,7 +1715,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<CollectionObjectName> GetRelationshipReportingFrameAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1736,7 +1736,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1758,7 +1758,7 @@ public sealed record GetRelationshipSubSamplingOptionsResult
 }
 
 public Task<GetRelationshipSubSamplingOptionsResult> GetRelationshipSubSamplingOptionsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1779,7 +1779,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1804,7 +1804,7 @@ public sealed record GetRelationshipToleranceScalarTypeResult
 }
 
 public Task<GetRelationshipToleranceScalarTypeResult> GetRelationshipToleranceScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1825,7 +1825,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1886,7 +1886,7 @@ public sealed record GetRelationshipToleranceVectorTypeResult
 }
 
 public Task<GetRelationshipToleranceVectorTypeResult> GetRelationshipToleranceVectorTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1907,7 +1907,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1915,7 +1915,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<string> GetRelationshipTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1936,7 +1936,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -1944,7 +1944,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task<double> GetRelationshipWeightingAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -1965,7 +1965,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1ObjectName` | `CollectionObjectName` | `Pipe 1 - Object Name` | Required |
 | `pipe2ObjectName` | `CollectionObjectName` | `Pipe 2 - Object Name` | Required |
 
@@ -1975,7 +1975,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task MakePipeFittingRelationshipAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CollectionObjectName pipe1ObjectName,
     CollectionObjectName pipe2ObjectName,
     CancellationToken cancellationToken = default);
@@ -1998,7 +1998,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1MakeCut` | `bool` | `Pipe 1 - Make Cut` | true |
 | `pipe1CreateFrame` | `bool` | `Pipe 1 - Create Frame` | false |
 | `pipe1FrameName` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
@@ -2012,7 +2012,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task MakePipeRelationshipCutAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool pipe1MakeCut,
     bool pipe1CreateFrame,
     CollectionObjectName pipe1FrameName,
@@ -2039,7 +2039,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1ForceCutToFrame` | `bool` | `Pipe 1 - Force Cut to Frame?` | true |
 | `pipe1FrameName` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
 | `pipe2ForceCutToFrame` | `bool` | `Pipe 2 - Force Cut to Frame?` | true |
@@ -2051,7 +2051,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task PipeRelationshipForceCutToFrameAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool pipe1ForceCutToFrame,
     CollectionObjectName pipe1FrameName,
     bool pipe2ForceCutToFrame,
@@ -2076,7 +2076,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `trapCloudsFalseGeometry` | `bool` | `Trap Clouds? (FALSE = Geometry)` | true |
 | `instrumentId` | `CollectionInstrumentId` | `Instrument ID` | Required |
 | `measurementMode` | `string` | `Measurement Mode` | Empty |
@@ -2087,7 +2087,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipAutoMeasureNominalFeatureAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool trapCloudsFalseGeometry,
     CollectionInstrumentId instrumentId,
     string measurementMode = "",
@@ -2111,7 +2111,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createAutoVectorsAvn` | `bool` | `Create Auto Vectors AVN` | false |
 | `pointsType` | `PointFilterInputType` | `Points Type` | Cardinal Points |
 | `useVectorGroupCustomPrefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
@@ -2123,7 +2123,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipAutoVectorsNominalAvnAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool createAutoVectorsAvn,
     PointFilterInputType pointsType,
     bool useVectorGroupCustomPrefix = false,
@@ -2148,7 +2148,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createCardinalPtsWhenFitting` | `bool` | `Create Cardinal Pts when Fitting?` | true |
 | `prefixCardinalPtsNameWithRelName` | `bool` | `Prefix Cardinal Pts name with Rel name?` | true |
 | `cardinalPtsGroupName` | `string` | `Cardinal Pts Group Name` | GR-Cardinal Pts |
@@ -2159,7 +2159,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipCardinalPointsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool createCardinalPtsWhenFitting = true,
     bool prefixCardinalPtsNameWithRelName = true,
     string cardinalPtsGroupName = "GR-Cardinal Pts",
@@ -2183,7 +2183,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 | `showInReport` | `bool` | `Show in Report` | true |
 | `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
@@ -2196,7 +2196,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipCriteriaAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     string criteria = "",
     bool showInReport = true,
     ToleranceScalarOptions toleranceOptions = default,
@@ -2222,7 +2222,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `measuredGeometry` | `CollectionObjectName` | `Measured Geometry` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2231,7 +2231,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipMeasuredGeometryAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CollectionObjectName measuredGeometry,
     CancellationToken cancellationToken = default);
 ```
@@ -2253,7 +2253,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `compareToNominal` | `bool` | `Compare To Nominal?` | true |
 | `nominalAveragePoint` | `PointName` | `Nominal Average Point` | Required |
 
@@ -2263,7 +2263,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipNominalAvgPointAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool compareToNominal,
     PointName nominalAveragePoint,
     CancellationToken cancellationToken = default);
@@ -2286,7 +2286,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `compareToNominal` | `bool` | `Compare To Nominal?` | true |
 | `nominalGeometry` | `CollectionObjectName` | `Nominal Geometry` | Required |
 
@@ -2296,7 +2296,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipNominalGeometryAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool compareToNominal,
     CollectionObjectName nominalGeometry,
     CancellationToken cancellationToken = default);
@@ -2319,7 +2319,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `projectToPlane` | `bool` | `Project to Plane?` | true |
 | `projectionPlaneName` | `CollectionObjectName` | `Projection Plane Name` | Required |
 
@@ -2329,7 +2329,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetGeomRelationshipProjectionPlaneAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool projectToPlane,
     CollectionObjectName projectionPlaneName,
     CancellationToken cancellationToken = default);
@@ -2352,7 +2352,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
 | `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
@@ -2362,7 +2362,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetObjectToObjectDirectionRelationshipFitConstraintsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     FitConstraintScalarOptions angleBetweenVectorsFitConstraints = default,
     FitConstraintScalarOptions mutualPerpendicularLengthFitConstraints = default,
     CancellationToken cancellationToken = default);
@@ -2385,7 +2385,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1InnerDiameter` | `double` | `Pipe 1 - Inner Diameter` | 0.000000 |
 | `pipe1OuterDiameter` | `double` | `Pipe 1 - Outer Diameter` | 0.000000 |
 | `pipe1CutBegin` | `double` | `Pipe 1 - Cut Begin` | 0.000000 |
@@ -2401,7 +2401,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetPipeRelationshipSegmentPropertiesAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     double pipe1InnerDiameter = 0.000000,
     double pipe1OuterDiameter = 0.000000,
     double pipe1CutBegin = 0.000000,
@@ -2430,7 +2430,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `overallWeight` | `double` | `Overall Weight` | 1.000000 |
 | `axisOffset` | `double` | `Axis Offset` | 2.000000 |
 | `axisAlignment` | `double` | `Axis Alignment` | 1.000000 |
@@ -2446,7 +2446,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetPipeRelationshipWeightsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     double overallWeight = 1.000000,
     double axisOffset = 2.000000,
     double axisAlignment = 1.000000,
@@ -2475,7 +2475,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createAutoVectorsAvf` | `bool` | `Create Auto Vectors AVF` | false |
 | `useVectorGroupCustomPrefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
 | `vectorGroupCustomPrefix` | `string` | `Vector Group Custom Prefix` | Empty |
@@ -2486,7 +2486,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipAutoVectorsFitAvfAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool createAutoVectorsAvf = false,
     bool useVectorGroupCustomPrefix = false,
     string vectorGroupCustomPrefix = "",
@@ -2543,7 +2543,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `desiredMeasurementCount` | `int` | `Desired Measurement Count` | 0 |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2552,7 +2552,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipDesiredMeasCountAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     int desiredMeasurementCount = 0,
     CancellationToken cancellationToken = default);
 ```
@@ -2605,7 +2605,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2614,7 +2614,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipFitConstraintsScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     FitConstraintScalarOptions fitConstraintOptions = default,
     CancellationToken cancellationToken = default);
 ```
@@ -2636,7 +2636,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `orientationVectorConstraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2645,7 +2645,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipOrientationFitConstraintsVectorTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ToleranceVectorOptions orientationVectorConstraint,
     CancellationToken cancellationToken = default);
 ```
@@ -2667,7 +2667,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
 | --- | --- | --- |
@@ -2675,7 +2675,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipOutlierRejectionScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CancellationToken cancellationToken = default);
 ```
 
@@ -2696,7 +2696,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `positionVectorConstraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2705,7 +2705,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipPositionFitConstraintsVectorTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ToleranceVectorOptions positionVectorConstraint,
     CancellationToken cancellationToken = default);
 ```
@@ -2727,7 +2727,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `projectionOptions` | `ProjectionOptions` | `Projection Options` | Object To Probe Vectors |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2736,7 +2736,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipProjectionOptionsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ProjectionOptions projectionOptions,
     CancellationToken cancellationToken = default);
 ```
@@ -2758,7 +2758,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `reportingFrame` | `CollectionObjectName` | `Reporting Frame` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2767,7 +2767,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipReportingFrameAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     CollectionObjectName reportingFrame,
     CancellationToken cancellationToken = default);
 ```
@@ -2789,7 +2789,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `useSigmoidalGapConstraints` | `bool` | `Use Sigmoidal Gap Constraints` | true |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2798,7 +2798,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipSigmoidalGapFitConstraintsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool useSigmoidalGapConstraints = true,
     CancellationToken cancellationToken = default);
 ```
@@ -2820,7 +2820,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `useEveryIthPoint` | `bool` | `Use every i-th point` | false |
 | `iValue` | `int` | `i value` | 20 |
 | `useNoMoreThanNPoints` | `bool` | `Use no more than n points` | true |
@@ -2832,7 +2832,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipSubSamplingOptionsAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool useEveryIthPoint = false,
     int iValue = 20,
     bool useNoMoreThanNPoints = true,
@@ -2857,7 +2857,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2866,7 +2866,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipToleranceScalarTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ToleranceScalarOptions toleranceOptions = default,
     CancellationToken cancellationToken = default);
 ```
@@ -2888,7 +2888,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2897,7 +2897,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipToleranceVectorTypeAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     ToleranceVectorOptions vectorTolerance,
     CancellationToken cancellationToken = default);
 ```
@@ -2919,7 +2919,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `enableVoxelCloudDisplay` | `bool` | `Enable Voxel Cloud Display?` | true |
 | `voxelSize10Autodetect` | `double` | `Voxel Size (-1.0 autodetect)` | -1.000000 |
 | `minPtsCountPerVoxel` | `int` | `Min Pts Count Per Voxel` | 3 |
@@ -2934,7 +2934,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipVoxelCloudDisplayAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     bool enableVoxelCloudDisplay,
     double voxelSize10Autodetect,
     int minPtsCountPerVoxel,
@@ -2962,7 +2962,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `weight` | `double` | `Weight` | 0.000000 |
 
 | Result Value | .NET Type | Exact MP Output |
@@ -2971,7 +2971,7 @@ This client API is planned, including when the underlying gRPC operation is alre
 
 ```csharp
 public Task SetRelationshipWeightingAsync(
-    CollectionObjectName relationshipName,
+    CollectionItemName relationshipName,
     double weight = 0.000000,
     CancellationToken cancellationToken = default);
 ```

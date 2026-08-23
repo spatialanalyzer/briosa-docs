@@ -16,15 +16,10 @@ an unknown execution outcome.
 
 ## Shared Callout Property Values
 
-```proto
-message Font {
-  optional string family = 1;
-  optional int32 point_size = 2;
-  optional bool bold = 3;
-  optional bool italic = 4;
-  optional bool underline = 5;
-}
+Callout properties reuse the shared `Font` value (`font_name`, `size`, and
+`color`) used throughout the Briosa protocol.
 
+```proto
 message CalloutViewProperties {
   optional bool lock_view_point = 1;
   optional bool recall_working_frame = 2;
@@ -40,7 +35,7 @@ message CalloutViewProperties {
 
 The property defaults are false for all three view flags, leader thickness 2,
 leader RGB `(128, 128, 128)`, border thickness 2, border RGB `(0, 0, 255)`, no
-text dividers, and `MS Shell Dlg` 8-point regular font.
+text dividers, and an 8-point black `MS Shell Dlg` font.
 
 ## Create Vector Callout
 

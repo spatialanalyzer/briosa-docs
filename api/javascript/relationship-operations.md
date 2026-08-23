@@ -995,7 +995,7 @@ The five defaults are `true`, `false`, `true`, `true`, and `0.01`.
 
 ```ts
 export interface SetRelationshipAssociatedDataInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly individualPoints?: Iterable<PointName>;
   readonly pointGroups?: Iterable<CollectionObjectName>;
   readonly pointClouds?: Iterable<CollectionObjectName>;
@@ -1018,7 +1018,7 @@ remains a supplied collection. `ignoreEmptyArguments` defaults to `true`.
 
 ```ts
 export interface GetRelationshipAssociatedDataInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 function getRelationshipAssociatedData(
   briosa: BriosaClient,
@@ -1033,7 +1033,7 @@ function getRelationshipAssociatedData(
 
 ```ts
 export interface SetPointsToPointsRelationshipAssociatedDataInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly nominalPoints?: Iterable<PointName>;
   readonly actualPoints?: Iterable<PointName>;
   readonly ignoreEmptyArguments?: boolean;
@@ -1051,7 +1051,7 @@ function setPointsToPointsRelationshipAssociatedData(
 
 ```ts
 export interface GetPointsToPointsRelationshipAssociatedDataInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 function getPointsToPointsRelationshipAssociatedData(
   briosa: BriosaClient,
@@ -1066,7 +1066,7 @@ function getPointsToPointsRelationshipAssociatedData(
 
 ```ts
 export interface AutoFilterCloudsToNominalGeometry3DInput {
-  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly clouds: Iterable<CollectionObjectName>;
   readonly cloudThinningSettings?: CloudThinningOptions;
   readonly filterProximitySettings3D?: FilterProximitySettings;
@@ -1085,7 +1085,7 @@ function autoFilterCloudsToNominalGeometry3D(
 
 ```ts
 export interface AutoFilterCloudsToNominalGeometry2DInput {
-  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly clouds: Iterable<CollectionObjectName>;
   readonly cloudThinningSettings?: CloudThinningOptions;
   readonly filterProximitySettings2D?: FilterProximitySettings;
@@ -1108,7 +1108,7 @@ to `false`.
 
 ```ts
 export interface AutoFilterPointsToNominalGeometry3DInput {
-  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly points: Iterable<PointName>;
   readonly filterProximitySettings3D?: FilterProximitySettings;
 }
@@ -1155,7 +1155,7 @@ uncertain work.
 
 ```ts
 export interface ExtractGeometryFromPointCloudsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly geometryType?: GeometryType;
   readonly cloudName: CollectionObjectName;
   readonly boundingPoints?: Iterable<PointName>;
@@ -1220,7 +1220,7 @@ The function follows the exact SA 2026.1 Point-list binding.
 
 ```ts
 export interface ComputeGeometryRelationshipUncertaintiesInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly displayResults?: boolean;
 }
 function computeGeometryRelationshipUncertainties(
@@ -1238,7 +1238,7 @@ function computeGeometryRelationshipUncertainties(
 
 ```ts
 export interface MakeCloudToSwatchRelationshipInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly inputCloudName: CollectionObjectName;
   readonly surfaceFaceList: string;
   readonly referencePoint: PointName;
@@ -1287,7 +1287,7 @@ export interface RelationshipStatusFlags {
 
 ```ts
 export interface GetRelationshipSigmoidalGapFitConstraintsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 function getRelationshipSigmoidalGapFitConstraints(
   briosa: BriosaClient,
@@ -1302,7 +1302,7 @@ function getRelationshipSigmoidalGapFitConstraints(
 
 ```ts
 export interface SetObjectToObjectDirectionRelationshipTolerancesInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly angleBetweenVectorsTolerances?: ToleranceScalarOptions;
   readonly mutualPerpendicularLengthTolerances?: ToleranceScalarOptions;
 }
@@ -1321,7 +1321,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 
 ```ts
 export interface GetGeomRelationshipCriteriaNameListInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly includeAllCriteria?: boolean;
 }
 function getGeomRelationshipCriteriaNameList(
@@ -1337,7 +1337,7 @@ function getGeomRelationshipCriteriaNameList(
 
 ```ts
 export interface GetRelationshipStatusInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 function getRelationshipStatus(
   briosa: BriosaClient,
@@ -1359,7 +1359,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1367,7 +1367,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GeomRelationshipIgnoreInputPointsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function geomRelationshipIgnoreInputPoints(
@@ -1394,7 +1394,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1402,7 +1402,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GeomRelationshipReuseIgnoredInputPointsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function geomRelationshipReuseIgnoredInputPoints(
@@ -1429,7 +1429,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1449,7 +1449,7 @@ export interface GetGeomRelationshipAutoVectorsResult {
 }
 
 export interface GetGeomRelationshipAutoVectorsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipAutoVectors(
@@ -1477,7 +1477,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1485,7 +1485,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipCardinalPointsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipCardinalPoints(
@@ -1512,7 +1512,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -1543,7 +1543,7 @@ export interface GetGeomRelationshipCriteriaResult {
 }
 
 export interface GetGeomRelationshipCriteriaInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly criteria?: string;
 }
 
@@ -1572,7 +1572,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1580,7 +1580,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipMeasuredAvgPointInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipMeasuredAvgPoint(
@@ -1607,7 +1607,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1615,7 +1615,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipMeasuredGeometryInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipMeasuredGeometry(
@@ -1642,7 +1642,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1650,7 +1650,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipNominalAvgPointInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipNominalAvgPoint(
@@ -1677,7 +1677,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1685,7 +1685,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipNominalGeometryInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipNominalGeometry(
@@ -1712,7 +1712,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1728,7 +1728,7 @@ export interface GetGeomRelationshipPointListResult {
 }
 
 export interface GetGeomRelationshipPointListInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipPointList(
@@ -1756,7 +1756,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1764,7 +1764,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetGeomRelationshipProjectionPlaneInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getGeomRelationshipProjectionPlane(
@@ -1791,7 +1791,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1809,7 +1809,7 @@ export interface GetPipeRelationshipCutStatusResult {
 }
 
 export interface GetPipeRelationshipCutStatusInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getPipeRelationshipCutStatus(
@@ -1837,7 +1837,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1867,7 +1867,7 @@ export interface GetPipeRelationshipPropertiesResult {
 }
 
 export interface GetPipeRelationshipPropertiesInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getPipeRelationshipProperties(
@@ -1895,7 +1895,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1921,7 +1921,7 @@ export interface GetPipeRelationshipWeightsResult {
 }
 
 export interface GetPipeRelationshipWeightsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getPipeRelationshipWeights(
@@ -1949,7 +1949,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -1969,7 +1969,7 @@ export interface GetRelationshipFitConstraintsScalarTypeResult {
 }
 
 export interface GetRelationshipFitConstraintsScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipFitConstraintsScalarType(
@@ -1997,7 +1997,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2015,7 +2015,7 @@ export interface GetRelationshipOutlierRejectionScalarTypeResult {
 }
 
 export interface GetRelationshipOutlierRejectionScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipOutlierRejectionScalarType(
@@ -2043,7 +2043,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2063,7 +2063,7 @@ export interface GetRelationshipProjectionOptionsResult {
 }
 
 export interface GetRelationshipProjectionOptionsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipProjectionOptions(
@@ -2091,7 +2091,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2099,7 +2099,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetRelationshipReportingFrameInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipReportingFrame(
@@ -2126,7 +2126,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2144,7 +2144,7 @@ export interface GetRelationshipSubSamplingOptionsResult {
 }
 
 export interface GetRelationshipSubSamplingOptionsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipSubSamplingOptions(
@@ -2172,7 +2172,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2192,7 +2192,7 @@ export interface GetRelationshipToleranceScalarTypeResult {
 }
 
 export interface GetRelationshipToleranceScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipToleranceScalarType(
@@ -2220,7 +2220,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2264,7 +2264,7 @@ export interface GetRelationshipToleranceVectorTypeResult {
 }
 
 export interface GetRelationshipToleranceVectorTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipToleranceVectorType(
@@ -2292,7 +2292,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2300,7 +2300,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetRelationshipTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipType(
@@ -2327,7 +2327,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -2335,7 +2335,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface GetRelationshipWeightingInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function getRelationshipWeighting(
@@ -2362,7 +2362,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1ObjectName` | `CollectionObjectName` | `Pipe 1 - Object Name` | Required |
 | `pipe2ObjectName` | `CollectionObjectName` | `Pipe 2 - Object Name` | Required |
 
@@ -2372,7 +2372,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface MakePipeFittingRelationshipInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly pipe1ObjectName: CollectionObjectName;
   readonly pipe2ObjectName: CollectionObjectName;
 }
@@ -2401,7 +2401,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1MakeCut` | `boolean` | `Pipe 1 - Make Cut` | true |
 | `pipe1CreateFrame` | `boolean` | `Pipe 1 - Create Frame` | false |
 | `pipe1FrameName` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
@@ -2415,7 +2415,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface MakePipeRelationshipCutInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly pipe1MakeCut?: boolean;
   readonly pipe1CreateFrame?: boolean;
   readonly pipe1FrameName: CollectionObjectName;
@@ -2448,7 +2448,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1ForceCutToFrame` | `boolean` | `Pipe 1 - Force Cut to Frame?` | true |
 | `pipe1FrameName` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
 | `pipe2ForceCutToFrame` | `boolean` | `Pipe 2 - Force Cut to Frame?` | true |
@@ -2460,7 +2460,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface PipeRelationshipForceCutToFrameInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly pipe1ForceCutToFrame?: boolean;
   readonly pipe1FrameName: CollectionObjectName;
   readonly pipe2ForceCutToFrame?: boolean;
@@ -2491,7 +2491,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `trapCloudsFalseGeometry` | `boolean` | `Trap Clouds? (FALSE = Geometry)` | true |
 | `instrumentId` | `CollectionInstrumentId` | `Instrument ID` | Required |
 | `measurementMode` | `string` | `Measurement Mode` | Empty |
@@ -2502,7 +2502,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipAutoMeasureNominalFeatureInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly trapCloudsFalseGeometry?: boolean;
   readonly instrumentId: CollectionInstrumentId;
   readonly measurementMode?: string;
@@ -2532,7 +2532,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createAutoVectorsAvn` | `boolean` | `Create Auto Vectors AVN` | false |
 | `pointsType` | `PointFilterInputType` | `Points Type` | Cardinal Points |
 | `useVectorGroupCustomPrefix` | `boolean` | `Use Vector Group Custom Prefix?` | false |
@@ -2544,7 +2544,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipAutoVectorsNominalAvnInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly createAutoVectorsAvn?: boolean;
   readonly pointsType?: PointFilterInputType;
   readonly useVectorGroupCustomPrefix?: boolean;
@@ -2575,7 +2575,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createCardinalPtsWhenFitting` | `boolean` | `Create Cardinal Pts when Fitting?` | true |
 | `prefixCardinalPtsNameWithRelName` | `boolean` | `Prefix Cardinal Pts name with Rel name?` | true |
 | `cardinalPtsGroupName` | `string` | `Cardinal Pts Group Name` | GR-Cardinal Pts |
@@ -2586,7 +2586,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipCardinalPointsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly createCardinalPtsWhenFitting?: boolean;
   readonly prefixCardinalPtsNameWithRelName?: boolean;
   readonly cardinalPtsGroupName?: string;
@@ -2616,7 +2616,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `string` | `Criteria` | Empty |
 | `showInReport` | `boolean` | `Show in Report` | true |
 | `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
@@ -2629,7 +2629,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipCriteriaInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly criteria?: string;
   readonly showInReport?: boolean;
   readonly toleranceOptions?: ToleranceScalarOptions;
@@ -2661,7 +2661,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `measuredGeometry` | `CollectionObjectName` | `Measured Geometry` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -2670,7 +2670,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipMeasuredGeometryInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly measuredGeometry: CollectionObjectName;
 }
 
@@ -2698,7 +2698,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `compareToNominal` | `boolean` | `Compare To Nominal?` | true |
 | `nominalAveragePoint` | `PointName` | `Nominal Average Point` | Required |
 
@@ -2708,7 +2708,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipNominalAvgPointInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly compareToNominal?: boolean;
   readonly nominalAveragePoint: PointName;
 }
@@ -2737,7 +2737,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `compareToNominal` | `boolean` | `Compare To Nominal?` | true |
 | `nominalGeometry` | `CollectionObjectName` | `Nominal Geometry` | Required |
 
@@ -2747,7 +2747,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipNominalGeometryInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly compareToNominal?: boolean;
   readonly nominalGeometry: CollectionObjectName;
 }
@@ -2776,7 +2776,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `projectToPlane` | `boolean` | `Project to Plane?` | true |
 | `projectionPlaneName` | `CollectionObjectName` | `Projection Plane Name` | Required |
 
@@ -2786,7 +2786,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetGeomRelationshipProjectionPlaneInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly projectToPlane?: boolean;
   readonly projectionPlaneName: CollectionObjectName;
 }
@@ -2815,7 +2815,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `angleBetweenVectorsFitConstraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
 | `mutualPerpendicularLengthFitConstraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
@@ -2825,7 +2825,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetObjectToObjectDirectionRelationshipFitConstraintsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly angleBetweenVectorsFitConstraints?: FitConstraintScalarOptions;
   readonly mutualPerpendicularLengthFitConstraints?: FitConstraintScalarOptions;
 }
@@ -2854,7 +2854,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe1InnerDiameter` | `number` | `Pipe 1 - Inner Diameter` | 0.000000 |
 | `pipe1OuterDiameter` | `number` | `Pipe 1 - Outer Diameter` | 0.000000 |
 | `pipe1CutBegin` | `number` | `Pipe 1 - Cut Begin` | 0.000000 |
@@ -2870,7 +2870,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetPipeRelationshipSegmentPropertiesInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly pipe1InnerDiameter?: number;
   readonly pipe1OuterDiameter?: number;
   readonly pipe1CutBegin?: number;
@@ -2905,7 +2905,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `overallWeight` | `number` | `Overall Weight` | 1.000000 |
 | `axisOffset` | `number` | `Axis Offset` | 2.000000 |
 | `axisAlignment` | `number` | `Axis Alignment` | 1.000000 |
@@ -2921,7 +2921,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetPipeRelationshipWeightsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly overallWeight?: number;
   readonly axisOffset?: number;
   readonly axisAlignment?: number;
@@ -2956,7 +2956,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `createAutoVectorsAvf` | `boolean` | `Create Auto Vectors AVF` | false |
 | `useVectorGroupCustomPrefix` | `boolean` | `Use Vector Group Custom Prefix?` | false |
 | `vectorGroupCustomPrefix` | `string` | `Vector Group Custom Prefix` | Empty |
@@ -2967,7 +2967,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipAutoVectorsFitAvfInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly createAutoVectorsAvf?: boolean;
   readonly useVectorGroupCustomPrefix?: boolean;
   readonly vectorGroupCustomPrefix?: string;
@@ -3036,7 +3036,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `desiredMeasurementCount` | `number` | `Desired Measurement Count` | 0 |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3045,7 +3045,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipDesiredMeasCountInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly desiredMeasurementCount?: number;
 }
 
@@ -3110,7 +3110,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `fitConstraintOptions` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3119,7 +3119,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipFitConstraintsScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly fitConstraintOptions?: FitConstraintScalarOptions;
 }
 
@@ -3147,7 +3147,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `orientationVectorConstraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3156,7 +3156,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipOrientationFitConstraintsVectorTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly orientationVectorConstraint: ToleranceVectorOptions;
 }
 
@@ -3184,7 +3184,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
 | --- | --- | --- |
@@ -3192,7 +3192,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipOutlierRejectionScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
 }
 
 function setRelationshipOutlierRejectionScalarType(
@@ -3219,7 +3219,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `positionVectorConstraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3228,7 +3228,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipPositionFitConstraintsVectorTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly positionVectorConstraint: ToleranceVectorOptions;
 }
 
@@ -3256,7 +3256,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `projectionOptions` | `ProjectionOptions` | `Projection Options` | Object To Probe Vectors |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3265,7 +3265,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipProjectionOptionsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly projectionOptions?: ProjectionOptions;
 }
 
@@ -3293,7 +3293,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `reportingFrame` | `CollectionObjectName` | `Reporting Frame` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3302,7 +3302,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipReportingFrameInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly reportingFrame: CollectionObjectName;
 }
 
@@ -3330,7 +3330,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `useSigmoidalGapConstraints` | `boolean` | `Use Sigmoidal Gap Constraints` | true |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3339,7 +3339,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipSigmoidalGapFitConstraintsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly useSigmoidalGapConstraints?: boolean;
 }
 
@@ -3367,7 +3367,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `useEveryIthPoint` | `boolean` | `Use every i-th point` | false |
 | `iValue` | `number` | `i value` | 20 |
 | `useNoMoreThanNPoints` | `boolean` | `Use no more than n points` | true |
@@ -3379,7 +3379,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipSubSamplingOptionsInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly useEveryIthPoint?: boolean;
   readonly iValue?: number;
   readonly useNoMoreThanNPoints?: boolean;
@@ -3410,7 +3410,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `toleranceOptions` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3419,7 +3419,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipToleranceScalarTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly toleranceOptions?: ToleranceScalarOptions;
 }
 
@@ -3447,7 +3447,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `vectorTolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3456,7 +3456,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipToleranceVectorTypeInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly vectorTolerance: ToleranceVectorOptions;
 }
 
@@ -3484,7 +3484,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `enableVoxelCloudDisplay` | `boolean` | `Enable Voxel Cloud Display?` | true |
 | `voxelSize10Autodetect` | `number` | `Voxel Size (-1.0 autodetect)` | -1.000000 |
 | `minPtsCountPerVoxel` | `number` | `Min Pts Count Per Voxel` | 3 |
@@ -3499,7 +3499,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipVoxelCloudDisplayInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly enableVoxelCloudDisplay?: boolean;
   readonly voxelSize10Autodetect?: number;
   readonly minPtsCountPerVoxel?: number;
@@ -3533,7 +3533,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationshipName` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationshipName` | `CollectionItemName` | `Relationship Name` | Required |
 | `weight` | `number` | `Weight` | 0.000000 |
 
 | Result Value | TypeScript Type | Exact MP Output |
@@ -3542,7 +3542,7 @@ This function is part of the next JavaScript and TypeScript package contract.
 
 ```ts
 export interface SetRelationshipWeightingInput {
-  readonly relationshipName: CollectionObjectName;
+  readonly relationshipName: CollectionItemName;
   readonly weight?: number;
 }
 

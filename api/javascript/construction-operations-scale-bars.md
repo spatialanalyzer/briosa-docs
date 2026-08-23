@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 ```ts
 export interface ConstructScaleBarInput {
-  readonly scaleBarName: CollectionObjectName;
+  readonly scaleBarName: CollectionItemName;
   readonly beginTarget: PointName;
   readonly endTarget: PointName;
   readonly length?: number;

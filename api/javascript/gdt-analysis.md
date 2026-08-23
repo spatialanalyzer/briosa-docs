@@ -96,8 +96,8 @@ export interface GdtOptions {
   readonly useHighPoints: boolean;
   readonly extrapolateAxialExtent: boolean;
   readonly excludeFromAutoEvaluation: boolean;
-  readonly distanceBetweenMode: GdtDistanceBetweenMode;
-  readonly evaluationMethod: GdtEvaluationMethod;
+  readonly distanceBetweenMode?: GdtDistanceBetweenMode;
+  readonly evaluationMethod?: GdtEvaluationMethod;
   readonly createActualFeatures: boolean;
   readonly createSolvedPoints: boolean;
   readonly crossSectionCriteria: number;
@@ -297,9 +297,9 @@ const reporting = await getFeatureCheckReportingOptions(briosa, {featureCheck});
 ```
 
 Set defaults match the MP Editor and are listed in the
-[gRPC contract](/api/grpc/gdt-analysis). A licensed probe confirmed all nine
-`GdtOptions` result properties. `getGdtExtendedOptions` intentionally returns
-only the enable state.
+[gRPC contract](/api/grpc/gdt-analysis). The exact getter returns seven
+`GdtOptions` properties; `distanceBetweenMode` and `evaluationMethod` are
+absent. `getGdtExtendedOptions` intentionally returns only the enable state.
 
 :::warning[Partial Reporting-Options Contract]
 

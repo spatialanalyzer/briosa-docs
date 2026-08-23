@@ -96,6 +96,7 @@ message DriftCheckResult {
   double rms_error = 2;
   bool instrument_added = 3;
   optional CollectionInstrumentId new_instrument = 4;
+  MpExecutionDetails execution = 1000;
 }
 
 message CurrentTrappingStatus {
@@ -2695,7 +2696,7 @@ The four identity/name fields are required. Sending the mirror defaults to
 [MP command](/mp-command-catalog/commands/instrument-operations#drift-check)
 
 ```proto
-rpc DriftCheck(DriftCheckRequest) returns (DriftCheckResponse);
+rpc DriftCheck(DriftCheckRequest) returns (DriftCheckResult);
 message DriftCheckRequest {
   optional CollectionInstrumentId instrument = 1;
   optional CollectionObjectName reference_group = 2;
@@ -2703,10 +2704,6 @@ message DriftCheckRequest {
   optional double tolerance = 4;
   optional int32 minimum_point_count = 5;
   optional bool use_closest_reference_point = 6;
-}
-message DriftCheckResponse {
-  optional DriftCheckResult result = 1;
-  MpExecutionDetails execution = 1000;
 }
 ```
 
