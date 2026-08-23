@@ -184,8 +184,8 @@ not a claim that the operation is callable in the current release.
   <td><span className="catalog-status catalog-status--next">Next</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make pipe Relationship Cut" data-group="Relationship Operations / Pipe Relationships" data-status="next" data-validation="portable-contract-review">
-  <td><a href="#make-pipe-relationship-cut">Make pipe Relationship Cut</a></td>
+<tr data-command="Make Pipe Relationship Cut" data-group="Relationship Operations / Pipe Relationships" data-status="next" data-validation="portable-contract-review">
+  <td><a href="#make-pipe-relationship-cut">Make Pipe Relationship Cut</a></td>
   <td>Relationship Operations / Pipe Relationships</td>
   <td><span className="catalog-status catalog-status--next">Next</span></td>
   <td>Portable contract review</td>
@@ -1210,7 +1210,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 **API References:** [gRPC](/api/grpc/relationship-operations#make-pipe-fitting-relationship) · [.NET](/api/dotnet/relationship-operations#make-pipe-fitting-relationship) · [Python](/api/python/relationship-operations#make-pipe-fitting-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-pipe-fitting-relationship)
 
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 <span className="catalog-status catalog-status--next">Next</span>
 

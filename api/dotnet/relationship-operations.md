@@ -1988,13 +1988,13 @@ await briosa.MakePipeFittingRelationshipAsync(relationshipName: relationshipName
 Completes without a command value. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 :::note[Status: Next]
 This client API is planned, including when the underlying gRPC operation is already **Current**.
 :::
 
-[Make pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

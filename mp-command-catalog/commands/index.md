@@ -684,8 +684,8 @@ stored in the page URL so a filtered catalog view can be bookmarked or shared.
   <td><span className="catalog-status catalog-status--next">Next</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make pipe Relationship Cut" data-group="Relationship Operations / Pipe Relationships" data-status="next" data-validation="portable-contract-review">
-  <td><Link to="/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut">Make pipe Relationship Cut</Link></td>
+<tr data-command="Make Pipe Relationship Cut" data-group="Relationship Operations / Pipe Relationships" data-status="next" data-validation="portable-contract-review">
+  <td><Link to="/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut">Make Pipe Relationship Cut</Link></td>
   <td>Relationship Operations / Pipe Relationships</td>
   <td><span className="catalog-status catalog-status--next">Next</span></td>
   <td>Portable contract review</td>

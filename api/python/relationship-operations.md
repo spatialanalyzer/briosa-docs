@@ -2076,13 +2076,13 @@ await briosa.make_pipe_fitting_relationship(relationship_name=..., pipe_1_object
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 :::note[Status: Next]
 This coroutine is part of the next Python package contract.
 :::
 
-[Make pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

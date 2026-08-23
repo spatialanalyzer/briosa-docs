@@ -2391,13 +2391,13 @@ await makePipeFittingRelationship(briosa, { relationshipName: ..., pipe1ObjectNa
 Resolves without a command value. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 :::note[Status: Next]
 This function is part of the next JavaScript and TypeScript package contract.
 :::
 
-[Make pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

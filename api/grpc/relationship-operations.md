@@ -2465,13 +2465,13 @@ The request preserves MP input order and the result preserves MP output order.
 Unsupported MP-only branch targets or UI selectors listed in the catalog are
 intentionally absent. The server validates required presence before enqueue.
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 <span className="catalog-status catalog-status--next">Next</span>
 
 | Contract Item | Value |
 | --- | --- |
-| MP Command | [Make pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) |
+| MP Command | [Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) |
 | Service | `briosa.RelationshipOperations` |
 | RPC | `MakePipeRelationshipCut` |
 | Operation ID | `relationship_operations.make_pipe_relationship_cut` |
