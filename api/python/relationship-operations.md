@@ -860,7 +860,7 @@ async def set_group_to_nominal_group_view_zooming(
 ```python
 async def set_relationship_associated_data(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     individual_points: Iterable[PointName] | None = None,
     point_groups: Iterable[CollectionObjectName] | None = None,
@@ -879,7 +879,7 @@ async def set_relationship_associated_data(
 ```python
 async def get_relationship_associated_data(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> RelationshipAssociatedData: ...
 ```
 
@@ -890,7 +890,7 @@ async def get_relationship_associated_data(
 ```python
 async def set_points_to_points_relationship_associated_data(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     nominal_points: Iterable[PointName] | None = None,
     actual_points: Iterable[PointName] | None = None,
@@ -905,7 +905,7 @@ async def set_points_to_points_relationship_associated_data(
 ```python
 async def get_points_to_points_relationship_associated_data(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> PointsToPointsRelationshipAssociatedData: ...
 ```
 
@@ -916,7 +916,7 @@ async def get_points_to_points_relationship_associated_data(
 ```python
 async def auto_filter_clouds_to_nominal_geometry_3d(
     self,
-    auto_filter_target_relationships: Iterable[CollectionObjectName],
+    auto_filter_target_relationships: Iterable[CollectionItemName],
     clouds: Iterable[CollectionObjectName],
     *,
     cloud_thinning_settings: CloudThinningOptions | None = None,
@@ -932,7 +932,7 @@ async def auto_filter_clouds_to_nominal_geometry_3d(
 ```python
 async def auto_filter_clouds_to_nominal_geometry_2d(
     self,
-    auto_filter_target_relationships: Iterable[CollectionObjectName],
+    auto_filter_target_relationships: Iterable[CollectionItemName],
     clouds: Iterable[CollectionObjectName],
     *,
     cloud_thinning_settings: CloudThinningOptions | None = None,
@@ -952,7 +952,7 @@ to `False`.
 ```python
 async def auto_filter_points_to_nominal_geometry_3d(
     self,
-    auto_filter_target_relationships: Iterable[CollectionObjectName],
+    auto_filter_target_relationships: Iterable[CollectionItemName],
     points: Iterable[PointName],
     *,
     filter_proximity_settings_3d: FilterProximitySettings | None = None,
@@ -992,7 +992,7 @@ and never automatically replays uncertain work.
 ```python
 async def extract_geometry_from_point_clouds(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     cloud_name: CollectionObjectName,
     seed_points: Iterable[PointName],
     *,
@@ -1046,7 +1046,7 @@ described by the installed prose.
 ```python
 async def compute_geometry_relationship_uncertainties(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     display_results: bool = False,
 ) -> None: ...
@@ -1061,7 +1061,7 @@ SA may make the Relationship dormant after the computation.
 ```python
 async def make_cloud_to_swatch_relationship(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     input_cloud_name: CollectionObjectName,
     surface_face_list: str,
     reference_point: PointName,
@@ -1106,7 +1106,7 @@ class RelationshipStatusFlags:
 ```python
 async def get_relationship_sigmoidal_gap_fit_constraints(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> SigmoidalGapFitConstraints: ...
 ```
 
@@ -1117,7 +1117,7 @@ async def get_relationship_sigmoidal_gap_fit_constraints(
 ```python
 async def set_object_to_object_direction_relationship_tolerances(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     angle_between_vectors_tolerances: ToleranceScalarOptions | None = None,
     mutual_perpendicular_length_tolerances: ToleranceScalarOptions | None = None,
@@ -1133,7 +1133,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 ```python
 async def get_geom_relationship_criteria_name_list(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     include_all_criteria: bool = False,
 ) -> tuple[str, ...]: ...
@@ -1146,7 +1146,7 @@ async def get_geom_relationship_criteria_name_list(
 ```python
 async def get_relationship_status(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> RelationshipStatusFlags: ...
 ```
 
@@ -1163,7 +1163,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1172,7 +1172,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def geom_relationship_ignore_input_points(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -1193,7 +1193,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1202,7 +1202,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def geom_relationship_reuse_ignored_input_points(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -1223,7 +1223,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1244,7 +1244,7 @@ class GetGeomRelationshipAutoVectorsResult:
 
 async def get_geom_relationship_auto_vectors(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetGeomRelationshipAutoVectorsResult: ...
 ```
 
@@ -1266,7 +1266,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1275,7 +1275,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_cardinal_points(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> list[PointName]: ...
 ```
 
@@ -1296,7 +1296,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `str` | `Criteria` | Empty |
 
 | Result Value | Python Type | Exact MP Output |
@@ -1328,7 +1328,7 @@ class GetGeomRelationshipCriteriaResult:
 
 async def get_geom_relationship_criteria(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     criteria: str = '',
 ) -> GetGeomRelationshipCriteriaResult: ...
@@ -1352,7 +1352,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1361,7 +1361,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_measured_avg_point(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> PointName: ...
 ```
 
@@ -1382,7 +1382,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1391,7 +1391,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_measured_geometry(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> CollectionObjectName: ...
 ```
 
@@ -1412,7 +1412,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1421,7 +1421,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_nominal_avg_point(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> PointName: ...
 ```
 
@@ -1442,7 +1442,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1451,7 +1451,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_nominal_geometry(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> CollectionObjectName: ...
 ```
 
@@ -1472,7 +1472,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1489,7 +1489,7 @@ class GetGeomRelationshipPointListResult:
 
 async def get_geom_relationship_point_list(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetGeomRelationshipPointListResult: ...
 ```
 
@@ -1511,7 +1511,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1520,7 +1520,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_geom_relationship_projection_plane(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> CollectionObjectName: ...
 ```
 
@@ -1541,7 +1541,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1560,7 +1560,7 @@ class GetPipeRelationshipCutStatusResult:
 
 async def get_pipe_relationship_cut_status(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetPipeRelationshipCutStatusResult: ...
 ```
 
@@ -1582,7 +1582,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1613,7 +1613,7 @@ class GetPipeRelationshipPropertiesResult:
 
 async def get_pipe_relationship_properties(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetPipeRelationshipPropertiesResult: ...
 ```
 
@@ -1635,7 +1635,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1662,7 +1662,7 @@ class GetPipeRelationshipWeightsResult:
 
 async def get_pipe_relationship_weights(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetPipeRelationshipWeightsResult: ...
 ```
 
@@ -1684,7 +1684,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1705,7 +1705,7 @@ class GetRelationshipFitConstraintsScalarTypeResult:
 
 async def get_relationship_fit_constraints_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipFitConstraintsScalarTypeResult: ...
 ```
 
@@ -1727,7 +1727,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1746,7 +1746,7 @@ class GetRelationshipOutlierRejectionScalarTypeResult:
 
 async def get_relationship_outlier_rejection_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipOutlierRejectionScalarTypeResult: ...
 ```
 
@@ -1768,7 +1768,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1789,7 +1789,7 @@ class GetRelationshipProjectionOptionsResult:
 
 async def get_relationship_projection_options(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipProjectionOptionsResult: ...
 ```
 
@@ -1811,7 +1811,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1820,7 +1820,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_relationship_reporting_frame(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> CollectionObjectName: ...
 ```
 
@@ -1841,7 +1841,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1860,7 +1860,7 @@ class GetRelationshipSubSamplingOptionsResult:
 
 async def get_relationship_sub_sampling_options(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipSubSamplingOptionsResult: ...
 ```
 
@@ -1882,7 +1882,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1903,7 +1903,7 @@ class GetRelationshipToleranceScalarTypeResult:
 
 async def get_relationship_tolerance_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipToleranceScalarTypeResult: ...
 ```
 
@@ -1925,7 +1925,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -1970,7 +1970,7 @@ class GetRelationshipToleranceVectorTypeResult:
 
 async def get_relationship_tolerance_vector_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> GetRelationshipToleranceVectorTypeResult: ...
 ```
 
@@ -1992,7 +1992,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -2001,7 +2001,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_relationship_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> str: ...
 ```
 
@@ -2022,7 +2022,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -2031,7 +2031,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def get_relationship_weighting(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> float: ...
 ```
 
@@ -2052,7 +2052,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe_1_object_name` | `CollectionObjectName` | `Pipe 1 - Object Name` | Required |
 | `pipe_2_object_name` | `CollectionObjectName` | `Pipe 2 - Object Name` | Required |
 
@@ -2063,7 +2063,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def make_pipe_fitting_relationship(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     pipe_1_object_name: CollectionObjectName,
     pipe_2_object_name: CollectionObjectName,
 ) -> None: ...
@@ -2086,7 +2086,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe_1_make_cut` | `bool` | `Pipe 1 - Make Cut` | true |
 | `pipe_1_create_frame` | `bool` | `Pipe 1 - Create Frame` | false |
 | `pipe_1_frame_name` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
@@ -2101,7 +2101,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def make_pipe_relationship_cut(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     pipe_1_make_cut: bool = True,
     pipe_1_create_frame: bool = False,
@@ -2129,7 +2129,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe_1_force_cut_to_frame` | `bool` | `Pipe 1 - Force Cut to Frame?` | true |
 | `pipe_1_frame_name` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
 | `pipe_2_force_cut_to_frame` | `bool` | `Pipe 2 - Force Cut to Frame?` | true |
@@ -2142,7 +2142,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def pipe_relationship_force_cut_to_frame(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     pipe_1_force_cut_to_frame: bool = True,
     pipe_1_frame_name: CollectionObjectName,
@@ -2168,7 +2168,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `trap_clouds_false_geometry` | `bool` | `Trap Clouds? (FALSE = Geometry)` | true |
 | `instrument_id` | `CollectionInstrumentId` | `Instrument ID` | Required |
 | `measurement_mode` | `str` | `Measurement Mode` | Empty |
@@ -2180,7 +2180,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_auto_measure_nominal_feature(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     trap_clouds_false_geometry: bool = True,
     instrument_id: CollectionInstrumentId,
@@ -2205,7 +2205,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `create_auto_vectors_avn` | `bool` | `Create Auto Vectors AVN` | false |
 | `points_type` | `PointFilterInputType` | `Points Type` | Cardinal Points |
 | `use_vector_group_custom_prefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
@@ -2218,7 +2218,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_auto_vectors_nominal_avn(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     create_auto_vectors_avn: bool = False,
     points_type: PointFilterInputType = PointFilterInputType.CARDINAL_POINTS,
@@ -2244,7 +2244,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `create_cardinal_pts_when_fitting` | `bool` | `Create Cardinal Pts when Fitting?` | true |
 | `prefix_cardinal_pts_name_with_rel_name` | `bool` | `Prefix Cardinal Pts name with Rel name?` | true |
 | `cardinal_pts_group_name` | `str` | `Cardinal Pts Group Name` | GR-Cardinal Pts |
@@ -2256,7 +2256,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_cardinal_points(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     create_cardinal_pts_when_fitting: bool = True,
     prefix_cardinal_pts_name_with_rel_name: bool = True,
@@ -2281,7 +2281,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `criteria` | `str` | `Criteria` | Empty |
 | `show_in_report` | `bool` | `Show in Report` | true |
 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
@@ -2295,7 +2295,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_criteria(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     criteria: str = '',
     show_in_report: bool = True,
@@ -2322,7 +2322,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `measured_geometry` | `CollectionObjectName` | `Measured Geometry` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2332,7 +2332,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_measured_geometry(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     measured_geometry: CollectionObjectName,
 ) -> None: ...
 ```
@@ -2354,7 +2354,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `compare_to_nominal` | `bool` | `Compare To Nominal?` | true |
 | `nominal_average_point` | `PointName` | `Nominal Average Point` | Required |
 
@@ -2365,7 +2365,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_nominal_avg_point(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     compare_to_nominal: bool = True,
     nominal_average_point: PointName,
@@ -2389,7 +2389,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `compare_to_nominal` | `bool` | `Compare To Nominal?` | true |
 | `nominal_geometry` | `CollectionObjectName` | `Nominal Geometry` | Required |
 
@@ -2400,7 +2400,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_nominal_geometry(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     compare_to_nominal: bool = True,
     nominal_geometry: CollectionObjectName,
@@ -2424,7 +2424,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `project_to_plane` | `bool` | `Project to Plane?` | true |
 | `projection_plane_name` | `CollectionObjectName` | `Projection Plane Name` | Required |
 
@@ -2435,7 +2435,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_geom_relationship_projection_plane(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     project_to_plane: bool = True,
     projection_plane_name: CollectionObjectName,
@@ -2459,7 +2459,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
 | `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 
@@ -2470,7 +2470,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_object_to_object_direction_relationship_fit_constraints(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     angle_between_vectors_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
     mutual_perpendicular_length_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
@@ -2494,7 +2494,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `pipe_1_inner_diameter` | `float` | `Pipe 1 - Inner Diameter` | 0.000000 |
 | `pipe_1_outer_diameter` | `float` | `Pipe 1 - Outer Diameter` | 0.000000 |
 | `pipe_1_cut_begin` | `float` | `Pipe 1 - Cut Begin` | 0.000000 |
@@ -2511,7 +2511,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_pipe_relationship_segment_properties(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     pipe_1_inner_diameter: float = 0.000000,
     pipe_1_outer_diameter: float = 0.000000,
@@ -2541,7 +2541,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `overall_weight` | `float` | `Overall Weight` | 1.000000 |
 | `axis_offset` | `float` | `Axis Offset` | 2.000000 |
 | `axis_alignment` | `float` | `Axis Alignment` | 1.000000 |
@@ -2558,7 +2558,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_pipe_relationship_weights(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     overall_weight: float = 1.000000,
     axis_offset: float = 2.000000,
@@ -2588,7 +2588,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `create_auto_vectors_avf` | `bool` | `Create Auto Vectors AVF` | false |
 | `use_vector_group_custom_prefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
 | `vector_group_custom_prefix` | `str` | `Vector Group Custom Prefix` | Empty |
@@ -2600,7 +2600,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_auto_vectors_fit_avf(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     create_auto_vectors_avf: bool = False,
     use_vector_group_custom_prefix: bool = False,
@@ -2660,7 +2660,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `desired_measurement_count` | `int` | `Desired Measurement Count` | 0 |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2670,7 +2670,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_desired_meas_count(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     desired_measurement_count: int = 0,
 ) -> None: ...
@@ -2726,7 +2726,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2736,7 +2736,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_fit_constraints_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     fit_constraint_options: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
 ) -> None: ...
@@ -2759,7 +2759,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `orientation_vector_constraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2769,7 +2769,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_orientation_fit_constraints_vector_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     orientation_vector_constraint: ToleranceVectorOptions,
 ) -> None: ...
 ```
@@ -2791,7 +2791,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 
 | Result Value | Python Type | Exact MP Output |
 | --- | --- | --- |
@@ -2800,7 +2800,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_outlier_rejection_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
 ) -> None: ...
 ```
 
@@ -2821,7 +2821,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `position_vector_constraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2831,7 +2831,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_position_fit_constraints_vector_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     position_vector_constraint: ToleranceVectorOptions,
 ) -> None: ...
 ```
@@ -2853,7 +2853,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `projection_options` | `ProjectionOptions` | `Projection Options` | Object To Probe Vectors |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2863,7 +2863,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_projection_options(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
 ) -> None: ...
@@ -2886,7 +2886,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `reporting_frame` | `CollectionObjectName` | `Reporting Frame` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2896,7 +2896,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_reporting_frame(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     reporting_frame: CollectionObjectName,
 ) -> None: ...
 ```
@@ -2918,7 +2918,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `use_sigmoidal_gap_constraints` | `bool` | `Use Sigmoidal Gap Constraints` | true |
 
 | Result Value | Python Type | Exact MP Output |
@@ -2928,7 +2928,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_sigmoidal_gap_fit_constraints(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     use_sigmoidal_gap_constraints: bool = True,
 ) -> None: ...
@@ -2951,7 +2951,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `use_every_ith_point` | `bool` | `Use every i-th point` | false |
 | `i_value` | `int` | `i value` | 20 |
 | `use_no_more_than_n_points` | `bool` | `Use no more than n points` | true |
@@ -2964,7 +2964,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_sub_sampling_options(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     use_every_ith_point: bool = False,
     i_value: int = 20,
@@ -2990,7 +2990,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 
 | Result Value | Python Type | Exact MP Output |
@@ -3000,7 +3000,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_tolerance_scalar_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     tolerance_options: ToleranceScalarOptions = ToleranceScalarOptions.DEFAULT,
 ) -> None: ...
@@ -3023,7 +3023,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 
 | Result Value | Python Type | Exact MP Output |
@@ -3033,7 +3033,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_tolerance_vector_type(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     vector_tolerance: ToleranceVectorOptions,
 ) -> None: ...
 ```
@@ -3055,7 +3055,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `enable_voxel_cloud_display` | `bool` | `Enable Voxel Cloud Display?` | true |
 | `voxel_size_1_0_autodetect` | `float` | `Voxel Size (-1.0 autodetect)` | -1.000000 |
 | `min_pts_count_per_voxel` | `int` | `Min Pts Count Per Voxel` | 3 |
@@ -3071,7 +3071,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_voxel_cloud_display(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     enable_voxel_cloud_display: bool = True,
     voxel_size_1_0_autodetect: float = -1.000000,
@@ -3100,7 +3100,7 @@ This coroutine is part of the next Python package contract.
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
-| `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | `weight` | `float` | `Weight` | 0.000000 |
 
 | Result Value | Python Type | Exact MP Output |
@@ -3110,7 +3110,7 @@ This coroutine is part of the next Python package contract.
 ```python
 async def set_relationship_weighting(
     self,
-    relationship_name: CollectionObjectName,
+    relationship_name: CollectionItemName,
     *,
     weight: float = 0.000000,
 ) -> None: ...

@@ -1004,7 +1004,7 @@ The five defaults are `true`, `false`, `true`, `true`, and `0.01`.
 ```proto
 rpc SetRelationshipAssociatedData(SetRelationshipAssociatedDataRequest) returns (SetRelationshipAssociatedDataResult);
 message SetRelationshipAssociatedDataRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional PointNameList individual_points = 2;
   optional CollectionObjectNameList point_groups = 3;
   optional CollectionObjectNameList point_clouds = 4;
@@ -1031,7 +1031,7 @@ Omitted list messages do not call the corresponding SDK setter.
 ```proto
 rpc GetRelationshipAssociatedData(GetRelationshipAssociatedDataRequest) returns (GetRelationshipAssociatedDataResult);
 message GetRelationshipAssociatedDataRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 message GetRelationshipAssociatedDataResult {
   optional RelationshipAssociatedData associated_data = 1;
@@ -1053,7 +1053,7 @@ All five exact outputs are preserved.
 ```proto
 rpc SetPointsToPointsRelationshipAssociatedData(SetPointsToPointsRelationshipAssociatedDataRequest) returns (SetPointsToPointsRelationshipAssociatedDataResult);
 message SetPointsToPointsRelationshipAssociatedDataRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional PointNameList nominal_points = 2;
   optional PointNameList actual_points = 3;
   optional bool ignore_empty_arguments = 4;
@@ -1075,7 +1075,7 @@ message SetPointsToPointsRelationshipAssociatedDataResult {
 ```proto
 rpc GetPointsToPointsRelationshipAssociatedData(GetPointsToPointsRelationshipAssociatedDataRequest) returns (GetPointsToPointsRelationshipAssociatedDataResult);
 message GetPointsToPointsRelationshipAssociatedDataRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 message GetPointsToPointsRelationshipAssociatedDataResult {
   optional PointsToPointsRelationshipAssociatedData associated_data = 1;
@@ -1095,7 +1095,7 @@ message GetPointsToPointsRelationshipAssociatedDataResult {
 ```proto
 rpc AutoFilterCloudsToNominalGeometry3D(AutoFilterCloudsToNominalGeometry3DRequest) returns (AutoFilterCloudsToNominalGeometry3DResult);
 message AutoFilterCloudsToNominalGeometry3DRequest {
-  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated CollectionItemName auto_filter_target_relationships = 1;
   repeated CollectionObjectName clouds = 2;
   optional CloudThinningOptions cloud_thinning_settings = 3;
   optional FilterProximitySettings filter_proximity_settings_3d = 4;
@@ -1121,7 +1121,7 @@ feature-specific filtering defaults to `false`.
 ```proto
 rpc AutoFilterCloudsToNominalGeometry2D(AutoFilterCloudsToNominalGeometry2DRequest) returns (AutoFilterCloudsToNominalGeometry2DResult);
 message AutoFilterCloudsToNominalGeometry2DRequest {
-  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated CollectionItemName auto_filter_target_relationships = 1;
   repeated CollectionObjectName clouds = 2;
   optional CloudThinningOptions cloud_thinning_settings = 3;
   optional FilterProximitySettings filter_proximity_settings_2d = 4;
@@ -1148,7 +1148,7 @@ is an exact SA 2026.1 input absent from ObjectiveSA's older target.
 ```proto
 rpc AutoFilterPointsToNominalGeometry3D(AutoFilterPointsToNominalGeometry3DRequest) returns (AutoFilterPointsToNominalGeometry3DResult);
 message AutoFilterPointsToNominalGeometry3DRequest {
-  repeated CollectionObjectName auto_filter_target_relationships = 1;
+  repeated CollectionItemName auto_filter_target_relationships = 1;
   repeated PointName points = 2;
   optional FilterProximitySettings filter_proximity_settings_3d = 3;
 }
@@ -1203,7 +1203,7 @@ these operations is automatically replayed.
 ```proto
 rpc ExtractGeometryFromPointClouds(ExtractGeometryFromPointCloudsRequest) returns (ExtractGeometryFromPointCloudsResult);
 message ExtractGeometryFromPointCloudsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional GeometryType geometry_type = 2;
   optional CollectionObjectName cloud_name = 3;
   optional PointNameList bounding_points = 4;
@@ -1283,7 +1283,7 @@ describes an older singular-Point input.
 ```proto
 rpc ComputeGeometryRelationshipUncertainties(ComputeGeometryRelationshipUncertaintiesRequest) returns (ComputeGeometryRelationshipUncertaintiesResult);
 message ComputeGeometryRelationshipUncertaintiesRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool display_results = 2;
 }
 message ComputeGeometryRelationshipUncertaintiesResult {
@@ -1306,7 +1306,7 @@ after computing uncertainty; the server does not reverse that native effect.
 ```proto
 rpc MakeCloudToSwatchRelationship(MakeCloudToSwatchRelationshipRequest) returns (MakeCloudToSwatchRelationshipResult);
 message MakeCloudToSwatchRelationshipRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional CollectionObjectName input_cloud_name = 2;
   optional string surface_face_list = 3;
   optional PointName reference_point = 4;
@@ -1362,7 +1362,7 @@ Briosa enum.
 ```proto
 rpc GetRelationshipSigmoidalGapFitConstraints(GetRelationshipSigmoidalGapFitConstraintsRequest) returns (GetRelationshipSigmoidalGapFitConstraintsResult);
 message GetRelationshipSigmoidalGapFitConstraintsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 message GetRelationshipSigmoidalGapFitConstraintsResult {
   optional SigmoidalGapFitConstraints constraints = 1;
@@ -1384,7 +1384,7 @@ The RPC uses the exact MP word `Sigmoidal` and returns all eight exact values.
 ```proto
 rpc SetObjectToObjectDirectionRelationshipTolerances(SetObjectToObjectDirectionRelationshipTolerancesRequest) returns (SetObjectToObjectDirectionRelationshipTolerancesResult);
 message SetObjectToObjectDirectionRelationshipTolerancesRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ToleranceScalarOptions angle_between_vectors_tolerances = 2;
   optional ToleranceScalarOptions mutual_perpendicular_length_tolerances = 3;
 }
@@ -1407,7 +1407,7 @@ Each omitted tolerance value uses the exact all-limits-disabled zero default.
 ```proto
 rpc GetGeomRelationshipCriteriaNameList(GetGeomRelationshipCriteriaNameListRequest) returns (GetGeomRelationshipCriteriaNameListResult);
 message GetGeomRelationshipCriteriaNameListRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool include_all_criteria = 2;
 }
 message GetGeomRelationshipCriteriaNameListResult {
@@ -1430,7 +1430,7 @@ message GetGeomRelationshipCriteriaNameListResult {
 ```proto
 rpc GetRelationshipStatus(GetRelationshipStatusRequest) returns (GetRelationshipStatusResult);
 message GetRelationshipStatusRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 message GetRelationshipStatusResult {
   optional RelationshipStatusFlags status = 1;
@@ -1457,14 +1457,14 @@ these operations is automatically replayed.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc GeomRelationshipIgnoreInputPoints(GeomRelationshipIgnoreInputPointsRequest) returns (GeomRelationshipIgnoreInputPointsResult);
 
 message GeomRelationshipIgnoreInputPointsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GeomRelationshipIgnoreInputPointsResult {
@@ -1492,14 +1492,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc GeomRelationshipReuseIgnoredInputPoints(GeomRelationshipReuseIgnoredInputPointsRequest) returns (GeomRelationshipReuseIgnoredInputPointsResult);
 
 message GeomRelationshipReuseIgnoredInputPointsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GeomRelationshipReuseIgnoredInputPointsResult {
@@ -1527,7 +1527,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `auto_vectors_nominal_avn_enabled` | `bool` | `Auto Vectors Nominal (AVN) - Enabled?` | — |
 | Result | 2 | `auto_vectors_nominal_avn_name` | `CollectionObjectName` | `Auto Vectors Nominal (AVN) - Name` | — |
 | Result | 3 | `auto_vectors_fit_avf_enabled` | `bool` | `Auto Vectors Fit (AVF) - Enabled?` | — |
@@ -1539,7 +1539,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipAutoVectors(GetGeomRelationshipAutoVectorsRequest) returns (GetGeomRelationshipAutoVectorsResult);
 
 message GetGeomRelationshipAutoVectorsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipAutoVectorsResult {
@@ -1572,7 +1572,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `cardinal_point_name_list` | `repeated PointName` | `Cardinal Point Name List` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1580,7 +1580,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipCardinalPoints(GetGeomRelationshipCardinalPointsRequest) returns (GetGeomRelationshipCardinalPointsResult);
 
 message GetGeomRelationshipCardinalPointsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipCardinalPointsResult {
@@ -1609,7 +1609,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `criteria` | `string` | `Criteria` | Empty |
 | Result | 1 | `nominal` | `double` | `Nominal` | — |
 | Result | 2 | `measured` | `double` | `Measured` | — |
@@ -1627,7 +1627,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipCriteria(GetGeomRelationshipCriteriaRequest) returns (GetGeomRelationshipCriteriaResult);
 
 message GetGeomRelationshipCriteriaRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional string criteria = 2;
 }
 
@@ -1666,7 +1666,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `measured_average_point` | `PointName` | `Measured Average Point` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1674,7 +1674,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipMeasuredAvgPoint(GetGeomRelationshipMeasuredAvgPointRequest) returns (GetGeomRelationshipMeasuredAvgPointResult);
 
 message GetGeomRelationshipMeasuredAvgPointRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipMeasuredAvgPointResult {
@@ -1703,7 +1703,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `measured_geometry` | `CollectionObjectName` | `Measured Geometry` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1711,7 +1711,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipMeasuredGeometry(GetGeomRelationshipMeasuredGeometryRequest) returns (GetGeomRelationshipMeasuredGeometryResult);
 
 message GetGeomRelationshipMeasuredGeometryRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipMeasuredGeometryResult {
@@ -1740,7 +1740,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `nominal_average_point` | `PointName` | `Nominal Average Point` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1748,7 +1748,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipNominalAvgPoint(GetGeomRelationshipNominalAvgPointRequest) returns (GetGeomRelationshipNominalAvgPointResult);
 
 message GetGeomRelationshipNominalAvgPointRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipNominalAvgPointResult {
@@ -1777,7 +1777,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `nominal_geometry` | `CollectionObjectName` | `Nominal Geometry` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1785,7 +1785,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipNominalGeometry(GetGeomRelationshipNominalGeometryRequest) returns (GetGeomRelationshipNominalGeometryResult);
 
 message GetGeomRelationshipNominalGeometryRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipNominalGeometryResult {
@@ -1814,7 +1814,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `all_points` | `repeated PointName` | `All Points` | — |
 | Result | 2 | `used_points` | `repeated PointName` | `Used Points` | — |
 | Result | 3 | `ignored_points` | `repeated PointName` | `Ignored Points` | — |
@@ -1824,7 +1824,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipPointList(GetGeomRelationshipPointListRequest) returns (GetGeomRelationshipPointListResult);
 
 message GetGeomRelationshipPointListRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipPointListResult {
@@ -1855,7 +1855,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `projection_plane_name` | `CollectionObjectName` | `Projection Plane Name` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -1863,7 +1863,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetGeomRelationshipProjectionPlane(GetGeomRelationshipProjectionPlaneRequest) returns (GetGeomRelationshipProjectionPlaneResult);
 
 message GetGeomRelationshipProjectionPlaneRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetGeomRelationshipProjectionPlaneResult {
@@ -1892,7 +1892,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `pipe_1_cut_available` | `bool` | `Pipe 1 - Cut Available?` | — |
 | Result | 2 | `pipe_1_cut_active` | `bool` | `Pipe 1 - Cut Active?` | — |
 | Result | 3 | `pipe_2_cut_available` | `bool` | `Pipe 2 - Cut Available?` | — |
@@ -1903,7 +1903,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetPipeRelationshipCutStatus(GetPipeRelationshipCutStatusRequest) returns (GetPipeRelationshipCutStatusResult);
 
 message GetPipeRelationshipCutStatusRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetPipeRelationshipCutStatusResult {
@@ -1935,7 +1935,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `pipe_1_object_name` | `CollectionObjectName` | `Pipe 1 - Object Name` | — |
 | Result | 2 | `pipe_1_inner_diameter` | `double` | `Pipe 1 - Inner Diameter` | — |
 | Result | 3 | `pipe_1_outer_diameter` | `double` | `Pipe 1 - Outer Diameter` | — |
@@ -1952,7 +1952,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetPipeRelationshipProperties(GetPipeRelationshipPropertiesRequest) returns (GetPipeRelationshipPropertiesResult);
 
 message GetPipeRelationshipPropertiesRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetPipeRelationshipPropertiesResult {
@@ -1990,7 +1990,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `overall_weight` | `double` | `Overall Weight` | — |
 | Result | 2 | `axis_offset` | `double` | `Axis Offset` | — |
 | Result | 3 | `axis_alignment` | `double` | `Axis Alignment` | — |
@@ -2005,7 +2005,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetPipeRelationshipWeights(GetPipeRelationshipWeightsRequest) returns (GetPipeRelationshipWeightsResult);
 
 message GetPipeRelationshipWeightsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetPipeRelationshipWeightsResult {
@@ -2041,7 +2041,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `use_high_tolerance` | `bool` | `Use High Tolerance?` | — |
 | Result | 2 | `high_tolerance` | `double` | `High Tolerance` | — |
 | Result | 3 | `use_low_tolerance` | `bool` | `Use Low Tolerance?` | — |
@@ -2053,7 +2053,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipFitConstraintsScalarType(GetRelationshipFitConstraintsScalarTypeRequest) returns (GetRelationshipFitConstraintsScalarTypeResult);
 
 message GetRelationshipFitConstraintsScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipFitConstraintsScalarTypeResult {
@@ -2086,7 +2086,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `use_high_limit` | `bool` | `Use High Limit?` | — |
 | Result | 2 | `high_limit` | `double` | `High Limit` | — |
 | Result | 3 | `use_low_limit` | `bool` | `Use Low Limit?` | — |
@@ -2097,7 +2097,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipOutlierRejectionScalarType(GetRelationshipOutlierRejectionScalarTypeRequest) returns (GetRelationshipOutlierRejectionScalarTypeResult);
 
 message GetRelationshipOutlierRejectionScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipOutlierRejectionScalarTypeResult {
@@ -2129,7 +2129,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `ignore_edge_projections` | `bool` | `Ignore Edge Projections?` | — |
 | Result | 2 | `probe_offsets_override_target_values` | `bool` | `Probe Offsets - Override Target Values?` | — |
 | Result | 3 | `probe_offsets_override_value` | `double` | `Probe Offsets - Override Value` | — |
@@ -2141,7 +2141,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipProjectionOptions(GetRelationshipProjectionOptionsRequest) returns (GetRelationshipProjectionOptionsResult);
 
 message GetRelationshipProjectionOptionsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipProjectionOptionsResult {
@@ -2174,7 +2174,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `reporting_frame` | `CollectionObjectName` | `Reporting Frame` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2182,7 +2182,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipReportingFrame(GetRelationshipReportingFrameRequest) returns (GetRelationshipReportingFrameResult);
 
 message GetRelationshipReportingFrameRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipReportingFrameResult {
@@ -2211,7 +2211,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `use_every_ith_point` | `bool` | `Use every i-th point` | — |
 | Result | 2 | `i_value` | `int32` | `i value` | — |
 | Result | 3 | `use_no_more_than_n_points` | `bool` | `Use no more than n points` | — |
@@ -2222,7 +2222,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipSubSamplingOptions(GetRelationshipSubSamplingOptionsRequest) returns (GetRelationshipSubSamplingOptionsResult);
 
 message GetRelationshipSubSamplingOptionsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipSubSamplingOptionsResult {
@@ -2254,7 +2254,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `use_high_tolerance` | `bool` | `Use High Tolerance?` | — |
 | Result | 2 | `high_tolerance` | `double` | `High Tolerance` | — |
 | Result | 3 | `use_low_tolerance` | `bool` | `Use Low Tolerance?` | — |
@@ -2266,7 +2266,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipToleranceScalarType(GetRelationshipToleranceScalarTypeRequest) returns (GetRelationshipToleranceScalarTypeResult);
 
 message GetRelationshipToleranceScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipToleranceScalarTypeResult {
@@ -2299,7 +2299,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `use_high_x_tolerance` | `bool` | `Use High X Tolerance?` | — |
 | Result | 2 | `high_x_tolerance` | `double` | `High X Tolerance` | — |
 | Result | 3 | `use_high_y_tolerance` | `bool` | `Use High Y Tolerance?` | — |
@@ -2323,7 +2323,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipToleranceVectorType(GetRelationshipToleranceVectorTypeRequest) returns (GetRelationshipToleranceVectorTypeResult);
 
 message GetRelationshipToleranceVectorTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipToleranceVectorTypeResult {
@@ -2368,7 +2368,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `relationship_type` | `string` | `Relationship Type` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2376,7 +2376,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipType(GetRelationshipTypeRequest) returns (GetRelationshipTypeResult);
 
 message GetRelationshipTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipTypeResult {
@@ -2405,7 +2405,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1 | `weight` | `double` | `Weight` | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2413,7 +2413,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc GetRelationshipWeighting(GetRelationshipWeightingRequest) returns (GetRelationshipWeightingResult);
 
 message GetRelationshipWeightingRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message GetRelationshipWeightingResult {
@@ -2442,7 +2442,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `pipe_1_object_name` | `CollectionObjectName` | `Pipe 1 - Object Name` | Required |
 | Request | 3 | `pipe_2_object_name` | `CollectionObjectName` | `Pipe 2 - Object Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2451,7 +2451,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc MakePipeFittingRelationship(MakePipeFittingRelationshipRequest) returns (MakePipeFittingRelationshipResult);
 
 message MakePipeFittingRelationshipRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional CollectionObjectName pipe_1_object_name = 2;
   optional CollectionObjectName pipe_2_object_name = 3;
 }
@@ -2481,7 +2481,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `pipe_1_make_cut` | `bool` | `Pipe 1 - Make Cut` | true |
 | Request | 3 | `pipe_1_create_frame` | `bool` | `Pipe 1 - Create Frame` | false |
 | Request | 4 | `pipe_1_frame_name` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
@@ -2494,7 +2494,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc MakePipeRelationshipCut(MakePipeRelationshipCutRequest) returns (MakePipeRelationshipCutResult);
 
 message MakePipeRelationshipCutRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool pipe_1_make_cut = 2;
   optional bool pipe_1_create_frame = 3;
   optional CollectionObjectName pipe_1_frame_name = 4;
@@ -2528,7 +2528,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `pipe_1_force_cut_to_frame` | `bool` | `Pipe 1 - Force Cut to Frame?` | true |
 | Request | 3 | `pipe_1_frame_name` | `CollectionObjectName` | `Pipe 1 - Frame Name` | Required |
 | Request | 4 | `pipe_2_force_cut_to_frame` | `bool` | `Pipe 2 - Force Cut to Frame?` | true |
@@ -2539,7 +2539,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc PipeRelationshipForceCutToFrame(PipeRelationshipForceCutToFrameRequest) returns (PipeRelationshipForceCutToFrameResult);
 
 message PipeRelationshipForceCutToFrameRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool pipe_1_force_cut_to_frame = 2;
   optional CollectionObjectName pipe_1_frame_name = 3;
   optional bool pipe_2_force_cut_to_frame = 4;
@@ -2571,7 +2571,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `trap_clouds_false_geometry` | `bool` | `Trap Clouds? (FALSE = Geometry)` | true |
 | Request | 3 | `instrument_id` | `CollectionInstrumentId` | `Instrument ID` | Required |
 | Request | 4 | `measurement_mode` | `string` | `Measurement Mode` | Empty |
@@ -2581,7 +2581,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipAutoMeasureNominalFeature(SetGeomRelationshipAutoMeasureNominalFeatureRequest) returns (SetGeomRelationshipAutoMeasureNominalFeatureResult);
 
 message SetGeomRelationshipAutoMeasureNominalFeatureRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool trap_clouds_false_geometry = 2;
   optional CollectionInstrumentId instrument_id = 3;
   optional string measurement_mode = 4;
@@ -2612,7 +2612,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `create_auto_vectors_avn` | `bool` | `Create Auto Vectors AVN` | false |
 | Request | 3 | `points_type` | `PointFilterInputType` | `Points Type` | Cardinal Points |
 | Request | 4 | `use_vector_group_custom_prefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
@@ -2623,7 +2623,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipAutoVectorsNominalAvn(SetGeomRelationshipAutoVectorsNominalAvnRequest) returns (SetGeomRelationshipAutoVectorsNominalAvnResult);
 
 message SetGeomRelationshipAutoVectorsNominalAvnRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool create_auto_vectors_avn = 2;
   optional PointFilterInputType points_type = 3;
   optional bool use_vector_group_custom_prefix = 4;
@@ -2655,7 +2655,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `create_cardinal_pts_when_fitting` | `bool` | `Create Cardinal Pts when Fitting?` | true |
 | Request | 3 | `prefix_cardinal_pts_name_with_rel_name` | `bool` | `Prefix Cardinal Pts name with Rel name?` | true |
 | Request | 4 | `cardinal_pts_group_name` | `string` | `Cardinal Pts Group Name` | GR-Cardinal Pts |
@@ -2665,7 +2665,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipCardinalPoints(SetGeomRelationshipCardinalPointsRequest) returns (SetGeomRelationshipCardinalPointsResult);
 
 message SetGeomRelationshipCardinalPointsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool create_cardinal_pts_when_fitting = 2;
   optional bool prefix_cardinal_pts_name_with_rel_name = 3;
   optional string cardinal_pts_group_name = 4;
@@ -2696,7 +2696,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `criteria` | `string` | `Criteria` | Empty |
 | Request | 3 | `show_in_report` | `bool` | `Show in Report` | true |
 | Request | 4 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
@@ -2708,7 +2708,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipCriteria(SetGeomRelationshipCriteriaRequest) returns (SetGeomRelationshipCriteriaResult);
 
 message SetGeomRelationshipCriteriaRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional string criteria = 2;
   optional bool show_in_report = 3;
   optional ToleranceScalarOptions tolerance_options = 4;
@@ -2741,7 +2741,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `measured_geometry` | `CollectionObjectName` | `Measured Geometry` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -2749,7 +2749,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipMeasuredGeometry(SetGeomRelationshipMeasuredGeometryRequest) returns (SetGeomRelationshipMeasuredGeometryResult);
 
 message SetGeomRelationshipMeasuredGeometryRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional CollectionObjectName measured_geometry = 2;
 }
 
@@ -2778,7 +2778,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `compare_to_nominal` | `bool` | `Compare To Nominal?` | true |
 | Request | 3 | `nominal_average_point` | `PointName` | `Nominal Average Point` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2787,7 +2787,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipNominalAvgPoint(SetGeomRelationshipNominalAvgPointRequest) returns (SetGeomRelationshipNominalAvgPointResult);
 
 message SetGeomRelationshipNominalAvgPointRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool compare_to_nominal = 2;
   optional PointName nominal_average_point = 3;
 }
@@ -2817,7 +2817,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `compare_to_nominal` | `bool` | `Compare To Nominal?` | true |
 | Request | 3 | `nominal_geometry` | `CollectionObjectName` | `Nominal Geometry` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2826,7 +2826,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipNominalGeometry(SetGeomRelationshipNominalGeometryRequest) returns (SetGeomRelationshipNominalGeometryResult);
 
 message SetGeomRelationshipNominalGeometryRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool compare_to_nominal = 2;
   optional CollectionObjectName nominal_geometry = 3;
 }
@@ -2856,7 +2856,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `project_to_plane` | `bool` | `Project to Plane?` | true |
 | Request | 3 | `projection_plane_name` | `CollectionObjectName` | `Projection Plane Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2865,7 +2865,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetGeomRelationshipProjectionPlane(SetGeomRelationshipProjectionPlaneRequest) returns (SetGeomRelationshipProjectionPlaneResult);
 
 message SetGeomRelationshipProjectionPlaneRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool project_to_plane = 2;
   optional CollectionObjectName projection_plane_name = 3;
 }
@@ -2895,7 +2895,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `angle_between_vectors_fit_constraints` | `FitConstraintScalarOptions` | `Angle Between Vectors Fit Constraints` | Both limits disabled |
 | Request | 3 | `mutual_perpendicular_length_fit_constraints` | `FitConstraintScalarOptions` | `Mutual Perpendicular Length Fit Constraints` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
@@ -2904,7 +2904,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetObjectToObjectDirectionRelationshipFitConstraints(SetObjectToObjectDirectionRelationshipFitConstraintsRequest) returns (SetObjectToObjectDirectionRelationshipFitConstraintsResult);
 
 message SetObjectToObjectDirectionRelationshipFitConstraintsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional FitConstraintScalarOptions angle_between_vectors_fit_constraints = 2;
   optional FitConstraintScalarOptions mutual_perpendicular_length_fit_constraints = 3;
 }
@@ -2934,7 +2934,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `pipe_1_inner_diameter` | `double` | `Pipe 1 - Inner Diameter` | 0.000000 |
 | Request | 3 | `pipe_1_outer_diameter` | `double` | `Pipe 1 - Outer Diameter` | 0.000000 |
 | Request | 4 | `pipe_1_cut_begin` | `double` | `Pipe 1 - Cut Begin` | 0.000000 |
@@ -2949,7 +2949,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetPipeRelationshipSegmentProperties(SetPipeRelationshipSegmentPropertiesRequest) returns (SetPipeRelationshipSegmentPropertiesResult);
 
 message SetPipeRelationshipSegmentPropertiesRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional double pipe_1_inner_diameter = 2;
   optional double pipe_1_outer_diameter = 3;
   optional double pipe_1_cut_begin = 4;
@@ -2985,7 +2985,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `overall_weight` | `double` | `Overall Weight` | 1.000000 |
 | Request | 3 | `axis_offset` | `double` | `Axis Offset` | 2.000000 |
 | Request | 4 | `axis_alignment` | `double` | `Axis Alignment` | 1.000000 |
@@ -3000,7 +3000,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetPipeRelationshipWeights(SetPipeRelationshipWeightsRequest) returns (SetPipeRelationshipWeightsResult);
 
 message SetPipeRelationshipWeightsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional double overall_weight = 2;
   optional double axis_offset = 3;
   optional double axis_alignment = 4;
@@ -3036,7 +3036,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `create_auto_vectors_avf` | `bool` | `Create Auto Vectors AVF` | false |
 | Request | 3 | `use_vector_group_custom_prefix` | `bool` | `Use Vector Group Custom Prefix?` | false |
 | Request | 4 | `vector_group_custom_prefix` | `string` | `Vector Group Custom Prefix` | Empty |
@@ -3046,7 +3046,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipAutoVectorsFitAvf(SetRelationshipAutoVectorsFitAvfRequest) returns (SetRelationshipAutoVectorsFitAvfResult);
 
 message SetRelationshipAutoVectorsFitAvfRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool create_auto_vectors_avf = 2;
   optional bool use_vector_group_custom_prefix = 3;
   optional string vector_group_custom_prefix = 4;
@@ -3116,7 +3116,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `desired_measurement_count` | `int32` | `Desired Measurement Count` | 0 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3124,7 +3124,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipDesiredMeasCount(SetRelationshipDesiredMeasCountRequest) returns (SetRelationshipDesiredMeasCountResult);
 
 message SetRelationshipDesiredMeasCountRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional int32 desired_measurement_count = 2;
 }
 
@@ -3190,7 +3190,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `fit_constraint_options` | `FitConstraintScalarOptions` | `Fit Constraint Options` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3198,7 +3198,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipFitConstraintsScalarType(SetRelationshipFitConstraintsScalarTypeRequest) returns (SetRelationshipFitConstraintsScalarTypeResult);
 
 message SetRelationshipFitConstraintsScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional FitConstraintScalarOptions fit_constraint_options = 2;
 }
 
@@ -3227,7 +3227,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `orientation_vector_constraint` | `ToleranceVectorOptions` | `Orientation Vector Constraint` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3235,7 +3235,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipOrientationFitConstraintsVectorType(SetRelationshipOrientationFitConstraintsVectorTypeRequest) returns (SetRelationshipOrientationFitConstraintsVectorTypeResult);
 
 message SetRelationshipOrientationFitConstraintsVectorTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ToleranceVectorOptions orientation_vector_constraint = 2;
 }
 
@@ -3264,14 +3264,14 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
 ```proto
 rpc SetRelationshipOutlierRejectionScalarType(SetRelationshipOutlierRejectionScalarTypeRequest) returns (SetRelationshipOutlierRejectionScalarTypeResult);
 
 message SetRelationshipOutlierRejectionScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
 }
 
 message SetRelationshipOutlierRejectionScalarTypeResult {
@@ -3299,7 +3299,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `position_vector_constraint` | `ToleranceVectorOptions` | `Position Vector Constraint` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3307,7 +3307,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipPositionFitConstraintsVectorType(SetRelationshipPositionFitConstraintsVectorTypeRequest) returns (SetRelationshipPositionFitConstraintsVectorTypeResult);
 
 message SetRelationshipPositionFitConstraintsVectorTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ToleranceVectorOptions position_vector_constraint = 2;
 }
 
@@ -3336,7 +3336,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `projection_options` | `ProjectionOptions` | `Projection Options` | Object To Probe Vectors |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3344,7 +3344,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipProjectionOptions(SetRelationshipProjectionOptionsRequest) returns (SetRelationshipProjectionOptionsResult);
 
 message SetRelationshipProjectionOptionsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ProjectionOptions projection_options = 2;
 }
 
@@ -3373,7 +3373,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `reporting_frame` | `CollectionObjectName` | `Reporting Frame` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3381,7 +3381,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipReportingFrame(SetRelationshipReportingFrameRequest) returns (SetRelationshipReportingFrameResult);
 
 message SetRelationshipReportingFrameRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional CollectionObjectName reporting_frame = 2;
 }
 
@@ -3410,7 +3410,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `use_sigmoidal_gap_constraints` | `bool` | `Use Sigmoidal Gap Constraints` | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3418,7 +3418,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipSigmoidalGapFitConstraints(SetRelationshipSigmoidalGapFitConstraintsRequest) returns (SetRelationshipSigmoidalGapFitConstraintsResult);
 
 message SetRelationshipSigmoidalGapFitConstraintsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool use_sigmoidal_gap_constraints = 2;
 }
 
@@ -3447,7 +3447,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `use_every_ith_point` | `bool` | `Use every i-th point` | false |
 | Request | 3 | `i_value` | `int32` | `i value` | 20 |
 | Request | 4 | `use_no_more_than_n_points` | `bool` | `Use no more than n points` | true |
@@ -3458,7 +3458,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipSubSamplingOptions(SetRelationshipSubSamplingOptionsRequest) returns (SetRelationshipSubSamplingOptionsResult);
 
 message SetRelationshipSubSamplingOptionsRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool use_every_ith_point = 2;
   optional int32 i_value = 3;
   optional bool use_no_more_than_n_points = 4;
@@ -3490,7 +3490,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `tolerance_options` | `ToleranceScalarOptions` | `Tolerance Options` | Both limits disabled |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3498,7 +3498,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipToleranceScalarType(SetRelationshipToleranceScalarTypeRequest) returns (SetRelationshipToleranceScalarTypeResult);
 
 message SetRelationshipToleranceScalarTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ToleranceScalarOptions tolerance_options = 2;
 }
 
@@ -3527,7 +3527,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `vector_tolerance` | `ToleranceVectorOptions` | `Vector Tolerance` | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3535,7 +3535,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipToleranceVectorType(SetRelationshipToleranceVectorTypeRequest) returns (SetRelationshipToleranceVectorTypeResult);
 
 message SetRelationshipToleranceVectorTypeRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional ToleranceVectorOptions vector_tolerance = 2;
 }
 
@@ -3564,7 +3564,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `enable_voxel_cloud_display` | `bool` | `Enable Voxel Cloud Display?` | true |
 | Request | 3 | `voxel_size_1_0_autodetect` | `double` | `Voxel Size (-1.0 autodetect)` | -1.000000 |
 | Request | 4 | `min_pts_count_per_voxel` | `int32` | `Min Pts Count Per Voxel` | 3 |
@@ -3578,7 +3578,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipVoxelCloudDisplay(SetRelationshipVoxelCloudDisplayRequest) returns (SetRelationshipVoxelCloudDisplayResult);
 
 message SetRelationshipVoxelCloudDisplayRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional bool enable_voxel_cloud_display = 2;
   optional double voxel_size_1_0_autodetect = 3;
   optional int32 min_pts_count_per_voxel = 4;
@@ -3613,7 +3613,7 @@ intentionally absent. The server validates required presence before enqueue.
 
 | Message | Field | Name | Type | Exact MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationship_name` | `CollectionObjectName` | `Relationship Name` | Required |
+| Request | 1 | `relationship_name` | `CollectionItemName` | `Relationship Name` | Required |
 | Request | 2 | `weight` | `double` | `Weight` | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Briosa execution details | — |
 
@@ -3621,7 +3621,7 @@ intentionally absent. The server validates required presence before enqueue.
 rpc SetRelationshipWeighting(SetRelationshipWeightingRequest) returns (SetRelationshipWeightingResult);
 
 message SetRelationshipWeightingRequest {
-  optional CollectionObjectName relationship_name = 1;
+  optional CollectionItemName relationship_name = 1;
   optional double weight = 2;
 }
 

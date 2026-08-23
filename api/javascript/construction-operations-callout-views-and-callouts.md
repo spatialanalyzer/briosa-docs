@@ -14,11 +14,9 @@ These functions are not released support until implemented and versioned.
 
 ```ts
 export interface Font {
-  readonly family?: string; // "MS Shell Dlg"
-  readonly pointSize?: number; // 8
-  readonly bold?: boolean;
-  readonly italic?: boolean;
-  readonly underline?: boolean;
+  readonly fontName?: string; // "MS Shell Dlg"
+  readonly size?: number; // 8
+  readonly color?: Color; // RGB 0, 0, 0
 }
 
 export interface CalloutViewProperties {

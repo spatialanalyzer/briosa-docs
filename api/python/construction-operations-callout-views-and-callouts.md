@@ -15,11 +15,9 @@ These coroutines are not released support until implemented and versioned.
 ```python
 @dataclass(frozen=True, slots=True)
 class Font:
-    family: str = "MS Shell Dlg"
-    point_size: int = 8
-    bold: bool = False
-    italic: bool = False
-    underline: bool = False
+    font_name: str = "MS Shell Dlg"
+    size: int = 8
+    color: Color = Color(0, 0, 0)
 
 
 @dataclass(frozen=True, slots=True)

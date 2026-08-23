@@ -15,11 +15,9 @@ These methods are not released support until implemented and versioned.
 ```csharp
 public sealed record Font
 {
-    public string Family { get; init; } = "MS Shell Dlg";
-    public int PointSize { get; init; } = 8;
-    public bool Bold { get; init; }
-    public bool Italic { get; init; }
-    public bool Underline { get; init; }
+    public string FontName { get; init; } = "MS Shell Dlg";
+    public uint Size { get; init; } = 8;
+    public Color Color { get; init; } = new(0, 0, 0);
 }
 
 public sealed record CalloutViewProperties

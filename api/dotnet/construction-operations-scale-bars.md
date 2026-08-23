@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 ```csharp
 public Task ConstructScaleBarAsync(
-    CollectionObjectName scaleBarName,
+    CollectionItemName scaleBarName,
     PointName beginTarget,
     PointName endTarget,
     double length = 0.0,
