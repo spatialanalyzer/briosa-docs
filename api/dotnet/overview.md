@@ -38,3 +38,17 @@ underlying service contract, use the [gRPC API Reference](/api/grpc).
 The sidebar's **Wave A MP Commands (Next)** section defines the planned flat
 `BriosaClient` methods for all selected commands, including parameter types,
 reviewed defaults, return shapes, examples, and links to the gRPC contract.
+
+The **Wave B MP Commands (Next)** section currently adds the reviewed Cloud and
+Mesh Operations methods, the Construction Operations root methods, and the
+BSpines, Callout Views and Callouts, Circles, Collections, Cones, Cylinders,
+Ellipses, Ellipsoids, Folders, Frames, Lines, Other MP Types, Perimeters,
+Planes, Point Clouds, Points and Groups, Polygonized Surfaces, Scale Bars,
+Spheres, Surfaces, and Vectors and Vector Groups subgroups, plus GDT Analysis,
+GDT Construction, and 171 selected operations from 175 reviewed Instrument
+Operations root and subgroup
+commands, plus all twenty-five Robot Calibration Appliance Node Operations and
+all thirty-three Robot Operations methods, plus fifty selected methods from all
+fifty-five reviewed Wave B Relationship Operations root commands, plus four
+final reconciled subgroup methods,
+including their shared value types.

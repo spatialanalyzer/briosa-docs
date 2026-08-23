@@ -31,7 +31,7 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Cloud and Mesh Operations</strong><span>28 observations · 4 group paths</span></summary>
 
-- Root group — 7
+- [Root group — 7](./cloud-and-mesh-operations.md)
 - Cloud Cross Sections — 4
 - Cloud Filters — 13
 - Mesh Operations — 4
@@ -41,28 +41,28 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Construction Operations</strong><span>270 observations · 22 group paths</span></summary>
 
-- Root group — 14
-- BSplines — 9
-- Callout Views and Callouts — 21
-- Circles — 3
-- Collections — 5
-- Cones — 2
-- Cylinders — 3
-- Ellipses — 1
-- Ellipsoids — 1
-- Folders — 2
-- Frames — 18
-- Lines — 9
-- Other MP Types — 74
-- Perimeters — 1
-- Planes — 6
-- Point Clouds — 11
-- Points and Groups — 57
-- Polygonized Surfaces — 1
-- Scale Bars — 1
-- Spheres — 2
-- Surfaces — 15
-- Vectors and Vector Groups — 14
+- [Root group — 14](./construction-operations.md)
+- [BSplines — 9](./construction-operations-bsplines.md)
+- [Callout Views and Callouts — 21](./construction-operations-callout-views-and-callouts.md)
+- [Circles — 3](./construction-operations-circles.md)
+- [Collections — 5](./construction-operations-collections.md)
+- [Cones — 2](./construction-operations-cones.md)
+- [Cylinders — 3](./construction-operations-cylinders.md)
+- [Ellipses — 1](./construction-operations-ellipses.md)
+- [Ellipsoids — 1](./construction-operations-ellipsoids.md)
+- [Folders — 2](./construction-operations-folders.md)
+- [Frames — 18](./construction-operations-frames.md)
+- [Lines — 9](./construction-operations-lines.md)
+- [Other MP Types — 74](./construction-operations-other-mp-types.md)
+- [Perimeters — 1](./construction-operations-perimeters.md)
+- [Planes — 6](./construction-operations-planes.md)
+- [Point Clouds — 11](./construction-operations-point-clouds.md)
+- [Points and Groups — 57](./construction-operations-points-and-groups.md)
+- [Polygonized Surfaces — 1](./construction-operations-polygonized-surfaces.md)
+- [Scale Bars — 1](./construction-operations-scale-bars.md)
+- [Spheres — 2](./construction-operations-spheres.md)
+- [Surfaces — 15](./construction-operations-surfaces.md)
+- [Vectors and Vector Groups — 14](./construction-operations-vectors-and-vector-groups.md)
 
 </details>
 
@@ -108,8 +108,8 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>GDT Operations</strong><span>43 observations · 2 group paths</span></summary>
 
-- GDT Analysis — 32
-- GDT Construction — 11
+- [GDT Analysis — 32](./gdt-analysis.md)
+- [GDT Construction — 11](./gdt-construction.md)
 
 </details>
 
@@ -117,22 +117,22 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <summary><strong>Google Sheets Operations</strong><span>19 observations · 3 group paths</span></summary>
 
 - [Root group — 8](./google-sheets-operations.md)
-- Google Sheets Read Operations — 5
-- Google Sheets Write Operations — 6
+- [Google Sheets Read Operations — 5](./google-sheets-read-operations.md)
+- [Google Sheets Write Operations — 6](./google-sheets-write-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Instrument Operations</strong><span>175 observations · 8 group paths</span></summary>
 
-- Root group — 139
-- Advanced Instrument Operations — 3
-- API - LADAR — 6
-- Crib Sheet Operations — 1
-- Laser Projection — 2
-- Nikon Metrology Laser Radars LR — 12
-  - LR Cloud Viewer Operations — 5
-- Watch Window Operations — 7
+- [Root group — 139 reviewed](./instrument-operations.md)
+- [Advanced Instrument Operations — 3](./instrument-operations-advanced-instrument-operations.md)
+- [API - LADAR — 6](./instrument-operations-api-ladar.md)
+- [Crib Sheet Operations — 1](./instrument-operations-crib-sheet-operations.md)
+- [Laser Projection — 2](./instrument-operations-laser-projection.md)
+- [Nikon Metrology Laser Radars LR — 12](./instrument-operations-nikon-metrology-laser-radars-lr.md)
+  - [LR Cloud Viewer Operations — 5](./instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations.md)
+- [Watch Window Operations — 7](./instrument-operations-watch-window-operations.md)
 
 </details>
 
@@ -167,8 +167,8 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Relationship Operations</strong><span>114 observations · 4 group paths</span></summary>
 
-- [Open the 55 reviewed Wave A crossover commands](./relationship-operations.md)
-- Root group — 55
+- [Open all 114 reviewed commands](./relationship-operations.md)
+- Root group — 55 of 55 reviewed
 - Pipe Relationships — 8
 - Relationship Attributes — 41
 - Relationship Attributes Scalar Types — 10
@@ -187,14 +187,14 @@ not Briosa support, release commitment, or final retained catalog coverage.
 <details className="catalog-tree-branch">
 <summary><strong>Robot Calibration Appliance Node Operations</strong><span>25 observations · 1 group path</span></summary>
 
-- Root group — 25
+- [Root group — 25](./robot-calibration-appliance-node-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
 <summary><strong>Robot Operations</strong><span>33 observations · 1 group path</span></summary>
 
-- Root group — 33
+- [Root group — 33 of 33 reviewed](./robot-operations.md)
 
 </details>
 

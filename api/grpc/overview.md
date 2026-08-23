@@ -73,3 +73,18 @@ reviewed defaults for every operation selected in the first catalog wave.
 Those entries are implementation contracts, not a claim that the current
 server already exposes them. Each one links back to its reviewed catalog
 disposition and forward to the three client-library expressions.
+
+The **Wave B MP Commands (Next)** section currently adds the reviewed Cloud and
+Mesh Operations service contract, the Construction Operations root, and its
+BSpines, Callout Views and Callouts, Circles, Collections, Cones, Cylinders,
+Ellipses, Ellipsoids, Folders, Frames, Lines, Other MP Types, Perimeters,
+Planes, Point Clouds, Points and Groups, Polygonized Surfaces, Scale Bars,
+Spheres, Surfaces, and Vectors and Vector Groups subgroups, plus GDT Analysis,
+GDT Construction, and 171 selected operations from 175 reviewed Instrument
+Operations root and subgroup
+commands, plus all twenty-five Robot Calibration Appliance Node Operations and
+all thirty-three Robot Operations commands, plus fifty selected commands from
+all fifty-five reviewed Wave B Relationship Operations root commands, plus four
+final reconciled subgroup commands. The
+excluded MP-only fit-options and value-construction helpers remain shared
+client values rather than RPCs.

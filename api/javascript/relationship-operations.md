@@ -16,6 +16,207 @@ until this Next documentation is versioned for a published package.
 Exact MP command words map mechanically to `lowerCamelCase`. Commands with MP
 inputs use one readonly input object; call controls remain a separate final value.
 
+## Wave B Root-Group Types
+
+```ts
+export type GeometryRelationshipPointEditMode =
+  | "Point List"
+  | "Point Graph"
+  | "Sub-Sampler Settings";
+
+export interface GeometryRelationshipOutlierFilterMetrics {
+  readonly firstPassRmsError: number;
+  readonly firstPassMaximumError: number;
+  readonly firstPassMinimumError: number;
+  readonly firstPassAverageError: number;
+  readonly finalPassRmsError: number;
+  readonly finalPassMaximumError: number;
+  readonly finalPassMinimumError: number;
+  readonly finalPassAverageError: number;
+  readonly totalInputPointCount: number;
+  readonly excludePointCount: number;
+}
+
+export interface RelationshipWatchWindowUdpSettings {
+  readonly enabled?: boolean;
+  readonly broadcast?: boolean;
+  readonly ipAddress?: string;
+  readonly port?: number;
+}
+
+export interface RelationshipWatchWindowTemplateOptions {
+  readonly linearPrecision?: number;
+  readonly angularPrecision?: number;
+  readonly font?: Font;
+  readonly textColor?: Color;
+  readonly backgroundColor?: Color;
+  readonly highlightColor?: Color;
+  readonly showDeviationXRx?: boolean;
+  readonly showDeviationYRy?: boolean;
+  readonly showDeviationZRz?: boolean;
+  readonly showDeviationMagnitude?: boolean;
+  readonly udpNetworkTransmitSettings?: RelationshipWatchWindowUdpSettings;
+  readonly transparentBackground?: boolean;
+  readonly hideUnits?: boolean;
+}
+```
+
+The watch-window defaults are linear precision `4`, angular precision `3`, the
+default MP font, blue text, white background, red highlight, all four deviation
+values visible, UDP disabled with broadcast enabled and port `10000`, an opaque
+background, and visible units.
+
+## Generate Geometry Relationship Summary
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
+
+```ts
+export interface GenerateGeometryRelationshipSummaryInput {
+  readonly relationshipRefList: Iterable<CollectionItemName>;
+  readonly summaryTableName?: string;
+}
+
+function generateGeometryRelationshipSummary(
+  briosa: BriosaClient,
+  input: GenerateGeometryRelationshipSummaryInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+`summaryTableName` defaults to `"Geometry Relationship Summary"`.
+
+## Edit Geometry Relationship Point List
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
+
+```ts
+export interface EditGeometryRelationshipPointListInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointEditMode?: GeometryRelationshipPointEditMode;
+}
+
+function editGeometryRelationshipPointList(
+  briosa: BriosaClient,
+  input: EditGeometryRelationshipPointListInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The mode defaults to `"Point List"`. This operation opens an SA dialog; aborting
+the client call does not prove that the interaction stopped.
+
+## Filter Geometry Relationship Outlier Cloud Points
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+
+```ts
+export interface FilterGeometryRelationshipOutlierCloudPointsInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly sigmaThreshold?: number;
+  readonly modifyExistingInputClouds?: boolean;
+}
+
+function filterGeometryRelationshipOutlierCloudPoints(
+  briosa: BriosaClient,
+  input: FilterGeometryRelationshipOutlierCloudPointsInput,
+  options?: BriosaCallOptions,
+): Promise<GeometryRelationshipOutlierFilterMetrics>;
+```
+
+The threshold defaults to `3`, cloud mutation defaults to `false`, and the
+result preserves all ten exact MP outputs.
+
+## Relationship Watch Window Template
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
+
+```ts
+export interface RelationshipWatchWindowTemplateInput {
+  readonly watchWindowTemplateName?: CollectionObjectName;
+  readonly options?: RelationshipWatchWindowTemplateOptions;
+}
+
+function relationshipWatchWindowTemplate(
+  briosa: BriosaClient,
+  input?: RelationshipWatchWindowTemplateInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitting `input` applies every exact MP default, including the empty object in
+the `Relationship Template` collection.
+
+## Make Point to Point Relationship
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
+
+```ts
+export interface MakePointToPointRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstPointName: PointName;
+  readonly secondPointName: PointName;
+  readonly tolerance?: ToleranceVectorOptions;
+  readonly constraint?: ToleranceVectorOptions;
+}
+
+function makePointToPointRelationship(
+  briosa: BriosaClient,
+  input: MakePointToPointRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitted option values use the distinct exact MP tolerance and constraint
+defaults. Briosa adds no point or constraint preflight.
+
+## Make Frame to Frame Relationship
+
+:::note[Status: Next]
+This function is part of the next JavaScript and TypeScript package contract.
+:::
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
+
+```ts
+export interface MakeFrameToFrameRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstFrameName: CollectionObjectName;
+  readonly secondFrameName: CollectionObjectName;
+  readonly orientationTolerance?: ToleranceScalarOptions;
+  readonly positionTolerance?: ToleranceVectorOptions;
+}
+
+function makeFrameToFrameRelationship(
+  briosa: BriosaClient,
+  input: MakeFrameToFrameRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitted tolerances use the exact all-limits-disabled zero defaults. These
+functions retain no Relationship state and never automatically replay uncertain
+work.
+
 ## Enable/Disable Relationships for Optimization
 
 :::note[Status: Next]
@@ -52,6 +253,1101 @@ await enableDisableRelationshipsForOptimization(briosa, { relationships: ... });
 
 Resolves without a command value. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
+
+## Dynamic Relationship Types
+
+```ts
+export type DynamicPointMode =
+  | "Intersection of Line and Plane"
+  | "Intersection of Cylinder and Plane"
+  | "Intersection of Cone and Plane"
+  | "Intersection of Three Planes"
+  | "Mid-Point of Perpendicular to Two Lines";
+
+export type DynamicLineMode =
+  | "Cone Axis"
+  | "Cylinder Axis"
+  | "Intersection of Two Planes"
+  | "Bisect Two Lines"
+  | "Slot Centerline Along Length";
+
+export type DynamicPlaneMode =
+  | "Bisect Two Planes"
+  | "Two Cones Intersection - Hold Normal to Best-Fit Plane"
+  | "Two Cones Intersection - Hold Normal to First Cone Axis"
+  | "Two Cones Intersection - Hold Normal to Second Cone Axis"
+  | "Cone and Cylinder Intersection - Hold Normal to Best-Fit Plane"
+  | "Cone and Cylinder Intersection - Hold Normal to Cone Axis"
+  | "Cone and Cylinder Intersection - Hold Normal to Cylinder Axis"
+  | "Offset Plane From Plane";
+
+export type DynamicCircleMode =
+  | "Cylinder and Plane Intersection - Hold Plane Normal"
+  | "Cylinder and Plane Intersection - Hold Cylinder Axis"
+  | "Cone and Plane Intersection - Hold Plane Normal"
+  | "Cone and Plane Intersection - Hold Cone Axis"
+  | "Sphere and Plane Intersection"
+  | "Two Cones Intersection"
+  | "Cone and Cylinder Intersection";
+
+export type DynamicEllipseMode =
+  | "Cylinder and Plane Intersection"
+  | "Cone and Plane Intersection";
+```
+
+The TypeScript value uses the correctly spelled first-cone-axis label and maps
+to SA's exact misspelled SDK literal internally.
+
+## Make Points to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
+
+```ts
+export interface MakePointsToObjectsRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointsInRelationship: Iterable<PointName>;
+  readonly objectsInRelationship: Iterable<CollectionObjectName>;
+  readonly projectionOptions?: ProjectionOptions;
+  readonly autoUpdateAVectorGroup?: boolean;
+}
+function makePointsToObjectsRelationship(
+  briosa: BriosaClient,
+  input: MakePointsToObjectsRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitted projection options use `Object To Probe Vectors` with all projection
+controls disabled; auto-update defaults to `false`.
+
+## Make Points to Points Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
+
+```ts
+export interface MakePointsToPointsRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly nominalPoints: Iterable<PointName>;
+  readonly measuredPoints: Iterable<PointName>;
+  readonly autoUpdateAVectorGroup?: boolean;
+  readonly tolerance?: ToleranceVectorOptions;
+  readonly constraint?: ToleranceVectorOptions;
+}
+function makePointsToPointsRelationship(
+  briosa: BriosaClient,
+  input: MakePointsToPointsRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitted tolerance and constraint values use their distinct exact MP defaults.
+
+## Make Groups to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
+
+```ts
+export interface MakeGroupsToObjectsRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointGroupsInRelationship: Iterable<CollectionObjectName>;
+  readonly objectsInRelationship: Iterable<CollectionObjectName>;
+  readonly projectionOptions?: ProjectionOptions;
+  readonly autoUpdateAVectorGroup?: boolean;
+}
+function makeGroupsToObjectsRelationship(
+  briosa: BriosaClient,
+  input: MakeGroupsToObjectsRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Object to Object Direction Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
+
+```ts
+export interface MakeObjectToObjectDirectionRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstObjectInRelationship: CollectionObjectName;
+  readonly secondObjectInRelationship: CollectionObjectName;
+  readonly nominalAngle?: number;
+}
+function makeObjectToObjectDirectionRelationship(
+  briosa: BriosaClient,
+  input: MakeObjectToObjectDirectionRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+`nominalAngle` defaults to `0`.
+
+## Make Point Clouds to Objects Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
+
+```ts
+export interface MakePointCloudsToObjectsRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointCloudsInRelationship: Iterable<CollectionObjectName>;
+  readonly objectsInRelationship: Iterable<CollectionObjectName>;
+  readonly projectionOptions?: ProjectionOptions;
+  readonly autoUpdateAVectorGroup?: boolean;
+}
+function makePointCloudsToObjectsRelationship(
+  briosa: BriosaClient,
+  input: MakePointCloudsToObjectsRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Group to Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
+
+```ts
+export interface MakeGroupToGroupRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstGroupName: CollectionObjectName;
+  readonly secondGroupName: CollectionObjectName;
+  readonly autoUpdateAVectorGroup?: boolean;
+  readonly tolerance?: ToleranceVectorOptions;
+  readonly constraint?: ToleranceVectorOptions;
+}
+function makeGroupToGroupRelationship(
+  briosa: BriosaClient,
+  input: MakeGroupToGroupRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Group to Nominal Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+
+```ts
+export interface MakeGroupToNominalGroupRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly nominalGroupName: CollectionObjectName;
+  readonly measuredGroupName: CollectionObjectName;
+  readonly autoUpdateAVectorGroup?: boolean;
+  readonly useClosestPoint?: boolean;
+  readonly displayClosestPointWatchWindow?: boolean;
+  readonly useViewZoomingWithProximity?: boolean;
+  readonly ignorePointsBeyondThreshold?: boolean;
+  readonly proximityThreshold?: number;
+  readonly tolerance?: ToleranceVectorOptions;
+  readonly constraint?: ToleranceVectorOptions;
+  readonly fitWeight?: number;
+}
+function makeGroupToNominalGroupRelationship(
+  briosa: BriosaClient,
+  input: MakeGroupToNominalGroupRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The exact defaults are auto-update `false`, closest-point matching `true`, the
+three display and threshold controls `false`, threshold `0.01`, and fit weight
+`1`.
+
+## Make Average Point Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-average-point-relationship)
+
+```ts
+export interface MakeAveragePointRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointsInRelationship: Iterable<PointName>;
+  readonly averagePointName?: PointName;
+  readonly nominalPointName?: PointName;
+}
+function makeAveragePointRelationship(
+  briosa: BriosaClient,
+  input: MakeAveragePointRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Geometry Fit Only Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+
+```ts
+export interface MakeGeometryFitOnlyRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly pointGroupsToFit: Iterable<CollectionObjectName>;
+  readonly geometryType: GeometryType;
+  readonly resultingObjectName?: CollectionObjectName;
+  readonly fitProfileName?: string;
+}
+function makeGeometryFitOnlyRelationship(
+  briosa: BriosaClient,
+  input: MakeGeometryFitOnlyRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Geometry Fit and Compare to Nominal Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+
+```ts
+export interface MakeGeometryFitAndCompareToNominalRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly nominalGeometry: CollectionObjectName;
+  readonly pointGroupsToFit: Iterable<CollectionObjectName>;
+  readonly resultingObjectName?: CollectionObjectName;
+  readonly fitProfileName?: string;
+}
+function makeGeometryFitAndCompareToNominalRelationship(
+  briosa: BriosaClient,
+  input: MakeGeometryFitAndCompareToNominalRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+MP partial success remains distinct in Briosa's execution outcome. These
+functions retain no Relationship state and never replay uncertain work.
+
+## Relationship Fit and Statistics Types
+
+```ts
+export type SolverMode =
+  | "Gauss-Newton"
+  | "Levenberg-Marquardt"
+  | "Gauss-Newton /w Gradient Search"
+  | "Direct Search";
+
+export interface FitDofOptions {
+  readonly allowX?: boolean;
+  readonly allowY?: boolean;
+  readonly allowZ?: boolean;
+  readonly allowRx?: boolean;
+  readonly allowRy?: boolean;
+  readonly allowRz?: boolean;
+  readonly rotateAboutCentroid?: boolean;
+}
+
+export interface RelationshipFitResult {
+  readonly transformInReference: Transform;
+  readonly transformInWorking: WorldTransform;
+  readonly transformInWorld: WorldTransform;
+  readonly fitObjectiveValue: number;
+}
+
+export interface GeneralRelationshipStatistics {
+  readonly absoluteMaxDeviation: number;
+  readonly rms: number;
+  readonly hasSignedDeviation: boolean;
+  readonly signedMaxDeviation: number;
+  readonly signedMinDeviation: number;
+}
+
+export interface PointsToObjectsRelationshipStatistics {
+  readonly absoluteMaxDeviation: number;
+  readonly maxDeviation: number;
+  readonly minDeviation: number;
+  readonly avgDeviation: number;
+  readonly rms: number;
+  readonly candidatePointCount: number;
+  readonly sampledPointCount: number;
+  readonly rejectedPointCount: number;
+  readonly usedPointCount: number;
+  readonly outOfTolerancePointCount: number;
+}
+
+export interface PointToPointRelationshipStatistics {
+  readonly deltaX: number;
+  readonly deltaY: number;
+  readonly deltaZ: number;
+  readonly deltaMagnitude: number;
+  readonly referenceFrame: CollectionObjectName;
+}
+```
+
+`WorldTransform` preserves the scale returned with each working/world matrix.
+
+## Make Geometry Compare Only Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
+
+```ts
+export interface MakeGeometryCompareOnlyRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly nominalGeometry: CollectionObjectName;
+  readonly measuredGeometry: CollectionObjectName;
+}
+function makeGeometryCompareOnlyRelationship(
+  briosa: BriosaClient,
+  input: MakeGeometryCompareOnlyRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Dynamic Point Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
+
+```ts
+export interface MakeDynamicPointRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstReferenceGeometry: CollectionObjectName;
+  readonly secondReferenceGeometry: CollectionObjectName;
+  readonly constructionMode?: DynamicPointMode;
+  readonly thirdReferenceGeometry?: CollectionObjectName;
+}
+function makeDynamicPointRelationship(
+  briosa: BriosaClient,
+  input: MakeDynamicPointRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The mode defaults to line/Plane intersection. The third reference is optional
+unless the selected construction mode needs it.
+
+## Make Dynamic Line Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
+
+```ts
+export interface MakeDynamicLineRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstReferenceGeometry: CollectionObjectName;
+  readonly secondReferenceGeometry: CollectionObjectName;
+  readonly constructionMode?: DynamicLineMode;
+}
+function makeDynamicLineRelationship(
+  briosa: BriosaClient,
+  input: MakeDynamicLineRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The mode defaults to `"Intersection of Two Planes"`.
+
+## Make Dynamic Plane Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
+
+```ts
+export interface MakeDynamicPlaneRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstReferenceGeometry: CollectionObjectName;
+  readonly secondReferenceGeometry: CollectionObjectName;
+  readonly constructionMode?: DynamicPlaneMode;
+  readonly offsetPlaneOffset?: number;
+}
+function makeDynamicPlaneRelationship(
+  briosa: BriosaClient,
+  input: MakeDynamicPlaneRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The mode defaults to `"Bisect Two Planes"` and the offset defaults to `0`.
+
+## Make Dynamic Circle Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
+
+```ts
+export interface MakeDynamicCircleRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstReferenceGeometry: CollectionObjectName;
+  readonly secondReferenceGeometry: CollectionObjectName;
+  readonly constructionMode?: DynamicCircleMode;
+}
+function makeDynamicCircleRelationship(
+  briosa: BriosaClient,
+  input: MakeDynamicCircleRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Dynamic Ellipse Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
+
+```ts
+export interface MakeDynamicEllipseRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly firstReferenceGeometry: CollectionObjectName;
+  readonly secondReferenceGeometry: CollectionObjectName;
+  readonly constructionMode?: DynamicEllipseMode;
+}
+function makeDynamicEllipseRelationship(
+  briosa: BriosaClient,
+  input: MakeDynamicEllipseRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Make Vector Group To Vector Group Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
+
+```ts
+export interface MakeVectorGroupToVectorGroupRelationshipInput {
+  readonly newVgToVgRelationship: CollectionObjectName;
+  readonly referenceVectorGroup: CollectionObjectName;
+  readonly correspondingVectorGroup: CollectionObjectName;
+  readonly setOpposingVectorGroupPolarity?: boolean;
+}
+function makeVectorGroupToVectorGroupRelationship(
+  briosa: BriosaClient,
+  input: MakeVectorGroupToVectorGroupRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Opposing polarity defaults to `true`.
+
+## Set Vector Group To Vector Group Cylindrical Zone
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+
+```ts
+export interface SetVectorGroupToVectorGroupCylindricalZoneInput {
+  readonly vgToVgRelationship: CollectionObjectName;
+  readonly radialOffset?: number;
+  readonly minimumAxialOffset?: number;
+  readonly maximumAxialOffset?: number;
+}
+function setVectorGroupToVectorGroupCylindricalZone(
+  briosa: BriosaClient,
+  input: SetVectorGroupToVectorGroupCylindricalZoneInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The offsets default to `1`, `-10`, and `10`.
+
+## Set Vector Group To Vector Group Fit Weights
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+
+```ts
+export interface SetVectorGroupToVectorGroupFitWeightsInput {
+  readonly vgToVgRelationship: CollectionObjectName;
+  readonly minimumGap?: number;
+  readonly minimumGapFitWeight?: number;
+  readonly maximumGap?: number;
+  readonly maximumGapFitWeight?: number;
+  readonly nominalGap?: number;
+  readonly nominalGapFitWeight?: number;
+}
+function setVectorGroupToVectorGroupFitWeights(
+  briosa: BriosaClient,
+  input: SetVectorGroupToVectorGroupFitWeightsInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The gap defaults are `0`; minimum and maximum weights default to `10`, and the
+nominal weight defaults to `1`.
+
+## Set Vector Group To Vector Group Fit Gradient Factor
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+
+```ts
+export interface SetVectorGroupToVectorGroupFitGradientFactorInput {
+  readonly vgToVgRelationship: CollectionObjectName;
+  readonly fitGradientFactor?: number;
+}
+function setVectorGroupToVectorGroupFitGradientFactor(
+  briosa: BriosaClient,
+  input: SetVectorGroupToVectorGroupFitGradientFactorInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The factor defaults to `50`. These functions retain no Relationship state and
+never replay uncertain work.
+
+## Set Vector Group To Vector Group Relative Polarity
+
+```ts
+export interface SetVectorGroupToVectorGroupRelativePolarityInput {
+  readonly vgToVgRelationship: CollectionObjectName;
+  readonly setOpposingVectorGroupPolarity?: boolean;
+}
+function setVectorGroupToVectorGroupRelativePolarity(
+  briosa: BriosaClient,
+  input: SetVectorGroupToVectorGroupRelativePolarityInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Delete Relationship
+
+```ts
+export interface DeleteRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function deleteRelationship(
+  briosa: BriosaClient,
+  input: DeleteRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The client adds no confirmation prompt.
+
+## Set Optimization Search Options
+
+```ts
+export interface SetOptimizationSearchOptionsInput {
+  readonly maxNumberOfStepSizeReduction?: number;
+}
+function setOptimizationSearchOptions(
+  briosa: BriosaClient,
+  input?: SetOptimizationSearchOptionsInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The exact default is `5`.
+
+## Set Optimization Perturbation Parameters
+
+```ts
+export interface SetOptimizationPerturbationParametersInput {
+  readonly lengthPerturbation?: number;
+  readonly angularPerturbation?: number;
+  readonly damping?: number;
+}
+function setOptimizationPerturbationParameters(
+  briosa: BriosaClient,
+  input?: SetOptimizationPerturbationParametersInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Defaults are `0.0001`, `0.0001`, and `1`.
+
+## Do Relationship Fit
+
+[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/relationship-operations#do-relationship-fit)
+
+```ts
+export interface DoRelationshipFitInput {
+  readonly collectionContainingRelationships: string;
+  readonly objectsToMove: Iterable<CollectionObjectName>;
+  readonly instrumentsToMove: Iterable<CollectionInstrumentId>;
+  readonly solverMode?: SolverMode;
+  readonly motionToAllow?: FitDofOptions;
+  readonly enableRandomizedStart?: boolean;
+  readonly useFitDialog?: boolean;
+}
+function doRelationshipFit(
+  briosa: BriosaClient,
+  input: DoRelationshipFitInput,
+  options?: BriosaCallOptions,
+): Promise<RelationshipFitResult>;
+```
+
+Use an empty iterable for either move category that is not used. All motion is
+allowed about the centroid by default; randomized start and the dialog default
+to `false`.
+
+## Move Collections by Minimizing Relationships
+
+```ts
+export interface MoveCollectionsByMinimizingRelationshipsInput {
+  readonly collectionsToMove: Iterable<string>;
+  readonly relationshipsToMinimize: Iterable<CollectionObjectName>;
+  readonly solverMode?: SolverMode;
+  readonly motionToAllow?: FitDofOptions;
+  readonly useFitDialog?: boolean;
+  readonly convergenceThreshold?: number;
+}
+function moveCollectionsByMinimizingRelationships(
+  briosa: BriosaClient,
+  input: MoveCollectionsByMinimizingRelationshipsInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The convergence threshold defaults to the exact SA 2026.1 value of `0`.
+
+## Get General Relationship Statistics
+
+```ts
+export interface GetGeneralRelationshipStatisticsInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getGeneralRelationshipStatistics(
+  briosa: BriosaClient,
+  input: GetGeneralRelationshipStatisticsInput,
+  options?: BriosaCallOptions,
+): Promise<GeneralRelationshipStatistics>;
+```
+
+## Get Points to Objects Relationship Statistics
+
+```ts
+export interface GetPointsToObjectsRelationshipStatisticsInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getPointsToObjectsRelationshipStatistics(
+  briosa: BriosaClient,
+  input: GetPointsToObjectsRelationshipStatisticsInput,
+  options?: BriosaCallOptions,
+): Promise<PointsToObjectsRelationshipStatistics>;
+```
+
+The result includes SA 2026.1's `avgDeviation` output.
+
+## Start/Stop Relationship Trapping
+
+```ts
+export interface StartStopRelationshipTrappingInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly instrumentId: CollectionInstrumentId;
+  readonly startTrapping?: boolean;
+}
+function startStopRelationshipTrapping(
+  briosa: BriosaClient,
+  input: StartStopRelationshipTrappingInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Get Point to Point Relationship Statistics
+
+```ts
+export interface GetPointToPointRelationshipStatisticsInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getPointToPointRelationshipStatistics(
+  briosa: BriosaClient,
+  input: GetPointToPointRelationshipStatisticsInput,
+  options?: BriosaCallOptions,
+): Promise<PointToPointRelationshipStatistics>;
+```
+
+These functions retain no Relationship or optimizer state and never replay
+uncertain work.
+
+## Associated-Data and Auto-Filter Types
+
+```ts
+export interface FilterProximitySettings {
+  readonly surfaceInclusionProximity?: number;
+  readonly edgeExclusionProximity?: number;
+  readonly planarInclusionProximity?: number;
+  readonly planarExclusionProximity?: number;
+  readonly radialInclusionProximity?: number;
+  readonly geometryExtractionTolerance?: number;
+  readonly surfaceProximityMode?: OffsetDirectionType;
+  readonly planarProximityMode?: OffsetDirectionType;
+  readonly radialProximityMode?: OffsetDirectionType;
+  readonly projectToPlane?: boolean;
+  readonly assertPlaneBoundaries?: boolean;
+}
+
+export interface RelationshipAssociatedData {
+  readonly relationshipType: string;
+  readonly individualPoints: readonly PointName[];
+  readonly pointGroups: readonly CollectionObjectName[];
+  readonly pointClouds: readonly CollectionObjectName[];
+  readonly objects: readonly CollectionObjectName[];
+}
+
+export interface PointsToPointsRelationshipAssociatedData {
+  readonly nominalPoints: readonly PointName[];
+  readonly actualPoints: readonly PointName[];
+}
+```
+
+An empty `FilterProximitySettings` uses the exact defaults `0.1`, `0.1`, `0.5`,
+`0.1`, `0.1`, `0.01`, `"Both"` for all modes, `true`, and `false`. It replaces
+the excluded MP-only construction helper. `CloudThinningOptions` is shared with
+Construction Operations / Point Clouds.
+
+## Set Group To Nominal Group View Zooming
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+
+```ts
+export interface SetGroupToNominalGroupViewZoomingInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly useClosestPoint?: boolean;
+  readonly showClosestPointWatchWindow?: boolean;
+  readonly useViewZooming?: boolean;
+  readonly ignorePointsBeyondThreshold?: boolean;
+  readonly proximityThreshold?: number;
+}
+function setGroupToNominalGroupViewZooming(
+  briosa: BriosaClient,
+  input: SetGroupToNominalGroupViewZoomingInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The five defaults are `true`, `false`, `true`, `true`, and `0.01`.
+
+## Set Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-associated-data)
+
+```ts
+export interface SetRelationshipAssociatedDataInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly individualPoints?: Iterable<PointName>;
+  readonly pointGroups?: Iterable<CollectionObjectName>;
+  readonly pointClouds?: Iterable<CollectionObjectName>;
+  readonly objects?: Iterable<CollectionObjectName>;
+  readonly ignoreEmptyArguments?: boolean;
+}
+function setRelationshipAssociatedData(
+  briosa: BriosaClient,
+  input: SetRelationshipAssociatedDataInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+An omitted collection does not call that exact SDK setter. An empty iterable
+remains a supplied collection. `ignoreEmptyArguments` defaults to `true`.
+
+## Get Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-associated-data)
+
+```ts
+export interface GetRelationshipAssociatedDataInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getRelationshipAssociatedData(
+  briosa: BriosaClient,
+  input: GetRelationshipAssociatedDataInput,
+  options?: BriosaCallOptions,
+): Promise<RelationshipAssociatedData>;
+```
+
+## Set Points to Points Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
+
+```ts
+export interface SetPointsToPointsRelationshipAssociatedDataInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly nominalPoints?: Iterable<PointName>;
+  readonly actualPoints?: Iterable<PointName>;
+  readonly ignoreEmptyArguments?: boolean;
+}
+function setPointsToPointsRelationshipAssociatedData(
+  briosa: BriosaClient,
+  input: SetPointsToPointsRelationshipAssociatedDataInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Get Points to Points Relationship Associated Data
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
+
+```ts
+export interface GetPointsToPointsRelationshipAssociatedDataInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getPointsToPointsRelationshipAssociatedData(
+  briosa: BriosaClient,
+  input: GetPointsToPointsRelationshipAssociatedDataInput,
+  options?: BriosaCallOptions,
+): Promise<PointsToPointsRelationshipAssociatedData>;
+```
+
+## Auto Filter Clouds to Nominal Geometry 3D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+
+```ts
+export interface AutoFilterCloudsToNominalGeometry3DInput {
+  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly clouds: Iterable<CollectionObjectName>;
+  readonly cloudThinningSettings?: CloudThinningOptions;
+  readonly filterProximitySettings3D?: FilterProximitySettings;
+  readonly useFeatureSpecificFilterSettings?: boolean;
+}
+function autoFilterCloudsToNominalGeometry3D(
+  briosa: BriosaClient,
+  input: AutoFilterCloudsToNominalGeometry3DInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Auto Filter Clouds to Nominal Geometry 2D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+
+```ts
+export interface AutoFilterCloudsToNominalGeometry2DInput {
+  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly clouds: Iterable<CollectionObjectName>;
+  readonly cloudThinningSettings?: CloudThinningOptions;
+  readonly filterProximitySettings2D?: FilterProximitySettings;
+  readonly geometryExtractionTolerance?: number;
+  readonly useFeatureSpecificFilterSettings?: boolean;
+}
+function autoFilterCloudsToNominalGeometry2D(
+  briosa: BriosaClient,
+  input: AutoFilterCloudsToNominalGeometry2DInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The tolerance defaults to `0.01`; the SA 2026.1 feature-specific flag defaults
+to `false`.
+
+## Auto Filter Points to Nominal Geometry 3D
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+
+```ts
+export interface AutoFilterPointsToNominalGeometry3DInput {
+  readonly autoFilterTargetRelationships: Iterable<CollectionObjectName>;
+  readonly points: Iterable<PointName>;
+  readonly filterProximitySettings3D?: FilterProximitySettings;
+}
+function autoFilterPointsToNominalGeometry3D(
+  briosa: BriosaClient,
+  input: AutoFilterPointsToNominalGeometry3DInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+## Auto Filter Points/Groups/Clouds to Surface Faces
+
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+
+```ts
+export interface AutoFilterPointsGroupsCloudsToSurfaceFacesInput {
+  readonly points?: Iterable<PointName>;
+  readonly groups?: Iterable<CollectionObjectName>;
+  readonly clouds?: Iterable<CollectionObjectName>;
+  readonly surfaceOffset?: number;
+  readonly edgeOffset?: number;
+  readonly offsetDirection?: OffsetDirectionType;
+  readonly enforceMaxPointsPerFaceInOutput?: boolean;
+  readonly maxPointsPerFace?: number;
+  readonly surfaces: Iterable<CollectionObjectName>;
+  readonly cloudThinningSettings?: CloudThinningOptions;
+  readonly outputCloudBaseName?: string;
+  readonly useFaceIdsForSuffix?: boolean;
+}
+function autoFilterPointsGroupsCloudsToSurfaceFaces(
+  briosa: BriosaClient,
+  input: AutoFilterPointsGroupsCloudsToSurfaceFacesInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Defaults are the exact MP offsets, direction, thinning settings, base name,
+and suffix behavior. These functions retain no SA state and never replay
+uncertain work.
+
+## Extract Geometry From Point Clouds
+
+[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
+
+```ts
+export interface ExtractGeometryFromPointCloudsInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly geometryType?: GeometryType;
+  readonly cloudName: CollectionObjectName;
+  readonly boundingPoints?: Iterable<PointName>;
+  readonly seedPoints: Iterable<PointName>;
+  readonly tolerance?: number;
+  readonly reverseNormal?: boolean;
+  readonly planarPointCount?: number;
+}
+function extractGeometryFromPointClouds(
+  briosa: BriosaClient,
+  input: ExtractGeometryFromPointCloudsInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Defaults are `"Circle"`, `0.1`, `false`, and `1000`. This SA 2026.1 operation
+has no ObjectiveSA SA 2024.1 counterpart.
+
+## Create Points to Objects Map
+
+[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/relationship-operations#create-points-to-objects-map)
+
+```ts
+export interface CreatePointsToObjectsMapInput {
+  readonly points?: Iterable<PointName>;
+  readonly groups?: Iterable<CollectionObjectName>;
+  readonly objects: Iterable<CollectionObjectName>;
+  readonly proximityTolerance?: number;
+  readonly pointsToObjectsMapName: string;
+}
+function createPointsToObjectsMap(
+  briosa: BriosaClient,
+  input: CreatePointsToObjectsMapInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The tolerance defaults to `0`. SA owns the named map; the client keeps no map
+registry or intermediate workflow state.
+
+## Get Objects From Points to Objects Map (Point List)
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+
+```ts
+export interface GetObjectsFromPointsToObjectsMapPointListInput {
+  readonly pointsToObjectsMapName: string;
+  readonly points: Iterable<PointName>;
+}
+function getObjectsFromPointsToObjectsMapPointList(
+  briosa: BriosaClient,
+  input: GetObjectsFromPointsToObjectsMapPointListInput,
+  options?: BriosaCallOptions,
+): Promise<readonly CollectionObjectName[]>;
+```
+
+The function follows the exact SA 2026.1 Point-list binding.
+
+## Compute Geometry Relationship Uncertainties
+
+[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
+
+```ts
+export interface ComputeGeometryRelationshipUncertaintiesInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly displayResults?: boolean;
+}
+function computeGeometryRelationshipUncertainties(
+  briosa: BriosaClient,
+  input: ComputeGeometryRelationshipUncertaintiesInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+`displayResults` defaults to `false`. SA may make the Relationship dormant.
+
+## Make Cloud to Swatch Relationship
+
+[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+
+```ts
+export interface MakeCloudToSwatchRelationshipInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly inputCloudName: CollectionObjectName;
+  readonly surfaceFaceList: string;
+  readonly referencePoint: PointName;
+  readonly maximumRadialOffset?: number;
+  readonly minimumAxialOffset?: number;
+  readonly maximumAxialOffset?: number;
+  readonly cardinalPointGroupName: CollectionObjectName;
+}
+function makeCloudToSwatchRelationship(
+  briosa: BriosaClient,
+  input: MakeCloudToSwatchRelationshipInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+The offsets default to `0.125`, `-0.125`, and `0.125`. The function has no
+ObjectiveSA parity, adds no Swatch preflight, and never automatically replays
+uncertain work.
+
+## Final Reconciled Subgroup Types
+
+```ts
+export interface SigmoidalGapFitConstraints {
+  readonly useSigmoidalGapConstraints: boolean;
+  readonly minimumGapBoundary: number;
+  readonly minimumGapWeight: number;
+  readonly maximumGapBoundary: number;
+  readonly maximumGapWeight: number;
+  readonly nominalGap: number;
+  readonly nominalGapWeight: number;
+  readonly gradientSteepnessFactor: number;
+}
+
+export interface RelationshipStatusFlags {
+  readonly dormant: boolean;
+  readonly success: boolean;
+  readonly measured: boolean;
+  readonly failed: boolean;
+  readonly unmeasured: boolean;
+}
+```
+
+## Get Relationship Sigmoidal Gap Fit Constraints
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+
+```ts
+export interface GetRelationshipSigmoidalGapFitConstraintsInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getRelationshipSigmoidalGapFitConstraints(
+  briosa: BriosaClient,
+  input: GetRelationshipSigmoidalGapFitConstraintsInput,
+  options?: BriosaCallOptions,
+): Promise<SigmoidalGapFitConstraints>;
+```
+
+## Set Object to Object Direction Relationship Tolerances
+
+[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+
+```ts
+export interface SetObjectToObjectDirectionRelationshipTolerancesInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly angleBetweenVectorsTolerances?: ToleranceScalarOptions;
+  readonly mutualPerpendicularLengthTolerances?: ToleranceScalarOptions;
+}
+function setObjectToObjectDirectionRelationshipTolerances(
+  briosa: BriosaClient,
+  input: SetObjectToObjectDirectionRelationshipTolerancesInput,
+  options?: BriosaCallOptions,
+): Promise<void>;
+```
+
+Omitted tolerance values use the exact all-limits-disabled zero defaults.
+
+## Get Geom Relationship Criteria Name List
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
+
+```ts
+export interface GetGeomRelationshipCriteriaNameListInput {
+  readonly relationshipName: CollectionObjectName;
+  readonly includeAllCriteria?: boolean;
+}
+function getGeomRelationshipCriteriaNameList(
+  briosa: BriosaClient,
+  input: GetGeomRelationshipCriteriaNameListInput,
+  options?: BriosaCallOptions,
+): Promise<readonly string[]>;
+```
+
+## Get Relationship Status
+
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-status)
+
+```ts
+export interface GetRelationshipStatusInput {
+  readonly relationshipName: CollectionObjectName;
+}
+function getRelationshipStatus(
+  briosa: BriosaClient,
+  input: GetRelationshipStatusInput,
+  options?: BriosaCallOptions,
+): Promise<RelationshipStatusFlags>;
+```
+
+All five raw SA flags are returned without an invented client status enum.
+These functions retain no Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
@@ -1095,13 +2391,13 @@ await makePipeFittingRelationship(briosa, { relationshipName: ..., pipe1ObjectNa
 Resolves without a command value. `BriosaCallOptions` remains separate from MP input and
 contains only caller controls such as an `AbortSignal`.
 
-## Make pipe Relationship Cut
+## Make Pipe Relationship Cut
 
 :::note[Status: Next]
 This function is part of the next JavaScript and TypeScript package contract.
 :::
 
-[Make pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
