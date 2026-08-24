@@ -27,7 +27,7 @@ A promise that resolves with `undefined` after final client cleanup.
 import {
   createBriosaClient,
   getWorkingDirectory,
-} from '@spatialanalyzer/briosa';
+} from '@spatialanalyzer/briosa-2026.1.0529.7';
 
 await using briosa = createBriosaClient();
 await briosa.start();
