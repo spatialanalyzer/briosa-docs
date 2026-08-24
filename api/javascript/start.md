@@ -38,7 +38,7 @@ Omitting `options` uses the default startup procedure.
 import {
   createBriosaClient,
   getWorkingDirectory,
-} from '@spatialanalyzer/briosa';
+} from '@spatialanalyzer/briosa-2026.1.0529.7';
 
 const briosa = createBriosaClient();
 await briosa.start();

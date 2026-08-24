@@ -34,6 +34,53 @@ bootstrap packages.
 SpatialAnalyzer remains separate software. Briosa does not install it, include
 a license, or replace its user interface.
 
+## Install the Exact-Target Client
+
+Each first-party client distribution identifies the exact SpatialAnalyzer
+release it supports. The package version remains an independent Briosa client
+version; it is not the SpatialAnalyzer version.
+
+:::caution[Not Published Yet]
+
+The commands below show the intended package identities. These packages have
+not yet been published to NuGet, PyPI, or npm.
+
+:::
+
+<Tabs groupId="briosa-client-language" queryString="client-language">
+  <TabItem value="dotnet" label=".NET (C#)" default>
+
+```powershell
+dotnet add package Briosa.2026.1.0529.7 --version 0.1.0
+```
+
+The assembly has the same exact-target identity, while C# source continues to
+use the stable `Briosa` namespace.
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```powershell
+python -m pip install briosa-2026-1-0529-7==0.1.0
+```
+
+The distribution is target-specific, while Python source continues to use
+`import briosa`. Use separate virtual environments for different SA targets.
+
+  </TabItem>
+  <TabItem value="typescript" label="JavaScript / TypeScript">
+
+```powershell
+npm install @spatialanalyzer/briosa-2026.1.0529.7@0.1.0
+```
+
+The npm package is target-specific, while its exported Briosa API names remain
+release-neutral. npm aliases can distinguish several targets in one dependency
+graph when needed.
+
+  </TabItem>
+</Tabs>
+
 ## Start from a First-Party Client
 
 <Tabs groupId="briosa-client-language" queryString="client-language">
@@ -61,7 +108,7 @@ await briosa.start()
   <TabItem value="typescript" label="JavaScript / TypeScript">
 
 ```ts
-import { createBriosaClient } from '@spatialanalyzer/briosa';
+import { createBriosaClient } from '@spatialanalyzer/briosa-2026.1.0529.7';
 
 const briosa = createBriosaClient();
 await briosa.start();
