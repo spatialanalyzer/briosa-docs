@@ -1,4 +1,4 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import {lightCodeTheme, darkCodeTheme} from './src/theme/prism';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs';
@@ -6,8 +6,8 @@ import type {Options as RedirectsPluginOptions} from '@docusaurus/plugin-client-
 
 const config: Config = {
   title: 'Briosa',
-  tagline: 'Language-neutral access to SpatialAnalyzer MPs',
-  favicon: 'img/briosa-mark.svg',
+  tagline: 'SpatialAnalyzer integration, simplified.',
+  favicon: 'brand/icons/favicon.svg',
   future: {v4: true},
   url: 'https://spatialanalyzer.github.io',
   baseUrl: '/briosa-docs/',
@@ -149,14 +149,16 @@ const config: Config = {
       },
     ],
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Briosa',
       logo: {
-        alt: 'Briosa geometric bridge mark',
-        src: 'img/briosa-mark.svg',
+        alt: 'Briosa home',
+        src: 'brand/suite/briosa-docs-color.svg',
+        srcDark: 'brand/suite/briosa-docs-inverse.svg',
+        width: 180,
+        height: 58,
       },
       items: [
         {
@@ -238,6 +240,13 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Briosa home',
+        src: 'brand/logos/briosa-horizontal-inverse.svg',
+        href: '/briosa-docs/',
+        width: 180,
+        height: 51,
+      },
       links: [
         {
           title: 'Learn',
@@ -276,8 +285,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Briosa contributors. Apache-2.0.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
       additionalLanguages: ['csharp', 'protobuf', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,

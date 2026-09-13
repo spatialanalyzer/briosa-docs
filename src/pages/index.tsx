@@ -2,6 +2,7 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './index.module.css';
 
@@ -47,32 +48,40 @@ const operations = [
 function HomepageHeader() {
   return (
     <header className={styles.hero}>
-      <div className={styles.glow} aria-hidden="true" />
       <div className="container">
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Open-source · Apache-2.0</p>
-            <Heading as="h1">SpatialAnalyzer MPs Through a Clear gRPC Boundary</Heading>
+            <p className={styles.eyebrow}>Briosa Documentation</p>
+            <Heading as="h1">SpatialAnalyzer integration, simplified.</Heading>
             <p className={styles.lead}>
-              Briosa turns reviewed SpatialAnalyzer MP operations into strongly
-              typed, language-neutral RPCs while keeping COM state isolated in
-              a supervised Windows worker.
+              An open-source gRPC bridge to the SpatialAnalyzer SDK.
+              Build with strongly typed MP operations in .NET, Python,
+              JavaScript, or your preferred gRPC stack.
             </p>
             <div className={styles.actions}>
               <Link
                 className="button button--primary button--lg"
                 to="/docs/getting-started/prerequisites">
-                Start with Briosa
+                Get Started
               </Link>
               <Link
                 className="button button--outline button--secondary button--lg"
                 to="/api">
-                Explore operations
+                Explore the API
               </Link>
             </div>
+            <p className={styles.heroNote}>
+              Requires a separately installed, licensed, and running SpatialAnalyzer.
+            </p>
           </div>
           <aside className={styles.targetCard} aria-label="Current support summary">
-            <span className={styles.liveDot} aria-hidden="true" />
+            <img
+              className={styles.heroLogo}
+              src={useBaseUrl('/brand/logos/briosa-stacked-inverse.svg')}
+              alt="Briosa"
+              width={704}
+              height={568}
+            />
             <p className={styles.cardLabel}>Current Exact Target</p>
             <p className={styles.targetVersion}>SA 2026.1.0529.7</p>
             <dl>
@@ -143,8 +152,8 @@ function Operations() {
     <section className={styles.operationsSection}>
       <div className="container">
         <div className={styles.sectionHeading}>
-          <p className={styles.kicker}>Small, Reviewed Surface</p>
-          <Heading as="h2">Explore Six Read-Only Operations</Heading>
+          <p className={styles.kicker}>MP Operations</p>
+          <Heading as="h2">Explore Read-Only Operations</Heading>
           <p>
             Each supported MP is a handwritten vertical slice with a protobuf
             contract, server and worker mapping, tests, policy metadata, and
@@ -187,7 +196,7 @@ function Disclaimer() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="A gRPC Bridge for SpatialAnalyzer MPs"
+      title="SpatialAnalyzer Integration, Simplified"
       description="Briosa exposes reviewed SpatialAnalyzer MP operations through strongly typed, language-neutral gRPC contracts.">
       <HomepageHeader />
       <main>
