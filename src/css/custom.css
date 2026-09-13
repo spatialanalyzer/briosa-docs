@@ -43,6 +43,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 56, 117, 0.08);
   --briosa-surface: var(--briosa-white);
   --briosa-soft: var(--briosa-silver);
+  --briosa-feature-background: var(--briosa-blue);
+  --briosa-feature-border: #547fab;
   --briosa-border: #dce3e9;
   --briosa-muted: var(--briosa-graphite);
   --briosa-current-background: #e8f7f2;
@@ -74,7 +76,7 @@
   --ifm-background-surface-color: #102f50;
   --ifm-font-color-base: #e2eaf2;
   --ifm-heading-color: var(--briosa-white);
-  --ifm-navbar-background-color: var(--briosa-blue);
+  --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-link-color: var(--briosa-white);
   --ifm-menu-color: #c6d5e4;
   --ifm-menu-color-background-active: #123b60;
@@ -90,6 +92,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 186, 241, 0.12);
   --briosa-surface: #102f50;
   --briosa-soft: #0b2743;
+  --briosa-feature-background: var(--briosa-soft);
+  --briosa-feature-border: var(--briosa-border);
   --briosa-border: #31516f;
   --briosa-muted: #b5c7d9;
   --briosa-current-background: #102f2a;
@@ -141,7 +145,7 @@
 }
 
 .footer--dark {
-  --ifm-footer-background-color: var(--briosa-blue);
+  --ifm-footer-background-color: var(--briosa-feature-background);
   --ifm-footer-color: var(--briosa-silver);
   --ifm-footer-link-color: var(--briosa-white);
   --ifm-footer-title-color: var(--briosa-white);

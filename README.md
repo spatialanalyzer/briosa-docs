@@ -43,10 +43,12 @@ live in [`static/brand/`](static/brand/README.md).
 
 `src/css/custom.css` maps the shared palette to the documentation theme:
 deep blue links and headings, graphite text, white and silver surfaces, and
-cyan accents. Dark mode uses blue surfaces with light text and cyan links.
+cyan accents. Dark mode uses the darker navy page and section surfaces with
+light text and cyan links, including the hero, navbar, mobile menu, and footer.
 Status colors retain their distinct meanings. The navbar and API cards select
 the supplied color or inverse artwork for the active theme; the hero and footer
-use inverse artwork on deep blue. Keep cyan off white for ordinary text.
+use inverse artwork on deep blue in light mode and darker navy in dark mode.
+Keep cyan off white for ordinary text.
 `src/theme/prism.ts` provides matching syntax colors with readable contrast.
 
 Use restrained borders, generous spacing, visible keyboard focus, and no

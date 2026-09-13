@@ -1,6 +1,6 @@
 .hero {
   padding: 4.5rem 0;
-  background: var(--briosa-blue);
+  background: var(--briosa-feature-background);
   color: var(--briosa-white);
 }
 
@@ -87,7 +87,7 @@
 }
 
 .targetCard {
-  border-left: 1px solid #547fab;
+  border-left: 1px solid var(--briosa-feature-border);
   padding-left: 3rem;
 }
 
@@ -126,7 +126,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.6rem 0;
-  border-top: 1px solid #547fab;
+  border-top: 1px solid var(--briosa-feature-border);
 }
 
 .targetCard dt {
@@ -316,7 +316,7 @@
 
   .targetCard {
     border-left: 0;
-    border-top: 1px solid #547fab;
+    border-top: 1px solid var(--briosa-feature-border);
     padding: 2rem 0 0;
   }
 
