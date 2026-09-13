@@ -34,6 +34,27 @@ Each reference collection has its own Docusaurus plugin instance and sidebar.
 The `/api` route is an unversioned landing page that helps users choose the
 appropriate reference.
 
+## Site Branding
+
+The site uses the approved
+[`briosa-brand@v1`](https://github.com/spatialanalyzer/briosa-brand/tree/v1)
+identity. Committed artwork, the original Inter font, licenses, and provenance
+live in [`static/brand/`](static/brand/README.md).
+
+`src/css/custom.css` maps the shared palette to the documentation theme:
+deep blue links and headings, graphite text, white and silver surfaces, and
+cyan accents. Dark mode uses the darker navy page and section surfaces with
+light text and cyan links, including the hero, navbar, mobile menu, and footer.
+Status colors retain their distinct meanings. The navbar and API cards select
+the supplied color or inverse artwork for the active theme; the hero and footer
+use inverse artwork on deep blue in light mode and darker navy in dark mode.
+Keep cyan off white for ordinary text.
+`src/theme/prism.ts` provides matching syntax colors with readable contrast.
+
+Use restrained borders, generous spacing, visible keyboard focus, and no
+required animation. Verify the homepage, an article, API reference, and catalog
+in both themes and at mobile widths when changing shared styles.
+
 ## API reference versions
 
 The product guide and MP command catalog are intentionally unversioned. Each

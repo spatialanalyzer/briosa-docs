@@ -2,10 +2,12 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
+import BrandImage from '@site/src/components/BrandImage';
 
 const references = [
   {
     eyebrow: 'Briosa Server',
+    product: 'server',
     title: 'gRPC API',
     description:
       'Services, MP operations, protobuf contracts, discovery, and execution outcomes.',
@@ -13,6 +15,7 @@ const references = [
   },
   {
     eyebrow: 'First-Party Client',
+    product: 'dotnet',
     title: '.NET API',
     description:
       'Client lifecycle, methods, results, exceptions, timeouts, and cancellation for .NET.',
@@ -20,6 +23,7 @@ const references = [
   },
   {
     eyebrow: 'First-Party Client',
+    product: 'python',
     title: 'Python API',
     description:
       'Asynchronous client lifecycle, methods, results, errors, timeouts, and cancellation.',
@@ -27,12 +31,13 @@ const references = [
   },
   {
     eyebrow: 'First-Party Client',
+    product: 'js',
     title: 'JavaScript and TypeScript API',
     description:
       'Client lifecycle, methods, results, errors, and cancellation for Node.js applications.',
     to: '/api/javascript',
   },
-];
+] as const;
 
 export default function ApiReference(): ReactNode {
   return (
@@ -47,9 +52,10 @@ export default function ApiReference(): ReactNode {
           remains focused on the currently recommended Briosa experience.
         </p>
 
-        <div className="catalog-group-grid">
+        <div className="catalog-group-grid briosa-reference-grid">
           {references.map((reference) => (
             <Link className="catalog-group-card" to={reference.to} key={reference.to}>
+              <BrandImage product={reference.product} />
               <span className="catalog-group-kicker">{reference.eyebrow}</span>
               <strong>{reference.title}</strong>
               <p>{reference.description}</p>

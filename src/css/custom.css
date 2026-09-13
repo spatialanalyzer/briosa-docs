@@ -1,24 +1,52 @@
+@import '../../static/brand/colors.css';
+
+@font-face {
+  font-family: Inter;
+  src: url('../../static/brand/fonts/Inter-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
-  --ifm-color-primary: #0f8f83;
-  --ifm-color-primary-dark: #0d8176;
-  --ifm-color-primary-darker: #0c796f;
-  --ifm-color-primary-darkest: #0a645c;
-  --ifm-color-primary-light: #119d90;
-  --ifm-color-primary-lighter: #12a596;
-  --ifm-color-primary-lightest: #15baa9;
-  --ifm-background-color: #fbfcfc;
+  --ifm-color-primary: var(--briosa-blue);
+  --ifm-color-primary-dark: #003269;
+  --ifm-color-primary-darker: #003063;
+  --ifm-color-primary-darkest: #002752;
+  --ifm-color-primary-light: #003e81;
+  --ifm-color-primary-lighter: #004087;
+  --ifm-color-primary-lightest: #004998;
+  --ifm-background-color: var(--briosa-white);
+  --ifm-background-surface-color: var(--briosa-white);
+  --ifm-font-color-base: var(--briosa-graphite);
+  --ifm-heading-color: var(--briosa-blue);
+  --ifm-navbar-background-color: var(--briosa-white);
+  --ifm-navbar-link-color: var(--briosa-graphite);
+  --ifm-menu-color: var(--briosa-graphite);
+  --ifm-menu-color-background-active: #edf4fa;
+  --ifm-toc-border-color: #dce3e9;
+  --ifm-hr-border-color: #dce3e9;
+  --ifm-code-background: var(--briosa-silver);
+  --ifm-table-stripe-background: #f7f9fb;
+  --ifm-table-border-color: #dce3e9;
+  --ifm-color-secondary-contrast-background: var(--briosa-silver);
+  --ifm-color-secondary-contrast-foreground: var(--briosa-graphite);
+  --ifm-color-info-contrast-background: #edf4fa;
+  --ifm-color-info-contrast-foreground: var(--briosa-blue);
   --ifm-font-family-base:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   --ifm-heading-font-family: var(--ifm-font-family-base);
-  --ifm-heading-font-weight: 720;
+  --ifm-heading-font-weight: 650;
   --ifm-code-font-size: 92%;
-  --ifm-navbar-height: 4.15rem;
-  --docusaurus-highlighted-code-line-bg: rgba(9, 129, 116, 0.09);
-  --briosa-surface: #ffffff;
-  --briosa-soft: #f0f6f5;
-  --briosa-border: #d9e5e5;
-  --briosa-muted: #526b72;
+  --ifm-navbar-height: 5rem;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 56, 117, 0.08);
+  --briosa-surface: var(--briosa-white);
+  --briosa-soft: var(--briosa-silver);
+  --briosa-feature-background: var(--briosa-blue);
+  --briosa-feature-border: #547fab;
+  --briosa-border: #dce3e9;
+  --briosa-muted: var(--briosa-graphite);
   --briosa-current-background: #e8f7f2;
   --briosa-current-border: #89cdbb;
   --briosa-current-text: #126b5d;
@@ -37,22 +65,37 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #4de0ca;
-  --ifm-color-primary-dark: #30dac0;
-  --ifm-color-primary-darker: #25d5ba;
-  --ifm-color-primary-darkest: #1daf99;
-  --ifm-color-primary-light: #6ae6d3;
-  --ifm-color-primary-lighter: #76e8d7;
-  --ifm-color-primary-lightest: #9aefe2;
-  --ifm-background-color: #091820;
-  --ifm-background-surface-color: #0e222c;
-  --ifm-footer-background-color: #061218;
-  --ifm-navbar-background-color: rgba(7, 23, 31, 0.94);
-  --docusaurus-highlighted-code-line-bg: rgba(49, 214, 192, 0.12);
-  --briosa-surface: #0d222c;
-  --briosa-soft: #0a1b23;
-  --briosa-border: #213943;
-  --briosa-muted: #9fb5bd;
+  --ifm-color-primary: var(--briosa-cyan);
+  --ifm-color-primary-dark: #00a7d9;
+  --ifm-color-primary-darker: #009ecd;
+  --ifm-color-primary-darkest: #0082a9;
+  --ifm-color-primary-light: #0dc8ff;
+  --ifm-color-primary-lighter: #19cbff;
+  --ifm-color-primary-lightest: #3dd3ff;
+  --ifm-background-color: #081f36;
+  --ifm-background-surface-color: #102f50;
+  --ifm-font-color-base: #e2eaf2;
+  --ifm-heading-color: var(--briosa-white);
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-link-color: var(--briosa-white);
+  --ifm-menu-color: #c6d5e4;
+  --ifm-menu-color-background-active: #123b60;
+  --ifm-toc-border-color: #31516f;
+  --ifm-hr-border-color: #31516f;
+  --ifm-code-background: #102f50;
+  --ifm-table-stripe-background: #102f50;
+  --ifm-table-border-color: #31516f;
+  --ifm-color-secondary-contrast-background: #102f50;
+  --ifm-color-secondary-contrast-foreground: #e2eaf2;
+  --ifm-color-info-contrast-background: #123b60;
+  --ifm-color-info-contrast-foreground: var(--briosa-white);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 186, 241, 0.12);
+  --briosa-surface: #102f50;
+  --briosa-soft: #0b2743;
+  --briosa-feature-background: var(--briosa-soft);
+  --briosa-feature-border: var(--briosa-border);
+  --briosa-border: #31516f;
+  --briosa-muted: #b5c7d9;
   --briosa-current-background: #102f2a;
   --briosa-current-border: #357e70;
   --briosa-current-text: #8cebd5;
@@ -82,20 +125,84 @@
  */
 
 .navbar__logo img {
-  width: 2rem;
-  height: 2rem;
+  width: 180px;
+  height: auto;
 }
 
-.navbar__title {
-  letter-spacing: -0.025em;
+.navbar__logo {
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+.navbar__link {
+  font-size: 0.92rem;
+  font-weight: 550;
+}
+
+:where(a, button, input, select, summary):focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 4px;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--briosa-feature-background);
+  --ifm-footer-color: var(--briosa-silver);
+  --ifm-footer-link-color: var(--briosa-white);
+  --ifm-footer-title-color: var(--briosa-white);
+  --ifm-link-hover-color: var(--briosa-cyan);
+  padding: 3.5rem 0 2rem;
+}
+
+.footer :focus-visible {
+  outline-color: var(--briosa-cyan);
+}
+
+.footer__logo {
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.footer__bottom a:has(.footer__logo) {
+  opacity: 1;
+}
+
+.footer__copyright {
+  font-size: 0.85rem;
+}
+
+.catalog-group-grid.briosa-reference-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.briosa-product-logo {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0.5rem 0 2rem;
+}
+
+.pagination-nav__link {
+  border-color: var(--briosa-border);
+  border-radius: 0.4rem;
+}
+
+.theme-code-block {
+  border: 1px solid var(--briosa-border);
+  box-shadow: none;
 }
 
 .button {
-  border-radius: 0.55rem;
+  border-radius: 0.35rem;
 }
 
 .theme-doc-markdown {
   font-size: 1.02rem;
+}
+
+.theme-doc-markdown a:not(.catalog-group-card),
+main p a {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 .theme-doc-markdown h1 {
@@ -113,6 +220,10 @@
 
 code {
   border: 1px solid var(--briosa-border);
+}
+
+pre code {
+  border: 0;
 }
 
 .catalog-path {
@@ -139,7 +250,7 @@ code {
 .catalog-summary-card,
 .catalog-group-card {
   border: 1px solid var(--briosa-border);
-  border-radius: 0.75rem;
+  border-radius: 0.4rem;
   background: var(--briosa-surface);
   padding: 1.1rem 1.2rem;
 }
@@ -182,7 +293,7 @@ code {
 
 .catalog-group-card:hover {
   border-color: var(--ifm-color-primary);
-  box-shadow: 0 0.5rem 1.4rem rgba(9, 40, 46, 0.08);
+  box-shadow: 0 0.5rem 1.4rem rgba(0, 56, 117, 0.06);
   color: inherit;
   text-decoration: none;
   transform: translateY(-2px);
@@ -299,8 +410,9 @@ code {
 }
 
 .catalog-command-table {
-  display: table;
+  display: block;
   width: 100%;
+  overflow-x: auto;
 }
 
 .catalog-command-table th,
@@ -369,6 +481,10 @@ html.plugin-id-javascript .api-version-dropdown--javascript {
 }
 
 @media (max-width: 700px) {
+  .catalog-group-grid.briosa-reference-grid {
+    grid-template-columns: 1fr;
+  }
+
   .catalog-context-grid,
   .catalog-command-meta {
     grid-template-columns: 1fr;
