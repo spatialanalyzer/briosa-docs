@@ -5,7 +5,7 @@ This repository contains the public documentation site for
 around the Hexagon SpatialAnalyzer SDK.
 
 The site is built with [Docusaurus](https://docusaurus.io/) and published to
-[spatialanalyzer.github.io/briosa-docs](https://spatialanalyzer.github.io/briosa-docs/).
+[briosa.dev](https://briosa.dev/).
 
 ## Local development
 
@@ -33,6 +33,46 @@ The site has three documentation collections:
 Each reference collection has its own Docusaurus plugin instance and sidebar.
 The `/api` route is an unversioned landing page that helps users choose the
 appropriate reference.
+
+## Custom Domain and Deployment
+
+The canonical site URL is `https://briosa.dev/`. Docusaurus uses
+`url: 'https://briosa.dev'` and `baseUrl: '/'` so routes, assets, canonical links,
+Open Graph URLs, and the generated sitemap use the domain root.
+`static/robots.txt` advertises `https://briosa.dev/sitemap.xml`.
+
+The domain is registered through Porkbun, DNS is managed through Cloudflare,
+and GitHub Pages hosts the site. The repository's Pages settings hold the
+`briosa.dev` custom domain with HTTPS enforcement enabled. The
+[`deploy-pages.yml`](.github/workflows/deploy-pages.yml) workflow publishes
+`build/` when changes reach `main`. This uses a custom GitHub Actions workflow;
+[GitHub does not require or use a `CNAME` file for this publishing method](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+On September 14, 2026, HTTPS checks confirmed that GitHub Pages returns a `301`
+from `https://spatialanalyzer.github.io/briosa-docs/` to `https://briosa.dev/`,
+and from the old `/briosa-docs/docs/getting-started/prerequisites` URL to
+`https://briosa.dev/docs/getting-started/prerequisites`. `https://www.briosa.dev/`
+also returns a `301` to the apex domain. These redirects are supplied by
+GitHub Pages. Recheck them after changes to DNS or Pages settings; Docusaurus
+does not control redirects on the old hostname.
+
+After deployment, verify the homepage, a documentation article, API reference,
+and MP catalog, including their assets and canonical URLs. Check
+`/sitemap.xml`, `/robots.txt`, and the old-host redirects as well.
+
+### Rollback
+
+To restore `https://spatialanalyzer.github.io/briosa-docs/`, revert the custom
+domain change through a pull request. Restore `url` to
+`https://spatialanalyzer.github.io`, `baseUrl` and the footer home link to
+`/briosa-docs/`, and update or remove the custom-domain robots file. Run
+`npm ci` and `npm run check` with Node.js 24, then coordinate deployment with
+removing the custom domain in the repository's Pages settings. Verify the
+restored project URL and its assets. Retain domain ownership and GitHub
+organization verification; review the Cloudflare records that point at Pages.
+
+Domain ownership, renewal, recovery, and monitoring work is tracked separately
+in [issue #9](https://github.com/spatialanalyzer/briosa-docs/issues/9).
 
 ## Site Branding
 
