@@ -66,7 +66,7 @@ repository settings.
 ## Site development
 
 - Use Node.js 24 and the committed lockfile.
-- Keep links valid under the GitHub Pages base path `/briosa-docs/`.
+- Keep links valid at `https://briosa.dev/` with the base path `/`.
 - Prefer accessible semantic HTML and CSS. Preserve keyboard focus, readable
   contrast, and reduced-motion behavior.
 - Run `npm ci` and `npm run check` before proposing changes.

@@ -67,7 +67,7 @@ as part of an API release.
 - Does the page preserve the independent-project disclaimer?
 - Do page titles, section headings, navigation labels, and table headers use
   title case while preserving exact API identifiers and MP Editor labels?
-- Do all links work under `/briosa-docs/`?
+- Do all links and assets work from the site root (`/`) at `https://briosa.dev/`?
 - Is the page readable with keyboard navigation, high zoom, and reduced motion?
 
 Edit links on each page open a change against this repository. Released
