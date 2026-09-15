@@ -34,6 +34,106 @@ Each reference collection has its own Docusaurus plugin instance and sidebar.
 The `/api` route is an unversioned landing page that helps users choose the
 appropriate reference.
 
+## Documentation Search
+
+Global search uses the Algolia integration already supplied by the Docusaurus
+classic preset. The shared header provides Search and Ctrl/Cmd+K; `/search`
+provides the full result list and API version selectors when snapshots exist.
+The Command Index retains its independent group, status, and validation filters.
+
+### Public Connection Settings
+
+Set these three **GitHub Actions repository variables** together:
+
+| Variable | Value |
+| --- | --- |
+| `ALGOLIA_APP_ID` | The approved Algolia application ID |
+| `ALGOLIA_SEARCH_API_KEY` | A public search-only key restricted to the documentation index |
+| `ALGOLIA_INDEX_NAME` | The exact index name configured in the crawler |
+
+Both build workflows read these public variables. They become browser-visible
+site configuration; never put an admin or crawler write key in them. PR builds
+remain read-only, GitHub-hosted, and secret-free. Search is omitted while all
+three values are unset, and incomplete configuration fails the build. This
+allows the site to build during DocSearch onboarding without publishing a
+nonfunctional Search button. Updating the variables requires a new site build.
+
+For local development, set the same environment variables before `npm start`
+or `npm run check`. Environment files are not automatically loaded by this
+configuration. A production preview uses `npm run build` followed by
+`npm run serve`; it queries the real hosted index when connection values exist.
+
+### DocSearch Onboarding And Activation
+
+1. A project maintainer applies for `https://briosa.dev/` through the
+   [DocSearch onboarding process](https://docsearch.algolia.com/docs/who-can-apply/).
+   Complete the provider's account, terms, eligibility, and domain-ownership
+   verification steps. Algolia currently requires ownership verification within
+   seven days of approval.
+2. Create the documentation index and hosted crawler. Use
+   [`search/algolia-crawler.cjs`](search/algolia-crawler.cjs) in the crawler editor,
+   replacing `YOUR_APP_ID`, `YOUR_CRAWLER_API_KEY`, and **both** occurrences of
+   `YOUR_INDEX_NAME` there. Keep the crawler key in Algolia; do not commit it.
+   Preserve the existing crawler schedule and safety checks. Keep `new Crawler`
+   at the beginning of the configuration and avoid optional chaining in the
+   extractor: the hosted editor uses an older JavaScript parser.
+3. Run a crawl and inspect sample records. The site's sitemap supplies routes;
+   only public `briosa.dev` HTML is indexed. Use the crawler's schedule and
+   trigger a recrawl after significant documentation changes.
+4. Configure the index-restricted public search-only key and set the three
+   repository variables. Rebuild and deploy through the normal Pages workflow.
+5. Verify real queries and keyboard navigation on the deployed site before
+   closing [issue #46](https://github.com/spatialanalyzer/briosa-docs/issues/46).
+
+`initialIndexSettings` only initializes a new index. When changing settings for
+an existing index, apply the corresponding settings in Algolia as well as the
+crawler change, then recrawl. Do not assume editing the template updates an
+existing index's settings.
+
+### Indexing Rules
+
+The crawler uses the standard Docusaurus DocSearch helper for guides, API
+references, and landing pages. It keeps `language`, `version`, and
+`docusaurus_tag` metadata. Docusaurus contextual search searches all documentation
+instances, using the active version for the current reference and the preferred
+or latest version for each other reference.
+
+Canonical catalog sections produce one DocSearch record per existing command
+anchor. The exact MP label is retained; breadcrumbs include the reviewed status,
+SA target, and MP group. Nested command headings are supported. Older canonical
+pages provide the target in their introduction and the reviewed group in their
+summary table. Those values supply context only; table rows and exact-target
+navigation pages never become additional command results. Missing or ambiguous
+command context fails extraction instead of inventing a support claim.
+
+The extractor removes duplicate command tables, filters, navigation, and page
+chrome. It excludes exact-target indexes, the aggregate Command Index, query
+URLs, redirects, and noindex pages. Matching tokens derived from labels allow
+`GetWorkingDirectory` and `get_working_directory` to find `Get Working Directory`.
+They do not merge lineages or create API identifiers. The hosted index is a
+disposable search artifact, not a maintained catalog schema or protocol source.
+
+`npm run check:search` checks the crawler against the built HTML, including
+canonical-anchor coverage, duplicate results, status/target context, record size,
+exclusions, and selectors across all documentation instances. It runs within
+`npm run check` and both CI build jobs. It does not call Algolia and cannot
+establish hosted ranking, typo tolerance, crawler scheduling, or service availability.
+
+### Live Verification
+
+- Search for `install`, `readiness`, `GetWorkingDirectory`,
+  `Get Working Directory`, `get_working_directory`, `Get i-th Collection Name`,
+  and a punctuation-heavy label such as `Get GD&T Options`.
+- Verify all four API references and guides appear, and that command results
+  open canonical anchors with accurate status and target context.
+- Check the desktop and mobile Search controls, Ctrl/Cmd+K, arrows, Enter,
+  Escape, focus return, empty results, and the Command Index recovery link.
+- Check light and dark modes, zoom, and reduced-motion behavior. Inspect query
+  errors and verify that old or excluded navigation pages do not reappear.
+
+To disable global search, clear all three public variables and rebuild; the
+normal site navigation and catalog filters remain available.
+
 ## Custom Domain and Deployment
 
 The canonical site URL is `https://briosa.dev/`. Docusaurus uses

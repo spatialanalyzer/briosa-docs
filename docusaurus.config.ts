@@ -4,6 +4,19 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs';
 import type {Options as RedirectsPluginOptions} from '@docusaurus/plugin-client-redirects';
 
+// These are public browser connection settings, never an administration key.
+const algolia = {
+  appId: process.env.ALGOLIA_APP_ID?.trim(),
+  apiKey: process.env.ALGOLIA_SEARCH_API_KEY?.trim(),
+  indexName: process.env.ALGOLIA_INDEX_NAME?.trim(),
+};
+const searchEnabled = Object.values(algolia).every(Boolean);
+if (Object.values(algolia).some(Boolean) && !searchEnabled) {
+  throw new Error(
+    'Set ALGOLIA_APP_ID, ALGOLIA_SEARCH_API_KEY, and ALGOLIA_INDEX_NAME together.',
+  );
+}
+
 const config: Config = {
   title: 'Briosa',
   tagline: 'SpatialAnalyzer integration, simplified.',
@@ -141,7 +154,19 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    ...(searchEnabled && {
+      algolia: {
+        appId: algolia.appId!,
+        apiKey: algolia.apiKey!,
+        indexName: algolia.indexName!,
+        contextualSearch: true,
+        searchPagePath: 'search',
+        placeholder: 'Search All Documentation',
+        insights: false,
+      },
+    }),
     metadata: [
+      {name: 'algolia-site-verification', content: 'ECFE6AF781A92A7F'},
       {
         name: 'description',
         content:
@@ -237,6 +262,7 @@ const config: Config = {
           className: 'header-github-link',
           'aria-label': 'Briosa on GitHub',
         },
+        ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
       ],
     },
     footer: {

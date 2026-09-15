@@ -1,0 +1,60 @@
+/* Reuse Briosa's light/dark tokens in the standard DocSearch controls. */
+html .DocSearch {
+  --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--briosa-muted);
+  --docsearch-searchbox-background: var(--briosa-soft);
+  --docsearch-searchbox-focus-background: var(--briosa-surface);
+  --docsearch-modal-background: var(--briosa-soft);
+  --docsearch-footer-background: var(--briosa-surface);
+  --docsearch-hit-background: var(--briosa-surface);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: #fff;
+  --docsearch-highlight-color: var(--ifm-color-primary);
+  --docsearch-logo-color: var(--ifm-color-primary);
+  --docsearch-container-background: rgb(0 20 40 / 75%);
+}
+
+[data-theme='dark'] .DocSearch {
+  --docsearch-hit-active-color: #081f36;
+}
+
+.navbar .DocSearch-Button {
+  min-height: 44px;
+  border: 1px solid var(--briosa-border);
+  border-radius: 6px;
+  margin: 0;
+}
+
+.navbar .DocSearch-Button:focus-visible,
+.DocSearch :where(a, button, input):focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+/* Keep the button labeled on small screens, where keyboard hints disappear. */
+@media (max-width: 768px) {
+  .navbar .DocSearch-Button-Placeholder {
+    display: inline;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar:has(.DocSearch-Button) .navbar__logo img {
+    width: 120px;
+  }
+
+  .navbar:has(.DocSearch-Button) .navbar__logo {
+    margin-right: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .DocSearch *,
+  .DocSearch *::before,
+  .DocSearch *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
