@@ -64,6 +64,35 @@ await briosa.start({
 });
 ```
 
+## Server Logging
+
+`BriosaStartOptions.logging` accepts an optional `BriosaLoggingOptions`:
+
+```ts
+await briosa.start({
+  logging: {
+    minimumLevel: 'Debug',
+    consoleEnabled: false,
+    maxFileSizeMiB: 20,
+    retainedFileCount: 10,
+  },
+});
+```
+
+Additional properties are `categoryLevels`, `fileEnabled`, `fileDirectory`,
+`maxAgeDays`, and `maxTotalSizeMiB`. Levels use the `BriosaLogLevel` string union:
+`Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, or `None`.
+
+These controls require builds containing
+[the observability implementation](https://github.com/spatialanalyzer/briosa/issues/165).
+Omitted fields preserve server configuration. Values are validated before
+launch; the server validates the effective combined configuration. Custom
+directories must be absolute Windows paths. Logging controls apply when this
+client launches its server and cannot reconfigure a running process.
+
+See [Server Logging and Telemetry](/docs/deployment/logging) for defaults,
+retention behavior, and the metadata boundary at every verbosity level.
+
 ## Behavior
 
 - Selects and launches the exact-target local server on an owned loopback

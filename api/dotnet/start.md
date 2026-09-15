@@ -73,6 +73,36 @@ await briosa.StartAsync(new BriosaStartOptions
 });
 ```
 
+## Server Logging
+
+`BriosaStartOptions.Logging` accepts an optional `BriosaLoggingOptions`:
+
+```csharp
+await briosa.StartAsync(new BriosaStartOptions
+{
+    Logging = new BriosaLoggingOptions
+    {
+        MinimumLevel = BriosaLogLevel.Debug,
+        ConsoleEnabled = false,
+        MaxFileSizeMiB = 20,
+        RetainedFileCount = 10,
+    },
+});
+```
+
+Additional properties are `CategoryLevels`, `FileEnabled`, `FileDirectory`,
+`MaxAgeDays`, and `MaxTotalSizeMiB`. Level values use `BriosaLogLevel`.
+
+These controls require builds containing
+[the observability implementation](https://github.com/spatialanalyzer/briosa/issues/165).
+Omitted fields preserve server configuration. Values are validated before
+launch; the server validates the effective combined configuration. Custom
+directories must be absolute Windows paths. Logging controls apply when this
+client launches its server and cannot reconfigure a running process.
+
+See [Server Logging and Telemetry](/docs/deployment/logging) for defaults,
+retention behavior, and the metadata boundary at every verbosity level.
+
 ## Behavior
 
 - Selects the exact-target Briosa server distribution.

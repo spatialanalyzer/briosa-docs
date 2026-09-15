@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'deployment/windows',
         'deployment/health-and-discovery',
+        'deployment/logging',
         'deployment/diagnostics',
       ],
     },
