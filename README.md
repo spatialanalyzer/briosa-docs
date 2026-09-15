@@ -74,6 +74,9 @@ configuration. A production preview uses `npm run build` followed by
    [`search/algolia-crawler.cjs`](search/algolia-crawler.cjs) in the crawler editor,
    replacing `YOUR_APP_ID`, `YOUR_CRAWLER_API_KEY`, and **both** occurrences of
    `YOUR_INDEX_NAME` there. Keep the crawler key in Algolia; do not commit it.
+   Preserve the existing crawler schedule and safety checks. Keep `new Crawler`
+   at the beginning of the configuration and avoid optional chaining in the
+   extractor: the hosted editor uses an older JavaScript parser.
 3. Run a crawl and inspect sample records. The site's sitemap supplies routes;
    only public `briosa.dev` HTML is indexed. Use the crawler's schedule and
    trigger a recrawl after significant documentation changes.

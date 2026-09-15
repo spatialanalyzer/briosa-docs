@@ -166,6 +166,7 @@ const config: Config = {
       },
     }),
     metadata: [
+      {name: 'algolia-site-verification', content: 'ECFE6AF781A92A7F'},
       {
         name: 'description',
         content:

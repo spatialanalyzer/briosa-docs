@@ -1,12 +1,14 @@
-/*
- * Paste this configuration into the hosted Algolia Crawler editor. Replace the
- * three placeholders there, never with private credentials in this repository.
- * Uses the standard Docusaurus DocSearch v3 record format (also used by UI v4/v5).
- * https://docsearch.algolia.com/docs/templates/#docusaurus-v2-and-later-template
- */
 new Crawler({
+  /*
+   * Keep new Crawler as the first statement for the hosted editor's parser.
+   * Replace the three placeholders in Algolia, never with private credentials
+   * in this repository. Preserve the existing crawler schedule and safety checks.
+   * Uses the standard DocSearch v3 record format (also used by UI v4/v5).
+   * https://docsearch.algolia.com/docs/templates/#docusaurus-v2-and-later-template
+   */
   appId: 'YOUR_APP_ID',
   apiKey: 'YOUR_CRAWLER_API_KEY',
+  indexPrefix: '',
   rateLimit: 8,
   maxDepth: 10,
   startUrls: ['https://briosa.dev/'],
@@ -117,7 +119,8 @@ new Crawler({
         grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API',
         javascript: 'JavaScript and TypeScript API',
       };
-      const apiSection = path.match(/^\/api\/(grpc|dotnet|python|javascript)(?:\/|$)/)?.[1];
+      const apiMatch = path.match(/^\/api\/(grpc|dotnet|python|javascript)(?:\/|$)/);
+      const apiSection = apiMatch && apiMatch[1];
       const versionLabel = text($('.theme-doc-version-badge').text());
       const section = apiSection
         ? `${sections[apiSection]}${versionLabel ? ` · ${versionLabel}` : ''}`
