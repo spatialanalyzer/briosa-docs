@@ -230,10 +230,13 @@ Installer before uninstalling it. SpatialAnalyzer and SDK registration are uncha
 ## Validation Scope
 
 Automated tests cover source isolation, signed package maintenance, installer
-selection, setup/reinstall/uninstall, and preservation of user data. Organizations
-should validate their actual Artifactory/proxy authentication and workstation
-policies before deployment. This release does not claim validation of every
-enterprise environment, screen reader, or display-scaling combination.
+selection, setup/reinstall/uninstall, upgrades, and preservation of user data.
+Real Artifactory/proxy deployments, standard-user managed rollout, native
+high-contrast/Narrator, and mixed-monitor DPI acceptance remain unverified.
+Organizations should validate their own authentication and workstation policies
+before deployment. See the
+[validation record](https://github.com/spatialanalyzer/briosa-installer/blob/main/design-qa.md)
+for the completed checks and their limits.
 
 ## Next Steps
 
