@@ -61,8 +61,8 @@ function HomepageHeader() {
             <div className={styles.actions}>
               <Link
                 className="button button--primary button--lg"
-                to="/docs/getting-started/prerequisites">
-                Get Started
+                to="/install">
+                Install Briosa
               </Link>
               <Link
                 className="button button--outline button--secondary button--lg"

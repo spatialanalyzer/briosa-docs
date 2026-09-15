@@ -161,6 +161,7 @@ const config: Config = {
         height: 58,
       },
       items: [
+        {to: '/install', label: 'Install', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
@@ -251,6 +252,7 @@ const config: Config = {
         {
           title: 'Learn',
           items: [
+            {label: 'Install Briosa', to: '/install'},
             {label: 'Get Started', to: '/docs/getting-started/prerequisites'},
             {label: 'API Reference', to: '/api'},
             {label: 'MP Command Catalog', to: '/mp-command-catalog'},
@@ -267,6 +269,7 @@ const config: Config = {
         {
           title: 'Repositories',
           items: [
+            {label: 'Briosa Installer', href: 'https://github.com/spatialanalyzer/briosa-installer'},
             {label: 'Briosa Server', href: 'https://github.com/spatialanalyzer/briosa'},
             {label: '.NET Client', href: 'https://github.com/spatialanalyzer/briosa-dotnet'},
             {label: 'Python Client', href: 'https://github.com/spatialanalyzer/briosa-py'},

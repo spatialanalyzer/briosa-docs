@@ -62,4 +62,4 @@ themselves. See
 [Manage Briosa, SDK, and SpatialAnalyzer Lifecycles](../concepts/client-lifecycle)
 for the server, application, and SDK lifecycles.
 
-[Run the server →](./run-the-server)
+[Install Briosa →](/install)

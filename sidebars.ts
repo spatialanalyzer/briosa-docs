@@ -8,6 +8,7 @@ const sidebars: SidebarsConfig = {
       label: 'Get Started',
       items: [
         'getting-started/prerequisites',
+        {type: 'link', label: 'Install Briosa', href: '/install'},
         'getting-started/run-the-server',
         'getting-started/first-request',
       ],

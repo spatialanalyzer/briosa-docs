@@ -4,6 +4,11 @@ title: Windows Deployment
 
 # Windows Deployment
 
+Use [Briosa Installer](/install) to manage server packages, including installation,
+verification, repair, and removal. That guide also records current download
+availability. This page covers the server package layout, manual extraction,
+diagnostics, and startup.
+
 Briosa release archives are self-contained .NET 10 Windows x64 products for one
 exact SpatialAnalyzer target:
 
