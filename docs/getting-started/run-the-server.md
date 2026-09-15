@@ -26,6 +26,8 @@ bootstrap packages.
 
 ## Before You Start
 
+- Follow [Install Briosa](/install) for installer availability and server-package
+  management, or use an approved standalone server distribution
 - Install and license the supported SpatialAnalyzer release on a Windows x64
   workstation
 - Close competing SDK clients and SpatialAnalyzer instances
@@ -267,10 +269,11 @@ A language does not need a dedicated Briosa package to use the product. Any
 runtime with gRPC support can use the published protobuf contracts and connect
 to a compatible standalone Briosa server distribution on the same machine.
 
-Standalone installation and launch instructions will accompany each supported
-server distribution. A distribution is built for one exact SpatialAnalyzer
-release; do not reuse it with another release merely because the public command
-names look the same.
+Use [Install Briosa](/install) for package-management guidance and
+[Windows Deployment](../deployment/windows) for standalone package diagnostics
+and launch. A distribution is built for one exact SpatialAnalyzer release;
+do not reuse it with another release merely because the public command names
+look the same.
 
 The current server endpoint is intentionally available only on the local
 machine. Do not expose it through a network binding, proxy, or tunnel until
