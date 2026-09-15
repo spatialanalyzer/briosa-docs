@@ -13,19 +13,13 @@ individual installations.
 Run the installer on each Windows host where you need Briosa. Its inventory and
 SDK Setup describe that machine; it does not manage other hosts remotely.
 
-:::info[Download Availability]
+<div className="margin-bottom--md"><a className="button button--primary button--lg" href="https://briosa.dev/downloads/packages/installer/0.1.0/briosa-installer-0.1.0-win-x64-setup.exe" download>Download Briosa Installer</a></div>
 
-As of September 15, 2026, Briosa Installer is a functional review build. No
-public installer release or usable public package catalog has been published.
-Check the [Briosa Installer releases](https://github.com/spatialanalyzer/briosa-installer/releases)
-for published downloads. There is no production download to select yet.
+**Version 0.1.0 · Windows x64 · Complete offline setup**
 
-The instructions below describe the implemented workflow for an approved
-review distribution and signed package source supplied by the project or your
-organization. Contributors can use the
-[installer build guide](https://github.com/spatialanalyzer/briosa-installer/blob/main/docs/development.md).
-
-:::
+[SHA-256 checksum](https://briosa.dev/downloads/packages/installer/0.1.0/briosa-installer-0.1.0-win-x64-setup.exe.sha256)
+· [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.1.0)
+· [All downloads](https://briosa.dev/downloads)
 
 ## Before You Begin
 
@@ -44,33 +38,42 @@ values; matching only an SA release year is insufficient. See
 [Prerequisites](/docs/getting-started/prerequisites) for the current target and
 SDK ownership requirements.
 
-## Get and Open the App
+## Install and Open the App
 
-Once a release is published, download its complete Windows x64 ZIP and adjacent
-`.sha256` file from the installer releases page or your organization's approved
-software portal. The archive is named
-`briosa-installer-<version>-win-x64.zip`. For review access today, obtain that
-complete distribution from the project or your organization.
+1. Select **Download Briosa Installer** above, or obtain the same setup package
+   from your organization's approved software portal.
+2. Open the downloaded `briosa-installer-0.1.0-win-x64-setup.exe` file.
+3. Follow the setup wizard. It installs for your Windows account; the default
+   location is `%LOCALAPPDATA%\Programs\Briosa Installer`.
+4. Select **Launch Briosa Installer** when setup finishes. For later starts,
+   open **Briosa Installer** from the Windows Start menu.
 
-1. Compare the archive's SHA-256 with its accompanying checksum before
-   extracting it. In PowerShell, `Get-FileHash -Algorithm SHA256 <archive-path>`
-   reports the archive's hash.
-2. Extract the **entire** archive into a permanent folder. Keep the application,
-   launcher, CLI, runtime, and other included files together.
-3. Open **`Briosa.Launcher.exe`** from the extracted folder. Use this launcher
-   for later starts so it can open the installer version you have selected.
-4. Optionally run the included `Install-DesktopShortcut.ps1` to create a Start
-   menu entry pointing at that launcher.
+Setup, its uninstaller, and the application carry timestamped Windows signatures
+with publisher **David Lucas**. You can inspect them through file properties.
+The adjacent checksum provides an additional integrity check:
+`Get-FileHash -Algorithm SHA256 <downloaded-setup-file>`.
 
-The release-signing configuration identifies **David Lucas** as the Windows
-publisher for official signed distributions. Windows file properties let you
-inspect their digital signatures. This release identity does not mean that a
-local review build is a signed production release.
+The setup package includes the runtime and works offline. Access to a public,
+internal, or complete offline catalog is needed when acquiring server packages.
+Setup does not install SpatialAnalyzer or alter SDK registration.
+
+### Portable and Managed Deployment
+
+The [downloads index](https://briosa.dev/downloads) also provides a complete ZIP
+for portable deployment and mirroring. Extract the entire ZIP into a permanent
+folder and open `Briosa.Launcher.exe`; keep all included files together. The
+optional `Install-DesktopShortcut.ps1` creates a Start menu shortcut for that copy.
+For unattended setup and machine-store deployment, see the
+[administration guide](https://github.com/spatialanalyzer/briosa-installer/blob/main/docs/administration.md).
 
 ## Choose a Package Source
 
-The app opens on **Installations**. When no source is configured, choose
-**Configure package source**, or open **Settings → Package sources**.
+The app opens on **Installations**. Choose **Use Briosa public source** to load
+the published catalog with its bundled approved publisher key. Installer updates
+use the same source by default.
+
+For an enterprise mirror or offline catalog, choose **Configure package source**,
+or open **Settings → Package sources**, before choosing the public source:
 
 1. Enter an approved HTTPS catalog URL, or browse to a catalog on a local disk
    or network share. Use a catalog supplied by the project or your organization,
@@ -87,10 +90,13 @@ for the selected catalog. The app can browse unsigned metadata, but installation
 requires an approved publisher and a valid signed catalog, followed by package
 integrity verification.
 
-Release packaging can supply public-source defaults. Until the public catalog
-is published, use an approved review or internal source. You can select an
-enterprise mirror before any public request; changing to an inaccessible mirror
-does not cause a fallback to public hosting.
+Opening the app, navigating, or changing appearance makes no public request
+before you choose a source. The public catalog is
+`https://briosa.dev/downloads/catalog.json`. An unchanged enterprise mirror uses
+the same [publisher key](https://briosa.dev/downloads/keys/catalog-public.pem);
+verify its fingerprint against the
+[maintainer signing record](https://github.com/spatialanalyzer/briosa/blob/main/docs/maintainers/release-signing.md).
+An inaccessible mirror never causes a fallback to public hosting.
 
 For offline use, your administrator must provide the catalog, its matching
 signature, and all referenced packages and metadata. A cached catalog alone is
@@ -206,6 +212,28 @@ update source has no public fallback.
 installer. **Downloaded installer versions** provides verification, repair,
 removal, and selection for locally installed app versions. Continue launching
 through `Briosa.Launcher.exe` so the selected version takes effect.
+
+## Upgrade or Uninstall the App
+
+You can use **Settings → Installer updates** or run a newer setup package from
+this page. Close Briosa Installer before running setup. Setup preserves your
+settings and server packages, and retains a selected installer newer than the
+setup version. The app displays its actual running version; Windows Installed
+apps displays the setup version.
+
+To uninstall, open **Windows Settings → Apps → Installed apps**, find **Briosa
+Installer**, and choose **Uninstall**. The application and Start menu shortcut
+are removed. Settings, credentials, and downloaded packages are retained so a
+later installation can use them. Remove unwanted packages through Briosa
+Installer before uninstalling it. SpatialAnalyzer and SDK registration are unchanged.
+
+## Validation Scope
+
+Automated tests cover source isolation, signed package maintenance, installer
+selection, setup/reinstall/uninstall, and preservation of user data. Organizations
+should validate their actual Artifactory/proxy authentication and workstation
+policies before deployment. This release does not claim validation of every
+enterprise environment, screen reader, or display-scaling combination.
 
 ## Next Steps
 
