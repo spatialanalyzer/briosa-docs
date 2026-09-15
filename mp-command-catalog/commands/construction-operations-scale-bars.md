@@ -13,7 +13,7 @@ Bars** in SA 2026.1.0529.7.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>1</strong></div>
-  <div><span>Current or Next</span><strong>1</strong></div>
+  <div><span>Current Server Operations</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,13 +22,13 @@ Bars** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="next" data-validation="at-risk-scale-bar-tolerance-fixture"><td><a href="#construct-scale-bar">Construct Scale Bar</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - scale-bar tolerance fixture</td></tr>
+<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-scale-bar-tolerance-fixture"><td><a href="#construct-scale-bar">Construct Scale Bar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scale-bar tolerance fixture</td></tr>
 </tbody>
 </table>
 
 ## Construct Scale Bar
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Creates a named scale bar between two required Point Names. Length and
 uncertainty default to `0.0`. Relative tolerances default to enabled; high and

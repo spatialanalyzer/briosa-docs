@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Scale Bars
-description: Next Briosa Python API for scale-bar construction.
+description: Unreleased Briosa Python API for scale-bar construction.
 toc_max_heading_level: 2
 ---
 

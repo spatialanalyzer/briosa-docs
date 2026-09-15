@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Spheres
-description: Next Briosa .NET APIs for sphere construction MP commands.
+description: Unreleased Briosa .NET APIs for sphere construction MP commands.
 toc_max_heading_level: 2
 ---
 

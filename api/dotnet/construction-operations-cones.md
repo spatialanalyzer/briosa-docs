@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Cones
-description: Next Briosa .NET APIs for selected cone-construction MP commands.
+description: Unreleased Briosa .NET APIs for selected cone-construction MP commands.
 toc_max_heading_level: 2
 ---
 

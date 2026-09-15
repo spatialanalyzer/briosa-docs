@@ -1,42 +1,27 @@
 ---
 title: Instrument Operations / Laser Projection
-description: Next Briosa Python APIs for Laser Projection MP commands.
+description: Availability of proposed commands absent from Briosa Server 0.5.1.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations / Laser Projection
 
-:::note[Next Python Contract]
+:::note[Not Available in Server 0.5.1]
 
-These coroutines are not released support until this documentation is
-versioned for a published package.
+These commands have documented proposals but no callable RPC in the released
+server and no matching public method in the current client implementations.
+Retained protobuf message types do not establish an operation.
 
 :::
 
-## project_objects
+## Project Objects
 
-[MP command](/mp-command-catalog/commands/instrument-operations-laser-projection#project-objects) · [gRPC contract](/api/grpc/instrument-operations-laser-projection#project-objects)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-laser-projection#project-objects)
+for the proposed command and its fixture requirements. No released signature
+is available.
 
-```python
-async def project_objects(
-    self,
-    instrument: CollectionInstrumentId,
-    objects_to_project: Iterable[CollectionObjectName],
-) -> None: ...
-```
+## Stop Projection
 
-SA may report partial success when only some objects are found.
-
-## stop_projection
-
-[MP command](/mp-command-catalog/commands/instrument-operations-laser-projection#stop-projection) · [gRPC contract](/api/grpc/instrument-operations-laser-projection#stop-projection)
-
-```python
-async def stop_projection(
-    self,
-    instrument: CollectionInstrumentId,
-) -> None: ...
-```
-
-The client does not require ownership of the active projection or retain
-projector workflow state. Neither call is automatically replayed.
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-laser-projection#stop-projection)
+for the proposed command and its fixture requirements. No released signature
+is available.

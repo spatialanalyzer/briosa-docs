@@ -1,15 +1,14 @@
 ---
 title: Cloud and Mesh Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported Cloud and Mesh Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported Cloud and Mesh Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Cloud and Mesh Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,12 @@ readonly input object; call controls remain a separate final value.
 
 ## Cloud Display Control
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: Portable contract review.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: Portable contract review.
+
 :::
 
 [Cloud Display Control](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#cloud-display-control)
@@ -56,8 +59,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Reset Cloud Bounding Box
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Reset Cloud Bounding Box](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#reset-cloud-bounding-box)
@@ -122,8 +129,12 @@ Returns all 10 MP outputs in the detached readonly `ResetCloudBoundingBoxResult`
 
 ## Get Cloud Point Count
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud Point Count](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-point-count)
@@ -168,8 +179,12 @@ Returns all 4 MP outputs in the detached readonly `GetCloudPointCountResult` val
 
 ## Set Cloud Default Clipping Plane
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: Licensed SA 2026.1.0529.7 probe.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: Licensed SA 2026.1.0529.7 probe.
+
 :::
 
 [Set Cloud Default Clipping Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
@@ -206,8 +221,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Raster Scan Edge Inspection
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#raster-scan-edge-inspection)
@@ -254,8 +273,12 @@ Returns the MP output `Summary Result` directly as `string`. `BriosaCallOptions`
 
 ## New Raster Scan Edge Inspection
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [New Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
@@ -310,8 +333,12 @@ Returns the MP output `Summary Result` directly as `string`. `BriosaCallOptions`
 
 ## Clear Cloud Point Deviations
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Clear Cloud Point Deviations](/mp-command-catalog/commands/cloud-and-mesh-operations#clear-cloud-point-deviations) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#clear-cloud-point-deviations)
@@ -346,8 +373,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Enable All Cloud Cross Sections
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable All Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
@@ -382,8 +413,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Enable/Disable Cloud Cross Sections
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable/Disable Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
@@ -422,8 +457,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Enable Single Cloud Cross Section
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable Single Cloud Cross Section](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-single-cloud-cross-section)
@@ -460,8 +499,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Get Number of Cross Sections in Cross Section Cloud
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Number of Cross Sections in Cross Section Cloud](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
@@ -496,8 +539,12 @@ Returns the MP output `Cross Section Count` directly as `number`. `BriosaCallOpt
 
 ## Filter Clouds to Plane
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-plane)
@@ -542,8 +589,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Group](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-group)
@@ -588,8 +639,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to Surface
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Surface](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-surface)
@@ -636,8 +691,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to BSplines
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to BSplines](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-bsplines)
@@ -682,8 +741,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to Line Segment
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Line Segment](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-line-segment)
@@ -730,8 +793,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to Vector Groups - Resolve points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Vector Groups - Resolve points](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
@@ -782,8 +849,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Filter Clouds to Vector Groups - Resolve Clouds
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Vector Groups - Resolve Clouds](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
@@ -828,8 +899,12 @@ Returns the MP output `Filtered Clouds` directly as `readonly CollectionObjectNa
 
 ## RGB Cloud Point Filter
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [RGB Cloud Point Filter](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#rgb-cloud-point-filter)
@@ -908,8 +983,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Get Cloud RGB Values
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud RGB Values](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values)
@@ -956,8 +1035,12 @@ Returns all 4 MP outputs in the detached readonly `GetCloudRGBValuesResult` valu
 
 ## Get Cloud RGB Values Near Point
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud RGB Values Near Point](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
@@ -1008,8 +1091,12 @@ Returns all 4 MP outputs in the detached readonly `GetCloudRGBValuesNearPointRes
 
 ## Subdivide Cloud by Point Spacing
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Subdivide Cloud by Point Spacing](/mp-command-catalog/commands/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
@@ -1052,8 +1139,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Delete Cloud Points by Radial Distance from Points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Delete Cloud Points by Radial Distance from Points](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
@@ -1094,8 +1185,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Delete Cloud Points by X Y Z Range
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — destructive fixture validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — destructive fixture validation required.
+
 :::
 
 [Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
@@ -1144,8 +1239,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Generate General Mesh
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Generate General Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#generate-general-mesh)
@@ -1192,8 +1291,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Consolidate Mesh
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Consolidate Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#consolidate-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#consolidate-mesh)
@@ -1228,8 +1331,12 @@ Resolves without a command value. `BriosaCallOptions` remains separate from MP i
 
 ## Mesh Volume
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Mesh Volume](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-volume)
@@ -1272,8 +1379,12 @@ Returns all 2 MP outputs in the detached readonly `MeshVolumeResult` value. `Bri
 
 ## Mesh Fill Holes
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Mesh Fill Holes](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-fill-holes) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-fill-holes)

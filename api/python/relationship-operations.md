@@ -1,22 +1,21 @@
 ---
 title: Relationship Operations
-description: Next Briosa Python APIs for supported Relationship Operations MP commands.
+description: Unreleased Briosa Python APIs for supported Relationship Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Relationship Operations
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
 Exact MP command words map mechanically to `snake_case`. Defaulted inputs are
 keyword-only, and generated gRPC request or result objects never escape.
 
-## Wave B Root-Group Types
+## Relationship Types
 
 ```python
 class GeometryRelationshipPointEditMode(StrEnum):
@@ -65,8 +64,10 @@ class RelationshipWatchWindowTemplateOptions:
 
 ## Generate Geometry Relationship Summary
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
@@ -87,8 +88,10 @@ async def generate_geometry_relationship_summary(
 
 ## Edit Geometry Relationship Point List
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
@@ -112,8 +115,10 @@ the interaction stopped.
 
 ## Filter Geometry Relationship Outlier Cloud Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
@@ -139,8 +144,10 @@ the exact MP command.
 
 ## Relationship Watch Window Template
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
@@ -164,8 +171,10 @@ font, color, precision, display, and UDP default available to callers.
 
 ## Make Point to Point Relationship
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
@@ -187,8 +196,10 @@ defaults. Briosa adds no point or constraint preflight.
 
 ## Make Frame to Frame Relationship
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
@@ -211,8 +222,10 @@ work.
 
 ## Enable/Disable Relationships for Optimization
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
@@ -1155,8 +1168,10 @@ Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
@@ -1185,8 +1200,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Geom Relationship Reuse Ignored Input Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
@@ -1215,8 +1232,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Auto Vectors
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
@@ -1258,8 +1277,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Cardinal Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
@@ -1288,8 +1309,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Criteria
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
@@ -1344,8 +1367,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Measured Avg Point
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
@@ -1374,8 +1399,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Measured Geometry
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
@@ -1404,8 +1431,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Nominal Avg Point
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
@@ -1434,8 +1463,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Nominal Geometry
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
@@ -1464,8 +1495,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Point List
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
@@ -1503,8 +1536,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Projection Plane
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
@@ -1533,8 +1568,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Cut Status
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
@@ -1574,8 +1611,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Properties
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
@@ -1627,8 +1666,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Weights
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
@@ -1676,8 +1717,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Fit Constraints (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
@@ -1719,8 +1762,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Outlier Rejection (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
@@ -1760,8 +1805,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Projection Options
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-projection-options)
@@ -1803,8 +1850,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Reporting Frame
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
@@ -1833,8 +1882,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Sub Sampling Options
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
@@ -1874,8 +1925,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Tolerance (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
@@ -1917,8 +1970,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Tolerance (Vector Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
@@ -1984,8 +2039,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Type
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-type)
@@ -2014,8 +2071,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Weighting
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-weighting)
@@ -2044,8 +2103,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Pipe Fitting Relationship
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
@@ -2078,8 +2139,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Pipe Relationship Cut
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
@@ -2121,8 +2184,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Pipe Relationship Force Cut to Frame
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
@@ -2160,8 +2225,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Auto Measure Nominal Feature
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
@@ -2197,8 +2264,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
@@ -2236,8 +2305,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Cardinal Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
@@ -2273,8 +2344,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Criteria
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
@@ -2314,8 +2387,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Measured Geometry
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
@@ -2346,8 +2421,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Nominal Avg Point
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
@@ -2381,8 +2458,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Nominal Geometry
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
@@ -2416,8 +2495,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Projection Plane
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
@@ -2451,8 +2532,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Object to Object Direction Relationship Fit Constraints
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
@@ -2486,8 +2569,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Pipe Relationship Segment Properties
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
@@ -2533,8 +2618,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Pipe Relationship Weights
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
@@ -2580,8 +2667,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Auto Vectors Fit (AVF)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
@@ -2617,8 +2706,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Auto Vectors Group Default Prefix
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
@@ -2652,8 +2743,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Desired Meas Count
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
@@ -2685,8 +2778,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Dormant Status
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
@@ -2718,8 +2813,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Fit Constraints (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
@@ -2751,8 +2848,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
@@ -2783,8 +2882,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Outlier Rejection (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
@@ -2813,8 +2914,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Position Fit Constraints (Vector Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
@@ -2845,8 +2948,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Projection Options
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-projection-options)
@@ -2878,8 +2983,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Reporting Frame
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
@@ -2910,8 +3017,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
@@ -2943,8 +3052,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Sub Sampling Options
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
@@ -2982,8 +3093,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Tolerance (Scalar Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
@@ -3015,8 +3128,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Tolerance (Vector Type)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
@@ -3047,8 +3162,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Voxel Cloud Display
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
@@ -3092,8 +3209,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Weighting
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weighting)
@@ -3125,8 +3244,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Weights Normalized
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)

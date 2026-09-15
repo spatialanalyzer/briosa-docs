@@ -1,15 +1,14 @@
 ---
 title: File Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported File Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported File Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # File Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Backup Now
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Backup Now](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC contract](/api/grpc/file-operations#backup-now)
@@ -48,8 +49,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Copy General File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Copy General File](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC contract](/api/grpc/file-operations#copy-general-file)
@@ -87,8 +90,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete General File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete General File](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC contract](/api/grpc/file-operations#delete-general-file)
@@ -122,8 +127,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Direct CAD Access
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Direct CAD Access](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC contract](/api/grpc/file-operations#direct-cad-access)
@@ -226,8 +233,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export ASCII Frame Set](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-frame-set)
@@ -273,8 +282,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Frames
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export ASCII Frames](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC contract](/api/grpc/file-operations#export-ascii-frames)
@@ -314,8 +325,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Point Clouds
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export ASCII Point Clouds](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-clouds)
@@ -361,8 +374,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Point Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export ASCII Point Set](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-set)
@@ -420,8 +435,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export ASCII Points](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC contract](/api/grpc/file-operations#export-ascii-points)
@@ -489,8 +506,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export DXF
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export DXF](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC contract](/api/grpc/file-operations#export-dxf)
@@ -530,8 +549,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Embedded File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Embedded File](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC contract](/api/grpc/file-operations#export-embedded-file)
@@ -571,8 +592,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Hidden Point Bar XML File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#export-hidden-point-bar-xml-file)
@@ -606,8 +629,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export IGES File  - Entire Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export IGES File  - Entire Model](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file----entire-model)
@@ -641,8 +666,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export IGES File - Partial Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export IGES File - Partial Model](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file---partial-model)
@@ -678,8 +705,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export PTX Point Clouds
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export PTX Point Clouds](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ptx-point-clouds)
@@ -719,8 +748,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export QDAS Characteristics
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC contract](/api/grpc/file-operations#export-qdas-characteristics)
@@ -788,8 +819,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export QDAS Data List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#export-qdas-data-list)
@@ -823,8 +856,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Scan Stripe Mesh to STL File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Scan Stripe Mesh to STL File](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC contract](/api/grpc/file-operations#export-scan-stripe-mesh-to-stl-file)
@@ -860,8 +895,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export STEP File - Entire Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export STEP File - Entire Model](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---entire-model)
@@ -895,8 +932,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export STEP File - Partial Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export STEP File - Partial Model](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---partial-model)
@@ -932,8 +971,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export VDA/FS File  - Entire Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export VDA/FS File  - Entire Model](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file----entire-model)
@@ -967,8 +1008,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export VDA/FS File - Partial Model
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export VDA/FS File - Partial Model](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file---partial-model)
@@ -1004,8 +1047,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Vector Container to ASCII File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Vector Container to ASCII File](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC contract](/api/grpc/file-operations#export-vector-container-to-ascii-file)
@@ -1049,8 +1094,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Find Files in Directory
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC contract](/api/grpc/file-operations#find-files-in-directory)
@@ -1088,8 +1135,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Find Sub-Directories in Directory
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC contract](/api/grpc/file-operations#find-sub-directories-in-directory)
@@ -1125,8 +1174,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Boolean From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Boolean From DataShare File](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-boolean-from-datashare-file)
@@ -1162,8 +1213,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Double From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Double From DataShare File](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-double-from-datashare-file)
@@ -1199,8 +1252,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Integer From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Integer From DataShare File](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-integer-from-datashare-file)
@@ -1236,8 +1291,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get QDAS Catalog Entries
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get QDAS Catalog Entries](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC contract](/api/grpc/file-operations#get-qdas-catalog-entries)
@@ -1271,8 +1328,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get String From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get String From DataShare File](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-string-from-datashare-file)
@@ -1308,8 +1367,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Transform From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Transform From DataShare File](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-transform-from-datashare-file)
@@ -1345,8 +1406,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector From DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Vector From DataShare File](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-vector-from-datashare-file)
@@ -1382,8 +1445,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Working Directory
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC contract](/api/grpc/file-operations#get-working-directory)
@@ -1412,8 +1477,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import ASCII: Predefined Formats
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import ASCII: Predefined Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-formats)
@@ -1461,8 +1528,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import ASCII: Predefined Frame Set Formats
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import ASCII: Predefined Frame Set Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-frame-set-formats)
@@ -1506,8 +1575,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import E57 File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import E57 File](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC contract](/api/grpc/file-operations#import-e57-file)
@@ -1553,8 +1624,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import File as Embedded File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import File as Embedded File](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC contract](/api/grpc/file-operations#import-file-as-embedded-file)
@@ -1590,8 +1663,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import File as Picture
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import File as Picture](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC contract](/api/grpc/file-operations#import-file-as-picture)
@@ -1627,8 +1702,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Hidden Point Bar XML File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#import-hidden-point-bar-xml-file)
@@ -1664,8 +1741,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import IGES File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import IGES File](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC contract](/api/grpc/file-operations#import-iges-file)
@@ -1699,8 +1778,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Leica GSI File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Leica GSI File](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC contract](/api/grpc/file-operations#import-leica-gsi-file)
@@ -1738,8 +1819,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Leica SDB File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Leica SDB File](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC contract](/api/grpc/file-operations#import-leica-sdb-file)
@@ -1777,8 +1860,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import MP File as Embedded MP
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import MP File as Embedded MP](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC contract](/api/grpc/file-operations#import-mp-file-as-embedded-mp)
@@ -1814,8 +1899,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Nominals from XML File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Nominals from XML File](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC contract](/api/grpc/file-operations#import-nominals-from-xml-file)
@@ -1849,8 +1936,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Polyworks File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Polyworks File](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC contract](/api/grpc/file-operations#import-polyworks-file)
@@ -1886,8 +1975,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import QDAS Catalog File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import QDAS Catalog File](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC contract](/api/grpc/file-operations#import-qdas-catalog-file)
@@ -1921,8 +2012,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SA File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import SA File](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC contract](/api/grpc/file-operations#import-sa-file)
@@ -1960,8 +2053,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SA Windows Placement
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import SA Windows Placement](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC contract](/api/grpc/file-operations#import-sa-windows-placement)
@@ -1995,8 +2090,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SAT File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import SAT File](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC contract](/api/grpc/file-operations#import-sat-file)
@@ -2030,8 +2127,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import STEP File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import STEP File](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC contract](/api/grpc/file-operations#import-step-file)
@@ -2069,8 +2168,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import STL File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import STL File](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC contract](/api/grpc/file-operations#import-stl-file)
@@ -2110,8 +2211,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VDA/FS File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import VDA/FS File](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC contract](/api/grpc/file-operations#import-vdafs-file)
@@ -2145,8 +2248,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VSTARS .xyz File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import VSTARS .xyz File](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC contract](/api/grpc/file-operations#import-vstars-xyz-file)
@@ -2180,8 +2285,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VSTARS Cameras
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import VSTARS Cameras](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC contract](/api/grpc/file-operations#import-vstars-cameras)
@@ -2215,8 +2322,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Load HTML Form
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Load HTML Form](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC contract](/api/grpc/file-operations#load-html-form)
@@ -2266,8 +2375,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Load HTML Form in Edge Browser
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Load HTML Form in Edge Browser](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC contract](/api/grpc/file-operations#load-html-form-in-edge-browser)
@@ -2311,8 +2422,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Embedded File Name List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC contract](/api/grpc/file-operations#make-embedded-file-name-list)
@@ -2348,8 +2461,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Merge Measurements into XML File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Merge Measurements into XML File](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC contract](/api/grpc/file-operations#merge-measurements-into-xml-file)
@@ -2385,8 +2500,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## New SA File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC contract](/api/grpc/file-operations#new-sa-file)
@@ -2415,8 +2532,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Open SA File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Open SA File](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC contract](/api/grpc/file-operations#open-sa-file)
@@ -2450,8 +2569,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Open Template File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Open Template File](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC contract](/api/grpc/file-operations#open-template-file)
@@ -2485,8 +2606,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Pop PolyBay Analysis Window
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Pop PolyBay Analysis Window](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC contract](/api/grpc/file-operations#pop-polybay-analysis-window)
@@ -2522,8 +2645,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Prepare QDAS Data List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#prepare-qdas-data-list)
@@ -2589,8 +2714,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename General File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Rename General File](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC contract](/api/grpc/file-operations#rename-general-file)
@@ -2628,8 +2755,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Save](/mp-command-catalog/commands/file-operations#save) · [gRPC contract](/api/grpc/file-operations#save)
@@ -2658,8 +2787,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save As Read-Only Template
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Save As Read-Only Template](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC contract](/api/grpc/file-operations#save-as-read-only-template)
@@ -2693,8 +2824,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save As...
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Save As...](/mp-command-catalog/commands/file-operations#save-as) · [gRPC contract](/api/grpc/file-operations#save-as)
@@ -2732,8 +2865,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Boolean In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Boolean In DataShare File](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-boolean-in-datashare-file)
@@ -2771,8 +2906,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Double In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Double In DataShare File](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-double-in-datashare-file)
@@ -2810,8 +2947,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Integer In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Integer In DataShare File](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-integer-in-datashare-file)
@@ -2849,8 +2988,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set String In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set String In DataShare File](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-string-in-datashare-file)
@@ -2888,8 +3029,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Transform In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Transform In DataShare File](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-transform-in-datashare-file)
@@ -2927,8 +3070,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector In DataShare File
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Vector In DataShare File](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-vector-in-datashare-file)
@@ -2966,8 +3111,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Terminate All Running MPs
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC contract](/api/grpc/file-operations#terminate-all-running-mps)
@@ -2996,8 +3143,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Use NRKXML Library
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Use NRKXML Library](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC contract](/api/grpc/file-operations#use-nrkxml-library)
@@ -3031,8 +3180,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Verify General File Exists
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Verify General File Exists](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-general-file-exists)
@@ -3066,8 +3217,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Verify MP File Exists
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-mp-file-exists)

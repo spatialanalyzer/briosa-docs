@@ -1,15 +1,14 @@
 ---
 title: Event Operations
-description: Next Briosa Python APIs for supported Event Operations MP commands.
+description: Unreleased Briosa Python APIs for supported Event Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Event Operations
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Delete Event
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/event-operations#delete-event)
@@ -48,8 +49,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Event Ref List
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/event-operations#export-event-ref-list)
@@ -85,8 +88,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get i-th Event From Event Ref List
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-i-th-event-from-event-ref-list)
@@ -118,8 +123,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Number of Events in Event Ref List
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-number-of-events-in-event-ref-list)
@@ -148,8 +155,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Rename Event
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/event-operations#rename-event)

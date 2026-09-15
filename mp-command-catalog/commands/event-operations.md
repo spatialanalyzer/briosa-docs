@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Event Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>6</strong></div>
-  <div><span>Current or Next</span><strong>5</strong></div>
+  <div><span>Current Server Operations</span><strong>5</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
@@ -23,22 +21,22 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Delete Event" data-group="Event Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Event" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-event">Delete Event</a></td>
   <td>Event Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export Event Ref List" data-group="Event Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export Event Ref List" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-event-ref-list">Export Event Ref List</a></td>
   <td>Event Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Event From Event Ref List" data-group="Event Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get i-th Event From Event Ref List" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-i-th-event-from-event-ref-list">Get i-th Event From Event Ref List</a></td>
   <td>Event Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get i-th Event From Event Ref List (Iterator)" data-group="Event Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -47,16 +45,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Number of Events in Event Ref List" data-group="Event Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Number of Events in Event Ref List" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-number-of-events-in-event-ref-list">Get Number of Events in Event Ref List</a></td>
   <td>Event Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Rename Event" data-group="Event Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Rename Event" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#rename-event">Rename Event</a></td>
   <td>Event Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 </tbody>
@@ -64,7 +62,7 @@ is callable in the current release.
 
 ## Delete Event
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -89,7 +87,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export Event Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -117,7 +115,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Event From Event Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -176,7 +174,7 @@ The exact SDK cannot supply `Step to Jump at End of List`, so Briosa cannot expo
 
 ## Get Number of Events in Event Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -202,7 +200,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Rename Event
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

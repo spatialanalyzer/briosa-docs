@@ -9,12 +9,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Construction Operations / BSpines Commands
 
 These entries cover the nine commands observed under **Construction Operations
-→ BSpines** in SA 2026.1.0529.7. A **Next** entry is a documentation-first
-contract, not a claim that the operation is callable in the current release.
+→ BSpines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>9</strong></div>
-  <div><span>Current or Next</span><strong>8</strong></div>
+  <div><span>Current Server Operations</span><strong>8</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
@@ -27,37 +26,37 @@ contract, not a claim that the operation is callable in the current release.
   <td><a href="#construct-b-spline-fit-options">Construct B-Spline Fit Options</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td>
 </tr>
-<tr data-command="Construct B-Spline From Points" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Points" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSpines" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
 </tbody>
 </table>
@@ -106,7 +105,7 @@ responsibility.
 
 ## Construct B-Spline From Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -118,7 +117,7 @@ responsibility.
 
 ### Briosa Disposition
 
-Selected for the Next surface with a strongly typed fit-options value and an
+Included in Briosa Server 0.5.1 with a strongly typed fit-options value and an
 ordered point-name list. At least three suitable points and licensed geometry
 validation are required before the implementation can be marked validated.
 
@@ -130,7 +129,7 @@ validation are required before the implementation can be marked validated.
 
 ## Construct B-Spline From Point Set
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -142,7 +141,7 @@ validation are required before the implementation can be marked validated.
 
 ### Briosa Disposition
 
-Selected for the Next surface. The point-set container must identify an SA
+Included in Briosa Server 0.5.1. The point-set container must identify an SA
 Point Set, and licensed geometry validation remains outstanding.
 
 ### API References
@@ -153,7 +152,7 @@ Point Set, and licensed geometry validation remains outstanding.
 
 ## Construct B-Spline From Several B-Splines
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -165,7 +164,7 @@ Point Set, and licensed geometry validation remains outstanding.
 
 ### Briosa Disposition
 
-Selected for the Next surface. Briosa preserves the supplied B-spline order
+Included in Briosa Server 0.5.1. Briosa preserves the supplied B-spline order
 and does not close the result unless the caller requests it.
 
 ### API References
@@ -176,7 +175,7 @@ and does not close the result unless the caller requests it.
 
 ## Construct B-Spline From Intersection of Plane and Surface
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -189,7 +188,7 @@ and does not close the result unless the caller requests it.
 
 ### Briosa Disposition
 
-Selected for the Next surface with the exact MP tolerance default. Licensed
+Included in Briosa Server 0.5.1 with the exact MP tolerance default. Licensed
 plane-and-surface fixtures are still required.
 
 ### API References
@@ -200,7 +199,7 @@ plane-and-surface fixtures are still required.
 
 ## Construct B-Spline From Intersection of Surfaces
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -213,7 +212,7 @@ plane-and-surface fixtures are still required.
 
 ### Briosa Disposition
 
-Selected for the Next surface. Exact SDK and MP documentation agree on the
+Included in Briosa Server 0.5.1. Exact SDK and MP documentation agree on the
 signature, although the installed help places its page under Ellipsoids rather
 than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 
@@ -225,7 +224,7 @@ than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 
 ## Construct B-Splines From Surfaces
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -237,7 +236,7 @@ than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 
 ### Briosa Disposition
 
-Selected for the Next surface. Briosa returns every created B-spline identity
+Included in Briosa Server 0.5.1. Briosa returns every created B-spline identity
 and omits the optional prefix unless the caller supplies one.
 
 ### API References
@@ -248,7 +247,7 @@ and omits the optional prefix unless the caller supplies one.
 
 ## Construct B-Splines From Lines
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -260,7 +259,7 @@ and omits the optional prefix unless the caller supplies one.
 
 ### Briosa Disposition
 
-Selected for the Next surface. The SA 2026.1 exact argument uses `B-Spline`
+Included in Briosa Server 0.5.1. The SA 2026.1 exact argument uses `B-Spline`
 with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ### API References
@@ -271,7 +270,7 @@ with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ## Construct B-Splines From Intersection of Plane and Mesh
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 ### MP Signature
 
@@ -287,7 +286,7 @@ with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ### Briosa Disposition
 
-Selected for the Next surface. The result may contain several B-splines, so
+Included in Briosa Server 0.5.1. The result may contain several B-splines, so
 the API returns the complete MP output list rather than only echoing the
 requested base name.
 

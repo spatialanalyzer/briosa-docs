@@ -1,15 +1,14 @@
 ---
 title: MP Subroutines
-description: Next Briosa JavaScript and TypeScript APIs for supported MP Subroutines MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported MP Subroutines MP commands.
 toc_max_heading_level: 2
 ---
 
 # MP Subroutines
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Run Subroutine
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) · [gRPC contract](/api/grpc/mp-subroutines#run-subroutine)

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Frames
-description: Next Briosa Python APIs for selected frame-construction MP commands.
+description: Unreleased Briosa Python APIs for selected frame-construction MP commands.
 toc_max_heading_level: 2
 ---
 

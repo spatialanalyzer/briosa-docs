@@ -1,15 +1,14 @@
 ---
 title: Variables
-description: Next Briosa Python APIs for supported Variables MP commands.
+description: Unreleased Briosa Python APIs for supported Variables MP commands.
 toc_max_heading_level: 2
 ---
 
 # Variables
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Add Double to Named Double List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Add Double to Named Double List Variable](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC contract](/api/grpc/variables#add-double-to-named-double-list-variable)
@@ -51,8 +52,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Clear Named Double List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Clear Named Double List Variable](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC contract](/api/grpc/variables#clear-named-double-list-variable)
@@ -82,8 +85,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Variable](/mp-command-catalog/commands/variables#delete-variable) · [gRPC contract](/api/grpc/variables#delete-variable)
@@ -113,8 +118,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Variables -- Wildcard Match
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Variables -- Wildcard Match](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC contract](/api/grpc/variables#delete-variables----wildcard-match)
@@ -144,8 +151,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Boolean Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Boolean Variable](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC contract](/api/grpc/variables#get-boolean-variable)
@@ -175,8 +184,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Collection Object Name Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Collection Object Name Variable](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-name-variable)
@@ -206,8 +217,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Collection Object Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Collection Object Ref List Variable](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-ref-list-variable)
@@ -237,8 +250,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Double Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Double Variable](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC contract](/api/grpc/variables#get-double-variable)
@@ -268,8 +283,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Integer Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Integer Variable](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC contract](/api/grpc/variables#get-integer-variable)
@@ -299,8 +316,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Named Double List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Named Double List Variable](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable)
@@ -330,8 +349,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Named Double List Variable Min/Max
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Named Double List Variable Min/Max](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable-minmax)
@@ -368,8 +389,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Point Name Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Name Ref List Variable](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-point-name-ref-list-variable)
@@ -399,8 +422,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Point Name Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Name Variable](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC contract](/api/grpc/variables#get-point-name-variable)
@@ -430,8 +455,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Ref List Variable](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-relationship-ref-list-variable)
@@ -461,8 +488,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Report Items Reference List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Report Items Reference List Variable](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#get-report-items-reference-list-variable)
@@ -492,8 +521,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get String Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get String Ref List Variable](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-string-ref-list-variable)
@@ -523,8 +554,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get String Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get String Variable](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC contract](/api/grpc/variables#get-string-variable)
@@ -554,8 +587,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Transform Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Transform Variable](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC contract](/api/grpc/variables#get-transform-variable)
@@ -585,8 +620,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Vector Name Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Vector Name Ref List Variable](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-vector-name-ref-list-variable)
@@ -616,8 +653,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Vector Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Vector Variable](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC contract](/api/grpc/variables#get-vector-variable)
@@ -647,8 +686,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Boolean Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Boolean Variable](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC contract](/api/grpc/variables#set-boolean-variable)
@@ -680,8 +721,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Collection Object Name Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Collection Object Name Variable](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-name-variable)
@@ -713,8 +756,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Collection Object Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Collection Object Ref List Variable](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-ref-list-variable)
@@ -746,8 +791,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Double Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Double Variable](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC contract](/api/grpc/variables#set-double-variable)
@@ -779,8 +826,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Font Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Font Variable](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC contract](/api/grpc/variables#set-font-variable)
@@ -812,8 +861,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Integer Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Integer Variable](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC contract](/api/grpc/variables#set-integer-variable)
@@ -845,8 +896,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Named Double List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Named Double List Variable](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC contract](/api/grpc/variables#set-named-double-list-variable)
@@ -878,8 +931,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point Name Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point Name Ref List Variable](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-point-name-ref-list-variable)
@@ -911,8 +966,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point Name Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point Name Variable](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC contract](/api/grpc/variables#set-point-name-variable)
@@ -944,8 +1001,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Ref List Variable](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-relationship-ref-list-variable)
@@ -977,8 +1036,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Items Reference List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Report Items Reference List Variable](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#set-report-items-reference-list-variable)
@@ -1010,8 +1071,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set String Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set String Ref List Variable](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-string-ref-list-variable)
@@ -1043,8 +1106,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set String Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set String Variable](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC contract](/api/grpc/variables#set-string-variable)
@@ -1076,8 +1141,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Transform Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Transform Variable](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC contract](/api/grpc/variables#set-transform-variable)
@@ -1109,8 +1176,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector Name Ref List Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Vector Name Ref List Variable](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-vector-name-ref-list-variable)
@@ -1142,8 +1211,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector Variable
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Vector Variable](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC contract](/api/grpc/variables#set-vector-variable)

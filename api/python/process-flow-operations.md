@@ -1,15 +1,14 @@
 ---
 title: Process Flow Operations
-description: Next Briosa Python APIs for supported Process Flow Operations MP commands.
+description: Unreleased Briosa Python APIs for supported Process Flow Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Process Flow Operations
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Ask for Double
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for Double](/mp-command-catalog/commands/process-flow-operations#ask-for-double) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-double)
@@ -59,8 +60,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for Integer
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for Integer](/mp-command-catalog/commands/process-flow-operations#ask-for-integer) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-integer)
@@ -100,8 +103,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for Point Name
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for Point Name](/mp-command-catalog/commands/process-flow-operations#ask-for-point-name) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-point-name)
@@ -135,8 +140,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for String
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for String](/mp-command-catalog/commands/process-flow-operations#ask-for-string) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string)
@@ -172,8 +179,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for String (Pull-Down Version)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for String (Pull-Down Version)](/mp-command-catalog/commands/process-flow-operations#ask-for-string-pull-down-version) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string-pull-down-version)
@@ -214,8 +223,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for User Decision from Image
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for User Decision from Image](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-image)
@@ -253,8 +264,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for User Decision from Strings
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Ask for User Decision from Strings](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-strings)
@@ -292,8 +305,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Object Existence Test (Check Only)
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Object Existence Test (Check Only)](/mp-command-catalog/commands/process-flow-operations#object-existence-test-check-only) · [gRPC contract](/api/grpc/process-flow-operations#object-existence-test-check-only)

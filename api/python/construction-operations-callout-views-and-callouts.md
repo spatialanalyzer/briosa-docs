@@ -1,13 +1,15 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Next Briosa Python APIs for selected callout-view MP commands.
+description: Unreleased Briosa Python APIs for selected callout-view MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / Callout Views and Callouts
 
-:::note[Next Python Contract]
-These coroutines are not released support until implemented and versioned.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 ## Shared Callout Values

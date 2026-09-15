@@ -13,7 +13,7 @@ These entries cover the two commands observed under **Construction Operations
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>2</strong></div>
-  <div><span>Current or Next</span><strong>2</strong></div>
+  <div><span>Current Server Operations</span><strong>2</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,21 +22,21 @@ These entries cover the two commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Sphere" data-group="Construction Operations / Spheres" data-status="next" data-validation="at-risk-sphere-fixture"><td><a href="#construct-sphere">Construct Sphere</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - sphere fixture</td></tr>
-<tr data-command="Construct Spheres From Surface Faces - Runtime Select" data-group="Construction Operations / Spheres" data-status="next" data-validation="at-risk-interactive-cad-face-fixture"><td><a href="#construct-spheres-from-surface-faces---runtime-select">Construct Spheres From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive CAD-face fixture</td></tr>
+<tr data-command="Construct Sphere" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-sphere-fixture"><td><a href="#construct-sphere">Construct Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sphere fixture</td></tr>
+<tr data-command="Construct Spheres From Surface Faces - Runtime Select" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-interactive-cad-face-fixture"><td><a href="#construct-spheres-from-surface-faces---runtime-select">Construct Spheres From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive CAD-face fixture</td></tr>
 </tbody>
 </table>
 
 ## Construct Sphere
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires a Sphere identity, a center Vector in working coordinates, and a
 radius. Briosa adds no radius safeguards and preserves the MP outcome.
 
 ## Construct Spheres From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Has no MP arguments and asks the operator to select CAD surface faces in
 SpatialAnalyzer. The exact MP step includes spaces around ` - ` even though the

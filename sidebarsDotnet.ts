@@ -41,20 +41,13 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Wave A MP Commands (Next)',
+      label: 'MP Commands',
       collapsed: true,
       items: [
         'analysis-operations', 'dimension-operations', 'event-operations',
         'file-operations', 'mp-subroutines', 'mp-task-overview',
         'process-flow-operations', 'relationship-operations', 'reporting-operations', 'scale-bar-operations',
         'utility-operations', 'variables', 'vector-operations', 'view-control',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Wave B MP Commands (Next)',
-      collapsed: true,
-      items: [
         'cloud-and-mesh-operations',
         {
           type: 'category',

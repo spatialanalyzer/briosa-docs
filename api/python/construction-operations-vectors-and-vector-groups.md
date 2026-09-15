@@ -1,15 +1,14 @@
 ---
 title: Construction Operations / Vectors and Vector Groups
-description: Next Briosa Python APIs for selected vector and Vector Group construction MP commands.
+description: Unreleased Briosa Python APIs for selected vector and Vector Group construction MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / Vectors and Vector Groups
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

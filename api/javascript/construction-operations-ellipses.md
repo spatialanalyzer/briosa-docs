@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Ellipses
-description: Next Briosa JavaScript and TypeScript API for the selected ellipse-construction MP command.
+description: Unreleased Briosa JavaScript and TypeScript API for the selected ellipse-construction MP command.
 toc_max_heading_level: 2
 ---
 

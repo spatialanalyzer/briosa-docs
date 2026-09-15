@@ -1,16 +1,14 @@
 ---
 title: Utility Operations
-description: Next Briosa .NET APIs for supported Utility Operations MP commands.
+description: Unreleased Briosa .NET APIs for supported Utility Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Utility Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not generated-request wrappers and are not released support until the version
-selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +17,10 @@ and expose one final optional `CancellationToken`.
 
 ## Close All Watch Windows
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Close All Watch Windows](/mp-command-catalog/commands/utility-operations#close-all-watch-windows) · [gRPC contract](/api/grpc/utility-operations#close-all-watch-windows)
@@ -47,8 +47,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete Folder
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Folder](/mp-command-catalog/commands/utility-operations#delete-folder) · [gRPC contract](/api/grpc/utility-operations#delete-folder)
@@ -76,8 +78,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete Items
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Items](/mp-command-catalog/commands/utility-operations#delete-items) · [gRPC contract](/api/grpc/utility-operations#delete-items)
@@ -105,8 +109,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete Objects
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Objects](/mp-command-catalog/commands/utility-operations#delete-objects) · [gRPC contract](/api/grpc/utility-operations#delete-objects)
@@ -134,8 +140,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Active Language
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Active Language](/mp-command-catalog/commands/utility-operations#get-active-language) · [gRPC contract](/api/grpc/utility-operations#get-active-language)
@@ -170,8 +178,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Active Units
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Active Units](/mp-command-catalog/commands/utility-operations#get-active-units) · [gRPC contract](/api/grpc/utility-operations#get-active-units)
@@ -209,8 +219,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Angular Representation
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Angular Representation](/mp-command-catalog/commands/utility-operations#get-angular-representation) · [gRPC contract](/api/grpc/utility-operations#get-angular-representation)
@@ -237,8 +249,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Collection Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Collection Notes](/mp-command-catalog/commands/utility-operations#get-collection-notes) · [gRPC contract](/api/grpc/utility-operations#get-collection-notes)
@@ -266,8 +280,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Folder Collections
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Folder Collections](/mp-command-catalog/commands/utility-operations#get-folder-collections) · [gRPC contract](/api/grpc/utility-operations#get-folder-collections)
@@ -295,8 +311,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Folder Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Folder Notes](/mp-command-catalog/commands/utility-operations#get-folder-notes) · [gRPC contract](/api/grpc/utility-operations#get-folder-notes)
@@ -324,8 +342,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Folders by Wildcard
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Folders by Wildcard](/mp-command-catalog/commands/utility-operations#get-folders-by-wildcard) · [gRPC contract](/api/grpc/utility-operations#get-folders-by-wildcard)
@@ -355,8 +375,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Object Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Object Notes](/mp-command-catalog/commands/utility-operations#get-object-notes) · [gRPC contract](/api/grpc/utility-operations#get-object-notes)
@@ -384,8 +406,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get OPC DA Tag Value Double
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-double)
@@ -413,8 +437,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get OPC DA Tag Value Integer
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-integer)
@@ -442,8 +468,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get OPC DA Tag Value String
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-string)
@@ -471,8 +499,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Notes](/mp-command-catalog/commands/utility-operations#get-point-notes) · [gRPC contract](/api/grpc/utility-operations#get-point-notes)
@@ -500,8 +530,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Screen Resolution
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Screen Resolution](/mp-command-catalog/commands/utility-operations#get-screen-resolution) · [gRPC contract](/api/grpc/utility-operations#get-screen-resolution)
@@ -549,8 +581,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Working Frame Properties
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Working Frame Properties](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) · [gRPC contract](/api/grpc/utility-operations#get-working-frame-properties)
@@ -588,8 +622,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Increment Point Name
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Increment Point Name](/mp-command-catalog/commands/utility-operations#increment-point-name) · [gRPC contract](/api/grpc/utility-operations#increment-point-name)
@@ -619,8 +655,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Lock Imported Items
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Lock Imported Items](/mp-command-catalog/commands/utility-operations#lock-imported-items) · [gRPC contract](/api/grpc/utility-operations#lock-imported-items)
@@ -648,8 +686,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Lock/Unlock Selected Items
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Lock/Unlock Selected Items](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items) · [gRPC contract](/api/grpc/utility-operations#lockunlock-selected-items)
@@ -681,8 +721,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Lock/Unlock Trapping Control
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Lock/Unlock Trapping Control](/mp-command-catalog/commands/utility-operations#lockunlock-trapping-control) · [gRPC contract](/api/grpc/utility-operations#lockunlock-trapping-control)
@@ -716,8 +758,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Move Collection to Folder
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Move Collection to Folder](/mp-command-catalog/commands/utility-operations#move-collection-to-folder) · [gRPC contract](/api/grpc/utility-operations#move-collection-to-folder)
@@ -747,8 +791,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Move Folder to Folder
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Move Folder to Folder](/mp-command-catalog/commands/utility-operations#move-folder-to-folder) · [gRPC contract](/api/grpc/utility-operations#move-folder-to-folder)
@@ -778,8 +824,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Move Instruments Drag Graphically
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Move Instruments Drag Graphically](/mp-command-catalog/commands/utility-operations#move-instruments-drag-graphically) · [gRPC contract](/api/grpc/utility-operations#move-instruments-drag-graphically)
@@ -807,8 +855,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Move Objects Drag Graphically
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Move Objects Drag Graphically](/mp-command-catalog/commands/utility-operations#move-objects-drag-graphically) · [gRPC contract](/api/grpc/utility-operations#move-objects-drag-graphically)
@@ -836,8 +886,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Scale Objects
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Scale Objects](/mp-command-catalog/commands/utility-operations#scale-objects) · [gRPC contract](/api/grpc/utility-operations#scale-objects)
@@ -867,8 +919,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Active Custom Language
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Active Custom Language](/mp-command-catalog/commands/utility-operations#set-active-custom-language) · [gRPC contract](/api/grpc/utility-operations#set-active-custom-language)
@@ -898,8 +952,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Active Units
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Active Units](/mp-command-catalog/commands/utility-operations#set-active-units) · [gRPC contract](/api/grpc/utility-operations#set-active-units)
@@ -937,8 +993,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Angular Representation
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Angular Representation](/mp-command-catalog/commands/utility-operations#set-angular-representation) · [gRPC contract](/api/grpc/utility-operations#set-angular-representation)
@@ -966,8 +1024,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Auto Event Creation
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Auto Event Creation](/mp-command-catalog/commands/utility-operations#set-auto-event-creation) · [gRPC contract](/api/grpc/utility-operations#set-auto-event-creation)
@@ -995,8 +1055,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Automatic Backup State
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Automatic Backup State](/mp-command-catalog/commands/utility-operations#set-automatic-backup-state) · [gRPC contract](/api/grpc/utility-operations#set-automatic-backup-state)
@@ -1026,8 +1088,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Automatic Relationship Construction State
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Automatic Relationship Construction State](/mp-command-catalog/commands/utility-operations#set-automatic-relationship-construction-state) · [gRPC contract](/api/grpc/utility-operations#set-automatic-relationship-construction-state)
@@ -1055,8 +1119,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Collection Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Collection Notes](/mp-command-catalog/commands/utility-operations#set-collection-notes) · [gRPC contract](/api/grpc/utility-operations#set-collection-notes)
@@ -1088,8 +1154,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Decimal Digits for Display
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Decimal Digits for Display](/mp-command-catalog/commands/utility-operations#set-decimal-digits-for-display) · [gRPC contract](/api/grpc/utility-operations#set-decimal-digits-for-display)
@@ -1125,8 +1193,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Folder Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Folder Notes](/mp-command-catalog/commands/utility-operations#set-folder-notes) · [gRPC contract](/api/grpc/utility-operations#set-folder-notes)
@@ -1158,8 +1228,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Interaction Mode
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Interaction Mode](/mp-command-catalog/commands/utility-operations#set-interaction-mode) · [gRPC contract](/api/grpc/utility-operations#set-interaction-mode)
@@ -1191,8 +1263,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Logging State
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Logging State](/mp-command-catalog/commands/utility-operations#set-logging-state) · [gRPC contract](/api/grpc/utility-operations#set-logging-state)
@@ -1220,8 +1294,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Notification Cancel Override
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Notification Cancel Override](/mp-command-catalog/commands/utility-operations#set-notification-cancel-override) · [gRPC contract](/api/grpc/utility-operations#set-notification-cancel-override)
@@ -1249,8 +1325,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object Notes](/mp-command-catalog/commands/utility-operations#set-object-notes) · [gRPC contract](/api/grpc/utility-operations#set-object-notes)
@@ -1282,8 +1360,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set OPC DA Tag Value Double
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-double)
@@ -1313,8 +1393,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set OPC DA Tag Value Integer
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-integer)
@@ -1344,8 +1426,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set OPC DA Tag Value String
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-string)
@@ -1375,8 +1459,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Point Notes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point Notes](/mp-command-catalog/commands/utility-operations#set-point-notes) · [gRPC contract](/api/grpc/utility-operations#set-point-notes)
@@ -1408,8 +1494,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set User Interface Profile
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set User Interface Profile](/mp-command-catalog/commands/utility-operations#set-user-interface-profile) · [gRPC contract](/api/grpc/utility-operations#set-user-interface-profile)
@@ -1439,8 +1527,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set View Idle Update Frequency
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set View Idle Update Frequency](/mp-command-catalog/commands/utility-operations#set-view-idle-update-frequency) · [gRPC contract](/api/grpc/utility-operations#set-view-idle-update-frequency)
@@ -1468,8 +1558,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set WildCard Asterisk Mode
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set WildCard Asterisk Mode](/mp-command-catalog/commands/utility-operations#set-wildcard-asterisk-mode) · [gRPC contract](/api/grpc/utility-operations#set-wildcard-asterisk-mode)
@@ -1497,8 +1589,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Working Frame
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Working Frame](/mp-command-catalog/commands/utility-operations#set-working-frame) · [gRPC contract](/api/grpc/utility-operations#set-working-frame)
@@ -1526,8 +1620,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Status Dialog
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Status Dialog](/mp-command-catalog/commands/utility-operations#status-dialog) · [gRPC contract](/api/grpc/utility-operations#status-dialog)
@@ -1565,8 +1661,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Trim Log File
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Trim Log File](/mp-command-catalog/commands/utility-operations#trim-log-file) · [gRPC contract](/api/grpc/utility-operations#trim-log-file)
@@ -1594,8 +1692,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Write to Log
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Write to Log](/mp-command-catalog/commands/utility-operations#write-to-log) · [gRPC contract](/api/grpc/utility-operations#write-to-log)

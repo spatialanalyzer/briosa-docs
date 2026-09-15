@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Next Briosa Python APIs for selected point and group construction MP commands.
+description: Unreleased Briosa Python APIs for selected point and group construction MP commands.
 toc_max_heading_level: 2
 ---
 

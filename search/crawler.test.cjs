@@ -91,7 +91,8 @@ test('all reference instances and landing pages use content selectors and versio
         assert.ok($(options.recordProps.content).length, route);
         assert.equal($('nav, .catalog-command-table, .catalog-filter').length, 0);
         if (route.startsWith('api/') && !route.endsWith('index')) {
-          assert.match(options.recordProps.lvl0.defaultValue, /API · Version: Next$/);
+          assert.match(options.recordProps.lvl0.defaultValue,
+            route.startsWith('api/grpc/') ? /API · Version: 0\.5\.1$/ : /API · Version: Unreleased$/);
         }
         return [];
       }},

@@ -1,16 +1,14 @@
 ---
 title: View Control
-description: Next Briosa .NET APIs for supported View Control MP commands.
+description: Unreleased Briosa .NET APIs for supported View Control MP commands.
 toc_max_heading_level: 2
 ---
 
 # View Control
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not generated-request wrappers and are not released support until the version
-selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +17,10 @@ and expose one final optional `CancellationToken`.
 
 ## Auto-Scale
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Auto-Scale](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC contract](/api/grpc/view-control#auto-scale)
@@ -47,8 +47,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Center Graphics About Object(s)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Center Graphics About Object(s)](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC contract](/api/grpc/view-control#center-graphics-about-objects)
@@ -80,8 +82,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Center Graphics About Point
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Center Graphics About Point](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC contract](/api/grpc/view-control#center-graphics-about-point)
@@ -109,8 +113,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Define point of view
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Define point of view](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC contract](/api/grpc/view-control#define-point-of-view)
@@ -156,8 +162,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Active Clipping Planes
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Active Clipping Planes](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC contract](/api/grpc/view-control#get-active-clipping-planes)
@@ -184,8 +192,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get point of view parameters
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get point of view parameters](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC contract](/api/grpc/view-control#get-point-of-view-parameters)
@@ -239,8 +249,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Hide All Callout Views
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Hide All Callout Views](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC contract](/api/grpc/view-control#hide-all-callout-views)
@@ -267,8 +279,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Hide Objects
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Hide Objects](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC contract](/api/grpc/view-control#hide-objects)
@@ -296,8 +310,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Highlight Objects
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Highlight Objects](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC contract](/api/grpc/view-control#highlight-objects)
@@ -327,8 +343,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Highlight Point
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Highlight Point](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC contract](/api/grpc/view-control#highlight-point)
@@ -358,8 +376,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Highlight Relationships
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Highlight Relationships](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC contract](/api/grpc/view-control#highlight-relationships)
@@ -389,8 +409,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Load Ribbon Bar from XML File
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Load Ribbon Bar from XML File](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC contract](/api/grpc/view-control#load-ribbon-bar-from-xml-file)
@@ -418,8 +440,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Refresh Views
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Refresh Views](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC contract](/api/grpc/view-control#refresh-views)
@@ -446,8 +470,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Reset Ribbon Bar to Default
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Reset Ribbon Bar to Default](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC contract](/api/grpc/view-control#reset-ribbon-bar-to-default)
@@ -474,8 +500,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Save point of view
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Save point of view](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC contract](/api/grpc/view-control#save-point-of-view)
@@ -505,8 +533,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Background Color
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Background Color](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC contract](/api/grpc/view-control#set-background-color)
@@ -540,8 +570,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set MP's Window State
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set MP's Window State](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC contract](/api/grpc/view-control#set-mps-window-state)
@@ -569,8 +601,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object(s) Color
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object(s) Color](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC contract](/api/grpc/view-control#set-objects-color)
@@ -602,8 +636,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object(s) Translucency
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object(s) Translucency](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC contract](/api/grpc/view-control#set-objects-translucency)
@@ -635,8 +671,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set point of view
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set point of view](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC contract](/api/grpc/view-control#set-point-of-view)
@@ -664,8 +702,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Point of View from Frame
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point of View from Frame](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-frame)
@@ -693,8 +733,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Point of View from Instrument Updates
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point of View from Instrument Updates](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-instrument-updates)
@@ -744,8 +786,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Render Mode Type
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Render Mode Type](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC contract](/api/grpc/view-control#set-render-mode-type)
@@ -773,8 +817,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set SA's Window Pos
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set SA's Window Pos](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC contract](/api/grpc/view-control#set-sas-window-pos)
@@ -804,8 +850,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set SA's Window Size
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set SA's Window Size](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC contract](/api/grpc/view-control#set-sas-window-size)
@@ -835,8 +883,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set SA's Window State
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set SA's Window State](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC contract](/api/grpc/view-control#set-sas-window-state)
@@ -864,8 +914,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Target Labels Use Full Names
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Target Labels Use Full Names](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC contract](/api/grpc/view-control#set-target-labels-use-full-names)
@@ -893,8 +945,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Toolkit Visibility
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Toolkit Visibility](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC contract](/api/grpc/view-control#set-toolkit-visibility)
@@ -922,8 +976,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set View Clipping Plane
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set View Clipping Plane](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC contract](/api/grpc/view-control#set-view-clipping-plane)
@@ -953,8 +1009,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Working Color
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Working Color](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC contract](/api/grpc/view-control#set-working-color)
@@ -982,8 +1040,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Working Color Auto Increment
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Working Color Auto Increment](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC contract](/api/grpc/view-control#set-working-color-auto-increment)
@@ -1011,8 +1071,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show / Hide by Object Type
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show / Hide by Object Type](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC contract](/api/grpc/view-control#show--hide-by-object-type)
@@ -1046,8 +1108,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show / Hide Callout View
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show / Hide Callout View](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC contract](/api/grpc/view-control#show--hide-callout-view)
@@ -1077,8 +1141,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show / Hide Dimension
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show / Hide Dimension](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC contract](/api/grpc/view-control#show--hide-dimension)
@@ -1108,8 +1174,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show / Hide Points
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show / Hide Points](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC contract](/api/grpc/view-control#show--hide-points)
@@ -1139,8 +1207,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show by Object Type
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show by Object Type](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC contract](/api/grpc/view-control#show-by-object-type)
@@ -1170,8 +1240,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show Items in Tree
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show Items in Tree](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC contract](/api/grpc/view-control#show-items-in-tree)
@@ -1211,8 +1283,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show Labels
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show Labels](/mp-command-catalog/commands/view-control#show-labels) · [gRPC contract](/api/grpc/view-control#show-labels)
@@ -1242,8 +1316,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show Objects
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show Objects](/mp-command-catalog/commands/view-control#show-objects) · [gRPC contract](/api/grpc/view-control#show-objects)
@@ -1271,8 +1347,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Annotations for Datums
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Annotations for Datums](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-datums)
@@ -1306,8 +1384,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Annotations for Feature Checks
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Annotations for Feature Checks](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-feature-checks)
@@ -1341,8 +1421,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Inspection Bar
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Inspection Bar](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC contract](/api/grpc/view-control#showhide-inspection-bar)
@@ -1370,8 +1452,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Instrument Interface
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Instrument Interface](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC contract](/api/grpc/view-control#showhide-instrument-interface)
@@ -1403,8 +1487,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Instrument Probe Tip
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Instrument Probe Tip](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC contract](/api/grpc/view-control#showhide-instrument-probe-tip)
@@ -1432,8 +1518,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Instruments
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Instruments](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC contract](/api/grpc/view-control#showhide-instruments)
@@ -1463,8 +1551,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Relationship Report
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC contract](/api/grpc/view-control#showhide-relationship-report)
@@ -1494,8 +1584,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Show/Hide Relationship Watch
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC contract](/api/grpc/view-control#showhide-relationship-watch)

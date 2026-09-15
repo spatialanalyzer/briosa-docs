@@ -50,16 +50,14 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'grpc',
+        includeCurrentVersion: false,
+        lastVersion: '0.5.1',
         path: 'api/grpc',
         routeBasePath: 'api/grpc',
         sidebarPath: './sidebarsGrpc.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
-          current: {
-            label: 'Next',
-            banner: 'none',
-            badge: true,
-          },
+          '0.5.1': {label: '0.5.1', path: '', banner: 'none', badge: true},
         },
       } satisfies DocsPluginOptions,
     ],
@@ -73,7 +71,7 @@ const config: Config = {
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
           current: {
-            label: 'Next',
+            label: 'Unreleased',
             banner: 'none',
             badge: true,
           },
@@ -90,7 +88,7 @@ const config: Config = {
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
           current: {
-            label: 'Next',
+            label: 'Unreleased',
             banner: 'none',
             badge: true,
           },
@@ -107,7 +105,7 @@ const config: Config = {
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
           current: {
-            label: 'Next',
+            label: 'Unreleased',
             banner: 'none',
             badge: true,
           },

@@ -1,15 +1,14 @@
 ---
 title: Construction Operations
-description: Next Briosa .NET APIs for selected Construction Operations MP commands.
+description: Unreleased Briosa .NET APIs for selected Construction Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not released support until the version selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +18,12 @@ change SpatialAnalyzer state and are never replayed automatically.
 
 ## Mirror Object(s)
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: Licensed setter probe; fixture execution required.
+
 :::
 
 [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) · [gRPC contract](/api/grpc/construction-operations#mirror-objects)
@@ -51,8 +54,12 @@ Mirrors the selected objects across an orthogonal plane of `frameName`.
 
 ## Copy Object
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) · [gRPC contract](/api/grpc/construction-operations#copy-object)
@@ -79,8 +86,12 @@ Copies one collection object to a caller-supplied object name.
 
 ## Copy Objects to a collection
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) · [gRPC contract](/api/grpc/construction-operations#copy-objects-to-a-collection)
@@ -105,8 +116,12 @@ Copies selected objects into a destination collection.
 
 ## Move Objects to a collection
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) · [gRPC contract](/api/grpc/construction-operations#move-objects-to-a-collection)
@@ -131,8 +146,12 @@ Moves selected objects into a destination collection.
 
 ## Copy Objects - Point to Point Delta
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) · [gRPC contract](/api/grpc/construction-operations#copy-objects---point-to-point-delta)
@@ -161,8 +180,12 @@ Copies objects by the delta from `firstDeltaPoint` to `secondDeltaPoint`.
 
 ## Move Objects - Point to Point Delta
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) · [gRPC contract](/api/grpc/construction-operations#move-objects---point-to-point-delta)
@@ -189,8 +212,12 @@ Moves objects by the delta from `firstDeltaPoint` to `secondDeltaPoint`.
 
 ## Rename Point
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) · [gRPC contract](/api/grpc/construction-operations#rename-point)
@@ -217,8 +244,12 @@ Renames one point.
 
 ## Rename Points with Name Pattern
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) · [gRPC contract](/api/grpc/construction-operations#rename-points-with-name-pattern)
@@ -245,8 +276,12 @@ Renames points using a numbered `%d` name pattern.
 
 ## Rename Collection
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) · [gRPC contract](/api/grpc/construction-operations#rename-collection)
@@ -271,8 +306,12 @@ Renames one collection.
 
 ## Rename Object
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) · [gRPC contract](/api/grpc/construction-operations#rename-object)
@@ -299,8 +338,12 @@ Renames one collection object.
 
 ## Rename Item
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) · [gRPC contract](/api/grpc/construction-operations#rename-item)
@@ -327,8 +370,12 @@ Renames one collection item from SpatialAnalyzer's broader item domain.
 
 ## Delete Points
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — destructive fixture validation required.
+
 :::
 
 [Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) · [gRPC contract](/api/grpc/construction-operations#delete-points)
@@ -351,8 +398,12 @@ Deletes the selected points.
 
 ## Delete Points WildCard Selection
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — destructive fixture validation required.
+
 :::
 
 [Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) · [gRPC contract](/api/grpc/construction-operations#delete-points-wildcard-selection)
@@ -377,8 +428,12 @@ Deletes matching points within the supplied groups.
 
 ## Construct Objects From Surface Faces - Runtime Select
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — interactive fixture validation required.
+
 :::
 
 [Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) · [gRPC contract](/api/grpc/construction-operations#construct-objects-from-surface-faces---runtime-select)

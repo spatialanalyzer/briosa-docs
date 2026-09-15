@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Accumulator Math Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>8</strong></div>
-  <div><span>Current or Next</span><strong>0</strong></div>
+  <div><span>Current Server Operations</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>8</strong></div>
 </div>
 

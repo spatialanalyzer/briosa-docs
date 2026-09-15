@@ -1,15 +1,14 @@
 ---
 title: Dimension Operations
-description: Next Briosa Python APIs for supported Dimension Operations MP commands.
+description: Unreleased Briosa Python APIs for supported Dimension Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Dimension Operations
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Delete Dimension
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Dimension](/mp-command-catalog/commands/dimension-operations#delete-dimension) · [gRPC contract](/api/grpc/dimension-operations#delete-dimension)
@@ -48,8 +49,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Dimension Value
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Dimension Value](/mp-command-catalog/commands/dimension-operations#get-dimension-value) · [gRPC contract](/api/grpc/dimension-operations#get-dimension-value)
@@ -95,8 +98,10 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Dimension Tolerance
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Dimension Tolerance](/mp-command-catalog/commands/dimension-operations#set-dimension-tolerance) · [gRPC contract](/api/grpc/dimension-operations#set-dimension-tolerance)

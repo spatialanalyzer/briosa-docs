@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Ellipses
-description: Next Briosa Python API for the selected ellipse-construction MP command.
+description: Unreleased Briosa Python API for the selected ellipse-construction MP command.
 toc_max_heading_level: 2
 ---
 

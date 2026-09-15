@@ -43,7 +43,12 @@ Stops projection on the selected projector. This is an independent coordination
 and recovery command: Briosa does not require the same caller to have started
 the projection or retain projector workflow state.
 
-## Client APIs
+## Availability and References
+
+These commands are not exposed by Briosa Server 0.5.1 or the current public
+client APIs. The descriptions above describe proposed behavior, not a callable
+implementation. Their Next status does not establish a release date.
+
 
 - [gRPC](/api/grpc/instrument-operations-laser-projection)
 - [.NET](/api/dotnet/instrument-operations-laser-projection)

@@ -1,15 +1,14 @@
 ---
 title: Event Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported Event Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported Event Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Event Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Delete Event
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/event-operations#delete-event)
@@ -53,8 +54,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Event Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/event-operations#export-event-ref-list)
@@ -94,8 +97,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Event From Event Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-i-th-event-from-event-ref-list)
@@ -131,8 +136,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Events in Event Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-number-of-events-in-event-ref-list)
@@ -166,8 +173,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename Event
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/event-operations#rename-event)

@@ -1,12 +1,12 @@
 ---
 title: Construction Operations / Points and Groups
-description: Next Briosa .NET APIs for selected point and group construction MP commands.
+description: Unreleased Briosa .NET APIs for selected point and group construction MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / Points and Groups
 
-These APIs are the .NET projection of the approved Next gRPC contract. They
+These APIs are the .NET projection of the released gRPC contract. They
 preserve MP defaults, execute against live SpatialAnalyzer state, and are never
 automatically replayed.
 

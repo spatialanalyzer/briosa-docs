@@ -1,15 +1,14 @@
 ---
 title: Scale Bar Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported Scale Bar Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported Scale Bar Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Scale Bar Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Delete Scale Bar
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Scale Bar](/mp-command-catalog/commands/scale-bar-operations#delete-scale-bar) · [gRPC contract](/api/grpc/scale-bar-operations#delete-scale-bar)
@@ -53,8 +54,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Scale Bar Stats
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Scale Bar Stats](/mp-command-catalog/commands/scale-bar-operations#get-scale-bar-stats) · [gRPC contract](/api/grpc/scale-bar-operations#get-scale-bar-stats)
@@ -97,8 +100,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Scale Bar Check
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Scale Bar Check](/mp-command-catalog/commands/scale-bar-operations#scale-bar-check) · [gRPC contract](/api/grpc/scale-bar-operations#scale-bar-check)
@@ -142,8 +147,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Inward Positive Normal
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Inward Positive Normal](/mp-command-catalog/commands/scale-bar-operations#set-inward-positive-normal) · [gRPC contract](/api/grpc/scale-bar-operations#set-inward-positive-normal)

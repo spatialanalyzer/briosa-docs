@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Polygonized Surfaces
-description: Next Briosa Python API for polygonized-surface construction.
+description: Unreleased Briosa Python API for polygonized-surface construction.
 toc_max_heading_level: 2
 ---
 

@@ -1,15 +1,14 @@
 ---
 title: Construction Operations / BSpines
-description: Next Briosa Python APIs for selected Construction Operations / BSpines MP commands.
+description: Unreleased Briosa Python APIs for selected Construction Operations / BSpines MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / BSpines
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -48,8 +47,12 @@ SA-version-specific translation to the exact SDK representation internally.
 
 ## Construct B-Spline From Points
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Spline From Points](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-points) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-points)
@@ -82,8 +85,12 @@ defaults.
 
 ## Construct B-Spline From Point Set
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Spline From Point Set](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-point-set) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-point-set)
@@ -113,8 +120,12 @@ await briosa.construct_b_spline_from_point_set(
 
 ## Construct B-Spline From Several B-Splines
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Spline From Several B-Splines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-several-b-splines) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-several-b-splines)
@@ -144,8 +155,12 @@ await briosa.construct_b_spline_from_several_b_splines(
 
 ## Construct B-Spline From Intersection of Plane and Surface
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Spline From Intersection of Plane and Surface](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface)
@@ -178,8 +193,12 @@ await briosa.construct_b_spline_from_intersection_of_plane_and_surface(
 
 ## Construct B-Spline From Intersection of Surfaces
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Spline From Intersection of Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces)
@@ -215,8 +234,12 @@ creates more than one curve.
 
 ## Construct B-Splines From Surfaces
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Splines From Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-surfaces) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-surfaces)
@@ -242,8 +265,12 @@ b_splines = await briosa.construct_b_splines_from_surfaces(surface_list)
 
 ## Construct B-Splines From Lines
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Splines From Lines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-lines) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-lines)
@@ -269,8 +296,12 @@ b_splines = await briosa.construct_b_splines_from_lines(line_list)
 
 ## Construct B-Splines From Intersection of Plane and Mesh
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 Validation: At Risk — fixture validation required.
+
 :::
 
 [Construct B-Splines From Intersection of Plane and Mesh](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh)

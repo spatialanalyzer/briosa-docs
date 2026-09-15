@@ -1,16 +1,14 @@
 ---
 title: MP Subroutines
-description: Next Briosa .NET APIs for supported MP Subroutines MP commands.
+description: Unreleased Briosa .NET APIs for supported MP Subroutines MP commands.
 toc_max_heading_level: 2
 ---
 
 # MP Subroutines
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not generated-request wrappers and are not released support until the version
-selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +17,10 @@ and expose one final optional `CancellationToken`.
 
 ## Run Subroutine
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) · [gRPC contract](/api/grpc/mp-subroutines#run-subroutine)

@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Cloud and Mesh Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>28</strong></div>
-  <div><span>Current or Next</span><strong>28</strong></div>
+  <div><span>Current Server Operations</span><strong>28</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -23,172 +21,172 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Cloud Display Control" data-group="Cloud and Mesh Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Cloud Display Control" data-group="Cloud and Mesh Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#cloud-display-control">Cloud Display Control</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Reset Cloud Bounding Box" data-group="Cloud and Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Reset Cloud Bounding Box" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#reset-cloud-bounding-box">Reset Cloud Bounding Box</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud Point Count" data-group="Cloud and Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Cloud Point Count" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-point-count">Get Cloud Point Count</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Cloud Default Clipping Plane" data-group="Cloud and Mesh Operations" data-status="next" data-validation="licensed-sa-2026-1-0529-7-probe">
+<tr data-command="Set Cloud Default Clipping Plane" data-group="Cloud and Mesh Operations" data-status="current" data-validation="licensed-sa-2026-1-0529-7-probe">
   <td><a href="#set-cloud-default-clipping-plane">Set Cloud Default Clipping Plane</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed SA 2026.1.0529.7 probe</td>
 </tr>
-<tr data-command="Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#raster-scan-edge-inspection">Raster Scan Edge Inspection</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="New Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="New Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#new-raster-scan-edge-inspection">New Raster Scan Edge Inspection</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Clear Cloud Point Deviations" data-group="Cloud and Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Clear Cloud Point Deviations" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#clear-cloud-point-deviations">Clear Cloud Point Deviations</a></td>
   <td>Cloud and Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable All Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable All Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enable-all-cloud-cross-sections">Enable All Cloud Cross Sections</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable/Disable Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable/Disable Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enabledisable-cloud-cross-sections">Enable/Disable Cloud Cross Sections</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable Single Cloud Cross Section" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable Single Cloud Cross Section" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enable-single-cloud-cross-section">Enable Single Cloud Cross Section</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Number of Cross Sections in Cross Section Cloud" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Number of Cross Sections in Cross Section Cloud" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-number-of-cross-sections-in-cross-section-cloud">Get Number of Cross Sections in Cross Section Cloud</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Plane" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Plane" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-plane">Filter Clouds to Plane</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Group" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Group" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-group">Filter Clouds to Group</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Surface" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Surface" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-surface">Filter Clouds to Surface</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to BSplines" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to BSplines" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-bsplines">Filter Clouds to BSplines</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Line Segment" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Line Segment" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-line-segment">Filter Clouds to Line Segment</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Vector Groups - Resolve points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Vector Groups - Resolve points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-vector-groups---resolve-points">Filter Clouds to Vector Groups - Resolve points</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Vector Groups - Resolve Clouds" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Vector Groups - Resolve Clouds" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-vector-groups---resolve-clouds">Filter Clouds to Vector Groups - Resolve Clouds</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="RGB Cloud Point Filter" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="RGB Cloud Point Filter" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#rgb-cloud-point-filter">RGB Cloud Point Filter</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud RGB Values" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Cloud RGB Values" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-rgb-values">Get Cloud RGB Values</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud RGB Values Near Point" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Cloud RGB Values Near Point" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-rgb-values-near-point">Get Cloud RGB Values Near Point</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Subdivide Cloud by Point Spacing" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Subdivide Cloud by Point Spacing" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#subdivide-cloud-by-point-spacing">Subdivide Cloud by Point Spacing</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#delete-cloud-points-by-radial-distance-from-points">Delete Cloud Points by Radial Distance from Points</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="next" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#generate-general-mesh">Generate General Mesh</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Consolidate Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Consolidate Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#consolidate-mesh">Consolidate Mesh</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Mesh Volume" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Mesh Volume" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#mesh-volume">Mesh Volume</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Mesh Fill Holes" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Mesh Fill Holes" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#mesh-fill-holes">Mesh Fill Holes</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
 </tbody>
@@ -196,7 +194,7 @@ is callable in the current release.
 
 ## Cloud Display Control
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -216,14 +214,14 @@ is callable in the current release.
 
 Adjusts SpatialAnalyzer cloud drawing density and point size.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#cloud-display-control) · [.NET](/api/dotnet/cloud-and-mesh-operations#cloud-display-control) · [Python](/api/python/cloud-and-mesh-operations#cloud-display-control) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#cloud-display-control)
 
 ## Reset Cloud Bounding Box
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -256,14 +254,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Recomputes one cloud bounding box and returns its dimensions, axes, centroid, transforms, and sample count.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#reset-cloud-bounding-box) · [.NET](/api/dotnet/cloud-and-mesh-operations#reset-cloud-bounding-box) · [Python](/api/python/cloud-and-mesh-operations#reset-cloud-bounding-box) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#reset-cloud-bounding-box)
 
 ## Get Cloud Point Count
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -286,14 +284,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns the selected cloud point count and current clipping-related values.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#get-cloud-point-count) · [.NET](/api/dotnet/cloud-and-mesh-operations#get-cloud-point-count) · [Python](/api/python/cloud-and-mesh-operations#get-cloud-point-count) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#get-cloud-point-count)
 
 ## Set Cloud Default Clipping Plane
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -314,14 +312,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Controls the default clipping plane for newly measured clouds. The exact SDK cannot set the MP Clipping Options value, so enabling uses SpatialAnalyzer current default clipping components. Briosa defaults to disabled to avoid an interactive object selector; reference_object is required only when enabling.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [.NET](/api/dotnet/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [Python](/api/python/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
 
 ## Raster Scan Edge Inspection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -347,14 +345,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Runs the legacy raster-scan edge inspection workflow and returns the SA summary result.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#raster-scan-edge-inspection) · [.NET](/api/dotnet/cloud-and-mesh-operations#raster-scan-edge-inspection) · [Python](/api/python/cloud-and-mesh-operations#raster-scan-edge-inspection) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#raster-scan-edge-inspection)
 
 ## New Raster Scan Edge Inspection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -384,14 +382,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Runs the newer raster-scan edge inspection workflow and optionally writes intermediate calculations.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [.NET](/api/dotnet/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [Python](/api/python/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
 
 ## Clear Cloud Point Deviations
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -410,14 +408,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Clears point-deviation data stored on the selected cloud.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#clear-cloud-point-deviations) · [.NET](/api/dotnet/cloud-and-mesh-operations#clear-cloud-point-deviations) · [Python](/api/python/cloud-and-mesh-operations#clear-cloud-point-deviations) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#clear-cloud-point-deviations)
 
 ## Enable All Cloud Cross Sections
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -436,14 +434,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Enables every cross section in one cross-section cloud.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [.NET](/api/dotnet/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [Python](/api/python/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
 
 ## Enable/Disable Cloud Cross Sections
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -464,14 +462,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Enables or disables one identified cross section.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [.NET](/api/dotnet/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [Python](/api/python/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
 
 ## Enable Single Cloud Cross Section
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -491,14 +489,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Enables one cross section and leaves it as the single enabled section.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [.NET](/api/dotnet/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [Python](/api/python/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#enable-single-cloud-cross-section)
 
 ## Get Number of Cross Sections in Cross Section Cloud
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -518,14 +516,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns the number of cross sections in the selected cross-section cloud.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [.NET](/api/dotnet/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [Python](/api/python/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
 
 ## Filter Clouds to Plane
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -549,14 +547,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Filters cloud points by proximity to a plane. Briosa supplies non-interactive Both and Points defaults where the MP Editor export is blank.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-plane) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-plane) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-plane) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-plane)
 
 ## Filter Clouds to Group
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -580,14 +578,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Filters clouds by proximity to a point group.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-group) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-group) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-group) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-group)
 
 ## Filter Clouds to Surface
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -612,14 +610,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Filters clouds to a surface using low and high proximity limits.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-surface) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-surface) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-surface) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-surface)
 
 ## Filter Clouds to BSplines
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -643,14 +641,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Filters clouds by proximity to one or more BSplines.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-bsplines)
 
 ## Filter Clouds to Line Segment
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -675,14 +673,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Filters clouds by proximity to a line segment defined by two SA points.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-line-segment)
 
 ## Filter Clouds to Vector Groups - Resolve points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -709,14 +707,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Resolves cloud points against vector groups. The exact 2026.1 target includes the Include Proximity Points input absent from ObjectiveSA 2024.1.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
 
 ## Filter Clouds to Vector Groups - Resolve Clouds
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -741,14 +739,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Creates filtered clouds from vector-group cutoffs and returns the resulting cloud references.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [.NET](/api/dotnet/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [Python](/api/python/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
 
 ## RGB Cloud Point Filter
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -789,14 +787,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Applies the selected RGB, intensity, and grayscale thresholds to one or more clouds.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#rgb-cloud-point-filter) · [.NET](/api/dotnet/cloud-and-mesh-operations#rgb-cloud-point-filter) · [Python](/api/python/cloud-and-mesh-operations#rgb-cloud-point-filter) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#rgb-cloud-point-filter)
 
 ## Get Cloud RGB Values
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -820,14 +818,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns channel statistics for a cloud.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values) · [.NET](/api/dotnet/cloud-and-mesh-operations#get-cloud-rgb-values) · [Python](/api/python/cloud-and-mesh-operations#get-cloud-rgb-values) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#get-cloud-rgb-values)
 
 ## Get Cloud RGB Values Near Point
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -853,14 +851,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns channel statistics for cloud points within a diameter around an SA point.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [.NET](/api/dotnet/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [Python](/api/python/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
 
 ## Subdivide Cloud by Point Spacing
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -883,14 +881,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Subdivides an enhanced cloud by point spacing into a new enhanced cloud.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [.NET](/api/dotnet/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [Python](/api/python/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
 
 ## Delete Cloud Points by Radial Distance from Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -912,14 +910,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Deletes cloud points inside or outside the radial neighborhoods of selected SA points.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [.NET](/api/dotnet/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [Python](/api/python/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
 
 ## Delete Cloud Points by X Y Z Range
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -945,14 +943,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Deletes cloud points inside or outside supplied axis bounds. A licensed 2026.1.0529.7 probe confirmed that each exported NOT_SUPPORTED optional bound is accepted through SetDoubleArg; omitting a bound preserves MP Ignore. Destructive fixture semantics still require validation.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [Python](/api/python/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
 ## Generate General Mesh
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -977,14 +975,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Generates a scan-stripe mesh from one or more clouds and can optionally write a JSON file.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#generate-general-mesh) · [.NET](/api/dotnet/cloud-and-mesh-operations#generate-general-mesh) · [Python](/api/python/cloud-and-mesh-operations#generate-general-mesh) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#generate-general-mesh)
 
 ## Consolidate Mesh
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1003,14 +1001,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Consolidates the selected scan-stripe mesh.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#consolidate-mesh) · [.NET](/api/dotnet/cloud-and-mesh-operations#consolidate-mesh) · [Python](/api/python/cloud-and-mesh-operations#consolidate-mesh) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#consolidate-mesh)
 
 ## Mesh Volume
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1032,14 +1030,14 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Returns the mesh volume above and below the selected plane.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#mesh-volume) · [.NET](/api/dotnet/cloud-and-mesh-operations#mesh-volume) · [Python](/api/python/cloud-and-mesh-operations#mesh-volume) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#mesh-volume)
 
 ## Mesh Fill Holes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1062,7 +1060,7 @@ mesh behavior through a reviewed exact-target SDK command.
 
 Fills holes in the selected mesh. Briosa keeps Fill All Holes true by default so the command does not open an interactive hole-selection dialog.
 
-Selected for the next release because it exposes SpatialAnalyzer-owned cloud or
+Included in Briosa Server 0.5.1 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
 
 **API References:** [gRPC](/api/grpc/cloud-and-mesh-operations#mesh-fill-holes) · [.NET](/api/dotnet/cloud-and-mesh-operations#mesh-fill-holes) · [Python](/api/python/cloud-and-mesh-operations#mesh-fill-holes) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations#mesh-fill-holes)

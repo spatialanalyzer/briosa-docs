@@ -13,7 +13,7 @@ These entries cover the two commands observed under **Construction Operations
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>2</strong></div>
-  <div><span>Current or Next</span><strong>2</strong></div>
+  <div><span>Current Server Operations</span><strong>2</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,18 +22,18 @@ These entries cover the two commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Cone" data-group="Construction Operations / Cones" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-cone">Construct Cone</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Construct Cone" data-group="Construction Operations / Cones" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-cone">Construct Cone</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Cones From Surface Faces - Runtime Select" data-group="Construction Operations / Cones" data-status="next" data-validation="at-risk-interactive-fixture-validation-required">
-  <td><a href="#construct-cones-from-surface-faces---runtime-select">Construct Cones From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive fixture validation required</td>
+<tr data-command="Construct Cones From Surface Faces - Runtime Select" data-group="Construction Operations / Cones" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
+  <td><a href="#construct-cones-from-surface-faces---runtime-select">Construct Cones From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
 </tr>
 </tbody>
 </table>
 
 ## Construct Cone
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ values, so SpatialAnalyzer determines the outcome just as it does for an MP.
 
 ## Construct Cones From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 This command has no MP arguments. The operator selects surface faces in
 SpatialAnalyzer while the request is active. Cancellation or a client deadline

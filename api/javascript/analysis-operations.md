@@ -1,15 +1,14 @@
 ---
 title: Analysis Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported Analysis Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported Analysis Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Analysis Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Angle Between Line and Plane
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Angle Between Line and Plane](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC contract](/api/grpc/analysis-operations#angle-between-line-and-plane)
@@ -59,8 +60,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Angle Between Two Lines
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Angle Between Two Lines](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-lines)
@@ -100,8 +103,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Angle Between Two Planes' normals
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Angle Between Two Planes' normals](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-planes-normals)
@@ -141,8 +146,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Best Fit Transformation - Group to Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Best Fit Transformation - Group to Group](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC contract](/api/grpc/analysis-operations#best-fit-transformation---group-to-group)
@@ -221,8 +228,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Compute Group to Group Orientation (Rx,Ry,Rz)](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC contract](/api/grpc/analysis-operations#compute-group-to-group-orientation-rxryrz)
@@ -267,8 +276,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create Point Uncertainty Cloud Point Sets
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Create Point Uncertainty Cloud Point Sets](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-cloud-point-sets)
@@ -319,8 +330,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create Point Uncertainty Fields
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Create Point Uncertainty Fields](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-fields)
@@ -356,8 +369,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Point Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Fit Geometry to Point Group](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group)
@@ -405,8 +420,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Point Group Projected to Plane
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Fit Geometry to Point Group Projected to Plane](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
@@ -456,8 +473,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Fit Geometry to Points](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-points)
@@ -505,8 +524,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get B-Spline Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC contract](/api/grpc/analysis-operations#get-b-spline-properties)
@@ -555,8 +576,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Circle Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Circle Properties](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#get-circle-properties)
@@ -601,8 +624,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Cone Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Cone Properties](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cone-properties)
@@ -653,8 +678,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Coordinate for i-th Point in Point Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Coordinate for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
@@ -697,8 +724,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Cylinder Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Cylinder Properties](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cylinder-properties)
@@ -757,8 +786,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Ellipse Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#get-ellipse-properties)
@@ -803,8 +834,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Euler Parameters for Frame
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-frame)
@@ -855,8 +888,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Euler Parameters for i-th Frame in Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
@@ -909,8 +944,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Collection Name
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-collection-name)
@@ -944,8 +981,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Point From Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Point From Group](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-point-from-group)
@@ -990,8 +1029,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Line Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Line Properties](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC contract](/api/grpc/analysis-operations#get-line-properties)
@@ -1042,8 +1083,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Auxiliary Data
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-auxiliary-data)
@@ -1086,8 +1129,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Info Data
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-info-data)
@@ -1121,8 +1166,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Weather Data
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-weather-data)
@@ -1165,8 +1212,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Collections
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-collections)
@@ -1195,8 +1244,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Frames In Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-frames-in-frame-set)
@@ -1230,8 +1281,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Points in Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Points in Group](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-group)
@@ -1265,8 +1318,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Points In Point Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Points In Point Set](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-point-set)
@@ -1300,8 +1355,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Object Reporting Frame
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#get-object-reporting-frame)
@@ -1335,8 +1392,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Plane Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Plane Properties](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC contract](/api/grpc/analysis-operations#get-plane-properties)
@@ -1379,8 +1438,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Coordinate](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate)
@@ -1425,8 +1486,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate (Cylindrical)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Coordinate (Cylindrical)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-cylindrical)
@@ -1469,8 +1532,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate (Polar)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Coordinate (Polar)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-polar)
@@ -1513,8 +1578,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Properties](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC contract](/api/grpc/analysis-operations#get-point-properties)
@@ -1567,8 +1634,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point To Line Distance
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point To Line Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-line-distance)
@@ -1617,8 +1686,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point To Point Distance
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point To Point Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-point-distance)
@@ -1667,8 +1738,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Tolerance
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Point Tolerance](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC contract](/api/grpc/analysis-operations#get-point-tolerance)
@@ -1739,8 +1812,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Slot Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Slot Properties](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC contract](/api/grpc/analysis-operations#get-slot-properties)
@@ -1793,8 +1868,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Sphere Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Sphere Properties](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC contract](/api/grpc/analysis-operations#get-sphere-properties)
@@ -1837,8 +1914,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Surface Physical Stats
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Surface Physical Stats](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC contract](/api/grpc/analysis-operations#get-surface-physical-stats)
@@ -1879,8 +1958,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Timestamp for i-th Frame in Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Timestamp for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
@@ -1916,8 +1997,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Timestamp for i-th Point in Point Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Timestamp for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
@@ -1953,8 +2036,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Torus Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Torus Properties](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC contract](/api/grpc/analysis-operations#get-torus-properties)
@@ -1999,8 +2084,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Transform for i-th Frame in Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
@@ -2036,8 +2123,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Group To Surface Fit
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Group To Surface Fit](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC contract](/api/grpc/analysis-operations#group-to-surface-fit)
@@ -2088,8 +2177,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Geometry Fit Profiles
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Import Geometry Fit Profiles](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC contract](/api/grpc/analysis-operations#import-geometry-fit-profiles)
@@ -2125,8 +2216,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Is Object of Type
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Is Object of Type](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC contract](/api/grpc/analysis-operations#is-object-of-type)
@@ -2162,8 +2255,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Circle Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Circle Fit Profile](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-circle-fit-profile)
@@ -2219,8 +2314,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Cone Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Cone Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cone-fit-profile)
@@ -2270,8 +2367,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Cylinder Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Cylinder Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
@@ -2335,8 +2434,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Ellipse Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Ellipse Fit Profile](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
@@ -2392,8 +2493,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Line Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Line Fit Profile](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-line-fit-profile)
@@ -2437,8 +2540,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Paraboloid Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Paraboloid Fit Profile](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-paraboloid-fit-profile)
@@ -2486,8 +2591,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Plane Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Plane Fit Profile](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-plane-fit-profile)
@@ -2535,8 +2642,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Slot Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Slot Fit Profile](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-slot-fit-profile)
@@ -2596,8 +2705,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Sphere Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Sphere Fit Profile](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
@@ -2643,8 +2754,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Mushroom Target Hole Inspection
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Mushroom Target Hole Inspection](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC contract](/api/grpc/analysis-operations#mushroom-target-hole-inspection)
@@ -2693,8 +2806,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Patch Normal Shift - Hole / Pin
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Patch Normal Shift - Hole / Pin](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---hole--pin)
@@ -2734,8 +2849,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Patch Normal Shift - Point
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Patch Normal Shift - Point](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---point)
@@ -2775,8 +2892,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Clouds to Objects
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Clouds to Objects](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-objects)
@@ -2831,8 +2950,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Clouds to Surface
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Clouds to Surface](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-surface)
@@ -2887,8 +3008,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Frame to Frame
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Frame to Frame](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#query-frame-to-frame)
@@ -2939,8 +3062,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Groups to Objects
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Groups to Objects](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-groups-to-objects)
@@ -2997,8 +3122,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Point to Objects
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Point to Objects](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-objects)
@@ -3049,8 +3176,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Point to Point Along Curve
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Point to Point Along Curve](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-point-along-curve)
@@ -3088,8 +3217,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Circle
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Points to Circle](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-circle)
@@ -3135,8 +3266,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Objects
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Points to Objects](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-objects)
@@ -3193,8 +3326,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Single Point
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Query Points to Single Point](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-single-point)
@@ -3232,8 +3367,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Re-Compute Calculated Items
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Re-Compute Calculated Items](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC contract](/api/grpc/analysis-operations#re-compute-calculated-items)
@@ -3273,8 +3410,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename points based on inter-point distance to reference points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Rename points based on inter-point distance to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
@@ -3314,8 +3453,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename points based on proximity to reference points
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Rename points based on proximity to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-proximity-to-reference-points)
@@ -3357,8 +3498,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse B-Splines
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC contract](/api/grpc/analysis-operations#reverse-b-splines)
@@ -3392,8 +3535,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse Plane Normals
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Reverse Plane Normals](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-plane-normals)
@@ -3427,8 +3572,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse Surface Normals
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Reverse Surface Normals](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-surface-normals)
@@ -3462,8 +3609,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Circle Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Circle Properties](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#set-circle-properties)
@@ -3503,8 +3652,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Cone Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Cone Properties](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cone-properties)
@@ -3552,8 +3703,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Cylinder Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Cylinder Properties](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cylinder-properties)
@@ -3605,8 +3758,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Default Colorization Options
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Default Colorization Options](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC contract](/api/grpc/analysis-operations#set-default-colorization-options)
@@ -3640,8 +3795,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Ellipse Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Ellipse Properties](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#set-ellipse-properties)
@@ -3683,8 +3840,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geometry Relationship Fit Profile
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geometry Relationship Fit Profile](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#set-geometry-relationship-fit-profile)
@@ -3724,8 +3883,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Line Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Line Properties](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC contract](/api/grpc/analysis-operations#set-line-properties)
@@ -3765,8 +3926,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Measurement Auxiliary Data
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#set-measurement-auxiliary-data)
@@ -3806,8 +3969,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object Reporting Frame
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#set-object-reporting-frame)
@@ -3843,8 +4008,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point Properties](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC contract](/api/grpc/analysis-operations#set-point-properties)
@@ -3886,8 +4053,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Weights From Uncertainties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Point Weights From Uncertainties](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC contract](/api/grpc/analysis-operations#set-point-weights-from-uncertainties)
@@ -3931,8 +4100,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Transform for i-th Frame in Frame Set
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
@@ -3970,8 +4141,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Sphere Axis Check
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Sphere Axis Check](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC contract](/api/grpc/analysis-operations#sphere-axis-check)
@@ -4028,8 +4201,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Temperature Compensate a group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Temperature Compensate a group](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC contract](/api/grpc/analysis-operations#temperature-compensate-a-group)
@@ -4073,8 +4248,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects - Frame To Frame
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Transform Objects - Frame To Frame](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects---frame-to-frame)
@@ -4114,8 +4291,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects by Delta (About Working Frame)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Transform Objects by Delta (About Working Frame)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-about-working-frame)
@@ -4151,8 +4330,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects by Delta (World Transform Operator)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-world-transform-operator)
@@ -4188,8 +4369,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Translate Objects by Delta
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC contract](/api/grpc/analysis-operations#translate-objects-by-delta)

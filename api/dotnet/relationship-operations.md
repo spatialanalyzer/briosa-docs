@@ -1,16 +1,14 @@
 ---
 title: Relationship Operations
-description: Next Briosa .NET APIs for supported Relationship Operations MP commands.
+description: Unreleased Briosa .NET APIs for supported Relationship Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Relationship Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not generated-request wrappers and are not released support until the version
-selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +17,10 @@ and expose one final optional `CancellationToken`.
 
 ## Enable/Disable Relationships for Optimization
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
@@ -48,7 +48,7 @@ await briosa.EnableDisableRelationshipsForOptimizationAsync(relationships: relat
 Completes without a command value. Caller cancellation does not prove that
 in-flight SA work stopped and never causes automatic replay.
 
-## Wave B Root-Group Types
+## Relationship Types
 
 ```csharp
 public enum GeometryRelationshipPointEditMode
@@ -1024,8 +1024,10 @@ These methods retain no Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
@@ -1053,8 +1055,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Geom Relationship Reuse Ignored Input Points
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
@@ -1082,8 +1086,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Auto Vectors
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
@@ -1128,8 +1134,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Cardinal Points
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
@@ -1157,8 +1165,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Criteria
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
@@ -1220,8 +1230,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Measured Avg Point
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
@@ -1249,8 +1261,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Measured Geometry
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
@@ -1278,8 +1292,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Nominal Avg Point
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
@@ -1307,8 +1323,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Nominal Geometry
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
@@ -1336,8 +1354,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Point List
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
@@ -1376,8 +1396,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Projection Plane
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
@@ -1405,8 +1427,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Cut Status
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
@@ -1448,8 +1472,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Properties
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
@@ -1509,8 +1535,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Weights
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
@@ -1564,8 +1592,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Fit Constraints (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
@@ -1610,8 +1640,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Outlier Rejection (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
@@ -1653,8 +1685,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Projection Options
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-projection-options)
@@ -1699,8 +1733,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Reporting Frame
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
@@ -1728,8 +1764,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Sub Sampling Options
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
@@ -1771,8 +1809,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Tolerance (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
@@ -1817,8 +1857,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Tolerance (Vector Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
@@ -1899,8 +1941,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Type
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-type)
@@ -1928,8 +1972,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Weighting
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-weighting)
@@ -1957,8 +2003,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Pipe Fitting Relationship
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
@@ -1990,8 +2038,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Pipe Relationship Cut
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
@@ -2031,8 +2081,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Pipe Relationship Force Cut to Frame
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
@@ -2068,8 +2120,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Auto Measure Nominal Feature
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
@@ -2103,8 +2157,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
@@ -2140,8 +2196,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Cardinal Points
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
@@ -2175,8 +2233,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Criteria
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
@@ -2214,8 +2274,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Measured Geometry
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
@@ -2245,8 +2307,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Nominal Avg Point
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
@@ -2278,8 +2342,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Nominal Geometry
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
@@ -2311,8 +2377,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Projection Plane
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
@@ -2344,8 +2412,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object to Object Direction Relationship Fit Constraints
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
@@ -2377,8 +2447,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Pipe Relationship Segment Properties
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
@@ -2422,8 +2494,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Pipe Relationship Weights
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
@@ -2467,8 +2541,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Auto Vectors Fit (AVF)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
@@ -2502,8 +2578,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Auto Vectors Group Default Prefix
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
@@ -2535,8 +2613,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Desired Meas Count
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
@@ -2566,8 +2646,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Dormant Status
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
@@ -2597,8 +2679,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Fit Constraints (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
@@ -2628,8 +2712,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
@@ -2659,8 +2745,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Outlier Rejection (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
@@ -2688,8 +2776,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Position Fit Constraints (Vector Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
@@ -2719,8 +2809,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Projection Options
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-projection-options)
@@ -2750,8 +2842,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Reporting Frame
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
@@ -2781,8 +2875,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
@@ -2812,8 +2908,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Sub Sampling Options
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
@@ -2849,8 +2947,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Tolerance (Scalar Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
@@ -2880,8 +2980,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Tolerance (Vector Type)
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
@@ -2911,8 +3013,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Voxel Cloud Display
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
@@ -2954,8 +3058,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Weighting
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weighting)
@@ -2985,8 +3091,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Weights Normalized
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)
