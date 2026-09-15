@@ -134,7 +134,7 @@ Installing a package puts its files on disk; it does not launch the server,
 activate the SDK, start SpatialAnalyzer, or establish MP readiness. The installer
 does not need to remain open while you use Briosa.
 
-With Briosa Installer **0.2.0** or later and a Briosa **0.5.0** or later server
+With Briosa Installer **0.2.0** or later and a Briosa **0.5.1** or later server
 package, select the installed version and choose **Open Control Center**. The
 installer verifies the package and opens its status window. Choose **Start
 server** when ready, then follow [Windows Control Center](/docs/deployment/control-center)
