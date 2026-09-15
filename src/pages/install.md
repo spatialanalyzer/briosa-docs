@@ -23,8 +23,8 @@ SDK Setup describe that machine; it does not manage other hosts remotely.
 
 ## Before You Begin
 
-You need a Windows x64 machine and access to the package source you intend to
-use. The complete installer distribution includes its .NET runtime, so you do
+Setup requires Windows x64 build 19045 or later and access to the package source
+you intend to use. The complete installer distribution includes its .NET runtime, so you do
 not need to install .NET separately to open the app.
 
 To execute MP commands, you also need a separately installed, running, and
@@ -231,6 +231,8 @@ Installer before uninstalling it. SpatialAnalyzer and SDK registration are uncha
 
 Automated tests cover source isolation, signed package maintenance, installer
 selection, setup/reinstall/uninstall, upgrades, and preservation of user data.
+Setup automation runs on GitHub-hosted Windows; native review used Windows 11
+Pro build 26200.
 Real Artifactory/proxy deployments, standard-user managed rollout, native
 high-contrast/Narrator, and mixed-monitor DPI acceptance remain unverified.
 Organizations should validate their own authentication and workstation policies
