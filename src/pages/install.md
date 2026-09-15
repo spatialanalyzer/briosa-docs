@@ -23,8 +23,8 @@ SDK Setup describe that machine; it does not manage other hosts remotely.
 
 ## Before You Begin
 
-Setup requires Windows x64 build 19045 or later and access to the package source
-you intend to use. The complete installer distribution includes its .NET runtime, so you do
+Setup requires Windows x64 build 19045 or later. Acquiring server packages requires
+access to your chosen package source. The installer includes its .NET runtime, so you do
 not need to install .NET separately to open the app.
 
 To execute MP commands, you also need a separately installed, running, and
