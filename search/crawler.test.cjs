@@ -51,6 +51,7 @@ test('MP label, code spelling and status are retained without merging command id
 
 test('navigation indexes, filtered views and redirect documents produce no records', () => {
   for (const path of [
+    '/downloads/keys/public.pem', '/assets/js/main.js',
     '/mp-command-catalog/2026.1.0529.7/file-operations',
     '/mp-command-catalog/2027.1.0001.0/file-operations',
     '/mp-command-catalog/commands', '/mp-command-catalog/commands/',

@@ -15,6 +15,8 @@ new Crawler({
   sitemaps: ['https://briosa.dev/sitemap.xml'],
   discoveryPatterns: ['https://briosa.dev/**'],
   exclusionPatterns: [
+    'https://briosa.dev/downloads/**',
+    'https://briosa.dev/assets/**',
     'https://briosa.dev/search**',
     'https://briosa.dev/mp-command-catalog/2026.1.0529.7/**',
     'https://briosa.dev/mp-command-catalog/commands',
@@ -29,6 +31,7 @@ new Crawler({
       // Also enforce exclusions during extraction, including future SA targets.
       if (
         url.hostname !== 'briosa.dev' || url.search ||
+        /^\/(?:downloads|assets)(?:\/|$)/.test(path) ||
         path === '/search' || path === '/404' || path === '/404.html' ||
         /^\/mp-command-catalog\/\d/.test(path) ||
         /^\/mp-command-catalog\/commands(?:\/index(?:\.html)?)?$/.test(path) ||
