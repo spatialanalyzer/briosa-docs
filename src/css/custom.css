@@ -1,4 +1,5 @@
 @import '../../static/brand/colors.css';
+@import './search.css';
 
 @font-face {
   font-family: Inter;
