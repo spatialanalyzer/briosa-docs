@@ -7,6 +7,9 @@ title: Diagnostics and Recovery
 Start with safe state names from health and discovery. Do not capture complete
 logs or application values in a public report.
 
+See [Server Logging and Telemetry](./logging.md) for the per-user log location,
+startup controls, retention limits, and interpretation of execution records.
+
 | Observed State | Meaning | Action |
 | --- | --- | --- |
 | Liveness serves; no SDK or SA application is active | A manually started Briosa server is control-ready | Start the SDK, optionally launch SA, and then connect |

@@ -68,6 +68,38 @@ await briosa.start(
 )
 ```
 
+## Server Logging
+
+`BriosaStartOptions.logging` accepts an optional `BriosaLoggingOptions`:
+
+```python
+from briosa import BriosaLoggingOptions, BriosaLogLevel, BriosaStartOptions
+
+await briosa.start(
+    BriosaStartOptions(
+        logging=BriosaLoggingOptions(
+            minimum_level=BriosaLogLevel.DEBUG,
+            console_enabled=False,
+            max_file_size_mib=20,
+            retained_file_count=10,
+        ),
+    ),
+)
+```
+
+Additional fields are `category_levels`, `file_enabled`, `file_directory`,
+`max_age_days`, and `max_total_size_mib`. Levels use `BriosaLogLevel`.
+
+These controls require builds containing
+[the observability implementation](https://github.com/spatialanalyzer/briosa/issues/165).
+Omitted fields preserve server configuration. Values are validated before
+launch; the server validates the effective combined configuration. Custom
+directories must be absolute Windows paths. Logging controls apply when this
+client launches its server and cannot reconfigure a running process.
+
+See [Server Logging and Telemetry](/docs/deployment/logging) for defaults,
+retention behavior, and the metadata boundary at every verbosity level.
+
 ## Behavior
 
 - Selects and launches the exact-target local server on an owned loopback
