@@ -10,10 +10,11 @@ lifecycle controls. Its light and dark themes match Briosa Installer, with Windo
 high-contrast settings taking priority.
 
 :::note Availability
-Use a Windows server package containing `Briosa.ControlCenter.exe` from
-[the Control Center implementation](https://github.com/spatialanalyzer/briosa/commit/1bf724d).
-Earlier packages omit the companion. The initial target is SpatialAnalyzer
-**2026.1.0529.7**.
+Control Center is included in [Briosa 0.5.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.5.1)
+and later Windows server packages. Briosa Installer **0.2.0** and later provide
+the **Open Control Center** action. Get both through [Install Briosa](/install).
+Earlier server packages omit the companion. The initial target is
+SpatialAnalyzer **2026.1.0529.7**.
 :::
 
 ## Open Control Center
