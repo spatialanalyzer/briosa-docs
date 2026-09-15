@@ -13,7 +13,7 @@ These entries cover the six commands observed under **Construction Operations
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>6</strong></div>
-  <div><span>Current or Next</span><strong>6</strong></div>
+  <div><span>Current Server Operations</span><strong>6</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,18 +22,18 @@ These entries cover the six commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane">Construct Plane</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#shift-plane">Shift Plane</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane">Construct Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#shift-plane">Shift Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
 </tbody>
 </table>
 
 ## Construct Plane
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ the displayed bounds; the analytical plane remains infinite.
 
 ## Construct Plane, Normal to Object, Through Point
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ live SpatialAnalyzer geometry decision.
 
 ## Construct Planes, Bounding Point Group
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ override is enabled. SpatialAnalyzer increments duplicate result names.
 
 ## Construct Planes, Bisect 2 Planes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ validates the source identities and their geometry.
 
 ## Shift Plane
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ the MP defaults and does not impose additional bounds checks.
 
 ## Construct Planes From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 This no-argument command asks the operator to select planar CAD surface faces
 inside SpatialAnalyzer and creates every available plane from that selection.

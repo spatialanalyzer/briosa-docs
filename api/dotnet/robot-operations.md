@@ -1,15 +1,14 @@
 ---
 title: Robot Operations
-description: Next Briosa .NET APIs for reviewed Robot Operations MP commands.
+description: Unreleased Briosa .NET APIs for reviewed Robot Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Robot Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These methods cover all thirty-three group commands and are not
-released support until this documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

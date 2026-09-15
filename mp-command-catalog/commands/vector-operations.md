@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Vector Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>25</strong></div>
-  <div><span>Current or Next</span><strong>15</strong></div>
+  <div><span>Current Server Operations</span><strong>15</strong></div>
   <div><span>Excluded or Unavailable</span><strong>10</strong></div>
 </div>
 
@@ -23,70 +21,70 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Add a Vector To Vector Name Ref List" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Add a Vector To Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-a-vector-to-vector-name-ref-list">Add a Vector To Vector Name Ref List</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Auto-Range and Set Vector Group Colorization (All)" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Auto-Range and Set Vector Group Colorization (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#auto-range-and-set-vector-group-colorization-all">Auto-Range and Set Vector Group Colorization (All)</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Auto-Range and Set Vector Group Colorization (Selected)" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Auto-Range and Set Vector Group Colorization (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#auto-range-and-set-vector-group-colorization-selected">Auto-Range and Set Vector Group Colorization (Selected)</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete i-th Vector From Vector Group" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-i-th-vector-from-vector-group">Delete i-th Vector From Vector Group</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Vector by Name" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Vector by Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-vector-by-name">Delete Vector by Name</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Vectors" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-vectors">Delete Vectors</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Vector From Vector Group" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-i-th-vector-from-vector-group">Get i-th Vector From Vector Group</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Vector From Vector Name Ref List" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get i-th Vector From Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-i-th-vector-from-vector-name-ref-list">Get i-th Vector From Vector Name Ref List</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Number of Vectors in Vector Group" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Number of Vectors in Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-number-of-vectors-in-vector-group">Get Number of Vectors in Vector Group</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Number of Vectors in Vector Name Ref List" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Number of Vectors in Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-number-of-vectors-in-vector-name-ref-list">Get Number of Vectors in Vector Name Ref List</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector From Vector Group By Name" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Vector From Vector Group By Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-from-vector-group-by-name">Get Vector From Vector Group By Name</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Vector Group Colorization Options" data-group="Vector Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -101,22 +99,22 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Vector Group Properties" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Vector Group Properties" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-group-properties">Get Vector Group Properties</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Colorization Options (All)" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Vector Group Colorization Options (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-group-colorization-options-all">Set Vector Group Colorization Options (All)</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Colorization Options (Selected)" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Vector Group Colorization Options (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-group-colorization-options-selected">Set Vector Group Colorization Options (Selected)</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Vector Group Display Attributes" data-group="Vector Operations" data-status="excluded" data-validation="not-applicable">
@@ -125,10 +123,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Sort Vectors" data-group="Vector Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Sort Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#sort-vectors">Sort Vectors</a></td>
   <td>Vector Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Vector Addition" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
@@ -178,7 +176,7 @@ is callable in the current release.
 
 ## Add a Vector To Vector Name Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -205,7 +203,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Auto-Range and Set Vector Group Colorization (All)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -231,7 +229,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Auto-Range and Set Vector Group Colorization (Selected)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -258,7 +256,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete i-th Vector From Vector Group
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -284,7 +282,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Vector by Name
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -310,7 +308,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Vectors
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -335,7 +333,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Vector From Vector Group
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -367,7 +365,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Vector From Vector Name Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -400,7 +398,7 @@ Returns the vector identity and geometry, but not its documented color.
 
 ## Get Number of Vectors in Vector Group
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -426,7 +424,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Number of Vectors in Vector Name Ref List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -452,7 +450,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector From Vector Group By Name
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -555,7 +553,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Vector Group Properties
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -597,7 +595,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Colorization Options (All)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -622,7 +620,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Colorization Options (Selected)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -700,7 +698,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Sort Vectors
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

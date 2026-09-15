@@ -1,17 +1,14 @@
 ---
 title: Instrument Operations
-description: Next Briosa .NET APIs for the reviewed Instrument Operations MP commands.
+description: Unreleased Briosa .NET APIs for the reviewed Instrument Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These methods define the next package surface and are not released support
-until this documentation is versioned for a published package. This page
-currently covers all 136 selected operations from the 139 reviewed Instrument
-Operations root commands.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

@@ -9,12 +9,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Construction Operations / Frames Commands
 
 These entries cover the 18 commands observed under **Construction Operations
-→ Frames** in SA 2026.1.0529.7. Every command is selected for the next release;
+→ Frames** in SA 2026.1.0529.7. Every command is included in Briosa Server 0.5.1;
 fixture notes describe validation coverage rather than reduced API commitment.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>18</strong></div>
-  <div><span>Current or Next</span><strong>18</strong></div>
+  <div><span>Current Server Operations</span><strong>18</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -23,30 +23,30 @@ fixture notes describe validation coverage rather than reduced API commitment.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Frame with Wizard" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-interactive-fixture-validation-required"><td><a href="#construct-frame-with-wizard">Construct Frame with Wizard</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive fixture validation required</td></tr>
-<tr data-command="Construct Frame" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame">Construct Frame</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame From Transform In World" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-from-transform-in-world">Construct Frame From Transform In World</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame on Instrument Base" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-instrument-fixture-validation-required"><td><a href="#construct-frame-on-instrument-base">Construct Frame on Instrument Base</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - instrument fixture validation required</td></tr>
-<tr data-command="Construct Frame on Object" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-on-object">Construct Frame on Object</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, 3 Points" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-points">Construct Frame, 3 Points</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, at Point, with working Z, and clocked axis" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-at-point-with-working-z-and-clocked-axis">Construct Frame, at Point, with working Z, and clocked axis</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, Pick origin and point on X axis - clock Z along working Z" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z">Construct Frame, Pick origin and point on X axis - clock Z along working Z</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, Known Origin, Object Direction, Object Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-known-origin-object-direction-object-direction">Construct Frame, Known Origin, Object Direction, Object Direction</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, 3 Planes" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-planes">Construct Frame, 3 Planes</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame - Copy And Make Left Handed" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---copy-and-make-left-handed">Construct Frame - Copy And Make Left Handed</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame - Average of Other Object Frames" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---average-of-other-object-frames">Construct Frame - Average of Other Object Frames</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame at Robot Link" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-robot-fixture-validation-required"><td><a href="#construct-frame-at-robot-link">Construct Frame at Robot Link</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - robot fixture validation required</td></tr>
-<tr data-command="Construct Frame From Point Measurement Probing Frames" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-probing-data-fixture-validation-required"><td><a href="#construct-frame-from-point-measurement-probing-frames">Construct Frame From Point Measurement Probing Frames</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - probing-data fixture validation required</td></tr>
-<tr data-command="Construct Mirror Cube Frame" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-mirror-measurement-fixture-validation-required"><td><a href="#construct-mirror-cube-frame">Construct Mirror Cube Frame</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - mirror-measurement fixture validation required</td></tr>
-<tr data-command="Construct Frames By Projecting Frames On Mesh Along Frame Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-frame-direction">Construct Frames By Projecting Frames On Mesh Along Frame Direction</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - mesh fixture validation required</td></tr>
-<tr data-command="Construct Frames By Projecting Frames On Mesh Along Reference Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-reference-direction">Construct Frames By Projecting Frames On Mesh Along Reference Direction</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - mesh fixture validation required</td></tr>
-<tr data-command="Add Surface To Mesh Offset Along Reference Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-mesh-and-surface-fixture-validation-required"><td><a href="#add-surface-to-mesh-offset-along-reference-direction">Add Surface To Mesh Offset Along Reference Direction</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - mesh and surface fixture validation required</td></tr>
+<tr data-command="Construct Frame with Wizard" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-interactive-fixture-validation-required"><td><a href="#construct-frame-with-wizard">Construct Frame with Wizard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td></tr>
+<tr data-command="Construct Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame">Construct Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame From Transform In World" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-from-transform-in-world">Construct Frame From Transform In World</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame on Instrument Base" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-instrument-fixture-validation-required"><td><a href="#construct-frame-on-instrument-base">Construct Frame on Instrument Base</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture validation required</td></tr>
+<tr data-command="Construct Frame on Object" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-on-object">Construct Frame on Object</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame, 3 Points" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-points">Construct Frame, 3 Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame, at Point, with working Z, and clocked axis" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-at-point-with-working-z-and-clocked-axis">Construct Frame, at Point, with working Z, and clocked axis</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame, Pick origin and point on X axis - clock Z along working Z" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z">Construct Frame, Pick origin and point on X axis - clock Z along working Z</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame, Known Origin, Object Direction, Object Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-known-origin-object-direction-object-direction">Construct Frame, Known Origin, Object Direction, Object Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame, 3 Planes" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-planes">Construct Frame, 3 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame - Copy And Make Left Handed" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---copy-and-make-left-handed">Construct Frame - Copy And Make Left Handed</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame - Average of Other Object Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---average-of-other-object-frames">Construct Frame - Average of Other Object Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Frame at Robot Link" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-robot-fixture-validation-required"><td><a href="#construct-frame-at-robot-link">Construct Frame at Robot Link</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - robot fixture validation required</td></tr>
+<tr data-command="Construct Frame From Point Measurement Probing Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-probing-data-fixture-validation-required"><td><a href="#construct-frame-from-point-measurement-probing-frames">Construct Frame From Point Measurement Probing Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - probing-data fixture validation required</td></tr>
+<tr data-command="Construct Mirror Cube Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mirror-measurement-fixture-validation-required"><td><a href="#construct-mirror-cube-frame">Construct Mirror Cube Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mirror-measurement fixture validation required</td></tr>
+<tr data-command="Construct Frames By Projecting Frames On Mesh Along Frame Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-frame-direction">Construct Frames By Projecting Frames On Mesh Along Frame Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh fixture validation required</td></tr>
+<tr data-command="Construct Frames By Projecting Frames On Mesh Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-reference-direction">Construct Frames By Projecting Frames On Mesh Along Reference Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh fixture validation required</td></tr>
+<tr data-command="Add Surface To Mesh Offset Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-and-surface-fixture-validation-required"><td><a href="#add-surface-to-mesh-offset-along-reference-direction">Add Surface To Mesh Offset Along Reference Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh and surface fixture validation required</td></tr>
 </tbody>
 </table>
 
 ## Construct Frame with Wizard
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ wizard closed, and Briosa never automatically replays the operation.
 
 ## Construct Frame
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ coordinates.
 
 ## Construct Frame From Transform In World
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ Constructs a frame from a transform expressed in world coordinates.
 
 ## Construct Frame on Instrument Base
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ commitment.
 
 ## Construct Frame on Object
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ Constructs a frame from an object's position and orientation.
 
 ## Construct Frame, 3 Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -121,7 +121,7 @@ the MP type rather than accepting an arbitrary string.
 
 ## Construct Frame, at Point, with working Z, and clocked axis
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -134,7 +134,7 @@ The clocked-axis choice includes positive and negative X, Y, and Z axes.
 
 ## Construct Frame, Pick origin and point on X axis - clock Z along working Z
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -147,7 +147,7 @@ Z direction.
 
 ## Construct Frame, Known Origin, Object Direction, Object Direction
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -164,7 +164,7 @@ choices. Values are passed through for SpatialAnalyzer to evaluate.
 
 ## Construct Frame, 3 Planes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -181,7 +181,7 @@ part of the exact MP binding and is preserved by the server mapping.
 
 ## Construct Frame - Copy And Make Left Handed
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -193,7 +193,7 @@ Copies a frame and reverses one unsigned axis to make the result left handed.
 
 ## Construct Frame - Average of Other Object Frames
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -205,7 +205,7 @@ supplied objects. Briosa does not add a minimum-list-size rule.
 
 ## Construct Frame at Robot Link
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -218,7 +218,7 @@ robot or machine fixture.
 
 ## Construct Frame From Point Measurement Probing Frames
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -230,7 +230,7 @@ metadata.
 
 ## Construct Mirror Cube Frame
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -245,7 +245,7 @@ fixture for licensed validation.
 
 ## Construct Frames By Projecting Frames On Mesh Along Frame Direction
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -260,7 +260,7 @@ own directions.
 
 ## Construct Frames By Projecting Frames On Mesh Along Reference Direction
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -276,7 +276,7 @@ the complete resultant-frame list.
 
 ## Add Surface To Mesh Offset Along Reference Direction
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

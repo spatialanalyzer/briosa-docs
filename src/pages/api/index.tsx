@@ -6,7 +6,7 @@ import BrandImage from '@site/src/components/BrandImage';
 
 const references = [
   {
-    eyebrow: 'Briosa Server',
+    eyebrow: 'Server 0.5.1',
     product: 'server',
     title: 'gRPC API',
     description:
@@ -14,7 +14,7 @@ const references = [
     to: '/api/grpc',
   },
   {
-    eyebrow: 'First-Party Client',
+    eyebrow: 'Unreleased Client',
     product: 'dotnet',
     title: '.NET API',
     description:
@@ -22,7 +22,7 @@ const references = [
     to: '/api/dotnet',
   },
   {
-    eyebrow: 'First-Party Client',
+    eyebrow: 'Unreleased Client',
     product: 'python',
     title: 'Python API',
     description:
@@ -30,7 +30,7 @@ const references = [
     to: '/api/python',
   },
   {
-    eyebrow: 'First-Party Client',
+    eyebrow: 'Unreleased Client',
     product: 'js',
     title: 'JavaScript and TypeScript API',
     description:

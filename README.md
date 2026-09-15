@@ -208,9 +208,11 @@ npm run docusaurus docs:version:python <python-package-version>
 npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-Until the first snapshot exists, each API route represents the current
-development surface. Docusaurus creates and maintains independent version and
-sidebar snapshots for each plugin instance.
+The gRPC reference currently serves the Server 0.5.1 snapshot by default.
+Its working source is not published. Client references remain Unreleased until
+their respective packages are published. Docusaurus maintains independent
+version and sidebar snapshots for each plugin instance. The site itself does
+not take a shared product version.
 
 ## Documentation boundary
 

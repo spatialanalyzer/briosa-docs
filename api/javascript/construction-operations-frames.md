@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Frames
-description: Next Briosa JavaScript and TypeScript APIs for selected frame-construction MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for selected frame-construction MP commands.
 toc_max_heading_level: 2
 ---
 

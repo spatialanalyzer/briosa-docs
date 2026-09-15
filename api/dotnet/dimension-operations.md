@@ -1,16 +1,14 @@
 ---
 title: Dimension Operations
-description: Next Briosa .NET APIs for supported Dimension Operations MP commands.
+description: Unreleased Briosa .NET APIs for supported Dimension Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Dimension Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These signatures define the next handwritten `BriosaClient` surface. They are
-not generated-request wrappers and are not released support until the version
-selector names a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -19,8 +17,10 @@ and expose one final optional `CancellationToken`.
 
 ## Delete Dimension
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Dimension](/mp-command-catalog/commands/dimension-operations#delete-dimension) · [gRPC contract](/api/grpc/dimension-operations#delete-dimension)
@@ -48,8 +48,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Dimension Value
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Dimension Value](/mp-command-catalog/commands/dimension-operations#get-dimension-value) · [gRPC contract](/api/grpc/dimension-operations#get-dimension-value)
@@ -100,8 +102,10 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Dimension Tolerance
 
-:::note[Status: Next]
-This client API is planned, including when the underlying gRPC operation is already **Current**.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Dimension Tolerance](/mp-command-catalog/commands/dimension-operations#set-dimension-tolerance) · [gRPC contract](/api/grpc/dimension-operations#set-dimension-tolerance)

@@ -1,15 +1,14 @@
 ---
 title: Robot Calibration Appliance Node Operations
-description: Next Briosa .NET APIs for reviewed Robot Calibration Appliance Node MP commands.
+description: Unreleased Briosa .NET APIs for reviewed Robot Calibration Appliance Node MP commands.
 toc_max_heading_level: 2
 ---
 
 # Robot Calibration Appliance Node Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These methods cover all twenty-five group commands and are not
-released support until this documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

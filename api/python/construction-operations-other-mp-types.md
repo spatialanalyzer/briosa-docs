@@ -1,14 +1,14 @@
 ---
 title: Construction Operations / Other MP Types
-description: Next Briosa Python APIs for selected Other MP Types commands.
+description: Unreleased Briosa Python APIs for selected Other MP Types commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / Other MP Types
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These APIs are not released support until implemented and versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

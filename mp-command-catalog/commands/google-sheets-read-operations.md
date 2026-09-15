@@ -13,7 +13,7 @@ Operations → Google Sheets Read Operations** in SA 2026.1.0529.7.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>5</strong></div>
-  <div><span>Current or Next</span><strong>0</strong></div>
+  <div><span>Current Server Operations</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>5</strong></div>
 </div>
 

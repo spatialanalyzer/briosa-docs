@@ -1,15 +1,14 @@
 ---
 title: GDT Operations / GDT Construction
-description: Next Briosa JavaScript and TypeScript APIs for the GDT Construction MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for the GDT Construction MP commands.
 toc_max_heading_level: 2
 ---
 
 # GDT Operations / GDT Construction
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # File Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>127</strong></div>
-  <div><span>Current or Next</span><strong>77</strong></div>
+  <div><span>Current Server Operations</span><strong>77</strong></div>
   <div><span>Excluded or Unavailable</span><strong>44</strong></div>
 </div>
 
@@ -35,10 +33,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Backup Now" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Backup Now" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#backup-now">Backup Now</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Browse for Directory" data-group="File Operations" data-status="uncommitted" data-validation="not-applicable">
@@ -83,10 +81,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Copy General File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Copy General File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#copy-general-file">Copy General File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Delete Directory" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -101,16 +99,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Delete General File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete General File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-general-file">Delete General File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Direct CAD Access" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Direct CAD Access" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#direct-cad-access">Direct CAD Access</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Directory Existence" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -125,28 +123,28 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Export ASCII Frame Set" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export ASCII Frame Set" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-ascii-frame-set">Export ASCII Frame Set</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export ASCII Frames" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export ASCII Frames" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-ascii-frames">Export ASCII Frames</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export ASCII Point Clouds" data-group="File Operations / File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Export ASCII Point Clouds" data-group="File Operations / File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#export-ascii-point-clouds">Export ASCII Point Clouds</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Export ASCII Point Set" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export ASCII Point Set" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-ascii-point-set">Export ASCII Point Set</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Export ASCII Point Sets" data-group="File Operations / File Export" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -155,10 +153,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Export ASCII Points" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export ASCII Points" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-ascii-points">Export ASCII Points</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Export ASII Points" data-group="File Operations / File Export" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -167,88 +165,88 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Export DXF" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export DXF" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-dxf">Export DXF</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export Embedded File" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export Embedded File" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-embedded-file">Export Embedded File</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export Hidden Point Bar XML File" data-group="File Operations / XML" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export Hidden Point Bar XML File" data-group="File Operations / XML" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-hidden-point-bar-xml-file">Export Hidden Point Bar XML File</a></td>
   <td>File Operations / XML</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export IGES File  - Entire Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export IGES File  - Entire Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-iges-file----entire-model">Export IGES File  - Entire Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export IGES File - Partial Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export IGES File - Partial Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-iges-file---partial-model">Export IGES File - Partial Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export PTX Point Clouds" data-group="File Operations / File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Export PTX Point Clouds" data-group="File Operations / File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#export-ptx-point-clouds">Export PTX Point Clouds</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Export QDAS Characteristics" data-group="File Operations / File Export / QDAS File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Export QDAS Characteristics" data-group="File Operations / File Export / QDAS File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#export-qdas-characteristics">Export QDAS Characteristics</a></td>
   <td>File Operations / File Export / QDAS File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Export QDAS Data List" data-group="File Operations / File Export / QDAS File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Export QDAS Data List" data-group="File Operations / File Export / QDAS File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#export-qdas-data-list">Export QDAS Data List</a></td>
   <td>File Operations / File Export / QDAS File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Export Scan Stripe Mesh to STL File" data-group="File Operations / File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Export Scan Stripe Mesh to STL File" data-group="File Operations / File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#export-scan-stripe-mesh-to-stl-file">Export Scan Stripe Mesh to STL File</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Export STEP File - Entire Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export STEP File - Entire Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-step-file---entire-model">Export STEP File - Entire Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export STEP File - Partial Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export STEP File - Partial Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-step-file---partial-model">Export STEP File - Partial Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export VDA/FS File  - Entire Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export VDA/FS File  - Entire Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-vdafs-file----entire-model">Export VDA/FS File  - Entire Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export VDA/FS File - Partial Model" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export VDA/FS File - Partial Model" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-vdafs-file---partial-model">Export VDA/FS File - Partial Model</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export Vector Container to ASCII File" data-group="File Operations / File Export" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Export Vector Container to ASCII File" data-group="File Operations / File Export" data-status="current" data-validation="portable-contract-review">
   <td><a href="#export-vector-container-to-ascii-file">Export Vector Container to ASCII File</a></td>
   <td>File Operations / File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Export Vector Container to Excel File" data-group="File Operations / File Export" data-status="uncommitted" data-validation="not-applicable">
@@ -257,22 +255,22 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Find Files in Directory" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Find Files in Directory" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#find-files-in-directory">Find Files in Directory</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Find Sub-Directories in Directory" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Find Sub-Directories in Directory" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#find-sub-directories-in-directory">Find Sub-Directories in Directory</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Boolean From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Boolean From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-boolean-from-datashare-file">Get Boolean From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Directory and Filename from Path" data-group="File Operations" data-status="excluded" data-validation="not-applicable">
@@ -281,10 +279,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Double From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Double From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-double-from-datashare-file">Get Double From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get from ODBC Database" data-group="File Operations / Database Operations" data-status="excluded" data-validation="not-applicable">
@@ -293,10 +291,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Integer From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Integer From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-integer-from-datashare-file">Get Integer From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get JSON Array Size" data-group="File Operations / JSON" data-status="excluded" data-validation="not-applicable">
@@ -335,10 +333,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get QDAS Catalog Entries" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get QDAS Catalog Entries" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-qdas-catalog-entries">Get QDAS Catalog Entries</a></td>
   <td>File Operations / File Export / QDAS File Export / QDAS Catalog</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Get QDAS Catalog Entry Identifier" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="excluded" data-validation="not-applicable">
@@ -347,22 +345,22 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get String From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get String From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-string-from-datashare-file">Get String From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Transform From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Transform From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-transform-from-datashare-file">Get Transform From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector From DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Vector From DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-from-datashare-file">Get Vector From DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Working Directory" data-group="File Operations" data-status="current" data-validation="released-implementation">
@@ -383,130 +381,130 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Import ASCII: Predefined Formats" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import ASCII: Predefined Formats" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-ascii-predefined-formats">Import ASCII: Predefined Formats</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import ASCII: Predefined Frame Set Formats" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import ASCII: Predefined Frame Set Formats" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-ascii-predefined-frame-set-formats">Import ASCII: Predefined Frame Set Formats</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import E57 File" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import E57 File" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-e57-file">Import E57 File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import File as Embedded File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import File as Embedded File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-file-as-embedded-file">Import File as Embedded File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import File as Picture" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import File as Picture" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-file-as-picture">Import File as Picture</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import Hidden Point Bar XML File" data-group="File Operations / XML" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import Hidden Point Bar XML File" data-group="File Operations / XML" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-hidden-point-bar-xml-file">Import Hidden Point Bar XML File</a></td>
   <td>File Operations / XML</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import IGES File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import IGES File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-iges-file">Import IGES File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import Leica GSI File" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import Leica GSI File" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-leica-gsi-file">Import Leica GSI File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import Leica SDB File" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import Leica SDB File" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-leica-sdb-file">Import Leica SDB File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import MP File as Embedded MP" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import MP File as Embedded MP" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-mp-file-as-embedded-mp">Import MP File as Embedded MP</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import Nominals from XML File" data-group="File Operations / XML" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import Nominals from XML File" data-group="File Operations / XML" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-nominals-from-xml-file">Import Nominals from XML File</a></td>
   <td>File Operations / XML</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import Polyworks File" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import Polyworks File" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-polyworks-file">Import Polyworks File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import QDAS Catalog File" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import QDAS Catalog File" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-qdas-catalog-file">Import QDAS Catalog File</a></td>
   <td>File Operations / File Export / QDAS File Export / QDAS Catalog</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import SA File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import SA File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-sa-file">Import SA File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import SA Windows Placement" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import SA Windows Placement" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-sa-windows-placement">Import SA Windows Placement</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import SAT File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import SAT File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-sat-file">Import SAT File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import STEP File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import STEP File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-step-file">Import STEP File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import STL File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import STL File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-stl-file">Import STL File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import VDA/FS File" data-group="File Operations / File Import" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Import VDA/FS File" data-group="File Operations / File Import" data-status="current" data-validation="portable-contract-review">
   <td><a href="#import-vdafs-file">Import VDA/FS File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Import VSTARS .xyz File" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import VSTARS .xyz File" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-vstars-xyz-file">Import VSTARS .xyz File</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Import VSTARS Cameras" data-group="File Operations / File Import" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Import VSTARS Cameras" data-group="File Operations / File Import" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#import-vstars-cameras">Import VSTARS Cameras</a></td>
   <td>File Operations / File Import</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Load DataShare File" data-group="File Operations / Data Share Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -515,16 +513,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Load HTML Form" data-group="File Operations / Data Share Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Load HTML Form" data-group="File Operations / Data Share Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#load-html-form">Load HTML Form</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Load HTML Form in Edge Browser" data-group="File Operations / Data Share Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Load HTML Form in Edge Browser" data-group="File Operations / Data Share Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#load-html-form-in-edge-browser">Load HTML Form in Edge Browser</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
 <tr data-command="Make Directory" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -533,10 +531,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make Embedded File Name List" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Make Embedded File Name List" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#make-embedded-file-name-list">Make Embedded File Name List</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Make Vector Fit Constraint" data-group="File Operations" data-status="excluded" data-validation="not-applicable">
@@ -551,16 +549,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Merge Measurements into XML File" data-group="File Operations / XML" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Merge Measurements into XML File" data-group="File Operations / XML" data-status="current" data-validation="portable-contract-review">
   <td><a href="#merge-measurements-into-xml-file">Merge Measurements into XML File</a></td>
   <td>File Operations / XML</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="New SA File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="New SA File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#new-sa-file">New SA File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Open ASCII File" data-group="File Operations / ASCII Data File Operations" data-status="excluded" data-validation="not-applicable">
@@ -575,16 +573,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Open SA File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Open SA File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#open-sa-file">Open SA File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Open Template File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Open Template File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#open-template-file">Open Template File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Open XML File" data-group="File Operations / XML" data-status="excluded" data-validation="not-applicable">
@@ -593,16 +591,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Pop PolyBay Analysis Window" data-group="File Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Pop PolyBay Analysis Window" data-group="File Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#pop-polybay-analysis-window">Pop PolyBay Analysis Window</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Prepare QDAS Data List" data-group="File Operations / File Export / QDAS File Export" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Prepare QDAS Data List" data-group="File Operations / File Export / QDAS File Export" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#prepare-qdas-data-list">Prepare QDAS Data List</a></td>
   <td>File Operations / File Export / QDAS File Export</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Put to ODBC Database" data-group="File Operations / Database Operations" data-status="excluded" data-validation="not-applicable">
@@ -629,10 +627,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Rename General File" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Rename General File" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#rename-general-file">Rename General File</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Run Another Program" data-group="File Operations" data-status="uncommitted" data-validation="not-applicable">
@@ -647,22 +645,22 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Save" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Save" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#save">Save</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Save As Read-Only Template" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Save As Read-Only Template" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#save-as-read-only-template">Save As Read-Only Template</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Save As..." data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Save As..." data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#save-as">Save As...</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Save DataShare File" data-group="File Operations / Data Share Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -677,10 +675,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Boolean In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Boolean In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-boolean-in-datashare-file">Set Boolean In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Data Root Directory" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -689,16 +687,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Double In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Double In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-double-in-datashare-file">Set Double In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Integer In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Integer In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-integer-in-datashare-file">Set Integer In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set K-Field from QDAS Catalog" data-group="File Operations / File Export / QDAS File Export / QDAS Catalog" data-status="excluded" data-validation="not-applicable">
@@ -713,10 +711,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set String In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set String In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-string-in-datashare-file">Set String In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Templates Directory" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -725,16 +723,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Transform In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Transform In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-transform-in-datashare-file">Set Transform In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector In DataShare File" data-group="File Operations / Data Share Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Vector In DataShare File" data-group="File Operations / Data Share Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-in-datashare-file">Set Vector In DataShare File</a></td>
   <td>File Operations / Data Share Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Working Directory" data-group="File Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -755,28 +753,28 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Terminate All Running MPs" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Terminate All Running MPs" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#terminate-all-running-mps">Terminate All Running MPs</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Use NRKXML Library" data-group="File Operations / XML" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Use NRKXML Library" data-group="File Operations / XML" data-status="current" data-validation="portable-contract-review">
   <td><a href="#use-nrkxml-library">Use NRKXML Library</a></td>
   <td>File Operations / XML</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Verify General File Exists" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Verify General File Exists" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#verify-general-file-exists">Verify General File Exists</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Verify MP File Exists" data-group="File Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Verify MP File Exists" data-group="File Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#verify-mp-file-exists">Verify MP File Exists</a></td>
   <td>File Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Write ASCII Line" data-group="File Operations / ASCII Data File Operations" data-status="excluded" data-validation="not-applicable">
@@ -844,7 +842,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 **Recommended Alternative:** Use the client language’s file, path, JSON, XML, or CSV APIs.
 ## Backup Now
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1057,7 +1055,7 @@ The exact SDK cannot supply `Source Directory`, `Destination Directory`, so Brio
 
 ## Copy General File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1136,7 +1134,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Delete General File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1161,7 +1159,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Direct CAD Access
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1270,7 +1268,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Export ASCII Frame Set
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1301,7 +1299,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export ASCII Frames
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1329,7 +1327,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export ASCII Point Clouds
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1360,7 +1358,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export ASCII Point Set
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1434,7 +1432,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Export ASCII Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1518,7 +1516,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Export DXF
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1546,7 +1544,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export Embedded File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1574,7 +1572,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export Hidden Point Bar XML File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1599,7 +1597,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export IGES File  - Entire Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1624,7 +1622,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export IGES File - Partial Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1650,7 +1648,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export PTX Point Clouds
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1678,7 +1676,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export QDAS Characteristics
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1721,7 +1719,7 @@ The SDK cannot supply the documented dimension list.
 
 ## Export QDAS Data List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1746,7 +1744,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export Scan Stripe Mesh to STL File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1772,7 +1770,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export STEP File - Entire Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1797,7 +1795,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export STEP File - Partial Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1823,7 +1821,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export VDA/FS File  - Entire Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1848,7 +1846,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export VDA/FS File - Partial Model
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1874,7 +1872,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Export Vector Container to ASCII File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1933,7 +1931,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Find Files in Directory
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1961,7 +1959,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Find Sub-Directories in Directory
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1988,7 +1986,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Boolean From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2043,7 +2041,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Double From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2097,7 +2095,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Integer From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2287,7 +2285,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get QDAS Catalog Entries
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2341,7 +2339,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get String From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2368,7 +2366,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Transform From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2395,7 +2393,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector From DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2500,7 +2498,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Import ASCII: Predefined Formats
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2532,7 +2530,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import ASCII: Predefined Frame Set Formats
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2562,7 +2560,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import E57 File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2593,7 +2591,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import File as Embedded File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2619,7 +2617,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import File as Picture
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2645,7 +2643,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import Hidden Point Bar XML File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2671,7 +2669,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import IGES File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2696,7 +2694,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import Leica GSI File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2723,7 +2721,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import Leica SDB File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2750,7 +2748,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import MP File as Embedded MP
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2776,7 +2774,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import Nominals from XML File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2801,7 +2799,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import Polyworks File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2827,7 +2825,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import QDAS Catalog File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2852,7 +2850,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import SA File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2879,7 +2877,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import SA Windows Placement
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2904,7 +2902,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import SAT File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2929,7 +2927,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import STEP File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2956,7 +2954,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import STL File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2984,7 +2982,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import VDA/FS File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3009,7 +3007,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import VSTARS .xyz File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3034,7 +3032,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Import VSTARS Cameras
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3085,7 +3083,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Load HTML Form
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3119,7 +3117,7 @@ The MP cancel-jump target is not exposed; the DataShare result remains available
 
 ## Load HTML Form in Edge Browser
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3175,7 +3173,7 @@ The exact SDK cannot supply `Directory`, so Briosa cannot expose the complete us
 
 ## Make Embedded File Name List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3284,7 +3282,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Merge Measurements into XML File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3310,7 +3308,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## New SA File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3388,7 +3386,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Open SA File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3413,7 +3411,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Open Template File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3464,7 +3462,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Pop PolyBay Analysis Window
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3490,7 +3488,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Prepare QDAS Data List
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3640,7 +3638,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Rename General File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3723,7 +3721,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Save
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3748,7 +3746,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Save As Read-Only Template
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3773,7 +3771,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Save As...
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3852,7 +3850,7 @@ The exact SDK cannot supply `Backup Directory`, so Briosa cannot expose the comp
 
 ## Set Boolean In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3904,7 +3902,7 @@ The exact SDK cannot supply `Root Directory`, so Briosa cannot expose the comple
 
 ## Set Double In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3931,7 +3929,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Integer In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4011,7 +4009,7 @@ The exact SDK cannot supply `Reports Directory`, so Briosa cannot expose the com
 
 ## Set String In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4063,7 +4061,7 @@ The exact SDK cannot supply `Templates Directory`, so Briosa cannot expose the c
 
 ## Set Transform In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4090,7 +4088,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector In DataShare File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4194,7 +4192,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Terminate All Running MPs
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4219,7 +4217,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Use NRKXML Library
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4244,7 +4242,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Verify General File Exists
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -4271,7 +4269,7 @@ MP jump targets are omitted; existence is represented by the MP execution outcom
 
 ## Verify MP File Exists
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

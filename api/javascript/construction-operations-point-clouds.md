@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Point Clouds
-description: Next Briosa JavaScript and TypeScript APIs for selected point-cloud construction MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for selected point-cloud construction MP commands.
 toc_max_heading_level: 2
 ---
 

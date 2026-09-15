@@ -1,16 +1,14 @@
 ---
 title: Instrument Operations / Watch Window Operations
-description: Next Briosa JavaScript and TypeScript API for reviewed Watch Window Operations.
+description: Unreleased Briosa JavaScript and TypeScript API for reviewed Watch Window Operations.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations / Watch Window Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-Six of the seven reviewed subgroup commands have approved functions. They are
-not released support until this documentation is versioned for a published
-package. `Watch Window Template 3D` remains Uncommitted.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Utility Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>92</strong></div>
-  <div><span>Current or Next</span><strong>51</strong></div>
+  <div><span>Current Server Operations</span><strong>51</strong></div>
   <div><span>Excluded or Unavailable</span><strong>11</strong></div>
 </div>
 
@@ -23,10 +21,10 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Close All Watch Windows" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Close All Watch Windows" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#close-all-watch-windows">Close All Watch Windows</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Connect to OPC UA Server" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -41,22 +39,22 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Delete Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-folder">Delete Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Items" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-items">Delete Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Objects" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Objects" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-objects">Delete Objects</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Disconnect from OPC UA Server" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -71,10 +69,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Active Language" data-group="Utility Operations / Language" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Active Language" data-group="Utility Operations / Language" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-active-language">Get Active Language</a></td>
   <td>Utility Operations / Language</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Active Units" data-group="Utility Operations / Units" data-status="current" data-validation="released-implementation">
@@ -83,58 +81,58 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Released implementation</td>
 </tr>
-<tr data-command="Get Angular Representation" data-group="Utility Operations / Units" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-angular-representation">Get Angular Representation</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Collection Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-collection-notes">Get Collection Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folder Collections" data-group="Utility Operations / Folders" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Folder Collections" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-folder-collections">Get Folder Collections</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folder Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-folder-notes">Get Folder Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folders by Wildcard" data-group="Utility Operations / Folders" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Folders by Wildcard" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-folders-by-wildcard">Get Folders by Wildcard</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Object Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-object-notes">Get Object Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-opc-da-tag-value-double">Get OPC DA Tag Value Double</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-opc-da-tag-value-integer">Get OPC DA Tag Value Integer</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-opc-da-tag-value-string">Get OPC DA Tag Value String</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Get OPC UA Node Named Coordinate Frame" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -161,16 +159,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Point Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Point Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-point-notes">Get Point Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Screen Resolution" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Screen Resolution" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-screen-resolution">Get Screen Resolution</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Tick Count" data-group="Utility Operations" data-status="excluded" data-validation="not-applicable">
@@ -203,52 +201,52 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Increment Point Name" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Increment Point Name" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#increment-point-name">Increment Point Name</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock Imported Items" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Lock Imported Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#lock-imported-items">Lock Imported Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock/Unlock Selected Items" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Lock/Unlock Selected Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#lockunlock-selected-items">Lock/Unlock Selected Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock/Unlock Trapping Control" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Lock/Unlock Trapping Control" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#lockunlock-trapping-control">Lock/Unlock Trapping Control</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Move Collection to Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Move Collection to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
   <td><a href="#move-collection-to-folder">Move Collection to Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Move Folder to Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Move Folder to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
   <td><a href="#move-folder-to-folder">Move Folder to Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Move Instruments Drag Graphically" data-group="Utility Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Move Instruments Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#move-instruments-drag-graphically">Move Instruments Drag Graphically</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Move Objects Drag Graphically" data-group="Utility Operations" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Move Objects Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#move-objects-drag-graphically">Move Objects Drag Graphically</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="OPC UA MP Configuration Auto Run Settings" data-group="Utility Operations / OPC UA Client" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -293,10 +291,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Scale Objects" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Scale Objects" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#scale-objects">Scale Objects</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Send MP Result to External Device" data-group="Utility Operations / Network" data-status="uncommitted" data-validation="not-applicable">
@@ -311,10 +309,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Active Custom Language" data-group="Utility Operations / Language" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Active Custom Language" data-group="Utility Operations / Language" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-active-custom-language">Set Active Custom Language</a></td>
   <td>Utility Operations / Language</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Active Integrated Language" data-group="Utility Operations / Language" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -323,64 +321,64 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Active Units" data-group="Utility Operations / Units" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Active Units" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-active-units">Set Active Units</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Angular Representation" data-group="Utility Operations / Units" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-angular-representation">Set Angular Representation</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Auto Event Creation" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Auto Event Creation" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-auto-event-creation">Set Auto Event Creation</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Automatic Backup State" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Automatic Backup State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-automatic-backup-state">Set Automatic Backup State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Automatic Relationship Construction State" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Automatic Relationship Construction State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-automatic-relationship-construction-state">Set Automatic Relationship Construction State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Collection Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-collection-notes">Set Collection Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Decimal Digits for Display" data-group="Utility Operations / Units" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Decimal Digits for Display" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-decimal-digits-for-display">Set Decimal Digits for Display</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Folder Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-folder-notes">Set Folder Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Interaction Mode" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Interaction Mode" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-interaction-mode">Set Interaction Mode</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Logging State" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Logging State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-logging-state">Set Logging State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set MP Step Mode" data-group="Utility Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -389,34 +387,34 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Notification Cancel Override" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Notification Cancel Override" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-notification-cancel-override">Set Notification Cancel Override</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Object Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-object-notes">Set Object Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-opc-da-tag-value-double">Set OPC DA Tag Value Double</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-opc-da-tag-value-integer">Set OPC DA Tag Value Integer</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-opc-da-tag-value-string">Set OPC DA Tag Value String</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
 <tr data-command="Set OPC UA Node Named Coordinate Frame" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -455,10 +453,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Point Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Point Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-notes">Set Point Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Special MP Mode" data-group="Utility Operations" data-status="uncommitted" data-validation="not-applicable">
@@ -467,28 +465,28 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set User Interface Profile" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set User Interface Profile" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-user-interface-profile">Set User Interface Profile</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set View Idle Update Frequency" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set View Idle Update Frequency" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-view-idle-update-frequency">Set View Idle Update Frequency</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set WildCard Asterisk Mode" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set WildCard Asterisk Mode" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-wildcard-asterisk-mode">Set WildCard Asterisk Mode</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Working Frame" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Working Frame" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-working-frame">Set Working Frame</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Speak To User" data-group="Utility Operations / Units" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -503,10 +501,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Status Dialog" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Status Dialog" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#status-dialog">Status Dialog</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Step Comment" data-group="Utility Operations / Units" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -527,10 +525,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Trim Log File" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Trim Log File" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#trim-log-file">Trim Log File</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="UDP Receive String" data-group="Utility Operations / Network" data-status="uncommitted" data-validation="not-applicable">
@@ -569,10 +567,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Write to Log" data-group="Utility Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Write to Log" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#write-to-log">Write to Log</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 </tbody>
@@ -580,7 +578,7 @@ is callable in the current release.
 
 ## Close All Watch Windows
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -663,7 +661,7 @@ The exact SDK cannot supply `Time units`, so Briosa cannot expose the complete u
 
 ## Delete Folder
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -688,7 +686,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Items
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -713,7 +711,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Objects
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -789,7 +787,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Active Language
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -842,7 +840,7 @@ Implemented and callable for this exact target.
 
 ## Get Angular Representation
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -867,7 +865,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Collection Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -893,7 +891,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Folder Collections
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -919,7 +917,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Folder Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -945,7 +943,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Folders by Wildcard
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -972,7 +970,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Object Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -998,7 +996,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get OPC DA Tag Value Double
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1024,7 +1022,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get OPC DA Tag Value Integer
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1050,7 +1048,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get OPC DA Tag Value String
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1205,7 +1203,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Get Point Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1231,7 +1229,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Screen Resolution
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1391,7 +1389,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Increment Point Name
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1418,7 +1416,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Lock Imported Items
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1443,7 +1441,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Lock/Unlock Selected Items
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1470,7 +1468,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Lock/Unlock Trapping Control
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1498,7 +1496,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Move Collection to Folder
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1524,7 +1522,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Move Folder to Folder
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1550,7 +1548,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Move Instruments Drag Graphically
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1575,7 +1573,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Move Objects Drag Graphically
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1791,7 +1789,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Scale Objects
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1871,7 +1869,7 @@ The exact SDK cannot supply `Step ID`, so Briosa cannot expose the complete usef
 
 ## Set Active Custom Language
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1922,7 +1920,7 @@ The exact SDK cannot supply `Language Name`, so Briosa cannot expose the complet
 
 ## Set Active Units
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1952,7 +1950,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Angular Representation
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1977,7 +1975,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Auto Event Creation
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2002,7 +2000,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Automatic Backup State
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2028,7 +2026,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Automatic Relationship Construction State
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2053,7 +2051,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Collection Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2080,7 +2078,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Decimal Digits for Display
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2109,7 +2107,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Folder Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2136,7 +2134,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Interaction Mode
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2163,7 +2161,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Logging State
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2213,7 +2211,7 @@ The exact SDK cannot supply `MP Step Mode`, so Briosa cannot expose the complete
 
 ## Set Notification Cancel Override
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2238,7 +2236,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Object Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2265,7 +2263,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set OPC DA Tag Value Double
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2291,7 +2289,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set OPC DA Tag Value Integer
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2317,7 +2315,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set OPC DA Tag Value String
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2507,7 +2505,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Set Point Notes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2560,7 +2558,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Set User Interface Profile
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2586,7 +2584,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set View Idle Update Frequency
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2611,7 +2609,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set WildCard Asterisk Mode
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2636,7 +2634,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Working Frame
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2711,7 +2709,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Status Dialog
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2820,7 +2818,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Trim Log File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -3001,7 +2999,7 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Write to Log
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

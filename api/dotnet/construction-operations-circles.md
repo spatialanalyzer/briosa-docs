@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Circles
-description: Next Briosa .NET APIs for selected circle-construction MP commands.
+description: Unreleased Briosa .NET APIs for selected circle-construction MP commands.
 toc_max_heading_level: 2
 ---
 

@@ -13,7 +13,7 @@ Operations → Circles** in SA 2026.1.0529.7.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>3</strong></div>
-  <div><span>Current or Next</span><strong>3</strong></div>
+  <div><span>Current Server Operations</span><strong>3</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,21 +22,21 @@ Operations → Circles** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Circle" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-circle">Construct Circle</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Construct Circle" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-circle">Construct Circle</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Circles From Surface Faces - Runtime Select" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-interactive-fixture-validation-required">
-  <td><a href="#construct-circles-from-surface-faces---runtime-select">Construct Circles From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive fixture validation required</td>
+<tr data-command="Construct Circles From Surface Faces - Runtime Select" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
+  <td><a href="#construct-circles-from-surface-faces---runtime-select">Construct Circles From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
 </tr>
-<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-setter-probe-and-fixture-validation-required">
-  <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - setter probe and fixture validation required</td>
+<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-setter-probe-and-fixture-validation-required">
+  <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - setter probe and fixture validation required</td>
 </tr>
 </tbody>
 </table>
 
 ## Construct Circle
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ result.
 
 ## Construct Circles From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 This command has no MP arguments. The operator selects surface faces in
 SpatialAnalyzer while the request is active. Cancellation or a client deadline
@@ -65,7 +65,7 @@ replays the operation.
 
 ## Construct Circles (Lines) From Surfaces
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

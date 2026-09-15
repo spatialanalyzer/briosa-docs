@@ -1,6 +1,6 @@
 ---
 title: BriosaClient Lifecycle
-description: Complete Next contract for independently managing Briosa, SpatialAnalyzer, and the SpatialAnalyzer SDK from Python.
+description: Unreleased client API for independently managing Briosa, SpatialAnalyzer, and the SpatialAnalyzer SDK from Python.
 sidebar_label: Overview and Types
 ---
 

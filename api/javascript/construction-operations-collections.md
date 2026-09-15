@@ -1,13 +1,13 @@
 ---
 title: Construction Operations / Collections
-description: Current and Next Briosa JavaScript and TypeScript APIs for selected collection-management MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for selected collection-management MP commands.
 toc_max_heading_level: 2
 ---
 
 # Construction Operations / Collections
 
 The current server already exposes `Get Active Collection Name`. These
-functions define its first-party wrapper and the four Next collection-mutation
+functions define its first-party wrapper and the four collection-mutation
 functions. Mutation calls are never replayed automatically.
 
 ## Set (or construct) default collection

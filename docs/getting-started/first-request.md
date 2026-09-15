@@ -17,10 +17,12 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Status: Next]
+:::note[Server Released; Client Packages Unpublished]
 
-These examples show the Lifecycle Foundation and idiomatic command APIs planned
-for Briosa `v0.2`. They are not available in the current bootstrap packages.
+The server lifecycle and MP APIs are available in Briosa Server 0.5.1.
+Client examples describe the implemented source APIs; the .NET, Python, and
+JavaScript/TypeScript packages have not yet been published. See
+[Release Status](/docs/releases) for availability and validation limits.
 
 :::
 

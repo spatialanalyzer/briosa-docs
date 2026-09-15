@@ -10,12 +10,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the five commands observed under **Construction
 Operations → Collections** in SA 2026.1.0529.7. `Get Active Collection Name`
-is available in the current Briosa server; the remaining four contracts are
-selected for the next release.
+is available in the current Briosa server; the other four operations are also included in Briosa Server 0.5.1.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>5</strong></div>
-  <div><span>Current or Next</span><strong>5</strong></div>
+  <div><span>Current Server Operations</span><strong>5</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,27 +23,27 @@ selected for the next release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#set-or-construct-default-collection">Set (or construct) default collection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#set-or-construct-default-collection">Set (or construct) default collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-collection">Construct Collection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Construct Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-collection">Construct Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
 <tr data-command="Get Active Collection Name" data-group="Construction Operations / Collections" data-status="current" data-validation="licensed-exact-target-validation-complete">
   <td><a href="#get-active-collection-name">Get Active Collection Name</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed exact-target validation complete</td>
 </tr>
-<tr data-command="Delete Collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-destructive-fixture-validation-required">
-  <td><a href="#delete-collection">Delete Collection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - destructive fixture validation required</td>
+<tr data-command="Delete Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+  <td><a href="#delete-collection">Delete Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Delete Collections by Wildcard" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-destructive-fixture-validation-required">
-  <td><a href="#delete-collections-by-wildcard">Delete Collections by Wildcard</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - destructive fixture validation required</td>
+<tr data-command="Delete Collections by Wildcard" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+  <td><a href="#delete-collections-by-wildcard">Delete Collections by Wildcard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
 </tbody>
 </table>
 
 ## Set (or construct) default collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -59,7 +58,7 @@ additional Briosa validation policy.
 
 ## Construct Collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -90,7 +89,7 @@ operation is safe to replay.
 
 ## Delete Collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -104,7 +103,7 @@ operation after an unknown execution outcome.
 
 ## Delete Collections by Wildcard
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

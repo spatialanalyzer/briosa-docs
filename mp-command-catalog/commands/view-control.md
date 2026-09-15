@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # View Control Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>52</strong></div>
-  <div><span>Current or Next</span><strong>47</strong></div>
+  <div><span>Current Server Operations</span><strong>47</strong></div>
   <div><span>Excluded or Unavailable</span><strong>5</strong></div>
 </div>
 
@@ -23,22 +21,22 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Auto-Scale" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Auto-Scale" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#auto-scale">Auto-Scale</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Center Graphics About Object(s)" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Center Graphics About Object(s)" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#center-graphics-about-objects">Center Graphics About Object(s)</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Center Graphics About Point" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Center Graphics About Point" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#center-graphics-about-point">Center Graphics About Point</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Convert Integer Values to RGB" data-group="View Control / Colors" data-status="excluded" data-validation="not-applicable">
@@ -53,16 +51,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Define point of view" data-group="View Control / Point Of View" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Define point of view" data-group="View Control / Point Of View" data-status="current" data-validation="portable-contract-review">
   <td><a href="#define-point-of-view">Define point of view</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Active Clipping Planes" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Active Clipping Planes" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-active-clipping-planes">Get Active Clipping Planes</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get Object Color" data-group="View Control / Colors" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -71,10 +69,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get point of view parameters" data-group="View Control / Point Of View" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get point of view parameters" data-group="View Control / Point Of View" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-point-of-view-parameters">Get point of view parameters</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Hide All Callout View" data-group="View Control / Hide Show Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -83,214 +81,214 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Hide All Callout Views" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Hide All Callout Views" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#hide-all-callout-views">Hide All Callout Views</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Hide Objects" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Hide Objects" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#hide-objects">Hide Objects</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Highlight Objects" data-group="View Control / Highlight Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Highlight Objects" data-group="View Control / Highlight Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#highlight-objects">Highlight Objects</a></td>
   <td>View Control / Highlight Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Highlight Point" data-group="View Control / Highlight Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Highlight Point" data-group="View Control / Highlight Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#highlight-point">Highlight Point</a></td>
   <td>View Control / Highlight Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Highlight Relationships" data-group="View Control / Highlight Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Highlight Relationships" data-group="View Control / Highlight Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#highlight-relationships">Highlight Relationships</a></td>
   <td>View Control / Highlight Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Load Ribbon Bar from XML File" data-group="View Control / Ribbon Bar" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Load Ribbon Bar from XML File" data-group="View Control / Ribbon Bar" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#load-ribbon-bar-from-xml-file">Load Ribbon Bar from XML File</a></td>
   <td>View Control / Ribbon Bar</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Refresh Views" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Refresh Views" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#refresh-views">Refresh Views</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Reset Ribbon Bar to Default" data-group="View Control / Ribbon Bar" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Reset Ribbon Bar to Default" data-group="View Control / Ribbon Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#reset-ribbon-bar-to-default">Reset Ribbon Bar to Default</a></td>
   <td>View Control / Ribbon Bar</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Save point of view" data-group="View Control / Point Of View" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Save point of view" data-group="View Control / Point Of View" data-status="current" data-validation="portable-contract-review">
   <td><a href="#save-point-of-view">Save point of view</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Background Color" data-group="View Control / Colors" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Background Color" data-group="View Control / Colors" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-background-color">Set Background Color</a></td>
   <td>View Control / Colors</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set MP's Window State" data-group="View Control" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set MP's Window State" data-group="View Control" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-mps-window-state">Set MP's Window State</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Object(s) Color" data-group="View Control / Colors" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Object(s) Color" data-group="View Control / Colors" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-objects-color">Set Object(s) Color</a></td>
   <td>View Control / Colors</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Object(s) Translucency" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Object(s) Translucency" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-objects-translucency">Set Object(s) Translucency</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set point of view" data-group="View Control / Point Of View" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set point of view" data-group="View Control / Point Of View" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-of-view">Set point of view</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point of View from Frame" data-group="View Control / Point Of View" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Point of View from Frame" data-group="View Control / Point Of View" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-of-view-from-frame">Set Point of View from Frame</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point of View from Instrument Updates" data-group="View Control / Point Of View" data-status="next" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set Point of View from Instrument Updates" data-group="View Control / Point Of View" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-point-of-view-from-instrument-updates">Set Point of View from Instrument Updates</a></td>
   <td>View Control / Point Of View</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Render Mode Type" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Render Mode Type" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-render-mode-type">Set Render Mode Type</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set SA's Window Pos" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set SA's Window Pos" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-sas-window-pos">Set SA's Window Pos</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set SA's Window Size" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set SA's Window Size" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-sas-window-size">Set SA's Window Size</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set SA's Window State" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set SA's Window State" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-sas-window-state">Set SA's Window State</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Target Labels Use Full Names" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Target Labels Use Full Names" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-target-labels-use-full-names">Set Target Labels Use Full Names</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Toolkit Visibility" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Toolkit Visibility" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-toolkit-visibility">Set Toolkit Visibility</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set View Clipping Plane" data-group="View Control" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set View Clipping Plane" data-group="View Control" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-view-clipping-plane">Set View Clipping Plane</a></td>
   <td>View Control</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Working Color" data-group="View Control / Colors" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Working Color" data-group="View Control / Colors" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-working-color">Set Working Color</a></td>
   <td>View Control / Colors</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Working Color Auto Increment" data-group="View Control / Colors" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Working Color Auto Increment" data-group="View Control / Colors" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-working-color-auto-increment">Set Working Color Auto Increment</a></td>
   <td>View Control / Colors</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show / Hide by Object Type" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show / Hide by Object Type" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show--hide-by-object-type">Show / Hide by Object Type</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show / Hide Callout View" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show / Hide Callout View" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show--hide-callout-view">Show / Hide Callout View</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show / Hide Dimension" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show / Hide Dimension" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show--hide-dimension">Show / Hide Dimension</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show / Hide Points" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show / Hide Points" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show--hide-points">Show / Hide Points</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show by Object Type" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show by Object Type" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show-by-object-type">Show by Object Type</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show Items in Tree" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show Items in Tree" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show-items-in-tree">Show Items in Tree</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show Labels" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show Labels" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show-labels">Show Labels</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show Objects" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show Objects" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#show-objects">Show Objects</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Annotations for Datums" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Annotations for Datums" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-annotations-for-datums">Show/Hide Annotations for Datums</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Annotations for Feature Checks" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Annotations for Feature Checks" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-annotations-for-feature-checks">Show/Hide Annotations for Feature Checks</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Show/Hide Dimensions" data-group="View Control / Hide Show Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -299,40 +297,40 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Show/Hide Inspection Bar" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Inspection Bar" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-inspection-bar">Show/Hide Inspection Bar</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Instrument Interface" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Instrument Interface" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-instrument-interface">Show/Hide Instrument Interface</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Instrument Probe Tip" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Instrument Probe Tip" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-instrument-probe-tip">Show/Hide Instrument Probe Tip</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Instruments" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Instruments" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-instruments">Show/Hide Instruments</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Relationship Report" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Relationship Report" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-relationship-report">Show/Hide Relationship Report</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Show/Hide Relationship Watch" data-group="View Control / Hide Show Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Show/Hide Relationship Watch" data-group="View Control / Hide Show Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#showhide-relationship-watch">Show/Hide Relationship Watch</a></td>
   <td>View Control / Hide Show Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 </tbody>
@@ -340,7 +338,7 @@ is callable in the current release.
 
 ## Auto-Scale
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -365,7 +363,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Center Graphics About Object(s)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -392,7 +390,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Center Graphics About Point
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -472,7 +470,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Define point of view
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -506,7 +504,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Active Clipping Planes
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -556,7 +554,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Get point of view parameters
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -614,7 +612,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Hide All Callout Views
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -639,7 +637,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Hide Objects
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -664,7 +662,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Highlight Objects
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -690,7 +688,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Highlight Point
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -716,7 +714,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Highlight Relationships
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -742,7 +740,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Load Ribbon Bar from XML File
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -767,7 +765,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Refresh Views
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -792,7 +790,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Reset Ribbon Bar to Default
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -817,7 +815,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Save point of view
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -843,7 +841,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Background Color
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -873,7 +871,7 @@ Sets the four color values; background type and gradient direction cannot be sel
 
 ## Set MP's Window State
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -898,7 +896,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Object(s) Color
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -925,7 +923,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Object(s) Translucency
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -952,7 +950,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set point of view
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -977,7 +975,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Point of View from Frame
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1002,7 +1000,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Point of View from Instrument Updates
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1038,7 +1036,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Render Mode Type
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1063,7 +1061,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set SA's Window Pos
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1089,7 +1087,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set SA's Window Size
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1115,7 +1113,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set SA's Window State
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1140,7 +1138,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Target Labels Use Full Names
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1165,7 +1163,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Toolkit Visibility
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1191,7 +1189,7 @@ Shows or hides the toolkit; the toolkit page cannot be selected.
 
 ## Set View Clipping Plane
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1217,7 +1215,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Working Color
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1242,7 +1240,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Working Color Auto Increment
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1267,7 +1265,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show / Hide by Object Type
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1295,7 +1293,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show / Hide Callout View
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1321,7 +1319,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show / Hide Dimension
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1347,7 +1345,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show / Hide Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1373,7 +1371,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show by Object Type
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1399,7 +1397,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show Items in Tree
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1430,7 +1428,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show Labels
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1456,7 +1454,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show Objects
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1481,7 +1479,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Annotations for Datums
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1509,7 +1507,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Annotations for Feature Checks
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1563,7 +1561,7 @@ No complete useful exact-target SDK binding is available.
 
 ## Show/Hide Inspection Bar
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1588,7 +1586,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Instrument Interface
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1615,7 +1613,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Instrument Probe Tip
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1640,7 +1638,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Instruments
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1666,7 +1664,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Relationship Report
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1692,7 +1690,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Show/Hide Relationship Watch
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

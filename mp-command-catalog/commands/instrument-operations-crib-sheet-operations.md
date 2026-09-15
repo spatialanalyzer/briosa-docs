@@ -36,7 +36,12 @@ running. Execution may be long-running; a client deadline or cancellation does
 not prove that the crib sheet stopped, and Briosa never automatically replays
 the call after an unknown outcome.
 
-## Client APIs
+## Availability and References
+
+These commands are not exposed by Briosa Server 0.5.1 or the current public
+client APIs. The descriptions above describe proposed behavior, not a callable
+implementation. Their Next status does not establish a release date.
+
 
 - [gRPC](/api/grpc/instrument-operations-crib-sheet-operations)
 - [.NET](/api/dotnet/instrument-operations-crib-sheet-operations)

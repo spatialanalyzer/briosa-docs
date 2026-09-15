@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Process Flow Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>23</strong></div>
-  <div><span>Current or Next</span><strong>8</strong></div>
+  <div><span>Current Server Operations</span><strong>8</strong></div>
   <div><span>Excluded or Unavailable</span><strong>15</strong></div>
 </div>
 
@@ -23,34 +21,34 @@ is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Ask for Double" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for Double" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-double">Ask for Double</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for Integer" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for Integer" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-integer">Ask for Integer</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for Point Name" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for Point Name" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-point-name">Ask for Point Name</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for String" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for String" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-string">Ask for String</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for String (Pull-Down Version)" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for String (Pull-Down Version)" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-string-pull-down-version">Ask for String (Pull-Down Version)</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
 <tr data-command="Ask for User Decision (Pull-Down Version)" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -65,16 +63,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Ask for User Decision from Image" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for User Decision from Image" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-user-decision-from-image">Ask for User Decision from Image</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for User Decision from Strings" data-group="Process Flow Operations" data-status="next" data-validation="licensed-validation-completed">
+<tr data-command="Ask for User Decision from Strings" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#ask-for-user-decision-from-strings">Ask for User Decision from Strings</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
 <tr data-command="Ask for User Decision(HTML)" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -137,10 +135,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Object Existence Test (Check Only)" data-group="Process Flow Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Object Existence Test (Check Only)" data-group="Process Flow Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#object-existence-test-check-only">Object Existence Test (Check Only)</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Reset Counter" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -166,7 +164,7 @@ is callable in the current release.
 
 ## Ask for Double
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -198,7 +196,7 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
 
 ## Ask for Integer
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -230,7 +228,7 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
 
 ## Ask for Point Name
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -259,7 +257,7 @@ The MP cancel-jump target is not exposed; Briosa returns the selected point or r
 
 ## Ask for String
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -289,7 +287,7 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
 
 ## Ask for String (Pull-Down Version)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -375,7 +373,7 @@ The exact SDK cannot supply `Button Answers`, `Step to jump to if Canceled (-1 w
 
 ## Ask for User Decision from Image
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -406,7 +404,7 @@ The MP cancel-jump target is not exposed; Briosa returns the decision or reports
 
 ## Ask for User Decision from Strings
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -709,7 +707,7 @@ The exact SDK cannot supply `Step if Object does exist`, `Step if Object doesn't
 
 ## Object Existence Test (Check Only)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

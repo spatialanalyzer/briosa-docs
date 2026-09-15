@@ -1,16 +1,14 @@
 ---
 title: Instrument Operations / Watch Window Operations
-description: Next Briosa .NET API for reviewed Watch Window Operations.
+description: Unreleased Briosa .NET API for reviewed Watch Window Operations.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations / Watch Window Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-Six of the seven reviewed subgroup commands have approved methods. They are not
-released support until this documentation is versioned for a published package.
-`Watch Window Template 3D` remains Uncommitted pending signature clarification.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

@@ -8,11 +8,9 @@ description: Call SpatialAnalyzer's Get Working Directory MP command from the Br
 Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
 `Directory` output as a .NET string.
 
-:::note[Status: Next]
+:::note[Unreleased Client Package]
 
-This page describes the reviewed public API planned for the first supported
-Briosa .NET package release. Pre-release package checkouts may still expose a
-temporary bootstrap interface.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

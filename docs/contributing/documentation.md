@@ -8,7 +8,7 @@ Documentation work follows the same issue-driven workflow as the server:
 
 1. start from a focused issue;
 2. create `<issue-number>-<short-description>`;
-3. ground released API claims in committed source, and ground **Next** API
+3. ground released API claims in committed source, and ground **Unreleased** API
 contracts in an explicitly reviewed implementation issue;
 4. run `npm ci` and `npm run check` with Node.js 24; and
 5. open a focused pull request.
@@ -27,37 +27,38 @@ duplicating client usage guidance.
 
 ## Draft and Release API Contracts
 
-Each API section is an independent Docusaurus docs plugin with its own release
-history. Source pages under `api/grpc/`, `api/dotnet/`, `api/python/`, and
-`api/javascript/` are the built-in **Next** version. They may define a reviewed
-public contract before its coordinated implementation. Every API page must
-display Docusaurus's built-in **Version: Next** badge and section-specific
-version selector, and it must not claim that current packages already provide
-the contract.
+Each API reference has its own Docusaurus release history. The gRPC reference
+is published as **0.5.1**, matching Briosa Server 0.5.1. Product guides and the
+MP catalog remain unversioned.
 
-The server and three clients may release at different versions. After an API's
-implementation and conformance tests satisfy its Next contract, snapshot only
-that API instance:
+The source directories under `api/` hold working documentation. Unpublished
+client references are labeled **Unreleased**. The server's working reference
+is omitted from the public build while the released snapshot is the default.
+Do not present a source implementation as an available package.
+
+Before cutting a reference, reconcile its contracts and availability against
+the exact published product. Preserve unimplemented proposals as unavailable
+and keep validation qualifications separate from release status. Then use the
+standard versioning command for that API instance, with the actual release:
 
 ```powershell
-npm run docusaurus docs:version:grpc 0.2.0
-npm run docusaurus docs:version:dotnet 0.2.0
-npm run docusaurus docs:version:python 0.2.0
-npm run docusaurus docs:version:javascript 0.2.0
+npm run docusaurus docs:version:grpc <server-version>
+npm run docusaurus docs:version:dotnet <dotnet-package-version>
+npm run docusaurus docs:version:python <python-package-version>
+npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-Replace each example version with the actual product release. Docusaurus copies
-that API's current source and sidebar into its plugin-specific versioned
-directories. Continued work remains in the source directory as the next
-unreleased contract.
-
-Do not snapshot the version-independent product guidance or MP Command Catalog
-as part of an API release.
+Docusaurus copies the API source and sidebar into plugin-specific versioned
+directories. Update the plugin's default version after a new release and verify
+incoming links, version selectors, and search metadata. Apply factual corrections
+to both the maintained snapshot and working source where they still apply.
+Do not snapshot a client reference before its package is published, and do not
+invent a separate whole-site version to represent several independent products.
 
 ## Review Checklist
 
 - Does each released API claim match committed implementation? If the page is
-  Next, does it trace to the reviewed contract that the implementation issue
+  Unreleased, does it trace to the reviewed contract that the implementation issue
   must satisfy?
 - Does catalog content follow the [MP Command Catalog Authoring Guide](./mp-command-catalog.md)
   without presenting planned or unsupported work as API?
@@ -73,5 +74,5 @@ as part of an API release.
 Edit links on each page open a change against this repository. Released
 protocol and runtime corrections should begin in
 [spatialanalyzer/briosa](https://github.com/spatialanalyzer/briosa). A reviewed
-Next API contract may begin here, but it must be implemented and verified
+Unreleased API contract may begin here, but it must be implemented and verified
 before that API documentation is snapshotted as a release.

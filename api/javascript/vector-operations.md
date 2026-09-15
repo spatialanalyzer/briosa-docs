@@ -1,15 +1,14 @@
 ---
 title: Vector Operations
-description: Next Briosa JavaScript and TypeScript APIs for supported Vector Operations MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for supported Vector Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Vector Operations
 
-:::note[Next JavaScript and TypeScript Contract]
+:::note[Unreleased Client Package]
 
-These functions define the next package surface. They are not released support
-until this Next documentation is versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,10 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Add a Vector To Vector Name Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Add a Vector To Vector Name Ref List](/mp-command-catalog/commands/vector-operations#add-a-vector-to-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#add-a-vector-to-vector-name-ref-list)
@@ -57,8 +58,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Auto-Range and Set Vector Group Colorization (All)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Auto-Range and Set Vector Group Colorization (All)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-all) · [gRPC contract](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-all)
@@ -94,8 +97,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Auto-Range and Set Vector Group Colorization (Selected)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Auto-Range and Set Vector Group Colorization (Selected)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [gRPC contract](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-selected)
@@ -133,8 +138,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete i-th Vector From Vector Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#delete-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/vector-operations#delete-i-th-vector-from-vector-group)
@@ -170,8 +177,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Vector by Name
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Vector by Name](/mp-command-catalog/commands/vector-operations#delete-vector-by-name) · [gRPC contract](/api/grpc/vector-operations#delete-vector-by-name)
@@ -207,8 +216,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Vectors
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Delete Vectors](/mp-command-catalog/commands/vector-operations#delete-vectors) · [gRPC contract](/api/grpc/vector-operations#delete-vectors)
@@ -242,8 +253,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Vector From Vector Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/vector-operations#get-i-th-vector-from-vector-group)
@@ -294,8 +307,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Vector From Vector Name Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get i-th Vector From Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#get-i-th-vector-from-vector-name-ref-list)
@@ -348,8 +363,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Vectors in Vector Group
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Vectors in Vector Group](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-group) · [gRPC contract](/api/grpc/vector-operations#get-number-of-vectors-in-vector-group)
@@ -383,8 +400,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Vectors in Vector Name Ref List
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Number of Vectors in Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#get-number-of-vectors-in-vector-name-ref-list)
@@ -418,8 +437,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector From Vector Group By Name
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Vector From Vector Group By Name](/mp-command-catalog/commands/vector-operations#get-vector-from-vector-group-by-name) · [gRPC contract](/api/grpc/vector-operations#get-vector-from-vector-group-by-name)
@@ -468,8 +489,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector Group Properties
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Get Vector Group Properties](/mp-command-catalog/commands/vector-operations#get-vector-group-properties) · [gRPC contract](/api/grpc/vector-operations#get-vector-group-properties)
@@ -540,8 +563,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector Group Colorization Options (All)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Vector Group Colorization Options (All)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-all) · [gRPC contract](/api/grpc/vector-operations#set-vector-group-colorization-options-all)
@@ -575,8 +600,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector Group Colorization Options (Selected)
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Set Vector Group Colorization Options (Selected)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-selected) · [gRPC contract](/api/grpc/vector-operations#set-vector-group-colorization-options-selected)
@@ -612,8 +639,10 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Sort Vectors
 
-:::note[Status: Next]
-This function is part of the next JavaScript and TypeScript package contract.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
 :::
 
 [Sort Vectors](/mp-command-catalog/commands/vector-operations#sort-vectors) · [gRPC contract](/api/grpc/vector-operations#sort-vectors)

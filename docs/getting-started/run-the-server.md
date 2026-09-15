@@ -16,11 +16,12 @@ The Briosa server, SDK, and SpatialAnalyzer application still have independent
 lifecycles. Direct gRPC users can start and control each resource separately,
 and client applications can diagnose or recover the SDK without restarting SA.
 
-:::note[Status: Next]
+:::note[Server Released; Client Packages Unpublished]
 
-This page shows the Lifecycle Foundation planned for Briosa `v0.2`. The
-coordinated server and client implementations are not available in the current
-bootstrap packages.
+The server lifecycle and MP APIs are available in Briosa Server 0.5.1.
+Client examples describe the implemented source APIs; the .NET, Python, and
+JavaScript/TypeScript packages have not yet been published. See
+[Release Status](/docs/releases) for availability and validation limits.
 
 :::
 

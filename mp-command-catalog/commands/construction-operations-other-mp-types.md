@@ -11,12 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the 74 commands observed under **Construction Operations
 → Other MP Types** in SA 2026.1.0529.7. Commands that query live SA state,
 operate on MP variables, or use SA transform semantics remain available as
-Next contracts. Pure value and collection helpers stay in the clients'
+released server contracts. Pure value and collection helpers stay in the clients'
 languages instead of becoming network calls.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>74</strong></div>
-  <div><span>Current or Next</span><strong>34</strong></div>
+  <div><span>Current Server Operations</span><strong>34</strong></div>
   <div><span>Excluded or Unavailable</span><strong>40</strong></div>
 </div>
 
@@ -39,61 +39,61 @@ languages instead of becoming network calls.
 <tr data-command="Make String from Double" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-string-from-double">Make String from Double</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make String from Decimal Degrees Angular Value" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-string-from-decimal-degrees-angular-value">Make String from Decimal Degrees Angular Value</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make an Incremented String" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-an-incremented-string">Make an Incremented String</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a System String" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-sensitive-output-validation-required"><td><a href="#make-a-system-string">Make a System String</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - sensitive-output validation required</td></tr>
+<tr data-command="Make a System String" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-sensitive-output-validation-required"><td><a href="#make-a-system-string">Make a System String</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sensitive-output validation required</td></tr>
 <tr data-command="Concatenate Strings" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#concatenate-strings">Concatenate Strings</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make a String Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-string-ref-list">Make a String Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make a String from a String Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-string-from-a-string-ref-list">Make a String from a String Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make Strings from a Point Name" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-strings-from-a-point-name">Make Strings from a Point Name</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make Strings from a Collection Object Name" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-strings-from-a-collection-object-name">Make Strings from a Collection Object Name</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Collection Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-name---runtime-select">Make a Collection Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Collection Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-name---runtime-select">Make a Collection Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
 <tr data-command="Make a Collection Item Name from Strings" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-item-name-from-strings">Make a Collection Item Name from Strings</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Collection Item Name Reference List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-item-name-reference-list---wildcard-selection">Make a Collection Item Name Reference List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Collection Item Name Reference List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-item-name-reference-list---wildcard-selection">Make a Collection Item Name Reference List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name from Strings" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-object-name-from-strings">Make a Collection Object Name from Strings</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Collection Object Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name---runtime-select">Make a Collection Object Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
-<tr data-command="Make a Collection Object Name - Ensure Unique" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-collection-object-name---ensure-unique">Make a Collection Object Name - Ensure Unique</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - output-binding validation required</td></tr>
-<tr data-command="Make a Collection Object Name Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name-reference-list--runtime-select">Make a Collection Object Name Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
-<tr data-command="Make a Collection Object Name Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-reference-list--wildcard-selection">Make a Collection Object Name Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Make a Collection Object Name Ref List - By Type" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type">Make a Collection Object Name Ref List - By Type</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Make a Collection Object Name Ref List - By Type and Color" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type-and-color">Make a Collection Object Name Ref List - By Type and Color</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Collection Object Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name---runtime-select">Make a Collection Object Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Collection Object Name - Ensure Unique" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-collection-object-name---ensure-unique">Make a Collection Object Name - Ensure Unique</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - output-binding validation required</td></tr>
+<tr data-command="Make a Collection Object Name Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name-reference-list--runtime-select">Make a Collection Object Name Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Collection Object Name Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-reference-list--wildcard-selection">Make a Collection Object Name Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Collection Object Name Ref List - By Type" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type">Make a Collection Object Name Ref List - By Type</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Collection Object Name Ref List - By Type and Color" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type-and-color">Make a Collection Object Name Ref List - By Type and Color</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-object-name-ref-list">Make a Collection Object Name Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Append two Collection Object Name Ref Lists" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#append-two-collection-object-name-ref-lists">Append two Collection Object Name Ref Lists</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Add a Collection Object Name to a Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#add-a-collection-object-name-to-a-ref-list">Add a Collection Object Name to a Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Collection Object Name Ref List from all Groups in a Collection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection">Make a Collection Object Name Ref List from all Groups in a Collection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Collection Object Name Ref List from all Groups in a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection">Make a Collection Object Name Ref List from all Groups in a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
 <tr data-command="Make a Collection Instrument Reference List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-instrument-reference-list">Make a Collection Instrument Reference List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Get Collection Name and Index from Collection Instrument ID" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#get-collection-name-and-index-from-collection-instrument-id">Get Collection Name and Index from Collection Instrument ID</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Get Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-mp-variable-validation-required"><td><a href="#get-collection-instrument-ref-list-variable">Get Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - MP-variable validation required</td></tr>
-<tr data-command="Set Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-mp-variable-validation-required"><td><a href="#set-collection-instrument-ref-list-variable">Set Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - MP-variable validation required</td></tr>
+<tr data-command="Get Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#get-collection-instrument-ref-list-variable">Get Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - MP-variable validation required</td></tr>
+<tr data-command="Set Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#set-collection-instrument-ref-list-variable">Set Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - MP-variable validation required</td></tr>
 <tr data-command="Add a Collection Instrument to a Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#add-a-collection-instrument-to-a-ref-list">Add a Collection Instrument to a Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - output binding and fixture</td></tr>
-<tr data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
-<tr data-command="Make a Relationship Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--wildcard-selection">Make a Relationship Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - partial SDK binding</td></tr>
-<tr data-command="Make a Relationship Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--runtime-select">Make a Relationship Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive partial SDK binding</td></tr>
-<tr data-command="Make an Event Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-an-event-reference-list--wildcard-selection">Make an Event Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - output binding and fixture</td></tr>
+<tr data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Relationship Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--wildcard-selection">Make a Relationship Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - partial SDK binding</td></tr>
+<tr data-command="Make a Relationship Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--runtime-select">Make a Relationship Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive partial SDK binding</td></tr>
+<tr data-command="Make an Event Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-an-event-reference-list--wildcard-selection">Make an Event Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
 <tr data-command="Append two Relationship Ref Lists" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#append-two-relationship-ref-lists">Append two Relationship Ref Lists</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make a Collection Instrument ID from a Collection and an Integer" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-instrument-id-from-a-collection-and-an-integer">Make a Collection Instrument ID from a Collection and an Integer</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Collection Instrument ID - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-id---runtime-select">Make a Collection Instrument ID - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Collection Instrument ID - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-id---runtime-select">Make a Collection Instrument ID - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
 <tr data-command="Make a Collection Machine ID from a Collection and an Integer" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-collection-machine-id-from-a-collection-and-an-integer">Make a Collection Machine ID from a Collection and an Integer</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Report Ref List from a Collection" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-report-ref-list-from-a-collection">Make a Report Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Make a Report Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-report-ref-list---runtime-select">Make a Report Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Report Ref List from a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-report-ref-list-from-a-collection">Make a Report Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Make a Report Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-report-ref-list---runtime-select">Make a Report Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
 <tr data-command="Make a Picture Name Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-picture-name-ref-list">Make a Picture Name Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Picture Name Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-picture-name-ref-list---runtime-select">Make a Picture Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-command="Make a Picture Name Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-picture-name-ref-list---runtime-select">Make a Picture Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
 <tr data-command="Make a Report Items Ref List" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-report-items-ref-list">Make a Report Items Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Make a Transform from Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-fixed-xyz">Make a Transform from Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Make a Transform from Doubles (Euler Parameters)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-euler-parameters">Make a Transform from Doubles (Euler Parameters)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Make a Transform from Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-fixed-xyz">Make a Transform from Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Make a Transform from Doubles (Euler Parameters)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-euler-parameters">Make a Transform from Doubles (Euler Parameters)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
 <tr data-command="Make a Transform from Doubles (Matrix Elements)" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-transform-from-doubles-matrix-elements">Make a Transform from Doubles (Matrix Elements)</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Make a World Transform Operator (from Transform and Scale)" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-world-transform-operator-from-transform-and-scale">Make a World Transform Operator (from Transform and Scale)</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Get Working Transform of Object (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#get-working-transform-of-object-fixed-xyz">Get Working Transform of Object (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Invert Transform" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#invert-transform">Invert Transform</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-fixed-xyz">Decompose Transform into Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Vectors (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-fixed-xyz">Decompose Transform into Vectors (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Vectors (Origin and Axes)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-origin-and-axes">Decompose Transform into Vectors (Origin and Axes)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Get Working Transform of Object (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#get-working-transform-of-object-fixed-xyz">Get Working Transform of Object (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Invert Transform" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#invert-transform">Invert Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-fixed-xyz">Decompose Transform into Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Vectors (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-fixed-xyz">Decompose Transform into Vectors (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Vectors (Origin and Axes)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-origin-and-axes">Decompose Transform into Vectors (Origin and Axes)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Matrix Elements)" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#decompose-transform-into-doubles-matrix-elements">Decompose Transform into Doubles (Matrix Elements)</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
-<tr data-command="Decompose World Transform Operator into Doubles (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world">Decompose World Transform Operator into Doubles (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Doubles (Euler XYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-xyz">Decompose Transform into Doubles (Euler XYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Doubles (Euler ZYX)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyx">Decompose Transform into Doubles (Euler ZYX)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Doubles (Euler ZYZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyz">Decompose Transform into Doubles (Euler ZYZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose Transform into Doubles (Euler ZXZ)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zxz">Decompose Transform into Doubles (Euler ZXZ)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
-<tr data-command="Decompose World Transform Operator into Vectors (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="next" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world">Decompose World Transform Operator into Vectors (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose World Transform Operator into Doubles (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world">Decompose World Transform Operator into Doubles (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Doubles (Euler XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-xyz">Decompose Transform into Doubles (Euler XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Doubles (Euler ZYX)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyx">Decompose Transform into Doubles (Euler ZYX)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Doubles (Euler ZYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyz">Decompose Transform into Doubles (Euler ZYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose Transform into Doubles (Euler ZXZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zxz">Decompose Transform into Doubles (Euler ZXZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-command="Decompose World Transform Operator into Vectors (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world">Decompose World Transform Operator into Vectors (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
 <tr data-command="Split String into Two Strings" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="portable-contract-review"><td><a href="#split-string-into-two-strings">Split String into Two Strings</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Convert to Euler Angles from Fixed Angles" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="licensed-execution-probe"><td><a href="#convert-to-euler-angles-from-fixed-angles">Convert to Euler Angles from Fixed Angles</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
 <tr data-command="Make Projection Options" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="exact-target-sdk-binding-review"><td><a href="#make-projection-options">Make Projection Options</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Exact-target SDK binding review</td></tr>
@@ -190,7 +190,7 @@ state or guarantee uniqueness.
 
 ## Make a System String
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -239,7 +239,7 @@ collection, object, and type components.
 
 ## Make a Collection Name - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -260,7 +260,7 @@ Construct the typed `CollectionItemName` value in the client language.
 
 ## Make a Collection Item Name Reference List - WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -283,7 +283,7 @@ Construct `CollectionObjectName` locally.
 
 ## Make a Collection Object Name - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -298,7 +298,7 @@ object type. Cancellation does not prove that the interaction stopped.
 
 ## Make a Collection Object Name - Ensure Unique
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -314,7 +314,7 @@ licensed validation against this target.
 
 ## Make a Collection Object Name Reference List- Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Inputs are an optional empty `User Prompt` and `Object Type` defaulting to
 `Any`. The operation returns the operator-selected collection-object identities
@@ -324,7 +324,7 @@ and retains the usual interactive cancellation caveat.
 
 ## Make a Collection Object Name Reference List- WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 `Collection Wildcard Criteria` and `Object Wildcard Criteria` both default to
 `*`; `Object Type` defaults to `Any`. The command returns matching live object
@@ -334,7 +334,7 @@ identities in an undefined order.
 
 ## Make a Collection Object Name Ref List - By Type
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Collection` and accepts `Object Type` defaulting to `Any`. It returns
 matching live objects, possibly an empty list, in an undefined order.
@@ -343,7 +343,7 @@ matching live objects, possibly an empty list, in an undefined order.
 
 ## Make a Collection Object Name Ref List - By Type and Color
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Collection`; `Object Type` defaults to `Any` and `Object Color`
 defaults to red `(255, 0, 0)`, matching the MP editor. Only objects matching
@@ -371,7 +371,7 @@ Append the identity to the native client collection.
 
 ## Make a Collection Object Name Ref List from all Groups in a Collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Collection Name` and returns all point-group object identities in
 that live collection. The result may be empty and its order is undefined.
@@ -393,7 +393,7 @@ Read the collection and index components already carried by the structured
 
 ## Get Collection Instrument Ref List Variable
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires the MP variable `Name` and returns its collection-instrument list.
 This is retained because it participates in MP state shared with automation
@@ -403,7 +403,7 @@ solutions; Briosa does not cache or independently track that state.
 
 ## Set Collection Instrument Ref List Variable
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires the MP variable `Name` and a collection-instrument `Value`. It creates
 or replaces the MP variable in SpatialAnalyzer. Briosa does not retain a copy.
@@ -418,7 +418,7 @@ Append a caller-supplied instrument identity in the client language.
 
 ## Add Collection Instruments to a Ref List - WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Takes a required starting `Collection Instrument Reference List`; collection
 and instrument wildcard criteria each default to `*`. It returns the updated
@@ -429,7 +429,7 @@ argument requires exact-target validation.
 
 ## Make a Collection Instrument Reference List- Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 instrument identities. Cancellation does not prove the interaction stopped.
@@ -438,10 +438,10 @@ instrument identities. Cancellation does not prove the interaction stopped.
 
 ## Make a Relationship Reference List- WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Collection and relationship wildcard criteria default to `*`. The SDK export
-does not expose the MP's `Relationship Type Filter`, so the Next contract omits
+does not expose the MP's `Relationship Type Filter`, so the released server contract omits
 that filter and returns matching relationships across the MP's default type
 scope. This limitation is part of the public contract.
 
@@ -449,7 +449,7 @@ scope. This limitation is part of the public contract.
 
 ## Make a Relationship Reference List- Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Accepts an optional empty `User Prompt`. The unavailable `Relationship Type
 Filter` is omitted, so the operator selects from the MP's default type scope.
@@ -458,7 +458,7 @@ Filter` is omitted, so the operator selects from the MP's default type scope.
 
 ## Make an Event Reference List- WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Collection and event wildcard criteria default to `*`. Matching live event
 identities are returned in an undefined order.
@@ -479,7 +479,7 @@ Construct `CollectionInstrumentId` locally from its collection and index.
 
 ## Make a Collection Instrument ID - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 instrument identity.
@@ -494,7 +494,7 @@ Construct the structured machine identity locally.
 
 ## Make a Report Ref List from a Collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Collection Name` and returns the live SA reports in that collection.
 
@@ -502,7 +502,7 @@ Requires `Collection Name` and returns the live SA reports in that collection.
 
 ## Make a Report Ref List - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Accepts an optional empty `User Prompt` and returns the operator-selected SA
 reports.
@@ -517,7 +517,7 @@ Use a native collection when the caller already has the picture identities.
 
 ## Make a Picture Name Ref List - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 picture identities.
@@ -532,7 +532,7 @@ Use the client language's native collection for caller-supplied report items.
 
 ## Make a Transform from Doubles (Fixed XYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -548,7 +548,7 @@ calculation.
 
 ## Make a Transform from Doubles (Euler Parameters)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -577,7 +577,7 @@ client language.
 
 ## Get Working Transform of Object (Fixed XYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Object Name` in the MP's `Any` object domain and returns the object's
 live transform in working coordinates using Fixed XYZ semantics.
@@ -586,7 +586,7 @@ live transform in working coordinates using Fixed XYZ semantics.
 
 ## Invert Transform
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Transform` and returns `Inverse Transform` using SpatialAnalyzer's
 transform semantics.
@@ -595,7 +595,7 @@ transform semantics.
 
 ## Decompose Transform into Doubles (Fixed XYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Input Transform` and returns `X`, `Y`, `Z`, `Rx (Roll)`, `Ry
 (Pitch)`, and `Rz (Yaw)` as one typed result.
@@ -604,7 +604,7 @@ Requires `Input Transform` and returns `X`, `Y`, `Z`, `Rx (Roll)`, `Ry
 
 ## Decompose Transform into Vectors (Fixed XYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Input Transform` and returns `Position in Working` and `Orientation
 in Working` vectors.
@@ -613,7 +613,7 @@ in Working` vectors.
 
 ## Decompose Transform into Vectors (Origin and Axes)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Transform` and returns its `Origin`, `X Axis`, `Y Axis`, and `Z Axis`
 vectors.
@@ -628,7 +628,7 @@ Read the 16 matrix elements from the shared `Transform` value locally.
 
 ## Decompose World Transform Operator into Doubles (Fixed XYZ in World)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Input World Transform Operator` and returns world-coordinate `X`,
 `Y`, `Z`, `Rx (Roll)`, `Ry (Pitch)`, `Rz (Yaw)`, and `Scale`.
@@ -637,7 +637,7 @@ Requires `Input World Transform Operator` and returns world-coordinate `X`,
 
 ## Decompose Transform into Doubles (Euler XYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Returns `X`, `Y`, `Z`, `Euler Rx`, `Euler Ry`, and `Euler Rz` from the required
 input transform.
@@ -646,7 +646,7 @@ input transform.
 
 ## Decompose Transform into Doubles (Euler ZYX)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Returns `X`, `Y`, `Z`, `Euler Rz`, `Euler Ry`, and `Euler Rx` from the required
 input transform.
@@ -655,7 +655,7 @@ input transform.
 
 ## Decompose Transform into Doubles (Euler ZYZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Returns `X`, `Y`, `Z`, first `Euler Rz`, `Euler Ry`, and second `Euler Rz`.
 The API names the repeated outputs `first_rz` and `second_rz` without changing
@@ -665,7 +665,7 @@ their MP order.
 
 ## Decompose Transform into Doubles (Euler ZXZ)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Returns `X`, `Y`, `Z`, first `Euler Rz`, `Euler Rx`, and second `Euler Rz`.
 The repeated MP output names are disambiguated without changing their order.
@@ -674,7 +674,7 @@ The repeated MP output names are disambiguated without changing their order.
 
 ## Decompose World Transform Operator into Vectors (Fixed XYZ in World)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 Requires `Input World Transform Operator` and returns `Position in Working`,
 `Orientation in Working`, and `Scale`, preserving the MP's exact output labels.
@@ -721,7 +721,7 @@ first release remains local-only.
 
 ## API References
 
-The 34 Next contracts are published together in the
+The 34 released server contracts are published together in the
 [gRPC](/api/grpc/construction-operations-other-mp-types),
 [.NET](/api/dotnet/construction-operations-other-mp-types),
 [Python](/api/python/construction-operations-other-mp-types), and

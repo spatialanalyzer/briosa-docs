@@ -8,13 +8,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Dimension Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. A
-**Next** entry is a documentation-first contract, not a claim that the operation
-is callable in the current release.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>20</strong></div>
-  <div><span>Current or Next</span><strong>3</strong></div>
+  <div><span>Current Server Operations</span><strong>3</strong></div>
   <div><span>Excluded or Unavailable</span><strong>17</strong></div>
 </div>
 
@@ -59,16 +57,16 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Delete Dimension" data-group="Dimension Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Delete Dimension" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-dimension">Delete Dimension</a></td>
   <td>Dimension Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Dimension Value" data-group="Dimension Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Get Dimension Value" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-dimension-value">Get Dimension Value</a></td>
   <td>Dimension Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Get i-th Dimension From Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -113,10 +111,10 @@ is callable in the current release.
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Dimension Tolerance" data-group="Dimension Operations" data-status="next" data-validation="portable-contract-review">
+<tr data-command="Set Dimension Tolerance" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-dimension-tolerance">Set Dimension Tolerance</a></td>
   <td>Dimension Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
 <tr data-command="Set Object to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -314,7 +312,7 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Delete Dimension
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -339,7 +337,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Dimension Value
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -558,7 +556,7 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Set Dimension Tolerance
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

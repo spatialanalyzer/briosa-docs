@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Cylinders
-description: Next Briosa JavaScript and TypeScript APIs for selected cylinder-construction MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for selected cylinder-construction MP commands.
 toc_max_heading_level: 2
 ---
 

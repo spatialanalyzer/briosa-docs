@@ -1,15 +1,14 @@
 ---
 title: Instrument Operations / Nikon Metrology Laser Radars LR / LR Cloud Viewer Operations
-description: Next Briosa .NET APIs for reviewed Nikon LR Cloud Viewer MP commands.
+description: Unreleased Briosa .NET APIs for reviewed Nikon LR Cloud Viewer MP commands.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations / Nikon Metrology Laser Radars LR / LR Cloud Viewer Operations
 
-:::note[Next .NET Contract]
+:::note[Unreleased Client Package]
 
-These five methods are not released support until this documentation is
-versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

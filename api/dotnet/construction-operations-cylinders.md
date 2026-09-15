@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Cylinders
-description: Next Briosa .NET APIs for selected cylinder-construction MP commands.
+description: Unreleased Briosa .NET APIs for selected cylinder-construction MP commands.
 toc_max_heading_level: 2
 ---
 

@@ -33,7 +33,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Supported Operations',
+      label: 'First Calls',
       items: [
         'get-working-directory',
         'get-number-of-collections',
@@ -42,7 +42,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Wave A MP Commands (Next)',
+      label: 'MP Commands',
       collapsed: true,
       items: [
         'analysis-operations',
@@ -59,13 +59,6 @@ const sidebars: SidebarsConfig = {
         'variables',
         'vector-operations',
         'view-control',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Wave B MP Commands (Next)',
-      collapsed: true,
-      items: [
         'cloud-and-mesh-operations',
         {
           type: 'category',

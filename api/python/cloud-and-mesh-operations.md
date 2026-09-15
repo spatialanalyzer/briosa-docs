@@ -1,15 +1,14 @@
 ---
 title: Cloud and Mesh Operations
-description: Next Briosa Python APIs for supported Cloud and Mesh Operations MP commands.
+description: Unreleased Briosa Python APIs for supported Cloud and Mesh Operations MP commands.
 toc_max_heading_level: 2
 ---
 
 # Cloud and Mesh Operations
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines define the next flat `BriosaClient` command surface. They are
-not callable from a released package until this Next documentation is versioned.
+This reference describes the client source API. No package has been published yet.
 
 :::
 
@@ -18,8 +17,12 @@ precede keyword-only defaulted inputs, and generated gRPC messages never escape.
 
 ## Cloud Display Control
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: Portable contract review.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: Portable contract review.
+
 :::
 
 [Cloud Display Control](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#cloud-display-control)
@@ -52,8 +55,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Reset Cloud Bounding Box
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Reset Cloud Bounding Box](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#reset-cloud-bounding-box)
@@ -114,8 +121,12 @@ Returns all 10 MP outputs in the frozen, slotted `ResetCloudBoundingBoxResult` v
 
 ## Get Cloud Point Count
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud Point Count](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-point-count)
@@ -155,8 +166,12 @@ Returns all 4 MP outputs in the frozen, slotted `GetCloudPointCountResult` value
 
 ## Set Cloud Default Clipping Plane
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: Licensed SA 2026.1.0529.7 probe.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: Licensed SA 2026.1.0529.7 probe.
+
 :::
 
 [Set Cloud Default Clipping Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
@@ -189,8 +204,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Raster Scan Edge Inspection
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#raster-scan-edge-inspection)
@@ -233,8 +252,12 @@ Returns the MP output `Summary Result` directly as `str`. Normal asyncio cancell
 
 ## New Raster Scan Edge Inspection
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [New Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
@@ -285,8 +308,12 @@ Returns the MP output `Summary Result` directly as `str`. Normal asyncio cancell
 
 ## Clear Cloud Point Deviations
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Clear Cloud Point Deviations](/mp-command-catalog/commands/cloud-and-mesh-operations#clear-cloud-point-deviations) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#clear-cloud-point-deviations)
@@ -316,8 +343,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Enable All Cloud Cross Sections
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable All Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
@@ -347,8 +378,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Enable/Disable Cloud Cross Sections
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable/Disable Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
@@ -383,8 +418,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Enable Single Cloud Cross Section
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Enable Single Cloud Cross Section](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-single-cloud-cross-section)
@@ -417,8 +456,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Get Number of Cross Sections in Cross Section Cloud
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Number of Cross Sections in Cross Section Cloud](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
@@ -448,8 +491,12 @@ Returns the MP output `Cross Section Count` directly as `int`. Normal asyncio ca
 
 ## Filter Clouds to Plane
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-plane)
@@ -490,8 +537,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to Group
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Group](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-group)
@@ -532,8 +583,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to Surface
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Surface](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-surface)
@@ -576,8 +631,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to BSplines
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to BSplines](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-bsplines)
@@ -618,8 +677,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to Line Segment
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Line Segment](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-line-segment)
@@ -662,8 +725,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to Vector Groups - Resolve points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Vector Groups - Resolve points](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
@@ -710,8 +777,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Filter Clouds to Vector Groups - Resolve Clouds
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Filter Clouds to Vector Groups - Resolve Clouds](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
@@ -752,8 +823,12 @@ Returns the MP output `Filtered Clouds` directly as `tuple[CollectionObjectName,
 
 ## RGB Cloud Point Filter
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [RGB Cloud Point Filter](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#rgb-cloud-point-filter)
@@ -828,8 +903,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Get Cloud RGB Values
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud RGB Values](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values)
@@ -872,8 +951,12 @@ Returns all 4 MP outputs in the frozen, slotted `GetCloudRGBValuesResult` value.
 
 ## Get Cloud RGB Values Near Point
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Get Cloud RGB Values Near Point](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
@@ -920,8 +1003,12 @@ Returns all 4 MP outputs in the frozen, slotted `GetCloudRGBValuesNearPointResul
 
 ## Subdivide Cloud by Point Spacing
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Subdivide Cloud by Point Spacing](/mp-command-catalog/commands/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
@@ -960,8 +1047,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Delete Cloud Points by Radial Distance from Points
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Delete Cloud Points by Radial Distance from Points](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
@@ -998,8 +1089,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Delete Cloud Points by X Y Z Range
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — destructive fixture validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — destructive fixture validation required.
+
 :::
 
 [Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
@@ -1044,8 +1139,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Generate General Mesh
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Generate General Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#generate-general-mesh)
@@ -1088,8 +1187,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Consolidate Mesh
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Consolidate Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#consolidate-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#consolidate-mesh)
@@ -1119,8 +1222,12 @@ Returns `None`. Normal asyncio cancellation and timeout tools remain caller cont
 
 ## Mesh Volume
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Mesh Volume](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-volume)
@@ -1158,8 +1265,12 @@ Returns all 2 MP outputs in the frozen, slotted `MeshVolumeResult` value. Normal
 
 ## Mesh Fill Holes
 
-:::note[Status: Next]
-This coroutine is part of the next Python package contract. Validation: At Risk — fixture or interactive validation required.
+:::note[Unreleased Client Package]
+
+This reference describes the client source API. No package has been published yet.
+
+Validation: At Risk — fixture or interactive validation required.
+
 :::
 
 [Mesh Fill Holes](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-fill-holes) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-fill-holes)

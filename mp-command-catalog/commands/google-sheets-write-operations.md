@@ -13,7 +13,7 @@ These entries cover the six commands observed under **Google Sheets Operations
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>6</strong></div>
-  <div><span>Current or Next</span><strong>0</strong></div>
+  <div><span>Current Server Operations</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>6</strong></div>
 </div>
 

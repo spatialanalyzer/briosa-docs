@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Lines
-description: Next Briosa JavaScript and TypeScript APIs for selected line-construction MP commands.
+description: Unreleased Briosa JavaScript and TypeScript APIs for selected line-construction MP commands.
 toc_max_heading_level: 2
 ---
 

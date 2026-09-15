@@ -13,7 +13,7 @@ This entry covers the single command observed under **Construction Operations
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>1</strong></div>
-  <div><span>Current or Next</span><strong>1</strong></div>
+  <div><span>Current Server Operations</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,13 +22,13 @@ This entry covers the single command observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Perimeter From Points" data-group="Construction Operations / Perimeters" data-status="next" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-perimeter-from-points">Construct Perimeter From Points</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-command="Construct Perimeter From Points" data-group="Construction Operations / Perimeters" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-perimeter-from-points">Construct Perimeter From Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
 </tbody>
 </table>
 
 ## Construct Perimeter From Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

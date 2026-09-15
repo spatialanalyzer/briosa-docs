@@ -13,7 +13,7 @@ Operations → Cylinders** in SA 2026.1.0529.7.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>3</strong></div>
-  <div><span>Current or Next</span><strong>3</strong></div>
+  <div><span>Current Server Operations</span><strong>3</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -22,21 +22,21 @@ Operations → Cylinders** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Cylinder" data-group="Construction Operations / Cylinders" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-cylinder">Construct Cylinder</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Construct Cylinder" data-group="Construction Operations / Cylinders" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-cylinder">Construct Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Cylinder From End Points" data-group="Construction Operations / Cylinders" data-status="next" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-cylinder-from-end-points">Construct Cylinder From End Points</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+<tr data-command="Construct Cylinder From End Points" data-group="Construction Operations / Cylinders" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-cylinder-from-end-points">Construct Cylinder From End Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Cylinders From Surface Faces - Runtime Select" data-group="Construction Operations / Cylinders" data-status="next" data-validation="at-risk-interactive-fixture-validation-required">
-  <td><a href="#construct-cylinders-from-surface-faces---runtime-select">Construct Cylinders From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive fixture validation required</td>
+<tr data-command="Construct Cylinders From Surface Faces - Runtime Select" data-group="Construction Operations / Cylinders" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
+  <td><a href="#construct-cylinders-from-surface-faces---runtime-select">Construct Cylinders From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
 </tr>
 </tbody>
 </table>
 
 ## Construct Cylinder
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ execution outcome.
 
 ## Construct Cylinder From End Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ an initial-release geometry policy.
 
 ## Construct Cylinders From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 This command has no MP arguments. The operator selects surface faces in
 SpatialAnalyzer while the request is active. Cancellation or a client deadline

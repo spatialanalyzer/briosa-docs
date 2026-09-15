@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Planes
-description: Next Briosa .NET APIs for the selected plane-construction MP commands.
+description: Unreleased Briosa .NET APIs for the selected plane-construction MP commands.
 toc_max_heading_level: 2
 ---
 

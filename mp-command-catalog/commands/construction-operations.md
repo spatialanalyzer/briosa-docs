@@ -10,12 +10,11 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the 14 commands observed directly in the Construction
 Operations root group for SA 2026.1.0529.7. The group's subgroups are reviewed
-separately. A **Next** entry is a documentation-first contract, not a claim that
-the operation is callable in the current release.
+separately. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>14</strong></div>
-  <div><span>Current or Next</span><strong>14</strong></div>
+  <div><span>Current Server Operations</span><strong>14</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,68 +23,68 @@ the operation is callable in the current release.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="next" data-validation="licensed-setter-probe-fixture-execution-required">
+<tr data-command="Mirror Object(s)" data-group="Construction Operations" data-status="current" data-validation="licensed-setter-probe-fixture-execution-required">
   <td><a href="#mirror-objects">Mirror Object(s)</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>Licensed setter probe; fixture execution required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed setter probe; fixture execution required</td>
 </tr>
-<tr data-command="Copy Object" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Copy Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-object">Copy Object</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Copy Objects to a collection" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Copy Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-objects-to-a-collection">Copy Objects to a collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Move Objects to a collection" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Move Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#move-objects-to-a-collection">Move Objects to a collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Copy Objects - Point to Point Delta" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Copy Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-objects---point-to-point-delta">Copy Objects - Point to Point Delta</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Move Objects - Point to Point Delta" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Move Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#move-objects---point-to-point-delta">Move Objects - Point to Point Delta</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Rename Point" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Rename Point" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-point">Rename Point</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Rename Points with Name Pattern" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Rename Points with Name Pattern" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-points-with-name-pattern">Rename Points with Name Pattern</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Rename Collection" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Rename Collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-collection">Rename Collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Rename Object" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Rename Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-object">Rename Object</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Rename Item" data-group="Construction Operations" data-status="next" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Rename Item" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-item">Rename Item</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Delete Points" data-group="Construction Operations" data-status="next" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-command="Delete Points" data-group="Construction Operations" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-points">Delete Points</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Delete Points WildCard Selection" data-group="Construction Operations" data-status="next" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-command="Delete Points WildCard Selection" data-group="Construction Operations" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-points-wildcard-selection">Delete Points WildCard Selection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Construct Objects From Surface Faces - Runtime Select" data-group="Construction Operations" data-status="next" data-validation="at-risk-interactive-fixture-validation-required">
+<tr data-command="Construct Objects From Surface Faces - Runtime Select" data-group="Construction Operations" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
   <td><a href="#construct-objects-from-surface-faces---runtime-select">Construct Objects From Surface Faces - Runtime Select</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - interactive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
 </tr>
 </tbody>
 </table>
 
 ## Mirror Object(s)
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -116,7 +115,7 @@ fixture scenario.
 
 ## Copy Object
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -139,7 +138,7 @@ Copies one collection object to a caller-supplied object name.
 
 ## Copy Objects to a collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -162,7 +161,7 @@ the destination collection when it does not already exist.
 
 ## Move Objects to a collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -184,7 +183,7 @@ Moves selected objects into a destination collection.
 
 ## Copy Objects - Point to Point Delta
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -209,7 +208,7 @@ optionally placing the copies in another collection.
 
 ## Move Objects - Point to Point Delta
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -232,7 +231,7 @@ Moves selected objects by the delta from the first point to the second point.
 
 ## Rename Point
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -255,7 +254,7 @@ Renames one point and optionally permits replacement of an existing target.
 
 ## Rename Points with Name Pattern
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -278,7 +277,7 @@ Renames a list of points using a numbered `%d` name pattern.
 
 ## Rename Collection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -300,7 +299,7 @@ Renames one collection.
 
 ## Rename Object
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -325,7 +324,7 @@ different type.
 
 ## Rename Item
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -351,7 +350,7 @@ objects.
 
 ## Delete Points
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -373,7 +372,7 @@ destructive operation after an unknown execution outcome.
 
 ## Delete Points WildCard Selection
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -397,7 +396,7 @@ operation after an unknown execution outcome.
 
 ## Construct Objects From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--next">Next</span>
+<span className="catalog-status catalog-status--current">Current</span>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
@@ -420,7 +419,7 @@ from `Any` through `Vertex Points`, followed by `Point Offset`. A second
 exported `Object Type` setter with `Entire Solid` and `Select Faces` choices is
 an SA View SDK Code export defect and is not part of the command signature.
 
-Selected for the next release because callers may intentionally coordinate an
+Included in Briosa Server 0.5.1 because callers may intentionally coordinate an
 operator-driven CAD selection workflow. Briosa requires `Object Type` rather
 than defaulting it to `Any`; choosing a specific type avoids the additional
 type-selection dialog, while callers can still select `Any` when that dialog is

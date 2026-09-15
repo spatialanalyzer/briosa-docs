@@ -1,15 +1,14 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Next Briosa Python APIs for API - LADAR MP commands.
+description: Unreleased Briosa Python APIs for API - LADAR MP commands.
 toc_max_heading_level: 2
 ---
 
 # Instrument Operations / API - LADAR
 
-:::note[Next Python Contract]
+:::note[Unreleased Client Package]
 
-These coroutines are not released support until this documentation is
-versioned for a published package.
+This reference describes the client source API. No package has been published yet.
 
 :::
 

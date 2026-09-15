@@ -98,7 +98,7 @@ if (!sdk.GetStringArg("Directory", ref directory))
 }
 ```
 
-The planned first-party clients turn that same MP command into an ordinary
+The first-party client implementations turn that same MP command into an ordinary
 asynchronous call in each language. Assuming the client has already started and
 is ready, select a language to compare the intended call shape:
 
@@ -131,10 +131,12 @@ the form each application expects. Briosa owns the SDK sequence, checks the MP
 result, retrieves the output, and translates failures into the selected
 client's documented error model.
 
-:::note[Status: Next]
+:::note[Server Released; Client Packages Unpublished]
 
-The Briosa calls above show the client APIs planned for the coordinated `v0.2`
-implementation. They are not available in the current bootstrap packages.
+The server lifecycle and MP APIs are available in Briosa Server 0.5.1.
+Client examples describe the implemented source APIs; the .NET, Python, and
+JavaScript/TypeScript packages have not yet been published. See
+[Release Status](/docs/releases) for availability and validation limits.
 
 :::
 
@@ -196,9 +198,9 @@ commands Briosa currently supports. It shows which commands are Current, Next,
 Undecided, Uncommitted, Excluded, or unavailable through the SDK, along with
 the rationale and recommended alternatives where applicable.
 
-The current baseline targets SpatialAnalyzer `2026.1.0529.7` and exposes six
-read-only MP operations. See [Supported Operations](/api/grpc)
-for the complete callable surface today.
+Briosa Server 0.5.1 targets SpatialAnalyzer `2026.1.0529.7`. See the
+[gRPC API reference](/api/grpc) and [MP Command Catalog](/mp-command-catalog)
+for released operations, runtime admission rules, and validation qualifications.
 
 ## Get Started
 
@@ -210,5 +212,5 @@ for the complete callable surface today.
 
 The committed API contracts and operation registry in the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa) define
-the currently implemented API. Pages marked `Next` define a proposed public
-contract for a coordinated delivery until the matching code is released.
+the currently implemented API. The server reference identifies its released product version. Client references
+remain explicitly unreleased until their packages are published.
