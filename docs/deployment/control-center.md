@@ -11,7 +11,7 @@ high-contrast settings taking priority.
 
 :::note Availability
 Use a Windows server package containing `Briosa.ControlCenter.exe` from
-[the Control Center implementation](https://github.com/spatialanalyzer/briosa/commit/16dd7d0057e7969e848a999eaa5b0128322b04da).
+[the Control Center implementation](https://github.com/spatialanalyzer/briosa/commit/1bf724d).
 Earlier packages omit the companion. The initial target is SpatialAnalyzer
 **2026.1.0529.7**.
 :::
@@ -56,6 +56,30 @@ stale and disables management controls.
 Reopening can recover management of a server that Control Center previously
 started. A matching port or executable name alone never grants ownership.
 
+## Set Up Version Evidence
+
+Briosa observes the executable version of the SDK process it activates. Windows
+can select an older registered SDK even when the correct SA application is open.
+An observed mismatch blocks connection and cannot be overridden by configuration.
+
+The connected SA version requires separate operator evidence. With the managed
+server stopped, open **Connection setup**, enter the verified running SA version
+and a non-sensitive reference to your verification record, and save. Check which
+SA instance owns SDK communication when several are open. Leave the optional SDK
+fallback fields empty when its version is observed automatically.
+
+Start the server and SDK, then connect. Settings apply to future servers launched
+by this Control Center and are saved privately per distribution. Empty field pairs
+preserve existing server/environment configuration. Recheck evidence after
+changing SDK registration or the SA application. References are excluded from
+worker environments, logs, and support exports.
+
+If Windows selects an older SDK, stop the SDK and use the matching SA
+installation's `SpatialAnalyzerSDK-register-server.bat` with administrator rights.
+This affects other COM clients; Control Center never changes registration
+automatically. Start a new SDK generation afterward. Reconnect cannot change the
+activated executable or supply missing evidence.
+
 ## Recover or Stop
 
 - **Connect** attaches a started SDK. **Reconnect** is available when the current
@@ -81,6 +105,9 @@ The viewer retains at most 2,000 recent events. Logs are best effort: a missing
 record cannot establish whether a command ran. See
 [Server Logging and Telemetry](logging.md) for file retention settings.
 
+Normal health reports while commands are unavailable are informational readiness
+entries. Health-check exceptions remain errors.
+
 **Details & support** includes offline package diagnostics and a ZIP export of
 safe version, lifecycle, and recent activity information. Exports exclude endpoint
 addresses, local paths, configuration, credentials, raw exceptions, and MP values.
@@ -102,6 +129,7 @@ Default `Auto` mode requires an interactive Windows session and an installed
 companion. Installation and updates remain separate from startup. Close Control
 Center and stop its server before repairing or removing an in-use package.
 
-Fake-worker and Windows UI/package tests validate the initial desktop flow.
-Real SpatialAnalyzer validation requires separate licensed evidence; the UI adds
-no broader compatibility claim.
+Fake-worker and Windows UI/package tests cover the desktop flow. A
+[local licensed check](https://github.com/spatialanalyzer/briosa/blob/1bf724d/targets/2026.1.0529.7/docs/testing/evidence/control-center-local-2026-09-15.md)
+also verified connection and read-only commands against SA 2026.1.0529.7. It does
+not establish live fault-recovery behavior or compatibility with other releases.
