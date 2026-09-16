@@ -31,6 +31,13 @@ Client source and build instructions are available in the
 Their reference pages are labeled **Unreleased** until package publication.
 Do not treat the server version as a client package version.
 
+## Planned SpatialAnalyzer Targets
+
+The [SA 2024.1.0508.5 command catalog](/mp-command-catalog/2024.1.0508.5/overview)
+records the completed command-evidence review and planned dispositions. No server
+or client package for that target is released. Its review and SDK-interface
+comparison do not establish licensed runtime validation.
+
 ## What Has Been Validated
 
 Portable server, worker, protocol, client, and packaging tests exercise behavior

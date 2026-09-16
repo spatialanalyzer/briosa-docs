@@ -11,18 +11,20 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 This entry covers the command observed under **Construction Operations →
 Ellipses** in SA 2026.1.0529.7.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>1</strong></div>
   <div><span>Current Server Operations</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Construction Operations / Ellipses" />
+<CatalogFilter showTargetFilter scopedGroup="Construction Operations / Ellipses" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Ellipse" data-group="Construction Operations / Ellipses" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Construct Ellipse" data-group="Construction Operations / Ellipses" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-ellipse">Construct Ellipse</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
 </tbody>
@@ -30,7 +32,15 @@ Ellipses** in SA 2026.1.0529.7.
 
 ## Construct Ellipse
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Ellipses" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / Ellipses</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

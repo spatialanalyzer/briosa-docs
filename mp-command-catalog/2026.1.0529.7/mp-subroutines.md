@@ -16,6 +16,6 @@ cross-version history live in the canonical grouped reference.
 | [Define Subroutine Input Values](/mp-command-catalog/commands/mp-subroutines#define-subroutine-input-values) | MP Subroutines | **Excluded** | Not applicable |
 | [Define Subroutine Return Values](/mp-command-catalog/commands/mp-subroutines#define-subroutine-return-values) | MP Subroutines | **Excluded** | Not applicable |
 | [Return from Subroutine Now](/mp-command-catalog/commands/mp-subroutines#return-from-subroutine-now) | MP Subroutines | **Excluded** | Not applicable |
-| [Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) | MP Subroutines | **Next** | At Risk — fixture or interactive validation required |
+| [Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) | MP Subroutines | **Current** | At Risk — fixture or interactive validation required |
 
 [Open the canonical MP Subroutines command reference →](/mp-command-catalog/commands/mp-subroutines)

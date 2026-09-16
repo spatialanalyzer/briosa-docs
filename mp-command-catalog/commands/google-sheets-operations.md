@@ -10,60 +10,62 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>8</strong></div>
   <div><span>Current Server Operations</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>8</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Google Sheets Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Google Sheets Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Close All Google Sheets Spreadsheets" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Close All Google Sheets Spreadsheets" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#close-all-google-sheets-spreadsheets">Close All Google Sheets Spreadsheets</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Close Google Sheets Spreadsheet" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Close Google Sheets Spreadsheet" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#close-google-sheets-spreadsheet">Close Google Sheets Spreadsheet</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Google Sheets Spreadsheet Cell Address" data-group="Google Sheets Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Get Google Sheets Spreadsheet Cell Address" data-group="Google Sheets Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-google-sheets-spreadsheet-cell-address">Get Google Sheets Spreadsheet Cell Address</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Google Sheets Insert Column" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Google Sheets Insert Column" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#google-sheets-insert-column">Google Sheets Insert Column</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Google Sheets Insert Row" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Google Sheets Insert Row" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#google-sheets-insert-row">Google Sheets Insert Row</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Google Sheets Run Script" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Google Sheets Run Script" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#google-sheets-run-script">Google Sheets Run Script</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Open Google Sheets Spreadsheet" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Open Google Sheets Spreadsheet" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#open-google-sheets-spreadsheet">Open Google Sheets Spreadsheet</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Google Sheets Spreadsheet Cell Address" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Set Google Sheets Spreadsheet Cell Address" data-group="Google Sheets Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#set-google-sheets-spreadsheet-cell-address">Set Google Sheets Spreadsheet Cell Address</a></td>
   <td>Google Sheets Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
@@ -74,7 +76,15 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
 
 ## Close All Google Sheets Spreadsheets
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -100,7 +110,15 @@ official Google Sheets client library and manage its connections directly.
 
 ## Close Google Sheets Spreadsheet
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -126,7 +144,15 @@ an official Google Sheets client library and manage its connection directly.
 
 ## Get Google Sheets Spreadsheet Cell Address
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -157,7 +183,15 @@ No complete useful exact-target SDK binding is available.
 
 ## Google Sheets Insert Column
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -183,7 +217,15 @@ Google Sheets client library to address the intended sheet and column directly.
 
 ## Google Sheets Insert Row
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -209,7 +251,15 @@ Sheets client library to address the intended sheet and row directly.
 
 ## Google Sheets Run Script
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -237,7 +287,15 @@ Google Apps Script API through an official client library instead.
 
 ## Open Google Sheets Spreadsheet
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -266,7 +324,15 @@ an official Google client library and its supported authentication flow.
 
 ## Set Google Sheets Spreadsheet Cell Address
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Google Sheets Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Google Sheets Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

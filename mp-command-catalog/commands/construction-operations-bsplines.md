@@ -11,59 +11,139 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the nine commands observed under **Construction Operations
 → BSpines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>9</strong></div>
   <div><span>Current Server Operations</span><strong>8</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Construction Operations / BSpines" />
+<CatalogFilter showTargetFilter scopedGroup="Construction Operations / BSpines" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSpines" data-status="excluded" data-validation="portable-contract-review">
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSpines" data-status="excluded" data-validation="portable-contract-review">
   <td><a href="#construct-b-spline-fit-options">Construct B-Spline Fit Options</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td>
 </tr>
-<tr data-command="Construct B-Spline From Points" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSplines" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-fit-options">Construct B-Spline Fit Options</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Points" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Points" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td><td>Construction Operations / BSpines</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+</tr>
+<tr data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSplines" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td>
+  <td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
 </table>
 
 ## Construct B-Spline Fit Options
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / BSpines" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / BSplines" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -105,7 +185,33 @@ responsibility.
 
 ## Construct B-Spline From Points
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -129,7 +235,33 @@ validation are required before the implementation can be marked validated.
 
 ## Construct B-Spline From Point Set
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -152,7 +284,33 @@ Point Set, and licensed geometry validation remains outstanding.
 
 ## Construct B-Spline From Several B-Splines
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -175,7 +333,33 @@ and does not close the result unless the caller requests it.
 
 ## Construct B-Spline From Intersection of Plane and Surface
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -199,7 +383,33 @@ plane-and-surface fixtures are still required.
 
 ## Construct B-Spline From Intersection of Surfaces
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -224,7 +434,31 @@ than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 
 ## Construct B-Splines From Surfaces
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -247,7 +481,31 @@ and omits the optional prefix unless the caller supplies one.
 
 ## Construct B-Splines From Lines
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
@@ -270,7 +528,33 @@ with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ## Construct B-Splines From Intersection of Plane and Mesh
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 ### MP Signature
 
