@@ -31,7 +31,7 @@ command link for its exact-target signature, disposition, and version difference
 ## Subgroups
 
 - [Colors](./view-control-colors.md)
-- [Show Operations](./view-control-hide-show-operations.md)
+- [Hide / Show Operations](./view-control-hide-show-operations.md)
 - [Highlight Operations](./view-control-highlight-operations.md)
 - [Point of View](./view-control-point-of-view.md)
 - [Ribbon Bar](./view-control-ribbon-bar.md)
