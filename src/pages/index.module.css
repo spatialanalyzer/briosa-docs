@@ -249,6 +249,18 @@
   font-size: 0.85rem;
 }
 
+.availabilityNotes {
+  margin: 1.5rem 0 0;
+  max-width: 65rem;
+  color: var(--briosa-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.availabilityNotes p:last-child {
+  margin-bottom: 0;
+}
+
 .disclaimer {
   padding: 3.5rem 0;
   border-top: 1px solid var(--briosa-border);
