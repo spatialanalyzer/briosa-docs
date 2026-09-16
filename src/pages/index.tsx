@@ -99,7 +99,7 @@ function HomepageHeader() {
               SpatialAnalyzer with its matching SDK.
             </p>
           </div>
-          <aside className={styles.targetCard} aria-label="Current support summary">
+          <aside className={styles.targetCard} aria-label="Developer quick start">
             <img
               className={styles.heroLogo}
               src={useBaseUrl('/brand/logos/briosa-stacked-inverse.svg')}
@@ -107,26 +107,22 @@ function HomepageHeader() {
               width={704}
               height={568}
             />
-            <p className={styles.cardLabel}>Released Server Target</p>
+            <p className={styles.cardLabel}>Supported SpatialAnalyzer</p>
             <p className={styles.targetVersion}>SA 2026.1.0529.7</p>
-            <dl>
-              <div>
-                <dt>Server Release</dt>
-                <dd>0.5.1</dd>
-              </div>
-              <div>
-                <dt>Surface</dt>
-                <dd>Read and Write MPs</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Windows x64</dd>
-              </div>
-              <div>
-                <dt>Connections</dt>
-                <dd>Local Only (Loopback)</dd>
-              </div>
-            </dl>
+            <nav className={styles.heroLinks} aria-label="Start Building with Briosa">
+              <Link to="/docs/getting-started/first-request">
+                <strong>Run Your First MP →</strong>
+                <span>C#, Python, and TypeScript examples.</span>
+              </Link>
+              <Link to="/mp-command-catalog/commands">
+                <strong>Find an MP Command →</strong>
+                <span>Arguments, results, and support status.</span>
+              </Link>
+              <Link to="/api">
+                <strong>Explore the Client APIs →</strong>
+                <span>.NET, Python, and JavaScript source references.</span>
+              </Link>
+            </nav>
           </aside>
         </div>
       </div>

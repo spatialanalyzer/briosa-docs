@@ -254,13 +254,13 @@ const config: Config = {
           position: 'right',
           className: 'api-version-dropdown api-version-dropdown--javascript',
         },
+        ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
         {
           href: 'https://github.com/spatialanalyzer/briosa',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'Briosa on GitHub',
         },
-        ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
       ],
     },
     footer: {
