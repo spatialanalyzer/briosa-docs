@@ -15,8 +15,8 @@ release commitment, and commands Briosa does not plan or cannot implement.
 
 :::important[Status Determines Availability]
 
-**Current** entries are callable today. **Next** entries link to reviewed API
-contracts that are not exposed by the released server. The
+**Current** entries are implemented for the stated target. **Next** entries are
+selected for that target's planned implementation and are not callable today. The
 authoritative implemented contracts and operation registry live in the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa). For a
 running server, `DiscoveryService/ListCapabilities` reports the subset currently
@@ -33,6 +33,14 @@ admitted by policy.
     <span className="catalog-group-kicker">Current Catalog Target</span>
     <strong>SpatialAnalyzer 2026.1.0529.7</strong>
     <p>Browse the SA-native group hierarchy and currently published command entries.</p>
+    <span className="catalog-group-link">Open target catalog →</span>
+  </Link>
+  <Link
+    className="catalog-group-card"
+    to="/mp-command-catalog/2024.1.0508.5/overview">
+    <span className="catalog-group-kicker">Reviewed · Implementation Planned</span>
+    <strong>SpatialAnalyzer 2024.1.0508.5</strong>
+    <p>Browse 1,283 reviewed commands, their planned support, and version differences.</p>
     <span className="catalog-group-link">Open target catalog →</span>
   </Link>
 </div>
@@ -55,7 +63,7 @@ command result even when the same signature appears in several SA releases.
 | Status | Meaning |
 | --- | --- |
 | **Current** | The operation is implemented in the released server for this exact target; runtime policy and readiness still apply. |
-| **Next** | A proposed API is documented, but the current server release does not expose it. |
+| **Next** | Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API. |
 | **Undecided** | The command is still being evaluated and has no reviewed disposition. |
 | **Uncommitted** | The command may be useful, but the project has made no release commitment. |
 | **Excluded** | A reviewed product, policy, safety, or scope decision excludes it. |
@@ -67,7 +75,8 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-The catalog reflects Briosa Server **0.5.1** for SA **2026.1.0529.7**.
+Released availability reflects Briosa Server **0.5.1** for SA **2026.1.0529.7**.
+SA **2024.1.0508.5** has a reviewed catalog and planned support, with no released server.
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 

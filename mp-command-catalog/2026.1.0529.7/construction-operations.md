@@ -17,19 +17,19 @@ page in the sidebar.
 
 | MP Command | Exact MP Group Path | Briosa Status | Validation |
 | --- | --- | --- | --- |
-| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | Construction Operations | **Next** | Licensed setter probe; fixture execution required |
-| [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) | Construction Operations | **Next** | At Risk - fixture validation required |
-| [Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) | Construction Operations | **Next** | At Risk - destructive fixture validation required |
-| [Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) | Construction Operations | **Next** | At Risk - destructive fixture validation required |
-| [Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) | Construction Operations | **Next** | At Risk - interactive fixture validation required |
+| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | Construction Operations | **Current** | Licensed setter probe; fixture execution required |
+| [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) | Construction Operations | **Current** | At Risk - fixture validation required |
+| [Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) | Construction Operations | **Current** | At Risk - destructive fixture validation required |
+| [Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) | Construction Operations | **Current** | At Risk - destructive fixture validation required |
+| [Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) | Construction Operations | **Current** | At Risk - interactive fixture validation required |
 
 [Open the canonical Construction Operations command reference ->](/mp-command-catalog/commands/construction-operations)

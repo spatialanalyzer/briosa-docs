@@ -11,24 +11,70 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 This entry covers the command observed under **Construction Operations → Scale
 Bars** in SA 2026.1.0529.7.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>1</strong></div>
   <div><span>Current Server Operations</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Construction Operations / Scale Bars" />
+<CatalogFilter showTargetFilter scopedGroup="Construction Operations / Scale Bars" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-scale-bar-tolerance-fixture"><td><a href="#construct-scale-bar">Construct Scale Bar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scale-bar tolerance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-scale-bar-tolerance-fixture"><td><a href="#construct-scale-bar">Construct Scale Bar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scale-bar tolerance fixture</td></tr>
+<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-scale-bar">Construct Scale Bar</a></td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
 </tbody>
 </table>
 
 ## Construct Scale Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Scale Bars" data-validation="at-risk-scale-bar-tolerance-fixture">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / Scale Bars</span>
+  <span className="catalog-target-validation">At risk scale bar tolerance fixture</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / Scale Bars</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Scale Bar Name` | Collection Object Name |
+| Input | `Begin Target` | Point Name |
+| Input | `End Target` | Point Name |
+| Input | `Length` | Double |
+| Input | `Uncertainty` | Double |
+| Input | `Use Relative Tolerances?` | Boolean |
+| Input | `Use High Tolerances?` | Boolean |
+| Input | `Use Low Tolerances?` | Boolean |
+| Input | `High Tolerance` | Double |
+| Input | `Low Tolerance` | Double |
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Creates a named scale bar between two required Point Names. Length and
 uncertainty default to `0.0`. Relative tolerances default to enabled; high and

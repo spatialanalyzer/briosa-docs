@@ -11,32 +11,75 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the three commands observed under **Construction
 Operations → Circles** in SA 2026.1.0529.7.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>3</strong></div>
   <div><span>Current Server Operations</span><strong>3</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Construction Operations / Circles" />
+<CatalogFilter showTargetFilter scopedGroup="Construction Operations / Circles" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Construct Circle" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-fixture-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Construct Circle" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-circle">Construct Circle</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Circles From Surface Faces - Runtime Select" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
+<tr data-command="Construct Circle" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-circle">Construct Circle</a></td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Circles From Surface Faces - Runtime Select" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
   <td><a href="#construct-circles-from-surface-faces---runtime-select">Construct Circles From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
 </tr>
-<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-setter-probe-and-fixture-validation-required">
+<tr data-command="Construct Circles From Surface Faces - Runtime Select" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-circles-from-surface-faces---runtime-select">Construct Circles From Surface Faces - Runtime Select</a></td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-setter-probe-and-fixture-validation-required">
   <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - setter probe and fixture validation required</td>
+</tr>
+<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
 </table>
 
 ## Construct Circle
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Circles" data-validation="at-risk-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At risk fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Circles" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
@@ -54,7 +97,33 @@ result.
 
 ## Construct Circles From Surface Faces - Runtime Select
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Circles" data-validation="at-risk-interactive-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At risk interactive fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Circles" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 This command has no MP arguments. The operator selects surface faces in
 SpatialAnalyzer while the request is active. Cancellation or a client deadline
@@ -65,7 +134,31 @@ replays the operation.
 
 ## Construct Circles (Lines) From Surfaces
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Circles" data-validation="at-risk-setter-probe-and-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At risk setter probe and fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Circles" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Construction Operations / Circles</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |

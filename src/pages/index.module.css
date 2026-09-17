@@ -116,27 +116,37 @@
   color: var(--briosa-white);
 }
 
-.targetCard dl {
-  margin: 0;
-  font-size: 0.85rem;
-}
-
-.targetCard dl div {
+.heroLinks {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.6rem 0;
+  flex-direction: column;
+}
+
+.heroLinks a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--briosa-feature-border);
+  color: var(--briosa-cyan);
 }
 
-.targetCard dt {
-  color: #c3d6e9;
-}
-
-.targetCard dd {
-  margin: 0;
+.heroLinks a:hover {
   color: var(--briosa-white);
-  text-align: right;
+  text-decoration: none;
+}
+
+.heroLinks a:hover strong {
+  text-decoration: underline;
+}
+
+.heroLinks strong {
+  font-size: 0.9rem;
+}
+
+.heroLinks span {
+  color: #c3d6e9;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .section,
@@ -247,6 +257,18 @@
   margin-top: auto;
   color: var(--ifm-color-primary);
   font-size: 0.85rem;
+}
+
+.availabilityNotes {
+  margin: 1.5rem 0 0;
+  max-width: 65rem;
+  color: var(--briosa-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.availabilityNotes p:last-child {
+  margin-bottom: 0;
 }
 
 .disclaimer {

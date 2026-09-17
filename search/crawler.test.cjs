@@ -42,7 +42,7 @@ test('MP label, code spelling and status are retained without merging command id
   const records = run('mp-command-catalog/commands/file-operations');
   const record = records.find((r) => r.anchor === 'get-working-directory');
   assert.equal(record.hierarchy.lvl2, 'Get Working Directory');
-  assert.match(record.hierarchy.lvl1, /^Current · SA 2026\.1\.0529\.7 · File Operations$/);
+  assert.equal(record.hierarchy.lvl1, 'Current · SA 2026.1.0529.7 · File Operations | Next · SA 2024.1.0508.5 · File Operations');
   assert.ok(record.search_terms.includes('getworkingdirectory'));
   assert.ok(record.search_terms.includes('get_working_directory'));
   assert.ok(!record.content.includes('Get XML Attribute'));
@@ -53,6 +53,7 @@ test('navigation indexes, filtered views and redirect documents produce no recor
   for (const path of [
     '/downloads/keys/public.pem', '/assets/js/main.js',
     '/mp-command-catalog/2026.1.0529.7/file-operations',
+    '/mp-command-catalog/2024.1.0508.5/file-operations',
     '/mp-command-catalog/2027.1.0001.0/file-operations',
     '/mp-command-catalog/commands', '/mp-command-catalog/commands/',
     '/mp-command-catalog/commands/index', '/search', '/404.html',
@@ -65,17 +66,56 @@ test('navigation indexes, filtered views and redirect documents produce no recor
     url: new URL('https://briosa.dev/old-url')}).length, 0);
 });
 
-test('missing status and ambiguous page-level targets cannot become support claims', () => {
+test('target context keeps differing dispositions separate in one command record', () => {
+  const records = run('mp-command-catalog/commands/instrument-operations');
+  const record = records.find((r) => r.anchor === 'scan-cad-faces');
+  assert.ok(record);
+  assert.match(record.hierarchy.lvl1, /Current · SA 2026\.1\.0529\.7/);
+  assert.match(record.hierarchy.lvl1, /SDK Unavailable · SA 2024\.1\.0508\.5/);
+  assert.equal(records.filter((r) => r.anchor === 'scan-cad-faces').length, 1);
+});
+
+test('missing, mismatched, or duplicate target claims cannot enter search', () => {
   const route = 'mp-command-catalog/commands/construction-operations-bsplines';
-  const ambiguous = load(html(route));
-  ambiguous('article header').after('<p>Also reviewed against SA 2027.1.0001.0.</p>');
-  assert.throws(() => extract({$: ambiguous, url: new URL(`https://briosa.dev/${route}`)}),
-    /Missing reviewed command context/);
-  const missing = load(html(route));
-  const section = missing('#construct-b-spline-from-points').nextUntil('h2');
-  section.find('.catalog-status').add(section.filter('.catalog-status')).remove();
-  assert.throws(() => extract({$: missing, url: new URL(`https://briosa.dev/${route}`)}),
-    /Missing reviewed command context/);
+  for (const mutate of [
+    ($, context) => context.removeAttr('data-target'),
+    ($, context) => context.removeAttr('data-status'),
+    ($, context) => context.attr('data-status', 'current'),
+    ($, context) => context.find('.catalog-status').remove(),
+    ($, context) => context.after(context.clone()),
+  ]) {
+    const $ = load(html(route));
+    const context = $('#construct-b-spline-from-points').nextUntil('h2')
+      .find('.catalog-target-context[data-target="2024.1.0508.5"]').first();
+    assert.equal(context.length, 1);
+    mutate($, context);
+    assert.throws(() => extract({$, url: new URL(`https://briosa.dev/${route}`)}),
+      /Missing or ambiguous reviewed command context/);
+  }
+});
+
+test('the command index preserves one disposition per command and exact target', () => {
+  const $ = load(html('mp-command-catalog/commands'));
+  const contexts = new Set();
+  const statuses2024 = {};
+  for (const node of $('.catalog-command-table tbody tr').toArray()) {
+    const row = $(node);
+    const target = row.attr('data-target');
+    const href = row.find('a').attr('href');
+    const key = `${target}:${href}`;
+    assert.ok(!contexts.has(key), key);
+    contexts.add(key);
+    assert.ok(['2026.1.0529.7', '2024.1.0508.5'].includes(target));
+    if (target === '2024.1.0508.5') {
+      const status = row.attr('data-status');
+      statuses2024[status] = (statuses2024[status] || 0) + 1;
+      assert.notEqual(status, 'current');
+      assert.ok(row.attr('hidden') !== undefined, href);
+      assert.ok(!/licensed-execution|released-implementation|portable-contract-review/.test(row.attr('data-validation')));
+    }
+  }
+  assert.ok(statuses2024.next > 0);
+  assert.ok(statuses2024['sdk-unavailable'] > 0);
 });
 
 test('all reference instances and landing pages use content selectors and version context', () => {

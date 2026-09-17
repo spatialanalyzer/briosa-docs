@@ -10,269 +10,541 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>41</strong></div>
   <div><span>Current Server Operations</span><strong>36</strong></div>
   <div><span>Excluded or Unavailable</span><strong>5</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Variables" />
+<CatalogFilter showTargetFilter scopedGroup="Variables" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Add Double to Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-target="2026.1.0529.7" data-command="Add Double to Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-double-to-named-double-list-variable">Add Double to Named Double List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Clear Double List" data-group="Variables" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Add Double to Named Double List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-double-to-named-double-list-variable">Add Double to Named Double List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Clear Double List" data-group="Variables" data-status="excluded" data-validation="not-applicable">
   <td><a href="#clear-double-list">Clear Double List</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Clear Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Clear Double List" data-group="Variables" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#clear-double-list">Clear Double List</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Clear Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#clear-named-double-list-variable">Clear Named Double List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Clear Named Double List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#clear-named-double-list-variable">Clear Named Double List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-variable">Delete Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Variables -- Wildcard Match" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-variable">Delete Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Variables -- Wildcard Match" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-variables----wildcard-match">Delete Variables -- Wildcard Match</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Boolean Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Variables -- Wildcard Match" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-variables----wildcard-match">Delete Variables -- Wildcard Match</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Boolean Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-boolean-variable">Get Boolean Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Collection Object Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Boolean Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-boolean-variable">Get Boolean Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Collection Object Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-collection-object-name-variable">Get Collection Object Name Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Collection Object Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Collection Object Name Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-collection-object-name-variable">Get Collection Object Name Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Collection Object Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-collection-object-ref-list-variable">Get Collection Object Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Double Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Collection Object Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-collection-object-ref-list-variable">Get Collection Object Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Double Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-double-variable">Get Double Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Font Variable" data-group="Variables" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get Double Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-double-variable">Get Double Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Font Variable" data-group="Variables" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-font-variable">Get Font Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get i-th double from list" data-group="Variables" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Get Font Variable" data-group="Variables" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-font-variable">Get Font Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get i-th double from list" data-group="Variables" data-status="excluded" data-validation="not-applicable">
   <td><a href="#get-i-th-double-from-list">Get i-th double from list</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Integer Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get i-th double from list" data-group="Variables" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-i-th-double-from-list">Get i-th double from list</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Integer Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-integer-variable">Get Integer Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Integer Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-integer-variable">Get Integer Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-named-double-list-variable">Get Named Double List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Named Double List Variable Min/Max" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Named Double List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-named-double-list-variable">Get Named Double List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Named Double List Variable Min/Max" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-named-double-list-variable-minmax">Get Named Double List Variable Min/Max</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get number of doubles in list" data-group="Variables" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Get Named Double List Variable Min/Max" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-named-double-list-variable-minmax">Get Named Double List Variable Min/Max</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get number of doubles in list" data-group="Variables" data-status="excluded" data-validation="not-applicable">
   <td><a href="#get-number-of-doubles-in-list">Get number of doubles in list</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Point Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get number of doubles in list" data-group="Variables" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-number-of-doubles-in-list">Get number of doubles in list</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Point Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-point-name-ref-list-variable">Get Point Name Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Point Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Point Name Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-point-name-ref-list-variable">Get Point Name Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Point Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-point-name-variable">Get Point Name Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Point Name Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-point-name-variable">Get Point Name Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Relationship Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-relationship-ref-list-variable">Get Relationship Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Report Items Reference List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Relationship Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-relationship-ref-list-variable">Get Relationship Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Report Items Reference List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-report-items-reference-list-variable">Get Report Items Reference List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get String Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Report Items Reference List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-report-items-reference-list-variable">Get Report Items Reference List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get String Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-string-ref-list-variable">Get String Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get String Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get String Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-string-ref-list-variable">Get String Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get String Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-string-variable">Get String Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Transform Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get String Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-string-variable">Get String Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Transform Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-transform-variable">Get Transform Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Transform Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-transform-variable">Get Transform Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-name-ref-list-variable">Get Vector Name Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Vector Name Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-name-ref-list-variable">Get Vector Name Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-variable">Get Vector Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Boolean Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Vector Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-variable">Get Vector Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Boolean Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-boolean-variable">Set Boolean Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Collection Object Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Boolean Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-boolean-variable">Set Boolean Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Collection Object Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-collection-object-name-variable">Set Collection Object Name Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Collection Object Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Collection Object Name Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-collection-object-name-variable">Set Collection Object Name Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Collection Object Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-collection-object-ref-list-variable">Set Collection Object Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Double List Variable" data-group="Variables" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Set Collection Object Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-collection-object-ref-list-variable">Set Collection Object Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Double List Variable" data-group="Variables" data-status="excluded" data-validation="not-applicable">
   <td><a href="#set-double-list-variable">Set Double List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Double Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Double List Variable" data-group="Variables" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-double-list-variable">Set Double List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Double Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-double-variable">Set Double Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Font Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Double Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-double-variable">Set Double Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Font Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-font-variable">Set Font Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Integer Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Font Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-font-variable">Set Font Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Integer Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-integer-variable">Set Integer Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Integer Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-integer-variable">Set Integer Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Named Double List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-named-double-list-variable">Set Named Double List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Named Double List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-named-double-list-variable">Set Named Double List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-name-ref-list-variable">Set Point Name Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Point Name Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-name-ref-list-variable">Set Point Name Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point Name Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-name-variable">Set Point Name Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Point Name Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-name-variable">Set Point Name Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Relationship Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-relationship-ref-list-variable">Set Relationship Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Report Items Reference List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Relationship Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-relationship-ref-list-variable">Set Relationship Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Items Reference List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-report-items-reference-list-variable">Set Report Items Reference List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set String Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Report Items Reference List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-items-reference-list-variable">Set Report Items Reference List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set String Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-string-ref-list-variable">Set String Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set String Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set String Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-string-ref-list-variable">Set String Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set String Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-string-variable">Set String Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Transform Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set String Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-string-variable">Set String Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Transform Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-transform-variable">Set Transform Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Transform Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-transform-variable">Set Transform Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Name Ref List Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-name-ref-list-variable">Set Vector Name Ref List Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Vector Name Ref List Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-name-ref-list-variable">Set Vector Name Ref List Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Variable" data-group="Variables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-variable">Set Vector Variable</a></td>
   <td>Variables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
+</tr>
+<tr data-command="Set Vector Variable" data-group="Variables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-variable">Set Vector Variable</a></td>
+  <td>Variables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 </tbody>
 </table>
 
 ## Add Double to Named Double List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -298,7 +570,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Clear Double List
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Variables" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Variables" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -323,7 +619,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Clear Named Double List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -348,7 +668,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -373,7 +717,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Variables -- Wildcard Match
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -398,7 +766,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Boolean Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -424,7 +816,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Collection Object Name Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -450,7 +866,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Collection Object Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -476,7 +916,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Double Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -502,7 +966,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Font Variable
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Variables" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Variables" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -527,7 +1015,31 @@ No complete useful exact-target SDK binding is available.
 
 ## Get i-th double from list
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Variables" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Variables" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -554,7 +1066,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Integer Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -580,7 +1116,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Named Double List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -606,7 +1166,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Named Double List Variable Min/Max
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -633,7 +1217,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get number of doubles in list
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Variables" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Variables" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -659,7 +1267,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Point Name Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -685,7 +1317,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Point Name Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -711,7 +1367,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Relationship Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -737,7 +1417,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Report Items Reference List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -763,7 +1467,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get String Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -789,7 +1517,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get String Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -815,7 +1567,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Transform Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -841,7 +1617,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector Name Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -867,7 +1667,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -893,7 +1717,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Boolean Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -919,7 +1767,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Collection Object Name Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -945,7 +1819,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Collection Object Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -971,7 +1869,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Double List Variable
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Variables" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Variables" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -997,7 +1919,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Set Double Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1023,7 +1969,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Font Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1049,7 +2019,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Integer Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1075,7 +2069,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Named Double List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1101,7 +2119,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Point Name Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1127,7 +2169,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Point Name Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1153,7 +2219,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Relationship Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1179,7 +2269,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Items Reference List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1205,7 +2319,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set String Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1231,7 +2369,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set String Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1257,7 +2419,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Transform Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1283,7 +2469,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Name Ref List Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1309,7 +2519,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Variable
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Variables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Variables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Variables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

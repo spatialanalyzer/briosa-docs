@@ -10,143 +10,291 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>20</strong></div>
   <div><span>Current Server Operations</span><strong>3</strong></div>
   <div><span>Excluded or Unavailable</span><strong>17</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Dimension Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Dimension Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Add a Dimension to Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Add a Dimension to Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#add-a-dimension-to-dimension-ref-list">Add a Dimension to Dimension Ref List</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Create Diameter Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Add a Dimension to Dimension Ref List" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-a-dimension-to-dimension-ref-list">Add a Dimension to Dimension Ref List</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Diameter Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#create-diameter-dimension">Create Diameter Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Create Object to Object Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Create Diameter Dimension" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-diameter-dimension">Create Diameter Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Object to Object Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#create-object-to-object-dimension">Create Object to Object Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Create Point to Object Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Create Object to Object Dimension" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-object-to-object-dimension">Create Object to Object Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Point to Object Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#create-point-to-object-dimension">Create Point to Object Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Create Point to Point Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Create Point to Object Dimension" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-point-to-object-dimension">Create Point to Object Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Point to Point Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#create-point-to-point-dimension">Create Point to Point Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Create Radius Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Create Point to Point Dimension" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-point-to-point-dimension">Create Point to Point Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Radius Dimension" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#create-radius-dimension">Create Radius Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Delete Dimension" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Create Radius Dimension" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-radius-dimension">Create Radius Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Dimension" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-dimension">Delete Dimension</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Dimension Value" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Dimension" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-dimension">Delete Dimension</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Dimension Value" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-dimension-value">Get Dimension Value</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Dimension From Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get Dimension Value" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-dimension-value">Get Dimension Value</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get i-th Dimension From Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-i-th-dimension-from-dimension-ref-list">Get i-th Dimension From Dimension Ref List</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get i-th Dimension From Dimension Ref List (Iterator)" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get i-th Dimension From Dimension Ref List" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-i-th-dimension-from-dimension-ref-list">Get i-th Dimension From Dimension Ref List</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get i-th Dimension From Dimension Ref List (Iterator)" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-i-th-dimension-from-dimension-ref-list-iterator">Get i-th Dimension From Dimension Ref List (Iterator)</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Number of Dimensions in Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get i-th Dimension From Dimension Ref List (Iterator)" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-i-th-dimension-from-dimension-ref-list-iterator">Get i-th Dimension From Dimension Ref List (Iterator)</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Number of Dimensions in Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-number-of-dimensions-in-dimension-ref-list">Get Number of Dimensions in Dimension Ref List</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make a Dimension Ref List from a Collection" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get Number of Dimensions in Dimension Ref List" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-number-of-dimensions-in-dimension-ref-list">Get Number of Dimensions in Dimension Ref List</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Dimension Ref List from a Collection" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#make-a-dimension-ref-list-from-a-collection">Make a Dimension Ref List from a Collection</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make a Dimension Ref List- WildCard Selection" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Make a Dimension Ref List from a Collection" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-a-dimension-ref-list-from-a-collection">Make a Dimension Ref List from a Collection</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Dimension Ref List- WildCard Selection" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#make-a-dimension-ref-list--wildcard-selection">Make a Dimension Ref List- WildCard Selection</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Common Properties to Dimensions" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Make a Dimension Ref List- WildCard Selection" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-a-dimension-ref-list--wildcard-selection">Make a Dimension Ref List- WildCard Selection</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Common Properties to Dimensions" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-common-properties-to-dimensions">Set Common Properties to Dimensions</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Diameter Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Common Properties to Dimensions" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-common-properties-to-dimensions">Set Common Properties to Dimensions</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Diameter Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-diameter-dimension-properties">Set Diameter Dimension Properties</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Dimension Tolerance" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Diameter Dimension Properties" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-diameter-dimension-properties">Set Diameter Dimension Properties</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Dimension Tolerance" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-dimension-tolerance">Set Dimension Tolerance</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Object to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Dimension Tolerance" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-dimension-tolerance">Set Dimension Tolerance</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Object to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-object-to-object-dimension-properties">Set Object to Object Dimension Properties</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Point to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Object to Object Dimension Properties" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-object-to-object-dimension-properties">Set Object to Object Dimension Properties</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-point-to-object-dimension-properties">Set Point to Object Dimension Properties</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Point to Point Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Point to Object Dimension Properties" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-to-object-dimension-properties">Set Point to Object Dimension Properties</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point to Point Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-point-to-point-dimension-properties">Set Point to Point Dimension Properties</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Radius Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Point to Point Dimension Properties" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-to-point-dimension-properties">Set Point to Point Dimension Properties</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Radius Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#set-radius-dimension-properties">Set Radius Dimension Properties</a></td>
   <td>Dimension Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
+</tr>
+<tr data-command="Set Radius Dimension Properties" data-group="Analysis Operations / Dimensions" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-radius-dimension-properties">Set Radius Dimension Properties</a></td>
+  <td>Analysis Operations / Dimensions</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
 </tr>
 </tbody>
 </table>
 
 ## Add a Dimension to Dimension Ref List
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -172,7 +320,33 @@ The exact SDK cannot supply `Dimensions List`, so Briosa cannot expose the compl
 
 ## Create Diameter Dimension
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -199,7 +373,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Create Object to Object Dimension
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -228,7 +428,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Create Point to Object Dimension
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -256,7 +482,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Create Point to Point Dimension
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -285,7 +537,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Create Radius Dimension
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -312,7 +590,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Delete Dimension
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Dimension Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -337,7 +641,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Dimension Value
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Dimension Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -369,7 +699,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Dimension From Dimension Ref List
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -396,7 +750,31 @@ The exact SDK cannot supply `Dimensions List`, so Briosa cannot expose the compl
 
 ## Get i-th Dimension From Dimension Ref List (Iterator)
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -424,7 +802,31 @@ The exact SDK cannot supply `Dimensions List`, `Step to Jump at End of List`, so
 
 ## Get Number of Dimensions in Dimension Ref List
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -450,7 +852,31 @@ The exact SDK cannot supply `Dimensions List`, so Briosa cannot expose the compl
 
 ## Make a Dimension Ref List from a Collection
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -476,7 +902,31 @@ The exact SDK cannot supply `Dimension Ref List`, so Briosa cannot expose the co
 
 ## Make a Dimension Ref List- WildCard Selection
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -503,7 +953,31 @@ The exact SDK cannot supply `Resultant Dimension Ref List`, so Briosa cannot exp
 
 ## Set Common Properties to Dimensions
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -530,7 +1004,33 @@ The exact SDK cannot supply `Dimensions List`, `Dimension Properties`, so Briosa
 
 ## Set Diameter Dimension Properties
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -556,7 +1056,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Set Dimension Tolerance
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Dimension Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -587,7 +1113,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Object to Object Dimension Properties
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -613,7 +1165,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Set Point to Object Dimension Properties
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -639,7 +1217,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Set Point to Point Dimension Properties
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -666,7 +1270,33 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
 
 ## Set Radius Dimension Properties
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Dimension Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Dimension Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations / Dimensions" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations / Dimensions</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

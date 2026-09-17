@@ -10,461 +10,925 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>73</strong></div>
   <div><span>Current Server Operations</span><strong>65</strong></div>
   <div><span>Excluded or Unavailable</span><strong>7</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Reporting Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Reporting Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Add Callout Views to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-target="2026.1.0529.7" data-command="Add Callout Views to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#add-callout-views-to-report-bar">Add Callout Views to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Add Charts to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Callout Views to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-callout-views-to-report-bar">Add Callout Views to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Charts to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-charts-to-report-bar">Add Charts to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Custom Table to SA Report" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Charts to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-charts-to-report-bar">Add Charts to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Custom Table to SA Report" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-custom-table-to-sa-report">Add Custom Table to SA Report</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Custom Tables to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Custom Table to SA Report" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-custom-table-to-sa-report">Add Custom Table to SA Report</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Custom Tables to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-custom-tables-to-report-bar">Add Custom Tables to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Datums to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Custom Tables to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-custom-tables-to-report-bar">Add Custom Tables to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Datums to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-datums-to-report-bar">Add Datums to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Dimensions to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Add Datums to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-datums-to-report-bar">Add Datums to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Dimensions to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#add-dimensions-to-report-bar">Add Dimensions to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Add Events to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Dimensions to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-dimensions-to-report-bar">Add Dimensions to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Events to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-events-to-report-bar">Add Events to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Feature Checks to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Events to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-events-to-report-bar">Add Events to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Feature Checks to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-feature-checks-to-report-bar">Add Feature Checks to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Item to SA Report at Location" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Feature Checks to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-feature-checks-to-report-bar">Add Feature Checks to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Item to SA Report at Location" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-item-to-sa-report-at-location">Add Item to SA Report at Location</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Objects to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Item to SA Report at Location" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-item-to-sa-report-at-location">Add Item to SA Report at Location</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Objects to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-objects-to-report-bar">Add Objects to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Pictures to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Objects to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-objects-to-report-bar">Add Objects to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Pictures to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-pictures-to-report-bar">Add Pictures to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Relationships to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Pictures to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-pictures-to-report-bar">Add Pictures to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Relationships to Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-relationships-to-report-bar">Add Relationships to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Add Scale Bars to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Add Relationships to Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-relationships-to-report-bar">Add Relationships to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Add Scale Bars to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#add-scale-bars-to-report-bar">Add Scale Bars to Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Append Items to SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add Scale Bars to Report Bar" data-group="Reporting Operations / Report Bar" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-scale-bars-to-report-bar">Add Scale Bars to Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Append Items to SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#append-items-to-sa-report">Append Items to SA Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Capture Current View" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Append Items to SA Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#append-items-to-sa-report">Append Items to SA Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Capture Current View" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#capture-current-view">Capture Current View</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Capture Current View" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#capture-current-view">Capture Current View</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#capture-screen-to-file-bmpjpgpnggiftiff">Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Clear Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#capture-screen-to-file-bmpjpgpnggiftiff">Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Clear Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#clear-custom-table">Clear Custom Table</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Close All Reports" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Clear Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#clear-custom-table">Clear Custom Table</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Close All Reports" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#close-all-reports">Close All Reports</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Close HTML Display Board" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Close All Reports" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#close-all-reports">Close All Reports</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Close HTML Display Board" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#close-html-display-board">Close HTML Display Board</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Combine SA Reports" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Close HTML Display Board" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#close-html-display-board">Close HTML Display Board</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Combine SA Reports" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#combine-sa-reports">Combine SA Reports</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Create Chart from Vector Group" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Combine SA Reports" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#combine-sa-reports">Combine SA Reports</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Create Chart from Vector Group" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#create-chart-from-vector-group">Create Chart from Vector Group</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Define Report Template" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Create Chart from Vector Group" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#create-chart-from-vector-group">Create Chart from Vector Group</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Define Report Template" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#define-report-template">Define Report Template</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Chart" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Define Report Template" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#define-report-template">Define Report Template</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Chart" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-chart">Delete Chart</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Chart" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-chart">Delete Chart</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-custom-table">Delete Custom Table</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-custom-table">Delete Custom Table</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-picture">Delete Picture</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete SA Doc" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Picture" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-picture">Delete Picture</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete SA Doc" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-sa-doc">Delete SA Doc</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete SA Doc" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-sa-doc">Delete SA Doc</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-sa-report">Delete SA Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete SA Report Template" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete SA Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-sa-report">Delete SA Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete SA Report Template" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-sa-report-template">Delete SA Report Template</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Generate Custom HTML Report" data-group="Reporting Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Delete SA Report Template" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-sa-report-template">Delete SA Report Template</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Generate Custom HTML Report" data-group="Reporting Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#generate-custom-html-report">Generate Custom HTML Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Generate Quick Report from Tab Order" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Generate Custom HTML Report" data-group="Reporting Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#generate-custom-html-report">Generate Custom HTML Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Generate Quick Report from Tab Order" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#generate-quick-report-from-tab-order">Generate Quick Report from Tab Order</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Generate Standard HTML Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Generate Quick Report from Tab Order" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#generate-quick-report-from-tab-order">Generate Quick Report from Tab Order</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Generate Standard HTML Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#generate-standard-html-report">Generate Standard HTML Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Generate/Update Templated Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Generate Standard HTML Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#generate-standard-html-report">Generate Standard HTML Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Generate/Update Templated Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#generateupdate-templated-report">Generate/Update Templated Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Generate/Update Templated Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#generateupdate-templated-report">Generate/Update Templated Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-custom-table-cell-double">Get Custom Table Cell Double</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-custom-table-cell-double">Get Custom Table Cell Double</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-custom-table-cell-string">Get Custom Table Cell String</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Defined Report Tags" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-custom-table-cell-string">Get Custom Table Cell String</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Defined Report Tags" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-defined-report-tags">Get Defined Report Tags</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Report Tag Value" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Defined Report Tags" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-defined-report-tags">Get Defined Report Tags</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Report Tag Value" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-report-tag-value">Get Report Tag Value</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="HTML Display Board" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Report Tag Value" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-report-tag-value">Get Report Tag Value</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="HTML Display Board" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#html-display-board">HTML Display Board</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Insert Page Break" data-group="Reporting Operations" data-status="uncommitted" data-validation="not-applicable">
+<tr data-command="HTML Display Board" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#html-display-board">HTML Display Board</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Insert Page Break" data-group="Reporting Operations" data-status="uncommitted" data-validation="not-applicable">
   <td><a href="#insert-page-break">Insert Page Break</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Insert Page Break" data-group="Reporting Operations" data-status="uncommitted" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#insert-page-break">Insert Page Break</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#make-custom-table">Make Custom Table</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make New SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Make Custom Table" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-custom-table">Make Custom Table</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make New SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#make-new-sa-report">Make New SA Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make Report Graphical View Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Make New SA Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-new-sa-report">Make New SA Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make Report Graphical View Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#make-report-graphical-view-options">Make Report Graphical View Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make Report Output Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Make Report Graphical View Options" data-group="Reporting Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-report-graphical-view-options">Make Report Graphical View Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make Report Output Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#make-report-output-options">Make Report Output Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Make Utility Chart" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Make Report Output Options" data-group="Reporting Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-report-output-options">Make Report Output Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Make Utility Chart" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#make-utility-chart">Make Utility Chart</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Notify User Double" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Make Utility Chart" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#make-utility-chart">Make Utility Chart</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Notify User Double" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#notify-user-double">Notify User Double</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Notify User HTML" data-group="Reporting Operations" data-status="current" data-validation="licensed-validation-completed">
+<tr data-command="Notify User Double" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#notify-user-double">Notify User Double</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Notify User HTML" data-group="Reporting Operations" data-status="current" data-validation="licensed-validation-completed">
   <td><a href="#notify-user-html">Notify User HTML</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Notify User Integer" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Notify User HTML" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#notify-user-html">Notify User HTML</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Notify User Integer" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#notify-user-integer">Notify User Integer</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Notify User Text Array" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Notify User Integer" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#notify-user-integer">Notify User Integer</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Notify User Text Array" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#notify-user-text-array">Notify User Text Array</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Output SA Report to Excel" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Notify User Text Array" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#notify-user-text-array">Notify User Text Array</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Output SA Report to Excel" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#output-sa-report-to-excel">Output SA Report to Excel</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Output SA Report to PDF" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Output SA Report to Excel" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#output-sa-report-to-excel">Output SA Report to Excel</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Output SA Report to PDF" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#output-sa-report-to-pdf">Output SA Report to PDF</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Quick Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Output SA Report to PDF" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#output-sa-report-to-pdf">Output SA Report to PDF</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Quick Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#quick-report">Quick Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Refresh Callout Views in SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Quick Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#quick-report">Quick Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Refresh Callout Views in SA Report" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#refresh-callout-views-in-sa-report">Refresh Callout Views in SA Report</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Refresh Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Refresh Callout Views in SA Report" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#refresh-callout-views-in-sa-report">Refresh Callout Views in SA Report</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Refresh Report Bar" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#refresh-report-bar">Refresh Report Bar</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Remove Report Tag" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Refresh Report Bar" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#refresh-report-bar">Refresh Report Bar</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Remove Report Tag" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#remove-report-tag">Remove Report Tag</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Rename Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Remove Report Tag" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#remove-report-tag">Remove Report Tag</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Rename Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#rename-picture">Rename Picture</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Save Chart to JPeg file" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Rename Picture" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#rename-picture">Rename Picture</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Save Chart to JPeg file" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#save-chart-to-jpeg-file">Save Chart to JPeg file</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Save Current View (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Save Chart to JPeg file" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#save-chart-to-jpeg-file">Save Chart to JPeg file</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Save Current View (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#save-current-view-bmpjpgpnggiftiff">Save Current View (BMP/JPG/PNG/GIF/TIFF)</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Custom Table Cell Color" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Save Current View (BMP/JPG/PNG/GIF/TIFF)" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#save-current-view-bmpjpgpnggiftiff">Save Current View (BMP/JPG/PNG/GIF/TIFF)</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Cell Color" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-cell-color">Set Custom Table Cell Color</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Cell Color" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-cell-color">Set Custom Table Cell Color</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-cell-double">Set Custom Table Cell Double</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Cell Font" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Cell Double" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-cell-double">Set Custom Table Cell Double</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Cell Font" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-cell-font">Set Custom Table Cell Font</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Cell Font" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-cell-font">Set Custom Table Cell Font</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-cell-string">Set Custom Table Cell String</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Header Cell" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Cell String" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-cell-string">Set Custom Table Cell String</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Header Cell" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-header-cell">Set Custom Table Header Cell</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Header Row" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Header Cell" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-header-cell">Set Custom Table Header Cell</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Header Row" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-header-row">Set Custom Table Header Row</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Custom Table Title" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Custom Table Header Row" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-header-row">Set Custom Table Header Row</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Custom Table Title" data-group="Reporting Operations / Custom Report Tables" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-custom-table-title">Set Custom Table Title</a></td>
   <td>Reporting Operations / Custom Report Tables</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point Delta Report Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Set Custom Table Title" data-group="Reporting Operations / Custom Report Tables" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-custom-table-title">Set Custom Table Title</a></td>
+  <td>Reporting Operations / Custom Report Tables</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point Delta Report Options" data-group="Reporting Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#set-point-delta-report-options">Set Point Delta Report Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Set Point Group Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Point Delta Report Options" data-group="Reporting Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-delta-report-options">Set Point Delta Report Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Point Group Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-point-group-report-options">Set Point Group Report Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Point Group Report Options" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-point-group-report-options">Set Point Group Report Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Relationship Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-relationship-report-options">Set Relationship Report Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Report Bar Visibility" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Relationship Report Options" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-relationship-report-options">Set Relationship Report Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Bar Visibility" data-group="Reporting Operations / Report Bar" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-report-bar-visibility">Set Report Bar Visibility</a></td>
   <td>Reporting Operations / Report Bar</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Report Options for Object" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set Report Bar Visibility" data-group="Reporting Operations / Report Bar" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-bar-visibility">Set Report Bar Visibility</a></td>
+  <td>Reporting Operations / Report Bar</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Options for Object" data-group="Reporting Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-report-options-for-object">Set Report Options for Object</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Report Tag Value From Double" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Report Options for Object" data-group="Reporting Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-options-for-object">Set Report Options for Object</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Tag Value From Double" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-report-tag-value-from-double">Set Report Tag Value From Double</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Report Tag Value From Integer" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Report Tag Value From Double" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-tag-value-from-double">Set Report Tag Value From Double</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Tag Value From Integer" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-report-tag-value-from-integer">Set Report Tag Value From Integer</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Report Tag Value From String" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Report Tag Value From Integer" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-tag-value-from-integer">Set Report Tag Value From Integer</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Report Tag Value From String" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-report-tag-value-from-string">Set Report Tag Value From String</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Scale for Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Report Tag Value From String" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-report-tag-value-from-string">Set Report Tag Value From String</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Scale for Picture" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-scale-for-picture">Set Scale for Picture</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Scale for Picture" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-scale-for-picture">Set Scale for Picture</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group Report Options" data-group="Reporting Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-group-report-options">Set Vector Group Report Options</a></td>
   <td>Reporting Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
+</tr>
+<tr data-command="Set Vector Group Report Options" data-group="Reporting Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-group-report-options">Set Vector Group Report Options</a></td>
+  <td>Reporting Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 </tbody>
 </table>
 
 ## Add Callout Views to Report Bar
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -490,7 +954,31 @@ The exact SDK cannot supply `Callout View(s)`, so Briosa cannot expose the compl
 
 ## Add Charts to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -516,7 +1004,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Custom Table to SA Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -543,7 +1057,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Custom Tables to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -569,7 +1107,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Datums to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -595,7 +1157,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Dimensions to Report Bar
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -621,7 +1207,31 @@ The exact SDK cannot supply `Dimension(s)`, so Briosa cannot expose the complete
 
 ## Add Events to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -647,7 +1257,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Feature Checks to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -673,7 +1307,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Item to SA Report at Location
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -703,7 +1363,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Objects to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -729,7 +1413,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Pictures to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -755,7 +1463,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Relationships to Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -781,7 +1513,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Add Scale Bars to Report Bar
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Reporting Operations / Report Bar" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -807,7 +1563,33 @@ The exact SDK cannot supply `Scale Bar(s)`, so Briosa cannot expose the complete
 
 ## Append Items to SA Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -835,7 +1617,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Capture Current View
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -860,7 +1668,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -885,7 +1717,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Clear Custom Table
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -910,7 +1768,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Close All Reports
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -935,7 +1817,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Close HTML Display Board
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -960,7 +1866,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Combine SA Reports
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -987,7 +1919,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Create Chart from Vector Group
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1018,7 +1976,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Define Report Template
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1053,7 +2037,33 @@ The SDK cannot supply the documented Dimensions To Report input.
 
 ## Delete Chart
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1078,7 +2088,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Custom Table
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1103,7 +2139,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Picture
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1128,7 +2190,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete SA Doc
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1153,7 +2241,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete SA Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1178,7 +2292,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete SA Report Template
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1203,7 +2343,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Generate Custom HTML Report
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Reporting Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Reporting Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1230,7 +2394,31 @@ The exact SDK cannot supply `Keyword Association List`, so Briosa cannot expose 
 
 ## Generate Quick Report from Tab Order
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1256,7 +2444,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Generate Standard HTML Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1282,7 +2494,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Generate/Update Templated Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1307,7 +2545,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Custom Table Cell Double
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1335,7 +2599,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Custom Table Cell String
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1363,7 +2653,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Defined Report Tags
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1388,7 +2702,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Report Tag Value
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1416,7 +2754,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## HTML Display Board
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1442,7 +2804,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Insert Page Break
 
-<span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="uncommitted" data-group="Reporting Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="uncommitted" data-group="Reporting Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The deferral and recommended alternative below also apply to 2024; no release is committed.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1467,7 +2853,33 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
 
 ## Make Custom Table
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1493,7 +2905,33 @@ If SA uniquifies a duplicate table name, the exact resulting name cannot be retr
 
 ## Make New SA Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1519,7 +2957,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Make Report Graphical View Options
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Reporting Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Reporting Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1549,7 +3011,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Make Report Output Options
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Reporting Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Reporting Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1584,7 +3070,33 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Make Utility Chart
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1616,7 +3128,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Notify User Double
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1645,7 +3181,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Notify User HTML
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="licensed-validation-completed">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Licensed validation completed</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1671,7 +3231,31 @@ The MP cancel-jump target is not exposed; Briosa reports the execution outcome i
 
 ## Notify User Integer
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1699,7 +3283,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Notify User Text Array
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1727,7 +3335,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Output SA Report to Excel
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1754,7 +3388,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Output SA Report to PDF
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1781,7 +3441,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Quick Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1808,7 +3494,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Refresh Callout Views in SA Report
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1833,7 +3545,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Refresh Report Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1858,7 +3594,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Remove Report Tag
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1883,7 +3643,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Rename Picture
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1910,7 +3696,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Save Chart to JPeg file
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1936,7 +3746,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Save Current View (BMP/JPG/PNG/GIF/TIFF)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1962,7 +3796,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Custom Table Cell Color
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1991,7 +3851,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Custom Table Cell Double
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2022,7 +3908,33 @@ Cell alignment cannot be selected through the SDK.
 
 ## Set Custom Table Cell Font
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2050,7 +3962,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Custom Table Cell String
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2080,7 +4018,33 @@ Cell alignment cannot be selected through the SDK.
 
 ## Set Custom Table Header Cell
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2110,7 +4074,33 @@ Cell alignment cannot be selected through the SDK.
 
 ## Set Custom Table Header Row
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2138,7 +4128,33 @@ Cell alignment cannot be selected through the SDK.
 
 ## Set Custom Table Title
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Custom Report Tables" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Custom Report Tables" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Custom Report Tables</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2165,7 +4181,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Point Delta Report Options
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Reporting Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Reporting Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2203,7 +4243,33 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Set Point Group Report Options
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2241,7 +4307,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Relationship Report Options
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2267,7 +4359,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Bar Visibility
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations / Report Bar" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations / Report Bar" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations / Report Bar</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2292,7 +4408,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Options for Object
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2317,7 +4459,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Tag Value From Double
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2343,7 +4509,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Tag Value From Integer
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2369,7 +4559,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Report Tag Value From String
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2395,7 +4609,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Scale for Picture
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -2421,7 +4661,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Report Options
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Reporting Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Reporting Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Reporting Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

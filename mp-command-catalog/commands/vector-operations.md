@@ -10,173 +10,351 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>25</strong></div>
   <div><span>Current Server Operations</span><strong>15</strong></div>
   <div><span>Excluded or Unavailable</span><strong>10</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Vector Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Vector Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Add a Vector To Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-target="2026.1.0529.7" data-command="Add a Vector To Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#add-a-vector-to-vector-name-ref-list">Add a Vector To Vector Name Ref List</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Auto-Range and Set Vector Group Colorization (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Add a Vector To Vector Name Ref List" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#add-a-vector-to-vector-name-ref-list">Add a Vector To Vector Name Ref List</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Range and Set Vector Group Colorization (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#auto-range-and-set-vector-group-colorization-all">Auto-Range and Set Vector Group Colorization (All)</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Auto-Range and Set Vector Group Colorization (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Auto-Range and Set Vector Group Colorization (All)" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#auto-range-and-set-vector-group-colorization-all">Auto-Range and Set Vector Group Colorization (All)</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Range and Set Vector Group Colorization (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#auto-range-and-set-vector-group-colorization-selected">Auto-Range and Set Vector Group Colorization (Selected)</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Auto-Range and Set Vector Group Colorization (Selected)" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#auto-range-and-set-vector-group-colorization-selected">Auto-Range and Set Vector Group Colorization (Selected)</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-i-th-vector-from-vector-group">Delete i-th Vector From Vector Group</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Vector by Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete i-th Vector From Vector Group" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-i-th-vector-from-vector-group">Delete i-th Vector From Vector Group</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Vector by Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-vector-by-name">Delete Vector by Name</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Vector by Name" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-vector-by-name">Delete Vector by Name</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#delete-vectors">Delete Vectors</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Delete Vectors" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-vectors">Delete Vectors</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get i-th Vector From Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-i-th-vector-from-vector-group">Get i-th Vector From Vector Group</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Vector From Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get i-th Vector From Vector Group" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-i-th-vector-from-vector-group">Get i-th Vector From Vector Group</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get i-th Vector From Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-i-th-vector-from-vector-name-ref-list">Get i-th Vector From Vector Name Ref List</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Number of Vectors in Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get i-th Vector From Vector Name Ref List" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-i-th-vector-from-vector-name-ref-list">Get i-th Vector From Vector Name Ref List</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Number of Vectors in Vector Group" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-number-of-vectors-in-vector-group">Get Number of Vectors in Vector Group</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Number of Vectors in Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Number of Vectors in Vector Group" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-number-of-vectors-in-vector-group">Get Number of Vectors in Vector Group</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Number of Vectors in Vector Name Ref List" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-number-of-vectors-in-vector-name-ref-list">Get Number of Vectors in Vector Name Ref List</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector From Vector Group By Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Number of Vectors in Vector Name Ref List" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-number-of-vectors-in-vector-name-ref-list">Get Number of Vectors in Vector Name Ref List</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector From Vector Group By Name" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-from-vector-group-by-name">Get Vector From Vector Group By Name</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Vector Group Colorization Options" data-group="Vector Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Get Vector From Vector Group By Name" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-from-vector-group-by-name">Get Vector From Vector Group By Name</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector Group Colorization Options" data-group="Vector Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#get-vector-group-colorization-options">Get Vector Group Colorization Options</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Vector Group Display Attributes" data-group="Vector Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Get Vector Group Colorization Options" data-group="Analysis Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-group-colorization-options">Get Vector Group Colorization Options</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector Group Display Attributes" data-group="Vector Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#get-vector-group-display-attributes">Get Vector Group Display Attributes</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Get Vector Group Properties" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Vector Group Display Attributes" data-group="Analysis Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-group-display-attributes">Get Vector Group Display Attributes</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Vector Group Properties" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-vector-group-properties">Get Vector Group Properties</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Colorization Options (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Get Vector Group Properties" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-vector-group-properties">Get Vector Group Properties</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group Colorization Options (All)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-group-colorization-options-all">Set Vector Group Colorization Options (All)</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Colorization Options (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Vector Group Colorization Options (All)" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-group-colorization-options-all">Set Vector Group Colorization Options (All)</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group Colorization Options (Selected)" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#set-vector-group-colorization-options-selected">Set Vector Group Colorization Options (Selected)</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Vector Group Display Attributes" data-group="Vector Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Set Vector Group Colorization Options (Selected)" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-group-colorization-options-selected">Set Vector Group Colorization Options (Selected)</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group Display Attributes" data-group="Vector Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#set-vector-group-display-attributes">Set Vector Group Display Attributes</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Sort Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-command="Set Vector Group Display Attributes" data-group="Analysis Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-vector-group-display-attributes">Set Vector Group Display Attributes</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Sort Vectors" data-group="Vector Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#sort-vectors">Sort Vectors</a></td>
   <td>Vector Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Vector Addition" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Sort Vectors" data-group="Analysis Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#sort-vectors">Sort Vectors</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Addition" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-addition">Vector Addition</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Cross Product" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Addition" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-addition">Vector Addition</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Cross Product" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-cross-product">Vector Cross Product</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Dot Product" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Cross Product" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-cross-product">Vector Cross Product</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Dot Product" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-dot-product">Vector Dot Product</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Magnitude (Length)" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Dot Product" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-dot-product">Vector Dot Product</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Magnitude (Length)" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-magnitude-length">Vector Magnitude (Length)</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Normalize" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Magnitude (Length)" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-magnitude-length">Vector Magnitude (Length)</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Normalize" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-normalize">Vector Normalize</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Scaling" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Normalize" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-normalize">Vector Normalize</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Scaling" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-scaling">Vector Scaling</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
 </tr>
-<tr data-command="Vector Subtraction" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
+<tr data-command="Vector Scaling" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-scaling">Vector Scaling</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Vector Subtraction" data-group="Vector Operations / Vector Math Operations" data-status="excluded" data-validation="not-applicable">
   <td><a href="#vector-subtraction">Vector Subtraction</a></td>
   <td>Vector Operations / Vector Math Operations</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Not applicable</td>
+</tr>
+<tr data-command="Vector Subtraction" data-group="Vector Math Operations" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#vector-subtraction">Vector Subtraction</a></td>
+  <td>Vector Math Operations</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Evidence review</td>
 </tr>
 </tbody>
 </table>
 
 ## Add a Vector To Vector Name Ref List
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -203,7 +381,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Auto-Range and Set Vector Group Colorization (All)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -229,7 +431,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Auto-Range and Set Vector Group Colorization (Selected)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -256,7 +482,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete i-th Vector From Vector Group
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -282,7 +534,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Vector by Name
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -308,7 +586,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Delete Vectors
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -333,7 +635,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Vector From Vector Group
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -365,7 +693,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get i-th Vector From Vector Name Ref List
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -398,7 +750,33 @@ Returns the vector identity and geometry, but not its documented color.
 
 ## Get Number of Vectors in Vector Group
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -424,7 +802,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Number of Vectors in Vector Name Ref List
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -450,7 +852,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector From Vector Group By Name
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -481,7 +909,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Vector Group Colorization Options
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Vector Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -506,7 +960,31 @@ No complete useful exact-target SDK binding is available.
 
 ## Get Vector Group Display Attributes
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Analysis Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -553,7 +1031,33 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Get Vector Group Properties
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -595,7 +1099,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Colorization Options (All)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -620,7 +1148,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Colorization Options (Selected)
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -646,7 +1198,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Vector Group Display Attributes
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Analysis Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -698,7 +1274,31 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 
 ## Sort Vectors
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Vector Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Vector Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -733,7 +1333,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Vector Addition
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -760,7 +1384,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Cross Product
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -787,7 +1435,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Dot Product
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -814,7 +1486,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Magnitude (Length)
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -840,7 +1536,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Normalize
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -866,7 +1586,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Scaling
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -893,7 +1637,31 @@ The client language can perform this calculation directly without an SA session 
 
 ## Vector Subtraction
 
-<span className="catalog-status catalog-status--excluded">Excluded</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Vector Operations / Vector Math Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Operations / Vector Math Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Vector Math Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
+  <span className="catalog-target-group">Vector Math Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+The exclusion and recommended alternative below also apply to 2024.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

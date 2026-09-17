@@ -10,53 +10,111 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>5</strong></div>
   <div><span>Current Server Operations</span><strong>4</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Scale Bar Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Scale Bar Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Delete Scale Bar" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Scale Bar" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#delete-scale-bar">Delete Scale Bar</a></td>
   <td>Scale Bar Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Scale Bar Stats" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Delete Scale Bar" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-scale-bar">Delete Scale Bar</a></td>
+  <td>Analysis Operations / Scale Bars</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Scale Bar Stats" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-scale-bar-stats">Get Scale Bar Stats</a></td>
   <td>Scale Bar Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Scale Bar Check" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Scale Bar Stats" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-scale-bar-stats">Get Scale Bar Stats</a></td>
+  <td>Analysis Operations / Scale Bars</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Scale Bar Check" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#scale-bar-check">Scale Bar Check</a></td>
   <td>Scale Bar Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Inward Positive Normal" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Scale Bar Check" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#scale-bar-check">Scale Bar Check</a></td>
+  <td>Analysis Operations / Scale Bars</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Inward Positive Normal" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#set-inward-positive-normal">Set Inward Positive Normal</a></td>
   <td>Scale Bar Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Sort Point Group in Database" data-group="Scale Bar Operations" data-status="sdk-unavailable" data-validation="not-applicable">
+<tr data-command="Set Inward Positive Normal" data-group="Analysis Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-inward-positive-normal">Set Inward Positive Normal</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Sort Point Group in Database" data-group="Scale Bar Operations" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#sort-point-group-in-database">Sort Point Group in Database</a></td>
   <td>Scale Bar Operations</td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Not applicable</td>
+</tr>
+<tr data-command="Sort Point Group in Database" data-group="Analysis Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
+  <td><a href="#sort-point-group-in-database">Sort Point Group in Database</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
+  <td>Evidence review</td>
 </tr>
 </tbody>
 </table>
 
 ## Delete Scale Bar
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Scale Bar Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Scale Bar Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -81,7 +139,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Get Scale Bar Stats
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Scale Bar Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Scale Bar Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -109,7 +193,31 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Scale Bar Check
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Scale Bar Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Scale Bar Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -140,7 +248,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Set Inward Positive Normal
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Scale Bar Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Scale Bar Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -166,7 +300,33 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 
 ## Sort Point Group in Database
 
-<span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="sdk-unavailable" data-group="Scale Bar Operations" data-validation="not-applicable">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Scale Bar Operations</span>
+  <span className="catalog-target-validation">Not applicable</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Analysis Operations" data-validation="evidence-review">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">Evidence review</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+No complete reviewed useful SDK mapping is available for this 2024 command.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

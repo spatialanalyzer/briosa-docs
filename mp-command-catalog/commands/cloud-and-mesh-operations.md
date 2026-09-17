@@ -10,180 +10,308 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
 
+<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>28</strong></div>
   <div><span>Current Server Operations</span><strong>28</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
-<CatalogFilter scopedGroup="Cloud and Mesh Operations" />
+<CatalogFilter showTargetFilter scopedGroup="Cloud and Mesh Operations" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-command="Cloud Display Control" data-group="Cloud and Mesh Operations" data-status="current" data-validation="portable-contract-review">
+<tr data-target="2026.1.0529.7" data-command="Cloud Display Control" data-group="Cloud and Mesh Operations" data-status="current" data-validation="portable-contract-review">
   <td><a href="#cloud-display-control">Cloud Display Control</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Reset Cloud Bounding Box" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Cloud Display Control" data-group="Cloud Viewer Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#cloud-display-control">Cloud Display Control</a></td>
+  <td>Cloud Viewer Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Reset Cloud Bounding Box" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#reset-cloud-bounding-box">Reset Cloud Bounding Box</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud Point Count" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Reset Cloud Bounding Box" data-group="Cloud Viewer Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#reset-cloud-bounding-box">Reset Cloud Bounding Box</a></td>
+  <td>Cloud Viewer Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Cloud Point Count" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-point-count">Get Cloud Point Count</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Cloud Default Clipping Plane" data-group="Cloud and Mesh Operations" data-status="current" data-validation="licensed-sa-2026-1-0529-7-probe">
+<tr data-command="Get Cloud Point Count" data-group="Cloud Viewer Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-cloud-point-count">Get Cloud Point Count</a></td>
+  <td>Cloud Viewer Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Set Cloud Default Clipping Plane" data-group="Cloud and Mesh Operations" data-status="current" data-validation="licensed-sa-2026-1-0529-7-probe">
   <td><a href="#set-cloud-default-clipping-plane">Set Cloud Default Clipping Plane</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed SA 2026.1.0529.7 probe</td>
 </tr>
-<tr data-command="Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Set Cloud Default Clipping Plane" data-group="Cloud Viewer Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#set-cloud-default-clipping-plane">Set Cloud Default Clipping Plane</a></td>
+  <td>Cloud Viewer Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>Evidence review — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#raster-scan-edge-inspection">Raster Scan Edge Inspection</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="New Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Raster Scan Edge Inspection" data-group="Analysis Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#raster-scan-edge-inspection">Raster Scan Edge Inspection</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="New Raster Scan Edge Inspection" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#new-raster-scan-edge-inspection">New Raster Scan Edge Inspection</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Clear Cloud Point Deviations" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="New Raster Scan Edge Inspection" data-group="Analysis Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#new-raster-scan-edge-inspection">New Raster Scan Edge Inspection</a></td>
+  <td>Analysis Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Clear Cloud Point Deviations" data-group="Cloud and Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#clear-cloud-point-deviations">Clear Cloud Point Deviations</a></td>
   <td>Cloud and Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable All Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Enable All Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enable-all-cloud-cross-sections">Enable All Cloud Cross Sections</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable/Disable Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable All Cloud Cross Sections" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#enable-all-cloud-cross-sections">Enable All Cloud Cross Sections</a></td>
+  <td>Analysis Operations / Relationship Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Cloud Cross Sections" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enabledisable-cloud-cross-sections">Enable/Disable Cloud Cross Sections</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Enable Single Cloud Cross Section" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable/Disable Cloud Cross Sections" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#enabledisable-cloud-cross-sections">Enable/Disable Cloud Cross Sections</a></td>
+  <td>Analysis Operations / Relationship Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Enable Single Cloud Cross Section" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#enable-single-cloud-cross-section">Enable Single Cloud Cross Section</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Number of Cross Sections in Cross Section Cloud" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Enable Single Cloud Cross Section" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#enable-single-cloud-cross-section">Enable Single Cloud Cross Section</a></td>
+  <td>Analysis Operations / Relationship Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Number of Cross Sections in Cross Section Cloud" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-number-of-cross-sections-in-cross-section-cloud">Get Number of Cross Sections in Cross Section Cloud</a></td>
   <td>Cloud and Mesh Operations / Cloud Cross Sections</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Plane" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Get Number of Cross Sections in Cross Section Cloud" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#get-number-of-cross-sections-in-cross-section-cloud">Get Number of Cross Sections in Cross Section Cloud</a></td>
+  <td>Analysis Operations / Relationship Operations</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Plane" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-plane">Filter Clouds to Plane</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Group" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Plane" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-plane">Filter Clouds to Plane</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Group" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-group">Filter Clouds to Group</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Surface" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Group" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-group">Filter Clouds to Group</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Surface" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-surface">Filter Clouds to Surface</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to BSplines" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Surface" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-surface">Filter Clouds to Surface</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to BSplines" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-bsplines">Filter Clouds to BSplines</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Line Segment" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to BSplines" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-bsplines">Filter Clouds to BSplines</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Line Segment" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-line-segment">Filter Clouds to Line Segment</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Vector Groups - Resolve points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Line Segment" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-line-segment">Filter Clouds to Line Segment</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Vector Groups - Resolve points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-vector-groups---resolve-points">Filter Clouds to Vector Groups - Resolve points</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Filter Clouds to Vector Groups - Resolve Clouds" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Filter Clouds to Vector Groups - Resolve points" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#filter-clouds-to-vector-groups---resolve-points">Filter Clouds to Vector Groups - Resolve points</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Filter Clouds to Vector Groups - Resolve Clouds" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#filter-clouds-to-vector-groups---resolve-clouds">Filter Clouds to Vector Groups - Resolve Clouds</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="RGB Cloud Point Filter" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="RGB Cloud Point Filter" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#rgb-cloud-point-filter">RGB Cloud Point Filter</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud RGB Values" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="RGB Cloud Point Filter" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#rgb-cloud-point-filter">RGB Cloud Point Filter</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Get Cloud RGB Values" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-rgb-values">Get Cloud RGB Values</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Cloud RGB Values Near Point" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Get Cloud RGB Values Near Point" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#get-cloud-rgb-values-near-point">Get Cloud RGB Values Near Point</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Subdivide Cloud by Point Spacing" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Subdivide Cloud by Point Spacing" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#subdivide-cloud-by-point-spacing">Subdivide Cloud by Point Spacing</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by Radial Distance from Points" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#delete-cloud-points-by-radial-distance-from-points">Delete Cloud Points by Radial Distance from Points</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-command="Delete Cloud Points by Radial Distance from Points" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-cloud-points-by-radial-distance-from-points">Delete Cloud Points by Radial Distance from Points</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
+  <td>Analysis Operations / Cloud Filters</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#generate-general-mesh">Generate General Mesh</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Consolidate Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Generate General Mesh" data-group="Analysis Operations / Meshes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#generate-general-mesh">Generate General Mesh</a></td>
+  <td>Analysis Operations / Meshes</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Consolidate Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#consolidate-mesh">Consolidate Mesh</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Mesh Volume" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Mesh Volume" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#mesh-volume">Mesh Volume</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - fixture or interactive validation required</td>
 </tr>
-<tr data-command="Mesh Fill Holes" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
+<tr data-command="Mesh Volume" data-group="Analysis Operations / Meshes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+  <td><a href="#mesh-volume">Mesh Volume</a></td>
+  <td>Analysis Operations / Meshes</td>
+  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td>At Risk — no 2024 runtime validation</td>
+</tr>
+<tr data-target="2026.1.0529.7" data-command="Mesh Fill Holes" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#mesh-fill-holes">Mesh Fill Holes</a></td>
   <td>Cloud and Mesh Operations / Mesh Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -194,7 +322,31 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
 
 ## Cloud Display Control
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="portable-contract-review">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">Portable contract review</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Cloud Viewer Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Cloud Viewer Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -221,7 +373,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Reset Cloud Bounding Box
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Cloud Viewer Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Cloud Viewer Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -261,7 +439,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Get Cloud Point Count
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Cloud Viewer Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Cloud Viewer Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -291,7 +495,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Set Cloud Default Clipping Plane
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="licensed-sa-2026-1-0529-7-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">Licensed sa 2026 1 0529 7 probe</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Cloud Viewer Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Cloud Viewer Operations</span>
+  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -319,7 +549,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Raster Scan Edge Inspection
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -352,7 +608,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## New Raster Scan Edge Inspection
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -389,7 +671,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Clear Cloud Point Deviations
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -415,7 +705,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Enable All Cloud Cross Sections
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Cross Sections</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -441,7 +757,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Enable/Disable Cloud Cross Sections
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Cross Sections</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -469,7 +811,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Enable Single Cloud Cross Section
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Cross Sections</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -496,7 +864,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Get Number of Cross Sections in Cross Section Cloud
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Cross Sections" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Cross Sections</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -523,7 +917,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Plane
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -554,7 +974,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Group
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -585,7 +1031,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Surface
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -617,7 +1089,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to BSplines
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -648,7 +1146,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Line Segment
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -680,7 +1204,44 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Vector Groups - Resolve points
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The 2024 signature has no `Include Proximity Points?` input. Retain the operation with its eight captured inputs; do not add the later option.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Vector Group Names` | Collection Object Name Ref List |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Minimum Proximity` | Double |
+| Input | `Maximum Proximity` | Double |
+| Input | `Maximum Distance From Vector Begin` | Double |
+| Input | `Minimum number of required points` | Integer |
+| Input | `Output Type` | String |
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -714,7 +1275,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Filter Clouds to Vector Groups - Resolve Clouds
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -746,7 +1315,31 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## RGB Cloud Point Filter
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -794,7 +1387,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Get Cloud RGB Values
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -825,7 +1426,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Get Cloud RGB Values Near Point
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -858,7 +1467,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Subdivide Cloud by Point Spacing
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -888,7 +1505,31 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Delete Cloud Points by Radial Distance from Points
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -917,7 +1558,31 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Delete Cloud Points by X Y Z Range
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-destructive-fixture-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At risk destructive fixture validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -950,7 +1615,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Generate General Mesh
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Meshes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Meshes</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -982,7 +1673,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Consolidate Mesh
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1008,7 +1707,33 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Mesh Volume
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Meshes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+  <span className="catalog-target-group">Analysis Operations / Meshes</span>
+  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+</div>
+</div>
+
+<details className="catalog-target-review">
+<summary>SA 2024.1.0508.5: Signature and Disposition</summary>
+
+Planned for the 2024 target; implementation and runtime validation are pending.
+
+The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
+
+Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
+
+The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+
+</details>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
@@ -1037,7 +1762,15 @@ mesh behavior through a reviewed exact-target SDK command.
 
 ## Mesh Fill Holes
 
-<span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-contexts">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Mesh Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+  <span className="catalog-target-group">Cloud and Mesh Operations / Mesh Operations</span>
+  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+</div>
+</div>
+
+<p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>

@@ -19,6 +19,7 @@ new Crawler({
     'https://briosa.dev/assets/**',
     'https://briosa.dev/search**',
     'https://briosa.dev/mp-command-catalog/2026.1.0529.7/**',
+    'https://briosa.dev/mp-command-catalog/2024.1.0508.5/**',
     'https://briosa.dev/mp-command-catalog/commands',
     'https://briosa.dev/mp-command-catalog/commands/',
     'https://briosa.dev/mp-command-catalog/commands/index**',
@@ -38,19 +39,13 @@ new Crawler({
         $('meta[http-equiv="refresh"], meta[name="robots"][content*="noindex"]').length
       ) return [];
 
-      // Older canonical pages state their target once in the introduction and
-      // their reviewed group in the on-page table. Reuse that context without
-      // making table rows into search records. Ambiguous targets require review.
+      // Table anchors identify canonical commands; per-command target contexts
+      // retain separate availability claims without duplicate search records.
       const groupsByAnchor = new Map();
       $('.catalog-command-table tbody tr').each((_, row) => {
         const link = $(row).find('a[href^="#"]').first().attr('href');
         if (link) groupsByAnchor.set(link.slice(1), $(row).attr('data-group'));
       });
-      const title = $('article h1');
-      const titleBlock = title.parent().is('header') ? title.parent() : title;
-      const pageTargets = [...new Set((titleBlock.nextUntil('h2').text()
-        .match(/\b\d{4}\.\d+\.\d{4}\.\d+\b/g) || []))];
-
       // Index article content, not repeated tables, filters, navigation or chrome.
       $('.hash-link, .catalog-command-table, .catalog-filter, .catalog-context-grid,' +
         ' nav, aside, .theme-doc-footer, .pagination-nav, .table-of-contents').remove();
@@ -67,35 +62,39 @@ new Crawler({
         const records = [];
         $('article h2[id], article h3[id]').each((position, element) => {
           const heading = $(element);
-          const leading = heading.nextUntil('h1, h2, h3, h4, h5, h6');
           const section = heading.nextUntil(heading.is('h2') ? 'h1, h2' : 'h1, h2, h3');
           const label = text(heading.text());
-          const status = text(leading.find('.catalog-status')
-            .add(leading.filter('.catalog-status')).first().text());
-          if (!status && !groupsByAnchor.has(heading.attr('id'))) return;
-          const details = {};
-          section.find('.catalog-command-meta > div')
-            .add(section.filter('.catalog-command-meta').children('div'))
-            .each((_, detail) => {
-              const name = text($(detail).children('span').text());
-              const value = text($(detail).children('strong').text());
-              if (details[name] && details[name] !== value) {
-                throw new Error(`Ambiguous reviewed command context: ${path}#${heading.attr('id')}`);
+          if (!groupsByAnchor.has(heading.attr('id'))) return;
+          const contexts = [];
+          const seenTargets = new Set();
+          const labels = {
+            current: 'Current', next: 'Next', undecided: 'Undecided',
+            uncommitted: 'Uncommitted', excluded: 'Excluded',
+            'sdk-unavailable': 'SDK Unavailable',
+          };
+          section.find('.catalog-target-context')
+            .add(section.filter('.catalog-target-context'))
+            .each((_, node) => {
+              const target = $(node).attr('data-target');
+              const status = $(node).attr('data-status');
+              const group = $(node).attr('data-group');
+              const badge = text($(node).find('.catalog-status').first().text());
+              if (!target || !/^\d{4}\.\d+\.\d{4}\.\d+$/.test(target) ||
+                  !labels[status] || badge !== labels[status] || !group || seenTargets.has(target)) {
+                throw new Error(`Missing or ambiguous reviewed command context: ${path}#${heading.attr('id')}`);
               }
-              details[name] = value;
+              seenTargets.add(target);
+              contexts.push(`${labels[status]} · SA ${target} · ${group}`);
             });
-          const target = details['Reviewed SA Target'] ||
-            (pageTargets.length === 1 ? pageTargets[0] : undefined);
-          const group = details['MP Group Path'] || groupsByAnchor.get(heading.attr('id'));
-          if (!status || !target || !group) {
+          if (contexts.length === 0) {
             throw new Error(`Missing reviewed command context: ${path}#${heading.attr('id')}`);
           }
 
           const anchor = heading.attr('id');
           const pageUrl = `https://briosa.dev${path}`;
-          const context = `${status} · SA ${target} · ${group}`;
-          const body = section.not('.catalog-command-meta, .catalog-status').clone();
-          body.find('.catalog-command-meta, .catalog-status').remove();
+          const context = contexts.join(' | ');
+          const body = section.not('.catalog-command-meta, .catalog-status, .catalog-target-contexts').clone();
+          body.find('.catalog-command-meta, .catalog-status, .catalog-target-contexts').remove();
           records.push({
             objectID: `${pageUrl}#${anchor}`,
             url: `${pageUrl}#${anchor}`,
