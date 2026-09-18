@@ -13,11 +13,11 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.6.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.6.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7 |
+| Briosa Server and Control Center | [0.6.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.6.1) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7 |
 | Briosa Installer | [0.2.2](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.2.2) | Windows setup and portable distribution |
-| .NET client | 0.1.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.1.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.1.0) |
-| Python client | 0.1.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.1.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.1.0/) |
-| JavaScript/TypeScript client | 0.1.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.1.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.1.0) |
+| .NET client | 0.1.1 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.1.1), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.1.1) |
+| Python client | 0.1.1 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.1.1/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.1.1/) |
+| JavaScript/TypeScript client | 0.1.1 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.1.1), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.1.1) |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -25,10 +25,19 @@ for registry installation commands. A separately installed and licensed
 SpatialAnalyzer environment remains required for MP execution. Connections
 remain local and use loopback.
 
-Each package name contains the exact SA target; its **0.1.0** package version is
-independent of SA and the pinned **0.6.0** server version. C# uses `using Briosa;`,
+Each package name contains the exact SA target; its **0.1.1** package version is
+independent of SA and the pinned **0.6.1** server version. C# uses `using Briosa;`,
 Python uses `import briosa`, and JavaScript uses the npm alias `briosa`.
 Use separate environments or applications for different targets.
+
+## Example Applications
+
+The [Point Inspection Workbench](https://github.com/spatialanalyzer/briosa-examples)
+implements one inspection workflow with direct gRPC, .NET, TypeScript, and
+Python. It includes a shared synthetic fixture and CSV/JSON reports, plus an
+explicit live mode for a prepared SA 2026.1.0529.7 job. Synthetic mode and
+portable tests run without SpatialAnalyzer. Licensed acceptance for this
+example and SA 2024 qualification remain outstanding.
 
 ## Supported SpatialAnalyzer Targets
 
@@ -36,7 +45,7 @@ SA **2024.1.0508.5** and **2026.1.0529.7** have independent server and client
 products. The [SA 2024 review notes](/mp-command-catalog/2024.1.0508.5/review-notes)
 describe command differences. Six read-only operations and basic lifecycle
 behavior have local licensed SA 2024 validation; broader runtime coverage
-remains outstanding. See the [SA 2024 compatibility record](https://github.com/spatialanalyzer/briosa/blob/v0.6.0/targets/2024.1.0508.5/docs/development/sa2024-compatibility.md).
+remains outstanding. See the [SA 2024 compatibility record](https://github.com/spatialanalyzer/briosa/blob/v0.6.1/targets/2024.1.0508.5/docs/development/sa2024-compatibility.md).
 SA 2026 observations do not establish SA 2024 runtime validation.
 
 ## What Has Been Validated
@@ -79,8 +88,9 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 The gRPC reference currently retains its **Server 0.5.1** snapshot. Each client
 reference has a **0.1.0** snapshot describing the SA 2026 API; use the installed
 SA 2024 package types and reviewed differences for legacy signatures. The
-[Server 0.6.0 source](https://github.com/spatialanalyzer/briosa/tree/v0.6.0/targets)
-provides the authoritative exact-target contracts.
+[Server 0.6.1 source](https://github.com/spatialanalyzer/briosa/tree/v0.6.1/targets)
+provides the authoritative exact-target contracts. Client 0.1.1 changes the
+exact server pairing; its public API schemas are unchanged from 0.1.0.
 The product guides, installation instructions, release status, and MP catalog
 remain unversioned so they can describe current availability across products.
 

@@ -17,11 +17,11 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client 0.1.0 and Server 0.6.0]
+:::note[Client 0.1.1 and Server 0.6.1]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. These clients pin Briosa
-Server 0.6.0. See [Release Status](/docs/releases) for package links and
+Server 0.6.1. See [Release Status](/docs/releases) for package links and
 validation limits.
 
 :::
@@ -131,3 +131,10 @@ The authoritative protobuf contracts are published by the
 [Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/main/targets/2026.1.0529.7/proto/briosa).
 
 [Browse supported operations →](/api)
+
+## Try a Complete Example
+
+The [Point Inspection Workbench](https://github.com/spatialanalyzer/briosa-examples)
+shows the same workflow with direct gRPC and each language client. Start with
+its synthetic fixture to produce matching inspection reports without SA,
+then follow its explicit live-mode setup for a prepared SA 2026 job.
