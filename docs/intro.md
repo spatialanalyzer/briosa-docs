@@ -131,11 +131,11 @@ the form each application expects. Briosa owns the SDK sequence, checks the MP
 result, retrieves the output, and translates failures into the selected
 client's documented error model.
 
-:::note[Client 0.1.0 and Server 0.6.0]
+:::note[Client 0.1.1 and Server 0.6.1]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. These clients pin Briosa
-Server 0.6.0. See [Release Status](/docs/releases) for package links and
+Server 0.6.1. See [Release Status](/docs/releases) for package links and
 validation limits.
 
 :::
@@ -198,7 +198,7 @@ commands Briosa currently supports. It shows which commands are Current, Next,
 Undecided, Uncommitted, Excluded, or unavailable through the SDK, along with
 the rationale and recommended alternatives where applicable.
 
-Briosa Server 0.6.0 provides independent distributions for SpatialAnalyzer
+Briosa Server 0.6.1 provides independent distributions for SpatialAnalyzer
 `2024.1.0508.5` and `2026.1.0529.7`. See the
 [gRPC API reference](/api/grpc) and [MP Command Catalog](/mp-command-catalog)
 for released operations, runtime admission rules, and validation qualifications.

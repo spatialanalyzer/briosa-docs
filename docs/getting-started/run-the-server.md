@@ -16,11 +16,11 @@ The Briosa server, SDK, and SpatialAnalyzer application still have independent
 lifecycles. Direct gRPC users can start and control each resource separately,
 and client applications can diagnose or recover the SDK without restarting SA.
 
-:::note[Client 0.1.0 and Server 0.6.0]
+:::note[Client 0.1.1 and Server 0.6.1]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. These clients pin Briosa
-Server 0.6.0. See [Release Status](/docs/releases) for package links and
+Server 0.6.1. See [Release Status](/docs/releases) for package links and
 validation limits.
 
 :::
@@ -43,7 +43,7 @@ Each first-party client distribution identifies the exact SpatialAnalyzer
 release it supports. The package version remains an independent Briosa client
 version; it is not the SpatialAnalyzer version.
 
-Both targets are published as client **0.1.0** and pin Briosa Server **0.6.0**.
+Both targets are published as client **0.1.1** and pin Briosa Server **0.6.1**.
 Choose one exact target for each application environment. The examples below
 use SA 2026; the matching SA 2024 install command follows each example.
 
@@ -51,10 +51,10 @@ use SA 2026; the matching SA 2024 install command follows each example.
   <TabItem value="dotnet" label=".NET (C#)" default>
 
 ```powershell
-dotnet add package Briosa.2026.1.0529.7 --version 0.1.0
+dotnet add package Briosa.2026.1.0529.7 --version 0.1.1
 ```
 
-For SA 2024, use `dotnet add package Briosa.2024.1.0508.5 --version 0.1.0`.
+For SA 2024, use `dotnet add package Briosa.2024.1.0508.5 --version 0.1.1`.
 
 The assembly has the same exact-target identity, while C# source continues to
 use the stable `Briosa` namespace.
@@ -63,10 +63,10 @@ use the stable `Briosa` namespace.
   <TabItem value="python" label="Python">
 
 ```powershell
-python -m pip install briosa-2026-1-0529-7==0.1.0
+python -m pip install briosa-2026-1-0529-7==0.1.1
 ```
 
-For SA 2024, use `python -m pip install briosa-2024-1-0508-5==0.1.0`.
+For SA 2024, use `python -m pip install briosa-2024-1-0508-5==0.1.1`.
 
 The distribution is target-specific, while Python source continues to use
 `import briosa`. Use separate virtual environments for different SA targets.
@@ -75,11 +75,11 @@ The distribution is target-specific, while Python source continues to use
   <TabItem value="typescript" label="JavaScript / TypeScript">
 
 ```powershell
-npm install briosa@npm:@spatialanalyzer/briosa-2026.1.0529.7@0.1.0
+npm install briosa@npm:@spatialanalyzer/briosa-2026.1.0529.7@0.1.1
 ```
 
 For SA 2024, use
-`npm install briosa@npm:@spatialanalyzer/briosa-2024.1.0508.5@0.1.0`.
+`npm install briosa@npm:@spatialanalyzer/briosa-2024.1.0508.5@0.1.1`.
 
 The distribution is target-specific. The npm alias installs it under the
 stable local name `briosa`, so source uses `import ... from 'briosa'`.
