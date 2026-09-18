@@ -8,7 +8,7 @@ import styles from './index.module.css';
 
 const products = [
   {
-    release: 'Installer 0.2.1',
+    release: 'Installer 0.2.2',
     title: 'Briosa Installer',
     detail: 'Install, update, verify, and repair Briosa server packages for your exact SpatialAnalyzer release.',
     href: '/install',
