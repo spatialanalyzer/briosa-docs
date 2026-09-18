@@ -8,21 +8,21 @@ import styles from './index.module.css';
 
 const products = [
   {
-    release: 'Installer 0.2.0',
+    release: 'Installer 0.2.1',
     title: 'Briosa Installer',
     detail: 'Install, update, verify, and repair Briosa server packages for your exact SpatialAnalyzer release.',
     href: '/install',
     action: 'Install Briosa',
   },
   {
-    release: 'Server 0.5.1',
+    release: 'Server 0.6.1',
     title: 'Briosa Server',
     detail: 'Run read-only and mutating MP commands through a strongly typed local gRPC API.',
     href: '/api/grpc',
     action: 'Explore the Server API',
   },
   {
-    release: 'Included with Server 0.5.1',
+    release: 'Included with Server 0.6.1',
     title: 'Briosa Control Center',
     detail: 'Monitor server status and activity, and manage a local server and its SDK from the Windows tray.',
     href: '/docs/deployment/control-center',

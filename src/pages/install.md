@@ -13,13 +13,18 @@ individual installations.
 Run the installer on each Windows host where you need Briosa. Its inventory and
 SDK Setup describe that machine; it does not manage other hosts remotely.
 
-<div className="margin-bottom--md"><a className="button button--primary button--lg" href="https://briosa.dev/downloads/packages/installer/0.2.0/briosa-installer-0.2.0-win-x64-setup.exe" download>Download Briosa Installer</a></div>
+<div className="margin-bottom--md"><a className="button button--primary button--lg" href="https://briosa.dev/downloads/packages/installer/0.2.1/briosa-installer-0.2.1-win-x64-setup.exe" download>Download Briosa Installer</a></div>
 
-**Version 0.2.0 · Windows x64 · Complete offline setup**
+**Version 0.2.1 · Windows x64 · Complete offline setup**
 
-[SHA-256 checksum](https://briosa.dev/downloads/packages/installer/0.2.0/briosa-installer-0.2.0-win-x64-setup.exe.sha256)
-· [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.2.0)
+[SHA-256 checksum](https://briosa.dev/downloads/packages/installer/0.2.1/briosa-installer-0.2.1-win-x64-setup.exe.sha256)
+· [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.2.1)
 · [All downloads](https://briosa.dev/downloads)
+
+Installer 0.2.1 and Server 0.6.1 include security-patched .NET runtime 10.0.12.
+Update both the Installer and your installed server packages to receive the fixes;
+installing a newer system-wide .NET runtime does not update these self-contained
+packages.
 
 ## Before You Begin
 
@@ -42,7 +47,7 @@ SDK ownership requirements.
 
 1. Select **Download Briosa Installer** above, or obtain the same setup package
    from your organization's approved software portal.
-2. Open the downloaded `briosa-installer-0.2.0-win-x64-setup.exe` file.
+2. Open the downloaded `briosa-installer-0.2.1-win-x64-setup.exe` file.
 3. Follow the setup wizard. It installs for your Windows account; the default
    location is `%LOCALAPPDATA%\Programs\Briosa Installer`.
 4. Select **Launch Briosa Installer** when setup finishes. For later starts,
