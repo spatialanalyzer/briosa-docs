@@ -17,12 +17,12 @@ This separation lets you keep the control plane available without starting SA,
 restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
 when your client exits.
 
-:::note[Server Released; Client Packages Unpublished]
+:::note[Client 0.1.0 and Server 0.6.0]
 
-The server lifecycle and MP APIs are available in Briosa Server 0.5.1.
-Client examples describe the implemented source APIs; the .NET, Python, and
-JavaScript/TypeScript packages have not yet been published. See
-[Release Status](/docs/releases) for availability and validation limits.
+Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
+Install the package matching your exact SA release. These clients pin Briosa
+Server 0.6.0. See [Release Status](/docs/releases) for package links and
+validation limits.
 
 :::
 

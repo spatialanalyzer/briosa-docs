@@ -31,9 +31,10 @@ Each API reference has its own Docusaurus release history. The gRPC reference
 is published as **0.5.1**, matching Briosa Server 0.5.1. Product guides and the
 MP catalog remain unversioned.
 
-The source directories under `api/` hold working documentation. Unpublished
-client references are labeled **Unreleased**. The server's working reference
-is omitted from the public build while the released snapshot is the default.
+The source directories under `api/` hold working documentation. Client
+references serve their **0.1.0** snapshots for SA 2026, with legacy differences
+linked explicitly. Working references are omitted from the public build while
+the released snapshots are the defaults.
 Do not present a source implementation as an available package.
 
 Before cutting a reference, reconcile its contracts and availability against

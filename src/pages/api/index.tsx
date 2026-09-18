@@ -14,7 +14,7 @@ const references = [
     to: '/api/grpc',
   },
   {
-    eyebrow: 'Unreleased Client',
+    eyebrow: 'Client 0.1.0 · SA 2026',
     product: 'dotnet',
     title: '.NET API',
     description:
@@ -22,7 +22,7 @@ const references = [
     to: '/api/dotnet',
   },
   {
-    eyebrow: 'Unreleased Client',
+    eyebrow: 'Client 0.1.0 · SA 2026',
     product: 'python',
     title: 'Python API',
     description:
@@ -30,7 +30,7 @@ const references = [
     to: '/api/python',
   },
   {
-    eyebrow: 'Unreleased Client',
+    eyebrow: 'Client 0.1.0 · SA 2026',
     product: 'js',
     title: 'JavaScript and TypeScript API',
     description:

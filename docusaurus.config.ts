@@ -65,13 +65,16 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'dotnet',
+        includeCurrentVersion: false,
+        lastVersion: '0.1.0',
         path: 'api/dotnet',
         routeBasePath: 'api/dotnet',
         sidebarPath: './sidebarsDotnet.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
-          current: {
-            label: 'Unreleased',
+          '0.1.0': {
+            label: '0.1.0',
+            path: '',
             banner: 'none',
             badge: true,
           },
@@ -82,13 +85,16 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'python',
+        includeCurrentVersion: false,
+        lastVersion: '0.1.0',
         path: 'api/python',
         routeBasePath: 'api/python',
         sidebarPath: './sidebarsPython.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
-          current: {
-            label: 'Unreleased',
+          '0.1.0': {
+            label: '0.1.0',
+            path: '',
             banner: 'none',
             badge: true,
           },
@@ -99,13 +105,16 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'javascript',
+        includeCurrentVersion: false,
+        lastVersion: '0.1.0',
         path: 'api/javascript',
         routeBasePath: 'api/javascript',
         sidebarPath: './sidebarsJavascript.ts',
         editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         versions: {
-          current: {
-            label: 'Unreleased',
+          '0.1.0': {
+            label: '0.1.0',
+            path: '',
             banner: 'none',
             badge: true,
           },

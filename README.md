@@ -209,8 +209,8 @@ npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
 The gRPC reference currently serves the Server 0.5.1 snapshot by default.
-Its working source is not published. Client references remain Unreleased until
-their respective packages are published. Docusaurus maintains independent
+Its working source is not published. Client references serve the 0.1.0
+snapshots for the SA 2026 API, with explicit links to the SA 2024 differences. Docusaurus maintains independent
 version and sidebar snapshots for each plugin instance. The site itself does
 not take a shared product version.
 
