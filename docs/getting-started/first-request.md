@@ -134,11 +134,12 @@ The authoritative protobuf contracts are published by the
 
 [Browse supported operations →](/api)
 
-## Read Points From Your SA Job
+## Create and Read Points in SA
 
 The [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples)
-walk through reading two points and their distance from your open SA job.
-Choose a language, edit the point names, and run the short program:
+walk through creating two points, reading their coordinates, and measuring their
+distance in your open SA job. Start with an empty job, choose a language, and run
+the short program; Briosa creates the demo points for you:
 
 - [.NET](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/dotnet)
 - [TypeScript](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/typescript)
