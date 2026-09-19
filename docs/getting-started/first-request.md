@@ -17,12 +17,14 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client 0.1.1 and Server 0.6.1]
+:::note[Client 0.2.0 and Server 0.7.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. These clients pin Briosa
-Server 0.6.1. See [Release Status](/docs/releases) for package links and
-validation limits.
+Install the package matching your exact SA release. Client 0.2.0 selects a
+compatible server for that target using behavioral contract 1.0; the exact
+Server 0.6.1 build remains a tested legacy exception. See
+[Release Status](/docs/releases) for package links and validation limits, and
+[installation selection](/docs/deployment/installation-selection) for per-application choices.
 
 :::
 

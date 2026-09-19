@@ -15,9 +15,9 @@ not mean that every documented API is only a proposal.
 | --- | --- | --- |
 | Briosa Server and Control Center | [0.7.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.7.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 1.0 |
 | Briosa Installer | [0.3.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0) | Signed Windows setup and portable distribution; side-by-side installation registration |
-| .NET client | 0.1.1 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.1.1), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.1.1) |
-| Python client | 0.1.1 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.1.1/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.1.1/) |
-| JavaScript/TypeScript client | 0.1.1 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.1.1), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.1.1) |
+| .NET client | 0.2.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.2.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.2.0) |
+| Python client | 0.2.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.2.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.2.0/) |
+| JavaScript/TypeScript client | 0.2.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.2.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.2.0) |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -25,10 +25,13 @@ for registry installation commands. A separately installed and licensed
 SpatialAnalyzer environment remains required for MP execution. Connections
 remain local and use loopback.
 
-Each package name contains the exact SA target; its **0.1.1** package version is
-independent of SA and the pinned **0.6.1** server version. C# uses `using Briosa;`,
-Python uses `import briosa`, and JavaScript uses the npm alias `briosa`.
-Use separate environments or applications for different targets.
+Each package name contains the exact SA target; its **0.2.0** package version is
+independent of SA and the server version. Client 0.2.0 selects a server implementing
+behavioral contract major 1 with revision at least 0, with a tested exception for
+the exact published Server 0.6.1. Its generation artifact remains pinned to Server
+0.7.0. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
+the npm alias `briosa`. Use separate environments or applications for different targets.
+See [installation selection and migration](/docs/deployment/installation-selection).
 
 ## Example Applications
 
@@ -89,8 +92,14 @@ The gRPC reference currently retains its **Server 0.5.1** snapshot. Each client
 reference has a **0.1.0** snapshot describing the SA 2026 API; use the installed
 SA 2024 package types and reviewed differences for legacy signatures. The
 [Server 0.7.0 source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets)
-provides the authoritative exact-target contracts. Client 0.1.1 changes the
-exact server pairing; its public API schemas are unchanged from 0.1.0.
+provides the authoritative exact-target contracts. Client 0.1.1 changed the
+exact server pairing; its public API schemas were unchanged from 0.1.0.
+Client 0.2.0 adds installation discovery, per-application selection, and contract
+compatibility. The selection guide and the target-specific package READMEs in
+[.NET](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets),
+[JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets),
+and [Python](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets)
+document those additions beyond the retained API snapshots.
 The product guides, installation instructions, release status, and MP catalog
 remain unversioned so they can describe current availability across products.
 

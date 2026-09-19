@@ -10,10 +10,10 @@ client from the Briosa distribution it can run. One workstation can keep SA
 2024.1.0508.5 and SA 2026.1.0529.7 products, including several Briosa versions
 for either target. Each application makes its own selection.
 
-:::note[Release Transition]
+:::note[Client 0.2.0]
 
-This guide describes the committed implementation for Server 0.7.0 and client
-0.2.0. Check [Release Status](/docs/releases) for actual package availability.
+This guide describes Server 0.7.0 and client 0.2.0, available for both exact SA
+targets. See [Release Status](/docs/releases) for package links and validation.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
 
