@@ -134,9 +134,13 @@ The authoritative protobuf contracts are published by the
 
 [Browse supported operations →](/api)
 
-## Try a Complete Example
+## Read Points From Your SA Job
 
-The [Point Inspection Workbench](https://github.com/spatialanalyzer/briosa-examples)
-shows the same workflow with direct gRPC and each language client. Start with
-its synthetic fixture to produce matching inspection reports without SA,
-then follow its explicit live-mode setup for a prepared SA 2026 job.
+The [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples)
+walk through reading two points and their distance from your open SA job.
+Choose a language, edit the point names, and run the short program:
+
+- [.NET](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/dotnet)
+- [TypeScript](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/typescript)
+- [Python](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/python)
+- [Direct gRPC](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/grpc)
