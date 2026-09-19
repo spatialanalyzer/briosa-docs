@@ -78,6 +78,12 @@ changes the SDK registered with Windows.
 Each running Briosa server still works with only one exact release and one
 active SpatialAnalyzer instance at a time.
 
+The contract-aware client line adds
+[per-application installation selection](../deployment/installation-selection).
+An SA 2026 application and an SA 2024 application can independently discover
+their matching compatible distributions. This does not change the registered
+SDK or establish concurrent execution readiness.
+
 When you want to switch releases:
 
 1. Stop the current SDK generation

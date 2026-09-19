@@ -9,6 +9,12 @@ verification, repair, and removal. That guide also records current download
 availability. This page covers the server package layout, manual extraction,
 diagnostics, and startup.
 
+Installer 0.3.0 also registers committed products in the 64-bit Windows Registry.
+Use its registration rescan for existing custom stores. Registry entries are
+discovery hints backed by receipts; they never select a machine-wide default.
+See [Compatible Side-by-Side Installations](./installation-selection) for the
+new client selection contract and migration guidance.
+
 Briosa release archives are self-contained .NET 10 Windows x64 products for one
 exact SpatialAnalyzer target:
 

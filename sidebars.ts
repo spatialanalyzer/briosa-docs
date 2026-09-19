@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
       label: 'Operate Briosa',
       items: [
         'deployment/windows',
+        'deployment/installation-selection',
         'deployment/control-center',
         'deployment/health-and-discovery',
         'deployment/logging',

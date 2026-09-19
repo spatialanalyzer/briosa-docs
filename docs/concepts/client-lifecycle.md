@@ -17,12 +17,14 @@ This separation lets you keep the control plane available without starting SA,
 restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
 when your client exits.
 
-:::note[Client 0.1.1 and Server 0.6.1]
+:::note[Client 0.2.0 and Server 0.7.0]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
-Install the package matching your exact SA release. These clients pin Briosa
-Server 0.6.1. See [Release Status](/docs/releases) for package links and
-validation limits.
+Install the package matching your exact SA release. Client 0.2.0 selects a
+compatible server for that target using behavioral contract 1.0; the exact
+Server 0.6.1 build remains a tested legacy exception. See
+[Release Status](/docs/releases) for package links and validation limits, and
+[installation selection](/docs/deployment/installation-selection) for per-application choices.
 
 :::
 
@@ -60,7 +62,11 @@ starting only the Briosa control plane.
 When application launch is selected, clients can request a local SA job file,
 an instrument quick-start for a new job, or a minimized window. Briosa does not
 accept an executable path, arbitrary process arguments, or launch-time MP
-execution from clients.
+execution through the launch RPC. The contract-aware client line adds an exact
+SA executable path as per-process server startup configuration; it must pass
+the target's file-version check. See
+[Side-by-Side Installation Selection](/docs/deployment/installation-selection)
+for the new selection options and their release status.
 
 ## Explicit gRPC Lifecycle Sequence
 
