@@ -60,7 +60,11 @@ starting only the Briosa control plane.
 When application launch is selected, clients can request a local SA job file,
 an instrument quick-start for a new job, or a minimized window. Briosa does not
 accept an executable path, arbitrary process arguments, or launch-time MP
-execution from clients.
+execution through the launch RPC. The contract-aware client line adds an exact
+SA executable path as per-process server startup configuration; it must pass
+the target's file-version check. See
+[Side-by-Side Installation Selection](/docs/deployment/installation-selection)
+for the new selection options and their release status.
 
 ## Explicit gRPC Lifecycle Sequence
 
