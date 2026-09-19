@@ -13,7 +13,7 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.6.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.6.1) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7 |
+| Briosa Server and Control Center | [0.7.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.7.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 1.0 |
 | Briosa Installer | [0.3.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0) | Signed Windows setup and portable distribution; side-by-side installation registration |
 | .NET client | 0.1.1 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.1.1), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.1.1) |
 | Python client | 0.1.1 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.1.1/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.1.1/) |
@@ -88,7 +88,7 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 The gRPC reference currently retains its **Server 0.5.1** snapshot. Each client
 reference has a **0.1.0** snapshot describing the SA 2026 API; use the installed
 SA 2024 package types and reviewed differences for legacy signatures. The
-[Server 0.6.1 source](https://github.com/spatialanalyzer/briosa/tree/v0.6.1/targets)
+[Server 0.7.0 source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets)
 provides the authoritative exact-target contracts. Client 0.1.1 changes the
 exact server pairing; its public API schemas are unchanged from 0.1.0.
 The product guides, installation instructions, release status, and MP catalog

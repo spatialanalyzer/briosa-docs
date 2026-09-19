@@ -21,7 +21,7 @@ SDK Setup describe that machine; it does not manage other hosts remotely.
 · [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0)
 · [All downloads](https://briosa.dev/downloads)
 
-Installer 0.3.0 and Server 0.6.1 include security-patched .NET runtime 10.0.12.
+Installer 0.3.0 and Server 0.7.0 include security-patched .NET runtime 10.0.12.
 Update both the Installer and your installed server packages to receive the fixes;
 installing a newer system-wide .NET runtime does not update these self-contained
 packages.

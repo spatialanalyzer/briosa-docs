@@ -141,6 +141,17 @@ mandatory.
 
 ## Migrate Existing Scripts
 
+Existing packages retain their original runtime requirements:
+
+| Client Version | Server Selection |
+| --- | --- |
+| 0.1.0 | Its exact pinned Server 0.6.0 build for the package's SA target |
+| 0.1.1 | Its exact pinned Server 0.6.1 build for the package's SA target |
+| 0.2.0 | Contract-aware selection, plus the reviewed Server 0.6.1 exception |
+
+Installing a new server does not broaden an old client's compatibility. Keep
+the old distribution installed until applications using it have migrated.
+
 Replace ambient `BRIOSA_SERVER_PATH` with a per-start selection option. The new
 client line ignores that variable by default. A temporary explicit
 `UseLegacyEnvironmentOverride` / `useLegacyEnvironmentOverride` /
@@ -183,4 +194,3 @@ Server releases after the initial bootstrap must pass the
 [retained published-client gate](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/README.md).
 Discovery and lifecycle behavior are defined by the
 [shared contract](https://github.com/spatialanalyzer/briosa/blob/main/docs/architecture/installation-selection-and-compatibility.md).
-
