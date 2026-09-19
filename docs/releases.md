@@ -35,12 +35,15 @@ See [installation selection and migration](/docs/deployment/installation-selecti
 
 ## Example Applications
 
-The [Point Inspection Workbench](https://github.com/spatialanalyzer/briosa-examples)
-implements one inspection workflow with direct gRPC, .NET, TypeScript, and
-Python. It includes a shared synthetic fixture and CSV/JSON reports, plus an
-explicit live mode for a prepared SA 2026.1.0529.7 job. Synthetic mode and
-portable tests run without SpatialAnalyzer. Licensed acceptance for this
-example and SA 2024 qualification remain outstanding.
+The [Briosa tutorials](https://github.com/spatialanalyzer/briosa-examples)
+show how to create two points, read their coordinates, and measure their distance
+in an empty SA 2026.1.0529.7 job. Choose .NET, TypeScript, Python, or direct gRPC;
+each example is a short program that constructs its own demo points.
+The language clients use their built-in server discovery and cleanup. The
+gRPC example connects to a server prepared in Control Center.
+All four ran successfully with Server 0.7.0 and licensed SA 2026.1.0529.7;
+see the [validation record](https://github.com/spatialanalyzer/briosa-examples/blob/main/docs/evidence/licensed-2026-09-19.md).
+SA 2024 qualification remains outstanding.
 
 ## Supported SpatialAnalyzer Targets
 
