@@ -271,9 +271,10 @@ const config: Config = {
         ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
         {
           href: 'https://discord.gg/kd2N3BmDNv',
-          label: 'Discord',
           position: 'right',
+          className: 'header-discord-link',
           'aria-label': 'Open SA Discord',
+          title: 'Open SA Discord',
         },
         {
           href: 'https://github.com/spatialanalyzer/briosa',
