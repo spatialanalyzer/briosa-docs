@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Process Flow Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.7.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -29,10 +29,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for Double" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for Double" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-double">Ask for Double</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for Integer" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
@@ -41,10 +41,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for Integer" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for Integer" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-integer">Ask for Integer</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for Point Name" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
@@ -53,10 +53,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for Point Name" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for Point Name" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-point-name">Ask for Point Name</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for String" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
@@ -65,10 +65,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for String" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for String" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-string">Ask for String</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for String (Pull-Down Version)" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
@@ -77,10 +77,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for String (Pull-Down Version)" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for String (Pull-Down Version)" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-string-pull-down-version">Ask for String (Pull-Down Version)</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for User Decision (Pull-Down Version)" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -113,10 +113,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for User Decision from Image" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for User Decision from Image" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-user-decision-from-image">Ask for User Decision from Image</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for User Decision from Strings" data-group="Process Flow Operations" data-status="current" data-validation="licensed-validation-completed">
@@ -125,10 +125,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Licensed validation completed</td>
 </tr>
-<tr data-command="Ask for User Decision from Strings" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Ask for User Decision from Strings" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#ask-for-user-decision-from-strings">Ask for User Decision from Strings</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Ask for User Decision(HTML)" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -257,10 +257,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Object Existence Test (Check Only)" data-group="Process Flow Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Object Existence Test (Check Only)" data-group="Process Flow Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#object-existence-test-check-only">Object Existence Test (Check Only)</a></td>
   <td>Process Flow Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Reset Counter" data-group="Process Flow Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -310,17 +310,19 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-double) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-double) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-double) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-double)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -366,17 +368,19 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-integer) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-integer) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-integer) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-integer)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -422,17 +426,19 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-point-name) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-point-name) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-point-name) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-point-name)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -475,17 +481,19 @@ The MP cancel-jump target is not exposed; Briosa returns the selected point or r
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-string) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-string) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-string) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-string)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -529,17 +537,19 @@ The MP cancel-jump target is not exposed; Briosa returns the entered value or re
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-string-pull-down-version) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-string-pull-down-version) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-string-pull-down-version) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-string-pull-down-version)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -687,17 +697,19 @@ The exact SDK cannot supply `Button Answers`, `Step to jump to if Canceled (-1 w
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-image) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-image) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-image) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-image)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -742,17 +754,19 @@ The MP cancel-jump target is not exposed; Briosa returns the decision or reports
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Licensed validation completed</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-strings) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-strings) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-strings) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-strings)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1311,17 +1325,19 @@ The exact SDK cannot supply `Step if Object does exist`, `Step if Object doesn't
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Process Flow Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Process Flow Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/process-flow-operations#object-existence-test-check-only) · [.NET](/api/dotnet/sa-2024.1.0508.5/process-flow-operations#object-existence-test-check-only) · [Python](/api/python/sa-2024.1.0508.5/process-flow-operations#object-existence-test-check-only) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/process-flow-operations#object-existence-test-check-only)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

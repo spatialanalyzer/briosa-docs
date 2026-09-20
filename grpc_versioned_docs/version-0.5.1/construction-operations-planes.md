@@ -117,4 +117,4 @@ message ConstructPlanesFromSurfaceFacesRuntimeSelectResult {
 This operator-interactive operation has no MP arguments. Cancellation does not
 prove that the interaction stopped.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-planes) · [.NET](/api/dotnet/construction-operations-planes) · [Python](/api/python/construction-operations-planes) · [JavaScript/TypeScript](/api/javascript/construction-operations-planes)
+[Catalog](/mp-command-catalog/commands/construction-operations-planes) · [.NET](/api/dotnet/0.1.0/construction-operations-planes) · [Python](/api/python/0.1.0/construction-operations-planes) · [JavaScript/TypeScript](/api/javascript/0.1.0/construction-operations-planes)

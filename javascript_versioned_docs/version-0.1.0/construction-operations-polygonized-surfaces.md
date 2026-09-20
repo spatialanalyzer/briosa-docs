@@ -46,4 +46,4 @@ await constructPolygonizedSurfaceFromPointClouds(briosa, {
 
 The call depends on live SA state and is never automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [gRPC](/api/grpc/construction-operations-polygonized-surfaces)
+[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [gRPC](/api/grpc/0.5.1/construction-operations-polygonized-surfaces)

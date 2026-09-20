@@ -17,7 +17,7 @@ export interface CalibrationApplianceNodeStatus {
 
 ## addCalibrationApplianceNode
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
 
 ```ts
 export interface AddCalibrationApplianceNodeInput {
@@ -33,7 +33,7 @@ function addCalibrationApplianceNode(
 
 ## deleteCalibrationApplianceNode
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
 
 ```ts
 export interface DeleteCalibrationApplianceNodeInput {
@@ -49,7 +49,7 @@ function deleteCalibrationApplianceNode(
 
 ## connectDisconnectCalibrationApplianceNode
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
 
 ```ts
 export interface ConnectDisconnectCalibrationApplianceNodeInput {
@@ -68,7 +68,7 @@ function connectDisconnectCalibrationApplianceNode(
 
 ## setCalibrationApplianceNodeInstrument
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
 
 ```ts
 export interface SetCalibrationApplianceNodeInstrumentInput {
@@ -85,7 +85,7 @@ function setCalibrationApplianceNodeInstrument(
 
 ## setCalibrationApplianceNodeMeasurementProfile
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementProfileInput {
@@ -104,7 +104,7 @@ function setCalibrationApplianceNodeMeasurementProfile(
 
 ## setCalibrationApplianceNodeMeasurementTarget
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementTargetInput {
@@ -123,7 +123,7 @@ function setCalibrationApplianceNodeMeasurementTarget(
 
 ## enableDisableCalibrationApplianceNodeInstrumentAutoPoint
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
 
 ```ts
 export interface EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput {
@@ -142,7 +142,7 @@ function enableDisableCalibrationApplianceNodeInstrumentAutoPoint(
 
 ## setCalibrationApplianceNodeInstrumentDwellTime
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
 
 ```ts
 export interface SetCalibrationApplianceNodeInstrumentDwellTimeInput {
@@ -161,7 +161,7 @@ function setCalibrationApplianceNodeInstrumentDwellTime(
 
 ## skipCalibrationApplianceNodeMeasurement
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
 
 ```ts
 export interface SkipCalibrationApplianceNodeMeasurementInput {
@@ -177,7 +177,7 @@ function skipCalibrationApplianceNodeMeasurement(
 
 ## setCalibrationApplianceNodeMeasurementFrame
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementFrameInput {
@@ -196,7 +196,7 @@ The reference must identify an SA Frame.
 
 ## setCalibrationApplianceNodeMeasurementOffsetTransform
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementOffsetTransformInput {
@@ -215,7 +215,7 @@ Omitting the transform uses the exact MP identity-transform default.
 
 ## setCalibrationApplianceNodeMeasurementPointGroup
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementPointGroupInput {
@@ -234,7 +234,7 @@ The reference must identify an SA Point Group.
 
 ## setCalibrationApplianceNodeCalibrationApplianceIpAddress
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
 
 ```ts
 export interface SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput {
@@ -254,7 +254,7 @@ through local SA; it does not enable remote Briosa execution.
 
 ## setCalibrationApplianceNodeTrappingNodeId
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
 
 ```ts
 export interface SetCalibrationApplianceNodeTrappingNodeIdInput {
@@ -271,7 +271,7 @@ function setCalibrationApplianceNodeTrappingNodeId(
 
 ## enableDisableCalibrationApplianceNodeTrapManager
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
 
 ```ts
 export interface EnableDisableCalibrationApplianceNodeTrapManagerInput {
@@ -290,7 +290,7 @@ function enableDisableCalibrationApplianceNodeTrapManager(
 
 ## clearCalibrationApplianceNodeTrapManagerRequests
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
 
 ```ts
 export interface ClearCalibrationApplianceNodeTrapManagerRequestsInput {
@@ -306,7 +306,7 @@ function clearCalibrationApplianceNodeTrapManagerRequests(
 
 ## setCalibrationApplianceNodeIntegerValue
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
 
 ```ts
 export interface SetCalibrationApplianceNodeIntegerValueInput {
@@ -324,7 +324,7 @@ function setCalibrationApplianceNodeIntegerValue(
 
 ## getCalibrationApplianceNodeIntegerValue
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
 
 ```ts
 export interface GetCalibrationApplianceNodeIntegerValueInput {
@@ -341,7 +341,7 @@ function getCalibrationApplianceNodeIntegerValue(
 
 ## setCalibrationApplianceNodeRealValue
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
 
 ```ts
 export interface SetCalibrationApplianceNodeRealValueInput {
@@ -359,7 +359,7 @@ function setCalibrationApplianceNodeRealValue(
 
 ## getCalibrationApplianceNodeRealValue
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
 
 ```ts
 export interface GetCalibrationApplianceNodeRealValueInput {
@@ -376,7 +376,7 @@ function getCalibrationApplianceNodeRealValue(
 
 ## setCalibrationApplianceNodeData
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
 
 ```ts
 export interface SetCalibrationApplianceNodeDataInput {
@@ -397,7 +397,7 @@ documented real-values-only contract.
 
 ## getCalibrationApplianceNodeData
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
 
 ```ts
 export interface GetCalibrationApplianceNodeDataInput {
@@ -417,7 +417,7 @@ SA state. The result contains only the SDK-supported `Real Values`.
 
 ## setCalibrationApplianceNodeDisplayRobot
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
 
 ```ts
 export interface SetCalibrationApplianceNodeDisplayRobotInput {
@@ -434,7 +434,7 @@ function setCalibrationApplianceNodeDisplayRobot(
 
 ## updateCalibrationApplianceNodeDisplayRobotJoints
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
 
 ```ts
 export interface UpdateCalibrationApplianceNodeDisplayRobotJointsInput {
@@ -451,7 +451,7 @@ function updateCalibrationApplianceNodeDisplayRobotJoints(
 
 ## getCalibrationApplianceNodeStatus
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
 
 ```ts
 export interface GetCalibrationApplianceNodeStatusInput {

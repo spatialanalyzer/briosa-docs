@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Backup Now
 
-[Backup Now](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC contract](/api/grpc/file-operations#backup-now)
+[Backup Now](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC contract](/api/grpc/0.5.1/file-operations#backup-now)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Copy General File
 
-[Copy General File](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC contract](/api/grpc/file-operations#copy-general-file)
+[Copy General File](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#copy-general-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete General File
 
-[Delete General File](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC contract](/api/grpc/file-operations#delete-general-file)
+[Delete General File](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#delete-general-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Direct CAD Access
 
-[Direct CAD Access](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC contract](/api/grpc/file-operations#direct-cad-access)
+[Direct CAD Access](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC contract](/api/grpc/0.5.1/file-operations#direct-cad-access)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -187,7 +187,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export ASCII Frame Set
 
-[Export ASCII Frame Set](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-frame-set)
+[Export ASCII Frame Set](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-frame-set)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -226,7 +226,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export ASCII Frames
 
-[Export ASCII Frames](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC contract](/api/grpc/file-operations#export-ascii-frames)
+[Export ASCII Frames](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-frames)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -259,7 +259,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export ASCII Point Clouds
 
-[Export ASCII Point Clouds](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-clouds)
+[Export ASCII Point Clouds](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-point-clouds)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -298,7 +298,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export ASCII Point Set
 
-[Export ASCII Point Set](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-set)
+[Export ASCII Point Set](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-point-set)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -349,7 +349,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export ASCII Points
 
-[Export ASCII Points](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC contract](/api/grpc/file-operations#export-ascii-points)
+[Export ASCII Points](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -410,7 +410,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export DXF
 
-[Export DXF](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC contract](/api/grpc/file-operations#export-dxf)
+[Export DXF](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-dxf)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -443,7 +443,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Embedded File
 
-[Export Embedded File](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC contract](/api/grpc/file-operations#export-embedded-file)
+[Export Embedded File](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-embedded-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -476,7 +476,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Hidden Point Bar XML File
 
-[Export Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#export-hidden-point-bar-xml-file)
+[Export Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-hidden-point-bar-xml-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -502,7 +502,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export IGES File  - Entire Model
 
-[Export IGES File  - Entire Model](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file----entire-model)
+[Export IGES File  - Entire Model](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-iges-file----entire-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -528,7 +528,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export IGES File - Partial Model
 
-[Export IGES File - Partial Model](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file---partial-model)
+[Export IGES File - Partial Model](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-iges-file---partial-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -556,7 +556,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export PTX Point Clouds
 
-[Export PTX Point Clouds](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ptx-point-clouds)
+[Export PTX Point Clouds](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ptx-point-clouds)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -589,7 +589,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export QDAS Characteristics
 
-[Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC contract](/api/grpc/file-operations#export-qdas-characteristics)
+[Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-qdas-characteristics)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -650,7 +650,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export QDAS Data List
 
-[Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#export-qdas-data-list)
+[Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-qdas-data-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -676,7 +676,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Scan Stripe Mesh to STL File
 
-[Export Scan Stripe Mesh to STL File](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC contract](/api/grpc/file-operations#export-scan-stripe-mesh-to-stl-file)
+[Export Scan Stripe Mesh to STL File](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-scan-stripe-mesh-to-stl-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -704,7 +704,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export STEP File - Entire Model
 
-[Export STEP File - Entire Model](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---entire-model)
+[Export STEP File - Entire Model](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-step-file---entire-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -730,7 +730,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export STEP File - Partial Model
 
-[Export STEP File - Partial Model](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---partial-model)
+[Export STEP File - Partial Model](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-step-file---partial-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -758,7 +758,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export VDA/FS File  - Entire Model
 
-[Export VDA/FS File  - Entire Model](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file----entire-model)
+[Export VDA/FS File  - Entire Model](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vdafs-file----entire-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -784,7 +784,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export VDA/FS File - Partial Model
 
-[Export VDA/FS File - Partial Model](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file---partial-model)
+[Export VDA/FS File - Partial Model](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vdafs-file---partial-model)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -812,7 +812,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Vector Container to ASCII File
 
-[Export Vector Container to ASCII File](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC contract](/api/grpc/file-operations#export-vector-container-to-ascii-file)
+[Export Vector Container to ASCII File](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vector-container-to-ascii-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -849,7 +849,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Find Files in Directory
 
-[Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC contract](/api/grpc/file-operations#find-files-in-directory)
+[Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#find-files-in-directory)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -880,7 +880,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Find Sub-Directories in Directory
 
-[Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC contract](/api/grpc/file-operations#find-sub-directories-in-directory)
+[Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#find-sub-directories-in-directory)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -909,7 +909,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Boolean From DataShare File
 
-[Get Boolean From DataShare File](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-boolean-from-datashare-file)
+[Get Boolean From DataShare File](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-boolean-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -938,7 +938,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Double From DataShare File
 
-[Get Double From DataShare File](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-double-from-datashare-file)
+[Get Double From DataShare File](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-double-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -967,7 +967,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Integer From DataShare File
 
-[Get Integer From DataShare File](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-integer-from-datashare-file)
+[Get Integer From DataShare File](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-integer-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -996,7 +996,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get QDAS Catalog Entries
 
-[Get QDAS Catalog Entries](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC contract](/api/grpc/file-operations#get-qdas-catalog-entries)
+[Get QDAS Catalog Entries](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-qdas-catalog-entries)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1023,7 +1023,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get String From DataShare File
 
-[Get String From DataShare File](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-string-from-datashare-file)
+[Get String From DataShare File](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-string-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1052,7 +1052,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Transform From DataShare File
 
-[Get Transform From DataShare File](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-transform-from-datashare-file)
+[Get Transform From DataShare File](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-transform-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1081,7 +1081,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Vector From DataShare File
 
-[Get Vector From DataShare File](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-vector-from-datashare-file)
+[Get Vector From DataShare File](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-vector-from-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1110,7 +1110,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Working Directory
 
-[Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC contract](/api/grpc/file-operations#get-working-directory)
+[Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-working-directory)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1133,7 +1133,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import ASCII: Predefined Formats
 
-[Import ASCII: Predefined Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-formats)
+[Import ASCII: Predefined Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-ascii-predefined-formats)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1174,7 +1174,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import ASCII: Predefined Frame Set Formats
 
-[Import ASCII: Predefined Frame Set Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-frame-set-formats)
+[Import ASCII: Predefined Frame Set Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-ascii-predefined-frame-set-formats)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1211,7 +1211,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import E57 File
 
-[Import E57 File](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC contract](/api/grpc/file-operations#import-e57-file)
+[Import E57 File](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-e57-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1250,7 +1250,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import File as Embedded File
 
-[Import File as Embedded File](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC contract](/api/grpc/file-operations#import-file-as-embedded-file)
+[Import File as Embedded File](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-file-as-embedded-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1279,7 +1279,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import File as Picture
 
-[Import File as Picture](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC contract](/api/grpc/file-operations#import-file-as-picture)
+[Import File as Picture](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-file-as-picture)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1308,7 +1308,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import Hidden Point Bar XML File
 
-[Import Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#import-hidden-point-bar-xml-file)
+[Import Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-hidden-point-bar-xml-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1337,7 +1337,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import IGES File
 
-[Import IGES File](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC contract](/api/grpc/file-operations#import-iges-file)
+[Import IGES File](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-iges-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1363,7 +1363,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import Leica GSI File
 
-[Import Leica GSI File](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC contract](/api/grpc/file-operations#import-leica-gsi-file)
+[Import Leica GSI File](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-leica-gsi-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1393,7 +1393,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import Leica SDB File
 
-[Import Leica SDB File](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC contract](/api/grpc/file-operations#import-leica-sdb-file)
+[Import Leica SDB File](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-leica-sdb-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1423,7 +1423,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import MP File as Embedded MP
 
-[Import MP File as Embedded MP](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC contract](/api/grpc/file-operations#import-mp-file-as-embedded-mp)
+[Import MP File as Embedded MP](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-mp-file-as-embedded-mp)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1452,7 +1452,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import Nominals from XML File
 
-[Import Nominals from XML File](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC contract](/api/grpc/file-operations#import-nominals-from-xml-file)
+[Import Nominals from XML File](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-nominals-from-xml-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1478,7 +1478,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import Polyworks File
 
-[Import Polyworks File](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC contract](/api/grpc/file-operations#import-polyworks-file)
+[Import Polyworks File](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-polyworks-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1506,7 +1506,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import QDAS Catalog File
 
-[Import QDAS Catalog File](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC contract](/api/grpc/file-operations#import-qdas-catalog-file)
+[Import QDAS Catalog File](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-qdas-catalog-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1532,7 +1532,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import SA File
 
-[Import SA File](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC contract](/api/grpc/file-operations#import-sa-file)
+[Import SA File](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sa-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1563,7 +1563,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import SA Windows Placement
 
-[Import SA Windows Placement](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC contract](/api/grpc/file-operations#import-sa-windows-placement)
+[Import SA Windows Placement](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sa-windows-placement)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1589,7 +1589,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import SAT File
 
-[Import SAT File](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC contract](/api/grpc/file-operations#import-sat-file)
+[Import SAT File](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sat-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1615,7 +1615,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import STEP File
 
-[Import STEP File](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC contract](/api/grpc/file-operations#import-step-file)
+[Import STEP File](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-step-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1646,7 +1646,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import STL File
 
-[Import STL File](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC contract](/api/grpc/file-operations#import-stl-file)
+[Import STL File](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-stl-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1679,7 +1679,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import VDA/FS File
 
-[Import VDA/FS File](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC contract](/api/grpc/file-operations#import-vdafs-file)
+[Import VDA/FS File](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vdafs-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1705,7 +1705,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import VSTARS .xyz File
 
-[Import VSTARS .xyz File](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC contract](/api/grpc/file-operations#import-vstars-xyz-file)
+[Import VSTARS .xyz File](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vstars-xyz-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1731,7 +1731,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Import VSTARS Cameras
 
-[Import VSTARS Cameras](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC contract](/api/grpc/file-operations#import-vstars-cameras)
+[Import VSTARS Cameras](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vstars-cameras)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1757,7 +1757,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Load HTML Form
 
-[Load HTML Form](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC contract](/api/grpc/file-operations#load-html-form)
+[Load HTML Form](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC contract](/api/grpc/0.5.1/file-operations#load-html-form)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1800,7 +1800,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Load HTML Form in Edge Browser
 
-[Load HTML Form in Edge Browser](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC contract](/api/grpc/file-operations#load-html-form-in-edge-browser)
+[Load HTML Form in Edge Browser](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC contract](/api/grpc/0.5.1/file-operations#load-html-form-in-edge-browser)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1837,7 +1837,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Embedded File Name List
 
-[Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC contract](/api/grpc/file-operations#make-embedded-file-name-list)
+[Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#make-embedded-file-name-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1866,7 +1866,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Merge Measurements into XML File
 
-[Merge Measurements into XML File](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC contract](/api/grpc/file-operations#merge-measurements-into-xml-file)
+[Merge Measurements into XML File](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#merge-measurements-into-xml-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1894,7 +1894,7 @@ caller controls; the client does not replay uncertain work.
 
 ## New SA File
 
-[New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC contract](/api/grpc/file-operations#new-sa-file)
+[New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#new-sa-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1917,7 +1917,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Open SA File
 
-[Open SA File](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC contract](/api/grpc/file-operations#open-sa-file)
+[Open SA File](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#open-sa-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1943,7 +1943,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Open Template File
 
-[Open Template File](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC contract](/api/grpc/file-operations#open-template-file)
+[Open Template File](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#open-template-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1969,7 +1969,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Pop PolyBay Analysis Window
 
-[Pop PolyBay Analysis Window](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC contract](/api/grpc/file-operations#pop-polybay-analysis-window)
+[Pop PolyBay Analysis Window](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC contract](/api/grpc/0.5.1/file-operations#pop-polybay-analysis-window)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1998,7 +1998,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Prepare QDAS Data List
 
-[Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#prepare-qdas-data-list)
+[Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#prepare-qdas-data-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2057,7 +2057,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Rename General File
 
-[Rename General File](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC contract](/api/grpc/file-operations#rename-general-file)
+[Rename General File](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#rename-general-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2088,7 +2088,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save
 
-[Save](/mp-command-catalog/commands/file-operations#save) · [gRPC contract](/api/grpc/file-operations#save)
+[Save](/mp-command-catalog/commands/file-operations#save) · [gRPC contract](/api/grpc/0.5.1/file-operations#save)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2111,7 +2111,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save As Read-Only Template
 
-[Save As Read-Only Template](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC contract](/api/grpc/file-operations#save-as-read-only-template)
+[Save As Read-Only Template](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC contract](/api/grpc/0.5.1/file-operations#save-as-read-only-template)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2137,7 +2137,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save As...
 
-[Save As...](/mp-command-catalog/commands/file-operations#save-as) · [gRPC contract](/api/grpc/file-operations#save-as)
+[Save As...](/mp-command-catalog/commands/file-operations#save-as) · [gRPC contract](/api/grpc/0.5.1/file-operations#save-as)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2168,7 +2168,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Boolean In DataShare File
 
-[Set Boolean In DataShare File](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-boolean-in-datashare-file)
+[Set Boolean In DataShare File](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-boolean-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2199,7 +2199,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Double In DataShare File
 
-[Set Double In DataShare File](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-double-in-datashare-file)
+[Set Double In DataShare File](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-double-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2230,7 +2230,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Integer In DataShare File
 
-[Set Integer In DataShare File](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-integer-in-datashare-file)
+[Set Integer In DataShare File](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-integer-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2261,7 +2261,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set String In DataShare File
 
-[Set String In DataShare File](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-string-in-datashare-file)
+[Set String In DataShare File](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-string-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2292,7 +2292,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Transform In DataShare File
 
-[Set Transform In DataShare File](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-transform-in-datashare-file)
+[Set Transform In DataShare File](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-transform-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2323,7 +2323,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector In DataShare File
 
-[Set Vector In DataShare File](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-vector-in-datashare-file)
+[Set Vector In DataShare File](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-vector-in-datashare-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2354,7 +2354,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Terminate All Running MPs
 
-[Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC contract](/api/grpc/file-operations#terminate-all-running-mps)
+[Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC contract](/api/grpc/0.5.1/file-operations#terminate-all-running-mps)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2377,7 +2377,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Use NRKXML Library
 
-[Use NRKXML Library](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC contract](/api/grpc/file-operations#use-nrkxml-library)
+[Use NRKXML Library](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC contract](/api/grpc/0.5.1/file-operations#use-nrkxml-library)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2404,7 +2404,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Verify General File Exists
 
-[Verify General File Exists](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-general-file-exists)
+[Verify General File Exists](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC contract](/api/grpc/0.5.1/file-operations#verify-general-file-exists)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2430,7 +2430,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Verify MP File Exists
 
-[Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-mp-file-exists)
+[Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC contract](/api/grpc/0.5.1/file-operations#verify-mp-file-exists)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

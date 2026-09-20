@@ -75,7 +75,7 @@ internally to the exact SDK literal `6DPF Z Component`.
 
 ## add_robot_machine_sa_machine
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-samachine)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-samachine)
 
 ```python
 async def add_robot_machine_sa_machine(
@@ -86,7 +86,7 @@ async def add_robot_machine_sa_machine(
 
 ## add_robot_machine_manip_kin
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-manipkin)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-manipkin)
 
 ```python
 async def add_robot_machine_manip_kin(
@@ -100,7 +100,7 @@ representation.
 
 ## delete_robot_machine
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/robot-operations#delete-robotmachine)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robotmachine)
 
 ```python
 async def delete_robot_machine(
@@ -111,7 +111,7 @@ async def delete_robot_machine(
 
 ## move_robot_machine_to_frame
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-frame)
 
 ```python
 async def move_robot_machine_to_frame(
@@ -128,7 +128,7 @@ Returns `Actual Transform In Working (result)`.
 
 ## move_robot_machine_through_path
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-through-path)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-through-path)
 
 ```python
 async def move_robot_machine_through_path(
@@ -144,7 +144,7 @@ async def move_robot_machine_through_path(
 
 ## move_robot_machine_to_named_destination
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-named-destination)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-named-destination)
 
 ```python
 async def move_robot_machine_to_named_destination(
@@ -160,7 +160,7 @@ Returns `Actual Transform In Working (result)`.
 
 ## set_robot_machine_parameter
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-parameter)
 
 ```python
 async def set_robot_machine_parameter(
@@ -173,7 +173,7 @@ async def set_robot_machine_parameter(
 
 ## get_robot_machine_parameter
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-parameter)
 
 ```python
 async def get_robot_machine_parameter(
@@ -188,7 +188,7 @@ allowlist.
 
 ## set_robot_machine_model_link_parameters
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-model-link-parameters)
 
 ```python
 async def set_robot_machine_model_link_parameters(
@@ -204,7 +204,7 @@ validation.
 
 ## get_robot_machine_model_link_parameters
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-model-link-parameters)
 
 ```python
 async def get_robot_machine_model_link_parameters(
@@ -218,7 +218,7 @@ The result includes all exact-target outputs, including `encoder_value`.
 
 ## set_robot_machine_base_transform
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-base-transform)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-base-transform)
 
 ```python
 async def set_robot_machine_base_transform(
@@ -235,7 +235,7 @@ async def set_robot_machine_base_transform(
 
 ## start_robot_machine_interface
 
-[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#start-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#start-robotmachine-interface)
 
 ```python
 async def start_robot_machine_interface(
@@ -252,7 +252,7 @@ machine-specific.
 
 ## stop_robot_machine_interface
 
-[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#stop-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#stop-robotmachine-interface)
 
 ```python
 async def stop_robot_machine_interface(
@@ -263,7 +263,7 @@ async def stop_robot_machine_interface(
 
 ## compute_robot_machine_adjusted_goal_frame
 
-[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/robot-operations#compute-robotmachine-adjusted-goal-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#compute-robotmachine-adjusted-goal-frame)
 
 ```python
 async def compute_robot_machine_adjusted_goal_frame(
@@ -280,7 +280,7 @@ iteration in the adjusted-goal workflow.
 
 ## move_robot_machine_to_joint_pose_six_dof
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-joint-pose-6dof)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-joint-pose-6dof)
 
 ```python
 async def move_robot_machine_to_joint_pose_six_dof(
@@ -298,7 +298,7 @@ async def move_robot_machine_to_joint_pose_six_dof(
 
 ## simulate_robot_machine_path_output_csv_file
 
-[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/robot-operations#simulate-robotmachine-path-output-csv-file)
+[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/0.5.1/robot-operations#simulate-robotmachine-path-output-csv-file)
 
 ```python
 async def simulate_robot_machine_path_output_csv_file(
@@ -311,7 +311,7 @@ async def simulate_robot_machine_path_output_csv_file(
 
 ## create_robot_calibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#create-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#create-robot-calibration)
 
 ```python
 async def create_robot_calibration(
@@ -323,7 +323,7 @@ async def create_robot_calibration(
 
 ## delete_robot_calibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#delete-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robot-calibration)
 
 ```python
 async def delete_robot_calibration(
@@ -335,7 +335,7 @@ async def delete_robot_calibration(
 
 ## import_poses_match_to_measurements
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-measurements)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-measurements)
 
 ```python
 async def import_poses_match_to_measurements(
@@ -350,7 +350,7 @@ async def import_poses_match_to_measurements(
 
 ## import_poses_match_to_frames
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-frames)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-frames)
 
 ```python
 async def import_poses_match_to_frames(
@@ -368,7 +368,7 @@ representation.
 
 ## perform_robot_calibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration)
 
 ```python
 async def perform_robot_calibration(
@@ -389,7 +389,7 @@ so this coroutine omits it. The result contains all seven exact-target metrics.
 
 ## perform_robot_calibration_alternate
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration-alternate)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration-alternate)
 
 ```python
 async def perform_robot_calibration_alternate(
@@ -412,7 +412,7 @@ The three DOF strings are passed directly to SA without client interpretation.
 
 ## start_stop_robot_calibration_trapping
 
-[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/robot-operations#startstop-robot-calibration-trapping)
+[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/0.5.1/robot-operations#startstop-robot-calibration-trapping)
 
 ```python
 async def start_stop_robot_calibration_trapping(
@@ -429,7 +429,7 @@ async def start_stop_robot_calibration_trapping(
 
 ## set_active_robot_calibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#set-active-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-active-robot-calibration)
 
 ```python
 async def set_active_robot_calibration(
@@ -441,7 +441,7 @@ async def set_active_robot_calibration(
 
 ## set_robot_calibration_tool_frame
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-tool-frame)
 
 ```python
 async def set_robot_calibration_tool_frame(
@@ -457,7 +457,7 @@ async def set_robot_calibration_tool_frame(
 
 ## set_robot_calibration_measurement_offset_in_tool_frame
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
 
 ```python
 async def set_robot_calibration_measurement_offset_in_tool_frame(
@@ -473,7 +473,7 @@ async def set_robot_calibration_measurement_offset_in_tool_frame(
 
 ## get_robot_pose_for_a_frame
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/robot-operations#get-robot-pose-for-a-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robot-pose-for-a-frame)
 
 ```python
 async def get_robot_pose_for_a_frame(
@@ -491,7 +491,7 @@ An empty reference pose tells SA to use the current robot pose.
 
 ## get_calibration_appliance_integer_value
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-integer-value)
 
 ```python
 async def get_calibration_appliance_integer_value(
@@ -502,7 +502,7 @@ async def get_calibration_appliance_integer_value(
 
 ## set_calibration_appliance_integer_value
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-integer-value)
 
 ```python
 async def set_calibration_appliance_integer_value(
@@ -514,7 +514,7 @@ async def set_calibration_appliance_integer_value(
 
 ## get_calibration_appliance_real_value
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-real-value)
 
 ```python
 async def get_calibration_appliance_real_value(
@@ -525,7 +525,7 @@ async def get_calibration_appliance_real_value(
 
 ## set_calibration_appliance_real_value
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-real-value)
 
 ```python
 async def set_calibration_appliance_real_value(
@@ -537,7 +537,7 @@ async def set_calibration_appliance_real_value(
 
 ## get_calibration_appliance_data
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-data)
 
 ```python
 async def get_calibration_appliance_data(
@@ -551,7 +551,7 @@ the MP `Integer Values` output, so the coroutine returns only `Real Values`.
 
 ## set_calibration_appliance_data
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-data)
 
 ```python
 async def set_calibration_appliance_data(

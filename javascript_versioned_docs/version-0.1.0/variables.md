@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Add Double to Named Double List Variable
 
-[Add Double to Named Double List Variable](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC contract](/api/grpc/variables#add-double-to-named-double-list-variable)
+[Add Double to Named Double List Variable](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#add-double-to-named-double-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Clear Named Double List Variable
 
-[Clear Named Double List Variable](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC contract](/api/grpc/variables#clear-named-double-list-variable)
+[Clear Named Double List Variable](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#clear-named-double-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Variable
 
-[Delete Variable](/mp-command-catalog/commands/variables#delete-variable) · [gRPC contract](/api/grpc/variables#delete-variable)
+[Delete Variable](/mp-command-catalog/commands/variables#delete-variable) · [gRPC contract](/api/grpc/0.5.1/variables#delete-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Variables -- Wildcard Match
 
-[Delete Variables -- Wildcard Match](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC contract](/api/grpc/variables#delete-variables----wildcard-match)
+[Delete Variables -- Wildcard Match](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC contract](/api/grpc/0.5.1/variables#delete-variables----wildcard-match)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -137,7 +137,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Boolean Variable
 
-[Get Boolean Variable](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC contract](/api/grpc/variables#get-boolean-variable)
+[Get Boolean Variable](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-boolean-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -168,7 +168,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Collection Object Name Variable
 
-[Get Collection Object Name Variable](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-name-variable)
+[Get Collection Object Name Variable](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-collection-object-name-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -199,7 +199,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Collection Object Ref List Variable
 
-[Get Collection Object Ref List Variable](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-ref-list-variable)
+[Get Collection Object Ref List Variable](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-collection-object-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -230,7 +230,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Double Variable
 
-[Get Double Variable](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC contract](/api/grpc/variables#get-double-variable)
+[Get Double Variable](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-double-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -261,7 +261,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Integer Variable
 
-[Get Integer Variable](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC contract](/api/grpc/variables#get-integer-variable)
+[Get Integer Variable](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-integer-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -292,7 +292,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Named Double List Variable
 
-[Get Named Double List Variable](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable)
+[Get Named Double List Variable](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-named-double-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -323,7 +323,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Named Double List Variable Min/Max
 
-[Get Named Double List Variable Min/Max](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable-minmax)
+[Get Named Double List Variable Min/Max](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC contract](/api/grpc/0.5.1/variables#get-named-double-list-variable-minmax)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -361,7 +361,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Name Ref List Variable
 
-[Get Point Name Ref List Variable](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-point-name-ref-list-variable)
+[Get Point Name Ref List Variable](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-point-name-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -392,7 +392,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Name Variable
 
-[Get Point Name Variable](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC contract](/api/grpc/variables#get-point-name-variable)
+[Get Point Name Variable](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-point-name-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -423,7 +423,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Ref List Variable
 
-[Get Relationship Ref List Variable](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-relationship-ref-list-variable)
+[Get Relationship Ref List Variable](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-relationship-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -454,7 +454,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Report Items Reference List Variable
 
-[Get Report Items Reference List Variable](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#get-report-items-reference-list-variable)
+[Get Report Items Reference List Variable](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-report-items-reference-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -485,7 +485,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get String Ref List Variable
 
-[Get String Ref List Variable](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-string-ref-list-variable)
+[Get String Ref List Variable](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-string-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -516,7 +516,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get String Variable
 
-[Get String Variable](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC contract](/api/grpc/variables#get-string-variable)
+[Get String Variable](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-string-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -547,7 +547,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Transform Variable
 
-[Get Transform Variable](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC contract](/api/grpc/variables#get-transform-variable)
+[Get Transform Variable](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-transform-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -578,7 +578,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector Name Ref List Variable
 
-[Get Vector Name Ref List Variable](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-vector-name-ref-list-variable)
+[Get Vector Name Ref List Variable](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-vector-name-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -609,7 +609,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector Variable
 
-[Get Vector Variable](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC contract](/api/grpc/variables#get-vector-variable)
+[Get Vector Variable](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-vector-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -640,7 +640,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Boolean Variable
 
-[Set Boolean Variable](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC contract](/api/grpc/variables#set-boolean-variable)
+[Set Boolean Variable](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-boolean-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -673,7 +673,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Collection Object Name Variable
 
-[Set Collection Object Name Variable](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-name-variable)
+[Set Collection Object Name Variable](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-collection-object-name-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -706,7 +706,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Collection Object Ref List Variable
 
-[Set Collection Object Ref List Variable](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-ref-list-variable)
+[Set Collection Object Ref List Variable](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-collection-object-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -739,7 +739,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Double Variable
 
-[Set Double Variable](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC contract](/api/grpc/variables#set-double-variable)
+[Set Double Variable](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-double-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -772,7 +772,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Font Variable
 
-[Set Font Variable](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC contract](/api/grpc/variables#set-font-variable)
+[Set Font Variable](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-font-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -805,7 +805,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Integer Variable
 
-[Set Integer Variable](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC contract](/api/grpc/variables#set-integer-variable)
+[Set Integer Variable](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-integer-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -838,7 +838,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Named Double List Variable
 
-[Set Named Double List Variable](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC contract](/api/grpc/variables#set-named-double-list-variable)
+[Set Named Double List Variable](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-named-double-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -871,7 +871,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Name Ref List Variable
 
-[Set Point Name Ref List Variable](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-point-name-ref-list-variable)
+[Set Point Name Ref List Variable](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-point-name-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -904,7 +904,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Name Variable
 
-[Set Point Name Variable](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC contract](/api/grpc/variables#set-point-name-variable)
+[Set Point Name Variable](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-point-name-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -937,7 +937,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Ref List Variable
 
-[Set Relationship Ref List Variable](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-relationship-ref-list-variable)
+[Set Relationship Ref List Variable](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-relationship-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -970,7 +970,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Items Reference List Variable
 
-[Set Report Items Reference List Variable](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#set-report-items-reference-list-variable)
+[Set Report Items Reference List Variable](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-report-items-reference-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1003,7 +1003,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set String Ref List Variable
 
-[Set String Ref List Variable](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-string-ref-list-variable)
+[Set String Ref List Variable](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-string-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1036,7 +1036,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set String Variable
 
-[Set String Variable](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC contract](/api/grpc/variables#set-string-variable)
+[Set String Variable](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-string-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1069,7 +1069,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Transform Variable
 
-[Set Transform Variable](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC contract](/api/grpc/variables#set-transform-variable)
+[Set Transform Variable](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-transform-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1102,7 +1102,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector Name Ref List Variable
 
-[Set Vector Name Ref List Variable](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-vector-name-ref-list-variable)
+[Set Vector Name Ref List Variable](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-vector-name-ref-list-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1135,7 +1135,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector Variable
 
-[Set Vector Variable](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC contract](/api/grpc/variables#set-vector-variable)
+[Set Vector Variable](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-vector-variable)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

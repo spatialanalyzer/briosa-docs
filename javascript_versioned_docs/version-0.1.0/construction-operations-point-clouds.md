@@ -167,4 +167,4 @@ The runtime-selection operation may continue in SpatialAnalyzer after an abort.
 The client adds no cloud or numeric safeguards and never automatically replays
 these calls.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [gRPC](/api/grpc/construction-operations-point-clouds)
+[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [gRPC](/api/grpc/0.5.1/construction-operations-point-clouds)

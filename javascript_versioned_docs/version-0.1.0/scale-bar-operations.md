@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Delete Scale Bar
 
-[Delete Scale Bar](/mp-command-catalog/commands/scale-bar-operations#delete-scale-bar) · [gRPC contract](/api/grpc/scale-bar-operations#delete-scale-bar)
+[Delete Scale Bar](/mp-command-catalog/commands/scale-bar-operations#delete-scale-bar) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#delete-scale-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Scale Bar Stats
 
-[Get Scale Bar Stats](/mp-command-catalog/commands/scale-bar-operations#get-scale-bar-stats) · [gRPC contract](/api/grpc/scale-bar-operations#get-scale-bar-stats)
+[Get Scale Bar Stats](/mp-command-catalog/commands/scale-bar-operations#get-scale-bar-stats) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#get-scale-bar-stats)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Scale Bar Check
 
-[Scale Bar Check](/mp-command-catalog/commands/scale-bar-operations#scale-bar-check) · [gRPC contract](/api/grpc/scale-bar-operations#scale-bar-check)
+[Scale Bar Check](/mp-command-catalog/commands/scale-bar-operations#scale-bar-check) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#scale-bar-check)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Inward Positive Normal
 
-[Set Inward Positive Normal](/mp-command-catalog/commands/scale-bar-operations#set-inward-positive-normal) · [gRPC contract](/api/grpc/scale-bar-operations#set-inward-positive-normal)
+[Set Inward Positive Normal](/mp-command-catalog/commands/scale-bar-operations#set-inward-positive-normal) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#set-inward-positive-normal)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

@@ -214,4 +214,4 @@ could not establish a working SDK binding. The three portable vector-value MP
 helpers have no RPC because callers can perform those operations directly on
 the shared `Vector` value.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups) · [.NET](/api/dotnet/construction-operations-vectors-and-vector-groups) · [Python](/api/python/construction-operations-vectors-and-vector-groups) · [JavaScript and TypeScript](/api/javascript/construction-operations-vectors-and-vector-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups) · [.NET](/api/dotnet/0.1.0/construction-operations-vectors-and-vector-groups) · [Python](/api/python/0.1.0/construction-operations-vectors-and-vector-groups) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-vectors-and-vector-groups)

@@ -159,6 +159,6 @@ rule.
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-lines) ·
-[.NET](/api/dotnet/construction-operations-lines) ·
-[Python](/api/python/construction-operations-lines) ·
-[JavaScript/TypeScript](/api/javascript/construction-operations-lines)
+[.NET](/api/dotnet/0.1.0/construction-operations-lines) ·
+[Python](/api/python/0.1.0/construction-operations-lines) ·
+[JavaScript/TypeScript](/api/javascript/0.1.0/construction-operations-lines)

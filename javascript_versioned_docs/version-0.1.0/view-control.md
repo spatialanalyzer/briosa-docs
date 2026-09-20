@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Auto-Scale
 
-[Auto-Scale](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC contract](/api/grpc/view-control#auto-scale)
+[Auto-Scale](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC contract](/api/grpc/0.5.1/view-control#auto-scale)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Center Graphics About Object(s)
 
-[Center Graphics About Object(s)](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC contract](/api/grpc/view-control#center-graphics-about-objects)
+[Center Graphics About Object(s)](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#center-graphics-about-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Center Graphics About Point
 
-[Center Graphics About Point](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC contract](/api/grpc/view-control#center-graphics-about-point)
+[Center Graphics About Point](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC contract](/api/grpc/0.5.1/view-control#center-graphics-about-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -103,7 +103,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Define point of view
 
-[Define point of view](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC contract](/api/grpc/view-control#define-point-of-view)
+[Define point of view](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#define-point-of-view)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -152,7 +152,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Active Clipping Planes
 
-[Get Active Clipping Planes](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC contract](/api/grpc/view-control#get-active-clipping-planes)
+[Get Active Clipping Planes](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC contract](/api/grpc/0.5.1/view-control#get-active-clipping-planes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -178,7 +178,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get point of view parameters
 
-[Get point of view parameters](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC contract](/api/grpc/view-control#get-point-of-view-parameters)
+[Get point of view parameters](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC contract](/api/grpc/0.5.1/view-control#get-point-of-view-parameters)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -228,7 +228,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Hide All Callout Views
 
-[Hide All Callout Views](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC contract](/api/grpc/view-control#hide-all-callout-views)
+[Hide All Callout Views](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC contract](/api/grpc/0.5.1/view-control#hide-all-callout-views)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -254,7 +254,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Hide Objects
 
-[Hide Objects](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC contract](/api/grpc/view-control#hide-objects)
+[Hide Objects](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#hide-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -285,7 +285,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Highlight Objects
 
-[Highlight Objects](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC contract](/api/grpc/view-control#highlight-objects)
+[Highlight Objects](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -318,7 +318,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Highlight Point
 
-[Highlight Point](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC contract](/api/grpc/view-control#highlight-point)
+[Highlight Point](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -351,7 +351,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Highlight Relationships
 
-[Highlight Relationships](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC contract](/api/grpc/view-control#highlight-relationships)
+[Highlight Relationships](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-relationships)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -384,7 +384,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Load Ribbon Bar from XML File
 
-[Load Ribbon Bar from XML File](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC contract](/api/grpc/view-control#load-ribbon-bar-from-xml-file)
+[Load Ribbon Bar from XML File](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC contract](/api/grpc/0.5.1/view-control#load-ribbon-bar-from-xml-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -415,7 +415,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Refresh Views
 
-[Refresh Views](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC contract](/api/grpc/view-control#refresh-views)
+[Refresh Views](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC contract](/api/grpc/0.5.1/view-control#refresh-views)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -441,7 +441,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reset Ribbon Bar to Default
 
-[Reset Ribbon Bar to Default](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC contract](/api/grpc/view-control#reset-ribbon-bar-to-default)
+[Reset Ribbon Bar to Default](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC contract](/api/grpc/0.5.1/view-control#reset-ribbon-bar-to-default)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -467,7 +467,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save point of view
 
-[Save point of view](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC contract](/api/grpc/view-control#save-point-of-view)
+[Save point of view](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#save-point-of-view)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -500,7 +500,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Background Color
 
-[Set Background Color](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC contract](/api/grpc/view-control#set-background-color)
+[Set Background Color](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-background-color)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -537,7 +537,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set MP's Window State
 
-[Set MP's Window State](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC contract](/api/grpc/view-control#set-mps-window-state)
+[Set MP's Window State](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC contract](/api/grpc/0.5.1/view-control#set-mps-window-state)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -568,7 +568,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object(s) Color
 
-[Set Object(s) Color](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC contract](/api/grpc/view-control#set-objects-color)
+[Set Object(s) Color](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-objects-color)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -603,7 +603,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object(s) Translucency
 
-[Set Object(s) Translucency](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC contract](/api/grpc/view-control#set-objects-translucency)
+[Set Object(s) Translucency](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC contract](/api/grpc/0.5.1/view-control#set-objects-translucency)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -638,7 +638,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set point of view
 
-[Set point of view](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC contract](/api/grpc/view-control#set-point-of-view)
+[Set point of view](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -669,7 +669,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point of View from Frame
 
-[Set Point of View from Frame](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-frame)
+[Set Point of View from Frame](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view-from-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -700,7 +700,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point of View from Instrument Updates
 
-[Set Point of View from Instrument Updates](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-instrument-updates)
+[Set Point of View from Instrument Updates](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view-from-instrument-updates)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -753,7 +753,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Render Mode Type
 
-[Set Render Mode Type](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC contract](/api/grpc/view-control#set-render-mode-type)
+[Set Render Mode Type](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC contract](/api/grpc/0.5.1/view-control#set-render-mode-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -784,7 +784,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set SA's Window Pos
 
-[Set SA's Window Pos](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC contract](/api/grpc/view-control#set-sas-window-pos)
+[Set SA's Window Pos](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-pos)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -817,7 +817,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set SA's Window Size
 
-[Set SA's Window Size](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC contract](/api/grpc/view-control#set-sas-window-size)
+[Set SA's Window Size](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-size)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -850,7 +850,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set SA's Window State
 
-[Set SA's Window State](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC contract](/api/grpc/view-control#set-sas-window-state)
+[Set SA's Window State](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-state)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -881,7 +881,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Target Labels Use Full Names
 
-[Set Target Labels Use Full Names](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC contract](/api/grpc/view-control#set-target-labels-use-full-names)
+[Set Target Labels Use Full Names](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC contract](/api/grpc/0.5.1/view-control#set-target-labels-use-full-names)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -912,7 +912,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Toolkit Visibility
 
-[Set Toolkit Visibility](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC contract](/api/grpc/view-control#set-toolkit-visibility)
+[Set Toolkit Visibility](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC contract](/api/grpc/0.5.1/view-control#set-toolkit-visibility)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -943,7 +943,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set View Clipping Plane
 
-[Set View Clipping Plane](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC contract](/api/grpc/view-control#set-view-clipping-plane)
+[Set View Clipping Plane](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC contract](/api/grpc/0.5.1/view-control#set-view-clipping-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -976,7 +976,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Working Color
 
-[Set Working Color](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC contract](/api/grpc/view-control#set-working-color)
+[Set Working Color](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-working-color)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1007,7 +1007,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Working Color Auto Increment
 
-[Set Working Color Auto Increment](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC contract](/api/grpc/view-control#set-working-color-auto-increment)
+[Set Working Color Auto Increment](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC contract](/api/grpc/0.5.1/view-control#set-working-color-auto-increment)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1038,7 +1038,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show / Hide by Object Type
 
-[Show / Hide by Object Type](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC contract](/api/grpc/view-control#show--hide-by-object-type)
+[Show / Hide by Object Type](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-by-object-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1075,7 +1075,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show / Hide Callout View
 
-[Show / Hide Callout View](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC contract](/api/grpc/view-control#show--hide-callout-view)
+[Show / Hide Callout View](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-callout-view)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1108,7 +1108,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show / Hide Dimension
 
-[Show / Hide Dimension](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC contract](/api/grpc/view-control#show--hide-dimension)
+[Show / Hide Dimension](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-dimension)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1141,7 +1141,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show / Hide Points
 
-[Show / Hide Points](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC contract](/api/grpc/view-control#show--hide-points)
+[Show / Hide Points](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1174,7 +1174,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show by Object Type
 
-[Show by Object Type](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC contract](/api/grpc/view-control#show-by-object-type)
+[Show by Object Type](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC contract](/api/grpc/0.5.1/view-control#show-by-object-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1207,7 +1207,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show Items in Tree
 
-[Show Items in Tree](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC contract](/api/grpc/view-control#show-items-in-tree)
+[Show Items in Tree](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC contract](/api/grpc/0.5.1/view-control#show-items-in-tree)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1250,7 +1250,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show Labels
 
-[Show Labels](/mp-command-catalog/commands/view-control#show-labels) · [gRPC contract](/api/grpc/view-control#show-labels)
+[Show Labels](/mp-command-catalog/commands/view-control#show-labels) · [gRPC contract](/api/grpc/0.5.1/view-control#show-labels)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1283,7 +1283,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show Objects
 
-[Show Objects](/mp-command-catalog/commands/view-control#show-objects) · [gRPC contract](/api/grpc/view-control#show-objects)
+[Show Objects](/mp-command-catalog/commands/view-control#show-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#show-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1314,7 +1314,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Annotations for Datums
 
-[Show/Hide Annotations for Datums](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-datums)
+[Show/Hide Annotations for Datums](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-annotations-for-datums)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1351,7 +1351,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Annotations for Feature Checks
 
-[Show/Hide Annotations for Feature Checks](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-feature-checks)
+[Show/Hide Annotations for Feature Checks](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-annotations-for-feature-checks)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1388,7 +1388,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Inspection Bar
 
-[Show/Hide Inspection Bar](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC contract](/api/grpc/view-control#showhide-inspection-bar)
+[Show/Hide Inspection Bar](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-inspection-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1419,7 +1419,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Instrument Interface
 
-[Show/Hide Instrument Interface](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC contract](/api/grpc/view-control#showhide-instrument-interface)
+[Show/Hide Instrument Interface](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instrument-interface)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1454,7 +1454,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Instrument Probe Tip
 
-[Show/Hide Instrument Probe Tip](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC contract](/api/grpc/view-control#showhide-instrument-probe-tip)
+[Show/Hide Instrument Probe Tip](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instrument-probe-tip)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1485,7 +1485,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Instruments
 
-[Show/Hide Instruments](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC contract](/api/grpc/view-control#showhide-instruments)
+[Show/Hide Instruments](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instruments)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1518,7 +1518,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Relationship Report
 
-[Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC contract](/api/grpc/view-control#showhide-relationship-report)
+[Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-relationship-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1551,7 +1551,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show/Hide Relationship Watch
 
-[Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC contract](/api/grpc/view-control#showhide-relationship-watch)
+[Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-relationship-watch)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

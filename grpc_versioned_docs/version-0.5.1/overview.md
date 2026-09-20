@@ -12,8 +12,8 @@ target **2026.1.0529.7**. It covers lifecycle services, MP operations,
 request and result types, and execution outcomes.
 
 Download the server through [Install Briosa](/install). Use the
-[.NET](/api/dotnet), [Python](/api/python), or
-[JavaScript/TypeScript](/api/javascript) reference for the idiomatic client
+[.NET](/api/dotnet/0.1.0), [Python](/api/python/0.1.0), or
+[JavaScript/TypeScript](/api/javascript/0.1.0) reference for the idiomatic client
 source APIs. Those client packages have not yet been published.
 
 :::warning[Local-Only API]

@@ -58,7 +58,7 @@ class RelationshipWatchWindowTemplateOptions:
 
 ## Generate Geometry Relationship Summary
 
-[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
+[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#generate-geometry-relationship-summary)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ async def generate_geometry_relationship_summary(
 
 ## Edit Geometry Relationship Point List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#edit-geometry-relationship-point-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ the interaction stopped.
 
 ## Filter Geometry Relationship Outlier Cloud Points
 
-[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ the exact MP command.
 
 ## Relationship Watch Window Template
 
-[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
+[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#relationship-watch-window-template)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -141,7 +141,7 @@ font, color, precision, display, and UDP default available to callers.
 
 ## Make Point to Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-to-point-relationship)
 
 ```python
 async def make_point_to_point_relationship(
@@ -160,7 +160,7 @@ defaults. Briosa adds no point or constraint preflight.
 
 ## Make Frame to Frame Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-frame-to-frame-relationship)
 
 ```python
 async def make_frame_to_frame_relationship(
@@ -180,7 +180,7 @@ work.
 
 ## Enable/Disable Relationships for Optimization
 
-[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
+[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#enabledisable-relationships-for-optimization)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -253,7 +253,7 @@ server map it to SA's exact misspelled SDK literal.
 
 ## Make Points to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-objects-relationship)
 
 ```python
 async def make_points_to_objects_relationship(
@@ -272,7 +272,7 @@ control disabled.
 
 ## Make Points to Points Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-points-relationship)
 
 ```python
 async def make_points_to_points_relationship(
@@ -291,7 +291,7 @@ Omitted tolerance and constraint values use their distinct exact MP defaults.
 
 ## Make Groups to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-groups-to-objects-relationship)
 
 ```python
 async def make_groups_to_objects_relationship(
@@ -307,7 +307,7 @@ async def make_groups_to_objects_relationship(
 
 ## Make Object to Object Direction Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-object-to-object-direction-relationship)
 
 ```python
 async def make_object_to_object_direction_relationship(
@@ -322,7 +322,7 @@ async def make_object_to_object_direction_relationship(
 
 ## Make Point Clouds to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-clouds-to-objects-relationship)
 
 ```python
 async def make_point_clouds_to_objects_relationship(
@@ -338,7 +338,7 @@ async def make_point_clouds_to_objects_relationship(
 
 ## Make Group to Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-group-relationship)
 
 ```python
 async def make_group_to_group_relationship(
@@ -355,7 +355,7 @@ async def make_group_to_group_relationship(
 
 ## Make Group to Nominal Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-nominal-group-relationship)
 
 ```python
 async def make_group_to_nominal_group_relationship(
@@ -381,7 +381,7 @@ changing view zoom.
 
 ## Make Average Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-average-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-average-point-relationship)
 
 ```python
 async def make_average_point_relationship(
@@ -396,7 +396,7 @@ async def make_average_point_relationship(
 
 ## Make Geometry Fit Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-only-relationship)
 
 ```python
 async def make_geometry_fit_only_relationship(
@@ -412,7 +412,7 @@ async def make_geometry_fit_only_relationship(
 
 ## Make Geometry Fit and Compare to Nominal Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
 
 ```python
 async def make_geometry_fit_and_compare_to_nominal_relationship(
@@ -489,7 +489,7 @@ class PointToPointRelationshipStatistics:
 
 ## Make Geometry Compare Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-compare-only-relationship)
 
 ```python
 async def make_geometry_compare_only_relationship(
@@ -502,7 +502,7 @@ async def make_geometry_compare_only_relationship(
 
 ## Make Dynamic Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-point-relationship)
 
 ```python
 async def make_dynamic_point_relationship(
@@ -520,7 +520,7 @@ The third reference is optional unless the selected construction mode needs it.
 
 ## Make Dynamic Line Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-line-relationship)
 
 ```python
 async def make_dynamic_line_relationship(
@@ -535,7 +535,7 @@ async def make_dynamic_line_relationship(
 
 ## Make Dynamic Plane Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-plane-relationship)
 
 ```python
 async def make_dynamic_plane_relationship(
@@ -551,7 +551,7 @@ async def make_dynamic_plane_relationship(
 
 ## Make Dynamic Circle Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-circle-relationship)
 
 ```python
 async def make_dynamic_circle_relationship(
@@ -566,7 +566,7 @@ async def make_dynamic_circle_relationship(
 
 ## Make Dynamic Ellipse Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-ellipse-relationship)
 
 ```python
 async def make_dynamic_ellipse_relationship(
@@ -581,7 +581,7 @@ async def make_dynamic_ellipse_relationship(
 
 ## Make Vector Group To Vector Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-vector-group-to-vector-group-relationship)
 
 ```python
 async def make_vector_group_to_vector_group_relationship(
@@ -596,7 +596,7 @@ async def make_vector_group_to_vector_group_relationship(
 
 ## Set Vector Group To Vector Group Cylindrical Zone
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
 
 ```python
 async def set_vector_group_to_vector_group_cylindrical_zone(
@@ -611,7 +611,7 @@ async def set_vector_group_to_vector_group_cylindrical_zone(
 
 ## Set Vector Group To Vector Group Fit Weights
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-weights)
 
 ```python
 async def set_vector_group_to_vector_group_fit_weights(
@@ -629,7 +629,7 @@ async def set_vector_group_to_vector_group_fit_weights(
 
 ## Set Vector Group To Vector Group Fit Gradient Factor
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
 
 ```python
 async def set_vector_group_to_vector_group_fit_gradient_factor(
@@ -688,7 +688,7 @@ async def set_optimization_perturbation_parameters(
 
 ## Do Relationship Fit
 
-[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/relationship-operations#do-relationship-fit)
+[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#do-relationship-fit)
 
 ```python
 async def do_relationship_fit(
@@ -803,7 +803,7 @@ Operations / Point Clouds.
 
 ## Set Group To Nominal Group View Zooming
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-group-to-nominal-group-view-zooming)
 
 ```python
 async def set_group_to_nominal_group_view_zooming(
@@ -820,7 +820,7 @@ async def set_group_to_nominal_group_view_zooming(
 
 ## Set Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-associated-data)
 
 ```python
 async def set_relationship_associated_data(
@@ -839,7 +839,7 @@ async def set_relationship_associated_data(
 
 ## Get Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-associated-data)
 
 ```python
 async def get_relationship_associated_data(
@@ -850,7 +850,7 @@ async def get_relationship_associated_data(
 
 ## Set Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-points-to-points-relationship-associated-data)
 
 ```python
 async def set_points_to_points_relationship_associated_data(
@@ -865,7 +865,7 @@ async def set_points_to_points_relationship_associated_data(
 
 ## Get Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-points-to-points-relationship-associated-data)
 
 ```python
 async def get_points_to_points_relationship_associated_data(
@@ -876,7 +876,7 @@ async def get_points_to_points_relationship_associated_data(
 
 ## Auto Filter Clouds to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
 ```python
 async def auto_filter_clouds_to_nominal_geometry_3d(
@@ -892,7 +892,7 @@ async def auto_filter_clouds_to_nominal_geometry_3d(
 
 ## Auto Filter Clouds to Nominal Geometry 2D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
 ```python
 async def auto_filter_clouds_to_nominal_geometry_2d(
@@ -912,7 +912,7 @@ to `False`.
 
 ## Auto Filter Points to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
 
 ```python
 async def auto_filter_points_to_nominal_geometry_3d(
@@ -926,7 +926,7 @@ async def auto_filter_points_to_nominal_geometry_3d(
 
 ## Auto Filter Points/Groups/Clouds to Surface Faces
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
 ```python
 async def auto_filter_points_groups_clouds_to_surface_faces(
@@ -952,7 +952,7 @@ and never automatically replays uncertain work.
 
 ## Extract Geometry From Point Clouds
 
-[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
+[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#extract-geometry-from-point-clouds)
 
 ```python
 async def extract_geometry_from_point_clouds(
@@ -973,7 +973,7 @@ This SA 2026.1 operation has no ObjectiveSA SA 2024.1 counterpart.
 
 ## Create Points to Objects Map
 
-[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/relationship-operations#create-points-to-objects-map)
+[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#create-points-to-objects-map)
 
 ```python
 async def create_points_to_objects_map(
@@ -991,7 +991,7 @@ SA owns the named map; the client retains no local workflow state.
 
 ## Get Objects From Points to Objects Map (Point List)
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-objects-from-points-to-objects-map-point-list)
 
 ```python
 async def get_objects_from_points_to_objects_map_point_list(
@@ -1006,7 +1006,7 @@ described by the installed prose.
 
 ## Compute Geometry Relationship Uncertainties
 
-[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
+[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#compute-geometry-relationship-uncertainties)
 
 ```python
 async def compute_geometry_relationship_uncertainties(
@@ -1021,7 +1021,7 @@ SA may make the Relationship dormant after the computation.
 
 ## Make Cloud to Swatch Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-cloud-to-swatch-relationship)
 
 ```python
 async def make_cloud_to_swatch_relationship(
@@ -1066,7 +1066,7 @@ class RelationshipStatusFlags:
 
 ## Get Relationship Sigmoidal Gap Fit Constraints
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
 
 ```python
 async def get_relationship_sigmoidal_gap_fit_constraints(
@@ -1077,7 +1077,7 @@ async def get_relationship_sigmoidal_gap_fit_constraints(
 
 ## Set Object to Object Direction Relationship Tolerances
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-tolerances)
 
 ```python
 async def set_object_to_object_direction_relationship_tolerances(
@@ -1093,7 +1093,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 
 ## Get Geom Relationship Criteria Name List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria-name-list)
 
 ```python
 async def get_geom_relationship_criteria_name_list(
@@ -1106,7 +1106,7 @@ async def get_geom_relationship_criteria_name_list(
 
 ## Get Relationship Status
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-status)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-status)
 
 ```python
 async def get_relationship_status(
@@ -1120,7 +1120,7 @@ Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
-[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
+[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-ignore-input-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1146,7 +1146,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Geom Relationship Reuse Ignored Input Points
 
-[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
+[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-reuse-ignored-input-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1172,7 +1172,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Auto Vectors
 
-[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
+[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-auto-vectors)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1211,7 +1211,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Cardinal Points
 
-[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
+[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-cardinal-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1237,7 +1237,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Criteria
 
-[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
+[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1289,7 +1289,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Measured Avg Point
 
-[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
+[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-avg-point)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1315,7 +1315,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Measured Geometry
 
-[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
+[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-geometry)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1341,7 +1341,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Nominal Avg Point
 
-[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
+[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-avg-point)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1367,7 +1367,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Nominal Geometry
 
-[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
+[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-geometry)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1393,7 +1393,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Point List
 
-[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
+[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-point-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1428,7 +1428,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Geom Relationship Projection Plane
 
-[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
+[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-projection-plane)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1454,7 +1454,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Cut Status
 
-[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
+[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-cut-status)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1491,7 +1491,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Properties
 
-[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
+[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-properties)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1540,7 +1540,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Pipe Relationship Weights
 
-[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
+[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-weights)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1585,7 +1585,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Fit Constraints (Scalar Type)
 
-[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
+[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-fit-constraints-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1624,7 +1624,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Outlier Rejection (Scalar Type)
 
-[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
+[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-outlier-rejection-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1661,7 +1661,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Projection Options
 
-[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-projection-options)
+[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-projection-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1700,7 +1700,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Reporting Frame
 
-[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
+[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-reporting-frame)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1726,7 +1726,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Sub Sampling Options
 
-[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
+[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sub-sampling-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1763,7 +1763,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Tolerance (Scalar Type)
 
-[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
+[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1802,7 +1802,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Tolerance (Vector Type)
 
-[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
+[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-vector-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1865,7 +1865,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Type
 
-[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-type)
+[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1891,7 +1891,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Weighting
 
-[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-weighting)
+[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-weighting)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1917,7 +1917,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Pipe Fitting Relationship
 
-[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
+[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-fitting-relationship)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1947,7 +1947,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Pipe Relationship Cut
 
-[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-relationship-cut)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1986,7 +1986,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Pipe Relationship Force Cut to Frame
 
-[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
+[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#pipe-relationship-force-cut-to-frame)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2021,7 +2021,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Auto Measure Nominal Feature
 
-[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
+[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2054,7 +2054,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
 
-[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
+[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2089,7 +2089,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Cardinal Points
 
-[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
+[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-cardinal-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2122,7 +2122,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Criteria
 
-[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
+[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-criteria)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2159,7 +2159,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Measured Geometry
 
-[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
+[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-measured-geometry)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2187,7 +2187,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Nominal Avg Point
 
-[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
+[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-avg-point)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2218,7 +2218,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Nominal Geometry
 
-[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
+[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-geometry)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2249,7 +2249,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Geom Relationship Projection Plane
 
-[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
+[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-projection-plane)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2280,7 +2280,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Object to Object Direction Relationship Fit Constraints
 
-[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
+[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2311,7 +2311,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Pipe Relationship Segment Properties
 
-[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
+[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-segment-properties)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2354,7 +2354,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Pipe Relationship Weights
 
-[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
+[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-weights)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2397,7 +2397,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Auto Vectors Fit (AVF)
 
-[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
+[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-fit-avf)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2430,7 +2430,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Auto Vectors Group Default Prefix
 
-[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
+[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2461,7 +2461,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Desired Meas Count
 
-[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
+[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-desired-meas-count)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2490,7 +2490,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Dormant Status
 
-[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
+[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-dormant-status)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2519,7 +2519,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Fit Constraints (Scalar Type)
 
-[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
+[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-fit-constraints-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2548,7 +2548,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
 
-[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
+[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2576,7 +2576,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Outlier Rejection (Scalar Type)
 
-[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
+[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-outlier-rejection-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2602,7 +2602,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Position Fit Constraints (Vector Type)
 
-[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
+[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-position-fit-constraints-vector-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2630,7 +2630,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Projection Options
 
-[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-projection-options)
+[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-projection-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2659,7 +2659,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Reporting Frame
 
-[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
+[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-reporting-frame)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2687,7 +2687,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
 
-[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
+[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2716,7 +2716,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Sub Sampling Options
 
-[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
+[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sub-sampling-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2751,7 +2751,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Tolerance (Scalar Type)
 
-[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
+[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-scalar-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2780,7 +2780,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Tolerance (Vector Type)
 
-[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
+[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-vector-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2808,7 +2808,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Voxel Cloud Display
 
-[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
+[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-voxel-cloud-display)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2849,7 +2849,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Weighting
 
-[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weighting)
+[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weighting)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2878,7 +2878,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Weights Normalized
 
-[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)
+[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weights-normalized)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

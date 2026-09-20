@@ -25,261 +25,261 @@ These entries cover the 57 commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Point (Fit to Points)" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-point-fit-to-points">Construct Point (Fit to Points)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct Point (Fit to Points)" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point (Fit to Points)" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-fit-to-points">Construct Point (Fit to Points)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Point in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-a-point-in-working-coordinates">Construct a Point in Working Coordinates</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct a Point in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Point in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-point-in-working-coordinates">Construct a Point in Working Coordinates</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point From Survey Target Center" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-survey-target-cloud-fixture"><td><a href="#construct-point-from-survey-target-center">Construct Point From Survey Target Center</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - survey-target cloud fixture</td></tr>
-<tr data-command="Construct Point From Survey Target Center" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point From Survey Target Center" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-from-survey-target-center">Construct Point From Survey Target Center</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Point Position in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#set-point-position-in-working-coordinates">Set Point Position in Working Coordinates</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Set Point Position in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Point Position in Working Coordinates" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-point-position-in-working-coordinates">Set Point Position in Working Coordinates</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Transform Points by Delta (About Working Frame)" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#transform-points-by-delta-about-working-frame">Transform Points by Delta (About Working Frame)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Transform Points by Delta (About Working Frame)" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Transform Points by Delta (About Working Frame)" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#transform-points-by-delta-about-working-frame">Transform Points by Delta (About Working Frame)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Point at line MidPoint" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-line-fixture"><td><a href="#construct-a-point-at-line-midpoint">Construct a Point at line MidPoint</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - line fixture</td></tr>
-<tr data-command="Construct a Point at line MidPoint" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Point at line MidPoint" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-point-at-line-midpoint">Construct a Point at line MidPoint</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point Group from Point Name Ref List" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-point-group-from-point-name-ref-list">Construct Point Group from Point Name Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct Point Group from Point Name Ref List" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point Group from Point Name Ref List" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-group-from-point-name-ref-list">Construct Point Group from Point Name Ref List</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point Groups from Vector Groups" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#construct-point-groups-from-vector-groups">Construct Point Groups from Vector Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
-<tr data-command="Construct Point Groups from Vector Groups" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point Groups from Vector Groups" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-groups-from-vector-groups">Construct Point Groups from Vector Groups</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point Group from Point Cloud" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-cloud-fixture"><td><a href="#construct-point-group-from-point-cloud">Construct Point Group from Point Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-cloud fixture</td></tr>
-<tr data-command="Construct Point Group from Point Cloud" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point Group from Point Cloud" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-group-from-point-cloud">Construct Point Group from Point Cloud</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point From Cloud Point - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-interactive-cloud-fixture"><td><a href="#construct-point-from-cloud-point---runtime-select">Construct Point From Cloud Point - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive cloud fixture</td></tr>
-<tr data-command="Construct Point From Cloud Point - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point From Cloud Point - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-from-cloud-point---runtime-select">Construct Point From Cloud Point - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Point at Circle Center" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-circle-fixture"><td><a href="#construct-a-point-at-circle-center">Construct a Point at Circle Center</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - circle fixture</td></tr>
-<tr data-command="Construct a Point at Circle Center" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Point at Circle Center" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-point-at-circle-center">Construct a Point at Circle Center</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at Intersection of Planes" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-plane-fixture"><td><a href="#construct-point-at-intersection-of-planes">Construct Point at Intersection of Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - plane fixture</td></tr>
-<tr data-command="Construct Point at Intersection of Planes" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at Intersection of Planes" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-intersection-of-planes">Construct Point at Intersection of Planes</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at Intersection of Two Lines" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-line-fixture"><td><a href="#construct-point-at-intersection-of-two-lines">Construct Point at Intersection of Two Lines</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - line fixture</td></tr>
-<tr data-command="Construct Point at Intersection of Two Lines" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at Intersection of Two Lines" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-intersection-of-two-lines">Construct Point at Intersection of Two Lines</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at Intersection of Plane and Line" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-plane-line-fixture"><td><a href="#construct-point-at-intersection-of-plane-and-line">Construct Point at Intersection of Plane and Line</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - plane-line fixture</td></tr>
-<tr data-command="Construct Point at Intersection of Plane and Line" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at Intersection of Plane and Line" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-intersection-of-plane-and-line">Construct Point at Intersection of Plane and Line</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at Intersection of 2 B-Splines" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-b-spline-fixture"><td><a href="#construct-point-at-intersection-of-2-b-splines">Construct Point at Intersection of 2 B-Splines</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - B-Spline fixture</td></tr>
-<tr data-command="Construct Point at Intersection of 2 B-Splines" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at Intersection of 2 B-Splines" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-intersection-of-2-b-splines">Construct Point at Intersection of 2 B-Splines</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at intersection of B-Spline and Surfaces" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-b-spline-and-surface-fixture"><td><a href="#construct-point-at-intersection-of-b-spline-and-surfaces">Construct Point at intersection of B-Spline and Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - B-Spline and surface fixture</td></tr>
-<tr data-command="Construct Point at intersection of B-Spline and Surfaces" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at intersection of B-Spline and Surfaces" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-intersection-of-b-spline-and-surfaces">Construct Point at intersection of B-Spline and Surfaces</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points at Intersection of Circle and Line" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-circle-line-fixture"><td><a href="#construct-points-at-intersection-of-circle-and-line">Construct Points at Intersection of Circle and Line</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - circle-line fixture</td></tr>
-<tr data-command="Construct Points at Intersection of Circle and Line" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points at Intersection of Circle and Line" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-at-intersection-of-circle-and-line">Construct Points at Intersection of Circle and Line</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points at Intersection of Principle Object Axes and Surfaces" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-axes-and-surface-fixture"><td><a href="#construct-points-at-intersection-of-principle-object-axes-and-surfaces">Construct Points at Intersection of Principle Object Axes and Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - axes and surface fixture</td></tr>
-<tr data-command="Construct Points at Intersection of Principle Object Axes and Surfaces" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points at Intersection of Principle Object Axes and Surfaces" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-at-intersection-of-principle-object-axes-and-surfaces">Construct Points at Intersection of Principle Object Axes and Surfaces</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points from Cylinder" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-cylinder-fixture"><td><a href="#construct-points-from-cylinder">Construct Points from Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cylinder fixture</td></tr>
-<tr data-command="Construct Points from Cylinder" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points from Cylinder" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-from-cylinder">Construct Points from Cylinder</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Point at Projection of Point onto An Object" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-a-point-at-projection-of-point-onto-an-object">Construct a Point at Projection of Point onto An Object</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
-<tr data-command="Construct a Point at Projection of Point onto An Object" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Point at Projection of Point onto An Object" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-point-at-projection-of-point-onto-an-object">Construct a Point at Projection of Point onto An Object</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points at Projection on Surfaces - Parallel to WCF Axis" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis">Construct Points at Projection on Surfaces - Parallel to WCF Axis</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
-<tr data-command="Construct Points at Projection on Surfaces - Parallel to WCF Axis" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points at Projection on Surfaces - Parallel to WCF Axis" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis">Construct Points at Projection on Surfaces - Parallel to WCF Axis</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points at Projection on Surfaces - Radial from WCF Axis" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-points-at-projection-on-surfaces---radial-from-wcf-axis">Construct Points at Projection on Surfaces - Radial from WCF Axis</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
-<tr data-command="Construct Points at Projection on Surfaces - Radial from WCF Axis" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points at Projection on Surfaces - Radial from WCF Axis" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-at-projection-on-surfaces---radial-from-wcf-axis">Construct Points at Projection on Surfaces - Radial from WCF Axis</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points at Projection on Surfaces - Spherical from WCF Origin" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin">Construct Points at Projection on Surfaces - Spherical from WCF Origin</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
-<tr data-command="Construct Points at Projection on Surfaces - Spherical from WCF Origin" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points at Projection on Surfaces - Spherical from WCF Origin" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin">Construct Points at Projection on Surfaces - Spherical from WCF Origin</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Gradient At Projected Point On Surface" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-surface-fixture"><td><a href="#get-gradient-at-projected-point-on-surface">Get Gradient At Projected Point On Surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface fixture</td></tr>
-<tr data-command="Get Gradient At Projected Point On Surface" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Gradient At Projected Point On Surface" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-gradient-at-projected-point-on-surface">Get Gradient At Projected Point On Surface</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Gradient At Projected Point On Surface Edge" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-surface-edge-fixture"><td><a href="#get-gradient-at-projected-point-on-surface-edge">Get Gradient At Projected Point On Surface Edge</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface-edge fixture</td></tr>
-<tr data-command="Get Gradient At Projected Point On Surface Edge" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Gradient At Projected Point On Surface Edge" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-gradient-at-projected-point-on-surface-edge">Get Gradient At Projected Point On Surface Edge</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points By Projecting Points On Mesh Along Direction" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-mesh-fixture"><td><a href="#construct-points-by-projecting-points-on-mesh-along-direction">Construct Points By Projecting Points On Mesh Along Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh fixture</td></tr>
-<tr data-command="Construct Points By Projecting Points On Mesh Along Direction" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points By Projecting Points On Mesh Along Direction" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-by-projecting-points-on-mesh-along-direction">Construct Points By Projecting Points On Mesh Along Direction</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Spaced at a Distance on Curves" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-curve-fixture"><td><a href="#construct-points-spaced-at-a-distance-on-curves">Construct Points Spaced at a Distance on Curves</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - curve fixture</td></tr>
-<tr data-command="Construct Points Spaced at a Distance on Curves" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Spaced at a Distance on Curves" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-spaced-at-a-distance-on-curves">Construct Points Spaced at a Distance on Curves</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points N-Spaced on Curves" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-curve-fixture"><td><a href="#construct-points-n-spaced-on-curves">Construct Points N-Spaced on Curves</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - curve fixture</td></tr>
-<tr data-command="Construct Points N-Spaced on Curves" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points N-Spaced on Curves" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-n-spaced-on-curves">Construct Points N-Spaced on Curves</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points on Curves Using Max Chordal Deviation" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-curve-fixture"><td><a href="#construct-points-on-curves-using-max-chordal-deviation">Construct Points on Curves Using Max Chordal Deviation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - curve fixture</td></tr>
-<tr data-command="Construct Points on Curves Using Max Chordal Deviation" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points on Curves Using Max Chordal Deviation" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-on-curves-using-max-chordal-deviation">Construct Points on Curves Using Max Chordal Deviation</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points on Objects Vertices" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-object-fixture"><td><a href="#construct-points-on-objects-vertices">Construct Points on Objects Vertices</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - object fixture</td></tr>
-<tr data-command="Construct Points on Objects Vertices" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points on Objects Vertices" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-on-objects-vertices">Construct Points on Objects Vertices</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points on Surface(s) by Clicking" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-interactive-surface-fixture"><td><a href="#construct-points-on-surfaces-by-clicking">Construct Points on Surface(s) by Clicking</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive surface fixture</td></tr>
-<tr data-command="Construct Points on Surface(s) by Clicking" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points on Surface(s) by Clicking" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-on-surfaces-by-clicking">Construct Points on Surface(s) by Clicking</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points From Surface Faces - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-interactive-surface-fixture"><td><a href="#construct-points-from-surface-faces---runtime-select">Construct Points From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive surface fixture</td></tr>
-<tr data-command="Construct Points From Surface Faces - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points From Surface Faces - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-from-surface-faces---runtime-select">Construct Points From Surface Faces - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points From Surfaces On UV Grid" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-surface-fixture"><td><a href="#construct-points-from-surfaces-on-uv-grid">Construct Points From Surfaces On UV Grid</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface fixture</td></tr>
-<tr data-command="Construct Points From Surfaces On UV Grid" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points From Surfaces On UV Grid" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-from-surfaces-on-uv-grid">Construct Points From Surfaces On UV Grid</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Point at Object Origin" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-object-fixture"><td><a href="#construct-point-at-object-origin">Construct Point at Object Origin</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - object fixture</td></tr>
-<tr data-command="Construct Point at Object Origin" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Point at Object Origin" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-at-object-origin">Construct Point at Object Origin</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Shifted in Working Frame" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-points-shifted-in-working-frame">Construct Points Shifted in Working Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct Points Shifted in Working Frame" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Shifted in Working Frame" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-shifted-in-working-frame">Construct Points Shifted in Working Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Cylindrically Shifted" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-points-cylindrically-shifted">Construct Points Cylindrically Shifted</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct Points Cylindrically Shifted" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Cylindrically Shifted" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-cylindrically-shifted">Construct Points Cylindrically Shifted</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points WildCard Selection" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-live-state-fixture"><td><a href="#construct-points-wildcard-selection">Construct Points WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state fixture</td></tr>
-<tr data-command="Construct Points WildCard Selection" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points WildCard Selection" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-wildcard-selection">Construct Points WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Subset with greatest spacing" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-point-fixture"><td><a href="#construct-points-subset-with-greatest-spacing">Construct Points Subset with greatest spacing</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point fixture</td></tr>
-<tr data-command="Construct Points Subset with greatest spacing" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Subset with greatest spacing" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-subset-with-greatest-spacing">Construct Points Subset with greatest spacing</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Layout on Grid" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-exact-pointgrid-binding"><td><a href="#construct-points-layout-on-grid">Construct Points Layout on Grid</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact PointGrid binding</td></tr>
-<tr data-command="Construct Points Layout on Grid" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Layout on Grid" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-layout-on-grid">Construct Points Layout on Grid</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Auto-Correspond 2 groups Proximity" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-correspondence-fixture"><td><a href="#construct-points-auto-correspond-2-groups-proximity">Construct Points Auto-Correspond 2 groups Proximity</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - correspondence fixture</td></tr>
-<tr data-command="Construct Points Auto-Correspond 2 groups Proximity" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Auto-Correspond 2 groups Proximity" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-auto-correspond-2-groups-proximity">Construct Points Auto-Correspond 2 groups Proximity</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Points Auto-Correspond 2 groups Inter-Point Distance" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-correspondence-fixture"><td><a href="#construct-points-auto-correspond-2-groups-inter-point-distance">Construct Points Auto-Correspond 2 groups Inter-Point Distance</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - correspondence fixture</td></tr>
-<tr data-command="Construct Points Auto-Correspond 2 groups Inter-Point Distance" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Points Auto-Correspond 2 groups Inter-Point Distance" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-points-auto-correspond-2-groups-inter-point-distance">Construct Points Auto-Correspond 2 groups Inter-Point Distance</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Average a set of Groups" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-group-fixture"><td><a href="#average-a-set-of-groups">Average a set of Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - group fixture</td></tr>
-<tr data-command="Average a set of Groups" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Average a set of Groups" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#average-a-set-of-groups">Average a set of Groups</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Groups Excluding Obscured Points" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-instrument-obscuration-fixture"><td><a href="#copy-groups-excluding-obscured-points">Copy Groups Excluding Obscured Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument obscuration fixture</td></tr>
-<tr data-command="Copy Groups Excluding Obscured Points" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Copy Groups Excluding Obscured Points" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#copy-groups-excluding-obscured-points">Copy Groups Excluding Obscured Points</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name from Strings" data-group="Construction Operations / Points and Groups" data-status="excluded" data-validation="portable-value-construction"><td><a href="#make-a-point-name-from-strings">Make a Point Name from Strings</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable value construction</td></tr>
@@ -289,15 +289,15 @@ These entries cover the 57 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-interactive-validation"><td><a href="#make-a-point-name---runtime-select">Make a Point Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation</td></tr>
-<tr data-command="Make a Point Name - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Point Name - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-point-name---runtime-select">Make a Point Name - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name - Ensure Unique" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-mutated-output-validation"><td><a href="#make-a-point-name---ensure-unique">Make a Point Name - Ensure Unique</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mutated-output validation</td></tr>
-<tr data-command="Make a Point Name - Ensure Unique" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Point Name - Ensure Unique" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-point-name---ensure-unique">Make a Point Name - Ensure Unique</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name Ref List" data-group="Construction Operations / Points and Groups" data-status="excluded" data-validation="portable-list-construction"><td><a href="#make-a-point-name-ref-list">Make a Point Name Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable list construction</td></tr>
@@ -307,21 +307,21 @@ These entries cover the 57 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name Ref List From a Group" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-group-fixture"><td><a href="#make-a-point-name-ref-list-from-a-group">Make a Point Name Ref List From a Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - group fixture</td></tr>
-<tr data-command="Make a Point Name Ref List From a Group" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Point Name Ref List From a Group" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-point-name-ref-list-from-a-group">Make a Point Name Ref List From a Group</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name Ref List - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-interactive-validation"><td><a href="#make-a-point-name-ref-list---runtime-select">Make a Point Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation</td></tr>
-<tr data-command="Make a Point Name Ref List - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Point Name Ref List - Runtime Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-point-name-ref-list---runtime-select">Make a Point Name Ref List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Point Name Ref List - Wildcard Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-live-state-fixture"><td><a href="#make-a-point-name-ref-list---wildcard-select">Make a Point Name Ref List - Wildcard Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state fixture</td></tr>
-<tr data-command="Make a Point Name Ref List - Wildcard Select" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Point Name Ref List - Wildcard Select" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-point-name-ref-list---wildcard-select">Make a Point Name Ref List - Wildcard Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Append two Point Name Ref Lists" data-group="Construction Operations / Points and Groups" data-status="excluded" data-validation="portable-list-operation"><td><a href="#append-two-point-name-ref-lists">Append two Point Name Ref Lists</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable list operation</td></tr>
@@ -337,33 +337,33 @@ These entries cover the 57 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Clear Hidden Point Bar Database" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-hidden-point-workflow-fixture"><td><a href="#clear-hidden-point-bar-database">Clear Hidden Point Bar Database</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - hidden-point workflow fixture</td></tr>
-<tr data-command="Clear Hidden Point Bar Database" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Clear Hidden Point Bar Database" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#clear-hidden-point-bar-database">Clear Hidden Point Bar Database</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-hidden-point-workflow-fixture"><td><a href="#create-hidden-point-rod">Create Hidden Point Rod</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - hidden-point workflow fixture</td></tr>
-<tr data-command="Create Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-hidden-point-rod">Create Hidden Point Rod</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Hidden Point Rod Index by Name" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-hidden-point-workflow-fixture"><td><a href="#get-hidden-point-rod-index-by-name">Get Hidden Point Rod Index by Name</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - hidden-point workflow fixture</td></tr>
-<tr data-command="Get Hidden Point Rod Index by Name" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Hidden Point Rod Index by Name" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-hidden-point-rod-index-by-name">Get Hidden Point Rod Index by Name</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-hidden-point-workflow-fixture"><td><a href="#delete-hidden-point-rod">Delete Hidden Point Rod</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - hidden-point workflow fixture</td></tr>
-<tr data-command="Delete Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Hidden Point Rod" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-hidden-point-rod">Delete Hidden Point Rod</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Hidden Point" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-hidden-point-workflow-fixture"><td><a href="#create-hidden-point">Create Hidden Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - hidden-point workflow fixture</td></tr>
-<tr data-command="Create Hidden Point" data-group="Construction Operations / Points and Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Hidden Point" data-group="Construction Operations / Points and Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-hidden-point">Create Hidden Point</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -377,17 +377,19 @@ These entries cover the 57 commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-fit-to-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-fit-to-points) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-fit-to-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-fit-to-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -412,17 +414,19 @@ Fits a resulting point to a required Point Name list. Briosa passes the complete
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-in-working-coordinates) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-in-working-coordinates) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-in-working-coordinates) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-in-working-coordinates)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -447,17 +451,19 @@ Requires a Point Name and working-coordinate Vector. SpatialAnalyzer creates the
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk survey target cloud fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-survey-target-center) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-survey-target-center) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-survey-target-center) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-survey-target-center)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -487,17 +493,19 @@ Requires a source Cloud, reference seed Point, result Point, and search diameter
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#set-point-position-in-working-coordinates) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#set-point-position-in-working-coordinates) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#set-point-position-in-working-coordinates) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#set-point-position-in-working-coordinates)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -522,17 +530,19 @@ Mutates a required Point to a required working-coordinate Vector.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#transform-points-by-delta-about-working-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -557,17 +567,19 @@ Mutates a required Point Name list by a required working-frame delta Vector.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk line fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-line-midpoint) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-line-midpoint) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-line-midpoint) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-line-midpoint)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -594,17 +606,19 @@ Requires a source Line identity and a resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-name-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -631,17 +645,19 @@ Requires a Point Name list and result Point Group. SpatialAnalyzer copies the re
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk vector group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-groups-from-vector-groups) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-groups-from-vector-groups) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-groups-from-vector-groups) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-groups-from-vector-groups)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -669,17 +685,19 @@ Requires a Vector Group list. Suffix defaults to an empty string, begin-point an
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point cloud fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-cloud) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-cloud) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-cloud) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-group-from-point-cloud)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -712,17 +730,19 @@ Requires source Cloud and result Point Group identities. Defaults are prefix `pt
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk interactive cloud fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-from-cloud-point---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -749,17 +769,19 @@ Prompt defaults to `Select cloud point`, point construction defaults to `false`,
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk circle fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-circle-center) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-circle-center) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-circle-center) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-circle-center)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -786,17 +808,19 @@ Requires a Circle identity and resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk plane fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-planes) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-planes) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-planes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-planes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -825,17 +849,19 @@ Requires three Plane identities and a resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk line fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-two-lines)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -863,17 +889,19 @@ Requires two Line identities and a resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk plane line fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-plane-and-line)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -901,17 +929,19 @@ Requires a Plane, Line, and resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk b spline fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-2-b-splines)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -939,17 +969,19 @@ Requires two B-Spline identities and a resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk b spline and surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-intersection-of-b-spline-and-surfaces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -978,17 +1010,19 @@ Requires a B-Spline, Surface list, and resulting Point Name. Approximation toler
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk circle line fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-circle-and-line)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1016,17 +1050,19 @@ Requires a Circle, Line, and base Point Name for the one or more results.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk axes and surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-intersection-of-principle-object-axes-and-surfaces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1055,17 +1091,19 @@ Requires axis-object and Surface lists plus a resulting Point Group. Point suffi
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk cylinder fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-cylinder) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-cylinder) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-cylinder) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-cylinder)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1092,17 +1130,19 @@ Requires a Cylinder and resulting Point Group identity.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk projection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-a-point-at-projection-of-point-onto-an-object)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1130,17 +1170,19 @@ Requires a source Point, target object, and resulting Point Name.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk projection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---parallel-to-wcf-axis)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1169,17 +1211,19 @@ Requires Surface and Point lists plus an X, Y, or Z WCF axis. Group name, point 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk projection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---radial-from-wcf-axis)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1208,17 +1252,19 @@ Requires Surface and Point lists plus an X, Y, or Z WCF axis. Group name, point 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk projection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-at-projection-on-surfaces---spherical-from-wcf-origin)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1246,17 +1292,19 @@ Requires Surface and Point lists. Group name, point prefix, and suffix preserve 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1288,17 +1336,19 @@ Requires a Point and Surface. Output-vector creation defaults to `false`; the re
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk surface edge fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#get-gradient-at-projected-point-on-surface-edge)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1333,17 +1383,19 @@ Requires a Point, B-Spline edge, and Surface. Edge-offset direction defaults to 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk mesh fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-by-projecting-points-on-mesh-along-direction)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1374,17 +1426,19 @@ Requires reference Points, result Point Group, direction-reference object, and p
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk curve fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-spaced-at-a-distance-on-curves)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1413,17 +1467,19 @@ Requires a B-Spline list and result Point Group. Distance defaults to `0.5` and 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk curve fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-n-spaced-on-curves) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-n-spaced-on-curves) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-n-spaced-on-curves) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-n-spaced-on-curves)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1452,17 +1508,19 @@ Requires a B-Spline list and result Point Group. Point count defaults to `10` an
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk curve fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-curves-using-max-chordal-deviation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1493,17 +1551,19 @@ Requires a B-Spline list and result Point Group. Chordal deviation defaults to `
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk object fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-objects-vertices) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-objects-vertices) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-objects-vertices) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-objects-vertices)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1530,17 +1590,19 @@ Requires an object list and resulting Point Group.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk interactive surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-on-surfaces-by-clicking)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1567,17 +1629,19 @@ Requires a result Point Group. First Point Name defaults to `p0`; the operator c
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk interactive surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surface-faces---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1599,17 +1663,19 @@ Has no MP arguments and asks the operator to select surface faces in SpatialAnal
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-from-surfaces-on-uv-grid)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1638,17 +1704,19 @@ Requires a Surface list. Defaults are group base name `UV Points`, combined grou
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk object fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-object-origin) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-object-origin) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-object-origin) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-point-at-object-origin)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1679,17 +1747,19 @@ Requires an object and resulting Point Name. Returns vector representation and t
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-shifted-in-working-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-shifted-in-working-frame) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-shifted-in-working-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-shifted-in-working-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1717,17 +1787,19 @@ Requires original Points and a result Point Group. Shift Vector defaults to zero
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-cylindrically-shifted) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-cylindrically-shifted) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-cylindrically-shifted) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-cylindrically-shifted)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1758,17 +1830,19 @@ Requires a reference object, original Points, and result Point Group. Radial, th
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk live state fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-wildcard-selection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1797,17 +1871,19 @@ Requires source groups, wildcard Point Name components, and a result Point Group
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-subset-with-greatest-spacing)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1835,17 +1911,19 @@ Requires Points to subsample. Subset size defaults to `10`; omitted result group
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk exact pointgrid binding</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-layout-on-grid) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-layout-on-grid) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-layout-on-grid) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-layout-on-grid)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1881,17 +1959,19 @@ Creates the exact-target `PointGrid` object. Defaults are prefix `p`; X 0–100 
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk correspondence fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-proximity)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1920,17 +2000,19 @@ Requires reference, source, and result Point Groups. Same-point tolerance defaul
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk correspondence fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#construct-points-auto-correspond-2-groups-inter-point-distance)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1959,17 +2041,19 @@ Requires reference, source, and result Point Groups. Same-point tolerance defaul
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#average-a-set-of-groups) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#average-a-set-of-groups) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#average-a-set-of-groups) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#average-a-set-of-groups)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2002,17 +2086,19 @@ Requires source groups and a result Point Group. All three tolerances default to
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk instrument obscuration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#copy-groups-excluding-obscured-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#copy-groups-excluding-obscured-points) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#copy-groups-excluding-obscured-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#copy-groups-excluding-obscured-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2075,17 +2161,19 @@ Constructs a portable Point Name from collection, group, and target strings. Cli
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk interactive validation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2110,17 +2198,19 @@ Prompt defaults to empty and the selected Point Name is returned.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk mutated output validation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---ensure-unique) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---ensure-unique) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---ensure-unique) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name---ensure-unique)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2179,17 +2269,19 @@ Constructs an MP-local list from Point Names. Clients create the list locally.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list-from-a-group)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2216,17 +2308,19 @@ Requires a Point Group and returns its current Point Name list from live Spatial
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk interactive validation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2251,17 +2345,19 @@ Prompt defaults to empty and the operator-selected Point Name list is returned.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk live state fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#make-a-point-name-ref-list---wildcard-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2360,17 +2456,19 @@ Subtracts one portable Point Name list from another. Clients perform this locall
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk hidden point workflow fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#clear-hidden-point-bar-database) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#clear-hidden-point-bar-database) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#clear-hidden-point-bar-database) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#clear-hidden-point-bar-database)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2392,17 +2490,19 @@ Deletes every Hidden Point Bar definition from the current job. It has no argume
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk hidden point workflow fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point-rod) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point-rod) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point-rod) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point-rod)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2430,17 +2530,19 @@ Requires a rod name. Target-to-target distance, target-to-tip distance, and inte
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk hidden point workflow fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#get-hidden-point-rod-index-by-name)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2465,17 +2567,19 @@ Requires a rod name and returns its current index.
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk hidden point workflow fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#delete-hidden-point-rod) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#delete-hidden-point-rod) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#delete-hidden-point-rod) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#delete-hidden-point-rod)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2499,17 +2603,19 @@ Deletes the rod at the supplied index, which defaults to `0` exactly as in the M
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At risk hidden point workflow fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Points and Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Points and Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups#create-hidden-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

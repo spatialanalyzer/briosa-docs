@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Ask for Double
 
-[Ask for Double](/mp-command-catalog/commands/process-flow-operations#ask-for-double) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-double)
+[Ask for Double](/mp-command-catalog/commands/process-flow-operations#ask-for-double) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-double)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for Integer
 
-[Ask for Integer](/mp-command-catalog/commands/process-flow-operations#ask-for-integer) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-integer)
+[Ask for Integer](/mp-command-catalog/commands/process-flow-operations#ask-for-integer) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-integer)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for Point Name
 
-[Ask for Point Name](/mp-command-catalog/commands/process-flow-operations#ask-for-point-name) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-point-name)
+[Ask for Point Name](/mp-command-catalog/commands/process-flow-operations#ask-for-point-name) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-point-name)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -116,7 +116,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for String
 
-[Ask for String](/mp-command-catalog/commands/process-flow-operations#ask-for-string) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string)
+[Ask for String](/mp-command-catalog/commands/process-flow-operations#ask-for-string) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-string)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -149,7 +149,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for String (Pull-Down Version)
 
-[Ask for String (Pull-Down Version)](/mp-command-catalog/commands/process-flow-operations#ask-for-string-pull-down-version) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string-pull-down-version)
+[Ask for String (Pull-Down Version)](/mp-command-catalog/commands/process-flow-operations#ask-for-string-pull-down-version) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-string-pull-down-version)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -187,7 +187,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for User Decision from Image
 
-[Ask for User Decision from Image](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-image)
+[Ask for User Decision from Image](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-user-decision-from-image)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -222,7 +222,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Ask for User Decision from Strings
 
-[Ask for User Decision from Strings](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-strings)
+[Ask for User Decision from Strings](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-user-decision-from-strings)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -257,7 +257,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Object Existence Test (Check Only)
 
-[Object Existence Test (Check Only)](/mp-command-catalog/commands/process-flow-operations#object-existence-test-check-only) · [gRPC contract](/api/grpc/process-flow-operations#object-existence-test-check-only)
+[Object Existence Test (Check Only)](/mp-command-catalog/commands/process-flow-operations#object-existence-test-check-only) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#object-existence-test-check-only)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

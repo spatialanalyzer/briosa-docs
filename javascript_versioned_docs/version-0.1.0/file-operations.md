@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Backup Now
 
-[Backup Now](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC contract](/api/grpc/file-operations#backup-now)
+[Backup Now](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC contract](/api/grpc/0.5.1/file-operations#backup-now)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Copy General File
 
-[Copy General File](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC contract](/api/grpc/file-operations#copy-general-file)
+[Copy General File](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#copy-general-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete General File
 
-[Delete General File](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC contract](/api/grpc/file-operations#delete-general-file)
+[Delete General File](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#delete-general-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -103,7 +103,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Direct CAD Access
 
-[Direct CAD Access](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC contract](/api/grpc/file-operations#direct-cad-access)
+[Direct CAD Access](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC contract](/api/grpc/0.5.1/file-operations#direct-cad-access)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -203,7 +203,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Frame Set
 
-[Export ASCII Frame Set](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-frame-set)
+[Export ASCII Frame Set](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -246,7 +246,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Frames
 
-[Export ASCII Frames](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC contract](/api/grpc/file-operations#export-ascii-frames)
+[Export ASCII Frames](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-frames)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -283,7 +283,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Point Clouds
 
-[Export ASCII Point Clouds](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-clouds)
+[Export ASCII Point Clouds](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-point-clouds)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -326,7 +326,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Point Set
 
-[Export ASCII Point Set](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC contract](/api/grpc/file-operations#export-ascii-point-set)
+[Export ASCII Point Set](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-point-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -381,7 +381,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export ASCII Points
 
-[Export ASCII Points](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC contract](/api/grpc/file-operations#export-ascii-points)
+[Export ASCII Points](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ascii-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -446,7 +446,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export DXF
 
-[Export DXF](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC contract](/api/grpc/file-operations#export-dxf)
+[Export DXF](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-dxf)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -483,7 +483,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Embedded File
 
-[Export Embedded File](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC contract](/api/grpc/file-operations#export-embedded-file)
+[Export Embedded File](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-embedded-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -520,7 +520,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Hidden Point Bar XML File
 
-[Export Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#export-hidden-point-bar-xml-file)
+[Export Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-hidden-point-bar-xml-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -551,7 +551,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export IGES File  - Entire Model
 
-[Export IGES File  - Entire Model](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file----entire-model)
+[Export IGES File  - Entire Model](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-iges-file----entire-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -582,7 +582,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export IGES File - Partial Model
 
-[Export IGES File - Partial Model](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-iges-file---partial-model)
+[Export IGES File - Partial Model](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-iges-file---partial-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -615,7 +615,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export PTX Point Clouds
 
-[Export PTX Point Clouds](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC contract](/api/grpc/file-operations#export-ptx-point-clouds)
+[Export PTX Point Clouds](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-ptx-point-clouds)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -652,7 +652,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export QDAS Characteristics
 
-[Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC contract](/api/grpc/file-operations#export-qdas-characteristics)
+[Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-qdas-characteristics)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -717,7 +717,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export QDAS Data List
 
-[Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#export-qdas-data-list)
+[Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-qdas-data-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -748,7 +748,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Scan Stripe Mesh to STL File
 
-[Export Scan Stripe Mesh to STL File](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC contract](/api/grpc/file-operations#export-scan-stripe-mesh-to-stl-file)
+[Export Scan Stripe Mesh to STL File](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-scan-stripe-mesh-to-stl-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -781,7 +781,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export STEP File - Entire Model
 
-[Export STEP File - Entire Model](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---entire-model)
+[Export STEP File - Entire Model](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-step-file---entire-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -812,7 +812,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export STEP File - Partial Model
 
-[Export STEP File - Partial Model](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-step-file---partial-model)
+[Export STEP File - Partial Model](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-step-file---partial-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -845,7 +845,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export VDA/FS File  - Entire Model
 
-[Export VDA/FS File  - Entire Model](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file----entire-model)
+[Export VDA/FS File  - Entire Model](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vdafs-file----entire-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -876,7 +876,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export VDA/FS File - Partial Model
 
-[Export VDA/FS File - Partial Model](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC contract](/api/grpc/file-operations#export-vdafs-file---partial-model)
+[Export VDA/FS File - Partial Model](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vdafs-file---partial-model)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -909,7 +909,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Export Vector Container to ASCII File
 
-[Export Vector Container to ASCII File](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC contract](/api/grpc/file-operations#export-vector-container-to-ascii-file)
+[Export Vector Container to ASCII File](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#export-vector-container-to-ascii-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -950,7 +950,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Find Files in Directory
 
-[Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC contract](/api/grpc/file-operations#find-files-in-directory)
+[Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#find-files-in-directory)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -985,7 +985,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Find Sub-Directories in Directory
 
-[Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC contract](/api/grpc/file-operations#find-sub-directories-in-directory)
+[Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#find-sub-directories-in-directory)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1018,7 +1018,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Boolean From DataShare File
 
-[Get Boolean From DataShare File](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-boolean-from-datashare-file)
+[Get Boolean From DataShare File](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-boolean-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1051,7 +1051,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Double From DataShare File
 
-[Get Double From DataShare File](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-double-from-datashare-file)
+[Get Double From DataShare File](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-double-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1084,7 +1084,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Integer From DataShare File
 
-[Get Integer From DataShare File](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-integer-from-datashare-file)
+[Get Integer From DataShare File](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-integer-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1117,7 +1117,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get QDAS Catalog Entries
 
-[Get QDAS Catalog Entries](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC contract](/api/grpc/file-operations#get-qdas-catalog-entries)
+[Get QDAS Catalog Entries](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-qdas-catalog-entries)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1148,7 +1148,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get String From DataShare File
 
-[Get String From DataShare File](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-string-from-datashare-file)
+[Get String From DataShare File](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-string-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1181,7 +1181,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Transform From DataShare File
 
-[Get Transform From DataShare File](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-transform-from-datashare-file)
+[Get Transform From DataShare File](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-transform-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1214,7 +1214,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Vector From DataShare File
 
-[Get Vector From DataShare File](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC contract](/api/grpc/file-operations#get-vector-from-datashare-file)
+[Get Vector From DataShare File](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-vector-from-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1247,7 +1247,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Working Directory
 
-[Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC contract](/api/grpc/file-operations#get-working-directory)
+[Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC contract](/api/grpc/0.5.1/file-operations#get-working-directory)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1273,7 +1273,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import ASCII: Predefined Formats
 
-[Import ASCII: Predefined Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-formats)
+[Import ASCII: Predefined Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-ascii-predefined-formats)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1318,7 +1318,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import ASCII: Predefined Frame Set Formats
 
-[Import ASCII: Predefined Frame Set Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC contract](/api/grpc/file-operations#import-ascii-predefined-frame-set-formats)
+[Import ASCII: Predefined Frame Set Formats](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-ascii-predefined-frame-set-formats)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1359,7 +1359,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import E57 File
 
-[Import E57 File](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC contract](/api/grpc/file-operations#import-e57-file)
+[Import E57 File](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-e57-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1402,7 +1402,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import File as Embedded File
 
-[Import File as Embedded File](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC contract](/api/grpc/file-operations#import-file-as-embedded-file)
+[Import File as Embedded File](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-file-as-embedded-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1435,7 +1435,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import File as Picture
 
-[Import File as Picture](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC contract](/api/grpc/file-operations#import-file-as-picture)
+[Import File as Picture](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-file-as-picture)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1468,7 +1468,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Hidden Point Bar XML File
 
-[Import Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/file-operations#import-hidden-point-bar-xml-file)
+[Import Hidden Point Bar XML File](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-hidden-point-bar-xml-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1501,7 +1501,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import IGES File
 
-[Import IGES File](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC contract](/api/grpc/file-operations#import-iges-file)
+[Import IGES File](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-iges-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1532,7 +1532,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Leica GSI File
 
-[Import Leica GSI File](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC contract](/api/grpc/file-operations#import-leica-gsi-file)
+[Import Leica GSI File](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-leica-gsi-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1567,7 +1567,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Leica SDB File
 
-[Import Leica SDB File](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC contract](/api/grpc/file-operations#import-leica-sdb-file)
+[Import Leica SDB File](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-leica-sdb-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1602,7 +1602,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import MP File as Embedded MP
 
-[Import MP File as Embedded MP](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC contract](/api/grpc/file-operations#import-mp-file-as-embedded-mp)
+[Import MP File as Embedded MP](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-mp-file-as-embedded-mp)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1635,7 +1635,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Nominals from XML File
 
-[Import Nominals from XML File](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC contract](/api/grpc/file-operations#import-nominals-from-xml-file)
+[Import Nominals from XML File](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-nominals-from-xml-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1666,7 +1666,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Polyworks File
 
-[Import Polyworks File](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC contract](/api/grpc/file-operations#import-polyworks-file)
+[Import Polyworks File](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-polyworks-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1699,7 +1699,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import QDAS Catalog File
 
-[Import QDAS Catalog File](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC contract](/api/grpc/file-operations#import-qdas-catalog-file)
+[Import QDAS Catalog File](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-qdas-catalog-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1730,7 +1730,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SA File
 
-[Import SA File](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC contract](/api/grpc/file-operations#import-sa-file)
+[Import SA File](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sa-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1765,7 +1765,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SA Windows Placement
 
-[Import SA Windows Placement](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC contract](/api/grpc/file-operations#import-sa-windows-placement)
+[Import SA Windows Placement](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sa-windows-placement)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1796,7 +1796,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import SAT File
 
-[Import SAT File](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC contract](/api/grpc/file-operations#import-sat-file)
+[Import SAT File](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-sat-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1827,7 +1827,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import STEP File
 
-[Import STEP File](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC contract](/api/grpc/file-operations#import-step-file)
+[Import STEP File](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-step-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1862,7 +1862,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import STL File
 
-[Import STL File](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC contract](/api/grpc/file-operations#import-stl-file)
+[Import STL File](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-stl-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1899,7 +1899,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VDA/FS File
 
-[Import VDA/FS File](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC contract](/api/grpc/file-operations#import-vdafs-file)
+[Import VDA/FS File](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vdafs-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1930,7 +1930,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VSTARS .xyz File
 
-[Import VSTARS .xyz File](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC contract](/api/grpc/file-operations#import-vstars-xyz-file)
+[Import VSTARS .xyz File](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vstars-xyz-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1961,7 +1961,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import VSTARS Cameras
 
-[Import VSTARS Cameras](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC contract](/api/grpc/file-operations#import-vstars-cameras)
+[Import VSTARS Cameras](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC contract](/api/grpc/0.5.1/file-operations#import-vstars-cameras)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1992,7 +1992,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Load HTML Form
 
-[Load HTML Form](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC contract](/api/grpc/file-operations#load-html-form)
+[Load HTML Form](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC contract](/api/grpc/0.5.1/file-operations#load-html-form)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2039,7 +2039,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Load HTML Form in Edge Browser
 
-[Load HTML Form in Edge Browser](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC contract](/api/grpc/file-operations#load-html-form-in-edge-browser)
+[Load HTML Form in Edge Browser](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC contract](/api/grpc/0.5.1/file-operations#load-html-form-in-edge-browser)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2080,7 +2080,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Embedded File Name List
 
-[Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC contract](/api/grpc/file-operations#make-embedded-file-name-list)
+[Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#make-embedded-file-name-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2113,7 +2113,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Merge Measurements into XML File
 
-[Merge Measurements into XML File](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC contract](/api/grpc/file-operations#merge-measurements-into-xml-file)
+[Merge Measurements into XML File](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#merge-measurements-into-xml-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2146,7 +2146,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## New SA File
 
-[New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC contract](/api/grpc/file-operations#new-sa-file)
+[New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#new-sa-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2172,7 +2172,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Open SA File
 
-[Open SA File](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC contract](/api/grpc/file-operations#open-sa-file)
+[Open SA File](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#open-sa-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2203,7 +2203,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Open Template File
 
-[Open Template File](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC contract](/api/grpc/file-operations#open-template-file)
+[Open Template File](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#open-template-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2234,7 +2234,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Pop PolyBay Analysis Window
 
-[Pop PolyBay Analysis Window](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC contract](/api/grpc/file-operations#pop-polybay-analysis-window)
+[Pop PolyBay Analysis Window](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC contract](/api/grpc/0.5.1/file-operations#pop-polybay-analysis-window)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2267,7 +2267,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Prepare QDAS Data List
 
-[Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC contract](/api/grpc/file-operations#prepare-qdas-data-list)
+[Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC contract](/api/grpc/0.5.1/file-operations#prepare-qdas-data-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2330,7 +2330,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename General File
 
-[Rename General File](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC contract](/api/grpc/file-operations#rename-general-file)
+[Rename General File](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#rename-general-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2365,7 +2365,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save
 
-[Save](/mp-command-catalog/commands/file-operations#save) · [gRPC contract](/api/grpc/file-operations#save)
+[Save](/mp-command-catalog/commands/file-operations#save) · [gRPC contract](/api/grpc/0.5.1/file-operations#save)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2391,7 +2391,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save As Read-Only Template
 
-[Save As Read-Only Template](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC contract](/api/grpc/file-operations#save-as-read-only-template)
+[Save As Read-Only Template](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC contract](/api/grpc/0.5.1/file-operations#save-as-read-only-template)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2422,7 +2422,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save As...
 
-[Save As...](/mp-command-catalog/commands/file-operations#save-as) · [gRPC contract](/api/grpc/file-operations#save-as)
+[Save As...](/mp-command-catalog/commands/file-operations#save-as) · [gRPC contract](/api/grpc/0.5.1/file-operations#save-as)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2457,7 +2457,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Boolean In DataShare File
 
-[Set Boolean In DataShare File](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-boolean-in-datashare-file)
+[Set Boolean In DataShare File](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-boolean-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2492,7 +2492,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Double In DataShare File
 
-[Set Double In DataShare File](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-double-in-datashare-file)
+[Set Double In DataShare File](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-double-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2527,7 +2527,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Integer In DataShare File
 
-[Set Integer In DataShare File](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-integer-in-datashare-file)
+[Set Integer In DataShare File](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-integer-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2562,7 +2562,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set String In DataShare File
 
-[Set String In DataShare File](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-string-in-datashare-file)
+[Set String In DataShare File](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-string-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2597,7 +2597,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Transform In DataShare File
 
-[Set Transform In DataShare File](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-transform-in-datashare-file)
+[Set Transform In DataShare File](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-transform-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2632,7 +2632,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector In DataShare File
 
-[Set Vector In DataShare File](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC contract](/api/grpc/file-operations#set-vector-in-datashare-file)
+[Set Vector In DataShare File](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC contract](/api/grpc/0.5.1/file-operations#set-vector-in-datashare-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2667,7 +2667,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Terminate All Running MPs
 
-[Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC contract](/api/grpc/file-operations#terminate-all-running-mps)
+[Terminate All Running MPs](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC contract](/api/grpc/0.5.1/file-operations#terminate-all-running-mps)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2693,7 +2693,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Use NRKXML Library
 
-[Use NRKXML Library](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC contract](/api/grpc/file-operations#use-nrkxml-library)
+[Use NRKXML Library](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC contract](/api/grpc/0.5.1/file-operations#use-nrkxml-library)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2724,7 +2724,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Verify General File Exists
 
-[Verify General File Exists](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-general-file-exists)
+[Verify General File Exists](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC contract](/api/grpc/0.5.1/file-operations#verify-general-file-exists)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2755,7 +2755,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Verify MP File Exists
 
-[Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC contract](/api/grpc/file-operations#verify-mp-file-exists)
+[Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC contract](/api/grpc/0.5.1/file-operations#verify-mp-file-exists)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

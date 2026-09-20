@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Enable/Disable Relationships for Optimization
 
-[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
+[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#enabledisable-relationships-for-optimization)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ public sealed record RelationshipWatchWindowTemplateOptions
 
 ## Generate Geometry Relationship Summary
 
-[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
+[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#generate-geometry-relationship-summary)
 
 ```csharp
 public Task GenerateGeometryRelationshipSummaryAsync(
@@ -97,7 +97,7 @@ public Task GenerateGeometryRelationshipSummaryAsync(
 
 ## Edit Geometry Relationship Point List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#edit-geometry-relationship-point-list)
 
 ```csharp
 public Task EditGeometryRelationshipPointListAsync(
@@ -111,7 +111,7 @@ stopped.
 
 ## Filter Geometry Relationship Outlier Cloud Points
 
-[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
 
 ```csharp
 public Task<GeometryRelationshipOutlierFilterMetrics> FilterGeometryRelationshipOutlierCloudPointsAsync(
@@ -123,7 +123,7 @@ public Task<GeometryRelationshipOutlierFilterMetrics> FilterGeometryRelationship
 
 ## Relationship Watch Window Template
 
-[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
+[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#relationship-watch-window-template)
 
 ```csharp
 public Task RelationshipWatchWindowTemplateAsync(
@@ -140,7 +140,7 @@ default while allowing a caller-supplied template identity.
 
 ## Make Point to Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-to-point-relationship)
 
 ```csharp
 public Task MakePointToPointRelationshipAsync(
@@ -157,7 +157,7 @@ constraint defaults.
 
 ## Make Frame to Frame Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-frame-to-frame-relationship)
 
 ```csharp
 public Task MakeFrameToFrameRelationshipAsync(
@@ -228,7 +228,7 @@ public enum DynamicEllipseMode
 
 ## Make Points to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-objects-relationship)
 
 ```csharp
 public Task MakePointsToObjectsRelationshipAsync(
@@ -245,7 +245,7 @@ all projection controls disabled.
 
 ## Make Points to Points Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-points-relationship)
 
 ```csharp
 public Task MakePointsToPointsRelationshipAsync(
@@ -262,7 +262,7 @@ Omitted tolerance and constraint values use their distinct exact MP defaults.
 
 ## Make Groups to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-groups-to-objects-relationship)
 
 ```csharp
 public Task MakeGroupsToObjectsRelationshipAsync(
@@ -276,7 +276,7 @@ public Task MakeGroupsToObjectsRelationshipAsync(
 
 ## Make Object to Object Direction Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-object-to-object-direction-relationship)
 
 ```csharp
 public Task MakeObjectToObjectDirectionRelationshipAsync(
@@ -289,7 +289,7 @@ public Task MakeObjectToObjectDirectionRelationshipAsync(
 
 ## Make Point Clouds to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-clouds-to-objects-relationship)
 
 ```csharp
 public Task MakePointCloudsToObjectsRelationshipAsync(
@@ -303,7 +303,7 @@ public Task MakePointCloudsToObjectsRelationshipAsync(
 
 ## Make Group to Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-group-relationship)
 
 ```csharp
 public Task MakeGroupToGroupRelationshipAsync(
@@ -318,7 +318,7 @@ public Task MakeGroupToGroupRelationshipAsync(
 
 ## Make Group to Nominal Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-nominal-group-relationship)
 
 ```csharp
 public Task MakeGroupToNominalGroupRelationshipAsync(
@@ -342,7 +342,7 @@ preserving closest-point matching.
 
 ## Make Average Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-average-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-average-point-relationship)
 
 ```csharp
 public Task MakeAveragePointRelationshipAsync(
@@ -355,7 +355,7 @@ public Task MakeAveragePointRelationshipAsync(
 
 ## Make Geometry Fit Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-only-relationship)
 
 ```csharp
 public Task MakeGeometryFitOnlyRelationshipAsync(
@@ -369,7 +369,7 @@ public Task MakeGeometryFitOnlyRelationshipAsync(
 
 ## Make Geometry Fit and Compare to Nominal Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
 
 ```csharp
 public Task MakeGeometryFitAndCompareToNominalRelationshipAsync(
@@ -444,7 +444,7 @@ public sealed record PointToPointRelationshipStatistics(
 
 ## Make Geometry Compare Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-compare-only-relationship)
 
 ```csharp
 public Task MakeGeometryCompareOnlyRelationshipAsync(
@@ -456,7 +456,7 @@ public Task MakeGeometryCompareOnlyRelationshipAsync(
 
 ## Make Dynamic Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-point-relationship)
 
 ```csharp
 public Task MakeDynamicPointRelationshipAsync(
@@ -472,7 +472,7 @@ The third reference is optional unless the selected construction mode needs it.
 
 ## Make Dynamic Line Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-line-relationship)
 
 ```csharp
 public Task MakeDynamicLineRelationshipAsync(
@@ -485,7 +485,7 @@ public Task MakeDynamicLineRelationshipAsync(
 
 ## Make Dynamic Plane Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-plane-relationship)
 
 ```csharp
 public Task MakeDynamicPlaneRelationshipAsync(
@@ -499,7 +499,7 @@ public Task MakeDynamicPlaneRelationshipAsync(
 
 ## Make Dynamic Circle Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-circle-relationship)
 
 ```csharp
 public Task MakeDynamicCircleRelationshipAsync(
@@ -512,7 +512,7 @@ public Task MakeDynamicCircleRelationshipAsync(
 
 ## Make Dynamic Ellipse Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-ellipse-relationship)
 
 ```csharp
 public Task MakeDynamicEllipseRelationshipAsync(
@@ -525,7 +525,7 @@ public Task MakeDynamicEllipseRelationshipAsync(
 
 ## Make Vector Group To Vector Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-vector-group-to-vector-group-relationship)
 
 ```csharp
 public Task MakeVectorGroupToVectorGroupRelationshipAsync(
@@ -538,7 +538,7 @@ public Task MakeVectorGroupToVectorGroupRelationshipAsync(
 
 ## Set Vector Group To Vector Group Cylindrical Zone
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
 
 ```csharp
 public Task SetVectorGroupToVectorGroupCylindricalZoneAsync(
@@ -551,7 +551,7 @@ public Task SetVectorGroupToVectorGroupCylindricalZoneAsync(
 
 ## Set Vector Group To Vector Group Fit Weights
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-weights)
 
 ```csharp
 public Task SetVectorGroupToVectorGroupFitWeightsAsync(
@@ -567,7 +567,7 @@ public Task SetVectorGroupToVectorGroupFitWeightsAsync(
 
 ## Set Vector Group To Vector Group Fit Gradient Factor
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
 
 ```csharp
 public Task SetVectorGroupToVectorGroupFitGradientFactorAsync(
@@ -618,7 +618,7 @@ public Task SetOptimizationPerturbationParametersAsync(
 
 ## Do Relationship Fit
 
-[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/relationship-operations#do-relationship-fit)
+[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#do-relationship-fit)
 
 ```csharp
 public Task<RelationshipFitResult> DoRelationshipFitAsync(
@@ -638,7 +638,7 @@ shown by default.
 
 ## Move Collections by Minimizing Relationships
 
-[MP command](/mp-command-catalog/commands/relationship-operations#move-collections-by-minimizing-relationships) · [gRPC contract](/api/grpc/relationship-operations#move-collections-by-minimizing-relationships)
+[MP command](/mp-command-catalog/commands/relationship-operations#move-collections-by-minimizing-relationships) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#move-collections-by-minimizing-relationships)
 
 ```csharp
 public Task MoveCollectionsByMinimizingRelationshipsAsync(
@@ -724,7 +724,7 @@ shared client value documented with Construction Operations / Point Clouds.
 
 ## Set Group To Nominal Group View Zooming
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-group-to-nominal-group-view-zooming)
 
 ```csharp
 public Task SetGroupToNominalGroupViewZoomingAsync(
@@ -739,7 +739,7 @@ public Task SetGroupToNominalGroupViewZoomingAsync(
 
 ## Set Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-associated-data)
 
 ```csharp
 public Task SetRelationshipAssociatedDataAsync(
@@ -757,7 +757,7 @@ supplied list. The client retains no associated-data state.
 
 ## Get Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-associated-data)
 
 ```csharp
 public Task<RelationshipAssociatedData> GetRelationshipAssociatedDataAsync(
@@ -767,7 +767,7 @@ public Task<RelationshipAssociatedData> GetRelationshipAssociatedDataAsync(
 
 ## Set Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-points-to-points-relationship-associated-data)
 
 ```csharp
 public Task SetPointsToPointsRelationshipAssociatedDataAsync(
@@ -780,7 +780,7 @@ public Task SetPointsToPointsRelationshipAssociatedDataAsync(
 
 ## Get Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-points-to-points-relationship-associated-data)
 
 ```csharp
 public Task<PointsToPointsRelationshipAssociatedData> GetPointsToPointsRelationshipAssociatedDataAsync(
@@ -790,7 +790,7 @@ public Task<PointsToPointsRelationshipAssociatedData> GetPointsToPointsRelations
 
 ## Auto Filter Clouds to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
 ```csharp
 public Task AutoFilterCloudsToNominalGeometry3DAsync(
@@ -804,7 +804,7 @@ public Task AutoFilterCloudsToNominalGeometry3DAsync(
 
 ## Auto Filter Clouds to Nominal Geometry 2D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
 ```csharp
 public Task AutoFilterCloudsToNominalGeometry2DAsync(
@@ -822,7 +822,7 @@ it is absent from ObjectiveSA's SA 2024.1 implementation.
 
 ## Auto Filter Points to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
 
 ```csharp
 public Task AutoFilterPointsToNominalGeometry3DAsync(
@@ -834,7 +834,7 @@ public Task AutoFilterPointsToNominalGeometry3DAsync(
 
 ## Auto Filter Points/Groups/Clouds to Surface Faces
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
 ```csharp
 public Task AutoFilterPointsGroupsCloudsToSurfaceFacesAsync(
@@ -859,7 +859,7 @@ work.
 
 ## Extract Geometry From Point Clouds
 
-[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
+[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#extract-geometry-from-point-clouds)
 
 ```csharp
 public Task ExtractGeometryFromPointCloudsAsync(
@@ -878,7 +878,7 @@ This SA 2026.1 operation has no ObjectiveSA SA 2024.1 counterpart.
 
 ## Create Points to Objects Map
 
-[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/relationship-operations#create-points-to-objects-map)
+[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#create-points-to-objects-map)
 
 ```csharp
 public Task CreatePointsToObjectsMapAsync(
@@ -895,7 +895,7 @@ intermediate workflow state.
 
 ## Get Objects From Points to Objects Map (Point List)
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-objects-from-points-to-objects-map-point-list)
 
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>> GetObjectsFromPointsToObjectsMapPointListAsync(
@@ -908,7 +908,7 @@ This method follows the exact SA 2026.1 Point-list binding.
 
 ## Compute Geometry Relationship Uncertainties
 
-[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
+[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#compute-geometry-relationship-uncertainties)
 
 ```csharp
 public Task ComputeGeometryRelationshipUncertaintiesAsync(
@@ -921,7 +921,7 @@ SA may make the Relationship dormant after computing uncertainty.
 
 ## Make Cloud to Swatch Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-cloud-to-swatch-relationship)
 
 ```csharp
 public Task MakeCloudToSwatchRelationshipAsync(
@@ -962,7 +962,7 @@ public sealed record RelationshipStatusFlags(
 
 ## Get Relationship Sigmoidal Gap Fit Constraints
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
 
 ```csharp
 public Task<SigmoidalGapFitConstraints> GetRelationshipSigmoidalGapFitConstraintsAsync(
@@ -974,7 +974,7 @@ The method uses the exact MP word `Sigmoidal` and returns all eight values.
 
 ## Set Object to Object Direction Relationship Tolerances
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-tolerances)
 
 ```csharp
 public Task SetObjectToObjectDirectionRelationshipTolerancesAsync(
@@ -988,7 +988,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 
 ## Get Geom Relationship Criteria Name List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria-name-list)
 
 ```csharp
 public Task<IReadOnlyList<string>> GetGeomRelationshipCriteriaNameListAsync(
@@ -999,7 +999,7 @@ public Task<IReadOnlyList<string>> GetGeomRelationshipCriteriaNameListAsync(
 
 ## Get Relationship Status
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-status)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-status)
 
 ```csharp
 public Task<RelationshipStatusFlags> GetRelationshipStatusAsync(
@@ -1012,7 +1012,7 @@ These methods retain no Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
-[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
+[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-ignore-input-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1037,7 +1037,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Geom Relationship Reuse Ignored Input Points
 
-[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
+[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-reuse-ignored-input-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1062,7 +1062,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Auto Vectors
 
-[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
+[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-auto-vectors)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1104,7 +1104,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Cardinal Points
 
-[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
+[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-cardinal-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1129,7 +1129,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Criteria
 
-[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
+[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1188,7 +1188,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Measured Avg Point
 
-[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
+[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-avg-point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1213,7 +1213,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Measured Geometry
 
-[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
+[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-geometry)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1238,7 +1238,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Nominal Avg Point
 
-[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
+[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-avg-point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1263,7 +1263,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Nominal Geometry
 
-[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
+[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-geometry)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1288,7 +1288,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Point List
 
-[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
+[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-point-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1324,7 +1324,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Geom Relationship Projection Plane
 
-[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
+[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-projection-plane)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1349,7 +1349,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Cut Status
 
-[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
+[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-cut-status)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1388,7 +1388,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Properties
 
-[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
+[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1445,7 +1445,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Pipe Relationship Weights
 
-[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
+[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-weights)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1496,7 +1496,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Fit Constraints (Scalar Type)
 
-[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
+[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-fit-constraints-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1538,7 +1538,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Outlier Rejection (Scalar Type)
 
-[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
+[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-outlier-rejection-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1577,7 +1577,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Projection Options
 
-[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-projection-options)
+[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-projection-options)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1619,7 +1619,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Reporting Frame
 
-[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
+[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-reporting-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1644,7 +1644,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Sub Sampling Options
 
-[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
+[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sub-sampling-options)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1683,7 +1683,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Tolerance (Scalar Type)
 
-[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
+[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1725,7 +1725,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Tolerance (Vector Type)
 
-[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
+[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-vector-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1803,7 +1803,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Type
 
-[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-type)
+[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1828,7 +1828,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Relationship Weighting
 
-[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-weighting)
+[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-weighting)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1853,7 +1853,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Pipe Fitting Relationship
 
-[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
+[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-fitting-relationship)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1882,7 +1882,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Pipe Relationship Cut
 
-[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-relationship-cut)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1919,7 +1919,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Pipe Relationship Force Cut to Frame
 
-[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
+[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#pipe-relationship-force-cut-to-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1952,7 +1952,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Auto Measure Nominal Feature
 
-[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
+[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1983,7 +1983,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
 
-[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
+[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2016,7 +2016,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Cardinal Points
 
-[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
+[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-cardinal-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2047,7 +2047,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Criteria
 
-[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
+[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-criteria)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2082,7 +2082,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Measured Geometry
 
-[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
+[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-measured-geometry)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2109,7 +2109,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Nominal Avg Point
 
-[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
+[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-avg-point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2138,7 +2138,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Nominal Geometry
 
-[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
+[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-geometry)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2167,7 +2167,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geom Relationship Projection Plane
 
-[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
+[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-projection-plane)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2196,7 +2196,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object to Object Direction Relationship Fit Constraints
 
-[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
+[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2225,7 +2225,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Pipe Relationship Segment Properties
 
-[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
+[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-segment-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2266,7 +2266,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Pipe Relationship Weights
 
-[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
+[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-weights)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2307,7 +2307,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Auto Vectors Fit (AVF)
 
-[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
+[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-fit-avf)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2338,7 +2338,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Auto Vectors Group Default Prefix
 
-[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
+[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2367,7 +2367,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Desired Meas Count
 
-[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
+[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-desired-meas-count)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2394,7 +2394,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Dormant Status
 
-[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
+[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-dormant-status)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2421,7 +2421,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Fit Constraints (Scalar Type)
 
-[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
+[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-fit-constraints-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2448,7 +2448,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
 
-[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
+[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2475,7 +2475,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Outlier Rejection (Scalar Type)
 
-[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
+[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-outlier-rejection-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2500,7 +2500,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Position Fit Constraints (Vector Type)
 
-[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
+[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-position-fit-constraints-vector-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2527,7 +2527,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Projection Options
 
-[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-projection-options)
+[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-projection-options)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2554,7 +2554,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Reporting Frame
 
-[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
+[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-reporting-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2581,7 +2581,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
 
-[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
+[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2608,7 +2608,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Sub Sampling Options
 
-[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
+[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sub-sampling-options)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2641,7 +2641,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Tolerance (Scalar Type)
 
-[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
+[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-scalar-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2668,7 +2668,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Tolerance (Vector Type)
 
-[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
+[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-vector-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2695,7 +2695,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Voxel Cloud Display
 
-[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
+[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-voxel-cloud-display)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2734,7 +2734,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Weighting
 
-[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weighting)
+[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weighting)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2761,7 +2761,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Relationship Weights Normalized
 
-[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)
+[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weights-normalized)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

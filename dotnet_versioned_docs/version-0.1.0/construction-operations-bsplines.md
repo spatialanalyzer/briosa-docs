@@ -50,7 +50,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Spline From Points](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-points) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-points)
+[Construct B-Spline From Points](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-points) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-spline-from-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Spline From Point Set](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-point-set) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-point-set)
+[Construct B-Spline From Point Set](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-point-set) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-spline-from-point-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -121,7 +121,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Spline From Several B-Splines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-several-b-splines) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-several-b-splines)
+[Construct B-Spline From Several B-Splines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-several-b-splines) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-spline-from-several-b-splines)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -151,7 +151,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Spline From Intersection of Plane and Surface](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface)
+[Construct B-Spline From Intersection of Plane and Surface](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -184,7 +184,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Spline From Intersection of Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces)
+[Construct B-Spline From Intersection of Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -220,7 +220,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Splines From Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-surfaces) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-surfaces)
+[Construct B-Splines From Surfaces](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-surfaces) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-splines-from-surfaces)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -248,7 +248,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Splines From Lines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-lines) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-lines)
+[Construct B-Splines From Lines](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-lines) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-splines-from-lines)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -276,7 +276,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Construct B-Splines From Intersection of Plane and Mesh](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) · [gRPC contract](/api/grpc/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh)
+[Construct B-Splines From Intersection of Plane and Mesh](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) · [gRPC contract](/api/grpc/0.5.1/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

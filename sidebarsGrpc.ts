@@ -1,8 +1,11 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import {withSa2024} from './sidebarsExactTarget';
 
 const sidebars: SidebarsConfig = {
   grpcSidebar: [
     'overview',
+    'discovery',
+    'value-types',
     {
       type: 'category',
       label: 'Lifecycle',
@@ -120,4 +123,4 @@ const sidebars: SidebarsConfig = {
   ],
 };
 
-export default sidebars;
+export default withSa2024(sidebars);

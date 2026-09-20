@@ -25,69 +25,69 @@ Construction** in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Make Surface Face List - Runtime Select" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-interactive-surface-fixture"><td><a href="#make-surface-face-list---runtime-select">Make Surface Face List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive surface fixture</td></tr>
-<tr data-command="Make Surface Face List - Runtime Select" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Surface Face List - Runtime Select" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-surface-face-list---runtime-select">Make Surface Face List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Surface Face List From Surface" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-surface-fixture"><td><a href="#make-surface-face-list-from-surface">Make Surface Face List From Surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface fixture</td></tr>
-<tr data-command="Make Surface Face List From Surface" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Surface Face List From Surface" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-surface-face-list-from-surface">Make Surface Face List From Surface</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Feature Check Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-feature-check-annotation">Make GD&amp;T Feature Check Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T Annotation fixture</td></tr>
-<tr data-command="Make GD&amp;T Feature Check Annotation" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make GD&amp;T Feature Check Annotation" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-gdt-feature-check-annotation">Make GD&amp;T Feature Check Annotation</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Datum Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-datum-annotation">Make GD&amp;T Datum Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T Annotation fixture</td></tr>
-<tr data-command="Make GD&amp;T Datum Annotation" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make GD&amp;T Datum Annotation" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-gdt-datum-annotation">Make GD&amp;T Datum Annotation</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-feature-checks">Make Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Make Feature Checks" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Feature Checks" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-feature-checks">Make Feature Checks</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Feature Check Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-feature-check-ref-list-from-a-collection">Make a Feature Check Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Make a Feature Check Ref List from a Collection" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Feature Check Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-feature-check-ref-list-from-a-collection">Make a Feature Check Ref List from a Collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Feature Check Reference List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-a-feature-check-reference-list--wildcard-selection">Make a Feature Check Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state GD&amp;T fixture</td></tr>
-<tr data-command="Make a Feature Check Reference List- WildCard Selection" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Feature Check Reference List- WildCard Selection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-feature-check-reference-list--wildcard-selection">Make a Feature Check Reference List- WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-annotation-ref-list-from-a-collection">Make Annotation Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Make Annotation Ref List from a Collection" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Annotation Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-annotation-ref-list-from-a-collection">Make Annotation Ref List from a Collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-annotation-ref-list--wildcard-selection">Make Annotation Ref List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state GD&amp;T fixture</td></tr>
-<tr data-command="Make Annotation Ref List- WildCard Selection" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Annotation Ref List- WildCard Selection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-annotation-ref-list--wildcard-selection">Make Annotation Ref List- WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-destructive-gdt-fixture"><td><a href="#delete-feature-checks">Delete Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive GD&amp;T fixture</td></tr>
-<tr data-command="Delete Feature Checks" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Feature Checks" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-feature-checks">Delete Feature Checks</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Datum Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-datum-ref-list-from-a-collection">Make a Datum Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Make a Datum Ref List from a Collection" data-group="Construction Operations / GDT" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Datum Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-datum-ref-list-from-a-collection">Make a Datum Ref List from a Collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -101,17 +101,19 @@ Construction** in SA 2026.1.0529.7.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk interactive surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-surface-face-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-surface-face-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-surface-face-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-surface-face-list---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -137,17 +139,19 @@ when the caller invokes it.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-surface-face-list-from-surface) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-surface-face-list-from-surface) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-surface-face-list-from-surface) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-surface-face-list-from-surface)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -175,17 +179,19 @@ provides a non-interactive source for the Annotation-construction operations.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt annotation fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-gdt-feature-check-annotation) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-gdt-feature-check-annotation) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-gdt-feature-check-annotation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-gdt-feature-check-annotation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -248,17 +254,19 @@ zone.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt annotation fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-gdt-datum-annotation) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-gdt-datum-annotation) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-gdt-datum-annotation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-gdt-datum-annotation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -293,17 +301,19 @@ default to `false`.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-feature-checks) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-feature-checks) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-feature-checks) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-feature-checks)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -328,17 +338,19 @@ SpatialAnalyzer owns the live construction state and resulting objects.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-ref-list-from-a-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-ref-list-from-a-collection) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-ref-list-from-a-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-ref-list-from-a-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -364,17 +376,19 @@ structured identities.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk live state gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-reference-list--wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-reference-list--wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-reference-list--wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-a-feature-check-reference-list--wildcard-selection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -401,17 +415,19 @@ Both criteria default to `*`.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list-from-a-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list-from-a-collection) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list-from-a-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list-from-a-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -437,17 +453,19 @@ structured identities.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk live state gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list--wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list--wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list--wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-annotation-ref-list--wildcard-selection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -474,17 +492,19 @@ criteria default to `*`.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk destructive gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#delete-feature-checks) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#delete-feature-checks) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#delete-feature-checks) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#delete-feature-checks)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -510,17 +530,19 @@ partial success, or failure through the normal execution outcome.
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / GDT</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-construction#make-a-datum-ref-list-from-a-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-construction#make-a-datum-ref-list-from-a-collection) · [Python](/api/python/sa-2024.1.0508.5/gdt-construction#make-a-datum-ref-list-from-a-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-construction#make-a-datum-ref-list-from-a-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

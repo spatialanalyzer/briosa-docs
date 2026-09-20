@@ -25,201 +25,201 @@ in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-samachine">Add Robot/Machine (.SAMachine)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-robotmachine-samachine">Add Robot/Machine (.SAMachine)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-manipkin">Add Robot/Machine (.ManipKin)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-robotmachine-manipkin">Add Robot/Machine (.ManipKin)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robotmachine">Delete Robot/Machine</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-robotmachine">Delete Robot/Machine</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-frame">Move Robot/Machine to Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-frame">Move Robot/Machine to Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-through-path">Move Robot/Machine through Path</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-through-path">Move Robot/Machine through Path</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-named-destination">Move Robot/Machine to Named Destination</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-named-destination">Move Robot/Machine to Named Destination</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-parameter">Set Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-parameter">Set Robot/Machine Parameter</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-parameter">Get Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robotmachine-parameter">Get Robot/Machine Parameter</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-model-link-parameters">Set Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-model-link-parameters">Set Robot/Machine Model Link Parameters</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-model-link-parameters">Get Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robotmachine-model-link-parameters">Get Robot/Machine Model Link Parameters</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-base-transform">Set Robot/Machine Base Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-base-transform">Set Robot/Machine Base Transform</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#start-robotmachine-interface">Start Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-robotmachine-interface">Start Robot/Machine Interface</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#stop-robotmachine-interface">Stop Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#stop-robotmachine-interface">Stop Robot/Machine Interface</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#compute-robotmachine-adjusted-goal-frame">Compute Robot/Machine Adjusted Goal Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#compute-robotmachine-adjusted-goal-frame">Compute Robot/Machine Adjusted Goal Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-joint-pose-6dof">Move Robot/Machine to Joint Pose (6DOF)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-joint-pose-6dof">Move Robot/Machine to Joint Pose (6DOF)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#simulate-robotmachine-path-output-csv-file">Simulate Robot/Machine Path, Output CSV File</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#simulate-robotmachine-path-output-csv-file">Simulate Robot/Machine Path, Output CSV File</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#create-robot-calibration">Create Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Create Robot Calibration" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-robot-calibration">Create Robot Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robot-calibration">Delete Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-robot-calibration">Delete Robot Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-measurements">Import Poses Match to Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#import-poses-match-to-measurements">Import Poses Match to Measurements</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-frames">Import Poses Match to Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#import-poses-match-to-frames">Import Poses Match to Frames</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration">Perform Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#perform-robot-calibration">Perform Robot Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration-alternate">Perform Robot Calibration (Alternate)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#perform-robot-calibration-alternate">Perform Robot Calibration (Alternate)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#startstop-robot-calibration-trapping">Start/Stop Robot Calibration Trapping</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#startstop-robot-calibration-trapping">Start/Stop Robot Calibration Trapping</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-active-robot-calibration">Set Active Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-active-robot-calibration">Set Active Robot Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-tool-frame">Set Robot Calibration Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robot-calibration-tool-frame">Set Robot Calibration Tool Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-measurement-offset-in-tool-frame">Set Robot Calibration Measurement Offset In Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
-<tr data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robot-calibration-measurement-offset-in-tool-frame">Set Robot Calibration Measurement Offset In Tool Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robot-pose-for-a-frame">Get Robot Pose for a Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
-<tr data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robot-pose-for-a-frame">Get Robot Pose for a Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-integer-value">Get Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-integer-value">Get Calibration Appliance Integer Value</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-integer-value">Set Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-integer-value">Set Calibration Appliance Integer Value</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-real-value">Get Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-real-value">Get Calibration Appliance Real Value</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-real-value">Set Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-real-value">Set Calibration Appliance Real Value</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-data">Get Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-data">Get Calibration Appliance Data</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-data">Set Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
-<tr data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-data">Set Calibration Appliance Data</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -233,17 +233,19 @@ in SA 2026.1.0529.7.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#add-robotmachine-samachine) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#add-robotmachine-samachine) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#add-robotmachine-samachine) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#add-robotmachine-samachine)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -268,17 +270,19 @@ file is resolved by the local SpatialAnalyzer application.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#add-robotmachine-manipkin) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#add-robotmachine-manipkin) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#add-robotmachine-manipkin) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#add-robotmachine-manipkin)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -303,17 +307,19 @@ file is resolved by the local SpatialAnalyzer application.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#delete-robotmachine) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#delete-robotmachine) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#delete-robotmachine) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#delete-robotmachine)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -338,17 +344,19 @@ adds no dependency preflight beyond the MP command's behavior.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-frame) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -380,17 +388,19 @@ acknowledgement.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-through-path) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#move-robotmachine-through-path) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#move-robotmachine-through-path) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#move-robotmachine-through-path)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -420,17 +430,19 @@ arrival. Briosa does not retain or preflight motion state.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-named-destination) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-named-destination) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-named-destination) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-named-destination)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -459,17 +471,19 @@ disabled by default.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-parameter) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-robotmachine-parameter) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-robotmachine-parameter) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-robotmachine-parameter)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -496,17 +510,19 @@ value through without maintaining a machine-specific allowlist.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robotmachine-parameter) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-robotmachine-parameter) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-robotmachine-parameter) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-robotmachine-parameter)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -534,17 +550,19 @@ compatible collection-instrument argument setter.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-model-link-parameters) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-robotmachine-model-link-parameters) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-robotmachine-model-link-parameters) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-robotmachine-model-link-parameters)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -597,17 +615,19 @@ The public 6DOF Z field maps internally to the exact SDK literal
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robotmachine-model-link-parameters) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-robotmachine-model-link-parameters) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-robotmachine-model-link-parameters) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-robotmachine-model-link-parameters)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -660,17 +680,19 @@ The public 6DOF Z field maps internally from the exact SDK literal
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robotmachine-base-transform) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-robotmachine-base-transform) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-robotmachine-base-transform) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-robotmachine-base-transform)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -701,17 +723,19 @@ defaults to `0`. Briosa adds no interpolation or kinematic preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#start-robotmachine-interface) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#start-robotmachine-interface) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#start-robotmachine-interface) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#start-robotmachine-interface)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -739,17 +763,19 @@ Simulation is disabled by default.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#stop-robotmachine-interface) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#stop-robotmachine-interface) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#stop-robotmachine-interface) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#stop-robotmachine-interface)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -774,17 +800,19 @@ resulting interface state.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#compute-robotmachine-adjusted-goal-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#compute-robotmachine-adjusted-goal-frame) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#compute-robotmachine-adjusted-goal-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#compute-robotmachine-adjusted-goal-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -817,17 +845,19 @@ retains no intermediate state.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-joint-pose-6dof) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-joint-pose-6dof) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-joint-pose-6dof) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#move-robotmachine-to-joint-pose-6dof)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -859,17 +889,19 @@ hardware-state preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#simulate-robotmachine-path-output-csv-file) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#simulate-robotmachine-path-output-csv-file) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#simulate-robotmachine-path-output-csv-file) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#simulate-robotmachine-path-output-csv-file)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -896,17 +928,19 @@ joint settings to a CSV file or embedded file resolved by local SA.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#create-robot-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#create-robot-calibration) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#create-robot-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#create-robot-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -932,17 +966,19 @@ default is an empty string.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#delete-robot-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#delete-robot-calibration) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#delete-robot-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#delete-robot-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -968,17 +1004,19 @@ preflight. The exact MP name default is an empty string.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#import-poses-match-to-measurements) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#import-poses-match-to-measurements) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#import-poses-match-to-measurements) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#import-poses-match-to-measurements)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1006,17 +1044,19 @@ for the selected calibration.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#import-poses-match-to-frames) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#import-poses-match-to-frames) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#import-poses-match-to-frames) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#import-poses-match-to-frames)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1044,17 +1084,19 @@ the selected calibration.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#perform-robot-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#perform-robot-calibration) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#perform-robot-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#perform-robot-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1098,17 +1140,19 @@ retaining every supported exact-target setting. `Show Interface` defaults to
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#perform-robot-calibration-alternate) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#perform-robot-calibration-alternate) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#perform-robot-calibration-alternate) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#perform-robot-calibration-alternate)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1151,17 +1195,19 @@ operation when explicit DOF control is required. `Show Interface` defaults to
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#startstop-robot-calibration-trapping) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#startstop-robot-calibration-trapping) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#startstop-robot-calibration-trapping) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#startstop-robot-calibration-trapping)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1189,17 +1235,19 @@ The exact MP default is to stop. Briosa retains no trapping state.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-active-robot-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-active-robot-calibration) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-active-robot-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-active-robot-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1225,17 +1273,19 @@ added calibration-state preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robot-calibration-tool-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-robot-calibration-tool-frame) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-robot-calibration-tool-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-robot-calibration-tool-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1262,17 +1312,19 @@ transform uses the exact identity-transform default.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1299,17 +1351,19 @@ transform uses the exact identity-transform default.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk robot machine fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-robot-pose-for-a-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-robot-pose-for-a-frame) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-robot-pose-for-a-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-robot-pose-for-a-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1340,17 +1394,19 @@ because the SDK requires the output array dimension in advance.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-integer-value) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-integer-value) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-integer-value) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-integer-value)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1376,17 +1432,19 @@ exact default is `0`; Briosa adds no bounds preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-integer-value) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-integer-value) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-integer-value) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-integer-value)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1412,17 +1470,19 @@ defaults are `0`; Briosa adds no bounds preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-real-value) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-real-value) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-real-value) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-real-value)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1448,17 +1508,19 @@ default is `0`; Briosa adds no bounds preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-real-value) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-real-value) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-real-value) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-real-value)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1484,17 +1546,19 @@ and value both default to `0`; Briosa adds no bounds preflight.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-data) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#get-calibration-appliance-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1524,17 +1588,19 @@ a partial real-values-only result.
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At risk calibration appliance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-data) · [Python](/api/python/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/robot-operations#set-calibration-appliance-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

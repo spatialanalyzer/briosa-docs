@@ -21,7 +21,7 @@ public Task ConstructConeAsync(
 ```
 
 Every geometry value is required and passed through without client-side range
-validation. [Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cone) · [gRPC](/api/grpc/construction-operations-cones#construct-cone)
+validation. [Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cone) · [gRPC](/api/grpc/0.5.1/construction-operations-cones#construct-cone)
 
 ## Construct Cones From Surface Faces - Runtime Select
 
@@ -33,4 +33,4 @@ public Task ConstructConesFromSurfaceFacesRuntimeSelectAsync(
 The operator selects faces in SpatialAnalyzer. Cancellation does not prove the
 interaction stopped, and the client never automatically replays this call.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)
+[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/0.5.1/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)

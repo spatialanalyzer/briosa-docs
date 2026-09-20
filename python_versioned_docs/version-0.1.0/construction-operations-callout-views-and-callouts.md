@@ -70,7 +70,7 @@ async def create_vector_callout(
 ) -> None: ...
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-vector-callout)
+[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-vector-callout)
 
 ## Create Min/Max Vector Group Callout
 

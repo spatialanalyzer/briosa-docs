@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Add a Vector To Vector Name Ref List
 
-[Add a Vector To Vector Name Ref List](/mp-command-catalog/commands/vector-operations#add-a-vector-to-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#add-a-vector-to-vector-name-ref-list)
+[Add a Vector To Vector Name Ref List](/mp-command-catalog/commands/vector-operations#add-a-vector-to-vector-name-ref-list) · [gRPC contract](/api/grpc/0.5.1/vector-operations#add-a-vector-to-vector-name-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Auto-Range and Set Vector Group Colorization (All)
 
-[Auto-Range and Set Vector Group Colorization (All)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-all) · [gRPC contract](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-all)
+[Auto-Range and Set Vector Group Colorization (All)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-all) · [gRPC contract](/api/grpc/0.5.1/vector-operations#auto-range-and-set-vector-group-colorization-all)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Auto-Range and Set Vector Group Colorization (Selected)
 
-[Auto-Range and Set Vector Group Colorization (Selected)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [gRPC contract](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-selected)
+[Auto-Range and Set Vector Group Colorization (Selected)](/mp-command-catalog/commands/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [gRPC contract](/api/grpc/0.5.1/vector-operations#auto-range-and-set-vector-group-colorization-selected)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete i-th Vector From Vector Group
 
-[Delete i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#delete-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/vector-operations#delete-i-th-vector-from-vector-group)
+[Delete i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#delete-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/0.5.1/vector-operations#delete-i-th-vector-from-vector-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete Vector by Name
 
-[Delete Vector by Name](/mp-command-catalog/commands/vector-operations#delete-vector-by-name) · [gRPC contract](/api/grpc/vector-operations#delete-vector-by-name)
+[Delete Vector by Name](/mp-command-catalog/commands/vector-operations#delete-vector-by-name) · [gRPC contract](/api/grpc/0.5.1/vector-operations#delete-vector-by-name)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -150,7 +150,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Delete Vectors
 
-[Delete Vectors](/mp-command-catalog/commands/vector-operations#delete-vectors) · [gRPC contract](/api/grpc/vector-operations#delete-vectors)
+[Delete Vectors](/mp-command-catalog/commands/vector-operations#delete-vectors) · [gRPC contract](/api/grpc/0.5.1/vector-operations#delete-vectors)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -175,7 +175,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get i-th Vector From Vector Group
 
-[Get i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/vector-operations#get-i-th-vector-from-vector-group)
+[Get i-th Vector From Vector Group](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-group) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-i-th-vector-from-vector-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -222,7 +222,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get i-th Vector From Vector Name Ref List
 
-[Get i-th Vector From Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#get-i-th-vector-from-vector-name-ref-list)
+[Get i-th Vector From Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-i-th-vector-from-vector-name-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -272,7 +272,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Vectors in Vector Group
 
-[Get Number of Vectors in Vector Group](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-group) · [gRPC contract](/api/grpc/vector-operations#get-number-of-vectors-in-vector-group)
+[Get Number of Vectors in Vector Group](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-group) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-number-of-vectors-in-vector-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -297,7 +297,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Vectors in Vector Name Ref List
 
-[Get Number of Vectors in Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [gRPC contract](/api/grpc/vector-operations#get-number-of-vectors-in-vector-name-ref-list)
+[Get Number of Vectors in Vector Name Ref List](/mp-command-catalog/commands/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-number-of-vectors-in-vector-name-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -322,7 +322,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Vector From Vector Group By Name
 
-[Get Vector From Vector Group By Name](/mp-command-catalog/commands/vector-operations#get-vector-from-vector-group-by-name) · [gRPC contract](/api/grpc/vector-operations#get-vector-from-vector-group-by-name)
+[Get Vector From Vector Group By Name](/mp-command-catalog/commands/vector-operations#get-vector-from-vector-group-by-name) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-vector-from-vector-group-by-name)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -366,7 +366,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Vector Group Properties
 
-[Get Vector Group Properties](/mp-command-catalog/commands/vector-operations#get-vector-group-properties) · [gRPC contract](/api/grpc/vector-operations#get-vector-group-properties)
+[Get Vector Group Properties](/mp-command-catalog/commands/vector-operations#get-vector-group-properties) · [gRPC contract](/api/grpc/0.5.1/vector-operations#get-vector-group-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -444,7 +444,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Vector Group Colorization Options (All)
 
-[Set Vector Group Colorization Options (All)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-all) · [gRPC contract](/api/grpc/vector-operations#set-vector-group-colorization-options-all)
+[Set Vector Group Colorization Options (All)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-all) · [gRPC contract](/api/grpc/0.5.1/vector-operations#set-vector-group-colorization-options-all)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -469,7 +469,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Vector Group Colorization Options (Selected)
 
-[Set Vector Group Colorization Options (Selected)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-selected) · [gRPC contract](/api/grpc/vector-operations#set-vector-group-colorization-options-selected)
+[Set Vector Group Colorization Options (Selected)](/mp-command-catalog/commands/vector-operations#set-vector-group-colorization-options-selected) · [gRPC contract](/api/grpc/0.5.1/vector-operations#set-vector-group-colorization-options-selected)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -496,7 +496,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Sort Vectors
 
-[Sort Vectors](/mp-command-catalog/commands/vector-operations#sort-vectors) · [gRPC contract](/api/grpc/vector-operations#sort-vectors)
+[Sort Vectors](/mp-command-catalog/commands/vector-operations#sort-vectors) · [gRPC contract](/api/grpc/0.5.1/vector-operations#sort-vectors)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

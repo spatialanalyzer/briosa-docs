@@ -35,4 +35,4 @@ point list without adding its own minimum-count rule; SpatialAnalyzer reports
 missing points and lists with fewer than two points. The operation is never
 automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) · [.NET](/api/dotnet/construction-operations-perimeters#construct-perimeter-from-points) · [Python](/api/python/construction-operations-perimeters#construct-perimeter-from-points) · [JavaScript/TypeScript](/api/javascript/construction-operations-perimeters#construct-perimeter-from-points)
+[Catalog](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) · [.NET](/api/dotnet/0.1.0/construction-operations-perimeters#construct-perimeter-from-points) · [Python](/api/python/0.1.0/construction-operations-perimeters#construct-perimeter-from-points) · [JavaScript/TypeScript](/api/javascript/0.1.0/construction-operations-perimeters#construct-perimeter-from-points)

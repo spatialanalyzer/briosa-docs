@@ -192,4 +192,4 @@ after an unknown execution outcome.
 The wildcard-selection command is SDK unavailable for this target. Construct,
 decompose, and normalize `Vector` values directly in JavaScript or TypeScript.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups) · [gRPC](/api/grpc/construction-operations-vectors-and-vector-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups) · [gRPC](/api/grpc/0.5.1/construction-operations-vectors-and-vector-groups)

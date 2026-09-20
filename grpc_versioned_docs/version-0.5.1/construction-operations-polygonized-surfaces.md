@@ -46,4 +46,4 @@ Grid resolution defaults to `0.0`. The working-frame option uses the current
 working frame's Z axis. This operation depends on live SA state, may mutate the
 current job, and is never automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [.NET](/api/dotnet/construction-operations-polygonized-surfaces) · [Python](/api/python/construction-operations-polygonized-surfaces) · [JavaScript and TypeScript](/api/javascript/construction-operations-polygonized-surfaces)
+[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [.NET](/api/dotnet/0.1.0/construction-operations-polygonized-surfaces) · [Python](/api/python/0.1.0/construction-operations-polygonized-surfaces) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-polygonized-surfaces)

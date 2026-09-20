@@ -25,39 +25,39 @@ These entries cover the six commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane">Construct Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-plane">Construct Plane</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#shift-plane">Shift Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#shift-plane">Shift Plane</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
-<tr data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -71,17 +71,19 @@ These entries cover the six commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#construct-plane) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#construct-plane) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#construct-plane) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#construct-plane)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -113,17 +115,19 @@ the displayed bounds; the analytical plane remains infinite.
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#construct-plane-normal-to-object-through-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#construct-plane-normal-to-object-through-point) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#construct-plane-normal-to-object-through-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#construct-plane-normal-to-object-through-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -155,17 +159,19 @@ live SpatialAnalyzer geometry decision.
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bounding-point-group) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bounding-point-group) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bounding-point-group) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bounding-point-group)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -198,17 +204,19 @@ override is enabled. SpatialAnalyzer increments duplicate result names.
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bisect-2-planes) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bisect-2-planes) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bisect-2-planes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#construct-planes-bisect-2-planes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -237,17 +245,19 @@ validates the source identities and their geometry.
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#shift-plane) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#shift-plane) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#shift-plane) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#shift-plane)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -277,17 +287,19 @@ the MP defaults and does not impose additional bounds checks.
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At risk interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-planes#construct-planes-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-planes#construct-planes-from-surface-faces---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-planes#construct-planes-from-surface-faces---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-planes#construct-planes-from-surface-faces---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

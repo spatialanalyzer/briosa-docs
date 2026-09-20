@@ -42,7 +42,7 @@ test('MP label, code spelling and status are retained without merging command id
   const records = run('mp-command-catalog/commands/file-operations');
   const record = records.find((r) => r.anchor === 'get-working-directory');
   assert.equal(record.hierarchy.lvl2, 'Get Working Directory');
-  assert.equal(record.hierarchy.lvl1, 'Current · SA 2026.1.0529.7 · File Operations | Next · SA 2024.1.0508.5 · File Operations');
+  assert.equal(record.hierarchy.lvl1, 'Current · SA 2026.1.0529.7 · File Operations | Current · SA 2024.1.0508.5 · File Operations');
   assert.ok(record.search_terms.includes('getworkingdirectory'));
   assert.ok(record.search_terms.includes('get_working_directory'));
   assert.ok(!record.content.includes('Get XML Attribute'));
@@ -73,6 +73,10 @@ test('target context keeps differing dispositions separate in one command record
   assert.match(record.hierarchy.lvl1, /Current · SA 2026\.1\.0529\.7/);
   assert.match(record.hierarchy.lvl1, /SDK Unavailable · SA 2024\.1\.0508\.5/);
   assert.equal(records.filter((r) => r.anchor === 'scan-cad-faces').length, 1);
+  const cribSheet = run('mp-command-catalog/commands/instrument-operations-crib-sheet-operations')
+    .find((r) => r.anchor === 'run-crib-sheet');
+  assert.match(cribSheet.hierarchy.lvl1, /Next · SA 2026\.1\.0529\.7/);
+  assert.match(cribSheet.hierarchy.lvl1, /Current · SA 2024\.1\.0508\.5/);
 });
 
 test('missing, mismatched, or duplicate target claims cannot enter search', () => {
@@ -80,7 +84,7 @@ test('missing, mismatched, or duplicate target claims cannot enter search', () =
   for (const mutate of [
     ($, context) => context.removeAttr('data-target'),
     ($, context) => context.removeAttr('data-status'),
-    ($, context) => context.attr('data-status', 'current'),
+    ($, context) => context.attr('data-status', 'next'),
     ($, context) => context.find('.catalog-status').remove(),
     ($, context) => context.after(context.clone()),
   ]) {
@@ -109,12 +113,11 @@ test('the command index preserves one disposition per command and exact target',
     if (target === '2024.1.0508.5') {
       const status = row.attr('data-status');
       statuses2024[status] = (statuses2024[status] || 0) + 1;
-      assert.notEqual(status, 'current');
       assert.ok(row.attr('hidden') !== undefined, href);
-      assert.ok(!/licensed-execution|released-implementation|portable-contract-review/.test(row.attr('data-validation')));
     }
   }
-  assert.ok(statuses2024.next > 0);
+  assert.equal(statuses2024.current, 996);
+  assert.equal(statuses2024.next, undefined);
   assert.ok(statuses2024['sdk-unavailable'] > 0);
 });
 
@@ -132,7 +135,7 @@ test('all reference instances and landing pages use content selectors and versio
         assert.equal($('nav, .catalog-command-table, .catalog-filter').length, 0);
         if (route.startsWith('api/') && !route.endsWith('index')) {
           assert.match(options.recordProps.lvl0.defaultValue,
-            route.startsWith('api/grpc/') ? /API · Version: 0\.5\.1$/ : /API · Version: 0\.1\.0$/);
+            route.startsWith('api/grpc/') ? /API · Version: 0\.7\.0 · SA 2026\.1\.0529\.7$/ : /API · Version: 0\.2\.0 · SA 2026\.1\.0529\.7$/);
         }
         return [];
       }},

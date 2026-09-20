@@ -25,9 +25,9 @@ Bars** in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-scale-bar-tolerance-fixture"><td><a href="#construct-scale-bar">Construct Scale Bar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scale-bar tolerance fixture</td></tr>
-<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Scale Bar" data-group="Construction Operations / Scale Bars" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-scale-bar">Construct Scale Bar</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -41,17 +41,19 @@ Bars** in SA 2026.1.0529.7.
   <span className="catalog-target-group">Construction Operations / Scale Bars</span>
   <span className="catalog-target-validation">At risk scale bar tolerance fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Scale Bars</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-scale-bars#construct-scale-bar) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-scale-bars#construct-scale-bar) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-scale-bars#construct-scale-bar) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-scale-bars#construct-scale-bar)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

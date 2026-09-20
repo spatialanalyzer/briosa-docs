@@ -10,16 +10,16 @@ operations, failures, and timing. Hidden client-launched servers write the same
 files as direct launches.
 
 :::note Availability
-These controls require server and client builds containing
-[the observability implementation](https://github.com/spatialanalyzer/briosa/issues/165).
+These controls are included in Server **0.7.0** and first-party clients **0.2.0** for both exact targets.
 They do not add a logging RPC or change SpatialAnalyzer's **Set Logging State** MP.
 :::
 
 ## Find the Logs
 
-The default directory for the current exact target is:
+The default directory includes the exact target:
 
 ```text
+%LOCALAPPDATA%\Briosa\logs\2024.1.0508.5\
 %LOCALAPPDATA%\Briosa\logs\2026.1.0529.7\
 ```
 

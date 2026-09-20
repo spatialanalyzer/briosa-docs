@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Angle Between Line and Plane
 
-[Angle Between Line and Plane](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC contract](/api/grpc/analysis-operations#angle-between-line-and-plane)
+[Angle Between Line and Plane](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-line-and-plane)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Angle Between Two Lines
 
-[Angle Between Two Lines](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-lines)
+[Angle Between Two Lines](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-two-lines)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Angle Between Two Planes' normals
 
-[Angle Between Two Planes' normals](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-planes-normals)
+[Angle Between Two Planes' normals](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-two-planes-normals)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Best Fit Transformation - Group to Group
 
-[Best Fit Transformation - Group to Group](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC contract](/api/grpc/analysis-operations#best-fit-transformation---group-to-group)
+[Best Fit Transformation - Group to Group](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#best-fit-transformation---group-to-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -180,7 +180,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz)
 
-[Compute Group to Group Orientation (Rx,Ry,Rz)](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC contract](/api/grpc/analysis-operations#compute-group-to-group-orientation-rxryrz)
+[Compute Group to Group Orientation (Rx,Ry,Rz)](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#compute-group-to-group-orientation-rxryrz)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -218,7 +218,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Create Point Uncertainty Cloud Point Sets
 
-[Create Point Uncertainty Cloud Point Sets](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-cloud-point-sets)
+[Create Point Uncertainty Cloud Point Sets](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#create-point-uncertainty-cloud-point-sets)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -262,7 +262,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Create Point Uncertainty Fields
 
-[Create Point Uncertainty Fields](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-fields)
+[Create Point Uncertainty Fields](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#create-point-uncertainty-fields)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -289,7 +289,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Fit Geometry to Point Group
 
-[Fit Geometry to Point Group](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group)
+[Fit Geometry to Point Group](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-point-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -328,7 +328,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Fit Geometry to Point Group Projected to Plane
 
-[Fit Geometry to Point Group Projected to Plane](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+[Fit Geometry to Point Group Projected to Plane](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -369,7 +369,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Fit Geometry to Points
 
-[Fit Geometry to Points](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-points)
+[Fit Geometry to Points](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -408,7 +408,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get B-Spline Properties
 
-[Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC contract](/api/grpc/analysis-operations#get-b-spline-properties)
+[Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-b-spline-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -453,7 +453,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Circle Properties
 
-[Get Circle Properties](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#get-circle-properties)
+[Get Circle Properties](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-circle-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -492,7 +492,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Cone Properties
 
-[Get Cone Properties](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cone-properties)
+[Get Cone Properties](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-cone-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -540,7 +540,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Coordinate for i-th Point in Point Set
 
-[Get Coordinate for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
+[Get Coordinate for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -575,7 +575,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Cylinder Properties
 
-[Get Cylinder Properties](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cylinder-properties)
+[Get Cylinder Properties](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-cylinder-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -635,7 +635,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Ellipse Properties
 
-[Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#get-ellipse-properties)
+[Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-ellipse-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -674,7 +674,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Euler Parameters for Frame
 
-[Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-frame)
+[Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-euler-parameters-for-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -722,7 +722,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Euler Parameters for i-th Frame in Frame Set
 
-[Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
+[Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -772,7 +772,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get i-th Collection Name
 
-[Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-collection-name)
+[Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-i-th-collection-name)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -797,7 +797,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get i-th Point From Group
 
-[Get i-th Point From Group](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-point-from-group)
+[Get i-th Point From Group](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-i-th-point-from-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -835,7 +835,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Line Properties
 
-[Get Line Properties](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC contract](/api/grpc/analysis-operations#get-line-properties)
+[Get Line Properties](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-line-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -883,7 +883,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Measurement Auxiliary Data
 
-[Get Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-auxiliary-data)
+[Get Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-auxiliary-data)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -918,7 +918,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Measurement Info Data
 
-[Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-info-data)
+[Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-info-data)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -943,7 +943,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Measurement Weather Data
 
-[Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-weather-data)
+[Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-weather-data)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -979,7 +979,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Collections
 
-[Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-collections)
+[Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-collections)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1003,7 +1003,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Frames In Frame Set
 
-[Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-frames-in-frame-set)
+[Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-frames-in-frame-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1028,7 +1028,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Points in Group
 
-[Get Number of Points in Group](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-group)
+[Get Number of Points in Group](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-points-in-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1053,7 +1053,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Points In Point Set
 
-[Get Number of Points In Point Set](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-point-set)
+[Get Number of Points In Point Set](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-points-in-point-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1078,7 +1078,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Object Reporting Frame
 
-[Get Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#get-object-reporting-frame)
+[Get Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-object-reporting-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1103,7 +1103,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Plane Properties
 
-[Get Plane Properties](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC contract](/api/grpc/analysis-operations#get-plane-properties)
+[Get Plane Properties](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-plane-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1139,7 +1139,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Coordinate
 
-[Get Point Coordinate](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate)
+[Get Point Coordinate](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1178,7 +1178,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Coordinate (Cylindrical)
 
-[Get Point Coordinate (Cylindrical)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-cylindrical)
+[Get Point Coordinate (Cylindrical)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate-cylindrical)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1214,7 +1214,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Coordinate (Polar)
 
-[Get Point Coordinate (Polar)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-polar)
+[Get Point Coordinate (Polar)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate-polar)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1250,7 +1250,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Properties
 
-[Get Point Properties](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC contract](/api/grpc/analysis-operations#get-point-properties)
+[Get Point Properties](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1301,7 +1301,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point To Line Distance
 
-[Get Point To Line Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-line-distance)
+[Get Point To Line Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-to-line-distance)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1345,7 +1345,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point To Point Distance
 
-[Get Point To Point Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-point-distance)
+[Get Point To Point Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-to-point-distance)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1389,7 +1389,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Point Tolerance
 
-[Get Point Tolerance](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC contract](/api/grpc/analysis-operations#get-point-tolerance)
+[Get Point Tolerance](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-tolerance)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1467,7 +1467,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Slot Properties
 
-[Get Slot Properties](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC contract](/api/grpc/analysis-operations#get-slot-properties)
+[Get Slot Properties](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-slot-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1518,7 +1518,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Sphere Properties
 
-[Get Sphere Properties](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC contract](/api/grpc/analysis-operations#get-sphere-properties)
+[Get Sphere Properties](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-sphere-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1554,7 +1554,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Surface Physical Stats
 
-[Get Surface Physical Stats](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC contract](/api/grpc/analysis-operations#get-surface-physical-stats)
+[Get Surface Physical Stats](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-surface-physical-stats)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1587,7 +1587,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Timestamp for i-th Frame in Frame Set
 
-[Get Timestamp for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
+[Get Timestamp for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1614,7 +1614,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Timestamp for i-th Point in Point Set
 
-[Get Timestamp for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
+[Get Timestamp for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1641,7 +1641,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Torus Properties
 
-[Get Torus Properties](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC contract](/api/grpc/analysis-operations#get-torus-properties)
+[Get Torus Properties](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-torus-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1680,7 +1680,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Transform for i-th Frame in Frame Set
 
-[Get Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
+[Get Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1707,7 +1707,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Group To Surface Fit
 
-[Group To Surface Fit](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC contract](/api/grpc/analysis-operations#group-to-surface-fit)
+[Group To Surface Fit](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#group-to-surface-fit)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1751,7 +1751,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Import Geometry Fit Profiles
 
-[Import Geometry Fit Profiles](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC contract](/api/grpc/analysis-operations#import-geometry-fit-profiles)
+[Import Geometry Fit Profiles](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#import-geometry-fit-profiles)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1778,7 +1778,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Is Object of Type
 
-[Is Object of Type](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC contract](/api/grpc/analysis-operations#is-object-of-type)
+[Is Object of Type](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#is-object-of-type)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1805,7 +1805,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Circle Fit Profile
 
-[Make Circle Fit Profile](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-circle-fit-profile)
+[Make Circle Fit Profile](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-circle-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1852,7 +1852,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Cone Fit Profile
 
-[Make Cone Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cone-fit-profile)
+[Make Cone Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-cone-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1893,7 +1893,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Cylinder Fit Profile
 
-[Make Cylinder Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
+[Make Cylinder Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-cylinder-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1948,7 +1948,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Ellipse Fit Profile
 
-[Make Ellipse Fit Profile](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
+[Make Ellipse Fit Profile](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-ellipse-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1995,7 +1995,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Line Fit Profile
 
-[Make Line Fit Profile](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-line-fit-profile)
+[Make Line Fit Profile](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-line-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2030,7 +2030,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Paraboloid Fit Profile
 
-[Make Paraboloid Fit Profile](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-paraboloid-fit-profile)
+[Make Paraboloid Fit Profile](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-paraboloid-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2069,7 +2069,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Plane Fit Profile
 
-[Make Plane Fit Profile](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-plane-fit-profile)
+[Make Plane Fit Profile](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-plane-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2108,7 +2108,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Slot Fit Profile
 
-[Make Slot Fit Profile](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-slot-fit-profile)
+[Make Slot Fit Profile](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-slot-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2159,7 +2159,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Make Sphere Fit Profile
 
-[Make Sphere Fit Profile](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
+[Make Sphere Fit Profile](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-sphere-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2196,7 +2196,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Mushroom Target Hole Inspection
 
-[Mushroom Target Hole Inspection](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC contract](/api/grpc/analysis-operations#mushroom-target-hole-inspection)
+[Mushroom Target Hole Inspection](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#mushroom-target-hole-inspection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2237,7 +2237,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Patch Normal Shift - Hole / Pin
 
-[Patch Normal Shift - Hole / Pin](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---hole--pin)
+[Patch Normal Shift - Hole / Pin](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#patch-normal-shift---hole--pin)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2268,7 +2268,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Patch Normal Shift - Point
 
-[Patch Normal Shift - Point](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---point)
+[Patch Normal Shift - Point](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#patch-normal-shift---point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2299,7 +2299,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Clouds to Objects
 
-[Query Clouds to Objects](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-objects)
+[Query Clouds to Objects](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-clouds-to-objects)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2346,7 +2346,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Clouds to Surface
 
-[Query Clouds to Surface](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-surface)
+[Query Clouds to Surface](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-clouds-to-surface)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2393,7 +2393,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Frame to Frame
 
-[Query Frame to Frame](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#query-frame-to-frame)
+[Query Frame to Frame](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-frame-to-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2440,7 +2440,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Groups to Objects
 
-[Query Groups to Objects](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-groups-to-objects)
+[Query Groups to Objects](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-groups-to-objects)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2491,7 +2491,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Point to Objects
 
-[Query Point to Objects](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-objects)
+[Query Point to Objects](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-point-to-objects)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2537,7 +2537,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Point to Point Along Curve
 
-[Query Point to Point Along Curve](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-point-along-curve)
+[Query Point to Point Along Curve](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-point-to-point-along-curve)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2566,7 +2566,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Points to Circle
 
-[Query Points to Circle](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-circle)
+[Query Points to Circle](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-circle)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2603,7 +2603,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Points to Objects
 
-[Query Points to Objects](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-objects)
+[Query Points to Objects](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-objects)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2654,7 +2654,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Query Points to Single Point
 
-[Query Points to Single Point](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-single-point)
+[Query Points to Single Point](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-single-point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2683,7 +2683,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Re-Compute Calculated Items
 
-[Re-Compute Calculated Items](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC contract](/api/grpc/analysis-operations#re-compute-calculated-items)
+[Re-Compute Calculated Items](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#re-compute-calculated-items)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2714,7 +2714,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Rename points based on inter-point distance to reference points
 
-[Rename points based on inter-point distance to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
+[Rename points based on inter-point distance to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2745,7 +2745,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Rename points based on proximity to reference points
 
-[Rename points based on proximity to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-proximity-to-reference-points)
+[Rename points based on proximity to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#rename-points-based-on-proximity-to-reference-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2778,7 +2778,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Reverse B-Splines
 
-[Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC contract](/api/grpc/analysis-operations#reverse-b-splines)
+[Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-b-splines)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2803,7 +2803,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Reverse Plane Normals
 
-[Reverse Plane Normals](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-plane-normals)
+[Reverse Plane Normals](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-plane-normals)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2828,7 +2828,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Reverse Surface Normals
 
-[Reverse Surface Normals](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-surface-normals)
+[Reverse Surface Normals](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-surface-normals)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2853,7 +2853,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Circle Properties
 
-[Set Circle Properties](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#set-circle-properties)
+[Set Circle Properties](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-circle-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2884,7 +2884,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Cone Properties
 
-[Set Cone Properties](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cone-properties)
+[Set Cone Properties](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-cone-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2923,7 +2923,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Cylinder Properties
 
-[Set Cylinder Properties](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cylinder-properties)
+[Set Cylinder Properties](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-cylinder-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2966,7 +2966,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Default Colorization Options
 
-[Set Default Colorization Options](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC contract](/api/grpc/analysis-operations#set-default-colorization-options)
+[Set Default Colorization Options](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-default-colorization-options)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2991,7 +2991,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Ellipse Properties
 
-[Set Ellipse Properties](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#set-ellipse-properties)
+[Set Ellipse Properties](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-ellipse-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3024,7 +3024,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Geometry Relationship Fit Profile
 
-[Set Geometry Relationship Fit Profile](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#set-geometry-relationship-fit-profile)
+[Set Geometry Relationship Fit Profile](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-geometry-relationship-fit-profile)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3055,7 +3055,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Line Properties
 
-[Set Line Properties](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC contract](/api/grpc/analysis-operations#set-line-properties)
+[Set Line Properties](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-line-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3086,7 +3086,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Measurement Auxiliary Data
 
-[Set Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#set-measurement-auxiliary-data)
+[Set Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-measurement-auxiliary-data)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3117,7 +3117,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Object Reporting Frame
 
-[Set Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#set-object-reporting-frame)
+[Set Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-object-reporting-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3144,7 +3144,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Point Properties
 
-[Set Point Properties](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC contract](/api/grpc/analysis-operations#set-point-properties)
+[Set Point Properties](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-point-properties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3177,7 +3177,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Point Weights From Uncertainties
 
-[Set Point Weights From Uncertainties](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC contract](/api/grpc/analysis-operations#set-point-weights-from-uncertainties)
+[Set Point Weights From Uncertainties](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-point-weights-from-uncertainties)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3212,7 +3212,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Transform for i-th Frame in Frame Set
 
-[Set Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
+[Set Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3241,7 +3241,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Sphere Axis Check
 
-[Sphere Axis Check](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC contract](/api/grpc/analysis-operations#sphere-axis-check)
+[Sphere Axis Check](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#sphere-axis-check)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3295,7 +3295,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Temperature Compensate a group
 
-[Temperature Compensate a group](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC contract](/api/grpc/analysis-operations#temperature-compensate-a-group)
+[Temperature Compensate a group](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#temperature-compensate-a-group)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3330,7 +3330,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Transform Objects - Frame To Frame
 
-[Transform Objects - Frame To Frame](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects---frame-to-frame)
+[Transform Objects - Frame To Frame](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects---frame-to-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3361,7 +3361,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Transform Objects by Delta (About Working Frame)
 
-[Transform Objects by Delta (About Working Frame)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-about-working-frame)
+[Transform Objects by Delta (About Working Frame)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects-by-delta-about-working-frame)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3388,7 +3388,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Transform Objects by Delta (World Transform Operator)
 
-[Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-world-transform-operator)
+[Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3415,7 +3415,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Translate Objects by Delta
 
-[Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC contract](/api/grpc/analysis-operations#translate-objects-by-delta)
+[Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#translate-objects-by-delta)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the five commands observed under **Construction
 Operations → Collections** in SA 2026.1.0529.7. `Get Active Collection Name`
-is available in the current Briosa server; the other four operations are also included in Briosa Server 0.5.1.
+is available in the current Briosa server; the other four operations are also included in Briosa Server 0.7.0.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -28,41 +28,41 @@ is available in the current Briosa server; the other four operations are also in
 <tr data-target="2026.1.0529.7" data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#set-or-construct-default-collection">Set (or construct) default collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set (or construct) default collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-or-construct-default-collection">Set (or construct) default collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#construct-collection">Construct Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
 </tr>
-<tr data-command="Construct Collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-collection">Construct Collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Active Collection Name" data-group="Construction Operations / Collections" data-status="current" data-validation="licensed-exact-target-validation-complete">
   <td><a href="#get-active-collection-name">Get Active Collection Name</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed exact-target validation complete</td>
 </tr>
-<tr data-command="Get Active Collection Name" data-group="Construction Operations / Collections" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Active Collection Name" data-group="Construction Operations / Collections" data-status="current" data-validation="limited-local-licensed-smoke" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-active-collection-name">Get Active Collection Name</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
-  <td>Evidence review — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
+  <td>Limited local licensed smoke test</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-collection">Delete Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Delete Collection" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Collection" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-collection">Delete Collection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Collections by Wildcard" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-collections-by-wildcard">Delete Collections by Wildcard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
 </tr>
-<tr data-command="Delete Collections by Wildcard" data-group="Construction Operations / Collections" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Collections by Wildcard" data-group="Construction Operations / Collections" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-collections-by-wildcard">Delete Collections by Wildcard</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -76,17 +76,19 @@ is available in the current Briosa server; the other four operations are also in
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-collections#set-or-construct-default-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-collections#set-or-construct-default-collection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-collections#set-or-construct-default-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-collections#set-or-construct-default-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -115,17 +117,19 @@ additional Briosa validation policy.
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-collections#construct-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-collections#construct-collection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-collections#construct-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-collections#construct-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -155,17 +159,19 @@ two inputs retain the MP defaults.
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">Licensed exact target validation complete</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Collections" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Collections" data-validation="limited-local-licensed-smoke">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-collections#get-active-collection-name) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-collections#get-active-collection-name) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-collections#get-active-collection-name) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-collections#get-active-collection-name)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. A limited local licensed smoke test covered this read-only operation; it did not validate all operations or fixtures.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -194,17 +200,19 @@ operation is safe to replay.
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At risk destructive fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-collections#delete-collection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-collections#delete-collection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-collections#delete-collection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-collections#delete-collection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -232,17 +240,19 @@ operation after an unknown execution outcome.
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At risk destructive fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Collections" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Collections</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-collections#delete-collections-by-wildcard) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-collections#delete-collections-by-wildcard) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-collections#delete-collections-by-wildcard) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-collections#delete-collections-by-wildcard)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

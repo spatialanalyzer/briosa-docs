@@ -43,4 +43,4 @@ await briosa.construction_operations.construct_scale_bar(
 )
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-scale-bars) · [gRPC](/api/grpc/construction-operations-scale-bars)
+[Catalog](/mp-command-catalog/commands/construction-operations-scale-bars) · [gRPC](/api/grpc/0.5.1/construction-operations-scale-bars)

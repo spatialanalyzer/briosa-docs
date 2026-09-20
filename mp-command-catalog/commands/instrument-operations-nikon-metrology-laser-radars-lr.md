@@ -26,75 +26,75 @@ This page covers all twelve commands observed under
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="LR Hardware Connect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-hardware-connect">LR Hardware Connect</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Hardware Connect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Hardware Connect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-hardware-connect">LR Hardware Connect</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Hardware Disconnect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-hardware-disconnect">LR Hardware Disconnect</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Hardware Disconnect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Hardware Disconnect" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-hardware-disconnect">LR Hardware Disconnect</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Verify Hardware Connection" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-verify-hardware-connection">LR Verify Hardware Connection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Verify Hardware Connection" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Verify Hardware Connection" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-verify-hardware-connection">LR Verify Hardware Connection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Set Red Laser Intensity" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-set-red-laser-intensity">LR Set Red Laser Intensity</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Set Red Laser Intensity" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Set Red Laser Intensity" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-set-red-laser-intensity">LR Set Red Laser Intensity</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Get Most Recent SNR Info" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-apdis-mv400-fixture"><td><a href="#lr-get-most-recent-snr-info">LR Get Most Recent SNR Info</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon APDIS MV400 fixture</td></tr>
-<tr data-command="LR Get Most Recent SNR Info" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Get Most Recent SNR Info" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-get-most-recent-snr-info">LR Get Most Recent SNR Info</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Self Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-self-test">LR Self Test</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Self Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Self Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-self-test">LR Self Test</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Self Test - Linearization" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-self-test---linearization">LR Self Test - Linearization</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Self Test - Linearization" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Self Test - Linearization" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-self-test---linearization">LR Self Test - Linearization</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Self Test - Flip Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-self-test---flip-test">LR Self Test - Flip Test</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Self Test - Flip Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Self Test - Flip Test" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-self-test---flip-test">LR Self Test - Flip Test</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR Self Test - LO Sep" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-laser-radar-fixture"><td><a href="#lr-self-test---lo-sep">LR Self Test - LO Sep</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon laser-radar fixture</td></tr>
-<tr data-command="LR Self Test - LO Sep" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR Self Test - LO Sep" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-self-test---lo-sep">LR Self Test - LO Sep</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR APDIS Perform MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-apdis-calibration-fixture"><td><a href="#lr-apdis-perform-mcm-calibration">LR APDIS Perform MCM Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon APDIS calibration fixture</td></tr>
-<tr data-command="LR APDIS Perform MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR APDIS Perform MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-apdis-perform-mcm-calibration">LR APDIS Perform MCM Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR APDIS Activate MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-apdis-calibration-fixture"><td><a href="#lr-apdis-activate-mcm-calibration">LR APDIS Activate MCM Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon APDIS calibration fixture</td></tr>
-<tr data-command="LR APDIS Activate MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR APDIS Activate MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-apdis-activate-mcm-calibration">LR APDIS Activate MCM Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="LR APDIS Get Active MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-nikon-apdis-calibration-fixture"><td><a href="#lr-apdis-get-active-mcm-calibration">LR APDIS Get Active MCM Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Nikon APDIS calibration fixture</td></tr>
-<tr data-command="LR APDIS Get Active MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="LR APDIS Get Active MCM Calibration" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lr-apdis-get-active-mcm-calibration">LR APDIS Get Active MCM Calibration</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -108,17 +108,19 @@ This page covers all twelve commands observed under
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -146,17 +148,19 @@ Briosa server remotely.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -180,17 +184,19 @@ Disconnects that SA interface from its LR hardware.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -215,17 +221,19 @@ Returns whether the selected SA interface is connected to its hardware.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -251,17 +259,19 @@ is `0`; Briosa does not prevalidate the range.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon apdis mv400 fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -292,17 +302,19 @@ command for Nikon APDIS MV400 models.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -340,17 +352,19 @@ and quality fields without conversion.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -375,17 +389,19 @@ Runs the LR linearization test and returns linearity in kHz.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -422,17 +438,19 @@ degree units are retained.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon laser radar fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -473,17 +491,19 @@ Briosa preserves those defaults without adding a region constraint.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon apdis calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -515,17 +535,19 @@ mutation is never automatically replayed.
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon apdis calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -555,17 +577,19 @@ operation returns the active MCM name and preserves the exact empty-name and
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At risk nikon apdis calibration fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Nikon Metrology Laser Radars LR" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Nikon Metrology Laser Radars LR</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

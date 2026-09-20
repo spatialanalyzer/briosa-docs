@@ -41,4 +41,4 @@ await briosa.construction_operations.construct_polygonized_surface_from_point_cl
 )
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [gRPC](/api/grpc/construction-operations-polygonized-surfaces)
+[Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [gRPC](/api/grpc/0.5.1/construction-operations-polygonized-surfaces)

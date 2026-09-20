@@ -34,6 +34,6 @@ instead of an empty directory.
 
 ## Client Library References
 
-- [.NET `GetWorkingDirectoryAsync`](/api/dotnet/get-working-directory)
-- [Python `get_working_directory`](/api/python/get-working-directory)
-- [JavaScript and TypeScript `getWorkingDirectory`](/api/javascript/get-working-directory)
+- [.NET `GetWorkingDirectoryAsync`](/api/dotnet/0.1.0/get-working-directory)
+- [Python `get_working_directory`](/api/python/0.1.0/get-working-directory)
+- [JavaScript and TypeScript `getWorkingDirectory`](/api/javascript/0.1.0/get-working-directory)

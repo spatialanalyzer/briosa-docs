@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import grpcVersions from '@site/grpc_versions.json';
 
 import styles from './index.module.css';
 
@@ -231,7 +232,7 @@ function Operations() {
           <Heading as="h2">Explore MP Commands</Heading>
           <p>
             These examples are part of the read and write operations in Server
-            0.5.1 for SA 2026.1.0529.7. Each reference explains the inputs,
+            {' '}{grpcVersions[0]} for SA 2026.1.0529.7. Each reference explains the inputs,
             results, and validation status for that command.
           </p>
         </div>

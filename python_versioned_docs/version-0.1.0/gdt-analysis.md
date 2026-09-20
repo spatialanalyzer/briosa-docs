@@ -390,4 +390,4 @@ Boolean options.
 None of the mutation or evaluation calls is automatically replayed after an
 unknown execution outcome.
 
-[Catalog](/mp-command-catalog/commands/gdt-analysis) · [gRPC](/api/grpc/gdt-analysis)
+[Catalog](/mp-command-catalog/commands/gdt-analysis) · [gRPC](/api/grpc/0.5.1/gdt-analysis)

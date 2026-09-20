@@ -281,4 +281,4 @@ or cylinder mode. Use another workflow for line or circle extraction.
 Briosa adds no operation-specific geometry or list-cardinality safeguards, and
 none of these calls is automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-surfaces) · [gRPC](/api/grpc/construction-operations-surfaces)
+[Catalog](/mp-command-catalog/commands/construction-operations-surfaces) · [gRPC](/api/grpc/0.5.1/construction-operations-surfaces)

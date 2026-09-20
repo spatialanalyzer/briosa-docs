@@ -261,3 +261,7 @@ for the completed checks and their limits.
 Briosa is an independent Apache-2.0 project. SpatialAnalyzer and the SA SDK are
 Hexagon products; Briosa is not affiliated with, endorsed by, or supported by
 Hexagon.
+
+## Server Package Compatibility
+
+Server 0.7.0 schema-3 distributions require **Briosa Installer 0.3.0** or later. Install each exact SA target independently. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.2.0 discovery and migration.

@@ -64,7 +64,7 @@ export interface LrLoSeparationTestResult {
 
 ## lrHardwareConnect
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
 
 ```ts
 export interface LrHardwareConnectInput {
@@ -82,7 +82,7 @@ function lrHardwareConnect(
 
 ## lrHardwareDisconnect
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
 
 ```ts
 export interface LrInstrumentInput {
@@ -98,7 +98,7 @@ function lrHardwareDisconnect(
 
 ## lrVerifyHardwareConnection
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
 ```ts
 function lrVerifyHardwareConnection(
@@ -110,7 +110,7 @@ function lrVerifyHardwareConnection(
 
 ## lrSetRedLaserIntensity
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
 
 ```ts
 export interface LrSetRedLaserIntensityInput {
@@ -129,7 +129,7 @@ Intensity defaults to `0`; Briosa adds no `0–100` range validation.
 
 ## lrGetMostRecentSnrInfo
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
 ```ts
 function lrGetMostRecentSnrInfo(
@@ -141,7 +141,7 @@ function lrGetMostRecentSnrInfo(
 
 ## lrSelfTest
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 ```ts
 function lrSelfTest(
@@ -153,7 +153,7 @@ function lrSelfTest(
 
 ## lrSelfTestLinearization
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
 
 ```ts
 function lrSelfTestLinearization(
@@ -167,7 +167,7 @@ The result is linearity in kHz.
 
 ## lrSelfTestFlipTest
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 ```ts
 function lrSelfTestFlipTest(
@@ -179,7 +179,7 @@ function lrSelfTestFlipTest(
 
 ## lrSelfTestLoSep
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 ```ts
 export interface LrSelfTestLoSepInput extends LrInstrumentInput {
@@ -198,7 +198,7 @@ Both optional values default to `0`; Briosa adds no region constraint.
 
 ## lrApdisPerformMcmCalibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
 
 ```ts
 export interface LrApdisPerformMcmCalibrationInput extends LrInstrumentInput {
@@ -220,7 +220,7 @@ replayed.
 
 ## lrApdisActivateMcmCalibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
 ```ts
 export interface LrApdisActivateMcmCalibrationInput extends LrInstrumentInput {
@@ -241,7 +241,7 @@ selection and partial-success behavior. The result is the active MCM name.
 
 ## lrApdisGetActiveMcmCalibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
 
 ```ts
 function lrApdisGetActiveMcmCalibration(

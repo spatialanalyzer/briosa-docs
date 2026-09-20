@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Add Charts to Report Bar
 
-[Add Charts to Report Bar](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-charts-to-report-bar)
+[Add Charts to Report Bar](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-charts-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Custom Table to SA Report
 
-[Add Custom Table to SA Report](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report) · [gRPC contract](/api/grpc/reporting-operations#add-custom-table-to-sa-report)
+[Add Custom Table to SA Report](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-custom-table-to-sa-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -79,7 +79,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Custom Tables to Report Bar
 
-[Add Custom Tables to Report Bar](/mp-command-catalog/commands/reporting-operations#add-custom-tables-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-custom-tables-to-report-bar)
+[Add Custom Tables to Report Bar](/mp-command-catalog/commands/reporting-operations#add-custom-tables-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-custom-tables-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Datums to Report Bar
 
-[Add Datums to Report Bar](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-datums-to-report-bar)
+[Add Datums to Report Bar](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-datums-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -145,7 +145,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Events to Report Bar
 
-[Add Events to Report Bar](/mp-command-catalog/commands/reporting-operations#add-events-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-events-to-report-bar)
+[Add Events to Report Bar](/mp-command-catalog/commands/reporting-operations#add-events-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-events-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -178,7 +178,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Feature Checks to Report Bar
 
-[Add Feature Checks to Report Bar](/mp-command-catalog/commands/reporting-operations#add-feature-checks-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-feature-checks-to-report-bar)
+[Add Feature Checks to Report Bar](/mp-command-catalog/commands/reporting-operations#add-feature-checks-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-feature-checks-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -211,7 +211,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Item to SA Report at Location
 
-[Add Item to SA Report at Location](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location) · [gRPC contract](/api/grpc/reporting-operations#add-item-to-sa-report-at-location)
+[Add Item to SA Report at Location](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-item-to-sa-report-at-location)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -252,7 +252,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Objects to Report Bar
 
-[Add Objects to Report Bar](/mp-command-catalog/commands/reporting-operations#add-objects-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-objects-to-report-bar)
+[Add Objects to Report Bar](/mp-command-catalog/commands/reporting-operations#add-objects-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-objects-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -285,7 +285,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Pictures to Report Bar
 
-[Add Pictures to Report Bar](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-pictures-to-report-bar)
+[Add Pictures to Report Bar](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-pictures-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -318,7 +318,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Add Relationships to Report Bar
 
-[Add Relationships to Report Bar](/mp-command-catalog/commands/reporting-operations#add-relationships-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-relationships-to-report-bar)
+[Add Relationships to Report Bar](/mp-command-catalog/commands/reporting-operations#add-relationships-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-relationships-to-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -351,7 +351,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Append Items to SA Report
 
-[Append Items to SA Report](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report) · [gRPC contract](/api/grpc/reporting-operations#append-items-to-sa-report)
+[Append Items to SA Report](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#append-items-to-sa-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -388,7 +388,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Capture Current View
 
-[Capture Current View](/mp-command-catalog/commands/reporting-operations#capture-current-view) · [gRPC contract](/api/grpc/reporting-operations#capture-current-view)
+[Capture Current View](/mp-command-catalog/commands/reporting-operations#capture-current-view) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#capture-current-view)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -419,7 +419,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)
 
-[Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
+[Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -450,7 +450,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Clear Custom Table
 
-[Clear Custom Table](/mp-command-catalog/commands/reporting-operations#clear-custom-table) · [gRPC contract](/api/grpc/reporting-operations#clear-custom-table)
+[Clear Custom Table](/mp-command-catalog/commands/reporting-operations#clear-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#clear-custom-table)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -481,7 +481,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Close All Reports
 
-[Close All Reports](/mp-command-catalog/commands/reporting-operations#close-all-reports) · [gRPC contract](/api/grpc/reporting-operations#close-all-reports)
+[Close All Reports](/mp-command-catalog/commands/reporting-operations#close-all-reports) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#close-all-reports)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -507,7 +507,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Close HTML Display Board
 
-[Close HTML Display Board](/mp-command-catalog/commands/reporting-operations#close-html-display-board) · [gRPC contract](/api/grpc/reporting-operations#close-html-display-board)
+[Close HTML Display Board](/mp-command-catalog/commands/reporting-operations#close-html-display-board) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#close-html-display-board)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -533,7 +533,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Combine SA Reports
 
-[Combine SA Reports](/mp-command-catalog/commands/reporting-operations#combine-sa-reports) · [gRPC contract](/api/grpc/reporting-operations#combine-sa-reports)
+[Combine SA Reports](/mp-command-catalog/commands/reporting-operations#combine-sa-reports) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#combine-sa-reports)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -568,7 +568,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create Chart from Vector Group
 
-[Create Chart from Vector Group](/mp-command-catalog/commands/reporting-operations#create-chart-from-vector-group) · [gRPC contract](/api/grpc/reporting-operations#create-chart-from-vector-group)
+[Create Chart from Vector Group](/mp-command-catalog/commands/reporting-operations#create-chart-from-vector-group) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#create-chart-from-vector-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -611,7 +611,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Define Report Template
 
-[Define Report Template](/mp-command-catalog/commands/reporting-operations#define-report-template) · [gRPC contract](/api/grpc/reporting-operations#define-report-template)
+[Define Report Template](/mp-command-catalog/commands/reporting-operations#define-report-template) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#define-report-template)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -660,7 +660,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Chart
 
-[Delete Chart](/mp-command-catalog/commands/reporting-operations#delete-chart) · [gRPC contract](/api/grpc/reporting-operations#delete-chart)
+[Delete Chart](/mp-command-catalog/commands/reporting-operations#delete-chart) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-chart)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -691,7 +691,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Custom Table
 
-[Delete Custom Table](/mp-command-catalog/commands/reporting-operations#delete-custom-table) · [gRPC contract](/api/grpc/reporting-operations#delete-custom-table)
+[Delete Custom Table](/mp-command-catalog/commands/reporting-operations#delete-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-custom-table)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -722,7 +722,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Picture
 
-[Delete Picture](/mp-command-catalog/commands/reporting-operations#delete-picture) · [gRPC contract](/api/grpc/reporting-operations#delete-picture)
+[Delete Picture](/mp-command-catalog/commands/reporting-operations#delete-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-picture)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -753,7 +753,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete SA Doc
 
-[Delete SA Doc](/mp-command-catalog/commands/reporting-operations#delete-sa-doc) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-doc)
+[Delete SA Doc](/mp-command-catalog/commands/reporting-operations#delete-sa-doc) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-doc)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -784,7 +784,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete SA Report
 
-[Delete SA Report](/mp-command-catalog/commands/reporting-operations#delete-sa-report) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-report)
+[Delete SA Report](/mp-command-catalog/commands/reporting-operations#delete-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -815,7 +815,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete SA Report Template
 
-[Delete SA Report Template](/mp-command-catalog/commands/reporting-operations#delete-sa-report-template) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-report-template)
+[Delete SA Report Template](/mp-command-catalog/commands/reporting-operations#delete-sa-report-template) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-report-template)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -846,7 +846,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Generate Quick Report from Tab Order
 
-[Generate Quick Report from Tab Order](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order) · [gRPC contract](/api/grpc/reporting-operations#generate-quick-report-from-tab-order)
+[Generate Quick Report from Tab Order](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generate-quick-report-from-tab-order)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -879,7 +879,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Generate Standard HTML Report
 
-[Generate Standard HTML Report](/mp-command-catalog/commands/reporting-operations#generate-standard-html-report) · [gRPC contract](/api/grpc/reporting-operations#generate-standard-html-report)
+[Generate Standard HTML Report](/mp-command-catalog/commands/reporting-operations#generate-standard-html-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generate-standard-html-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -912,7 +912,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Generate/Update Templated Report
 
-[Generate/Update Templated Report](/mp-command-catalog/commands/reporting-operations#generateupdate-templated-report) · [gRPC contract](/api/grpc/reporting-operations#generateupdate-templated-report)
+[Generate/Update Templated Report](/mp-command-catalog/commands/reporting-operations#generateupdate-templated-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generateupdate-templated-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -943,7 +943,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Custom Table Cell Double
 
-[Get Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double) · [gRPC contract](/api/grpc/reporting-operations#get-custom-table-cell-double)
+[Get Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-custom-table-cell-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -978,7 +978,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Custom Table Cell String
 
-[Get Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-string) · [gRPC contract](/api/grpc/reporting-operations#get-custom-table-cell-string)
+[Get Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-custom-table-cell-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1013,7 +1013,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Defined Report Tags
 
-[Get Defined Report Tags](/mp-command-catalog/commands/reporting-operations#get-defined-report-tags) · [gRPC contract](/api/grpc/reporting-operations#get-defined-report-tags)
+[Get Defined Report Tags](/mp-command-catalog/commands/reporting-operations#get-defined-report-tags) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-defined-report-tags)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1039,7 +1039,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Report Tag Value
 
-[Get Report Tag Value](/mp-command-catalog/commands/reporting-operations#get-report-tag-value) · [gRPC contract](/api/grpc/reporting-operations#get-report-tag-value)
+[Get Report Tag Value](/mp-command-catalog/commands/reporting-operations#get-report-tag-value) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-report-tag-value)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1079,7 +1079,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## HTML Display Board
 
-[HTML Display Board](/mp-command-catalog/commands/reporting-operations#html-display-board) · [gRPC contract](/api/grpc/reporting-operations#html-display-board)
+[HTML Display Board](/mp-command-catalog/commands/reporting-operations#html-display-board) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#html-display-board)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1112,7 +1112,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Custom Table
 
-[Make Custom Table](/mp-command-catalog/commands/reporting-operations#make-custom-table) · [gRPC contract](/api/grpc/reporting-operations#make-custom-table)
+[Make Custom Table](/mp-command-catalog/commands/reporting-operations#make-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-custom-table)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1145,7 +1145,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make New SA Report
 
-[Make New SA Report](/mp-command-catalog/commands/reporting-operations#make-new-sa-report) · [gRPC contract](/api/grpc/reporting-operations#make-new-sa-report)
+[Make New SA Report](/mp-command-catalog/commands/reporting-operations#make-new-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-new-sa-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1178,7 +1178,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Utility Chart
 
-[Make Utility Chart](/mp-command-catalog/commands/reporting-operations#make-utility-chart) · [gRPC contract](/api/grpc/reporting-operations#make-utility-chart)
+[Make Utility Chart](/mp-command-catalog/commands/reporting-operations#make-utility-chart) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-utility-chart)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1221,7 +1221,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Notify User Double
 
-[Notify User Double](/mp-command-catalog/commands/reporting-operations#notify-user-double) · [gRPC contract](/api/grpc/reporting-operations#notify-user-double)
+[Notify User Double](/mp-command-catalog/commands/reporting-operations#notify-user-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1260,7 +1260,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Notify User HTML
 
-[Notify User HTML](/mp-command-catalog/commands/reporting-operations#notify-user-html) · [gRPC contract](/api/grpc/reporting-operations#notify-user-html)
+[Notify User HTML](/mp-command-catalog/commands/reporting-operations#notify-user-html) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-html)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1291,7 +1291,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Notify User Integer
 
-[Notify User Integer](/mp-command-catalog/commands/reporting-operations#notify-user-integer) · [gRPC contract](/api/grpc/reporting-operations#notify-user-integer)
+[Notify User Integer](/mp-command-catalog/commands/reporting-operations#notify-user-integer) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-integer)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1328,7 +1328,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Notify User Text Array
 
-[Notify User Text Array](/mp-command-catalog/commands/reporting-operations#notify-user-text-array) · [gRPC contract](/api/grpc/reporting-operations#notify-user-text-array)
+[Notify User Text Array](/mp-command-catalog/commands/reporting-operations#notify-user-text-array) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-text-array)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1365,7 +1365,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Output SA Report to Excel
 
-[Output SA Report to Excel](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-excel) · [gRPC contract](/api/grpc/reporting-operations#output-sa-report-to-excel)
+[Output SA Report to Excel](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-excel) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#output-sa-report-to-excel)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1400,7 +1400,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Output SA Report to PDF
 
-[Output SA Report to PDF](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-pdf) · [gRPC contract](/api/grpc/reporting-operations#output-sa-report-to-pdf)
+[Output SA Report to PDF](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-pdf) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#output-sa-report-to-pdf)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1435,7 +1435,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Quick Report
 
-[Quick Report](/mp-command-catalog/commands/reporting-operations#quick-report) · [gRPC contract](/api/grpc/reporting-operations#quick-report)
+[Quick Report](/mp-command-catalog/commands/reporting-operations#quick-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#quick-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1470,7 +1470,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Refresh Callout Views in SA Report
 
-[Refresh Callout Views in SA Report](/mp-command-catalog/commands/reporting-operations#refresh-callout-views-in-sa-report) · [gRPC contract](/api/grpc/reporting-operations#refresh-callout-views-in-sa-report)
+[Refresh Callout Views in SA Report](/mp-command-catalog/commands/reporting-operations#refresh-callout-views-in-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#refresh-callout-views-in-sa-report)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1501,7 +1501,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Refresh Report Bar
 
-[Refresh Report Bar](/mp-command-catalog/commands/reporting-operations#refresh-report-bar) · [gRPC contract](/api/grpc/reporting-operations#refresh-report-bar)
+[Refresh Report Bar](/mp-command-catalog/commands/reporting-operations#refresh-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#refresh-report-bar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1527,7 +1527,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Remove Report Tag
 
-[Remove Report Tag](/mp-command-catalog/commands/reporting-operations#remove-report-tag) · [gRPC contract](/api/grpc/reporting-operations#remove-report-tag)
+[Remove Report Tag](/mp-command-catalog/commands/reporting-operations#remove-report-tag) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#remove-report-tag)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1558,7 +1558,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename Picture
 
-[Rename Picture](/mp-command-catalog/commands/reporting-operations#rename-picture) · [gRPC contract](/api/grpc/reporting-operations#rename-picture)
+[Rename Picture](/mp-command-catalog/commands/reporting-operations#rename-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#rename-picture)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1593,7 +1593,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save Chart to JPeg file
 
-[Save Chart to JPeg file](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) · [gRPC contract](/api/grpc/reporting-operations#save-chart-to-jpeg-file)
+[Save Chart to JPeg file](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#save-chart-to-jpeg-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1626,7 +1626,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Save Current View (BMP/JPG/PNG/GIF/TIFF)
 
-[Save Current View (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/reporting-operations#save-current-view-bmpjpgpnggiftiff)
+[Save Current View (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#save-current-view-bmpjpgpnggiftiff)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1659,7 +1659,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Cell Color
 
-[Set Custom Table Cell Color](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-color) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-color)
+[Set Custom Table Cell Color](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-color) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-color)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1698,7 +1698,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Cell Double
 
-[Set Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-double)
+[Set Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1739,7 +1739,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Cell Font
 
-[Set Custom Table Cell Font](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-font) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-font)
+[Set Custom Table Cell Font](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-font) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-font)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1776,7 +1776,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Cell String
 
-[Set Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-string)
+[Set Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1815,7 +1815,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Header Cell
 
-[Set Custom Table Header Cell](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-cell) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-header-cell)
+[Set Custom Table Header Cell](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-cell) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-header-cell)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1854,7 +1854,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Header Row
 
-[Set Custom Table Header Row](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-row) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-header-row)
+[Set Custom Table Header Row](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-row) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-header-row)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1889,7 +1889,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Custom Table Title
 
-[Set Custom Table Title](/mp-command-catalog/commands/reporting-operations#set-custom-table-title) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-title)
+[Set Custom Table Title](/mp-command-catalog/commands/reporting-operations#set-custom-table-title) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-title)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1924,7 +1924,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Group Report Options
 
-[Set Point Group Report Options](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-point-group-report-options)
+[Set Point Group Report Options](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-point-group-report-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1981,7 +1981,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Report Options
 
-[Set Relationship Report Options](/mp-command-catalog/commands/reporting-operations#set-relationship-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-relationship-report-options)
+[Set Relationship Report Options](/mp-command-catalog/commands/reporting-operations#set-relationship-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-relationship-report-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2014,7 +2014,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Bar Visibility
 
-[Set Report Bar Visibility](/mp-command-catalog/commands/reporting-operations#set-report-bar-visibility) · [gRPC contract](/api/grpc/reporting-operations#set-report-bar-visibility)
+[Set Report Bar Visibility](/mp-command-catalog/commands/reporting-operations#set-report-bar-visibility) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-bar-visibility)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2045,7 +2045,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Options for Object
 
-[Set Report Options for Object](/mp-command-catalog/commands/reporting-operations#set-report-options-for-object) · [gRPC contract](/api/grpc/reporting-operations#set-report-options-for-object)
+[Set Report Options for Object](/mp-command-catalog/commands/reporting-operations#set-report-options-for-object) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-options-for-object)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2076,7 +2076,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Tag Value From Double
 
-[Set Report Tag Value From Double](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-double)
+[Set Report Tag Value From Double](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2109,7 +2109,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Tag Value From Integer
 
-[Set Report Tag Value From Integer](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-integer) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-integer)
+[Set Report Tag Value From Integer](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-integer) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-integer)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2142,7 +2142,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Report Tag Value From String
 
-[Set Report Tag Value From String](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-string)
+[Set Report Tag Value From String](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2175,7 +2175,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Scale for Picture
 
-[Set Scale for Picture](/mp-command-catalog/commands/reporting-operations#set-scale-for-picture) · [gRPC contract](/api/grpc/reporting-operations#set-scale-for-picture)
+[Set Scale for Picture](/mp-command-catalog/commands/reporting-operations#set-scale-for-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-scale-for-picture)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2208,7 +2208,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Vector Group Report Options
 
-[Set Vector Group Report Options](/mp-command-catalog/commands/reporting-operations#set-vector-group-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-vector-group-report-options)
+[Set Vector Group Report Options](/mp-command-catalog/commands/reporting-operations#set-vector-group-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-vector-group-report-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

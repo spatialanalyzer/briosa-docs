@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Close All Watch Windows
 
-[Close All Watch Windows](/mp-command-catalog/commands/utility-operations#close-all-watch-windows) · [gRPC contract](/api/grpc/utility-operations#close-all-watch-windows)
+[Close All Watch Windows](/mp-command-catalog/commands/utility-operations#close-all-watch-windows) · [gRPC contract](/api/grpc/0.5.1/utility-operations#close-all-watch-windows)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Folder
 
-[Delete Folder](/mp-command-catalog/commands/utility-operations#delete-folder) · [gRPC contract](/api/grpc/utility-operations#delete-folder)
+[Delete Folder](/mp-command-catalog/commands/utility-operations#delete-folder) · [gRPC contract](/api/grpc/0.5.1/utility-operations#delete-folder)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Items
 
-[Delete Items](/mp-command-catalog/commands/utility-operations#delete-items) · [gRPC contract](/api/grpc/utility-operations#delete-items)
+[Delete Items](/mp-command-catalog/commands/utility-operations#delete-items) · [gRPC contract](/api/grpc/0.5.1/utility-operations#delete-items)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -99,7 +99,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Delete Objects
 
-[Delete Objects](/mp-command-catalog/commands/utility-operations#delete-objects) · [gRPC contract](/api/grpc/utility-operations#delete-objects)
+[Delete Objects](/mp-command-catalog/commands/utility-operations#delete-objects) · [gRPC contract](/api/grpc/0.5.1/utility-operations#delete-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -130,7 +130,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Active Language
 
-[Get Active Language](/mp-command-catalog/commands/utility-operations#get-active-language) · [gRPC contract](/api/grpc/utility-operations#get-active-language)
+[Get Active Language](/mp-command-catalog/commands/utility-operations#get-active-language) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-active-language)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -163,7 +163,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Active Units
 
-[Get Active Units](/mp-command-catalog/commands/utility-operations#get-active-units) · [gRPC contract](/api/grpc/utility-operations#get-active-units)
+[Get Active Units](/mp-command-catalog/commands/utility-operations#get-active-units) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-active-units)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -198,7 +198,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Angular Representation
 
-[Get Angular Representation](/mp-command-catalog/commands/utility-operations#get-angular-representation) · [gRPC contract](/api/grpc/utility-operations#get-angular-representation)
+[Get Angular Representation](/mp-command-catalog/commands/utility-operations#get-angular-representation) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-angular-representation)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -224,7 +224,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Collection Notes
 
-[Get Collection Notes](/mp-command-catalog/commands/utility-operations#get-collection-notes) · [gRPC contract](/api/grpc/utility-operations#get-collection-notes)
+[Get Collection Notes](/mp-command-catalog/commands/utility-operations#get-collection-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-collection-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -255,7 +255,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Folder Collections
 
-[Get Folder Collections](/mp-command-catalog/commands/utility-operations#get-folder-collections) · [gRPC contract](/api/grpc/utility-operations#get-folder-collections)
+[Get Folder Collections](/mp-command-catalog/commands/utility-operations#get-folder-collections) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-folder-collections)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -286,7 +286,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Folder Notes
 
-[Get Folder Notes](/mp-command-catalog/commands/utility-operations#get-folder-notes) · [gRPC contract](/api/grpc/utility-operations#get-folder-notes)
+[Get Folder Notes](/mp-command-catalog/commands/utility-operations#get-folder-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-folder-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -317,7 +317,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Folders by Wildcard
 
-[Get Folders by Wildcard](/mp-command-catalog/commands/utility-operations#get-folders-by-wildcard) · [gRPC contract](/api/grpc/utility-operations#get-folders-by-wildcard)
+[Get Folders by Wildcard](/mp-command-catalog/commands/utility-operations#get-folders-by-wildcard) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-folders-by-wildcard)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -350,7 +350,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Object Notes
 
-[Get Object Notes](/mp-command-catalog/commands/utility-operations#get-object-notes) · [gRPC contract](/api/grpc/utility-operations#get-object-notes)
+[Get Object Notes](/mp-command-catalog/commands/utility-operations#get-object-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-object-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -381,7 +381,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get OPC DA Tag Value Double
 
-[Get OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-double)
+[Get OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-opc-da-tag-value-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -412,7 +412,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get OPC DA Tag Value Integer
 
-[Get OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-integer)
+[Get OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-opc-da-tag-value-integer)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -443,7 +443,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get OPC DA Tag Value String
 
-[Get OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) · [gRPC contract](/api/grpc/utility-operations#get-opc-da-tag-value-string)
+[Get OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-opc-da-tag-value-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -474,7 +474,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Notes
 
-[Get Point Notes](/mp-command-catalog/commands/utility-operations#get-point-notes) · [gRPC contract](/api/grpc/utility-operations#get-point-notes)
+[Get Point Notes](/mp-command-catalog/commands/utility-operations#get-point-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-point-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -505,7 +505,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Screen Resolution
 
-[Get Screen Resolution](/mp-command-catalog/commands/utility-operations#get-screen-resolution) · [gRPC contract](/api/grpc/utility-operations#get-screen-resolution)
+[Get Screen Resolution](/mp-command-catalog/commands/utility-operations#get-screen-resolution) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-screen-resolution)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -551,7 +551,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Working Frame Properties
 
-[Get Working Frame Properties](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) · [gRPC contract](/api/grpc/utility-operations#get-working-frame-properties)
+[Get Working Frame Properties](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) · [gRPC contract](/api/grpc/0.5.1/utility-operations#get-working-frame-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -586,7 +586,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Increment Point Name
 
-[Increment Point Name](/mp-command-catalog/commands/utility-operations#increment-point-name) · [gRPC contract](/api/grpc/utility-operations#increment-point-name)
+[Increment Point Name](/mp-command-catalog/commands/utility-operations#increment-point-name) · [gRPC contract](/api/grpc/0.5.1/utility-operations#increment-point-name)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -619,7 +619,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Lock Imported Items
 
-[Lock Imported Items](/mp-command-catalog/commands/utility-operations#lock-imported-items) · [gRPC contract](/api/grpc/utility-operations#lock-imported-items)
+[Lock Imported Items](/mp-command-catalog/commands/utility-operations#lock-imported-items) · [gRPC contract](/api/grpc/0.5.1/utility-operations#lock-imported-items)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -650,7 +650,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Lock/Unlock Selected Items
 
-[Lock/Unlock Selected Items](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items) · [gRPC contract](/api/grpc/utility-operations#lockunlock-selected-items)
+[Lock/Unlock Selected Items](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items) · [gRPC contract](/api/grpc/0.5.1/utility-operations#lockunlock-selected-items)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -685,7 +685,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Lock/Unlock Trapping Control
 
-[Lock/Unlock Trapping Control](/mp-command-catalog/commands/utility-operations#lockunlock-trapping-control) · [gRPC contract](/api/grpc/utility-operations#lockunlock-trapping-control)
+[Lock/Unlock Trapping Control](/mp-command-catalog/commands/utility-operations#lockunlock-trapping-control) · [gRPC contract](/api/grpc/0.5.1/utility-operations#lockunlock-trapping-control)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -722,7 +722,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Move Collection to Folder
 
-[Move Collection to Folder](/mp-command-catalog/commands/utility-operations#move-collection-to-folder) · [gRPC contract](/api/grpc/utility-operations#move-collection-to-folder)
+[Move Collection to Folder](/mp-command-catalog/commands/utility-operations#move-collection-to-folder) · [gRPC contract](/api/grpc/0.5.1/utility-operations#move-collection-to-folder)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -755,7 +755,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Move Folder to Folder
 
-[Move Folder to Folder](/mp-command-catalog/commands/utility-operations#move-folder-to-folder) · [gRPC contract](/api/grpc/utility-operations#move-folder-to-folder)
+[Move Folder to Folder](/mp-command-catalog/commands/utility-operations#move-folder-to-folder) · [gRPC contract](/api/grpc/0.5.1/utility-operations#move-folder-to-folder)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -788,7 +788,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Move Instruments Drag Graphically
 
-[Move Instruments Drag Graphically](/mp-command-catalog/commands/utility-operations#move-instruments-drag-graphically) · [gRPC contract](/api/grpc/utility-operations#move-instruments-drag-graphically)
+[Move Instruments Drag Graphically](/mp-command-catalog/commands/utility-operations#move-instruments-drag-graphically) · [gRPC contract](/api/grpc/0.5.1/utility-operations#move-instruments-drag-graphically)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -819,7 +819,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Move Objects Drag Graphically
 
-[Move Objects Drag Graphically](/mp-command-catalog/commands/utility-operations#move-objects-drag-graphically) · [gRPC contract](/api/grpc/utility-operations#move-objects-drag-graphically)
+[Move Objects Drag Graphically](/mp-command-catalog/commands/utility-operations#move-objects-drag-graphically) · [gRPC contract](/api/grpc/0.5.1/utility-operations#move-objects-drag-graphically)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -850,7 +850,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Scale Objects
 
-[Scale Objects](/mp-command-catalog/commands/utility-operations#scale-objects) · [gRPC contract](/api/grpc/utility-operations#scale-objects)
+[Scale Objects](/mp-command-catalog/commands/utility-operations#scale-objects) · [gRPC contract](/api/grpc/0.5.1/utility-operations#scale-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -883,7 +883,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Active Custom Language
 
-[Set Active Custom Language](/mp-command-catalog/commands/utility-operations#set-active-custom-language) · [gRPC contract](/api/grpc/utility-operations#set-active-custom-language)
+[Set Active Custom Language](/mp-command-catalog/commands/utility-operations#set-active-custom-language) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-active-custom-language)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -916,7 +916,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Active Units
 
-[Set Active Units](/mp-command-catalog/commands/utility-operations#set-active-units) · [gRPC contract](/api/grpc/utility-operations#set-active-units)
+[Set Active Units](/mp-command-catalog/commands/utility-operations#set-active-units) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-active-units)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -957,7 +957,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Angular Representation
 
-[Set Angular Representation](/mp-command-catalog/commands/utility-operations#set-angular-representation) · [gRPC contract](/api/grpc/utility-operations#set-angular-representation)
+[Set Angular Representation](/mp-command-catalog/commands/utility-operations#set-angular-representation) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-angular-representation)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -988,7 +988,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Auto Event Creation
 
-[Set Auto Event Creation](/mp-command-catalog/commands/utility-operations#set-auto-event-creation) · [gRPC contract](/api/grpc/utility-operations#set-auto-event-creation)
+[Set Auto Event Creation](/mp-command-catalog/commands/utility-operations#set-auto-event-creation) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-auto-event-creation)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1019,7 +1019,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Automatic Backup State
 
-[Set Automatic Backup State](/mp-command-catalog/commands/utility-operations#set-automatic-backup-state) · [gRPC contract](/api/grpc/utility-operations#set-automatic-backup-state)
+[Set Automatic Backup State](/mp-command-catalog/commands/utility-operations#set-automatic-backup-state) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-automatic-backup-state)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1052,7 +1052,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Automatic Relationship Construction State
 
-[Set Automatic Relationship Construction State](/mp-command-catalog/commands/utility-operations#set-automatic-relationship-construction-state) · [gRPC contract](/api/grpc/utility-operations#set-automatic-relationship-construction-state)
+[Set Automatic Relationship Construction State](/mp-command-catalog/commands/utility-operations#set-automatic-relationship-construction-state) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-automatic-relationship-construction-state)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1083,7 +1083,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Collection Notes
 
-[Set Collection Notes](/mp-command-catalog/commands/utility-operations#set-collection-notes) · [gRPC contract](/api/grpc/utility-operations#set-collection-notes)
+[Set Collection Notes](/mp-command-catalog/commands/utility-operations#set-collection-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-collection-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1118,7 +1118,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Decimal Digits for Display
 
-[Set Decimal Digits for Display](/mp-command-catalog/commands/utility-operations#set-decimal-digits-for-display) · [gRPC contract](/api/grpc/utility-operations#set-decimal-digits-for-display)
+[Set Decimal Digits for Display](/mp-command-catalog/commands/utility-operations#set-decimal-digits-for-display) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-decimal-digits-for-display)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1157,7 +1157,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Folder Notes
 
-[Set Folder Notes](/mp-command-catalog/commands/utility-operations#set-folder-notes) · [gRPC contract](/api/grpc/utility-operations#set-folder-notes)
+[Set Folder Notes](/mp-command-catalog/commands/utility-operations#set-folder-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-folder-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1192,7 +1192,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Interaction Mode
 
-[Set Interaction Mode](/mp-command-catalog/commands/utility-operations#set-interaction-mode) · [gRPC contract](/api/grpc/utility-operations#set-interaction-mode)
+[Set Interaction Mode](/mp-command-catalog/commands/utility-operations#set-interaction-mode) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-interaction-mode)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1227,7 +1227,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Logging State
 
-[Set Logging State](/mp-command-catalog/commands/utility-operations#set-logging-state) · [gRPC contract](/api/grpc/utility-operations#set-logging-state)
+[Set Logging State](/mp-command-catalog/commands/utility-operations#set-logging-state) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-logging-state)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1258,7 +1258,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Notification Cancel Override
 
-[Set Notification Cancel Override](/mp-command-catalog/commands/utility-operations#set-notification-cancel-override) · [gRPC contract](/api/grpc/utility-operations#set-notification-cancel-override)
+[Set Notification Cancel Override](/mp-command-catalog/commands/utility-operations#set-notification-cancel-override) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-notification-cancel-override)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1289,7 +1289,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object Notes
 
-[Set Object Notes](/mp-command-catalog/commands/utility-operations#set-object-notes) · [gRPC contract](/api/grpc/utility-operations#set-object-notes)
+[Set Object Notes](/mp-command-catalog/commands/utility-operations#set-object-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-object-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1324,7 +1324,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set OPC DA Tag Value Double
 
-[Set OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-double)
+[Set OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-opc-da-tag-value-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1357,7 +1357,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set OPC DA Tag Value Integer
 
-[Set OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-integer)
+[Set OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-opc-da-tag-value-integer)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1390,7 +1390,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set OPC DA Tag Value String
 
-[Set OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) · [gRPC contract](/api/grpc/utility-operations#set-opc-da-tag-value-string)
+[Set OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-opc-da-tag-value-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1423,7 +1423,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Notes
 
-[Set Point Notes](/mp-command-catalog/commands/utility-operations#set-point-notes) · [gRPC contract](/api/grpc/utility-operations#set-point-notes)
+[Set Point Notes](/mp-command-catalog/commands/utility-operations#set-point-notes) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-point-notes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1458,7 +1458,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set User Interface Profile
 
-[Set User Interface Profile](/mp-command-catalog/commands/utility-operations#set-user-interface-profile) · [gRPC contract](/api/grpc/utility-operations#set-user-interface-profile)
+[Set User Interface Profile](/mp-command-catalog/commands/utility-operations#set-user-interface-profile) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-user-interface-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1491,7 +1491,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set View Idle Update Frequency
 
-[Set View Idle Update Frequency](/mp-command-catalog/commands/utility-operations#set-view-idle-update-frequency) · [gRPC contract](/api/grpc/utility-operations#set-view-idle-update-frequency)
+[Set View Idle Update Frequency](/mp-command-catalog/commands/utility-operations#set-view-idle-update-frequency) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-view-idle-update-frequency)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1522,7 +1522,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set WildCard Asterisk Mode
 
-[Set WildCard Asterisk Mode](/mp-command-catalog/commands/utility-operations#set-wildcard-asterisk-mode) · [gRPC contract](/api/grpc/utility-operations#set-wildcard-asterisk-mode)
+[Set WildCard Asterisk Mode](/mp-command-catalog/commands/utility-operations#set-wildcard-asterisk-mode) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-wildcard-asterisk-mode)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1553,7 +1553,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Working Frame
 
-[Set Working Frame](/mp-command-catalog/commands/utility-operations#set-working-frame) · [gRPC contract](/api/grpc/utility-operations#set-working-frame)
+[Set Working Frame](/mp-command-catalog/commands/utility-operations#set-working-frame) · [gRPC contract](/api/grpc/0.5.1/utility-operations#set-working-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1584,7 +1584,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Status Dialog
 
-[Status Dialog](/mp-command-catalog/commands/utility-operations#status-dialog) · [gRPC contract](/api/grpc/utility-operations#status-dialog)
+[Status Dialog](/mp-command-catalog/commands/utility-operations#status-dialog) · [gRPC contract](/api/grpc/0.5.1/utility-operations#status-dialog)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1625,7 +1625,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Trim Log File
 
-[Trim Log File](/mp-command-catalog/commands/utility-operations#trim-log-file) · [gRPC contract](/api/grpc/utility-operations#trim-log-file)
+[Trim Log File](/mp-command-catalog/commands/utility-operations#trim-log-file) · [gRPC contract](/api/grpc/0.5.1/utility-operations#trim-log-file)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1656,7 +1656,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Write to Log
 
-[Write to Log](/mp-command-catalog/commands/utility-operations#write-to-log) · [gRPC contract](/api/grpc/utility-operations#write-to-log)
+[Write to Log](/mp-command-catalog/commands/utility-operations#write-to-log) · [gRPC contract](/api/grpc/0.5.1/utility-operations#write-to-log)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

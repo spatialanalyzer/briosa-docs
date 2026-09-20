@@ -33,3 +33,20 @@ timestamp.
 Do not include hostnames, process IDs, SDK status codes, local paths,
 credentials, license information, evidence contents, raw MP arguments, returned
 values, or complete logs.
+
+## Client Installation Selection Failures
+
+Client 0.2.0 checks installation evidence before starting SA. Use its inert discovery report to inspect candidate rejection codes and the overall selection result.
+
+| Code | Action |
+| --- | --- |
+| `server-distribution-not-found` | Install the exact-target distribution with Installer 0.3.0, rescan its registered store, or provide an explicit validated path. |
+| `server-installation-invalid` | Verify or repair the selected package, manifest, receipt, and executable path. |
+| `server-installation-incompatible` | Check the package target, behavioral contract, version constraints, exclusions, and allowed scopes. |
+| `server-installation-ambiguous` | Resolve conflicting installation identities or constrain the application to one valid installation. |
+| `server-installation-changed` | The selected files changed before launch. Finish installation or repair, then start a new session and resolve again. |
+| `server-installation-identity-mismatch` | The live server does not match selected installation evidence. Stop it, verify the package and launch path, and resolve a fresh session. |
+| `server-sa-target-mismatch` | Use the server for the client package's exact SA target. |
+| `server-protocol-package-mismatch` | Verify the expected protocol identity and repair the mismatched distribution. |
+
+Do not bypass a failed explicit selection by silently starting a different version. See [Installation Selection](./installation-selection) for migration from legacy environment overrides.

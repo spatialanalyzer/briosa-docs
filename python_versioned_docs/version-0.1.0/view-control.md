@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Auto-Scale
 
-[Auto-Scale](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC contract](/api/grpc/view-control#auto-scale)
+[Auto-Scale](/mp-command-catalog/commands/view-control#auto-scale) · [gRPC contract](/api/grpc/0.5.1/view-control#auto-scale)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Center Graphics About Object(s)
 
-[Center Graphics About Object(s)](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC contract](/api/grpc/view-control#center-graphics-about-objects)
+[Center Graphics About Object(s)](/mp-command-catalog/commands/view-control#center-graphics-about-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#center-graphics-about-objects)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Center Graphics About Point
 
-[Center Graphics About Point](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC contract](/api/grpc/view-control#center-graphics-about-point)
+[Center Graphics About Point](/mp-command-catalog/commands/view-control#center-graphics-about-point) · [gRPC contract](/api/grpc/0.5.1/view-control#center-graphics-about-point)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Define point of view
 
-[Define point of view](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC contract](/api/grpc/view-control#define-point-of-view)
+[Define point of view](/mp-command-catalog/commands/view-control#define-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#define-point-of-view)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Active Clipping Planes
 
-[Get Active Clipping Planes](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC contract](/api/grpc/view-control#get-active-clipping-planes)
+[Get Active Clipping Planes](/mp-command-catalog/commands/view-control#get-active-clipping-planes) · [gRPC contract](/api/grpc/0.5.1/view-control#get-active-clipping-planes)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -159,7 +159,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get point of view parameters
 
-[Get point of view parameters](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC contract](/api/grpc/view-control#get-point-of-view-parameters)
+[Get point of view parameters](/mp-command-catalog/commands/view-control#get-point-of-view-parameters) · [gRPC contract](/api/grpc/0.5.1/view-control#get-point-of-view-parameters)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -204,7 +204,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Hide All Callout Views
 
-[Hide All Callout Views](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC contract](/api/grpc/view-control#hide-all-callout-views)
+[Hide All Callout Views](/mp-command-catalog/commands/view-control#hide-all-callout-views) · [gRPC contract](/api/grpc/0.5.1/view-control#hide-all-callout-views)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -227,7 +227,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Hide Objects
 
-[Hide Objects](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC contract](/api/grpc/view-control#hide-objects)
+[Hide Objects](/mp-command-catalog/commands/view-control#hide-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#hide-objects)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -253,7 +253,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Highlight Objects
 
-[Highlight Objects](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC contract](/api/grpc/view-control#highlight-objects)
+[Highlight Objects](/mp-command-catalog/commands/view-control#highlight-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-objects)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -282,7 +282,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Highlight Point
 
-[Highlight Point](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC contract](/api/grpc/view-control#highlight-point)
+[Highlight Point](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-point)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -311,7 +311,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Highlight Relationships
 
-[Highlight Relationships](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC contract](/api/grpc/view-control#highlight-relationships)
+[Highlight Relationships](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC contract](/api/grpc/0.5.1/view-control#highlight-relationships)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -340,7 +340,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Load Ribbon Bar from XML File
 
-[Load Ribbon Bar from XML File](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC contract](/api/grpc/view-control#load-ribbon-bar-from-xml-file)
+[Load Ribbon Bar from XML File](/mp-command-catalog/commands/view-control#load-ribbon-bar-from-xml-file) · [gRPC contract](/api/grpc/0.5.1/view-control#load-ribbon-bar-from-xml-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -366,7 +366,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Refresh Views
 
-[Refresh Views](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC contract](/api/grpc/view-control#refresh-views)
+[Refresh Views](/mp-command-catalog/commands/view-control#refresh-views) · [gRPC contract](/api/grpc/0.5.1/view-control#refresh-views)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -389,7 +389,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Reset Ribbon Bar to Default
 
-[Reset Ribbon Bar to Default](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC contract](/api/grpc/view-control#reset-ribbon-bar-to-default)
+[Reset Ribbon Bar to Default](/mp-command-catalog/commands/view-control#reset-ribbon-bar-to-default) · [gRPC contract](/api/grpc/0.5.1/view-control#reset-ribbon-bar-to-default)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -412,7 +412,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save point of view
 
-[Save point of view](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC contract](/api/grpc/view-control#save-point-of-view)
+[Save point of view](/mp-command-catalog/commands/view-control#save-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#save-point-of-view)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -441,7 +441,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Background Color
 
-[Set Background Color](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC contract](/api/grpc/view-control#set-background-color)
+[Set Background Color](/mp-command-catalog/commands/view-control#set-background-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-background-color)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -473,7 +473,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set MP's Window State
 
-[Set MP's Window State](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC contract](/api/grpc/view-control#set-mps-window-state)
+[Set MP's Window State](/mp-command-catalog/commands/view-control#set-mps-window-state) · [gRPC contract](/api/grpc/0.5.1/view-control#set-mps-window-state)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -499,7 +499,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Object(s) Color
 
-[Set Object(s) Color](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC contract](/api/grpc/view-control#set-objects-color)
+[Set Object(s) Color](/mp-command-catalog/commands/view-control#set-objects-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-objects-color)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -530,7 +530,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Object(s) Translucency
 
-[Set Object(s) Translucency](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC contract](/api/grpc/view-control#set-objects-translucency)
+[Set Object(s) Translucency](/mp-command-catalog/commands/view-control#set-objects-translucency) · [gRPC contract](/api/grpc/0.5.1/view-control#set-objects-translucency)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -561,7 +561,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set point of view
 
-[Set point of view](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC contract](/api/grpc/view-control#set-point-of-view)
+[Set point of view](/mp-command-catalog/commands/view-control#set-point-of-view) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -587,7 +587,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point of View from Frame
 
-[Set Point of View from Frame](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-frame)
+[Set Point of View from Frame](/mp-command-catalog/commands/view-control#set-point-of-view-from-frame) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view-from-frame)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -613,7 +613,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point of View from Instrument Updates
 
-[Set Point of View from Instrument Updates](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC contract](/api/grpc/view-control#set-point-of-view-from-instrument-updates)
+[Set Point of View from Instrument Updates](/mp-command-catalog/commands/view-control#set-point-of-view-from-instrument-updates) · [gRPC contract](/api/grpc/0.5.1/view-control#set-point-of-view-from-instrument-updates)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -662,7 +662,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Render Mode Type
 
-[Set Render Mode Type](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC contract](/api/grpc/view-control#set-render-mode-type)
+[Set Render Mode Type](/mp-command-catalog/commands/view-control#set-render-mode-type) · [gRPC contract](/api/grpc/0.5.1/view-control#set-render-mode-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -688,7 +688,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set SA's Window Pos
 
-[Set SA's Window Pos](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC contract](/api/grpc/view-control#set-sas-window-pos)
+[Set SA's Window Pos](/mp-command-catalog/commands/view-control#set-sas-window-pos) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-pos)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -717,7 +717,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set SA's Window Size
 
-[Set SA's Window Size](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC contract](/api/grpc/view-control#set-sas-window-size)
+[Set SA's Window Size](/mp-command-catalog/commands/view-control#set-sas-window-size) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-size)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -746,7 +746,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set SA's Window State
 
-[Set SA's Window State](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC contract](/api/grpc/view-control#set-sas-window-state)
+[Set SA's Window State](/mp-command-catalog/commands/view-control#set-sas-window-state) · [gRPC contract](/api/grpc/0.5.1/view-control#set-sas-window-state)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -772,7 +772,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Target Labels Use Full Names
 
-[Set Target Labels Use Full Names](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC contract](/api/grpc/view-control#set-target-labels-use-full-names)
+[Set Target Labels Use Full Names](/mp-command-catalog/commands/view-control#set-target-labels-use-full-names) · [gRPC contract](/api/grpc/0.5.1/view-control#set-target-labels-use-full-names)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -799,7 +799,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Toolkit Visibility
 
-[Set Toolkit Visibility](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC contract](/api/grpc/view-control#set-toolkit-visibility)
+[Set Toolkit Visibility](/mp-command-catalog/commands/view-control#set-toolkit-visibility) · [gRPC contract](/api/grpc/0.5.1/view-control#set-toolkit-visibility)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -826,7 +826,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set View Clipping Plane
 
-[Set View Clipping Plane](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC contract](/api/grpc/view-control#set-view-clipping-plane)
+[Set View Clipping Plane](/mp-command-catalog/commands/view-control#set-view-clipping-plane) · [gRPC contract](/api/grpc/0.5.1/view-control#set-view-clipping-plane)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -855,7 +855,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Working Color
 
-[Set Working Color](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC contract](/api/grpc/view-control#set-working-color)
+[Set Working Color](/mp-command-catalog/commands/view-control#set-working-color) · [gRPC contract](/api/grpc/0.5.1/view-control#set-working-color)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -881,7 +881,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Working Color Auto Increment
 
-[Set Working Color Auto Increment](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC contract](/api/grpc/view-control#set-working-color-auto-increment)
+[Set Working Color Auto Increment](/mp-command-catalog/commands/view-control#set-working-color-auto-increment) · [gRPC contract](/api/grpc/0.5.1/view-control#set-working-color-auto-increment)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -908,7 +908,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show / Hide by Object Type
 
-[Show / Hide by Object Type](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC contract](/api/grpc/view-control#show--hide-by-object-type)
+[Show / Hide by Object Type](/mp-command-catalog/commands/view-control#show--hide-by-object-type) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-by-object-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -941,7 +941,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show / Hide Callout View
 
-[Show / Hide Callout View](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC contract](/api/grpc/view-control#show--hide-callout-view)
+[Show / Hide Callout View](/mp-command-catalog/commands/view-control#show--hide-callout-view) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-callout-view)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -970,7 +970,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show / Hide Dimension
 
-[Show / Hide Dimension](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC contract](/api/grpc/view-control#show--hide-dimension)
+[Show / Hide Dimension](/mp-command-catalog/commands/view-control#show--hide-dimension) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-dimension)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -999,7 +999,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show / Hide Points
 
-[Show / Hide Points](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC contract](/api/grpc/view-control#show--hide-points)
+[Show / Hide Points](/mp-command-catalog/commands/view-control#show--hide-points) · [gRPC contract](/api/grpc/0.5.1/view-control#show--hide-points)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1028,7 +1028,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show by Object Type
 
-[Show by Object Type](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC contract](/api/grpc/view-control#show-by-object-type)
+[Show by Object Type](/mp-command-catalog/commands/view-control#show-by-object-type) · [gRPC contract](/api/grpc/0.5.1/view-control#show-by-object-type)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1057,7 +1057,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show Items in Tree
 
-[Show Items in Tree](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC contract](/api/grpc/view-control#show-items-in-tree)
+[Show Items in Tree](/mp-command-catalog/commands/view-control#show-items-in-tree) · [gRPC contract](/api/grpc/0.5.1/view-control#show-items-in-tree)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1096,7 +1096,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show Labels
 
-[Show Labels](/mp-command-catalog/commands/view-control#show-labels) · [gRPC contract](/api/grpc/view-control#show-labels)
+[Show Labels](/mp-command-catalog/commands/view-control#show-labels) · [gRPC contract](/api/grpc/0.5.1/view-control#show-labels)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1125,7 +1125,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show Objects
 
-[Show Objects](/mp-command-catalog/commands/view-control#show-objects) · [gRPC contract](/api/grpc/view-control#show-objects)
+[Show Objects](/mp-command-catalog/commands/view-control#show-objects) · [gRPC contract](/api/grpc/0.5.1/view-control#show-objects)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1151,7 +1151,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Annotations for Datums
 
-[Show/Hide Annotations for Datums](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-datums)
+[Show/Hide Annotations for Datums](/mp-command-catalog/commands/view-control#showhide-annotations-for-datums) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-annotations-for-datums)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1184,7 +1184,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Annotations for Feature Checks
 
-[Show/Hide Annotations for Feature Checks](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC contract](/api/grpc/view-control#showhide-annotations-for-feature-checks)
+[Show/Hide Annotations for Feature Checks](/mp-command-catalog/commands/view-control#showhide-annotations-for-feature-checks) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-annotations-for-feature-checks)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1217,7 +1217,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Inspection Bar
 
-[Show/Hide Inspection Bar](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC contract](/api/grpc/view-control#showhide-inspection-bar)
+[Show/Hide Inspection Bar](/mp-command-catalog/commands/view-control#showhide-inspection-bar) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-inspection-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1244,7 +1244,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Instrument Interface
 
-[Show/Hide Instrument Interface](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC contract](/api/grpc/view-control#showhide-instrument-interface)
+[Show/Hide Instrument Interface](/mp-command-catalog/commands/view-control#showhide-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instrument-interface)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1275,7 +1275,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Instrument Probe Tip
 
-[Show/Hide Instrument Probe Tip](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC contract](/api/grpc/view-control#showhide-instrument-probe-tip)
+[Show/Hide Instrument Probe Tip](/mp-command-catalog/commands/view-control#showhide-instrument-probe-tip) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instrument-probe-tip)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1302,7 +1302,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Instruments
 
-[Show/Hide Instruments](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC contract](/api/grpc/view-control#showhide-instruments)
+[Show/Hide Instruments](/mp-command-catalog/commands/view-control#showhide-instruments) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-instruments)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1331,7 +1331,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Relationship Report
 
-[Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC contract](/api/grpc/view-control#showhide-relationship-report)
+[Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-relationship-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1360,7 +1360,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show/Hide Relationship Watch
 
-[Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC contract](/api/grpc/view-control#showhide-relationship-watch)
+[Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) · [gRPC contract](/api/grpc/0.5.1/view-control#showhide-relationship-watch)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

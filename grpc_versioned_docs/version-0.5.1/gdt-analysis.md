@@ -422,4 +422,4 @@ the seven Boolean options the SDK can retrieve.
 
 :::
 
-[Catalog](/mp-command-catalog/commands/gdt-analysis) · [.NET](/api/dotnet/gdt-analysis) · [Python](/api/python/gdt-analysis) · [JavaScript and TypeScript](/api/javascript/gdt-analysis)
+[Catalog](/mp-command-catalog/commands/gdt-analysis) · [.NET](/api/dotnet/0.1.0/gdt-analysis) · [Python](/api/python/0.1.0/gdt-analysis) · [JavaScript and TypeScript](/api/javascript/0.1.0/gdt-analysis)

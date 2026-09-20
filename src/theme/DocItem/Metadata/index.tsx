@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
 import {PageMetadata} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/plugin-content-docs/client';
+import {useDoc, useDocsVersion} from '@docusaurus/plugin-content-docs/client';
 import useRouteContext from '@docusaurus/useRouteContext';
 
 const apiLabels: Record<string, string> = {
@@ -12,11 +12,14 @@ const apiLabels: Record<string, string> = {
 
 export default function DocItemMetadata(): ReactNode {
   const {metadata, frontMatter, assets} = useDoc();
+  const version = useDocsVersion();
   const {plugin} = useRouteContext();
   const apiLabel = apiLabels[plugin.id];
   // Qualify search results without changing MP headings or sidebar labels.
-  const title = apiLabel && !metadata.title.endsWith(apiLabel)
-    ? `${metadata.title} — ${apiLabel}`
+  const target = metadata.permalink.includes('/sa-2024.1.0508.5')
+    ? '2024.1.0508.5' : '2026.1.0529.7';
+  const title = apiLabel
+    ? `${metadata.title} — ${apiLabel} ${version.version} · SA ${target}`
     : metadata.title;
 
   return (

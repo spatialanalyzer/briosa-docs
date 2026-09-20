@@ -208,11 +208,17 @@ npm run docusaurus docs:version:python <python-package-version>
 npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-The gRPC reference currently serves the Server 0.5.1 snapshot by default.
-Its working source is not published. Client references serve the 0.1.0
-snapshots for the SA 2026 API, with explicit links to the SA 2024 differences. Docusaurus maintains independent
-version and sidebar snapshots for each plugin instance. The site itself does
-not take a shared product version.
+Current defaults are Server **0.7.0** and clients **0.2.0**. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
+
+## Release Checklist
+
+1. Verify published GitHub releases and package registries for both exact targets.
+2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
+3. Update guides and every catalog representation without promoting validation claims.
+4. Cut each product snapshot with its Docusaurus version command; update defaults and preserve historical API links.
+5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
+6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
+
 
 ## Search Engine Discovery
 

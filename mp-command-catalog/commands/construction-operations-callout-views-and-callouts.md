@@ -25,45 +25,45 @@ These entries cover the 21 commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Create Vector Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-vector-callout">Create Vector Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Vector Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Vector Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-vector-callout">Create Vector Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Min/Max Vector Group Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-minmax-vector-group-callout">Create Min/Max Vector Group Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Min/Max Vector Group Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Min/Max Vector Group Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-minmax-vector-group-callout">Create Min/Max Vector Group Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Point Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-point-callout">Create Point Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Point Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Point Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-point-callout">Create Point Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Point Comparison Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-point-comparison-callout">Create Point Comparison Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Point Comparison Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Point Comparison Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-point-comparison-callout">Create Point Comparison Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Relationship Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-relationship-callout">Create Relationship Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Relationship Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Relationship Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-relationship-callout">Create Relationship Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Picture Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-picture-callout">Create Picture Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Picture Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Picture Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-picture-callout">Create Picture Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Create Text Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#create-text-callout">Create Text Callout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Create Text Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Text Callout" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-text-callout">Create Text Callout</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="portable-contract-review"><td><a href="#make-a-callout-view-ref-list">Make a Callout View Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
@@ -73,9 +73,9 @@ These entries cover the 21 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - output-binding validation required</td></tr>
-<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Add a Callout View to Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="portable-contract-review"><td><a href="#add-a-callout-view-to-callout-view-ref-list">Add a Callout View to Callout View Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
@@ -103,51 +103,51 @@ These entries cover the 21 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Default Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#set-default-callout-view-properties">Set Default Callout View Properties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Set Default Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Default Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-default-callout-view-properties">Set Default Callout View Properties</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-input-binding-and-fixture-validation-required"><td><a href="#set-callout-view-properties">Set Callout View Properties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - input-binding and fixture validation required</td></tr>
-<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-callout-view-properties">Set Callout View Properties</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-destructive-fixture-validation-required"><td><a href="#delete-callout-view">Delete Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td></tr>
-<tr data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-callout-view">Delete Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#rename-callout-view">Rename Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Rename Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Rename Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-callout-view">Rename Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Auto Arrange Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#auto-arrange-callout-view">Auto Arrange Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Auto Arrange Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Auto Arrange Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-arrange-callout-view">Auto Arrange Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Number of Callouts in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#get-number-of-callouts-in-callout-view">Get Number of Callouts in Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Get Number of Callouts in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Number of Callouts in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-number-of-callouts-in-callout-view">Get Number of Callouts in Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#get-i-th-callout-position-in-callout-view">Get I-th Callout Position in Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Get I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-i-th-callout-position-in-callout-view">Get I-th Callout Position in Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#set-i-th-callout-position-in-callout-view">Set I-th Callout Position in Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Set I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set I-th Callout Position in Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-i-th-callout-position-in-callout-view">Set I-th Callout Position in Callout View</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -161,17 +161,19 @@ These entries cover the 21 commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -206,17 +208,19 @@ Selected with the exact MP display defaults. [gRPC](/api/grpc/construction-opera
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -249,17 +253,19 @@ Selected with all MP display controls. [gRPC](/api/grpc/construction-operations-
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -292,17 +298,19 @@ Selected with Cartesian coordinates by default. [gRPC](/api/grpc/construction-op
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -334,17 +342,19 @@ Selected with the exact MP comparison-display defaults. [gRPC](/api/grpc/constru
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -365,7 +375,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are `Destination Callout View`, `Relationship Name`, X/Y positions
-(default 0), and optional edit-text notes. Included in Briosa Server 0.5.1. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-relationship-callout)
+(default 0), and optional edit-text notes. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-relationship-callout)
 
 ## Create Picture Callout
 
@@ -375,17 +385,19 @@ Inputs are `Destination Callout View`, `Relationship Name`, X/Y positions
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -408,7 +420,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Inputs are the destination callout view, picture name, X/Y positions (defaults
 0.4/0.6), image scale percentage (default 100), and an optional anchor object.
-Included in Briosa Server 0.5.1. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-picture-callout)
+Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-picture-callout)
 
 ## Create Text Callout
 
@@ -418,17 +430,19 @@ Included in Briosa Server 0.5.1. [API contracts](/api/grpc/construction-operatio
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -449,7 +463,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are the destination callout view, required edit-text lines, X/Y
-positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.5.1.
+positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.7.0.
 [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-text-callout)
 
 ## Make a Callout View Ref List
@@ -497,17 +511,19 @@ collection types instead of asking the server to construct a transient MP list.
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk output binding validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -691,17 +707,19 @@ position operations, which inspect live state inside a SpatialAnalyzer view.
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -727,7 +745,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Inputs define the default name, view recall flags, leader and border thickness
 and colors, text-divider behavior, and font. Exact defaults include gray leader
 RGB `(128, 128, 128)`, blue border RGB `(0, 0, 255)`, and `MS Shell Dlg` at 8
-points. Included in Briosa Server 0.5.1. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
+points. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
 
 ## Set Callout View Properties
 
@@ -737,17 +755,19 @@ points. Included in Briosa Server 0.5.1. [API contracts](/api/grpc/construction-
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk input binding and fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -785,17 +805,19 @@ required. [API contracts](/api/grpc/construction-operations-callout-views-and-ca
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk destructive fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -822,17 +844,19 @@ automatically. [API contracts](/api/grpc/construction-operations-callout-views-a
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -860,17 +884,19 @@ Renames one callout view. `Overwrite if exists?` defaults to false. [API contrac
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -897,17 +923,19 @@ Asks SpatialAnalyzer to arrange the callouts in a required callout view.
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -934,17 +962,19 @@ Returns the live `Callouts Count` for a required callout view. [API contracts](/
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -979,17 +1009,19 @@ indexing a client list. [API contracts](/api/grpc/construction-operations-callou
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

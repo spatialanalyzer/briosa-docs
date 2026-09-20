@@ -68,7 +68,7 @@ public Task CreateVectorCalloutAsync(
 ```
 
 The first three parameters are required; the remaining defaults match the MP
-Editor. [Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-vector-callout)
+Editor. [Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-vector-callout)
 
 ## Create Min/Max Vector Group Callout
 
@@ -98,7 +98,7 @@ public Task CreateMinMaxVectorGroupCalloutAsync(
     CancellationToken cancellationToken = default);
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
+[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [gRPC](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
 
 ## Create Point Callout
 
@@ -125,7 +125,7 @@ public Task CreatePointCalloutAsync(
     CancellationToken cancellationToken = default);
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout) · [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-point-callout)
+[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout) · [gRPC](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-point-callout)
 
 ## Create Point Comparison Callout
 
@@ -156,7 +156,7 @@ public Task CreatePointComparisonCalloutAsync(
     CancellationToken cancellationToken = default);
 ```
 
-[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
+[Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [gRPC](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
 
 ## Create Relationship Callout
 

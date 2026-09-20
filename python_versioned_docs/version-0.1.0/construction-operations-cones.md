@@ -33,4 +33,4 @@ async def construct_cones_from_surface_faces_runtime_select(self) -> None: ...
 The operator selects faces in SpatialAnalyzer. Cancellation does not prove the
 interaction stopped, and the client never automatically replays this call.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)
+[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/0.5.1/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)

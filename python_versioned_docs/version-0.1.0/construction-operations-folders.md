@@ -37,4 +37,4 @@ async def delete_folders_by_wildcard(
 The result preserves both exact MP outputs. The client does not validate the
 search value and never automatically replays this destructive operation.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-folders#delete-folders-by-wildcard) · [gRPC](/api/grpc/construction-operations-folders#delete-folders-by-wildcard)
+[Catalog](/mp-command-catalog/commands/construction-operations-folders#delete-folders-by-wildcard) · [gRPC](/api/grpc/0.5.1/construction-operations-folders#delete-folders-by-wildcard)

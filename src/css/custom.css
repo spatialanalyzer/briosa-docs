@@ -432,6 +432,13 @@ pre code {
   align-items: center;
 }
 
+@media (max-width: 996px) {
+  .navbar__items > .header-github-link,
+  .navbar__items > .header-discord-link {
+    display: none;
+  }
+}
+
 .header-github-link::before,
 .header-discord-link::before {
   display: block;

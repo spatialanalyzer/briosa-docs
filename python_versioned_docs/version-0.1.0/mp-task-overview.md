@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Add Task Overview Item
 
-[Add Task Overview Item](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item) · [gRPC contract](/api/grpc/mp-task-overview#add-task-overview-item)
+[Add Task Overview Item](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#add-task-overview-item)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Create/Clear Task Overview List
 
-[Create/Clear Task Overview List](/mp-command-catalog/commands/mp-task-overview#createclear-task-overview-list) · [gRPC contract](/api/grpc/mp-task-overview#createclear-task-overview-list)
+[Create/Clear Task Overview List](/mp-command-catalog/commands/mp-task-overview#createclear-task-overview-list) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#createclear-task-overview-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Current Task
 
-[Set Current Task](/mp-command-catalog/commands/mp-task-overview#set-current-task) · [gRPC contract](/api/grpc/mp-task-overview#set-current-task)
+[Set Current Task](/mp-command-catalog/commands/mp-task-overview#set-current-task) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-current-task)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Overview Image
 
-[Set Overview Image](/mp-command-catalog/commands/mp-task-overview#set-overview-image) · [gRPC contract](/api/grpc/mp-task-overview#set-overview-image)
+[Set Overview Image](/mp-command-catalog/commands/mp-task-overview#set-overview-image) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-overview-image)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -124,7 +124,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Overview Title
 
-[Set Overview Title](/mp-command-catalog/commands/mp-task-overview#set-overview-title) · [gRPC contract](/api/grpc/mp-task-overview#set-overview-title)
+[Set Overview Title](/mp-command-catalog/commands/mp-task-overview#set-overview-title) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-overview-title)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -151,7 +151,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Task Item Comment
 
-[Set Task Item Comment](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-comment)
+[Set Task Item Comment](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-comment)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -180,7 +180,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Task Item Completion Values
 
-[Set Task Item Completion Values](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-completion-values)
+[Set Task Item Completion Values](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-completion-values)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -211,7 +211,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Task Item Name
 
-[Set Task Item Name](/mp-command-catalog/commands/mp-task-overview#set-task-item-name) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-name)
+[Set Task Item Name](/mp-command-catalog/commands/mp-task-overview#set-task-item-name) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-name)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -240,7 +240,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show Progress for Task Item
 
-[Show Progress for Task Item](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item) · [gRPC contract](/api/grpc/mp-task-overview#show-progress-for-task-item)
+[Show Progress for Task Item](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#show-progress-for-task-item)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -269,7 +269,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Show Task Overview List
 
-[Show Task Overview List](/mp-command-catalog/commands/mp-task-overview#show-task-overview-list) · [gRPC contract](/api/grpc/mp-task-overview#show-task-overview-list)
+[Show Task Overview List](/mp-command-catalog/commands/mp-task-overview#show-task-overview-list) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#show-task-overview-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

@@ -161,4 +161,4 @@ Omitted `observationIndex` maps to 0. No client-side range rule is added.
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-lines) ·
-[gRPC](/api/grpc/construction-operations-lines)
+[gRPC](/api/grpc/0.5.1/construction-operations-lines)

@@ -19,7 +19,7 @@ public Task SetOrConstructDefaultCollectionAsync(
 ```
 
 Sets the default collection, constructing it when needed.
-[Catalog](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection) · [gRPC](/api/grpc/construction-operations-collections#set-or-construct-default-collection)
+[Catalog](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection) · [gRPC](/api/grpc/0.5.1/construction-operations-collections#set-or-construct-default-collection)
 
 ## Construct Collection
 
@@ -73,4 +73,4 @@ public Task<DeleteCollectionsByWildcardResult> DeleteCollectionsByWildcardAsync(
 every collection requires an explicit `allowDeletingAllCollections: true`.
 The result preserves both exact MP output counts.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) · [gRPC](/api/grpc/construction-operations-collections#delete-collections-by-wildcard)
+[Catalog](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) · [gRPC](/api/grpc/0.5.1/construction-operations-collections#delete-collections-by-wildcard)

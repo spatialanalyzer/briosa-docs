@@ -25,15 +25,15 @@ These entries cover the two commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Sphere" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-sphere-fixture"><td><a href="#construct-sphere">Construct Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sphere fixture</td></tr>
-<tr data-command="Construct Sphere" data-group="Construction Operations / Spheres" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Sphere" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-sphere">Construct Sphere</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Spheres From Surface Faces - Runtime Select" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-interactive-cad-face-fixture"><td><a href="#construct-spheres-from-surface-faces---runtime-select">Construct Spheres From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive CAD-face fixture</td></tr>
-<tr data-command="Construct Spheres From Surface Faces - Runtime Select" data-group="Construction Operations / Spheres" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Spheres From Surface Faces - Runtime Select" data-group="Construction Operations / Spheres" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-spheres-from-surface-faces---runtime-select">Construct Spheres From Surface Faces - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -47,17 +47,19 @@ These entries cover the two commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Spheres</span>
   <span className="catalog-target-validation">At risk sphere fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Spheres" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Spheres" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Spheres</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-spheres#construct-sphere) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-spheres#construct-sphere) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-spheres#construct-sphere) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-spheres#construct-sphere)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -86,17 +88,19 @@ radius. Briosa adds no radius safeguards and preserves the MP outcome.
   <span className="catalog-target-group">Construction Operations / Spheres</span>
   <span className="catalog-target-validation">At risk interactive cad face fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Spheres" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Spheres" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Spheres</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

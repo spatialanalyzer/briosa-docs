@@ -25,33 +25,33 @@ These entries cover the 14 commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-point-group-fixture"><td><a href="#construct-a-vector-group---group-to-group-compare">Construct a Vector Group - Group to Group Compare</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group fixture</td></tr>
-<tr data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group---group-to-group-compare">Construct a Vector Group - Group to Group Compare</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#construct-a-vector-group---area-profile-check">Construct a Vector Group - Area Profile Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
-<tr data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group---area-profile-check">Construct a Vector Group - Area Profile Check</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-group-from-vector-name-ref-list">Construct a Vector Group From Vector Name Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
-<tr data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group-from-vector-name-ref-list">Construct a Vector Group From Vector Name Ref List</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindelta">Construct a Vector in Working Coordinates(Begin/Delta)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
-<tr data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-in-working-coordinatesbegindelta">Construct a Vector in Working Coordinates(Begin/Delta)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindirectionmag">Construct a Vector in Working Coordinates(Begin/Direction/Mag.)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
-<tr data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-in-working-coordinatesbegindirectionmag">Construct a Vector in Working Coordinates(Begin/Direction/Mag.)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Vectors WildCard Selection" data-group="Construction Operations / Vectors and Vector Groups" data-status="sdk-unavailable" data-validation="licensed-execution-probe-failed"><td><a href="#construct-vectors-wildcard-selection">Construct Vectors WildCard Selection</a></td><td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td><td>Licensed execution probe failed</td></tr>
@@ -61,33 +61,33 @@ These entries cover the 14 commands observed under **Construction Operations
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#construct-a-vector-group-from-a-relationship">Construct a Vector Group From a Relationship</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - relationship fixture</td></tr>
-<tr data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group-from-a-relationship">Construct a Vector Group From a Relationship</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-a-vector-name-ref-list-from-a-vector-group">Make a Vector Name Ref List From a Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
-<tr data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-vector-name-ref-list-from-a-vector-group">Make a Vector Name Ref List From a Vector Group</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture</td></tr>
-<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture</td></tr>
-<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
-<tr data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Vector from Doubles" data-group="Construction Operations / Vectors and Vector Groups" data-status="excluded" data-validation="not-applicable"><td><a href="#make-a-vector-from-doubles">Make a Vector from Doubles</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Not applicable</td></tr>
@@ -119,17 +119,19 @@ These entries cover the 14 commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk point group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -167,17 +169,19 @@ average deviation.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 vector-group setter has three arguments, matching the exact SDK interface. The 2026 export adds a fourth type literal even though its SDK interface also has three arguments. Keep the reviewed three-argument mapping; this exporter difference does not create a new MP input.
 
@@ -207,17 +211,19 @@ of `0.0`.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 vector-group setter has three arguments, matching the exact SDK interface. The 2026 export adds a fourth type literal even though its SDK interface also has three arguments. Keep the reviewed three-argument mapping; this exporter difference does not create a new MP input.
 
@@ -243,17 +249,19 @@ reference list.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -285,17 +293,19 @@ values expressed in working coordinates. `Is Magnitude Negative` defaults to
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -375,17 +385,19 @@ Vector Name Ref List` when that workflow is suitable.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 vector-group setter has three arguments, matching the exact SDK interface. The 2026 export adds a fourth type literal even though its SDK interface also has three arguments. Keep the reviewed three-argument mapping; this exporter difference does not create a new MP input.
 
@@ -412,17 +424,19 @@ Constructs a named Vector Group from a selected Relationship.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -450,17 +464,19 @@ Vector Group.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk interactive fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -487,17 +503,19 @@ Vector Name reference list. The user prompt defaults to the exact MP text
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk interactive fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -523,17 +541,19 @@ collection and Vector Group identities. The prompt defaults to an empty string.
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At risk vector group fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

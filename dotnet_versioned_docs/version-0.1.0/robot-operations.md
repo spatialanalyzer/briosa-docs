@@ -75,7 +75,7 @@ maps internally to the exact SDK literal `6DPF Z Component`.
 
 ## AddRobotMachineSaMachineAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-samachine)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-samachine)
 
 ```csharp
 public Task AddRobotMachineSaMachineAsync(
@@ -85,7 +85,7 @@ public Task AddRobotMachineSaMachineAsync(
 
 ## AddRobotMachineManipKinAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-manipkin)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-manipkin)
 
 ```csharp
 public Task AddRobotMachineManipKinAsync(
@@ -97,7 +97,7 @@ Both methods accept the shared local-SA path or embedded-file representation.
 
 ## DeleteRobotMachineAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/robot-operations#delete-robotmachine)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robotmachine)
 
 ```csharp
 public Task DeleteRobotMachineAsync(
@@ -107,7 +107,7 @@ public Task DeleteRobotMachineAsync(
 
 ## MoveRobotMachineToFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-frame)
 
 ```csharp
 public Task<Transform> MoveRobotMachineToFrameAsync(
@@ -122,7 +122,7 @@ Returns `Actual Transform In Working (result)`.
 
 ## MoveRobotMachineThroughPathAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-through-path)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-through-path)
 
 ```csharp
 public Task MoveRobotMachineThroughPathAsync(
@@ -136,7 +136,7 @@ public Task MoveRobotMachineThroughPathAsync(
 
 ## MoveRobotMachineToNamedDestinationAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-named-destination)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-named-destination)
 
 ```csharp
 public Task<Transform> MoveRobotMachineToNamedDestinationAsync(
@@ -150,7 +150,7 @@ Returns `Actual Transform In Working (result)`.
 
 ## SetRobotMachineParameterAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-parameter)
 
 ```csharp
 public Task SetRobotMachineParameterAsync(
@@ -162,7 +162,7 @@ public Task SetRobotMachineParameterAsync(
 
 ## GetRobotMachineParameterAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-parameter)
 
 ```csharp
 public Task<double> GetRobotMachineParameterAsync(
@@ -176,7 +176,7 @@ allowlist.
 
 ## SetRobotMachineModelLinkParametersAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-model-link-parameters)
 
 ```csharp
 public Task SetRobotMachineModelLinkParametersAsync(
@@ -196,7 +196,7 @@ encoder-range validation.
 
 ## GetRobotMachineModelLinkParametersAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-model-link-parameters)
 
 ```csharp
 public Task<RobotModelLinkParameters> GetRobotMachineModelLinkParametersAsync(
@@ -209,7 +209,7 @@ The result includes all exact-target outputs, including `EncoderValue`.
 
 ## SetRobotMachineBaseTransformAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-base-transform)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-base-transform)
 
 ```csharp
 public Task SetRobotMachineBaseTransformAsync(
@@ -230,7 +230,7 @@ The shorter overload uses the exact MP identity-transform default.
 
 ## StartRobotMachineInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#start-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#start-robotmachine-interface)
 
 ```csharp
 public Task StartRobotMachineInterfaceAsync(
@@ -245,7 +245,7 @@ machine-specific.
 
 ## StopRobotMachineInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#stop-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#stop-robotmachine-interface)
 
 ```csharp
 public Task StopRobotMachineInterfaceAsync(
@@ -255,7 +255,7 @@ public Task StopRobotMachineInterfaceAsync(
 
 ## ComputeRobotMachineAdjustedGoalFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/robot-operations#compute-robotmachine-adjusted-goal-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#compute-robotmachine-adjusted-goal-frame)
 
 ```csharp
 public Task<Transform> ComputeRobotMachineAdjustedGoalFrameAsync(
@@ -271,7 +271,7 @@ in the adjusted-goal workflow.
 
 ## MoveRobotMachineToJointPoseSixDofAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-joint-pose-6dof)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-joint-pose-6dof)
 
 ```csharp
 public Task MoveRobotMachineToJointPoseSixDofAsync(
@@ -287,7 +287,7 @@ public Task MoveRobotMachineToJointPoseSixDofAsync(
 
 ## SimulateRobotMachinePathOutputCsvFileAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/robot-operations#simulate-robotmachine-path-output-csv-file)
+[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/0.5.1/robot-operations#simulate-robotmachine-path-output-csv-file)
 
 ```csharp
 public Task SimulateRobotMachinePathOutputCsvFileAsync(
@@ -299,7 +299,7 @@ public Task SimulateRobotMachinePathOutputCsvFileAsync(
 
 ## CreateRobotCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#create-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#create-robot-calibration)
 
 ```csharp
 public Task CreateRobotCalibrationAsync(
@@ -310,7 +310,7 @@ public Task CreateRobotCalibrationAsync(
 
 ## DeleteRobotCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#delete-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robot-calibration)
 
 ```csharp
 public Task DeleteRobotCalibrationAsync(
@@ -321,7 +321,7 @@ public Task DeleteRobotCalibrationAsync(
 
 ## ImportPosesMatchToMeasurementsAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-measurements)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-measurements)
 
 ```csharp
 public Task ImportPosesMatchToMeasurementsAsync(
@@ -342,7 +342,7 @@ The shorter overload uses the exact empty calibration-name default.
 
 ## ImportPosesMatchToFramesAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-frames)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-frames)
 
 ```csharp
 public Task ImportPosesMatchToFramesAsync(
@@ -363,7 +363,7 @@ The shorter overload uses the exact empty calibration-name default.
 
 ## PerformRobotCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration)
 
 ```csharp
 public Task<RobotCalibrationMetrics> PerformRobotCalibrationAsync(
@@ -383,7 +383,7 @@ calibration metrics.
 
 ## PerformRobotCalibrationAlternateAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration-alternate)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration-alternate)
 
 ```csharp
 public Task<RobotCalibrationMetrics> PerformRobotCalibrationAlternateAsync(
@@ -405,7 +405,7 @@ validate their machine-specific contents.
 
 ## StartStopRobotCalibrationTrappingAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/robot-operations#startstop-robot-calibration-trapping)
+[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/0.5.1/robot-operations#startstop-robot-calibration-trapping)
 
 ```csharp
 public Task StartStopRobotCalibrationTrappingAsync(
@@ -427,7 +427,7 @@ The shorter overload uses the exact empty calibration-name default. A value of
 
 ## SetActiveRobotCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#set-active-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-active-robot-calibration)
 
 ```csharp
 public Task SetActiveRobotCalibrationAsync(
@@ -438,7 +438,7 @@ public Task SetActiveRobotCalibrationAsync(
 
 ## SetRobotCalibrationToolFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-tool-frame)
 
 ```csharp
 public Task SetRobotCalibrationToolFrameAsync(
@@ -457,7 +457,7 @@ The shorter overload uses the exact identity-transform default.
 
 ## SetRobotCalibrationMeasurementOffsetInToolFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
 
 ```csharp
 public Task SetRobotCalibrationMeasurementOffsetInToolFrameAsync(
@@ -476,7 +476,7 @@ The shorter overload uses the exact identity-transform default.
 
 ## GetRobotPoseForAFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/robot-operations#get-robot-pose-for-a-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robot-pose-for-a-frame)
 
 ```csharp
 public Task<double[]> GetRobotPoseForAFrameAsync(
@@ -498,7 +498,7 @@ current robot pose. `goalPoseCount` is required SDK retrieval metadata.
 
 ## GetCalibrationApplianceIntegerValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-integer-value)
 
 ```csharp
 public Task<int> GetCalibrationApplianceIntegerValueAsync(
@@ -508,7 +508,7 @@ public Task<int> GetCalibrationApplianceIntegerValueAsync(
 
 ## SetCalibrationApplianceIntegerValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-integer-value)
 
 ```csharp
 public Task SetCalibrationApplianceIntegerValueAsync(
@@ -519,7 +519,7 @@ public Task SetCalibrationApplianceIntegerValueAsync(
 
 ## GetCalibrationApplianceRealValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-real-value)
 
 ```csharp
 public Task<double> GetCalibrationApplianceRealValueAsync(
@@ -529,7 +529,7 @@ public Task<double> GetCalibrationApplianceRealValueAsync(
 
 ## SetCalibrationApplianceRealValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-real-value)
 
 ```csharp
 public Task SetCalibrationApplianceRealValueAsync(
@@ -540,7 +540,7 @@ public Task SetCalibrationApplianceRealValueAsync(
 
 ## GetCalibrationApplianceDataAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-data)
 
 ```csharp
 public Task<double[]> GetCalibrationApplianceDataAsync(
@@ -553,7 +553,7 @@ the MP `Integer Values` output, so the method returns only `Real Values`.
 
 ## SetCalibrationApplianceDataAsync
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-data)
 
 ```csharp
 public Task SetCalibrationApplianceDataAsync(

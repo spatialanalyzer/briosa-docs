@@ -17,7 +17,7 @@ Validation: Portable contract review.
 
 :::
 
-[Cloud Display Control](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#cloud-display-control)
+[Cloud Display Control](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#cloud-display-control)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Reset Cloud Bounding Box](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#reset-cloud-bounding-box)
+[Reset Cloud Bounding Box](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#reset-cloud-bounding-box)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -125,7 +125,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Get Cloud Point Count](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-point-count)
+[Get Cloud Point Count](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#get-cloud-point-count)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -173,7 +173,7 @@ Validation: Licensed SA 2026.1.0529.7 probe.
 
 :::
 
-[Set Cloud Default Clipping Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
+[Set Cloud Default Clipping Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -213,7 +213,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#raster-scan-edge-inspection)
+[Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#raster-scan-edge-inspection)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -263,7 +263,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[New Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
+[New Raster Scan Edge Inspection](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -321,7 +321,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Clear Cloud Point Deviations](/mp-command-catalog/commands/cloud-and-mesh-operations#clear-cloud-point-deviations) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#clear-cloud-point-deviations)
+[Clear Cloud Point Deviations](/mp-command-catalog/commands/cloud-and-mesh-operations#clear-cloud-point-deviations) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#clear-cloud-point-deviations)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -359,7 +359,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Enable All Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
+[Enable All Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -397,7 +397,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Enable/Disable Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
+[Enable/Disable Cloud Cross Sections](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -439,7 +439,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Enable Single Cloud Cross Section](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#enable-single-cloud-cross-section)
+[Enable Single Cloud Cross Section](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#enable-single-cloud-cross-section)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -479,7 +479,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Get Number of Cross Sections in Cross Section Cloud](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
+[Get Number of Cross Sections in Cross Section Cloud](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -517,7 +517,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-plane)
+[Filter Clouds to Plane](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -565,7 +565,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Group](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-group)
+[Filter Clouds to Group](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -613,7 +613,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Surface](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-surface)
+[Filter Clouds to Surface](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-surface)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -663,7 +663,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to BSplines](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-bsplines)
+[Filter Clouds to BSplines](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-bsplines)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -711,7 +711,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Line Segment](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-line-segment)
+[Filter Clouds to Line Segment](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-line-segment)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -761,7 +761,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Vector Groups - Resolve points](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
+[Filter Clouds to Vector Groups - Resolve points](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -815,7 +815,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Filter Clouds to Vector Groups - Resolve Clouds](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
+[Filter Clouds to Vector Groups - Resolve Clouds](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-clouds)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -863,7 +863,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[RGB Cloud Point Filter](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#rgb-cloud-point-filter)
+[RGB Cloud Point Filter](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#rgb-cloud-point-filter)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -945,7 +945,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Get Cloud RGB Values](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values)
+[Get Cloud RGB Values](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#get-cloud-rgb-values)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -995,7 +995,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Get Cloud RGB Values Near Point](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
+[Get Cloud RGB Values Near Point](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-rgb-values-near-point) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#get-cloud-rgb-values-near-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1049,7 +1049,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Subdivide Cloud by Point Spacing](/mp-command-catalog/commands/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
+[Subdivide Cloud by Point Spacing](/mp-command-catalog/commands/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#subdivide-cloud-by-point-spacing)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1095,7 +1095,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Delete Cloud Points by Radial Distance from Points](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
+[Delete Cloud Points by Radial Distance from Points](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1139,7 +1139,7 @@ Validation: At Risk — destructive fixture validation required.
 
 :::
 
-[Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
+[Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1191,7 +1191,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Generate General Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#generate-general-mesh)
+[Generate General Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#generate-general-mesh)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1241,7 +1241,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Consolidate Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#consolidate-mesh) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#consolidate-mesh)
+[Consolidate Mesh](/mp-command-catalog/commands/cloud-and-mesh-operations#consolidate-mesh) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#consolidate-mesh)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1279,7 +1279,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Mesh Volume](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-volume)
+[Mesh Volume](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#mesh-volume)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1325,7 +1325,7 @@ Validation: At Risk — fixture or interactive validation required.
 
 :::
 
-[Mesh Fill Holes](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-fill-holes) · [gRPC contract](/api/grpc/cloud-and-mesh-operations#mesh-fill-holes)
+[Mesh Fill Holes](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-fill-holes) · [gRPC contract](/api/grpc/0.5.1/cloud-and-mesh-operations#mesh-fill-holes)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

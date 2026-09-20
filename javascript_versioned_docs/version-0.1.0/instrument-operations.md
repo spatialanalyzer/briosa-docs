@@ -196,7 +196,7 @@ export interface WrtlChannelStatus {
 
 ## getLastInstrumentIndex
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/instrument-operations#get-last-instrument-index)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-instrument-index)
 
 ```ts
 function getLastInstrumentIndex(
@@ -212,7 +212,7 @@ structured `instrument` identity.
 
 ## renameInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/instrument-operations#rename-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#rename-instrument)
 
 ```ts
 export interface RenameInstrumentInput {
@@ -231,7 +231,7 @@ await renameInstrument(briosa, { instrument, newName: "Tracker 1" });
 
 ## getInstrumentIdFromName
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-id-from-name)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-id-from-name)
 
 ```ts
 export interface GetInstrumentIdFromNameInput {
@@ -249,7 +249,7 @@ const instrument = await getInstrumentIdFromName(briosa, { name: "Tracker 1" });
 
 ## getInstrumentModel
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-model)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-model)
 
 ```ts
 export interface GetInstrumentModelInput {
@@ -269,7 +269,7 @@ Returns the MP `Name` and `Model` strings.
 
 ## moveInstrumentToAnotherCollection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/instrument-operations#move-instrument-to-another-collection)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-instrument-to-another-collection)
 
 ```ts
 export interface MoveInstrumentToAnotherCollectionInput {
@@ -288,7 +288,7 @@ await moveInstrumentToAnotherCollection(briosa, { instrument, collectionName });
 
 ## saveInstrumentConfiguration
 
-[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#save-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#save-instrument-configuration)
 
 ```ts
 export interface SaveInstrumentConfigurationInput {
@@ -307,7 +307,7 @@ await saveInstrumentConfiguration(briosa, { instrument, configurationFile });
 
 ## loadInstrumentConfiguration
 
-[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#load-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#load-instrument-configuration)
 
 ```ts
 export interface LoadInstrumentConfigurationInput {
@@ -326,7 +326,7 @@ await loadInstrumentConfiguration(briosa, { instrument, configurationFile });
 
 ## exportInstrumentHistoryToXmlFile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/instrument-operations#export-instrument-history-to-xml-file)
+[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#export-instrument-history-to-xml-file)
 
 ```ts
 export interface ExportInstrumentHistoryToXmlFileInput {
@@ -350,7 +350,7 @@ uncertain work.
 
 ## pointAtTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/instrument-operations#point-at-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#point-at-target)
 
 ```ts
 export interface PointAtTargetInput {
@@ -366,7 +366,7 @@ await pointAtTarget(briosa, { instrument, targetId });
 
 ## measureSinglePointHere
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/instrument-operations#measure-single-point-here)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-single-point-here)
 
 ```ts
 export interface MeasureSinglePointHereInput {
@@ -385,7 +385,7 @@ await measureSinglePointHere(briosa, { instrument, targetId });
 
 ## getCurrentInstrumentPositionUpdate
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/instrument-operations#get-current-instrument-position-update)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-instrument-position-update)
 
 ```ts
 export interface GetCurrentInstrumentPositionUpdateInput {
@@ -408,7 +408,7 @@ coordinate modes.
 
 ## buildTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/instrument-operations#build-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#build-target)
 
 ```ts
 export interface BuildTargetInput {
@@ -428,7 +428,7 @@ An omitted tolerance disables all component and magnitude checks at zero.
 
 ## measureExistingSinglePoint
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point)
 
 ```ts
 export interface MeasureExistingSinglePointInput {
@@ -454,7 +454,7 @@ const point = await measureExistingSinglePoint(briosa, {
 
 ## measureExistingSinglePointManualGuide
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-manual-guide)
 
 ```ts
 function measureExistingSinglePointManualGuide(
@@ -472,7 +472,7 @@ const point = await measureExistingSinglePointManualGuide(briosa, {
 
 ## measureExistingSinglePointAndCompare
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-and-compare)
 
 ```ts
 export interface MeasureExistingSinglePointAndCompareInput
@@ -498,7 +498,7 @@ resulting-point outputs. `tolerance` defaults to `0.0`, meaning none.
 
 ## setProbeOffsetFrameOnline
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
 
 ```ts
 export interface SetProbeOffsetFrameOnlineInput {
@@ -523,7 +523,7 @@ Defaults are face ID `0`, an empty measure-profile name, and 15 seconds.
 
 ## setProbeOffsetFrameOffline
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
 
 ```ts
 export interface SetProbeOffsetFrameOfflineInput {
@@ -550,7 +550,7 @@ await setProbeOffsetFrameOffline(briosa, {
 
 ## stopActiveMeasurementMode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/instrument-operations#stop-active-measurement-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-active-measurement-mode)
 
 ```ts
 export interface StopActiveMeasurementModeInput {
@@ -572,7 +572,7 @@ and no uncertain operation is replayed automatically.
 
 ## enableDisableFrameSetScanModeAllInstruments
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
 
 ```ts
 export interface EnableDisableFrameSetScanModeAllInstrumentsInput {
@@ -592,7 +592,7 @@ Enablement defaults to `true`.
 
 ## enableDisableFrameSetScanModeByInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
 
 ```ts
 export interface EnableDisableFrameSetScanModeByInstrumentInput {
@@ -611,7 +611,7 @@ await enableDisableFrameSetScanModeByInstrument(briosa, { instrument });
 
 ## enableDisablePointSetScanMode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-point-set-scan-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-point-set-scan-mode)
 
 ```ts
 export interface EnableDisablePointSetScanModeInput {
@@ -630,7 +630,7 @@ await enableDisablePointSetScanMode(briosa, { instrument });
 
 ## addNewInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/instrument-operations#add-new-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-new-instrument)
 
 ```ts
 export interface AddNewInstrumentInput {
@@ -653,7 +653,7 @@ not substitute another instrument type.
 
 ## deleteInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/instrument-operations#delete-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-instrument)
 
 ```ts
 export interface DeleteInstrumentInput {
@@ -675,7 +675,7 @@ The defaults are no confirmation prompt and keeping resulting points.
 
 ## deleteMeasurements
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/instrument-operations#delete-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurements)
 
 ```ts
 export interface DeleteMeasurementsInput {
@@ -691,7 +691,7 @@ await deleteMeasurements(briosa, { instrument, pointName });
 
 ## deleteMeasurementObservation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#delete-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurement-observation)
 
 ```ts
 export interface DeleteMeasurementObservationInput {
@@ -711,7 +711,7 @@ await deleteMeasurementObservation(briosa, { pointName });
 
 ## moveMeasurementObservation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#move-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-measurement-observation)
 
 ```ts
 export interface MoveMeasurementObservationInput {
@@ -741,7 +741,7 @@ an unknown outcome.
 
 ## initiateServoGuide
 
-[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/instrument-operations#initiate-servo-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#initiate-servo-guide)
 
 ```ts
 export interface InitiateServoGuideInput {
@@ -766,7 +766,7 @@ empty string, and tolerance defaults to `0.0`.
 
 ## startTheodoliteInterface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/instrument-operations#start-theodolite-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-theodolite-interface)
 
 ```ts
 export interface StartTheodoliteInterfaceInput {
@@ -792,7 +792,7 @@ Briosa server address.
 
 ## startInstrumentInterface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#start-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-instrument-interface)
 
 ```ts
 export interface StartInstrumentInterfaceInput {
@@ -818,7 +818,7 @@ Boolean options all default to `false`.
 
 ## stopInstrumentInterface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#stop-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-instrument-interface)
 
 ```ts
 export interface StopInstrumentInterfaceInput {
@@ -836,7 +836,7 @@ await stopInstrumentInterface(briosa, { instrument });
 
 ## activateDeactivateInstrumentToolbar
 
-[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/instrument-operations#activatedeactivate-instrument-toolbar)
+[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#activatedeactivate-instrument-toolbar)
 
 ```ts
 export interface ActivateDeactivateInstrumentToolbarInput {
@@ -858,7 +858,7 @@ deactivate it.
 
 ## verifyInstrumentConnection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/instrument-operations#verify-instrument-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#verify-instrument-connection)
 
 ```ts
 export interface VerifyInstrumentConnectionInput {
@@ -879,7 +879,7 @@ Briosa's SA SDK connection state.
 
 ## configureAndMeasure
 
-[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/instrument-operations#configure-and-measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#configure-and-measure)
 
 ```ts
 export interface ConfigureAndMeasureInput {
@@ -906,7 +906,7 @@ it does not remove the call deadline or Briosa worker watchdog.
 
 ## measure
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/instrument-operations#measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure)
 
 ```ts
 export interface MeasureInput {
@@ -927,7 +927,7 @@ validate a parallel measurement-state model.
 
 ## setXyzReferenceFrameInstrumentBaseAnchorFrame
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
 
 ```ts
 export interface SetXyzReferenceFrameInstrumentBaseAnchorFrameInput {
@@ -951,7 +951,7 @@ await setXyzReferenceFrameInstrumentBaseAnchorFrame(briosa, {
 
 ## dockInstrumentInterface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#dock-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dock-instrument-interface)
 
 ```ts
 export interface DockInstrumentInterfaceInput {
@@ -974,7 +974,7 @@ whose completion is unknown.
 
 ## locateInstrumentRefTieIn
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-ref-tie-in)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-ref-tie-in)
 
 ```ts
 export interface LocateInstrumentRefTieInInput {
@@ -1003,7 +1003,7 @@ automatic measurement workflow and its intermediate state.
 
 ## locateInstrumentGroupToSurfaceQuickFit
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-group-to-surface-quick-fit)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
 ```ts
 export interface LocateInstrumentGroupToSurfaceQuickFitInput {
@@ -1035,7 +1035,7 @@ Surface. The additional-object iterable defaults empty.
 
 ## multiMeasurementInitiate
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-initiate)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-initiate)
 
 ```ts
 export interface MultiMeasurementInitiateInput {
@@ -1058,7 +1058,7 @@ value, and `waitForCompletion` defaults to `false`.
 
 ## multiMeasurementStop
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-stop)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-stop)
 
 ```ts
 export interface MultiMeasurementStopInput {
@@ -1079,7 +1079,7 @@ initiation call.
 
 ## alignLaserProjector
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/instrument-operations#align-laser-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-laser-projector)
 
 ```ts
 export interface AlignLaserProjectorInput {
@@ -1100,7 +1100,7 @@ await alignLaserProjector(briosa, { instrument, group });
 
 ## locateInstrumentsUsmn
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/instrument-operations#locate-instruments-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instruments-usmn)
 
 ```ts
 export interface LocateInstrumentsUsmnInput {
@@ -1137,7 +1137,7 @@ the excluded-group iterable defaults empty, and `showUsmnDialog` defaults to
 
 ## createTemplatedInstrumentUsmn
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/instrument-operations#create-templated-instrument-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-templated-instrument-usmn)
 
 ```ts
 export interface CreateTemplatedInstrumentUsmnInput {
@@ -1177,7 +1177,7 @@ and are never automatically replayed after an unknown outcome.
 
 ## locateInstrumentBestFitGroupToGroup
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---group-to-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---group-to-group)
 
 ```ts
 export interface LocateInstrumentBestFitGroupToGroupInput {
@@ -1215,7 +1215,7 @@ report omitted by default.
 
 ## locateInstrumentBestFitNominalGeometry
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---nominal-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---nominal-geometry)
 
 ```ts
 export interface LocateInstrumentBestFitNominalGeometryInput {
@@ -1253,7 +1253,7 @@ fields match the group-to-group operation.
 
 ## getInstrumentTransform
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-transform)
 
 ```ts
 export interface GetInstrumentTransformInput {
@@ -1277,7 +1277,7 @@ const transform = await getInstrumentTransform(briosa, {
 
 ## setInstrumentTransform
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-transform)
 
 ```ts
 export interface SetInstrumentTransformInput {
@@ -1304,7 +1304,7 @@ Animation steps default to `0`.
 
 ## getTrackerEdmTheodoliteUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-trackeredm-theodolite-uncertainties)
 
 ```ts
 export interface GetTrackerEdmTheodoliteUncertaintiesInput {
@@ -1328,7 +1328,7 @@ linear thresholds use current SA job units.
 
 ## setTrackerEdmTheodoliteUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-trackeredm-theodolite-uncertainties)
 
 ```ts
 export interface SetTrackerEdmTheodoliteUncertaintiesInput {
@@ -1355,7 +1355,7 @@ order. The server preserves the exact exported phi argument labels.
 
 ## getPcmmInstrumentXyzUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
 
 ```ts
 export interface GetPcmmInstrumentXyzUncertaintiesInput {
@@ -1376,7 +1376,7 @@ const uncertainties = await getPcmmInstrumentXyzUncertainties(
 
 ## setPcmmInstrumentXyzUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
 
 ```ts
 export interface SetPcmmInstrumentXyzUncertaintiesInput {
@@ -1400,7 +1400,7 @@ All values default to `0.001`. The server binds `yUncertainty` to the exported
 
 ## getXyzInstrumentUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-xyz-instrument-uncertainties)
 
 ```ts
 export interface GetXyzInstrumentUncertaintiesInput {
@@ -1420,7 +1420,7 @@ const uncertainties = await getXyzInstrumentUncertainties(briosa, {
 
 ## setXyzInstrumentUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-instrument-uncertainties)
 
 ```ts
 export interface SetXyzInstrumentUncertaintiesInput {
@@ -1445,7 +1445,7 @@ automatically replayed after an unknown outcome.
 
 ## guideObjectsIn6dBasedOnPointMeasurements
 
-[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
 
 ```ts
 export interface GuideObjectsIn6dBasedOnPointMeasurementsInput {
@@ -1467,7 +1467,7 @@ function guideObjectsIn6dBasedOnPointMeasurements(
 
 ## moveObjectsIn6dUsingInstrumentUpdates
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/instrument-operations#move-objects-in-6d-using-instrument-updates)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-objects-in-6d-using-instrument-updates)
 
 ```ts
 export interface MoveObjectsIn6dUsingInstrumentUpdatesInput {
@@ -1485,7 +1485,7 @@ function moveObjectsIn6dUsingInstrumentUpdates(
 
 ## alignTwoTargetsWithAxisWcfX
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/instrument-operations#align-two-targets-with-axis-wcf---x)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-two-targets-with-axis-wcf---x)
 
 ```ts
 export interface AlignTwoTargetsWithAxisWcfXInput {
@@ -1505,7 +1505,7 @@ function alignTwoTargetsWithAxisWcfX(
 
 ## getInstrumentInterfaceResponseTimeout
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-interface-response-timeout)
 
 ```ts
 function getInstrumentInterfaceResponseTimeout(
@@ -1519,7 +1519,7 @@ The result is expressed in seconds.
 
 ## setInstrumentInterfaceResponseTimeout
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-interface-response-timeout)
 
 ```ts
 function setInstrumentInterfaceResponseTimeout(
@@ -1534,7 +1534,7 @@ function setInstrumentInterfaceResponseTimeout(
 
 ## getCurrentTrappingStatus
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/instrument-operations#get-current-trapping-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-trapping-status)
 
 ```ts
 function getCurrentTrappingStatus(
@@ -1549,7 +1549,7 @@ const status = await getCurrentTrappingStatus(briosa);
 
 ## waitForTrappingToComplete
 
-[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
+[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#wait-for-trapping-to-complete)
 
 ```ts
 function waitForTrappingToComplete(
@@ -1563,7 +1563,7 @@ wait stopped.
 
 ## jumpInstrumentToNewLocation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/instrument-operations#jump-instrument-to-new-location)
+[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#jump-instrument-to-new-location)
 
 ```ts
 export interface JumpInstrumentToNewLocationInput {
@@ -1582,7 +1582,7 @@ Hiding defaults to `false`.
 
 ## quickAlign
 
-[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/instrument-operations#quick-align)
+[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#quick-align)
 
 ```ts
 export interface QuickAlignInput {
@@ -1605,7 +1605,7 @@ leaves length validation to SA.
 
 ## alignCloudToCad
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/instrument-operations#align-cloud-to-cad)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-cloud-to-cad)
 
 ```ts
 export interface AlignCloudToCadInput {
@@ -1630,7 +1630,7 @@ replayed.
 
 ## getInstrumentWeatherSetting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-weather-setting)
 
 ```ts
 export interface GetInstrumentWeatherSettingInput {
@@ -1651,7 +1651,7 @@ reports whether the values were set automatically.
 
 ## setInstrumentWeatherSetting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-weather-setting)
 
 ```ts
 export interface SetInstrumentWeatherSettingInput {
@@ -1681,7 +1681,7 @@ ignores them.
 
 ## getInstrumentPartTemperature
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-part-temperature)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-part-temperature)
 
 ```ts
 export interface GetInstrumentPartTemperatureInput {
@@ -1701,7 +1701,7 @@ const partTemperatureFahrenheit = await getInstrumentPartTemperature(briosa, {
 
 ## computeCteScaleFactor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#compute-cte-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#compute-cte-scale-factor)
 
 ```ts
 export interface ComputeCteScaleFactorInput {
@@ -1728,7 +1728,7 @@ Fahrenheit-based MP operation.
 
 ## setMultiplyInstrumentScaleFactor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-multiply-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-multiply-instrument-scale-factor-caution)
 
 ```ts
 export interface SetMultiplyInstrumentScaleFactorInput {
@@ -1754,7 +1754,7 @@ default is `0.0`, and Briosa adds no confirmation or range check.
 
 ## setAbsoluteInstrumentScaleFactor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-absolute-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
 ```ts
 export interface SetAbsoluteInstrumentScaleFactorInput {
@@ -1780,7 +1780,7 @@ This replaces the current scale; it does not multiply it. The MP default is
 
 ## getInstrumentScaleFactor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-scale-factor)
 
 ```ts
 export interface GetInstrumentScaleFactorInput {
@@ -1798,7 +1798,7 @@ const scaleFactor = await getInstrumentScaleFactor(briosa, { instrument });
 
 ## transformInstrumentFrameToFrame
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument---frame-to-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument---frame-to-frame)
 
 ```ts
 export interface TransformInstrumentFrameToFrameInput {
@@ -1826,7 +1826,7 @@ Both object identities must be existing SA Frames. Animation steps default to
 
 ## transformInstrumentByDelta
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument-by-delta)
 
 ```ts
 export interface TransformInstrumentByDeltaInput {
@@ -1846,7 +1846,7 @@ await transformInstrumentByDelta(briosa, { instrument, deltaTransform });
 
 ## transformMultipleInstrumentsByDelta
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-multiple-instruments-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-multiple-instruments-by-delta)
 
 ```ts
 export interface TransformMultipleInstrumentsByDeltaInput {
@@ -1873,7 +1873,7 @@ replays an unknown outcome.
 
 ## instrumentOperationalCheck
 
-[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/instrument-operations#instrument-operational-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#instrument-operational-check)
 
 ```ts
 export interface InstrumentOperationalCheckInput {
@@ -1895,7 +1895,7 @@ instrument-interface-specific command string.
 
 ## getNumberOfObservationsOnTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-number-of-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-number-of-observations-on-target)
 
 ```ts
 export interface GetNumberOfObservationsOnTargetInput {
@@ -1915,7 +1915,7 @@ const observationCount = await getNumberOfObservationsOnTarget(briosa, {
 
 ## getInstrumentsWithObservationsOnTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-instruments-with-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instruments-with-observations-on-target)
 
 ```ts
 export interface GetInstrumentsWithObservationsOnTargetInput {
@@ -1937,7 +1937,7 @@ The result preserves SA's order.
 
 ## getTargetsMeasuredByInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-targets-measured-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-targets-measured-by-instrument)
 
 ```ts
 export interface GetTargetsMeasuredByInstrumentInput {
@@ -1955,7 +1955,7 @@ const targets = await getTargetsMeasuredByInstrument(briosa, { instrument });
 
 ## setObservationStatus
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/instrument-operations#set-observation-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-status)
 
 ```ts
 export interface SetObservationStatusInput {
@@ -1981,7 +1981,7 @@ Observation indexes are zero-based. The defaults are `0` and `false`.
 
 ## getObservationInfo
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/instrument-operations#get-observation-info)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-observation-info)
 
 ```ts
 export interface GetObservationInfoInput {
@@ -2008,7 +2008,7 @@ parse `timestamp` and `infoData`. SA uses `0` for unavailable RMS error and
 
 ## fabricateObservations
 
-[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/instrument-operations#fabricate-observations)
+[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#fabricate-observations)
 
 ```ts
 export interface FabricateObservationsInput {
@@ -2036,7 +2036,7 @@ or rollback.
 
 ## getObscuredPointsFromInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-obscured-points-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-obscured-points-from-instrument)
 
 ```ts
 export interface GetObscuredPointsFromInstrumentInput {
@@ -2061,7 +2061,7 @@ The result preserves SA's order. Shot-line display defaults to disabled.
 
 ## getInstrumentTargetsAndModeProfiles
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targets-and-modeprofiles)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targets-and-modeprofiles)
 
 ```ts
 export interface GetInstrumentTargetsAndModeProfilesInput {
@@ -2084,7 +2084,7 @@ the exact SA 2026.1 `Instrument to get` binding and does not zip them.
 
 ## setInstrumentMeasurementModeProfile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-measurement-modeprofile)
 
 ```ts
 export interface SetInstrumentMeasurementModeProfileInput {
@@ -2110,7 +2110,7 @@ an unknown outcome.
 
 ## setInstrumentGroupAndTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-group-and-target)
 
 ```ts
 export interface SetInstrumentGroupAndTargetInput {
@@ -2132,7 +2132,7 @@ may ignore the target portion; Briosa does not retain the setting.
 
 ## setInstrumentTargeting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-targeting)
 
 ```ts
 export interface SetInstrumentTargetingInput {
@@ -2151,7 +2151,7 @@ await setInstrumentTargeting(briosa, { instrument, targetingName });
 
 ## getInstrumentMeasurementModeProfile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-measurement-modeprofile)
 
 ```ts
 export interface GetInstrumentMeasurementModeProfileInput {
@@ -2174,7 +2174,7 @@ This returns the active value, not the available lists returned by
 
 ## getInstrumentGroupAndTarget
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-group-and-target)
 
 ```ts
 export interface GetInstrumentGroupAndTargetInput {
@@ -2192,7 +2192,7 @@ const point = await getInstrumentGroupAndTarget(briosa, { instrument });
 
 ## getInstrumentTargeting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targeting)
 
 ```ts
 export interface GetInstrumentTargetingInput {
@@ -2210,7 +2210,7 @@ const targetingName = await getInstrumentTargeting(briosa, { instrument });
 
 ## setTargetComputationOptions
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/instrument-operations#set-target-computation-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-target-computation-options)
 
 ```ts
 export interface SetTargetComputationOptionsInput {
@@ -2233,7 +2233,7 @@ otherwise manage it.
 
 ## setObservationMirrorCubeShotFace
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/instrument-operations#set-observation-mirror-cube-shot-face)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-mirror-cube-shot-face)
 
 ```ts
 export interface SetObservationMirrorCubeShotFaceInput {
@@ -2262,7 +2262,7 @@ no range check.
 
 ## setObservationCollimationShotOptions
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/instrument-operations#set-observation-collimation-shot-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-collimation-shot-options)
 
 ```ts
 export interface SetObservationCollimationShotOptionsInput {
@@ -2291,7 +2291,7 @@ the exact malformed SDK argument label internally.
 
 ## collimation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/instrument-operations#collimation)
+[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#collimation)
 
 ```ts
 export interface CollimationInput {
@@ -2327,7 +2327,7 @@ omitted values to SA as empty MP identities and adds no preflight validation.
 
 ## getInstrumentTargetStatus
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-target-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-target-status)
 
 ```ts
 export interface GetInstrumentTargetStatusInput {
@@ -2349,7 +2349,7 @@ an unknown outcome.
 
 ## makeSurfaceFaceListFromPointProximity
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-surface-face-list-from-point-proximity)
 
 ```ts
 function makeSurfaceFaceListFromPointProximity(
@@ -2368,7 +2368,7 @@ The returned value is opaque and can be passed to other surface-face methods.
 
 ## scanWithinPerimeter
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/instrument-operations#scan-within-perimeter)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-within-perimeter)
 
 ```ts
 export interface ScanWithinPerimeterInput {
@@ -2400,7 +2400,7 @@ SA 2026.1 contract.
 
 ## editScanPerimeterProfile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/instrument-operations#edit-scan-perimeter-profile)
+[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edit-scan-perimeter-profile)
 
 ```ts
 export interface EditScanPerimeterProfileInput {
@@ -2424,7 +2424,7 @@ function editScanPerimeterProfile(
 
 ## getEstimatedScanTime
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/instrument-operations#get-estimated-scan-time)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-estimated-scan-time)
 
 ```ts
 function getEstimatedScanTime(
@@ -2445,7 +2445,7 @@ This is SA's raw value; the available documentation does not identify its unit.
 
 ## constructPerimetersFromSurfaceFaceList
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-perimeters-from-surface-face-list)
 
 ```ts
 function constructPerimetersFromSurfaceFaceList(
@@ -2461,7 +2461,7 @@ The client passes `surfaceFaces.value` and returns the scan and exclusion lists.
 
 ## scanCadFaces
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/instrument-operations#scan-cad-faces)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-cad-faces)
 
 ```ts
 export interface ScanCadFacesInput {
@@ -2485,7 +2485,7 @@ Both flags default to `true`.
 
 ## edgeScanMeasurement
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/instrument-operations#edge-scan-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edge-scan-measurement)
 
 ```ts
 export interface EdgeScanMeasurementInput {
@@ -2506,7 +2506,7 @@ function edgeScanMeasurement(
 
 ## trackTapeMeasurement
 
-[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/instrument-operations#track-tape-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#track-tape-measurement)
 
 ```ts
 export interface TrackTapeMeasurementInput {
@@ -2529,7 +2529,7 @@ function trackTapeMeasurement(
 
 ## autoMeasurePoints
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-points)
 
 ```ts
 export interface AutoMeasurePointsInput {
@@ -2557,7 +2557,7 @@ separately configure SA's global interactivity level to suppress it.
 
 ## autoMeasureVectors
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-vectors)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-vectors)
 
 ```ts
 export interface AutoMeasureVectorsInput {
@@ -2584,7 +2584,7 @@ no workflow state, replay, or preflight behavior.
 
 ## autoMeasureSurfaceVectorIntersections
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-surface-vector-intersections)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-surface-vector-intersections)
 
 ```ts
 export interface AutoMeasureSurfaceVectorIntersectionsInput {
@@ -2605,7 +2605,7 @@ Waiting defaults to `true`.
 
 ## autoMeasureSpecifiedGeometry
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-specified-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-specified-geometry)
 
 ```ts
 export interface AutoMeasureSpecifiedGeometryInput {
@@ -2626,7 +2626,7 @@ Waiting defaults to `false`.
 
 ## autoMeasureBatchOfFeatures
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-batch-of-features)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-batch-of-features)
 
 ```ts
 export interface AutoMeasureBatchOfFeaturesInput {
@@ -2647,7 +2647,7 @@ function autoMeasureBatchOfFeatures(
 
 ## autoCorrespondClosestPoint
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-closest-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-closest-point)
 
 ```ts
 export interface AutoCorrespondClosestPointInput {
@@ -2668,7 +2668,7 @@ When waiting is false, SA may continue measuring after the promise resolves.
 
 ## closeAutoCorrespondClosestPointDialog
 
-[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
+[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#close-auto-correspond-closest-point-dialog)
 
 ```ts
 function closeAutoCorrespondClosestPointDialog(
@@ -2684,7 +2684,7 @@ The caller does not need to have started the running workflow.
 
 ## autoCorrespondWithProximityTrigger
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-with-proximity-trigger)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-with-proximity-trigger)
 
 ```ts
 export interface AutoCorrespondWithProximityTriggerInput {
@@ -2713,7 +2713,7 @@ the MP command exactly.
 
 ## constructMirrorFromPlane
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-plane)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-plane)
 
 ```ts
 export interface ConstructMirrorFromPlaneInput {
@@ -2731,7 +2731,7 @@ function constructMirrorFromPlane(
 
 ## constructMirrorFromTwoPoints
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-two-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-two-points)
 
 ```ts
 export interface ConstructMirrorFromTwoPointsInput {
@@ -2753,7 +2753,7 @@ Sending the mirror defaults to `true`.
 
 ## driftCheck
 
-[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/instrument-operations#drift-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#drift-check)
 
 ```ts
 export interface DriftCheckInput {
@@ -2784,7 +2784,7 @@ Check dialog.
 
 ## measureNominalFeature
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/instrument-operations#measure-nominal-feature)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-nominal-feature)
 
 ```ts
 export interface MeasureNominalFeatureInput {
@@ -2802,7 +2802,7 @@ function measureNominalFeature(
 
 ## startGdtInspectionDesign
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-design)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-design)
 
 ```ts
 export interface StartGdtInspectionDesignInput {
@@ -2822,7 +2822,7 @@ The filter defaults to `"ALL"`; the other values are `"CHECKS"` and
 
 ## startGdtInspectionRehearse
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-rehearse)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-rehearse)
 
 ```ts
 export interface StartGdtInspectionRehearseInput {
@@ -2839,7 +2839,7 @@ function startGdtInspectionRehearse(
 
 ## startGdtInspection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection)
 
 ```ts
 export interface StartGdtInspectionInput {
@@ -2857,7 +2857,7 @@ function startGdtInspection(
 
 ## getInspectionVerificationMode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-inspection-verification-mode)
 
 ```ts
 function getInspectionVerificationMode(
@@ -2868,7 +2868,7 @@ function getInspectionVerificationMode(
 
 ## setInspectionVerificationMode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#set-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-inspection-verification-mode)
 
 ```ts
 export interface SetInspectionVerificationModeInput {
@@ -2887,7 +2887,7 @@ Briosa does not restore it.
 
 ## setRemeasureFailedChecksOnly
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/instrument-operations#set-remeasure-failed-checks-only)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-remeasure-failed-checks-only)
 
 ```ts
 export interface SetRemeasureFailedChecksOnlyInput {
@@ -2906,7 +2906,7 @@ adds no confirmation or rollback.
 
 ## associateObjectsWithInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/instrument-operations#associate-objects-with-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#associate-objects-with-instrument)
 
 ```ts
 export interface AssociateObjectsWithInstrumentInput {
@@ -2923,7 +2923,7 @@ function associateObjectsWithInstrument(
 
 ## disassociateObjectsFromInstrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#disassociate-objects-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#disassociate-objects-from-instrument)
 
 ```ts
 export interface DisassociateObjectsFromInstrumentInput {
@@ -2941,7 +2941,7 @@ The exact 2026.1 binding intentionally has no instrument field.
 
 ## makeCollectionObjectNameRefListFromObjectsAssociatedWithInstruments
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
 ```ts
 export interface MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsInput {
@@ -2959,7 +2959,7 @@ This queries live SA association state and preserves the returned order.
 
 ## combinePointGroups
 
-[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/instrument-operations#combine-point-groups)
+[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#combine-point-groups)
 
 ```ts
 export interface CombinePointGroupsInput {
@@ -2976,7 +2976,7 @@ function combinePointGroups(
 
 ## dissectPointGroup
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/instrument-operations#dissect-point-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dissect-point-group)
 
 ```ts
 export interface DissectPointGroupInput {
@@ -2993,7 +2993,7 @@ function dissectPointGroup(
 
 ## synchronizedMeasurementMasterSlave
 
-[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/instrument-operations#synchronized-measurement-masterslave)
+[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#synchronized-measurement-masterslave)
 
 ```ts
 export interface SynchronizedMeasurementMasterSlaveInput {
@@ -3017,7 +3017,7 @@ deadline or cancellation does not prove that SA stopped the measurement.
 
 ## createNewDynamicReference
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/instrument-operations#create-new-dynamic-reference)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-new-dynamic-reference)
 
 ```ts
 export interface CreateNewDynamicReferenceInput {
@@ -3037,7 +3037,7 @@ SA documents this operation for AICON/Hexagon MoveInspect systems.
 
 ## calculateTcpFixtureUncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#calculate-tcp-fixture-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#calculate-tcp-fixture-uncertainties)
 
 ```ts
 export interface CalculateTcpFixtureUncertaintiesInput {
@@ -3057,7 +3057,7 @@ An omitted transform uses the identity transform.
 
 ## constructTcpFixture
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#construct-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-tcp-fixture)
 
 ```ts
 export interface ConstructTcpFixtureInput {
@@ -3077,7 +3077,7 @@ Threshold and replacement default to `0.0` and `false`.
 
 ## addNominalPointToTcpFixture
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#add-nominal-point-to-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-nominal-point-to-tcp-fixture)
 
 ```ts
 export interface AddNominalPointToTcpFixtureInput {
@@ -3103,7 +3103,7 @@ All six covariance terms default to `0.0`.
 
 ## getLastSolvedTcpFixtureUncertaintyCovarianceMatrix
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
 
 ```ts
 export interface GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixInput {
@@ -3119,7 +3119,7 @@ function getLastSolvedTcpFixtureUncertaintyCovarianceMatrix(
 
 ## setInstrumentBaseUncertaintyCovarianceMatrixWrtBase
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
 ```ts
 export interface SetInstrumentBaseUncertaintyCovarianceMatrixInput {
@@ -3136,7 +3136,7 @@ function setInstrumentBaseUncertaintyCovarianceMatrixWrtBase(
 
 ## setInstrumentBaseUncertaintyCovarianceMatrixWrtWorld
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```ts
 function setInstrumentBaseUncertaintyCovarianceMatrixWrtWorld(
@@ -3151,7 +3151,7 @@ matrix shape.
 
 ## getInstrumentBaseUncertaintyCovarianceMatrixWrtWorld
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```ts
 export interface GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldInput {
@@ -3171,7 +3171,7 @@ outcome.
 
 ## constructMeasuredPointUncertaintyEllipsoids
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
 
 ```ts
 export interface ConstructMeasuredPointUncertaintyEllipsoidsInput {
@@ -3187,7 +3187,7 @@ function constructMeasuredPointUncertaintyEllipsoids(
 
 ## getWrtlChannelAndStatus
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/instrument-operations#get-wrtl-channel-and-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-wrtl-channel-and-status)
 
 ```ts
 export interface GetWrtlChannelAndStatusInput {
@@ -3203,7 +3203,7 @@ function getWrtlChannelAndStatus(
 
 ## setWrtlChannel
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/instrument-operations#set-wrtl-channel)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-wrtl-channel)
 
 ```ts
 export interface SetWrtlChannelInput {

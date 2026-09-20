@@ -1,33 +1,33 @@
 ---
 title: Construction Operations in SA 2024.1.0508.5
 sidebar_label: Construction Operations
-description: Reviewed Construction Operations commands and planned Briosa support for SpatialAnalyzer 2024.1.0508.5.
+description: Reviewed Construction Operations commands and released Briosa support for SpatialAnalyzer 2024.1.0508.5.
 ---
 
 # Construction Operations
 
 **SA 2024.1.0508.5 · Construction Operations**
 
-This group contains 14 reviewed command entries. **Next** means selected
-for a future 2024 implementation; no 2024 Briosa server is released. Follow a
+This group contains 14 reviewed command entries. **Current** means implemented
+in Briosa Server 0.7.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) | **Next** | At Risk — no 2024 runtime validation |
-| [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) | **Next** | At Risk — no 2024 runtime validation |
-| [Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) | **Next** | At Risk — no 2024 runtime validation |
-| [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) | **Next** | At Risk — no 2024 runtime validation |
-| [Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) | **Next** | At Risk — no 2024 runtime validation |
-| [Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) | **Next** | At Risk — no 2024 runtime validation |
-| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | **Next** | Evidence review — no 2024 runtime validation |
-| [Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) | **Next** | At Risk — no 2024 runtime validation |
-| [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) | **Next** | At Risk — no 2024 runtime validation |
-| [Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) | **Next** | At Risk — no 2024 runtime validation |
-| [Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) | **Next** | At Risk — no 2024 runtime validation |
-| [Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) | **Next** | At Risk — no 2024 runtime validation |
-| [Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) | **Next** | At Risk — no 2024 runtime validation |
-| [Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) | **Next** | At Risk — no 2024 runtime validation |
+| [Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) | **Current** | At Risk — no 2024 runtime validation |
+| [Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) | **Current** | At Risk — no 2024 runtime validation |
+| [Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) | **Current** | At Risk — no 2024 runtime validation |
+| [Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) | **Current** | At Risk — no 2024 runtime validation |
+| [Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) | **Current** | At Risk — no 2024 runtime validation |
+| [Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) | **Current** | At Risk — no 2024 runtime validation |
+| [Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) | **Current** | Evidence review — no 2024 runtime validation |
+| [Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) | **Current** | At Risk — no 2024 runtime validation |
+| [Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) | **Current** | At Risk — no 2024 runtime validation |
+| [Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) | **Current** | At Risk — no 2024 runtime validation |
+| [Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) | **Current** | At Risk — no 2024 runtime validation |
+| [Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) | **Current** | At Risk — no 2024 runtime validation |
+| [Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) | **Current** | At Risk — no 2024 runtime validation |
+| [Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) | **Current** | At Risk — no 2024 runtime validation |
 
 ## Subgroups
 

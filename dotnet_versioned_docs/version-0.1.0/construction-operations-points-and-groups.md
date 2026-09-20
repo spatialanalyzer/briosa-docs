@@ -435,4 +435,4 @@ Console.WriteLine(result.RmsDeviation);
 Callers own state across multiple calls. A deadline or cancellation on an
 interactive operation does not prove the SA interaction stopped.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/construction-operations-points-and-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/0.5.1/construction-operations-points-and-groups)
