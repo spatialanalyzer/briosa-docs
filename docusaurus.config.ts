@@ -270,6 +270,12 @@ const config: Config = {
         },
         ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
         {
+          href: 'https://discord.gg/kd2N3BmDNv',
+          label: 'Discord',
+          position: 'right',
+          'aria-label': 'Open SA Discord',
+        },
+        {
           href: 'https://github.com/spatialanalyzer/briosa',
           position: 'right',
           className: 'header-github-link',
@@ -318,6 +324,7 @@ const config: Config = {
         {
           title: 'Community',
           items: [
+            {label: 'Open SA Discord', href: 'https://discord.gg/kd2N3BmDNv'},
             {label: 'Discussions', href: 'https://github.com/orgs/spatialanalyzer/discussions'},
             {label: 'Report a Docs Issue', href: 'https://github.com/spatialanalyzer/briosa-docs/issues/new'},
           ],
