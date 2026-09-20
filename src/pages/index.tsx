@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -8,21 +9,21 @@ import styles from './index.module.css';
 
 const products = [
   {
-    release: 'Installer 0.2.2',
+    release: 'Installer 0.3.0',
     title: 'Briosa Installer',
     detail: 'Install, update, verify, and repair Briosa server packages for your exact SpatialAnalyzer release.',
     href: '/install',
     action: 'Install Briosa',
   },
   {
-    release: 'Server 0.6.1',
+    release: 'Server 0.7.0',
     title: 'Briosa Server',
     detail: 'Run read-only and mutating MP commands through a strongly typed local gRPC API.',
     href: '/api/grpc',
     action: 'Explore the Server API',
   },
   {
-    release: 'Included with Server 0.6.1',
+    release: 'Included with Server 0.7.0',
     title: 'Briosa Control Center',
     detail: 'Monitor server status and activity, and manage a local server and its SDK from the Windows tray.',
     href: '/docs/deployment/control-center',
@@ -76,11 +77,12 @@ function HomepageHeader() {
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>Briosa Documentation</p>
-            <Heading as="h1">SpatialAnalyzer integration, simplified.</Heading>
+            <Heading as="h1">Program SpatialAnalyzer with Briosa</Heading>
+            <p className={styles.tagline}>SpatialAnalyzer integration, simplified.</p>
             <p className={styles.lead}>
-              An open-source gRPC bridge to the SpatialAnalyzer SDK.
-              Automate measurement workflows with strongly typed MP commands
-              through a language-neutral API.
+              Briosa is an open-source gRPC bridge to the SpatialAnalyzer SDK.
+              Automate measurement workflows from C#, Python, or TypeScript
+              with strongly typed MP commands and a language-neutral API.
             </p>
             <div className={styles.actions}>
               <Link
@@ -108,7 +110,7 @@ function HomepageHeader() {
               height={568}
             />
             <p className={styles.cardLabel}>Supported SpatialAnalyzer</p>
-            <p className={styles.targetVersion}>SA 2026.1.0529.7</p>
+            <p className={styles.targetVersion}>SA 2024.1.0508.5<br />SA 2026.1.0529.7</p>
             <nav className={styles.heroLinks} aria-label="Start Building with Briosa">
               <Link to="/docs/getting-started/first-request">
                 <strong>Run Your First MP →</strong>
@@ -120,7 +122,7 @@ function HomepageHeader() {
               </Link>
               <Link to="/api">
                 <strong>Explore the Client APIs →</strong>
-                <span>.NET, Python, and JavaScript source references.</span>
+                <span>.NET, Python, and JavaScript API references.</span>
               </Link>
             </nav>
           </aside>
@@ -138,7 +140,7 @@ function Products() {
           <p className={styles.kicker}>Available Products</p>
           <Heading as="h2">Install, Run, and Connect</Heading>
           <p>
-            Released Windows tools for SpatialAnalyzer 2026.1.0529.7.
+            Released Windows tools for SpatialAnalyzer 2024.1.0508.5 and 2026.1.0529.7.
             The client, server, SDK, and SpatialAnalyzer run on the same machine.
           </p>
         </div>
@@ -154,15 +156,18 @@ function Products() {
         </div>
         <div className={styles.availabilityNotes}>
           <p>
-            First-party clients for .NET, Python, and JavaScript/TypeScript have
-            implemented source APIs. Their NuGet, PyPI, and npm packages are not
-            yet published. Browse the <Link to="/api">client references</Link>{' '}
-            for source-build guidance, or use standard gRPC tooling.
+            First-party clients for .NET, Python, and JavaScript/TypeScript are
+            available on NuGet, PyPI, and npm.{' '}
+            <Link to="/docs/getting-started/run-the-server#install-the-exact-target-client">
+              Install the client for your exact SpatialAnalyzer release
+            </Link>{' '}
+            and follow the <Link to="/docs/getting-started/first-request">first MP command examples</Link>.
           </p>
           <p>
-            Support for SA 2024.1.0508.5 is planned. Its{' '}
-            <Link to="/mp-command-catalog/2024.1.0508.5/overview">reviewed command catalog</Link>{' '}
-            is available; a server for that target has not been released.
+            The two SA targets have independent server and client packages.
+            Their supported commands and validation coverage differ; use the{' '}
+            <Link to="/mp-command-catalog">reviewed command catalog</Link>{' '}
+            and <Link to="/docs/releases">Release Status</Link> for target-specific details.
           </p>
           <p>
             Briosa ships v0.x releases while validation continues. See{' '}
@@ -271,8 +276,18 @@ function Disclaimer() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="SpatialAnalyzer Integration, Simplified"
-      description="Briosa exposes reviewed SpatialAnalyzer MP operations through strongly typed, language-neutral gRPC contracts.">
+      title="SpatialAnalyzer Automation and gRPC API"
+      description="Automate SpatialAnalyzer with Briosa, an open-source gRPC bridge. Explore C#, Python, and TypeScript examples, supported MP commands, and Windows setup.">
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Briosa',
+            url: 'https://briosa.dev/',
+          })}
+        </script>
+      </Head>
       <HomepageHeader />
       <main>
         <Products />

@@ -1,5 +1,6 @@
 ---
-title: Exact-Target Group Hierarchy
+title: SA 2024.1.0508.5 Group Hierarchy
+sidebar_label: Exact-Target Group Hierarchy
 description: SpatialAnalyzer 2024.1.0508.5 MP command groups and subgroups.
 ---
 

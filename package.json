@@ -10,8 +10,9 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "check": "npm run typecheck && npm run build && npm run check:search",
+    "check": "npm run typecheck && npm run build && npm run check:search && npm run check:seo",
     "check:search": "node --test search/crawler.test.cjs",
+    "check:seo": "node --test tests/seo.test.cjs",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"

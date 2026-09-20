@@ -1,6 +1,7 @@
 ---
-title: Briosa for JavaScript and TypeScript API
-description: Reference documentation for the Briosa JavaScript and TypeScript client library.
+title: SpatialAnalyzer JavaScript and TypeScript API
+sidebar_label: Briosa for JavaScript and TypeScript API
+description: Automate SpatialAnalyzer from Node.js with Briosa. Reference JavaScript and TypeScript client lifecycle, MP commands, typed results, and errors.
 slug: /
 ---
 

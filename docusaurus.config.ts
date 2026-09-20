@@ -41,6 +41,7 @@ const config: Config = {
           editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         },
         blog: false,
+        sitemap: {ignorePatterns: ['/search', '/search/']},
         theme: {customCss: './src/css/custom.css'},
       } satisfies Preset.Options,
     ],
@@ -161,6 +162,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    image: 'img/briosa-social.png',
     ...(searchEnabled && {
       algolia: {
         appId: algolia.appId!,
@@ -173,6 +175,9 @@ const config: Config = {
       },
     }),
     metadata: [
+      {property: 'og:site_name', content: 'Briosa'},
+      {property: 'og:image:alt', content: 'Briosa — SpatialAnalyzer integration, simplified.'},
+      {name: 'twitter:image:alt', content: 'Briosa — SpatialAnalyzer integration, simplified.'},
       {name: 'algolia-site-verification', content: 'ECFE6AF781A92A7F'},
       {
         name: 'description',

@@ -1,6 +1,7 @@
 ---
-title: Briosa for .NET API
-description: Reference documentation for the Briosa .NET client library.
+title: SpatialAnalyzer .NET API
+sidebar_label: Briosa for .NET API
+description: Use the Briosa .NET client to automate SpatialAnalyzer from C#. Reference client lifecycle, MP commands, typed results, and error handling.
 slug: /
 ---
 

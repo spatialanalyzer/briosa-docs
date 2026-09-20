@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
-title: Why Briosa?
+title: Program SpatialAnalyzer with Briosa
+sidebar_label: Why Briosa?
 description: Learn how Briosa brings familiar SpatialAnalyzer MP commands to the programming language and tools you already use.
 ---
 

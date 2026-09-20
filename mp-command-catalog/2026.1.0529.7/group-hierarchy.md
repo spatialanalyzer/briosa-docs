@@ -1,5 +1,6 @@
 ---
-title: Exact-Target Group Hierarchy
+title: SA 2026.1.0529.7 Group Hierarchy
+sidebar_label: Exact-Target Group Hierarchy
 description: SpatialAnalyzer MP root groups and subgroups catalogued for SA 2026.1.0529.7.
 ---
 
