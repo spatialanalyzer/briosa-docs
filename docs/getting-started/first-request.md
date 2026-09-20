@@ -1,6 +1,7 @@
 ---
-title: Run Your First MP Command
-description: Start a ready Briosa session and call a familiar SpatialAnalyzer MP command from a first-party client library.
+title: SpatialAnalyzer Programming in C#, Python, and TypeScript
+sidebar_label: Run Your First MP Command
+description: Run your first SpatialAnalyzer MP command with Briosa. Follow C#, Python, and TypeScript examples to start a session and read the working directory.
 ---
 
 import Tabs from '@theme/Tabs';

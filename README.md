@@ -214,6 +214,34 @@ snapshots for the SA 2026 API, with explicit links to the SA 2024 differences. D
 version and sidebar snapshots for each plugin instance. The site itself does
 not take a shared product version.
 
+## Search Engine Discovery
+
+`static/robots.txt` allows crawling and advertises the generated sitemap.
+Submit `https://briosa.dev/sitemap.xml` in the Google Search Console domain
+property after the first deployment and verify that its status is successful.
+Use URL Inspection for the homepage, introduction, installation guide, first
+request, API overview, and MP catalog. Request indexing for new or changed
+entry pages after verifying that the live URL can be indexed. A submission
+does not guarantee indexing or ranking; allow time for Google to process it.
+
+The docs metadata theme adds API language context to search titles while
+preserving MP headings, sidebar labels, and stable anchors. The breadcrumb
+wrapper normalizes overview URLs to the site's slash policy. The internal
+search page stays crawlable so Google can read its `noindex` directive, and it
+is excluded from the sitemap. Algolia's crawler configuration controls only
+on-site search and does not control Google indexing.
+
+`npm run check:seo` checks the built HTML, canonical and breadcrumb URLs,
+unique titles, site identity, social image, and search indexing policy. Run
+`npm run check` with all three public `ALGOLIA_*` variables to validate the
+search-enabled production site. The CI and deployment workflows run these
+checks using repository variables, without secrets.
+
+Review Search Console coverage and branded and SpatialAnalyzer-related
+impressions after changes have been processed. Keep exact-target catalog
+indexes and canonical command sections intact; do not replace useful
+version-specific content with blanket redirects or canonical links.
+
 ## Documentation boundary
 
 The [Briosa server repository](https://github.com/spatialanalyzer/briosa) is the

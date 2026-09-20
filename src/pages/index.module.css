@@ -46,6 +46,12 @@
   line-height: 1.75;
 }
 
+.tagline {
+  margin: 1.5rem 0 0;
+  color: var(--briosa-cyan);
+  font-size: 1.12rem;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;

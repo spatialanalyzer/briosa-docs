@@ -8,6 +8,7 @@ The directory structure preserves the original asset paths:
 - `colors.css`: the five approved brand colors.
 - `icons/favicon.svg`: browser icon.
 - `logos/briosa-horizontal-inverse.svg`: footer identity.
+- `logos/briosa-horizontal-tagline-inverse.svg`: source for the social preview.
 - `logos/briosa-stacked-inverse.svg`: homepage identity.
 - `suite/briosa-{docs,server,dotnet,python,js}-{color,inverse}.svg`:
   navigation and product reference identities.
@@ -21,3 +22,9 @@ and serves its own copies without fetching the brand repository or a font CDN.
 
 The approved slogan retains its exact wording and casing:
 “SpatialAnalyzer integration, simplified.”
+
+The site-owned `static/img/briosa-social.png` places the unchanged horizontal
+inverse lockup and slogan on the approved deep blue at 1200 × 630 pixels.
+To regenerate it, run `node scripts/render-social-card.cjs` with Sharp available,
+or set `BRIOSA_SHARP_MODULE` to a separately installed Sharp module directory.
+The PNG is committed; normal site builds do not require Sharp.

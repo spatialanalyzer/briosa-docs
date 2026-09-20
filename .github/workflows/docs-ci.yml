@@ -32,3 +32,5 @@ jobs:
         run: npm run build
       - name: Check search extraction
         run: npm run check:search
+      - name: Check search engine metadata
+        run: npm run check:seo

@@ -42,8 +42,8 @@ const references = [
 export default function ApiReference(): ReactNode {
   return (
     <Layout
-      title="API Reference"
-      description="Choose the Briosa gRPC or first-party client API reference.">
+      title="SpatialAnalyzer API Reference"
+      description="Explore Briosa APIs for SpatialAnalyzer automation: gRPC services and .NET, Python, and JavaScript/TypeScript client libraries.">
       <main className="container margin-vert--lg">
         <Heading as="h1">API Reference</Heading>
         <p>
