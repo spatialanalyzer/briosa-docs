@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## watch_point_to_point
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-point)
 
 ```python
 async def watch_point_to_point(
@@ -33,7 +33,7 @@ window or stopped the command, and Briosa never automatically replays it.
 
 ## watch_point_to_objects
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-objects)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-objects)
 
 ```python
 async def watch_point_to_objects(
@@ -54,7 +54,7 @@ async def watch_point_to_objects(
 
 ## watch_point_to_edge
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-edge)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-edge)
 
 ```python
 async def watch_point_to_edge(
@@ -79,7 +79,7 @@ Reference Objects `.
 
 ## watch_closest_point
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-closest-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-closest-point)
 
 ```python
 async def watch_closest_point(
@@ -101,7 +101,7 @@ async def watch_closest_point(
 
 ## watch_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-instrument)
 
 ```python
 async def watch_instrument(
@@ -119,7 +119,7 @@ async def watch_instrument(
 
 ## watch_point_to_point_with_view_zooming
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming)
 
 ```python
 async def watch_point_to_point_with_view_zooming(

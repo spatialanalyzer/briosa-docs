@@ -74,7 +74,7 @@ Omitted configuration properties use the exact MP defaults.
 
 ## addRobotMachineSaMachine
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-samachine)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-samachine)
 
 ```ts
 export interface AddRobotMachineSaMachineInput {
@@ -90,7 +90,7 @@ function addRobotMachineSaMachine(
 
 ## addRobotMachineManipKin
 
-[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/robot-operations#add-robotmachine-manipkin)
+[MP command](/mp-command-catalog/commands/robot-operations#add-robotmachine-manipkin) · [gRPC contract](/api/grpc/0.5.1/robot-operations#add-robotmachine-manipkin)
 
 ```ts
 export interface AddRobotMachineManipKinInput {
@@ -108,7 +108,7 @@ Both functions accept the shared local-SA path or embedded-file representation.
 
 ## deleteRobotMachine
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/robot-operations#delete-robotmachine)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robotmachine) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robotmachine)
 
 ```ts
 export interface DeleteRobotMachineInput {
@@ -124,7 +124,7 @@ function deleteRobotMachine(
 
 ## moveRobotMachineToFrame
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-frame)
 
 ```ts
 export interface MoveRobotMachineToFrameInput {
@@ -145,7 +145,7 @@ Both booleans default to `false`.
 
 ## moveRobotMachineThroughPath
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-through-path)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-through-path)
 
 ```ts
 export interface MoveRobotMachineThroughPathInput {
@@ -167,7 +167,7 @@ The three defaults are `true`, `false`, and `true`, respectively.
 
 ## moveRobotMachineToNamedDestination
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-named-destination)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-named-destination) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-named-destination)
 
 ```ts
 export interface MoveRobotMachineToNamedDestinationInput {
@@ -188,7 +188,7 @@ defaults to `false`.
 
 ## setRobotMachineParameter
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-parameter)
 
 ```ts
 export interface SetRobotMachineParameterInput {
@@ -206,7 +206,7 @@ function setRobotMachineParameter(
 
 ## getRobotMachineParameter
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-parameter)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-parameter)
 
 ```ts
 export interface GetRobotMachineParameterInput {
@@ -226,7 +226,7 @@ allowlist.
 
 ## setRobotMachineModelLinkParameters
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-model-link-parameters)
 
 ```ts
 export interface SetRobotMachineModelLinkParametersInput {
@@ -247,7 +247,7 @@ or encoder-range validation.
 
 ## getRobotMachineModelLinkParameters
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/robot-operations#get-robotmachine-model-link-parameters)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robotmachine-model-link-parameters)
 
 ```ts
 export interface GetRobotMachineModelLinkParametersInput {
@@ -266,7 +266,7 @@ The result includes all exact-target outputs, including `encoderValue`.
 
 ## setRobotMachineBaseTransform
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/robot-operations#set-robotmachine-base-transform)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robotmachine-base-transform) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robotmachine-base-transform)
 
 ```ts
 export interface SetRobotMachineBaseTransformInput {
@@ -287,7 +287,7 @@ Omitting the transform uses identity, and `numberOfSteps` defaults to `0`.
 
 ## startRobotMachineInterface
 
-[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#start-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#start-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#start-robotmachine-interface)
 
 ```ts
 export interface StartRobotMachineInterfaceInput {
@@ -307,7 +307,7 @@ Interface type `0` runs the SARobotDriver; simulation defaults to `false`.
 
 ## stopRobotMachineInterface
 
-[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/robot-operations#stop-robotmachine-interface)
+[MP command](/mp-command-catalog/commands/robot-operations#stop-robotmachine-interface) · [gRPC contract](/api/grpc/0.5.1/robot-operations#stop-robotmachine-interface)
 
 ```ts
 export interface StopRobotMachineInterfaceInput {
@@ -323,7 +323,7 @@ function stopRobotMachineInterface(
 
 ## computeRobotMachineAdjustedGoalFrame
 
-[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/robot-operations#compute-robotmachine-adjusted-goal-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#compute-robotmachine-adjusted-goal-frame)
 
 ```ts
 export interface ComputeRobotMachineAdjustedGoalFrameInput {
@@ -344,7 +344,7 @@ The caller owns every Frame and iteration in the adjusted-goal workflow.
 
 ## moveRobotMachineToJointPoseSixDof
 
-[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/robot-operations#move-robotmachine-to-joint-pose-6dof)
+[MP command](/mp-command-catalog/commands/robot-operations#move-robotmachine-to-joint-pose-6dof) · [gRPC contract](/api/grpc/0.5.1/robot-operations#move-robotmachine-to-joint-pose-6dof)
 
 ```ts
 export interface MoveRobotMachineToJointPoseSixDofInput {
@@ -368,7 +368,7 @@ All six joint values default to `0.0`.
 
 ## simulateRobotMachinePathOutputCsvFile
 
-[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/robot-operations#simulate-robotmachine-path-output-csv-file)
+[MP command](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file) · [gRPC contract](/api/grpc/0.5.1/robot-operations#simulate-robotmachine-path-output-csv-file)
 
 ```ts
 export interface SimulateRobotMachinePathOutputCsvFileInput {
@@ -386,7 +386,7 @@ function simulateRobotMachinePathOutputCsvFile(
 
 ## createRobotCalibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#create-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#create-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#create-robot-calibration)
 
 ```ts
 export interface CreateRobotCalibrationInput {
@@ -403,7 +403,7 @@ function createRobotCalibration(
 
 ## deleteRobotCalibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#delete-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#delete-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#delete-robot-calibration)
 
 ```ts
 export interface DeleteRobotCalibrationInput {
@@ -420,7 +420,7 @@ function deleteRobotCalibration(
 
 ## importPosesMatchToMeasurements
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-measurements)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-measurements)
 
 ```ts
 export interface ImportPosesMatchToMeasurementsInput {
@@ -439,7 +439,7 @@ function importPosesMatchToMeasurements(
 
 ## importPosesMatchToFrames
 
-[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/robot-operations#import-poses-match-to-frames)
+[MP command](/mp-command-catalog/commands/robot-operations#import-poses-match-to-frames) · [gRPC contract](/api/grpc/0.5.1/robot-operations#import-poses-match-to-frames)
 
 ```ts
 export interface ImportPosesMatchToFramesInput {
@@ -461,7 +461,7 @@ representation.
 
 ## performRobotCalibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration)
 
 ```ts
 export interface PerformRobotCalibrationInput {
@@ -486,7 +486,7 @@ so this function omits it. The result contains all seven exact-target metrics.
 
 ## performRobotCalibrationAlternate
 
-[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/robot-operations#perform-robot-calibration-alternate)
+[MP command](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate) · [gRPC contract](/api/grpc/0.5.1/robot-operations#perform-robot-calibration-alternate)
 
 ```ts
 export interface PerformRobotCalibrationAlternateInput {
@@ -513,7 +513,7 @@ The three DOF strings are passed directly to SA without client interpretation.
 
 ## startStopRobotCalibrationTrapping
 
-[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/robot-operations#startstop-robot-calibration-trapping)
+[MP command](/mp-command-catalog/commands/robot-operations#startstop-robot-calibration-trapping) · [gRPC contract](/api/grpc/0.5.1/robot-operations#startstop-robot-calibration-trapping)
 
 ```ts
 export interface StartStopRobotCalibrationTrappingInput {
@@ -535,7 +535,7 @@ no trapping state.
 
 ## setActiveRobotCalibration
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/robot-operations#set-active-robot-calibration)
+[MP command](/mp-command-catalog/commands/robot-operations#set-active-robot-calibration) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-active-robot-calibration)
 
 ```ts
 export interface SetActiveRobotCalibrationInput {
@@ -552,7 +552,7 @@ function setActiveRobotCalibration(
 
 ## setRobotCalibrationToolFrame
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-tool-frame)
 
 ```ts
 export interface SetRobotCalibrationToolFrameInput {
@@ -572,7 +572,7 @@ Omitting the transform uses the exact identity-transform default.
 
 ## setRobotCalibrationMeasurementOffsetInToolFrame
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-robot-calibration-measurement-offset-in-tool-frame)
 
 ```ts
 export interface SetRobotCalibrationMeasurementOffsetInToolFrameInput {
@@ -592,7 +592,7 @@ Omitting the transform uses the exact identity-transform default.
 
 ## getRobotPoseForAFrame
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/robot-operations#get-robot-pose-for-a-frame)
+[MP command](/mp-command-catalog/commands/robot-operations#get-robot-pose-for-a-frame) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-robot-pose-for-a-frame)
 
 ```ts
 export interface GetRobotPoseForAFrameInput {
@@ -614,7 +614,7 @@ An omitted reference pose tells SA to use the current robot pose.
 
 ## getCalibrationApplianceIntegerValue
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-integer-value)
 
 ```ts
 export interface GetCalibrationApplianceIntegerValueInput {
@@ -630,7 +630,7 @@ function getCalibrationApplianceIntegerValue(
 
 ## setCalibrationApplianceIntegerValue
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-integer-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-integer-value)
 
 ```ts
 export interface SetCalibrationApplianceIntegerValueInput {
@@ -647,7 +647,7 @@ function setCalibrationApplianceIntegerValue(
 
 ## getCalibrationApplianceRealValue
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-real-value)
 
 ```ts
 export interface GetCalibrationApplianceRealValueInput {
@@ -663,7 +663,7 @@ function getCalibrationApplianceRealValue(
 
 ## setCalibrationApplianceRealValue
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-real-value)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-real-value)
 
 ```ts
 export interface SetCalibrationApplianceRealValueInput {
@@ -680,7 +680,7 @@ function setCalibrationApplianceRealValue(
 
 ## getCalibrationApplianceData
 
-[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#get-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#get-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#get-calibration-appliance-data)
 
 ```ts
 export interface GetCalibrationApplianceDataInput {
@@ -699,7 +699,7 @@ the MP `Integer Values` output, so the function returns only `Real Values`.
 
 ## setCalibrationApplianceData
 
-[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/robot-operations#set-calibration-appliance-data)
+[MP command](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data) · [gRPC contract](/api/grpc/0.5.1/robot-operations#set-calibration-appliance-data)
 
 ```ts
 export interface SetCalibrationApplianceDataInput {

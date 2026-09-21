@@ -25,9 +25,9 @@ Crib Sheet Operations** in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Run Crib Sheet" data-group="Instrument Operations / Crib Sheet Operations" data-status="next" data-validation="at-risk-crib-sheet-instrument-fixture"><td><a href="#run-crib-sheet">Run Crib Sheet</a></td><td><span className="catalog-status catalog-status--next">Next</span></td><td>At Risk - crib-sheet instrument fixture</td></tr>
-<tr data-command="Run Crib Sheet" data-group="Instrument Operations / Crib Sheet Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Run Crib Sheet" data-group="Instrument Operations / Crib Sheet Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#run-crib-sheet">Run Crib Sheet</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -41,17 +41,19 @@ Crib Sheet Operations** in SA 2026.1.0529.7.
   <span className="catalog-target-group">Instrument Operations / Crib Sheet Operations</span>
   <span className="catalog-target-validation">At risk crib sheet instrument fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Crib Sheet Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Crib Sheet Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Crib Sheet Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations#run-crib-sheet) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations#run-crib-sheet) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations#run-crib-sheet) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations#run-crib-sheet)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -75,9 +77,9 @@ the call after an unknown outcome.
 
 ## Availability and References
 
-These commands are not exposed by Briosa Server 0.5.1 or the current public
+These commands are not exposed by the SA 2026 distribution of Briosa Server 0.7.0 or the current public
 client APIs. The descriptions above describe proposed behavior, not a callable
-implementation. Their Next status does not establish a release date.
+implementation. Their SA 2026 Next status does not establish a release date. SA 2024 implementations are released in Server 0.7.0 and clients 0.2.0; use the target-specific references above.
 
 
 - [gRPC](/api/grpc/instrument-operations-crib-sheet-operations)

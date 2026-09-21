@@ -244,4 +244,4 @@ const datums = await briosa.gdtOperations
 All returned lists are detached snapshots of live SA state. The client does not
 cache them or automatically replay any operation.
 
-[Catalog](/mp-command-catalog/commands/gdt-construction) · [gRPC](/api/grpc/gdt-construction) · [.NET](/api/dotnet/gdt-construction) · [Python](/api/python/gdt-construction)
+[Catalog](/mp-command-catalog/commands/gdt-construction) · [gRPC](/api/grpc/0.5.1/gdt-construction) · [.NET](/api/dotnet/0.1.0/gdt-construction) · [Python](/api/python/0.1.0/gdt-construction)

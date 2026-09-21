@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Add Charts to Report Bar
 
-[Add Charts to Report Bar](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-charts-to-report-bar)
+[Add Charts to Report Bar](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-charts-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Custom Table to SA Report
 
-[Add Custom Table to SA Report](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report) · [gRPC contract](/api/grpc/reporting-operations#add-custom-table-to-sa-report)
+[Add Custom Table to SA Report](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-custom-table-to-sa-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Custom Tables to Report Bar
 
-[Add Custom Tables to Report Bar](/mp-command-catalog/commands/reporting-operations#add-custom-tables-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-custom-tables-to-report-bar)
+[Add Custom Tables to Report Bar](/mp-command-catalog/commands/reporting-operations#add-custom-tables-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-custom-tables-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Datums to Report Bar
 
-[Add Datums to Report Bar](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-datums-to-report-bar)
+[Add Datums to Report Bar](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-datums-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Events to Report Bar
 
-[Add Events to Report Bar](/mp-command-catalog/commands/reporting-operations#add-events-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-events-to-report-bar)
+[Add Events to Report Bar](/mp-command-catalog/commands/reporting-operations#add-events-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-events-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -158,7 +158,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Feature Checks to Report Bar
 
-[Add Feature Checks to Report Bar](/mp-command-catalog/commands/reporting-operations#add-feature-checks-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-feature-checks-to-report-bar)
+[Add Feature Checks to Report Bar](/mp-command-catalog/commands/reporting-operations#add-feature-checks-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-feature-checks-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -187,7 +187,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Item to SA Report at Location
 
-[Add Item to SA Report at Location](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location) · [gRPC contract](/api/grpc/reporting-operations#add-item-to-sa-report-at-location)
+[Add Item to SA Report at Location](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-item-to-sa-report-at-location)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -224,7 +224,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Objects to Report Bar
 
-[Add Objects to Report Bar](/mp-command-catalog/commands/reporting-operations#add-objects-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-objects-to-report-bar)
+[Add Objects to Report Bar](/mp-command-catalog/commands/reporting-operations#add-objects-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-objects-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -253,7 +253,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Pictures to Report Bar
 
-[Add Pictures to Report Bar](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-pictures-to-report-bar)
+[Add Pictures to Report Bar](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-pictures-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -282,7 +282,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Add Relationships to Report Bar
 
-[Add Relationships to Report Bar](/mp-command-catalog/commands/reporting-operations#add-relationships-to-report-bar) · [gRPC contract](/api/grpc/reporting-operations#add-relationships-to-report-bar)
+[Add Relationships to Report Bar](/mp-command-catalog/commands/reporting-operations#add-relationships-to-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#add-relationships-to-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -311,7 +311,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Append Items to SA Report
 
-[Append Items to SA Report](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report) · [gRPC contract](/api/grpc/reporting-operations#append-items-to-sa-report)
+[Append Items to SA Report](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#append-items-to-sa-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -344,7 +344,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Capture Current View
 
-[Capture Current View](/mp-command-catalog/commands/reporting-operations#capture-current-view) · [gRPC contract](/api/grpc/reporting-operations#capture-current-view)
+[Capture Current View](/mp-command-catalog/commands/reporting-operations#capture-current-view) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#capture-current-view)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -370,7 +370,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)
 
-[Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
+[Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -396,7 +396,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Clear Custom Table
 
-[Clear Custom Table](/mp-command-catalog/commands/reporting-operations#clear-custom-table) · [gRPC contract](/api/grpc/reporting-operations#clear-custom-table)
+[Clear Custom Table](/mp-command-catalog/commands/reporting-operations#clear-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#clear-custom-table)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -422,7 +422,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Close All Reports
 
-[Close All Reports](/mp-command-catalog/commands/reporting-operations#close-all-reports) · [gRPC contract](/api/grpc/reporting-operations#close-all-reports)
+[Close All Reports](/mp-command-catalog/commands/reporting-operations#close-all-reports) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#close-all-reports)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -445,7 +445,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Close HTML Display Board
 
-[Close HTML Display Board](/mp-command-catalog/commands/reporting-operations#close-html-display-board) · [gRPC contract](/api/grpc/reporting-operations#close-html-display-board)
+[Close HTML Display Board](/mp-command-catalog/commands/reporting-operations#close-html-display-board) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#close-html-display-board)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -468,7 +468,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Combine SA Reports
 
-[Combine SA Reports](/mp-command-catalog/commands/reporting-operations#combine-sa-reports) · [gRPC contract](/api/grpc/reporting-operations#combine-sa-reports)
+[Combine SA Reports](/mp-command-catalog/commands/reporting-operations#combine-sa-reports) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#combine-sa-reports)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -499,7 +499,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Create Chart from Vector Group
 
-[Create Chart from Vector Group](/mp-command-catalog/commands/reporting-operations#create-chart-from-vector-group) · [gRPC contract](/api/grpc/reporting-operations#create-chart-from-vector-group)
+[Create Chart from Vector Group](/mp-command-catalog/commands/reporting-operations#create-chart-from-vector-group) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#create-chart-from-vector-group)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -538,7 +538,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Define Report Template
 
-[Define Report Template](/mp-command-catalog/commands/reporting-operations#define-report-template) · [gRPC contract](/api/grpc/reporting-operations#define-report-template)
+[Define Report Template](/mp-command-catalog/commands/reporting-operations#define-report-template) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#define-report-template)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -583,7 +583,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Chart
 
-[Delete Chart](/mp-command-catalog/commands/reporting-operations#delete-chart) · [gRPC contract](/api/grpc/reporting-operations#delete-chart)
+[Delete Chart](/mp-command-catalog/commands/reporting-operations#delete-chart) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-chart)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -609,7 +609,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Custom Table
 
-[Delete Custom Table](/mp-command-catalog/commands/reporting-operations#delete-custom-table) · [gRPC contract](/api/grpc/reporting-operations#delete-custom-table)
+[Delete Custom Table](/mp-command-catalog/commands/reporting-operations#delete-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-custom-table)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -635,7 +635,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Picture
 
-[Delete Picture](/mp-command-catalog/commands/reporting-operations#delete-picture) · [gRPC contract](/api/grpc/reporting-operations#delete-picture)
+[Delete Picture](/mp-command-catalog/commands/reporting-operations#delete-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-picture)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -661,7 +661,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete SA Doc
 
-[Delete SA Doc](/mp-command-catalog/commands/reporting-operations#delete-sa-doc) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-doc)
+[Delete SA Doc](/mp-command-catalog/commands/reporting-operations#delete-sa-doc) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-doc)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -687,7 +687,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete SA Report
 
-[Delete SA Report](/mp-command-catalog/commands/reporting-operations#delete-sa-report) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-report)
+[Delete SA Report](/mp-command-catalog/commands/reporting-operations#delete-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -713,7 +713,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete SA Report Template
 
-[Delete SA Report Template](/mp-command-catalog/commands/reporting-operations#delete-sa-report-template) · [gRPC contract](/api/grpc/reporting-operations#delete-sa-report-template)
+[Delete SA Report Template](/mp-command-catalog/commands/reporting-operations#delete-sa-report-template) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#delete-sa-report-template)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -739,7 +739,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Generate Quick Report from Tab Order
 
-[Generate Quick Report from Tab Order](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order) · [gRPC contract](/api/grpc/reporting-operations#generate-quick-report-from-tab-order)
+[Generate Quick Report from Tab Order](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generate-quick-report-from-tab-order)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -768,7 +768,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Generate Standard HTML Report
 
-[Generate Standard HTML Report](/mp-command-catalog/commands/reporting-operations#generate-standard-html-report) · [gRPC contract](/api/grpc/reporting-operations#generate-standard-html-report)
+[Generate Standard HTML Report](/mp-command-catalog/commands/reporting-operations#generate-standard-html-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generate-standard-html-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -797,7 +797,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Generate/Update Templated Report
 
-[Generate/Update Templated Report](/mp-command-catalog/commands/reporting-operations#generateupdate-templated-report) · [gRPC contract](/api/grpc/reporting-operations#generateupdate-templated-report)
+[Generate/Update Templated Report](/mp-command-catalog/commands/reporting-operations#generateupdate-templated-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#generateupdate-templated-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -823,7 +823,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Custom Table Cell Double
 
-[Get Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double) · [gRPC contract](/api/grpc/reporting-operations#get-custom-table-cell-double)
+[Get Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-custom-table-cell-double)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -854,7 +854,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Custom Table Cell String
 
-[Get Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-string) · [gRPC contract](/api/grpc/reporting-operations#get-custom-table-cell-string)
+[Get Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-custom-table-cell-string)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -885,7 +885,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Defined Report Tags
 
-[Get Defined Report Tags](/mp-command-catalog/commands/reporting-operations#get-defined-report-tags) · [gRPC contract](/api/grpc/reporting-operations#get-defined-report-tags)
+[Get Defined Report Tags](/mp-command-catalog/commands/reporting-operations#get-defined-report-tags) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-defined-report-tags)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -908,7 +908,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Report Tag Value
 
-[Get Report Tag Value](/mp-command-catalog/commands/reporting-operations#get-report-tag-value) · [gRPC contract](/api/grpc/reporting-operations#get-report-tag-value)
+[Get Report Tag Value](/mp-command-catalog/commands/reporting-operations#get-report-tag-value) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#get-report-tag-value)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -944,7 +944,7 @@ caller controls; the client does not replay uncertain work.
 
 ## HTML Display Board
 
-[HTML Display Board](/mp-command-catalog/commands/reporting-operations#html-display-board) · [gRPC contract](/api/grpc/reporting-operations#html-display-board)
+[HTML Display Board](/mp-command-catalog/commands/reporting-operations#html-display-board) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#html-display-board)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -973,7 +973,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Custom Table
 
-[Make Custom Table](/mp-command-catalog/commands/reporting-operations#make-custom-table) · [gRPC contract](/api/grpc/reporting-operations#make-custom-table)
+[Make Custom Table](/mp-command-catalog/commands/reporting-operations#make-custom-table) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-custom-table)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1002,7 +1002,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make New SA Report
 
-[Make New SA Report](/mp-command-catalog/commands/reporting-operations#make-new-sa-report) · [gRPC contract](/api/grpc/reporting-operations#make-new-sa-report)
+[Make New SA Report](/mp-command-catalog/commands/reporting-operations#make-new-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-new-sa-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1030,7 +1030,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Make Utility Chart
 
-[Make Utility Chart](/mp-command-catalog/commands/reporting-operations#make-utility-chart) · [gRPC contract](/api/grpc/reporting-operations#make-utility-chart)
+[Make Utility Chart](/mp-command-catalog/commands/reporting-operations#make-utility-chart) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#make-utility-chart)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1069,7 +1069,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Notify User Double
 
-[Notify User Double](/mp-command-catalog/commands/reporting-operations#notify-user-double) · [gRPC contract](/api/grpc/reporting-operations#notify-user-double)
+[Notify User Double](/mp-command-catalog/commands/reporting-operations#notify-user-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-double)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1104,7 +1104,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Notify User HTML
 
-[Notify User HTML](/mp-command-catalog/commands/reporting-operations#notify-user-html) · [gRPC contract](/api/grpc/reporting-operations#notify-user-html)
+[Notify User HTML](/mp-command-catalog/commands/reporting-operations#notify-user-html) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-html)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1130,7 +1130,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Notify User Integer
 
-[Notify User Integer](/mp-command-catalog/commands/reporting-operations#notify-user-integer) · [gRPC contract](/api/grpc/reporting-operations#notify-user-integer)
+[Notify User Integer](/mp-command-catalog/commands/reporting-operations#notify-user-integer) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-integer)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1163,7 +1163,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Notify User Text Array
 
-[Notify User Text Array](/mp-command-catalog/commands/reporting-operations#notify-user-text-array) · [gRPC contract](/api/grpc/reporting-operations#notify-user-text-array)
+[Notify User Text Array](/mp-command-catalog/commands/reporting-operations#notify-user-text-array) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#notify-user-text-array)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1196,7 +1196,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Output SA Report to Excel
 
-[Output SA Report to Excel](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-excel) · [gRPC contract](/api/grpc/reporting-operations#output-sa-report-to-excel)
+[Output SA Report to Excel](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-excel) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#output-sa-report-to-excel)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1227,7 +1227,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Output SA Report to PDF
 
-[Output SA Report to PDF](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-pdf) · [gRPC contract](/api/grpc/reporting-operations#output-sa-report-to-pdf)
+[Output SA Report to PDF](/mp-command-catalog/commands/reporting-operations#output-sa-report-to-pdf) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#output-sa-report-to-pdf)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1258,7 +1258,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Quick Report
 
-[Quick Report](/mp-command-catalog/commands/reporting-operations#quick-report) · [gRPC contract](/api/grpc/reporting-operations#quick-report)
+[Quick Report](/mp-command-catalog/commands/reporting-operations#quick-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#quick-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1289,7 +1289,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Refresh Callout Views in SA Report
 
-[Refresh Callout Views in SA Report](/mp-command-catalog/commands/reporting-operations#refresh-callout-views-in-sa-report) · [gRPC contract](/api/grpc/reporting-operations#refresh-callout-views-in-sa-report)
+[Refresh Callout Views in SA Report](/mp-command-catalog/commands/reporting-operations#refresh-callout-views-in-sa-report) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#refresh-callout-views-in-sa-report)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1315,7 +1315,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Refresh Report Bar
 
-[Refresh Report Bar](/mp-command-catalog/commands/reporting-operations#refresh-report-bar) · [gRPC contract](/api/grpc/reporting-operations#refresh-report-bar)
+[Refresh Report Bar](/mp-command-catalog/commands/reporting-operations#refresh-report-bar) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#refresh-report-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1338,7 +1338,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Remove Report Tag
 
-[Remove Report Tag](/mp-command-catalog/commands/reporting-operations#remove-report-tag) · [gRPC contract](/api/grpc/reporting-operations#remove-report-tag)
+[Remove Report Tag](/mp-command-catalog/commands/reporting-operations#remove-report-tag) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#remove-report-tag)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1365,7 +1365,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Rename Picture
 
-[Rename Picture](/mp-command-catalog/commands/reporting-operations#rename-picture) · [gRPC contract](/api/grpc/reporting-operations#rename-picture)
+[Rename Picture](/mp-command-catalog/commands/reporting-operations#rename-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#rename-picture)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1396,7 +1396,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save Chart to JPeg file
 
-[Save Chart to JPeg file](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) · [gRPC contract](/api/grpc/reporting-operations#save-chart-to-jpeg-file)
+[Save Chart to JPeg file](/mp-command-catalog/commands/reporting-operations#save-chart-to-jpeg-file) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#save-chart-to-jpeg-file)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1424,7 +1424,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Save Current View (BMP/JPG/PNG/GIF/TIFF)
 
-[Save Current View (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/reporting-operations#save-current-view-bmpjpgpnggiftiff)
+[Save Current View (BMP/JPG/PNG/GIF/TIFF)](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#save-current-view-bmpjpgpnggiftiff)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1453,7 +1453,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Cell Color
 
-[Set Custom Table Cell Color](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-color) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-color)
+[Set Custom Table Cell Color](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-color) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-color)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1488,7 +1488,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Cell Double
 
-[Set Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-double)
+[Set Custom Table Cell Double](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-double)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1525,7 +1525,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Cell Font
 
-[Set Custom Table Cell Font](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-font) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-font)
+[Set Custom Table Cell Font](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-font) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-font)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1558,7 +1558,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Cell String
 
-[Set Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-cell-string)
+[Set Custom Table Cell String](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-cell-string)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1593,7 +1593,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Header Cell
 
-[Set Custom Table Header Cell](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-cell) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-header-cell)
+[Set Custom Table Header Cell](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-cell) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-header-cell)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1628,7 +1628,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Header Row
 
-[Set Custom Table Header Row](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-row) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-header-row)
+[Set Custom Table Header Row](/mp-command-catalog/commands/reporting-operations#set-custom-table-header-row) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-header-row)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1659,7 +1659,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Custom Table Title
 
-[Set Custom Table Title](/mp-command-catalog/commands/reporting-operations#set-custom-table-title) · [gRPC contract](/api/grpc/reporting-operations#set-custom-table-title)
+[Set Custom Table Title](/mp-command-catalog/commands/reporting-operations#set-custom-table-title) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-custom-table-title)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1690,7 +1690,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point Group Report Options
 
-[Set Point Group Report Options](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-point-group-report-options)
+[Set Point Group Report Options](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-point-group-report-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1743,7 +1743,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Report Options
 
-[Set Relationship Report Options](/mp-command-catalog/commands/reporting-operations#set-relationship-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-relationship-report-options)
+[Set Relationship Report Options](/mp-command-catalog/commands/reporting-operations#set-relationship-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-relationship-report-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1772,7 +1772,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Bar Visibility
 
-[Set Report Bar Visibility](/mp-command-catalog/commands/reporting-operations#set-report-bar-visibility) · [gRPC contract](/api/grpc/reporting-operations#set-report-bar-visibility)
+[Set Report Bar Visibility](/mp-command-catalog/commands/reporting-operations#set-report-bar-visibility) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-bar-visibility)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1799,7 +1799,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Options for Object
 
-[Set Report Options for Object](/mp-command-catalog/commands/reporting-operations#set-report-options-for-object) · [gRPC contract](/api/grpc/reporting-operations#set-report-options-for-object)
+[Set Report Options for Object](/mp-command-catalog/commands/reporting-operations#set-report-options-for-object) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-options-for-object)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1825,7 +1825,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Tag Value From Double
 
-[Set Report Tag Value From Double](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-double)
+[Set Report Tag Value From Double](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-double)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1854,7 +1854,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Tag Value From Integer
 
-[Set Report Tag Value From Integer](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-integer) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-integer)
+[Set Report Tag Value From Integer](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-integer) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-integer)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1883,7 +1883,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Tag Value From String
 
-[Set Report Tag Value From String](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string) · [gRPC contract](/api/grpc/reporting-operations#set-report-tag-value-from-string)
+[Set Report Tag Value From String](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-report-tag-value-from-string)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1912,7 +1912,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Scale for Picture
 
-[Set Scale for Picture](/mp-command-catalog/commands/reporting-operations#set-scale-for-picture) · [gRPC contract](/api/grpc/reporting-operations#set-scale-for-picture)
+[Set Scale for Picture](/mp-command-catalog/commands/reporting-operations#set-scale-for-picture) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-scale-for-picture)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1941,7 +1941,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector Group Report Options
 
-[Set Vector Group Report Options](/mp-command-catalog/commands/reporting-operations#set-vector-group-report-options) · [gRPC contract](/api/grpc/reporting-operations#set-vector-group-report-options)
+[Set Vector Group Report Options](/mp-command-catalog/commands/reporting-operations#set-vector-group-report-options) · [gRPC contract](/api/grpc/0.5.1/reporting-operations#set-vector-group-report-options)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

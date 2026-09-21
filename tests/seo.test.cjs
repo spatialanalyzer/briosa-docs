@@ -41,7 +41,7 @@ test('sitemap pages have distinct titles, indexable content, and consistent cano
 test('API titles identify each language while retaining exact MP headings and anchors', () => {
   for (const [language, label] of Object.entries({grpc: 'gRPC', dotnet: '.NET', python: 'Python', javascript: 'JavaScript and TypeScript'})) {
     const $ = html(`/api/${language}/analysis-operations`);
-    assert.equal($('title').text(), `Analysis Operations — ${label} API | Briosa`);
+    assert.equal($('title').text(), `Analysis Operations — ${label} API ${language === 'grpc' ? '0.7.0' : '0.2.0'} · SA 2026.1.0529.7 | Briosa`);
     assert.equal($('h1').text(), 'Analysis Operations');
     const collections = html(`/api/${language}/construction-operations-collections`);
     assert.equal(collections('#construct-collection').length, 1);

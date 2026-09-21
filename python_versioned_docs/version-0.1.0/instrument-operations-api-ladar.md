@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## set_ladar_auto_meas_point
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-point)
 
 ```python
 async def set_ladar_auto_meas_point(
@@ -23,7 +23,7 @@ The exact MP default is `0` despite the MP label documenting `1–2000`.
 
 ## set_ladar_auto_meas_sphere
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
 ```python
 async def set_ladar_auto_meas_sphere(
@@ -40,7 +40,7 @@ async def set_ladar_auto_meas_sphere(
 
 ## set_ladar_feature_meas_sphere
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
 
 ```python
 async def set_ladar_feature_meas_sphere(
@@ -53,7 +53,7 @@ async def set_ladar_feature_meas_sphere(
 
 ## set_ladar_feature_meas_circle
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
 ```python
 async def set_ladar_feature_meas_circle(
@@ -67,7 +67,7 @@ async def set_ladar_feature_meas_circle(
 
 ## set_ladar_feature_meas_slot
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
 
 ```python
 async def set_ladar_feature_meas_slot(
@@ -81,7 +81,7 @@ async def set_ladar_feature_meas_slot(
 
 ## set_ladar_feature_meas_cylinder
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
 
 ```python
 async def set_ladar_feature_meas_cylinder(

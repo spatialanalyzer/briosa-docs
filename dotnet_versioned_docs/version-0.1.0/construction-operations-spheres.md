@@ -36,4 +36,4 @@ The operator selects CAD faces in SpatialAnalyzer. Escape is an MP failure;
 cancellation does not prove the interaction stopped. The call is never
 automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [gRPC](/api/grpc/construction-operations-spheres)
+[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [gRPC](/api/grpc/0.5.1/construction-operations-spheres)

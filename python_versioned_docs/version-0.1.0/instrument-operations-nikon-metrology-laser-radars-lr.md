@@ -64,7 +64,7 @@ class LrLoSeparationTestResult:
 
 ## lr_hardware_connect
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
 
 ```python
 async def lr_hardware_connect(
@@ -77,7 +77,7 @@ async def lr_hardware_connect(
 
 ## lr_hardware_disconnect
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
 
 ```python
 async def lr_hardware_disconnect(
@@ -88,7 +88,7 @@ async def lr_hardware_disconnect(
 
 ## lr_verify_hardware_connection
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
 ```python
 async def lr_verify_hardware_connection(
@@ -99,7 +99,7 @@ async def lr_verify_hardware_connection(
 
 ## lr_set_red_laser_intensity
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
 
 ```python
 async def lr_set_red_laser_intensity(
@@ -114,7 +114,7 @@ SA labels the scale `0–100`; Briosa adds no range validation.
 
 ## lr_get_most_recent_snr_info
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
 ```python
 async def lr_get_most_recent_snr_info(
@@ -125,7 +125,7 @@ async def lr_get_most_recent_snr_info(
 
 ## lr_self_test
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 ```python
 async def lr_self_test(
@@ -136,7 +136,7 @@ async def lr_self_test(
 
 ## lr_self_test_linearization
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
 
 ```python
 async def lr_self_test_linearization(
@@ -149,7 +149,7 @@ The return value is linearity in kHz.
 
 ## lr_self_test_flip_test
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 ```python
 async def lr_self_test_flip_test(
@@ -160,7 +160,7 @@ async def lr_self_test_flip_test(
 
 ## lr_self_test_lo_sep
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 ```python
 async def lr_self_test_lo_sep(
@@ -176,7 +176,7 @@ Briosa preserves both exact MP defaults and adds no region constraint.
 
 ## lr_apdis_perform_mcm_calibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
 
 ```python
 async def lr_apdis_perform_mcm_calibration(
@@ -194,7 +194,7 @@ never automatically replayed.
 
 ## lr_apdis_activate_mcm_calibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
 ```python
 async def lr_apdis_activate_mcm_calibration(
@@ -212,7 +212,7 @@ behavior. The return value is the active MCM name.
 
 ## lr_apdis_get_active_mcm_calibration
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
 
 ```python
 async def lr_apdis_get_active_mcm_calibration(

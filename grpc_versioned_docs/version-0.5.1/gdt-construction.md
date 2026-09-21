@@ -245,4 +245,4 @@ message DeleteFeatureChecksResult { MpExecutionDetails execution = 1000; }
 The list is required. Briosa does not add a confirmation or existence preflight.
 The MP result distinguishes complete success, partial success, and failure.
 
-[Catalog](/mp-command-catalog/commands/gdt-construction) · [.NET](/api/dotnet/gdt-construction) · [Python](/api/python/gdt-construction) · [JavaScript and TypeScript](/api/javascript/gdt-construction)
+[Catalog](/mp-command-catalog/commands/gdt-construction) · [.NET](/api/dotnet/0.1.0/gdt-construction) · [Python](/api/python/0.1.0/gdt-construction) · [JavaScript and TypeScript](/api/javascript/0.1.0/gdt-construction)

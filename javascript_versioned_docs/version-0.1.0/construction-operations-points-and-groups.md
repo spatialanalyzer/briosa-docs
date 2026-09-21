@@ -453,4 +453,4 @@ confirmation. Rod indices are unstable live SA state. Average and hidden-point
 tolerance failures may preserve outputs as partial success. Interactive calls
 may outlive an abort or deadline; callers own state across calls.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/construction-operations-points-and-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/0.5.1/construction-operations-points-and-groups)

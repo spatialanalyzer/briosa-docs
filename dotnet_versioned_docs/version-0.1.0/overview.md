@@ -26,13 +26,13 @@ SpatialAnalyzer. Secure remote connections are
 
 :::
 
-Start with the [`BriosaClient` lifecycle](/api/dotnet/lifecycle) to understand
+Start with the [`BriosaClient` lifecycle](/api/dotnet/0.1.0/lifecycle) to understand
 default startup, explicit SDK and SA control, command admission, recovery,
 stop, restart, and cleanup.
 
 For task-oriented examples, start with
 [Run your first MP command](/docs/getting-started/first-request). For the
-underlying service contract, use the [gRPC API Reference](/api/grpc).
+underlying service contract, use the [gRPC API Reference](/api/grpc/0.5.1).
 
 [View the .NET client repository](https://github.com/spatialanalyzer/briosa-dotnet)
 

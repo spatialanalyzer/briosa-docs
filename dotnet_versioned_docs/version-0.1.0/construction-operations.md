@@ -18,7 +18,7 @@ Validation: Licensed setter probe; fixture execution required.
 
 :::
 
-[Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) · [gRPC contract](/api/grpc/construction-operations#mirror-objects)
+[Mirror Object(s)](/mp-command-catalog/commands/construction-operations#mirror-objects) · [gRPC contract](/api/grpc/0.5.1/construction-operations#mirror-objects)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) · [gRPC contract](/api/grpc/construction-operations#copy-object)
+[Copy Object](/mp-command-catalog/commands/construction-operations#copy-object) · [gRPC contract](/api/grpc/0.5.1/construction-operations#copy-object)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -82,7 +82,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) · [gRPC contract](/api/grpc/construction-operations#copy-objects-to-a-collection)
+[Copy Objects to a collection](/mp-command-catalog/commands/construction-operations#copy-objects-to-a-collection) · [gRPC contract](/api/grpc/0.5.1/construction-operations#copy-objects-to-a-collection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) · [gRPC contract](/api/grpc/construction-operations#move-objects-to-a-collection)
+[Move Objects to a collection](/mp-command-catalog/commands/construction-operations#move-objects-to-a-collection) · [gRPC contract](/api/grpc/0.5.1/construction-operations#move-objects-to-a-collection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -138,7 +138,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) · [gRPC contract](/api/grpc/construction-operations#copy-objects---point-to-point-delta)
+[Copy Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#copy-objects---point-to-point-delta) · [gRPC contract](/api/grpc/0.5.1/construction-operations#copy-objects---point-to-point-delta)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -170,7 +170,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) · [gRPC contract](/api/grpc/construction-operations#move-objects---point-to-point-delta)
+[Move Objects - Point to Point Delta](/mp-command-catalog/commands/construction-operations#move-objects---point-to-point-delta) · [gRPC contract](/api/grpc/0.5.1/construction-operations#move-objects---point-to-point-delta)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -200,7 +200,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) · [gRPC contract](/api/grpc/construction-operations#rename-point)
+[Rename Point](/mp-command-catalog/commands/construction-operations#rename-point) · [gRPC contract](/api/grpc/0.5.1/construction-operations#rename-point)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -230,7 +230,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) · [gRPC contract](/api/grpc/construction-operations#rename-points-with-name-pattern)
+[Rename Points with Name Pattern](/mp-command-catalog/commands/construction-operations#rename-points-with-name-pattern) · [gRPC contract](/api/grpc/0.5.1/construction-operations#rename-points-with-name-pattern)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -260,7 +260,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) · [gRPC contract](/api/grpc/construction-operations#rename-collection)
+[Rename Collection](/mp-command-catalog/commands/construction-operations#rename-collection) · [gRPC contract](/api/grpc/0.5.1/construction-operations#rename-collection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -288,7 +288,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) · [gRPC contract](/api/grpc/construction-operations#rename-object)
+[Rename Object](/mp-command-catalog/commands/construction-operations#rename-object) · [gRPC contract](/api/grpc/0.5.1/construction-operations#rename-object)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -318,7 +318,7 @@ Validation: At Risk — fixture validation required.
 
 :::
 
-[Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) · [gRPC contract](/api/grpc/construction-operations#rename-item)
+[Rename Item](/mp-command-catalog/commands/construction-operations#rename-item) · [gRPC contract](/api/grpc/0.5.1/construction-operations#rename-item)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -348,7 +348,7 @@ Validation: At Risk — destructive fixture validation required.
 
 :::
 
-[Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) · [gRPC contract](/api/grpc/construction-operations#delete-points)
+[Delete Points](/mp-command-catalog/commands/construction-operations#delete-points) · [gRPC contract](/api/grpc/0.5.1/construction-operations#delete-points)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -374,7 +374,7 @@ Validation: At Risk — destructive fixture validation required.
 
 :::
 
-[Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) · [gRPC contract](/api/grpc/construction-operations#delete-points-wildcard-selection)
+[Delete Points WildCard Selection](/mp-command-catalog/commands/construction-operations#delete-points-wildcard-selection) · [gRPC contract](/api/grpc/0.5.1/construction-operations#delete-points-wildcard-selection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -402,7 +402,7 @@ Validation: At Risk — interactive fixture validation required.
 
 :::
 
-[Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) · [gRPC contract](/api/grpc/construction-operations#construct-objects-from-surface-faces---runtime-select)
+[Construct Objects From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations#construct-objects-from-surface-faces---runtime-select) · [gRPC contract](/api/grpc/0.5.1/construction-operations#construct-objects-from-surface-faces---runtime-select)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

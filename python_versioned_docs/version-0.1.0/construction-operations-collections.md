@@ -78,4 +78,4 @@ Deleting every collection requires an explicit
 `allow_deleting_all_collections=True`. The result preserves both exact MP
 output counts.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) · [gRPC](/api/grpc/construction-operations-collections#delete-collections-by-wildcard)
+[Catalog](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) · [gRPC](/api/grpc/0.5.1/construction-operations-collections#delete-collections-by-wildcard)

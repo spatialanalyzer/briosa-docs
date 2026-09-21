@@ -25,93 +25,93 @@ These entries cover the 15 commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-object-surface-fixture"><td><a href="#construct-surfaces-from-objects">Construct Surfaces From Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - object and surface fixture</td></tr>
-<tr data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-from-objects">Construct Surfaces From Objects</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-b-spline-surface-fixture"><td><a href="#construct-surface-from-bsplines">Construct Surface From BSplines</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - B-Spline surface fixture</td></tr>
-<tr data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-bsplines">Construct Surface From BSplines</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cylinder-surface-fixture"><td><a href="#construct-surface-from-cylinder">Construct Surface From Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cylinder surface fixture</td></tr>
-<tr data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-cylinder">Construct Surface From Cylinder</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-plane-surface-fixture"><td><a href="#construct-surface-from-plane">Construct Surface From Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - plane surface fixture</td></tr>
-<tr data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-plane">Construct Surface From Plane</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-sphere-surface-fixture"><td><a href="#construct-surface-from-sphere">Construct Surface From Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sphere surface fixture</td></tr>
-<tr data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-sphere">Construct Surface From Sphere</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cone-surface-fixture"><td><a href="#construct-surface-from-cone">Construct Surface From Cone</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cone surface fixture</td></tr>
-<tr data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-cone">Construct Surface From Cone</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-sewing-fixture"><td><a href="#construct-surface-from-a-collection-of-surfaces">Construct Surface From a Collection of Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface sewing fixture</td></tr>
-<tr data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-a-collection-of-surfaces">Construct Surface From a Collection of Surfaces</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-nominal-surface-and-point-fixture"><td><a href="#construct-surface-fit-from-nominal-surfaces-and-actual-data">Construct Surface Fit From Nominal Surfaces and Actual Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal surface and point fixture</td></tr>
-<tr data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-fit-from-nominal-surfaces-and-actual-data">Construct Surface Fit From Nominal Surfaces and Actual Data</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-interactive-cad-fixture"><td><a href="#construct-surface-by-dissecting-surfaces">Construct Surface by Dissecting Surface(s)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive CAD fixture</td></tr>
-<tr data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-by-dissecting-surfaces">Construct Surface by Dissecting Surface(s)</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-dissection-fixture"><td><a href="#construct-surfaces-by-dissecting-surfaces-from-ref-list">Construct Surfaces by Dissecting Surfaces from Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface dissection fixture</td></tr>
-<tr data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-by-dissecting-surfaces-from-ref-list">Construct Surfaces by Dissecting Surfaces from Ref List</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-point-group-surface-fixture"><td><a href="#construct-surface-from-point-groups">Construct Surface From Point Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group surface fixture</td></tr>
-<tr data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-point-groups">Construct Surface From Point Groups</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-surfaces-by-projecting-points">Construct Surfaces By Projecting Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
-<tr data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-by-projecting-points">Construct Surfaces By Projecting Points</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-offset-surface-fixture"><td><a href="#construct-surface-by-offsetting-a-surface">Construct surface by offsetting a surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - offset surface fixture</td></tr>
-<tr data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-by-offsetting-a-surface">Construct surface by offsetting a surface</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-annotation-link-fixture"><td><a href="#construct-surface-from-annotation-links">Construct Surface From Annotation Links</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - annotation-link fixture</td></tr>
-<tr data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-annotation-links">Construct Surface From Annotation Links</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="licensed-partial-cylinder-probe"><td><a href="#construct-geometry-from-surfaces">Construct Geometry From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed probe - cylinder-only contract confirmed</td></tr>
-<tr data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-geometry-from-surfaces">Construct Geometry From Surfaces</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -125,17 +125,19 @@ These entries cover the 15 commands observed under **Construction Operations
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk object surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-from-objects) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-from-objects) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-from-objects) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-from-objects)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -160,17 +162,19 @@ objects and determines the resulting names and outcome.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk b spline surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-bsplines) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-bsplines) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-bsplines) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-bsplines)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -198,17 +202,19 @@ Requires a resulting Surface identity and a B-Spline list. The exact SA
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk cylinder surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cylinder) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cylinder) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cylinder) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cylinder)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -238,17 +244,19 @@ defaults to `true`; `Use Theta Extent Mode?` defaults to `false`.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk plane surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-plane) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-plane) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-plane) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-plane)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -275,17 +283,19 @@ Requires resulting Surface and source Plane identities.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk sphere surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-sphere) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-sphere) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-sphere) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-sphere)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -312,17 +322,19 @@ Requires resulting Surface and source Sphere identities.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk cone surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cone) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cone) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cone) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-cone)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -349,17 +361,19 @@ Requires resulting Surface and source Cone identities.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk surface sewing fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -392,17 +406,19 @@ tolerance `-1.0`. Briosa does not add topology or tolerance safeguards.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk nominal surface and point fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -432,17 +448,19 @@ singular `Nominal Surface`.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk interactive cad fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-dissecting-surfaces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -470,17 +488,19 @@ prove that the interaction stopped.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk surface dissection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -506,17 +526,19 @@ list through without adding volume or topology validation.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk point group surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-point-groups) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-point-groups) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-point-groups) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-point-groups)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -546,17 +568,19 @@ enough points to form the surface; Briosa does not prevalidate that state.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk projection fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surfaces-by-projecting-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -585,17 +609,19 @@ Surface identity.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk offset surface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-by-offsetting-a-surface)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -623,17 +649,19 @@ argument capitalization are preserved.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At risk annotation link fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-annotation-links) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-annotation-links) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-annotation-links) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-surface-from-annotation-links)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -660,17 +688,19 @@ Requires an Annotation list and a resulting Surface identity.
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">Licensed partial cylinder probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Surfaces" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-surfaces#construct-geometry-from-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces#construct-geometry-from-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-surfaces#construct-geometry-from-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces#construct-geometry-from-surfaces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

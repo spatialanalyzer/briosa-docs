@@ -41,4 +41,4 @@ function constructConesFromSurfaceFacesRuntimeSelect(
 The operator selects faces in SpatialAnalyzer. Aborting the call does not prove
 the interaction stopped, and the client never automatically replays it.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)
+[Catalog](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [gRPC](/api/grpc/0.5.1/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)

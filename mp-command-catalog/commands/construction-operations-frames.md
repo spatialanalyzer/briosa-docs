@@ -9,7 +9,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Construction Operations / Frames Commands
 
 These entries cover the 18 commands observed under **Construction Operations
-→ Frames** in SA 2026.1.0529.7. Every command is included in Briosa Server 0.5.1;
+→ Frames** in SA 2026.1.0529.7. Every command is included in Briosa Server 0.7.0;
 fixture notes describe validation coverage rather than reduced API commitment.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
@@ -26,111 +26,111 @@ fixture notes describe validation coverage rather than reduced API commitment.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame with Wizard" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-interactive-fixture-validation-required"><td><a href="#construct-frame-with-wizard">Construct Frame with Wizard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td></tr>
-<tr data-command="Construct Frame with Wizard" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame with Wizard" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-with-wizard">Construct Frame with Wizard</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame">Construct Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame">Construct Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame From Transform In World" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-from-transform-in-world">Construct Frame From Transform In World</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame From Transform In World" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame From Transform In World" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-from-transform-in-world">Construct Frame From Transform In World</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame on Instrument Base" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-instrument-fixture-validation-required"><td><a href="#construct-frame-on-instrument-base">Construct Frame on Instrument Base</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture validation required</td></tr>
-<tr data-command="Construct Frame on Instrument Base" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame on Instrument Base" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-on-instrument-base">Construct Frame on Instrument Base</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame on Object" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-on-object">Construct Frame on Object</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame on Object" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame on Object" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-on-object">Construct Frame on Object</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame, 3 Points" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-points">Construct Frame, 3 Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, 3 Points" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame, 3 Points" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-3-points">Construct Frame, 3 Points</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame, at Point, with working Z, and clocked axis" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-at-point-with-working-z-and-clocked-axis">Construct Frame, at Point, with working Z, and clocked axis</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, at Point, with working Z, and clocked axis" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame, at Point, with working Z, and clocked axis" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-at-point-with-working-z-and-clocked-axis">Construct Frame, at Point, with working Z, and clocked axis</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame, Pick origin and point on X axis - clock Z along working Z" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z">Construct Frame, Pick origin and point on X axis - clock Z along working Z</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, Pick origin and point on X axis - clock Z along working Z" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame, Pick origin and point on X axis - clock Z along working Z" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z">Construct Frame, Pick origin and point on X axis - clock Z along working Z</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame, Known Origin, Object Direction, Object Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-known-origin-object-direction-object-direction">Construct Frame, Known Origin, Object Direction, Object Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, Known Origin, Object Direction, Object Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame, Known Origin, Object Direction, Object Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-known-origin-object-direction-object-direction">Construct Frame, Known Origin, Object Direction, Object Direction</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame, 3 Planes" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame-3-planes">Construct Frame, 3 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame, 3 Planes" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame, 3 Planes" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-3-planes">Construct Frame, 3 Planes</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame - Copy And Make Left Handed" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---copy-and-make-left-handed">Construct Frame - Copy And Make Left Handed</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame - Copy And Make Left Handed" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame - Copy And Make Left Handed" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame---copy-and-make-left-handed">Construct Frame - Copy And Make Left Handed</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame - Average of Other Object Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-frame---average-of-other-object-frames">Construct Frame - Average of Other Object Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
-<tr data-command="Construct Frame - Average of Other Object Frames" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame - Average of Other Object Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame---average-of-other-object-frames">Construct Frame - Average of Other Object Frames</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame at Robot Link" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-robot-fixture-validation-required"><td><a href="#construct-frame-at-robot-link">Construct Frame at Robot Link</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - robot fixture validation required</td></tr>
-<tr data-command="Construct Frame at Robot Link" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame at Robot Link" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-at-robot-link">Construct Frame at Robot Link</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frame From Point Measurement Probing Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-probing-data-fixture-validation-required"><td><a href="#construct-frame-from-point-measurement-probing-frames">Construct Frame From Point Measurement Probing Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - probing-data fixture validation required</td></tr>
-<tr data-command="Construct Frame From Point Measurement Probing Frames" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frame From Point Measurement Probing Frames" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frame-from-point-measurement-probing-frames">Construct Frame From Point Measurement Probing Frames</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Mirror Cube Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mirror-measurement-fixture-validation-required"><td><a href="#construct-mirror-cube-frame">Construct Mirror Cube Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mirror-measurement fixture validation required</td></tr>
-<tr data-command="Construct Mirror Cube Frame" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Mirror Cube Frame" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-mirror-cube-frame">Construct Mirror Cube Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frames By Projecting Frames On Mesh Along Frame Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-frame-direction">Construct Frames By Projecting Frames On Mesh Along Frame Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh fixture validation required</td></tr>
-<tr data-command="Construct Frames By Projecting Frames On Mesh Along Frame Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frames By Projecting Frames On Mesh Along Frame Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frames-by-projecting-frames-on-mesh-along-frame-direction">Construct Frames By Projecting Frames On Mesh Along Frame Direction</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Frames By Projecting Frames On Mesh Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-fixture-validation-required"><td><a href="#construct-frames-by-projecting-frames-on-mesh-along-reference-direction">Construct Frames By Projecting Frames On Mesh Along Reference Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh fixture validation required</td></tr>
-<tr data-command="Construct Frames By Projecting Frames On Mesh Along Reference Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Frames By Projecting Frames On Mesh Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-frames-by-projecting-frames-on-mesh-along-reference-direction">Construct Frames By Projecting Frames On Mesh Along Reference Direction</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Add Surface To Mesh Offset Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-mesh-and-surface-fixture-validation-required"><td><a href="#add-surface-to-mesh-offset-along-reference-direction">Add Surface To Mesh Offset Along Reference Direction</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - mesh and surface fixture validation required</td></tr>
-<tr data-command="Add Surface To Mesh Offset Along Reference Direction" data-group="Construction Operations / Frames" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Add Surface To Mesh Offset Along Reference Direction" data-group="Construction Operations / Frames" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-surface-to-mesh-offset-along-reference-direction">Add Surface To Mesh Offset Along Reference Direction</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -144,17 +144,19 @@ fixture notes describe validation coverage rather than reduced API commitment.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk interactive fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -183,17 +185,19 @@ wizard closed, and Briosa never automatically replays the operation.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -221,17 +225,19 @@ coordinates.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -258,17 +264,19 @@ Constructs a frame from a transform expressed in world coordinates.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk instrument fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -295,17 +303,19 @@ commitment.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -332,17 +342,19 @@ Constructs a frame from an object's position and orientation.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -371,17 +383,19 @@ the MP type rather than accepting an arbitrary string.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -408,17 +422,19 @@ The clocked-axis choice includes positive and negative X, Y, and Z axes.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -445,17 +461,19 @@ Z direction.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -488,17 +506,19 @@ choices. Values are passed through for SpatialAnalyzer to evaluate.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -531,17 +551,19 @@ part of the exact MP binding and is preserved by the server mapping.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -569,17 +591,19 @@ Copies a frame and reverses one unsigned axis to make the result left handed.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -607,17 +631,19 @@ supplied objects. Briosa does not add a minimum-list-size rule.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk robot fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -646,17 +672,19 @@ robot or machine fixture.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk probing data fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -682,17 +710,19 @@ metadata.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk mirror measurement fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -723,17 +753,19 @@ fixture for licensed validation.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk mesh fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -764,17 +796,19 @@ own directions.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk mesh fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -806,17 +840,19 @@ the complete resultant-frame list.
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At risk mesh and surface fixture validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Frames" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Frames</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Ask for Double
 
-[Ask for Double](/mp-command-catalog/commands/process-flow-operations#ask-for-double) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-double)
+[Ask for Double](/mp-command-catalog/commands/process-flow-operations#ask-for-double) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-double)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for Integer
 
-[Ask for Integer](/mp-command-catalog/commands/process-flow-operations#ask-for-integer) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-integer)
+[Ask for Integer](/mp-command-catalog/commands/process-flow-operations#ask-for-integer) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-integer)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for Point Name
 
-[Ask for Point Name](/mp-command-catalog/commands/process-flow-operations#ask-for-point-name) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-point-name)
+[Ask for Point Name](/mp-command-catalog/commands/process-flow-operations#ask-for-point-name) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-point-name)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -128,7 +128,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for String
 
-[Ask for String](/mp-command-catalog/commands/process-flow-operations#ask-for-string) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string)
+[Ask for String](/mp-command-catalog/commands/process-flow-operations#ask-for-string) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-string)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -165,7 +165,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for String (Pull-Down Version)
 
-[Ask for String (Pull-Down Version)](/mp-command-catalog/commands/process-flow-operations#ask-for-string-pull-down-version) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-string-pull-down-version)
+[Ask for String (Pull-Down Version)](/mp-command-catalog/commands/process-flow-operations#ask-for-string-pull-down-version) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-string-pull-down-version)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for User Decision from Image
 
-[Ask for User Decision from Image](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-image)
+[Ask for User Decision from Image](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-user-decision-from-image)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -246,7 +246,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Ask for User Decision from Strings
 
-[Ask for User Decision from Strings](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC contract](/api/grpc/process-flow-operations#ask-for-user-decision-from-strings)
+[Ask for User Decision from Strings](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#ask-for-user-decision-from-strings)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -285,7 +285,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Object Existence Test (Check Only)
 
-[Object Existence Test (Check Only)](/mp-command-catalog/commands/process-flow-operations#object-existence-test-check-only) · [gRPC contract](/api/grpc/process-flow-operations#object-existence-test-check-only)
+[Object Existence Test (Check Only)](/mp-command-catalog/commands/process-flow-operations#object-existence-test-check-only) · [gRPC contract](/api/grpc/0.5.1/process-flow-operations#object-existence-test-check-only)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

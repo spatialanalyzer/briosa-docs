@@ -277,4 +277,4 @@ All values are passed through without client-side geometry validation.
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-frames) ·
-[gRPC](/api/grpc/construction-operations-frames)
+[gRPC](/api/grpc/0.5.1/construction-operations-frames)

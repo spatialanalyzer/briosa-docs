@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Add Task Overview Item
 
-[Add Task Overview Item](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item) · [gRPC contract](/api/grpc/mp-task-overview#add-task-overview-item)
+[Add Task Overview Item](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#add-task-overview-item)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create/Clear Task Overview List
 
-[Create/Clear Task Overview List](/mp-command-catalog/commands/mp-task-overview#createclear-task-overview-list) · [gRPC contract](/api/grpc/mp-task-overview#createclear-task-overview-list)
+[Create/Clear Task Overview List](/mp-command-catalog/commands/mp-task-overview#createclear-task-overview-list) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#createclear-task-overview-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -79,7 +79,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Current Task
 
-[Set Current Task](/mp-command-catalog/commands/mp-task-overview#set-current-task) · [gRPC contract](/api/grpc/mp-task-overview#set-current-task)
+[Set Current Task](/mp-command-catalog/commands/mp-task-overview#set-current-task) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-current-task)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Overview Image
 
-[Set Overview Image](/mp-command-catalog/commands/mp-task-overview#set-overview-image) · [gRPC contract](/api/grpc/mp-task-overview#set-overview-image)
+[Set Overview Image](/mp-command-catalog/commands/mp-task-overview#set-overview-image) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-overview-image)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -141,7 +141,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Overview Title
 
-[Set Overview Title](/mp-command-catalog/commands/mp-task-overview#set-overview-title) · [gRPC contract](/api/grpc/mp-task-overview#set-overview-title)
+[Set Overview Title](/mp-command-catalog/commands/mp-task-overview#set-overview-title) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-overview-title)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -172,7 +172,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Task Item Comment
 
-[Set Task Item Comment](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-comment)
+[Set Task Item Comment](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-comment)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -205,7 +205,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Task Item Completion Values
 
-[Set Task Item Completion Values](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-completion-values)
+[Set Task Item Completion Values](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-completion-values)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -240,7 +240,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Task Item Name
 
-[Set Task Item Name](/mp-command-catalog/commands/mp-task-overview#set-task-item-name) · [gRPC contract](/api/grpc/mp-task-overview#set-task-item-name)
+[Set Task Item Name](/mp-command-catalog/commands/mp-task-overview#set-task-item-name) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#set-task-item-name)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -273,7 +273,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show Progress for Task Item
 
-[Show Progress for Task Item](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item) · [gRPC contract](/api/grpc/mp-task-overview#show-progress-for-task-item)
+[Show Progress for Task Item](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#show-progress-for-task-item)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -306,7 +306,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Show Task Overview List
 
-[Show Task Overview List](/mp-command-catalog/commands/mp-task-overview#show-task-overview-list) · [gRPC contract](/api/grpc/mp-task-overview#show-task-overview-list)
+[Show Task Overview List](/mp-command-catalog/commands/mp-task-overview#show-task-overview-list) · [gRPC contract](/api/grpc/0.5.1/mp-task-overview#show-task-overview-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

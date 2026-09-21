@@ -56,6 +56,6 @@ exception model. Caller cancellation does not prove that an in-flight
 SpatialAnalyzer command was stopped, and the client does not automatically
 replay a call with an uncertain outcome.
 
-- [gRPC operation](/api/grpc/get-working-directory)
+- [gRPC operation](/api/grpc/0.5.1/get-working-directory)
 - [`BriosaClient` lifecycle](./lifecycle)
 - [Understanding execution outcomes](/docs/concepts/execution-outcomes)

@@ -27,14 +27,17 @@ duplicating client usage guidance.
 
 ## Draft and Release API Contracts
 
-Each API reference has its own Docusaurus release history. The gRPC reference
-is published as **0.5.1**, matching Briosa Server 0.5.1. Product guides and the
-MP catalog remain unversioned.
+Current defaults are Server **0.7.0** and clients **0.2.0**. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
 
-The source directories under `api/` hold working documentation. Client
-references serve their **0.1.0** snapshots for SA 2026, with legacy differences
-linked explicitly. Working references are omitted from the public build while
-the released snapshots are the defaults.
+## Release Checklist
+
+1. Verify published GitHub releases and package registries for both exact targets.
+2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
+3. Update guides and every catalog representation without promoting validation claims.
+4. Cut each product snapshot with its Docusaurus version command; update defaults and preserve historical API links.
+5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
+6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
+
 Do not present a source implementation as an available package.
 
 Before cutting a reference, reconcile its contracts and availability against

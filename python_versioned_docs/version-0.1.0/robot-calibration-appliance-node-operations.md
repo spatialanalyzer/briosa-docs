@@ -17,7 +17,7 @@ class CalibrationApplianceNodeStatus:
 
 ## add_calibration_appliance_node
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
 
 ```python
 async def add_calibration_appliance_node(
@@ -28,7 +28,7 @@ async def add_calibration_appliance_node(
 
 ## delete_calibration_appliance_node
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
 
 ```python
 async def delete_calibration_appliance_node(
@@ -39,7 +39,7 @@ async def delete_calibration_appliance_node(
 
 ## connect_disconnect_calibration_appliance_node
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
 
 ```python
 async def connect_disconnect_calibration_appliance_node(
@@ -52,7 +52,7 @@ async def connect_disconnect_calibration_appliance_node(
 
 ## set_calibration_appliance_node_instrument
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
 
 ```python
 async def set_calibration_appliance_node_instrument(
@@ -64,7 +64,7 @@ async def set_calibration_appliance_node_instrument(
 
 ## set_calibration_appliance_node_measurement_profile
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
 
 ```python
 async def set_calibration_appliance_node_measurement_profile(
@@ -76,7 +76,7 @@ async def set_calibration_appliance_node_measurement_profile(
 
 ## set_calibration_appliance_node_measurement_target
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
 
 ```python
 async def set_calibration_appliance_node_measurement_target(
@@ -88,7 +88,7 @@ async def set_calibration_appliance_node_measurement_target(
 
 ## enable_disable_calibration_appliance_node_instrument_auto_point
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
 
 ```python
 async def enable_disable_calibration_appliance_node_instrument_auto_point(
@@ -101,7 +101,7 @@ async def enable_disable_calibration_appliance_node_instrument_auto_point(
 
 ## set_calibration_appliance_node_instrument_dwell_time
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
 
 ```python
 async def set_calibration_appliance_node_instrument_dwell_time(
@@ -113,7 +113,7 @@ async def set_calibration_appliance_node_instrument_dwell_time(
 
 ## skip_calibration_appliance_node_measurement
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
 
 ```python
 async def skip_calibration_appliance_node_measurement(
@@ -124,7 +124,7 @@ async def skip_calibration_appliance_node_measurement(
 
 ## set_calibration_appliance_node_measurement_frame
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
 
 ```python
 async def set_calibration_appliance_node_measurement_frame(
@@ -138,7 +138,7 @@ The reference must identify an SA Frame.
 
 ## set_calibration_appliance_node_measurement_offset_transform
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
 
 ```python
 async def set_calibration_appliance_node_measurement_offset_transform(
@@ -152,7 +152,7 @@ async def set_calibration_appliance_node_measurement_offset_transform(
 
 ## set_calibration_appliance_node_measurement_point_group
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
 
 ```python
 async def set_calibration_appliance_node_measurement_point_group(
@@ -166,7 +166,7 @@ The point-group reference must identify an SA Point Group.
 
 ## set_calibration_appliance_node_calibration_appliance_ip_address
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
 
 ```python
 async def set_calibration_appliance_node_calibration_appliance_ip_address(
@@ -181,7 +181,7 @@ appliance through local SA; it does not enable remote Briosa execution.
 
 ## set_calibration_appliance_node_trapping_node_id
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
 
 ```python
 async def set_calibration_appliance_node_trapping_node_id(
@@ -193,7 +193,7 @@ async def set_calibration_appliance_node_trapping_node_id(
 
 ## enable_disable_calibration_appliance_node_trap_manager
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
 
 ```python
 async def enable_disable_calibration_appliance_node_trap_manager(
@@ -206,7 +206,7 @@ async def enable_disable_calibration_appliance_node_trap_manager(
 
 ## clear_calibration_appliance_node_trap_manager_requests
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
 
 ```python
 async def clear_calibration_appliance_node_trap_manager_requests(
@@ -217,7 +217,7 @@ async def clear_calibration_appliance_node_trap_manager_requests(
 
 ## set_calibration_appliance_node_integer_value
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
 
 ```python
 async def set_calibration_appliance_node_integer_value(
@@ -231,7 +231,7 @@ async def set_calibration_appliance_node_integer_value(
 
 ## get_calibration_appliance_node_integer_value
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
 
 ```python
 async def get_calibration_appliance_node_integer_value(
@@ -244,7 +244,7 @@ async def get_calibration_appliance_node_integer_value(
 
 ## set_calibration_appliance_node_real_value
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
 
 ```python
 async def set_calibration_appliance_node_real_value(
@@ -258,7 +258,7 @@ async def set_calibration_appliance_node_real_value(
 
 ## get_calibration_appliance_node_real_value
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
 
 ```python
 async def get_calibration_appliance_node_real_value(
@@ -271,7 +271,7 @@ async def get_calibration_appliance_node_real_value(
 
 ## set_calibration_appliance_node_data
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
 
 ```python
 async def set_calibration_appliance_node_data(
@@ -287,7 +287,7 @@ real-values-only contract.
 
 ## get_calibration_appliance_node_data
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
 
 ```python
 async def get_calibration_appliance_node_data(
@@ -302,7 +302,7 @@ retained SA state. The result contains only the SDK-supported `Real Values`.
 
 ## set_calibration_appliance_node_display_robot
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
 
 ```python
 async def set_calibration_appliance_node_display_robot(
@@ -314,7 +314,7 @@ async def set_calibration_appliance_node_display_robot(
 
 ## update_calibration_appliance_node_display_robot_joints
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
 
 ```python
 async def update_calibration_appliance_node_display_robot_joints(
@@ -327,7 +327,7 @@ async def update_calibration_appliance_node_display_robot_joints(
 
 ## get_calibration_appliance_node_status
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
 
 ```python
 async def get_calibration_appliance_node_status(

@@ -28,4 +28,4 @@ lists with fewer than two points. `openPerimeter` defaults to `false`, which
 creates a closed perimeter. The client never automatically replays this
 operation.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) · [gRPC](/api/grpc/construction-operations-perimeters#construct-perimeter-from-points)
+[Catalog](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) · [gRPC](/api/grpc/0.5.1/construction-operations-perimeters#construct-perimeter-from-points)

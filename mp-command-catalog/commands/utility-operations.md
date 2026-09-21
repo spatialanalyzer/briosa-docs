@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Utility Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.7.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -29,10 +29,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Close All Watch Windows" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Close All Watch Windows" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#close-all-watch-windows">Close All Watch Windows</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Connect to OPC UA Server" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -59,10 +59,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-folder">Delete Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -71,10 +71,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Items" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Items" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-items">Delete Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Objects" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -83,10 +83,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Objects" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Objects" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-objects">Delete Objects</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Disconnect from OPC UA Server" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -113,10 +113,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Active Language" data-group="Utility Operations / Language" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Active Language" data-group="Utility Operations / Language" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-active-language">Get Active Language</a></td>
   <td>Utility Operations / Language</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Active Units" data-group="Utility Operations / Units" data-status="current" data-validation="released-implementation">
@@ -125,11 +125,11 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Released implementation</td>
 </tr>
-<tr data-command="Get Active Units" data-group="Utility Operations / Units" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Active Units" data-group="Utility Operations / Units" data-status="current" data-validation="limited-local-licensed-smoke" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-active-units">Get Active Units</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
-  <td>Evidence review — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
+  <td>Limited local licensed smoke test</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-angular-representation">Get Angular Representation</a></td>
@@ -137,10 +137,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Angular Representation" data-group="Utility Operations / Units" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-angular-representation">Get Angular Representation</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -149,10 +149,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Collection Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-collection-notes">Get Collection Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Folder Collections" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
@@ -161,10 +161,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folder Collections" data-group="Utility Operations / Folders" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Folder Collections" data-group="Utility Operations / Folders" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-folder-collections">Get Folder Collections</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -173,10 +173,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folder Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-folder-notes">Get Folder Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Folders by Wildcard" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
@@ -185,10 +185,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Folders by Wildcard" data-group="Utility Operations / Folders" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Folders by Wildcard" data-group="Utility Operations / Folders" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-folders-by-wildcard">Get Folders by Wildcard</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -197,10 +197,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Object Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-object-notes">Get Object Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -209,10 +209,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-opc-da-tag-value-double">Get OPC DA Tag Value Double</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -221,10 +221,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-opc-da-tag-value-integer">Get OPC DA Tag Value Integer</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -233,10 +233,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-opc-da-tag-value-string">Get OPC DA Tag Value String</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get OPC UA Node Named Coordinate Frame" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -269,10 +269,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Point Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Point Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-point-notes">Get Point Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Screen Resolution" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -281,10 +281,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Screen Resolution" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Screen Resolution" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-screen-resolution">Get Screen Resolution</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Tick Count" data-group="Utility Operations" data-status="excluded" data-validation="not-applicable">
@@ -305,11 +305,11 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Released implementation</td>
 </tr>
-<tr data-command="Get Working Frame Properties" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Working Frame Properties" data-group="Utility Operations" data-status="current" data-validation="limited-local-licensed-smoke" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-working-frame-properties">Get Working Frame Properties</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
-  <td>Evidence review — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
+  <td>Limited local licensed smoke test</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="HTTP GET Request" data-group="Utility Operations / Network" data-status="sdk-unavailable" data-validation="not-applicable">
   <td><a href="#http-get-request">HTTP GET Request</a></td>
@@ -347,10 +347,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Increment Point Name" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Increment Point Name" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#increment-point-name">Increment Point Name</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Lock Imported Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -359,10 +359,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock Imported Items" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Lock Imported Items" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lock-imported-items">Lock Imported Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Lock/Unlock Selected Items" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -371,10 +371,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock/Unlock Selected Items" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Lock/Unlock Selected Items" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lockunlock-selected-items">Lock/Unlock Selected Items</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Lock/Unlock Trapping Control" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -383,10 +383,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Lock/Unlock Trapping Control" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Lock/Unlock Trapping Control" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#lockunlock-trapping-control">Lock/Unlock Trapping Control</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Collection to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
@@ -395,10 +395,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Move Collection to Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Collection to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-collection-to-folder">Move Collection to Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Folder to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="portable-contract-review">
@@ -407,10 +407,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Move Folder to Folder" data-group="Utility Operations / Folders" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Folder to Folder" data-group="Utility Operations / Folders" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-folder-to-folder">Move Folder to Folder</a></td>
   <td>Utility Operations / Folders</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Instruments Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -419,10 +419,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Move Instruments Drag Graphically" data-group="Utility Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Instruments Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-instruments-drag-graphically">Move Instruments Drag Graphically</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Objects Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -431,10 +431,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Move Objects Drag Graphically" data-group="Utility Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Objects Drag Graphically" data-group="Utility Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-objects-drag-graphically">Move Objects Drag Graphically</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="OPC UA MP Configuration Auto Run Settings" data-group="Utility Operations / OPC UA Client" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -491,10 +491,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Scale Objects" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Scale Objects" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#scale-objects">Scale Objects</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Send MP Result to External Device" data-group="Utility Operations / Network" data-status="uncommitted" data-validation="not-applicable">
@@ -527,10 +527,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Active Custom Language" data-group="Utility Operations / Language" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Active Custom Language" data-group="Utility Operations / Language" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-active-custom-language">Set Active Custom Language</a></td>
   <td>Utility Operations / Language</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Active Integrated Language" data-group="Utility Operations / Language" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -551,10 +551,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Active Units" data-group="Utility Operations / Units" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Active Units" data-group="Utility Operations / Units" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-active-units">Set Active Units</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
@@ -563,10 +563,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Angular Representation" data-group="Utility Operations / Units" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Angular Representation" data-group="Utility Operations / Units" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-angular-representation">Set Angular Representation</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Auto Event Creation" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -575,10 +575,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Auto Event Creation" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Auto Event Creation" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-auto-event-creation">Set Auto Event Creation</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Automatic Backup State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -587,10 +587,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Automatic Backup State" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Automatic Backup State" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-automatic-backup-state">Set Automatic Backup State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Automatic Relationship Construction State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -599,10 +599,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Automatic Relationship Construction State" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Automatic Relationship Construction State" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-automatic-relationship-construction-state">Set Automatic Relationship Construction State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -611,10 +611,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Collection Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Collection Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-collection-notes">Set Collection Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Decimal Digits for Display" data-group="Utility Operations / Units" data-status="current" data-validation="portable-contract-review">
@@ -623,10 +623,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Decimal Digits for Display" data-group="Utility Operations / Units" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Decimal Digits for Display" data-group="Utility Operations / Units" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-decimal-digits-for-display">Set Decimal Digits for Display</a></td>
   <td>Utility Operations / Units</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -635,10 +635,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Folder Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Folder Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-folder-notes">Set Folder Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Interaction Mode" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -647,10 +647,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Interaction Mode" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Interaction Mode" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-interaction-mode">Set Interaction Mode</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Logging State" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -659,10 +659,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Logging State" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Logging State" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-logging-state">Set Logging State</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set MP Step Mode" data-group="Utility Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -683,10 +683,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Notification Cancel Override" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Notification Cancel Override" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-notification-cancel-override">Set Notification Cancel Override</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="portable-contract-review">
@@ -695,10 +695,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Object Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Object Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-object-notes">Set Object Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -707,10 +707,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set OPC DA Tag Value Double" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-opc-da-tag-value-double">Set OPC DA Tag Value Double</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -719,10 +719,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set OPC DA Tag Value Integer" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-opc-da-tag-value-integer">Set OPC DA Tag Value Integer</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -731,10 +731,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set OPC DA Tag Value String" data-group="Utility Operations / OPC DA Server" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-opc-da-tag-value-string">Set OPC DA Tag Value String</a></td>
   <td>Utility Operations / OPC DA Server</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set OPC UA Node Named Coordinate Frame" data-group="Utility Operations / OPC UA Client" data-status="uncommitted" data-validation="not-applicable">
@@ -779,10 +779,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Point Notes" data-group="Utility Operations / Notes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Point Notes" data-group="Utility Operations / Notes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-point-notes">Set Point Notes</a></td>
   <td>Utility Operations / Notes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Special MP Mode" data-group="Utility Operations" data-status="uncommitted" data-validation="not-applicable">
@@ -803,10 +803,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set User Interface Profile" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set User Interface Profile" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-user-interface-profile">Set User Interface Profile</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set View Idle Update Frequency" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -815,10 +815,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set View Idle Update Frequency" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set View Idle Update Frequency" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-view-idle-update-frequency">Set View Idle Update Frequency</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set WildCard Asterisk Mode" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -827,10 +827,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set WildCard Asterisk Mode" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set WildCard Asterisk Mode" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-wildcard-asterisk-mode">Set WildCard Asterisk Mode</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Working Frame" data-group="Utility Operations" data-status="current" data-validation="portable-contract-review">
@@ -839,10 +839,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Working Frame" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Working Frame" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-working-frame">Set Working Frame</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Speak To User" data-group="Utility Operations / Units" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -863,10 +863,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Status Dialog" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Status Dialog" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#status-dialog">Status Dialog</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Step Comment" data-group="Utility Operations / Units" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -893,10 +893,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Trim Log File" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Trim Log File" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#trim-log-file">Trim Log File</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="UDP Receive String" data-group="Utility Operations / Network" data-status="uncommitted" data-validation="not-applicable">
@@ -953,10 +953,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Write to Log" data-group="Utility Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Write to Log" data-group="Utility Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#write-to-log">Write to Log</a></td>
   <td>Utility Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -970,17 +970,19 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#close-all-watch-windows) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#close-all-watch-windows) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#close-all-watch-windows) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#close-all-watch-windows)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1109,17 +1111,19 @@ The exact SDK cannot supply `Time units`, so Briosa cannot expose the complete u
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#delete-folder) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#delete-folder) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#delete-folder) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#delete-folder)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1158,17 +1162,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#delete-items) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#delete-items) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#delete-items) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#delete-items)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1207,17 +1213,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#delete-objects) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#delete-objects) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#delete-objects) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#delete-objects)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1339,17 +1347,19 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
   <span className="catalog-target-group">Utility Operations / Language</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Language" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Language" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Language</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-active-language) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-active-language) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-active-language) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-active-language)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1389,17 +1399,19 @@ Returns the active language file and custom-language flag; the SDK cannot return
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Released implementation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Units" data-validation="limited-local-licensed-smoke">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-active-units) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-active-units) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-active-units) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-active-units)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. A limited local licensed smoke test covered this read-only operation; it did not validate all operations or fixtures.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1440,17 +1452,19 @@ Implemented and callable for this exact target.
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-angular-representation) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-angular-representation) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-angular-representation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-angular-representation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1489,17 +1503,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-collection-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-collection-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-collection-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-collection-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1539,17 +1555,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-folder-collections) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-folder-collections) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-folder-collections) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-folder-collections)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1589,17 +1607,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-folder-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-folder-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-folder-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-folder-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1639,17 +1659,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-folders-by-wildcard) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-folders-by-wildcard) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-folders-by-wildcard) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-folders-by-wildcard)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1690,17 +1712,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-object-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-object-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-object-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-object-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1742,17 +1766,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-double) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-double) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-double) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-double)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1792,17 +1818,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-integer) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-integer) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-integer) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-integer)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1842,17 +1870,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-string) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-string) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-string) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-opc-da-tag-value-string)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2053,17 +2083,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-point-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-point-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-point-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-point-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2103,17 +2135,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-screen-resolution) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-screen-resolution) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-screen-resolution) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-screen-resolution)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2207,17 +2241,19 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Released implementation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="limited-local-licensed-smoke">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#get-working-frame-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#get-working-frame-properties) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#get-working-frame-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#get-working-frame-properties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. A limited local licensed smoke test covered this read-only operation; it did not validate all operations or fixtures.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2391,17 +2427,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#increment-point-name) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#increment-point-name) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#increment-point-name) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#increment-point-name)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2442,17 +2480,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#lock-imported-items) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#lock-imported-items) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#lock-imported-items) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#lock-imported-items)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2491,17 +2531,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#lockunlock-selected-items) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#lockunlock-selected-items) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#lockunlock-selected-items) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#lockunlock-selected-items)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2542,17 +2584,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#lockunlock-trapping-control) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#lockunlock-trapping-control) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#lockunlock-trapping-control) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#lockunlock-trapping-control)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2594,17 +2638,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#move-collection-to-folder) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#move-collection-to-folder) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#move-collection-to-folder) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#move-collection-to-folder)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2644,17 +2690,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Folders" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Folders</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#move-folder-to-folder) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#move-folder-to-folder) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#move-folder-to-folder) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#move-folder-to-folder)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2694,17 +2742,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#move-instruments-drag-graphically) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#move-instruments-drag-graphically) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#move-instruments-drag-graphically) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#move-instruments-drag-graphically)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2743,17 +2793,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#move-objects-drag-graphically) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#move-objects-drag-graphically) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#move-objects-drag-graphically) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#move-objects-drag-graphically)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3055,17 +3107,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#scale-objects) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#scale-objects) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#scale-objects) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#scale-objects)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3207,17 +3261,19 @@ The exact SDK cannot supply `Step ID`, so Briosa cannot expose the complete usef
   <span className="catalog-target-group">Utility Operations / Language</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Language" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Language" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Language</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-active-custom-language) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-active-custom-language) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-active-custom-language) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-active-custom-language)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3306,17 +3362,19 @@ The exact SDK cannot supply `Language Name`, so Briosa cannot expose the complet
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-active-units) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-active-units) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-active-units) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-active-units)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3360,17 +3418,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-angular-representation) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-angular-representation) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-angular-representation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-angular-representation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3409,17 +3469,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-auto-event-creation) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-auto-event-creation) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-auto-event-creation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-auto-event-creation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3458,17 +3520,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-automatic-backup-state) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-automatic-backup-state) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-automatic-backup-state) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-automatic-backup-state)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3508,17 +3572,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-automatic-relationship-construction-state) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-automatic-relationship-construction-state) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-automatic-relationship-construction-state) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-automatic-relationship-construction-state)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3557,17 +3623,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-collection-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-collection-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-collection-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-collection-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3608,17 +3676,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Units" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Units</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-decimal-digits-for-display) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-decimal-digits-for-display) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-decimal-digits-for-display) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-decimal-digits-for-display)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3661,17 +3731,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-folder-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-folder-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-folder-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-folder-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3712,17 +3784,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-interaction-mode) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-interaction-mode) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-interaction-mode) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-interaction-mode)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3763,17 +3837,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-logging-state) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-logging-state) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-logging-state) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-logging-state)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3861,17 +3937,19 @@ The exact SDK cannot supply `MP Step Mode`, so Briosa cannot expose the complete
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-notification-cancel-override) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-notification-cancel-override) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-notification-cancel-override) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-notification-cancel-override)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3910,17 +3988,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-object-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-object-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-object-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-object-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3963,17 +4043,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-double) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-double) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-double) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-double)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4013,17 +4095,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-integer) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-integer) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-integer) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-integer)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4063,17 +4147,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / OPC DA Server" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / OPC DA Server</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-string) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-string) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-string) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-opc-da-tag-value-string)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4325,17 +4411,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations / Notes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations / Notes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-point-notes) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-point-notes) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-point-notes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-point-notes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4426,17 +4514,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-user-interface-profile) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-user-interface-profile) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-user-interface-profile) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-user-interface-profile)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4476,17 +4566,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-view-idle-update-frequency) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-view-idle-update-frequency) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-view-idle-update-frequency) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-view-idle-update-frequency)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4525,17 +4617,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-wildcard-asterisk-mode) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-wildcard-asterisk-mode) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-wildcard-asterisk-mode) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-wildcard-asterisk-mode)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4574,17 +4668,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#set-working-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#set-working-frame) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#set-working-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#set-working-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4691,17 +4787,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#status-dialog) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#status-dialog) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#status-dialog) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#status-dialog)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4848,17 +4946,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#trim-log-file) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#trim-log-file) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#trim-log-file) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#trim-log-file)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5133,17 +5233,19 @@ Potentially useful, but deferred until its dependency, security, ownership, or i
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Utility Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Utility Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/utility-operations#write-to-log) · [.NET](/api/dotnet/sa-2024.1.0508.5/utility-operations#write-to-log) · [Python](/api/python/sa-2024.1.0508.5/utility-operations#write-to-log) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/utility-operations#write-to-log)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

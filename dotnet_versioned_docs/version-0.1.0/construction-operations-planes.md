@@ -77,4 +77,4 @@ interaction stopped.
 The client passes all values through without additional geometry safeguards
 and never automatically replays these operations.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-planes) · [gRPC](/api/grpc/construction-operations-planes)
+[Catalog](/mp-command-catalog/commands/construction-operations-planes) · [gRPC](/api/grpc/0.5.1/construction-operations-planes)

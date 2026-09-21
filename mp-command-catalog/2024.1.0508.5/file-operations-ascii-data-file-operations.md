@@ -1,15 +1,15 @@
 ---
 title: File Operations / ASCII Data File Operations in SA 2024.1.0508.5
 sidebar_label: ASCII Data File Operations
-description: Reviewed File Operations / ASCII Data File Operations commands and planned Briosa support for SpatialAnalyzer 2024.1.0508.5.
+description: Reviewed File Operations / ASCII Data File Operations commands and released Briosa support for SpatialAnalyzer 2024.1.0508.5.
 ---
 
 # ASCII Data File Operations
 
 **SA 2024.1.0508.5 · File Operations / ASCII Data File Operations**
 
-This group contains 5 reviewed command entries. **Next** means selected
-for a future 2024 implementation; no 2024 Briosa server is released. Follow a
+This group contains 5 reviewed command entries. **Current** means implemented
+in Briosa Server 0.7.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |

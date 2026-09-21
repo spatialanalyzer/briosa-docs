@@ -309,4 +309,4 @@ supports cylinder extraction only.
 Briosa performs no operation-specific geometry or cardinality prevalidation;
 SpatialAnalyzer determines each MP outcome.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-surfaces) · [.NET](/api/dotnet/construction-operations-surfaces) · [Python](/api/python/construction-operations-surfaces) · [JavaScript and TypeScript](/api/javascript/construction-operations-surfaces)
+[Catalog](/mp-command-catalog/commands/construction-operations-surfaces) · [.NET](/api/dotnet/0.1.0/construction-operations-surfaces) · [Python](/api/python/0.1.0/construction-operations-surfaces) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-surfaces)

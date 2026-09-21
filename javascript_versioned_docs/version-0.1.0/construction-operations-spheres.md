@@ -43,4 +43,4 @@ Briosa adds no radius safeguards. Runtime face selection is operator-interactive
 Escape is an MP failure, and an abort does not prove the interaction stopped.
 Neither call is automatically replayed.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [gRPC](/api/grpc/construction-operations-spheres)
+[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [gRPC](/api/grpc/0.5.1/construction-operations-spheres)

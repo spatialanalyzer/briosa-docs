@@ -16,7 +16,7 @@ public sealed record CalibrationApplianceNodeStatus(
 
 ## AddCalibrationApplianceNodeAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
 
 ```csharp
 public Task AddCalibrationApplianceNodeAsync(
@@ -26,7 +26,7 @@ public Task AddCalibrationApplianceNodeAsync(
 
 ## DeleteCalibrationApplianceNodeAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
 
 ```csharp
 public Task DeleteCalibrationApplianceNodeAsync(
@@ -36,7 +36,7 @@ public Task DeleteCalibrationApplianceNodeAsync(
 
 ## ConnectDisconnectCalibrationApplianceNodeAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
 
 ```csharp
 public Task ConnectDisconnectCalibrationApplianceNodeAsync(
@@ -47,7 +47,7 @@ public Task ConnectDisconnectCalibrationApplianceNodeAsync(
 
 ## SetCalibrationApplianceNodeInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
 
 ```csharp
 public Task SetCalibrationApplianceNodeInstrumentAsync(
@@ -58,7 +58,7 @@ public Task SetCalibrationApplianceNodeInstrumentAsync(
 
 ## SetCalibrationApplianceNodeMeasurementProfileAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
 
 ```csharp
 public Task SetCalibrationApplianceNodeMeasurementProfileAsync(
@@ -69,7 +69,7 @@ public Task SetCalibrationApplianceNodeMeasurementProfileAsync(
 
 ## SetCalibrationApplianceNodeMeasurementTargetAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
 
 ```csharp
 public Task SetCalibrationApplianceNodeMeasurementTargetAsync(
@@ -80,7 +80,7 @@ public Task SetCalibrationApplianceNodeMeasurementTargetAsync(
 
 ## EnableDisableCalibrationApplianceNodeInstrumentAutoPointAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
 
 ```csharp
 public Task EnableDisableCalibrationApplianceNodeInstrumentAutoPointAsync(
@@ -91,7 +91,7 @@ public Task EnableDisableCalibrationApplianceNodeInstrumentAutoPointAsync(
 
 ## SetCalibrationApplianceNodeInstrumentDwellTimeAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
 
 ```csharp
 public Task SetCalibrationApplianceNodeInstrumentDwellTimeAsync(
@@ -102,7 +102,7 @@ public Task SetCalibrationApplianceNodeInstrumentDwellTimeAsync(
 
 ## SkipCalibrationApplianceNodeMeasurementAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
 
 ```csharp
 public Task SkipCalibrationApplianceNodeMeasurementAsync(
@@ -112,7 +112,7 @@ public Task SkipCalibrationApplianceNodeMeasurementAsync(
 
 ## SetCalibrationApplianceNodeMeasurementFrameAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
 
 ```csharp
 public Task SetCalibrationApplianceNodeMeasurementFrameAsync(
@@ -125,7 +125,7 @@ The reference must identify an SA Frame.
 
 ## SetCalibrationApplianceNodeMeasurementOffsetTransformAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
 
 ```csharp
 public Task SetCalibrationApplianceNodeMeasurementOffsetTransformAsync(
@@ -142,7 +142,7 @@ The shorter overload uses the exact MP identity-transform default.
 
 ## SetCalibrationApplianceNodeMeasurementPointGroupAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
 
 ```csharp
 public Task SetCalibrationApplianceNodeMeasurementPointGroupAsync(
@@ -155,7 +155,7 @@ The point-group reference must identify an SA Point Group.
 
 ## SetCalibrationApplianceNodeCalibrationApplianceIpAddressAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
 
 ```csharp
 public Task SetCalibrationApplianceNodeCalibrationApplianceIpAddressAsync(
@@ -169,7 +169,7 @@ appliance through local SA; it does not enable remote Briosa execution.
 
 ## SetCalibrationApplianceNodeTrappingNodeIdAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
 
 ```csharp
 public Task SetCalibrationApplianceNodeTrappingNodeIdAsync(
@@ -180,7 +180,7 @@ public Task SetCalibrationApplianceNodeTrappingNodeIdAsync(
 
 ## EnableDisableCalibrationApplianceNodeTrapManagerAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
 
 ```csharp
 public Task EnableDisableCalibrationApplianceNodeTrapManagerAsync(
@@ -191,7 +191,7 @@ public Task EnableDisableCalibrationApplianceNodeTrapManagerAsync(
 
 ## ClearCalibrationApplianceNodeTrapManagerRequestsAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
 
 ```csharp
 public Task ClearCalibrationApplianceNodeTrapManagerRequestsAsync(
@@ -201,7 +201,7 @@ public Task ClearCalibrationApplianceNodeTrapManagerRequestsAsync(
 
 ## SetCalibrationApplianceNodeIntegerValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
 
 ```csharp
 public Task SetCalibrationApplianceNodeIntegerValueAsync(
@@ -213,7 +213,7 @@ public Task SetCalibrationApplianceNodeIntegerValueAsync(
 
 ## GetCalibrationApplianceNodeIntegerValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
 
 ```csharp
 public Task<int> GetCalibrationApplianceNodeIntegerValueAsync(
@@ -224,7 +224,7 @@ public Task<int> GetCalibrationApplianceNodeIntegerValueAsync(
 
 ## SetCalibrationApplianceNodeRealValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
 
 ```csharp
 public Task SetCalibrationApplianceNodeRealValueAsync(
@@ -236,7 +236,7 @@ public Task SetCalibrationApplianceNodeRealValueAsync(
 
 ## GetCalibrationApplianceNodeRealValueAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
 
 ```csharp
 public Task<double> GetCalibrationApplianceNodeRealValueAsync(
@@ -247,7 +247,7 @@ public Task<double> GetCalibrationApplianceNodeRealValueAsync(
 
 ## SetCalibrationApplianceNodeDataAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
 
 ```csharp
 public Task SetCalibrationApplianceNodeDataAsync(
@@ -266,7 +266,7 @@ real-values-only contract.
 
 ## GetCalibrationApplianceNodeDataAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
 
 ```csharp
 public Task<double[]> GetCalibrationApplianceNodeDataAsync(
@@ -280,7 +280,7 @@ SA state. The result contains only the SDK-supported `Real Values` output.
 
 ## SetCalibrationApplianceNodeDisplayRobotAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
 
 ```csharp
 public Task SetCalibrationApplianceNodeDisplayRobotAsync(
@@ -291,7 +291,7 @@ public Task SetCalibrationApplianceNodeDisplayRobotAsync(
 
 ## UpdateCalibrationApplianceNodeDisplayRobotJointsAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
 
 ```csharp
 public Task UpdateCalibrationApplianceNodeDisplayRobotJointsAsync(
@@ -302,7 +302,7 @@ public Task UpdateCalibrationApplianceNodeDisplayRobotJointsAsync(
 
 ## GetCalibrationApplianceNodeStatusAsync
 
-[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
+[MP command](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC contract](/api/grpc/0.5.1/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
 
 ```csharp
 public Task<CalibrationApplianceNodeStatus> GetCalibrationApplianceNodeStatusAsync(

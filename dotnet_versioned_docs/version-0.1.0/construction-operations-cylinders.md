@@ -19,7 +19,7 @@ public Task ConstructCylinderAsync(
 ```
 
 Every value is required and passed through without client-side geometry
-validation. [Catalog](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder) · [gRPC](/api/grpc/construction-operations-cylinders#construct-cylinder)
+validation. [Catalog](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder) · [gRPC](/api/grpc/0.5.1/construction-operations-cylinders#construct-cylinder)
 
 ## Construct Cylinder From End Points
 

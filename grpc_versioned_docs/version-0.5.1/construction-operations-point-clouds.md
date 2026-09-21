@@ -232,4 +232,4 @@ message ExtractSphereCentersFromPointCloudResult {
 The source Cloud and destination Point Group identities are required. Omitted
 settings use `0.0`, `0.0`, `50`, `true`, and `120.0` in argument order.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [.NET](/api/dotnet/construction-operations-point-clouds) · [Python](/api/python/construction-operations-point-clouds) · [JavaScript/TypeScript](/api/javascript/construction-operations-point-clouds)
+[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [.NET](/api/dotnet/0.1.0/construction-operations-point-clouds) · [Python](/api/python/0.1.0/construction-operations-point-clouds) · [JavaScript/TypeScript](/api/javascript/0.1.0/construction-operations-point-clouds)

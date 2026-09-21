@@ -42,3 +42,7 @@ See the [gRPC lifecycle API](/api/grpc/lifecycle) for the operations that move
 between these states.
 
 [Read the source-of-truth health guide](https://github.com/spatialanalyzer/briosa/blob/main/targets/2026.1.0529.7/docs/operations/health-and-discovery.md).
+
+## Behavioral Compatibility
+
+Server 0.7.0 adds `GetServerInfoResponse.compatibility` with major **1**, revision **0** for the exact target. These are behavioral coordinates, not a product v1 release. They do not replace build/source identity or runtime SA/SDK verification. See the complete [SA 2026 discovery contract](/api/grpc/discovery) or [SA 2024 discovery contract](/api/grpc/sa-2024.1.0508.5/discovery).

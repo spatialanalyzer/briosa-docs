@@ -18,7 +18,7 @@ public Task ConstructCircleAsync(
 ```
 
 Values are passed through without client-side geometry-range validation.
-[Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circle) · [gRPC](/api/grpc/construction-operations-circles#construct-circle)
+[Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circle) · [gRPC](/api/grpc/0.5.1/construction-operations-circles#construct-circle)
 
 ## Construct Circles From Surface Faces - Runtime Select
 
@@ -47,4 +47,4 @@ public Task<IReadOnlyList<CollectionObjectName>> ConstructCirclesLinesFromSurfac
     CancellationToken cancellationToken = default);
 ```
 
-Returns the complete `Geometry Objects` output list. [Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) · [gRPC](/api/grpc/construction-operations-circles#construct-circles-lines-from-surfaces)
+Returns the complete `Geometry Objects` output list. [Catalog](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) · [gRPC](/api/grpc/0.5.1/construction-operations-circles#construct-circles-lines-from-surfaces)

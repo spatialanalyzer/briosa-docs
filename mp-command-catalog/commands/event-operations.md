@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Event Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.7.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -29,10 +29,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Event" data-group="Analysis Operations / Events" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Event" data-group="Analysis Operations / Events" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-event">Delete Event</a></td>
   <td>Analysis Operations / Events</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Export Event Ref List" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
@@ -41,10 +41,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Export Event Ref List" data-group="Analysis Operations / Events" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Export Event Ref List" data-group="Analysis Operations / Events" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#export-event-ref-list">Export Event Ref List</a></td>
   <td>Analysis Operations / Events</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get i-th Event From Event Ref List" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
@@ -53,10 +53,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get i-th Event From Event Ref List" data-group="Analysis Operations / Events" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get i-th Event From Event Ref List" data-group="Analysis Operations / Events" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-i-th-event-from-event-ref-list">Get i-th Event From Event Ref List</a></td>
   <td>Analysis Operations / Events</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get i-th Event From Event Ref List (Iterator)" data-group="Event Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -77,10 +77,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Number of Events in Event Ref List" data-group="Analysis Operations / Events" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Number of Events in Event Ref List" data-group="Analysis Operations / Events" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-number-of-events-in-event-ref-list">Get Number of Events in Event Ref List</a></td>
   <td>Analysis Operations / Events</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Event" data-group="Event Operations" data-status="current" data-validation="portable-contract-review">
@@ -89,10 +89,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Rename Event" data-group="Analysis Operations / Events" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Rename Event" data-group="Analysis Operations / Events" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-event">Rename Event</a></td>
   <td>Analysis Operations / Events</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -106,17 +106,19 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <span className="catalog-target-group">Event Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Events</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/event-operations#delete-event) · [.NET](/api/dotnet/sa-2024.1.0508.5/event-operations#delete-event) · [Python](/api/python/sa-2024.1.0508.5/event-operations#delete-event) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/event-operations#delete-event)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -157,17 +159,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Event Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Events</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/event-operations#export-event-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/event-operations#export-event-ref-list) · [Python](/api/python/sa-2024.1.0508.5/event-operations#export-event-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/event-operations#export-event-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -209,17 +213,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Event Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Events</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/event-operations#get-i-th-event-from-event-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/event-operations#get-i-th-event-from-event-ref-list) · [Python](/api/python/sa-2024.1.0508.5/event-operations#get-i-th-event-from-event-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/event-operations#get-i-th-event-from-event-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -316,17 +322,19 @@ The exact SDK cannot supply `Step to Jump at End of List`, so Briosa cannot expo
   <span className="catalog-target-group">Event Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Events</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/event-operations#get-number-of-events-in-event-ref-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/event-operations#get-number-of-events-in-event-ref-list) · [Python](/api/python/sa-2024.1.0508.5/event-operations#get-number-of-events-in-event-ref-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/event-operations#get-number-of-events-in-event-ref-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -366,17 +374,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Event Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Events" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Events</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/event-operations#rename-event) · [.NET](/api/dotnet/sa-2024.1.0508.5/event-operations#rename-event) · [Python](/api/python/sa-2024.1.0508.5/event-operations#rename-event) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/event-operations#rename-event)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

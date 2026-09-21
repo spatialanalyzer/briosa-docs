@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Dimension Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.7.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -101,10 +101,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Delete Dimension" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Dimension" data-group="Analysis Operations / Dimensions" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-dimension">Delete Dimension</a></td>
   <td>Analysis Operations / Dimensions</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Dimension Value" data-group="Dimension Operations" data-status="current" data-validation="portable-contract-review">
@@ -113,10 +113,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Dimension Value" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Dimension Value" data-group="Analysis Operations / Dimensions" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-dimension-value">Get Dimension Value</a></td>
   <td>Analysis Operations / Dimensions</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get i-th Dimension From Dimension Ref List" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -209,10 +209,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Dimension Tolerance" data-group="Analysis Operations / Dimensions" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Dimension Tolerance" data-group="Analysis Operations / Dimensions" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-dimension-tolerance">Set Dimension Tolerance</a></td>
   <td>Analysis Operations / Dimensions</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Object to Object Dimension Properties" data-group="Dimension Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -596,17 +596,19 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
   <span className="catalog-target-group">Dimension Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Dimensions</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/dimension-operations#delete-dimension) · [.NET](/api/dotnet/sa-2024.1.0508.5/dimension-operations#delete-dimension) · [Python](/api/python/sa-2024.1.0508.5/dimension-operations#delete-dimension) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/dimension-operations#delete-dimension)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -647,17 +649,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Dimension Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Dimensions</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/dimension-operations#get-dimension-value) · [.NET](/api/dotnet/sa-2024.1.0508.5/dimension-operations#get-dimension-value) · [Python](/api/python/sa-2024.1.0508.5/dimension-operations#get-dimension-value) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/dimension-operations#get-dimension-value)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1062,17 +1066,19 @@ The exact SDK cannot supply `Dimension Properties`, so Briosa cannot expose the 
   <span className="catalog-target-group">Dimension Operations</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Dimensions" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Dimensions</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/dimension-operations#set-dimension-tolerance) · [.NET](/api/dotnet/sa-2024.1.0508.5/dimension-operations#set-dimension-tolerance) · [Python](/api/python/sa-2024.1.0508.5/dimension-operations#set-dimension-tolerance) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/dimension-operations#set-dimension-tolerance)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

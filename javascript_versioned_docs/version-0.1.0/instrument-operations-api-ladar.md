@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## setLadarAutoMeasPoint
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-point)
 
 ```ts
 export interface SetLadarAutoMeasPointInput {
@@ -28,7 +28,7 @@ Sample time defaults to exact MP value `0` despite the label documenting
 
 ## setLadarAutoMeasSphere
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
 ```ts
 export interface SetLadarAutoMeasSphereInput {
@@ -51,7 +51,7 @@ Defaults are `1.1875`, `0.05`, `true`, `false`, and `false` in field order.
 
 ## setLadarFeatureMeasSphere
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
 
 ```ts
 export interface SetLadarFeatureMeasSphereInput {
@@ -70,7 +70,7 @@ Spacing defaults to `0.05`.
 
 ## setLadarFeatureMeasCircle
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
 ```ts
 export interface SetLadarFeatureMeasCircleInput {
@@ -88,7 +88,7 @@ function setLadarFeatureMeasCircle(
 
 ## setLadarFeatureMeasSlot
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
 
 ```ts
 export interface SetLadarFeatureMeasSlotInput {
@@ -106,7 +106,7 @@ function setLadarFeatureMeasSlot(
 
 ## setLadarFeatureMeasCylinder
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
 
 ```ts
 export interface SetLadarFeatureMeasCylinderInput {

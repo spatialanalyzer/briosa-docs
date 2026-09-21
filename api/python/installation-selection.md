@@ -1,0 +1,106 @@
+---
+title: Installation Selection and Discovery
+description: Client 0.2.0 server selectors, inert discovery, selection reports, and startup failures for SA 2026.1.0529.7.
+---
+
+# Installation Selection and Discovery
+
+[SA 2026.1.0529.7](/api/python/installation-selection) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/installation-selection)
+
+These APIs are released in client **0.2.0**. Import them from the same exact-target package as the client. Discovery reads local installation evidence without launching the server, SDK, or SpatialAnalyzer. It does not prove runtime readiness.
+
+## Discovery and Resolution
+
+```python
+from pathlib import Path
+from typing import Literal
+Scope = Literal["machine", "user", "portable"]
+
+def discover_installations(selection: BriosaServerSelection | None = None) -> BriosaDiscoveryReport: ...
+def resolve_installation(selection: BriosaServerSelection | None = None) -> BriosaInstallation: ...
+```
+
+Discovery returns structurally valid installations, diagnostics for rejected or inaccessible locations, the selected compatible installation if one exists, and a selection failure code otherwise. A discovered installation is not necessarily eligible. Resolve returns the selected installation or raises `BriosaStartupError` with the selection code. Invalid selector values raise `ValueError`.
+
+## Selection Model
+
+Set `server_selection` on `BriosaStartOptions`; its default is `BriosaServerSelection()`. Executable path and installation ID are mutually exclusive. Paths, including package-store search roots and an explicit SA executable, must be absolute local paths, not UNC paths. Version constraints must be valid semantic versions; minimum is inclusive and maximum is exclusive. Exclusions remove individual versions. Scope lists must be nonempty and contain only machine, user, or portable.
+
+Without constraints the client considers all three scopes, excludes prereleases, and chooses the highest compatible stable release. Exclusion and search-root lists default to empty. Prerelease and legacy environment override flags default to false. An invalid explicit selection fails without fallback. Search roots identify package stores containing the committed products layout, not arbitrary executable directories. Elevated automatic selection only admits protected machine installations.
+
+The package requires contract major **1**, revision **at least 0**, for its exact SA target. The separately reviewed legacy exception admits Server **0.6.1** only at source revision `32a3b56ba4ae31ea5ec6ec3b2aa051eb61c866aa`. Generated artifacts remain pinned to Server 0.7.0; this build pin is not the runtime selection rule.
+
+`BRIOSA_SERVER_PATH` is ignored unless the legacy override flag is enabled and no direct selector is supplied. Prefer per-application selection. The chosen installation stays fixed for the session and recovery. Startup checks the live server identity against the selected evidence before SDK or SA activity; contract compatibility never bypasses exact-target checks, policy, ownership, or readiness.
+
+### `BriosaServerSelection`
+
+```python
+@dataclass(frozen=True, slots=True)
+class BriosaServerSelection:
+    executable_path: Path | None = None
+    installation_id: str | None = None
+    version: str | None = None
+    minimum_version: str | None = None
+    maximum_version_exclusive: str | None = None
+    excluded_versions: tuple[str, ...] = ()
+    search_roots: tuple[Path, ...] = ()
+    allowed_scopes: tuple[Scope, ...] = ("machine", "user", "portable")
+    allow_prerelease: bool = False
+    use_legacy_environment_override: bool = False
+    spatial_analyzer_executable_path: Path | None = None
+```
+
+### `BriosaInstallation`
+
+```python
+@dataclass(frozen=True, slots=True)
+class BriosaInstallation:
+    installation_id: str
+    executable_path: Path
+    version: str
+    source_revision: str
+    spatial_analyzer_target: str
+    runtime_identifier: str
+    contract_major: int
+    contract_revision: int
+    manifest_sha256: str
+    scope: Scope
+```
+
+### `BriosaDiscoveryDiagnostic`
+
+```python
+@dataclass(frozen=True, slots=True)
+class BriosaDiscoveryDiagnostic:
+    path: str
+    code: str
+```
+
+### `BriosaDiscoveryReport`
+
+```python
+@dataclass(frozen=True, slots=True)
+class BriosaDiscoveryReport:
+    installations: tuple[BriosaInstallation, ...]
+    diagnostics: tuple[BriosaDiscoveryDiagnostic, ...]
+    selected: BriosaInstallation | None
+    diagnostic_code: str | None
+```
+
+## Inspect a Selection Without Starting SA
+
+```python
+from briosa import BriosaServerSelection, discover_installations
+
+report = discover_installations(BriosaServerSelection(minimum_version="0.7.0"))
+for diagnostic in report.diagnostics:
+    print(diagnostic.code)
+if report.selected is not None:
+    print(report.selected.version)
+else:
+    print(report.diagnostic_code)
+```
+
+Diagnostic paths are explicitly requested local data. Avoid publishing them in logs or support reports. See [Installation Selection](/docs/deployment/installation-selection) and [Diagnostics](/docs/deployment/diagnostics) for deployment guidance.
+
+[Released Source](https://github.com/spatialanalyzer/briosa-py/blob/v0.2.0/targets/2026.1.0529.7/src/briosa/installation_models.py)

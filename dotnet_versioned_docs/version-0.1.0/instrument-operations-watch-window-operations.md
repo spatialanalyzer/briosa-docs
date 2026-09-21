@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## WatchPointToPointAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-point)
 
 ```csharp
 public Task WatchPointToPointAsync(
@@ -31,7 +31,7 @@ window or stopped the command, and Briosa never automatically replays it.
 
 ## WatchPointToObjectsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-objects)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-objects)
 
 ```csharp
 public Task WatchPointToObjectsAsync(
@@ -50,7 +50,7 @@ public Task WatchPointToObjectsAsync(
 
 ## WatchPointToEdgeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-edge)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-edge)
 
 ```csharp
 public Task WatchPointToEdgeAsync(
@@ -73,7 +73,7 @@ Reference Objects `.
 
 ## WatchClosestPointAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-closest-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-closest-point)
 
 ```csharp
 public Task WatchClosestPointAsync(
@@ -93,7 +93,7 @@ public Task WatchClosestPointAsync(
 
 ## WatchInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-instrument)
 
 ```csharp
 public Task WatchInstrumentAsync(
@@ -109,7 +109,7 @@ public Task WatchInstrumentAsync(
 
 ## WatchPointToPointWithViewZoomingAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [gRPC contract](/api/grpc/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming)
+[MP command](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming)
 
 ```csharp
 public Task WatchPointToPointWithViewZoomingAsync(

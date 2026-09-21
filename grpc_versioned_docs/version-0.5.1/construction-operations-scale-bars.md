@@ -41,4 +41,4 @@ and lower bounds. Briosa adds no validation across the tolerance fields,
 preserves partial or failed MP outcomes, and never automatically replays the
 operation.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-scale-bars) · [.NET](/api/dotnet/construction-operations-scale-bars) · [Python](/api/python/construction-operations-scale-bars) · [JavaScript and TypeScript](/api/javascript/construction-operations-scale-bars)
+[Catalog](/mp-command-catalog/commands/construction-operations-scale-bars) · [.NET](/api/dotnet/0.1.0/construction-operations-scale-bars) · [Python](/api/python/0.1.0/construction-operations-scale-bars) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-scale-bars)

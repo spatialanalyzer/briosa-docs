@@ -646,6 +646,6 @@ labels even though the command title says “in World.”
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types) ·
-[.NET](/api/dotnet/construction-operations-other-mp-types) ·
-[Python](/api/python/construction-operations-other-mp-types) ·
-[JavaScript/TypeScript](/api/javascript/construction-operations-other-mp-types)
+[.NET](/api/dotnet/0.1.0/construction-operations-other-mp-types) ·
+[Python](/api/python/0.1.0/construction-operations-other-mp-types) ·
+[JavaScript/TypeScript](/api/javascript/0.1.0/construction-operations-other-mp-types)

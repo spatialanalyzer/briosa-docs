@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## IssueInstrumentActuatorCommandAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
 
 ```csharp
 public Task IssueInstrumentActuatorCommandAsync(
@@ -21,7 +21,7 @@ Briosa passes the interface-specific command through without interpretation.
 
 ## SetInstrumentAxesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-instrument-axes)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-instrument-axes)
 
 ```csharp
 public Task SetInstrumentAxesAsync(
@@ -36,7 +36,7 @@ physical-motion validation.
 
 ## SetAlignmentProjectorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-alignment-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-alignment-projector)
 
 ```csharp
 public Task SetAlignmentProjectorAsync(

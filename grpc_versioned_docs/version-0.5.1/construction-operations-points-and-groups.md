@@ -615,4 +615,4 @@ the application state between calls. Callers own multi-call workflow state.
 Interactive calls may outlive a transport deadline, and no operation in this
 group is automatically replayed after an ambiguous outcome.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [.NET](/api/dotnet/construction-operations-points-and-groups) · [Python](/api/python/construction-operations-points-and-groups) · [JavaScript and TypeScript](/api/javascript/construction-operations-points-and-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [.NET](/api/dotnet/0.1.0/construction-operations-points-and-groups) · [Python](/api/python/0.1.0/construction-operations-points-and-groups) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-points-and-groups)

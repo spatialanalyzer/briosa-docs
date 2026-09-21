@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Delete Scale Bar
 
-[Delete Scale Bar](/mp-command-catalog/commands/scale-bar-operations#delete-scale-bar) · [gRPC contract](/api/grpc/scale-bar-operations#delete-scale-bar)
+[Delete Scale Bar](/mp-command-catalog/commands/scale-bar-operations#delete-scale-bar) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#delete-scale-bar)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Scale Bar Stats
 
-[Get Scale Bar Stats](/mp-command-catalog/commands/scale-bar-operations#get-scale-bar-stats) · [gRPC contract](/api/grpc/scale-bar-operations#get-scale-bar-stats)
+[Get Scale Bar Stats](/mp-command-catalog/commands/scale-bar-operations#get-scale-bar-stats) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#get-scale-bar-stats)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Scale Bar Check
 
-[Scale Bar Check](/mp-command-catalog/commands/scale-bar-operations#scale-bar-check) · [gRPC contract](/api/grpc/scale-bar-operations#scale-bar-check)
+[Scale Bar Check](/mp-command-catalog/commands/scale-bar-operations#scale-bar-check) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#scale-bar-check)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Inward Positive Normal
 
-[Set Inward Positive Normal](/mp-command-catalog/commands/scale-bar-operations#set-inward-positive-normal) · [gRPC contract](/api/grpc/scale-bar-operations#set-inward-positive-normal)
+[Set Inward Positive Normal](/mp-command-catalog/commands/scale-bar-operations#set-inward-positive-normal) · [gRPC contract](/api/grpc/0.5.1/scale-bar-operations#set-inward-positive-normal)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

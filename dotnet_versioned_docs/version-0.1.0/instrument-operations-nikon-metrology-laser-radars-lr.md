@@ -60,7 +60,7 @@ public sealed record LrLoSeparationTestResult(
 
 ## LrHardwareConnectAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
 
 ```csharp
 public Task LrHardwareConnectAsync(
@@ -75,7 +75,7 @@ the Briosa server listener.
 
 ## LrHardwareDisconnectAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
 
 ```csharp
 public Task LrHardwareDisconnectAsync(
@@ -85,7 +85,7 @@ public Task LrHardwareDisconnectAsync(
 
 ## LrVerifyHardwareConnectionAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
 ```csharp
 public Task<bool> LrVerifyHardwareConnectionAsync(
@@ -95,7 +95,7 @@ public Task<bool> LrVerifyHardwareConnectionAsync(
 
 ## LrSetRedLaserIntensityAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
 
 ```csharp
 public Task LrSetRedLaserIntensityAsync(
@@ -108,7 +108,7 @@ SA labels the scale `0–100`; Briosa adds no range validation.
 
 ## LrGetMostRecentSnrInfoAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
 ```csharp
 public Task<LrSnrInfo> LrGetMostRecentSnrInfoAsync(
@@ -118,7 +118,7 @@ public Task<LrSnrInfo> LrGetMostRecentSnrInfoAsync(
 
 ## LrSelfTestAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 ```csharp
 public Task<LrSelfTestResult> LrSelfTestAsync(
@@ -128,7 +128,7 @@ public Task<LrSelfTestResult> LrSelfTestAsync(
 
 ## LrSelfTestLinearizationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
 
 ```csharp
 public Task<double> LrSelfTestLinearizationAsync(
@@ -140,7 +140,7 @@ The result is linearity in kHz.
 
 ## LrSelfTestFlipTestAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 ```csharp
 public Task<LrFlipTestResult> LrSelfTestFlipTestAsync(
@@ -150,7 +150,7 @@ public Task<LrFlipTestResult> LrSelfTestFlipTestAsync(
 
 ## LrSelfTestLoSepAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 ```csharp
 public Task<LrLoSeparationTestResult> LrSelfTestLoSepAsync(
@@ -164,7 +164,7 @@ Briosa preserves both exact MP defaults and adds no region constraint.
 
 ## LrApdisPerformMcmCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
 
 ```csharp
 public Task LrApdisPerformMcmCalibrationAsync(
@@ -180,7 +180,7 @@ never automatically replayed.
 
 ## LrApdisActivateMcmCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
 ```csharp
 public Task<string> LrApdisActivateMcmCalibrationAsync(
@@ -196,7 +196,7 @@ behavior. The return value is the active MCM name.
 
 ## LrApdisGetActiveMcmCalibrationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
 
 ```csharp
 public Task<string> LrApdisGetActiveMcmCalibrationAsync(

@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## issueInstrumentActuatorCommand
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
 
 ```ts
 export interface IssueInstrumentActuatorCommandInput {
@@ -25,7 +25,7 @@ function issueInstrumentActuatorCommand(
 
 ## setInstrumentAxes
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-instrument-axes)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-instrument-axes)
 
 ```ts
 export interface SetInstrumentAxesInput {
@@ -46,7 +46,7 @@ range, or physical-motion validation.
 
 ## setAlignmentProjector
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-alignment-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-alignment-projector)
 
 ```ts
 export interface SetAlignmentProjectorInput {

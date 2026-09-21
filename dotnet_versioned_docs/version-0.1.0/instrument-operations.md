@@ -183,7 +183,7 @@ public sealed record WrtlChannelStatus(
 
 ## GetLastInstrumentIndexAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/instrument-operations#get-last-instrument-index)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-instrument-index)
 
 ```csharp
 public Task<LastInstrumentIndexResult> GetLastInstrumentIndexAsync(
@@ -198,7 +198,7 @@ value retrieved from the same named MP output.
 
 ## RenameInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/instrument-operations#rename-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#rename-instrument)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -216,7 +216,7 @@ await briosa.InstrumentOperations.RenameInstrumentAsync(instrument, "Tracker 1")
 
 ## GetInstrumentIdFromNameAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-id-from-name)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-id-from-name)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -233,7 +233,7 @@ var instrument = await briosa.InstrumentOperations
 
 ## GetInstrumentModelAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-model)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-model)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -251,7 +251,7 @@ Returns the MP `Name` and `Model` strings.
 
 ## MoveInstrumentToAnotherCollectionAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/instrument-operations#move-instrument-to-another-collection)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-instrument-to-another-collection)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -270,7 +270,7 @@ await briosa.InstrumentOperations
 
 ## SaveInstrumentConfigurationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#save-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#save-instrument-configuration)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -289,7 +289,7 @@ await briosa.InstrumentOperations
 
 ## LoadInstrumentConfigurationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#load-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#load-instrument-configuration)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -308,7 +308,7 @@ await briosa.InstrumentOperations
 
 ## ExportInstrumentHistoryToXmlFileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/instrument-operations#export-instrument-history-to-xml-file)
+[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#export-instrument-history-to-xml-file)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -332,7 +332,7 @@ does not automatically replay an uncertain call.
 
 ## PointAtTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/instrument-operations#point-at-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#point-at-target)
 
 ```csharp
 public Task PointAtTargetAsync(
@@ -348,7 +348,7 @@ The HTML prompt is omitted unless supplied explicitly.
 
 ## MeasureSinglePointHereAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/instrument-operations#measure-single-point-here)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-single-point-here)
 
 ```csharp
 public Task MeasureSinglePointHereAsync(
@@ -363,7 +363,7 @@ await briosa.InstrumentOperations.MeasureSinglePointHereAsync(instrument, target
 
 ## GetCurrentInstrumentPositionUpdateAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/instrument-operations#get-current-instrument-position-update)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-instrument-position-update)
 
 ```csharp
 public Task<InstrumentPositionUpdate> GetCurrentInstrumentPositionUpdateAsync(
@@ -382,7 +382,7 @@ Cartesian and polar meanings reported by the MP command.
 
 ## BuildTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/instrument-operations#build-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#build-target)
 
 ```csharp
 public Task BuildTargetAsync(
@@ -402,7 +402,7 @@ check disabled at zero.
 
 ## MeasureExistingSinglePointAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point)
 
 ```csharp
 public Task<PointName> MeasureExistingSinglePointAsync(
@@ -423,7 +423,7 @@ var point = await briosa.InstrumentOperations.MeasureExistingSinglePointAsync(
 
 ## MeasureExistingSinglePointManualGuideAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-manual-guide)
 
 ```csharp
 public Task<PointName> MeasureExistingSinglePointManualGuideAsync(
@@ -443,7 +443,7 @@ var point = await briosa.InstrumentOperations
 
 ## MeasureExistingSinglePointAndCompareAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-and-compare)
 
 ```csharp
 public Task<PointComparisonResult> MeasureExistingSinglePointAndCompareAsync(
@@ -468,7 +468,7 @@ none.
 
 ## SetProbeOffsetFrameOnlineAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
 
 ```csharp
 public Task SetProbeOffsetFrameOnlineAsync(
@@ -488,7 +488,7 @@ await briosa.InstrumentOperations.SetProbeOffsetFrameOnlineAsync(
 
 ## SetProbeOffsetFrameOfflineAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
 
 ```csharp
 public Task SetProbeOffsetFrameOfflineAsync(
@@ -510,7 +510,7 @@ Both frame arguments must identify SA Frames.
 
 ## StopActiveMeasurementModeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/instrument-operations#stop-active-measurement-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-active-measurement-mode)
 
 ```csharp
 public Task StopActiveMeasurementModeAsync(
@@ -527,7 +527,7 @@ automatically after an unknown outcome.
 
 ## EnableDisableFrameSetScanModeAllInstrumentsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
 
 ```csharp
 public Task EnableDisableFrameSetScanModeAllInstrumentsAsync(
@@ -540,7 +540,7 @@ await briosa.InstrumentOperations
 
 ## EnableDisableFrameSetScanModeByInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
 
 ```csharp
 public Task EnableDisableFrameSetScanModeByInstrumentAsync(
@@ -554,7 +554,7 @@ await briosa.InstrumentOperations
 
 ## EnableDisablePointSetScanModeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-point-set-scan-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-point-set-scan-mode)
 
 ```csharp
 public Task EnableDisablePointSetScanModeAsync(
@@ -567,7 +567,7 @@ await briosa.InstrumentOperations.EnableDisablePointSetScanModeAsync(instrument)
 
 ## AddNewInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/instrument-operations#add-new-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-new-instrument)
 
 ```csharp
 public Task<CollectionInstrumentId> AddNewInstrumentAsync(
@@ -583,7 +583,7 @@ target. The client does not substitute another type.
 
 ## DeleteInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/instrument-operations#delete-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-instrument)
 
 ```csharp
 public Task DeleteInstrumentAsync(
@@ -599,7 +599,7 @@ The no-prompt default intentionally differs from the MP Editor default.
 
 ## DeleteMeasurementsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/instrument-operations#delete-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurements)
 
 ```csharp
 public Task DeleteMeasurementsAsync(
@@ -613,7 +613,7 @@ await briosa.InstrumentOperations.DeleteMeasurementsAsync(instrument, point);
 
 ## DeleteMeasurementObservationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#delete-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurement-observation)
 
 ```csharp
 public Task DeleteMeasurementObservationAsync(
@@ -627,7 +627,7 @@ await briosa.InstrumentOperations.DeleteMeasurementObservationAsync(point);
 
 ## MoveMeasurementObservationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#move-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-measurement-observation)
 
 ```csharp
 public Task MoveMeasurementObservationAsync(
@@ -650,7 +650,7 @@ stopped the mutation, and the client never replays an unknown outcome.
 
 ## InitiateServoGuideAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/instrument-operations#initiate-servo-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#initiate-servo-guide)
 
 ```csharp
 public Task InitiateServoGuideAsync(
@@ -671,7 +671,7 @@ suffixes and tolerance for the selected servo instrument.
 
 ## StartTheodoliteInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/instrument-operations#start-theodolite-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-theodolite-interface)
 
 ```csharp
 public Task StartTheodoliteInterfaceAsync(
@@ -693,7 +693,7 @@ a remote Briosa server address.
 
 ## StartInstrumentInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#start-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-instrument-interface)
 
 ```csharp
 public Task StartInstrumentInterfaceAsync(
@@ -713,7 +713,7 @@ Boolean options all default to `false`, preserving the reviewed MP defaults.
 
 ## StopInstrumentInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#stop-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-instrument-interface)
 
 ```csharp
 public Task StopInstrumentInterfaceAsync(
@@ -725,7 +725,7 @@ await briosa.InstrumentOperations.StopInstrumentInterfaceAsync(instrument);
 
 ## ActivateDeactivateInstrumentToolbarAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/instrument-operations#activatedeactivate-instrument-toolbar)
+[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#activatedeactivate-instrument-toolbar)
 
 ```csharp
 public Task ActivateDeactivateInstrumentToolbarAsync(
@@ -742,7 +742,7 @@ deactivate it.
 
 ## VerifyInstrumentConnectionAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/instrument-operations#verify-instrument-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#verify-instrument-connection)
 
 ```csharp
 public Task<bool> VerifyInstrumentConnectionAsync(
@@ -758,7 +758,7 @@ Briosa's SA SDK connection state.
 
 ## ConfigureAndMeasureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/instrument-operations#configure-and-measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#configure-and-measure)
 
 ```csharp
 public Task ConfigureAndMeasureAsync(
@@ -782,7 +782,7 @@ it does not remove the call deadline or Briosa worker watchdog.
 
 ## MeasureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/instrument-operations#measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure)
 
 ```csharp
 public Task MeasureAsync(
@@ -797,7 +797,7 @@ validate a parallel measurement-state model.
 
 ## SetXyzReferenceFrameInstrumentBaseAnchorFrameAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
 
 ```csharp
 public Task SetXyzReferenceFrameInstrumentBaseAnchorFrameAsync(
@@ -815,7 +815,7 @@ await briosa.InstrumentOperations
 
 ## DockInstrumentInterfaceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#dock-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dock-instrument-interface)
 
 ```csharp
 public Task DockInstrumentInterfaceAsync(
@@ -834,7 +834,7 @@ whose completion is unknown.
 
 ## LocateInstrumentRefTieInAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-ref-tie-in)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-ref-tie-in)
 
 ```csharp
 public Task LocateInstrumentRefTieInAsync(
@@ -856,7 +856,7 @@ automatic measurement workflow and its intermediate state.
 
 ## LocateInstrumentGroupToSurfaceQuickFitAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-group-to-surface-quick-fit)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
 ```csharp
 public Task<FitErrorResult> LocateInstrumentGroupToSurfaceQuickFitAsync(
@@ -882,7 +882,7 @@ Surface. A null additional-object sequence maps to the MP's empty list.
 
 ## MultiMeasurementInitiateAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-initiate)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-initiate)
 
 ```csharp
 public Task MultiMeasurementInitiateAsync(
@@ -901,7 +901,7 @@ interpreted by the selected instruments and SA.
 
 ## MultiMeasurementStopAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-stop)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-stop)
 
 ```csharp
 public Task MultiMeasurementStopAsync(
@@ -916,7 +916,7 @@ initiation call.
 
 ## AlignLaserProjectorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/instrument-operations#align-laser-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-laser-projector)
 
 ```csharp
 public Task AlignLaserProjectorAsync(
@@ -931,7 +931,7 @@ await briosa.InstrumentOperations.AlignLaserProjectorAsync(instrument, group);
 
 ## LocateInstrumentsUsmnAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/instrument-operations#locate-instruments-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instruments-usmn)
 
 ```csharp
 public Task<FitErrorResult> LocateInstrumentsUsmnAsync(
@@ -962,7 +962,7 @@ USMN dialog to `No`.
 
 ## CreateTemplatedInstrumentUsmnAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/instrument-operations#create-templated-instrument-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-templated-instrument-usmn)
 
 ```csharp
 public Task CreateTemplatedInstrumentUsmnAsync(
@@ -995,7 +995,7 @@ and are never automatically replayed after an unknown outcome.
 
 ## LocateInstrumentBestFitGroupToGroupAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---group-to-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---group-to-group)
 
 ```csharp
 public Task<InstrumentBestFitResult> LocateInstrumentBestFitGroupToGroupAsync(
@@ -1027,7 +1027,7 @@ report omitted by default; SA uses the report only when the interface is shown.
 
 ## LocateInstrumentBestFitNominalGeometryAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---nominal-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---nominal-geometry)
 
 ```csharp
 public Task<InstrumentBestFitResult> LocateInstrumentBestFitNominalGeometryAsync(
@@ -1059,7 +1059,7 @@ fields match the group-to-group operation.
 
 ## GetInstrumentTransformAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-transform)
 
 ```csharp
 public Task<Transform> GetInstrumentTransformAsync(
@@ -1076,7 +1076,7 @@ var transform = await briosa.InstrumentOperations.GetInstrumentTransformAsync(
 
 ## SetInstrumentTransformAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-transform)
 
 ```csharp
 public Task SetInstrumentTransformAsync(
@@ -1096,7 +1096,7 @@ Animation steps default to `0`.
 
 ## GetTrackerEdmTheodoliteUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-trackeredm-theodolite-uncertainties)
 
 ```csharp
 public Task<TrackerEdmTheodoliteUncertainties>
@@ -1113,7 +1113,7 @@ linear thresholds use current SA job units.
 
 ## SetTrackerEdmTheodoliteUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-trackeredm-theodolite-uncertainties)
 
 ```csharp
 public Task SetTrackerEdmTheodoliteUncertaintiesAsync(
@@ -1135,7 +1135,7 @@ argument labels.
 
 ## GetPcmmInstrumentXyzUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
 
 ```csharp
 public Task<InstrumentXyzUncertainties> GetPcmmInstrumentXyzUncertaintiesAsync(
@@ -1148,7 +1148,7 @@ var uncertainties = await briosa.InstrumentOperations
 
 ## SetPcmmInstrumentXyzUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
 
 ```csharp
 public Task SetPcmmInstrumentXyzUncertaintiesAsync(
@@ -1166,7 +1166,7 @@ The server binds `yUncertainty` to the exported `Y Uncertainty)` label.
 
 ## GetXyzInstrumentUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-xyz-instrument-uncertainties)
 
 ```csharp
 public Task<InstrumentXyzUncertainties> GetXyzInstrumentUncertaintiesAsync(
@@ -1179,7 +1179,7 @@ var uncertainties = await briosa.InstrumentOperations
 
 ## SetXyzInstrumentUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-instrument-uncertainties)
 
 ```csharp
 public Task SetXyzInstrumentUncertaintiesAsync(
@@ -1198,7 +1198,7 @@ unknown outcome.
 
 ## GetInstrumentWeatherSettingAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-weather-setting)
 
 ```csharp
 public Task<InstrumentWeatherSetting> GetInstrumentWeatherSettingAsync(
@@ -1214,7 +1214,7 @@ reports whether the values were set automatically.
 
 ## SetInstrumentWeatherSettingAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-weather-setting)
 
 ```csharp
 public Task SetInstrumentWeatherSettingAsync(
@@ -1236,7 +1236,7 @@ When `setAutomatically` is true, SA ignores all three numeric values.
 
 ## GetInstrumentPartTemperatureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-part-temperature)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-part-temperature)
 
 ```csharp
 public Task<double> GetInstrumentPartTemperatureAsync(
@@ -1251,7 +1251,7 @@ The returned temperature is in degrees Fahrenheit.
 
 ## ComputeCteScaleFactorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#compute-cte-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#compute-cte-scale-factor)
 
 ```csharp
 public Task<double> ComputeCteScaleFactorAsync(
@@ -1270,7 +1270,7 @@ This method intentionally retains SA's familiar Fahrenheit-based MP operation.
 
 ## SetMultiplyInstrumentScaleFactorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-multiply-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-multiply-instrument-scale-factor-caution)
 
 ```csharp
 public Task SetMultiplyInstrumentScaleFactorAsync(
@@ -1292,7 +1292,7 @@ default is `0.0`, and Briosa does not add a confirmation or range check.
 
 ## SetAbsoluteInstrumentScaleFactorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-absolute-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
 ```csharp
 public Task SetAbsoluteInstrumentScaleFactorAsync(
@@ -1314,7 +1314,7 @@ This replaces the current scale; it does not multiply it. The MP default is
 
 ## GetInstrumentScaleFactorAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-scale-factor)
 
 ```csharp
 public Task<double> GetInstrumentScaleFactorAsync(
@@ -1327,7 +1327,7 @@ var scaleFactor = await briosa.InstrumentOperations
 
 ## TransformInstrumentFrameToFrameAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument---frame-to-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument---frame-to-frame)
 
 ```csharp
 public Task TransformInstrumentFrameToFrameAsync(
@@ -1347,7 +1347,7 @@ Both object identities must be existing SA Frames.
 
 ## TransformInstrumentByDeltaAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument-by-delta)
 
 ```csharp
 public Task TransformInstrumentByDeltaAsync(
@@ -1363,7 +1363,7 @@ await briosa.InstrumentOperations.TransformInstrumentByDeltaAsync(
 
 ## TransformMultipleInstrumentsByDeltaAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-multiple-instruments-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-multiple-instruments-by-delta)
 
 ```csharp
 public Task TransformMultipleInstrumentsByDeltaAsync(
@@ -1383,7 +1383,7 @@ never automatically replays an unknown outcome.
 
 ## InstrumentOperationalCheckAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/instrument-operations#instrument-operational-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#instrument-operational-check)
 
 ```csharp
 public Task InstrumentOperationalCheckAsync(
@@ -1401,7 +1401,7 @@ instrument-interface-specific command string.
 
 ## GetNumberOfObservationsOnTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-number-of-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-number-of-observations-on-target)
 
 ```csharp
 public Task<int> GetNumberOfObservationsOnTargetAsync(
@@ -1414,7 +1414,7 @@ var observationCount = await briosa.InstrumentOperations
 
 ## GetInstrumentsWithObservationsOnTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-instruments-with-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instruments-with-observations-on-target)
 
 ```csharp
 public Task<IReadOnlyList<CollectionInstrumentId>>
@@ -1430,7 +1430,7 @@ The returned order is the order supplied by SA.
 
 ## GetTargetsMeasuredByInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-targets-measured-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-targets-measured-by-instrument)
 
 ```csharp
 public Task<IReadOnlyList<PointName>> GetTargetsMeasuredByInstrumentAsync(
@@ -1443,7 +1443,7 @@ var targets = await briosa.InstrumentOperations
 
 ## SetObservationStatusAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/instrument-operations#set-observation-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-status)
 
 ```csharp
 public Task SetObservationStatusAsync(
@@ -1463,7 +1463,7 @@ await briosa.InstrumentOperations.SetObservationStatusAsync(
 
 ## GetObservationInfoAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/instrument-operations#get-observation-info)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-observation-info)
 
 ```csharp
 public Task<ObservationInfo> GetObservationInfoAsync(
@@ -1483,7 +1483,7 @@ parse `Timestamp` and `InfoData`. SA uses `0` for unavailable RMS error and
 
 ## FabricateObservationsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/instrument-operations#fabricate-observations)
+[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#fabricate-observations)
 
 ```csharp
 public Task FabricateObservationsAsync(
@@ -1506,7 +1506,7 @@ adds no preflight, transaction, or rollback.
 
 ## GetObscuredPointsFromInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-obscured-points-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-obscured-points-from-instrument)
 
 ```csharp
 public Task<IReadOnlyList<PointName>> GetObscuredPointsFromInstrumentAsync(
@@ -1523,7 +1523,7 @@ The result preserves SA's order. Shot-line display defaults to disabled.
 
 ## GetInstrumentTargetsAndModeProfilesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targets-and-modeprofiles)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targets-and-modeprofiles)
 
 ```csharp
 public Task<InstrumentTargetsAndModeProfiles>
@@ -1540,7 +1540,7 @@ the exact SA 2026.1 `Instrument to get` binding and does not zip the lists.
 
 ## SetInstrumentMeasurementModeProfileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-measurement-modeprofile)
 
 ```csharp
 public Task SetInstrumentMeasurementModeProfileAsync(
@@ -1559,7 +1559,7 @@ an unknown outcome.
 
 ## SetInstrumentGroupAndTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-group-and-target)
 
 ```csharp
 public Task SetInstrumentGroupAndTargetAsync(
@@ -1577,7 +1577,7 @@ may ignore the target portion of `point`; Briosa does not retain the setting.
 
 ## SetInstrumentTargetingAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-targeting)
 
 ```csharp
 public Task SetInstrumentTargetingAsync(
@@ -1595,7 +1595,7 @@ interface.
 
 ## GetInstrumentMeasurementModeProfileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-measurement-modeprofile)
 
 ```csharp
 public Task<string> GetInstrumentMeasurementModeProfileAsync(
@@ -1611,7 +1611,7 @@ This returns the active value, not the available lists returned by
 
 ## GetInstrumentGroupAndTargetAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-group-and-target)
 
 ```csharp
 public Task<PointName> GetInstrumentGroupAndTargetAsync(
@@ -1624,7 +1624,7 @@ var point = await briosa.InstrumentOperations
 
 ## GetInstrumentTargetingAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targeting)
 
 ```csharp
 public Task<string> GetInstrumentTargetingAsync(
@@ -1637,7 +1637,7 @@ var targetingName = await briosa.InstrumentOperations
 
 ## SetTargetComputationOptionsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/instrument-operations#set-target-computation-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-target-computation-options)
 
 ```csharp
 public Task SetTargetComputationOptionsAsync(
@@ -1654,7 +1654,7 @@ lease, or otherwise manage the option.
 
 ## SetObservationMirrorCubeShotFaceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/instrument-operations#set-observation-mirror-cube-shot-face)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-mirror-cube-shot-face)
 
 ```csharp
 public Task SetObservationMirrorCubeShotFaceAsync(
@@ -1676,7 +1676,7 @@ check.
 
 ## SetObservationCollimationShotOptionsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/instrument-operations#set-observation-collimation-shot-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-collimation-shot-options)
 
 ```csharp
 public Task SetObservationCollimationShotOptionsAsync(
@@ -1698,7 +1698,7 @@ preserves the exact malformed SDK argument label internally.
 
 ## CollimationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/instrument-operations#collimation)
+[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#collimation)
 
 ```csharp
 public Task CollimationAsync(
@@ -1728,7 +1728,7 @@ validation.
 
 ## GetInstrumentTargetStatusAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-target-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-target-status)
 
 ```csharp
 public Task<InstrumentTargetStatus> GetInstrumentTargetStatusAsync(
@@ -1745,7 +1745,7 @@ outcome.
 
 ## MakeSurfaceFaceListFromPointProximityAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-surface-face-list-from-point-proximity)
 
 ```csharp
 public Task<SurfaceFaceList> MakeSurfaceFaceListFromPointProximityAsync(
@@ -1761,7 +1761,7 @@ surface-face methods.
 
 ## ScanWithinPerimeterAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/instrument-operations#scan-within-perimeter)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-within-perimeter)
 
 ```csharp
 public Task ScanWithinPerimeterAsync(
@@ -1786,7 +1786,7 @@ installed argument table omits it.
 
 ## EditScanPerimeterProfileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/instrument-operations#edit-scan-perimeter-profile)
+[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edit-scan-perimeter-profile)
 
 ```csharp
 public Task EditScanPerimeterProfileAsync(
@@ -1809,7 +1809,7 @@ await briosa.InstrumentOperations.EditScanPerimeterProfileAsync(
 
 ## GetEstimatedScanTimeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/instrument-operations#get-estimated-scan-time)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-estimated-scan-time)
 
 ```csharp
 public Task<double> GetEstimatedScanTimeAsync(
@@ -1826,7 +1826,7 @@ the available SA documentation.
 
 ## ConstructPerimetersFromSurfaceFaceListAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-perimeters-from-surface-face-list)
 
 ```csharp
 public Task<PerimeterLists> ConstructPerimetersFromSurfaceFaceListAsync(
@@ -1842,7 +1842,7 @@ lists separately.
 
 ## ScanCadFacesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/instrument-operations#scan-cad-faces)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-cad-faces)
 
 ```csharp
 public Task ScanCadFacesAsync(
@@ -1861,7 +1861,7 @@ await briosa.InstrumentOperations.ScanCadFacesAsync(
 
 ## EdgeScanMeasurementAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/instrument-operations#edge-scan-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edge-scan-measurement)
 
 ```csharp
 public Task EdgeScanMeasurementAsync(
@@ -1879,7 +1879,7 @@ tracking its intermediate SA state.
 
 ## TrackTapeMeasurementAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/instrument-operations#track-tape-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#track-tape-measurement)
 
 ```csharp
 public Task TrackTapeMeasurementAsync(
@@ -1896,7 +1896,7 @@ public Task TrackTapeMeasurementAsync(
 
 ## AutoMeasurePointsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-points)
 
 ```csharp
 public Task AutoMeasurePointsAsync(
@@ -1921,7 +1921,7 @@ interactivity level to suppress the interface.
 
 ## AutoMeasureVectorsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-vectors)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-vectors)
 
 ```csharp
 public Task AutoMeasureVectorsAsync(
@@ -1945,7 +1945,7 @@ workflow state, replay, or preflight behavior around these methods.
 
 ## AutoMeasureSurfaceVectorIntersectionsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-surface-vector-intersections)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-surface-vector-intersections)
 
 ```csharp
 public Task AutoMeasureSurfaceVectorIntersectionsAsync(
@@ -1960,7 +1960,7 @@ The groups must identify a Vector Group and Point Group.
 
 ## AutoMeasureSpecifiedGeometryAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-specified-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-specified-geometry)
 
 ```csharp
 public Task AutoMeasureSpecifiedGeometryAsync(
@@ -1978,7 +1978,7 @@ await briosa.InstrumentOperations.AutoMeasureSpecifiedGeometryAsync(
 
 ## AutoMeasureBatchOfFeaturesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-batch-of-features)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-batch-of-features)
 
 ```csharp
 public Task AutoMeasureBatchOfFeaturesAsync(
@@ -1992,7 +1992,7 @@ The feature list contains GR-Feature relationship identities.
 
 ## AutoCorrespondClosestPointAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-closest-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-closest-point)
 
 ```csharp
 public Task AutoCorrespondClosestPointAsync(
@@ -2012,7 +2012,7 @@ When waiting is disabled, SA may continue measuring after this task returns.
 
 ## CloseAutoCorrespondClosestPointDialogAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
+[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#close-auto-correspond-closest-point-dialog)
 
 ```csharp
 public Task CloseAutoCorrespondClosestPointDialogAsync(
@@ -2027,7 +2027,7 @@ The method does not require that this client started the running workflow.
 
 ## AutoCorrespondWithProximityTriggerAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-with-proximity-trigger)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-with-proximity-trigger)
 
 ```csharp
 public Task AutoCorrespondWithProximityTriggerAsync(
@@ -2050,7 +2050,7 @@ group name passes the MP's blank value.
 
 ## ConstructMirrorFromPlaneAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-plane)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-plane)
 
 ```csharp
 public Task ConstructMirrorFromPlaneAsync(
@@ -2062,7 +2062,7 @@ public Task ConstructMirrorFromPlaneAsync(
 
 ## ConstructMirrorFromTwoPointsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-two-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-two-points)
 
 ```csharp
 public Task<CollectionObjectName> ConstructMirrorFromTwoPointsAsync(
@@ -2083,7 +2083,7 @@ var mirrorPlane = await briosa.InstrumentOperations
 
 ## DriftCheckAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/instrument-operations#drift-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#drift-check)
 
 ```csharp
 public Task<DriftCheckResult> DriftCheckAsync(
@@ -2108,7 +2108,7 @@ dialog.
 
 ## MeasureNominalFeatureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/instrument-operations#measure-nominal-feature)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-nominal-feature)
 
 ```csharp
 public Task MeasureNominalFeatureAsync(
@@ -2123,7 +2123,7 @@ replayed after an unknown outcome.
 
 ## GuideObjectsIn6dBasedOnPointMeasurementsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
 
 ```csharp
 public Task GuideObjectsIn6dBasedOnPointMeasurementsAsync(
@@ -2139,7 +2139,7 @@ public Task GuideObjectsIn6dBasedOnPointMeasurementsAsync(
 
 ## MoveObjectsIn6dUsingInstrumentUpdatesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/instrument-operations#move-objects-in-6d-using-instrument-updates)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-objects-in-6d-using-instrument-updates)
 
 ```csharp
 public Task MoveObjectsIn6dUsingInstrumentUpdatesAsync(
@@ -2153,7 +2153,7 @@ These calls expose live SA guidance without introducing client-owned state.
 
 ## AlignTwoTargetsWithAxisWcfXAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/instrument-operations#align-two-targets-with-axis-wcf---x)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-two-targets-with-axis-wcf---x)
 
 ```csharp
 public Task AlignTwoTargetsWithAxisWcfXAsync(
@@ -2167,7 +2167,7 @@ public Task AlignTwoTargetsWithAxisWcfXAsync(
 
 ## GetInstrumentInterfaceResponseTimeoutAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-interface-response-timeout)
 
 ```csharp
 public Task<double> GetInstrumentInterfaceResponseTimeoutAsync(
@@ -2179,7 +2179,7 @@ The result is expressed in seconds.
 
 ## SetInstrumentInterfaceResponseTimeoutAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-interface-response-timeout)
 
 ```csharp
 public Task SetInstrumentInterfaceResponseTimeoutAsync(
@@ -2192,7 +2192,7 @@ Briosa preserves the MP default and adds no range check.
 
 ## GetCurrentTrappingStatusAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/instrument-operations#get-current-trapping-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-trapping-status)
 
 ```csharp
 public Task<CurrentTrappingStatus> GetCurrentTrappingStatusAsync(
@@ -2205,7 +2205,7 @@ var status = await briosa.InstrumentOperations.GetCurrentTrappingStatusAsync();
 
 ## WaitForTrappingToCompleteAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
+[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#wait-for-trapping-to-complete)
 
 ```csharp
 public Task WaitForTrappingToCompleteAsync(
@@ -2219,7 +2219,7 @@ not prove the underlying SA call stopped.
 
 ## JumpInstrumentToNewLocationAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/instrument-operations#jump-instrument-to-new-location)
+[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#jump-instrument-to-new-location)
 
 ```csharp
 public Task JumpInstrumentToNewLocationAsync(
@@ -2230,7 +2230,7 @@ public Task JumpInstrumentToNewLocationAsync(
 
 ## QuickAlignAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/instrument-operations#quick-align)
+[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#quick-align)
 
 ```csharp
 public Task QuickAlignAsync(
@@ -2247,7 +2247,7 @@ Briosa leaves length validation to SA.
 
 ## AlignCloudToCadAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/instrument-operations#align-cloud-to-cad)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-cloud-to-cad)
 
 ```csharp
 public Task<CloudToCadAlignmentResult> AlignCloudToCadAsync(
@@ -2265,7 +2265,7 @@ Briosa-owned workflow state and are never automatically replayed.
 
 ## StartGdtInspectionDesignAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-design)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-design)
 
 ```csharp
 public Task StartGdtInspectionDesignAsync(
@@ -2276,7 +2276,7 @@ public Task StartGdtInspectionDesignAsync(
 
 ## StartGdtInspectionRehearseAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-rehearse)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-rehearse)
 
 ```csharp
 public Task StartGdtInspectionRehearseAsync(
@@ -2287,7 +2287,7 @@ public Task StartGdtInspectionRehearseAsync(
 
 ## StartGdtInspectionAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection)
 
 ```csharp
 public Task StartGdtInspectionAsync(
@@ -2301,7 +2301,7 @@ The filter values map exactly to `ALL`, `CHECKS`, and `DATUMS`.
 
 ## GetInspectionVerificationModeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-inspection-verification-mode)
 
 ```csharp
 public Task<bool> GetInspectionVerificationModeAsync(
@@ -2310,7 +2310,7 @@ public Task<bool> GetInspectionVerificationModeAsync(
 
 ## SetInspectionVerificationModeAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#set-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-inspection-verification-mode)
 
 ```csharp
 public Task SetInspectionVerificationModeAsync(
@@ -2322,7 +2322,7 @@ This modifies application-global SA state; Briosa does not restore it.
 
 ## SetRemeasureFailedChecksOnlyAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/instrument-operations#set-remeasure-failed-checks-only)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-remeasure-failed-checks-only)
 
 ```csharp
 public Task SetRemeasureFailedChecksOnlyAsync(
@@ -2335,7 +2335,7 @@ trapping. It adds no confirmation or rollback.
 
 ## AssociateObjectsWithInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/instrument-operations#associate-objects-with-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#associate-objects-with-instrument)
 
 ```csharp
 public Task AssociateObjectsWithInstrumentAsync(
@@ -2346,7 +2346,7 @@ public Task AssociateObjectsWithInstrumentAsync(
 
 ## DisassociateObjectsFromInstrumentAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#disassociate-objects-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#disassociate-objects-from-instrument)
 
 ```csharp
 public Task DisassociateObjectsFromInstrumentAsync(
@@ -2358,7 +2358,7 @@ The exact 2026.1 binding intentionally has no instrument parameter.
 
 ## MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>>
@@ -2371,7 +2371,7 @@ This queries live SA association state and preserves the returned order.
 
 ## CombinePointGroupsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/instrument-operations#combine-point-groups)
+[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#combine-point-groups)
 
 ```csharp
 public Task CombinePointGroupsAsync(
@@ -2382,7 +2382,7 @@ public Task CombinePointGroupsAsync(
 
 ## DissectPointGroupAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/instrument-operations#dissect-point-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dissect-point-group)
 
 ```csharp
 public Task DissectPointGroupAsync(
@@ -2393,7 +2393,7 @@ public Task DissectPointGroupAsync(
 
 ## SynchronizedMeasurementMasterSlaveAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/instrument-operations#synchronized-measurement-masterslave)
+[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#synchronized-measurement-masterslave)
 
 ```csharp
 public Task SynchronizedMeasurementMasterSlaveAsync(
@@ -2411,7 +2411,7 @@ measurement.
 
 ## CreateNewDynamicReferenceAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/instrument-operations#create-new-dynamic-reference)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-new-dynamic-reference)
 
 ```csharp
 public Task CreateNewDynamicReferenceAsync(
@@ -2425,7 +2425,7 @@ SA documents this operation for AICON/Hexagon MoveInspect systems.
 
 ## CalculateTcpFixtureUncertaintiesAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#calculate-tcp-fixture-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#calculate-tcp-fixture-uncertainties)
 
 ```csharp
 public Task<TcpFixtureUncertainties> CalculateTcpFixtureUncertaintiesAsync(
@@ -2440,7 +2440,7 @@ vectors contain exactly six values.
 
 ## ConstructTcpFixtureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#construct-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-tcp-fixture)
 
 ```csharp
 public Task<CollectionObjectName> ConstructTcpFixtureAsync(
@@ -2452,7 +2452,7 @@ public Task<CollectionObjectName> ConstructTcpFixtureAsync(
 
 ## AddNominalPointToTcpFixtureAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#add-nominal-point-to-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-nominal-point-to-tcp-fixture)
 
 ```csharp
 public Task AddNominalPointToTcpFixtureAsync(
@@ -2470,7 +2470,7 @@ public Task AddNominalPointToTcpFixtureAsync(
 
 ## GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
 
 ```csharp
 public Task<UncertaintyCovarianceMatrix>
@@ -2481,7 +2481,7 @@ public Task<UncertaintyCovarianceMatrix>
 
 ## SetInstrumentBaseUncertaintyCovarianceMatrixWrtBaseAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
 ```csharp
 public Task SetInstrumentBaseUncertaintyCovarianceMatrixWrtBaseAsync(
@@ -2492,7 +2492,7 @@ public Task SetInstrumentBaseUncertaintyCovarianceMatrixWrtBaseAsync(
 
 ## SetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```csharp
 public Task SetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldAsync(
@@ -2506,7 +2506,7 @@ physical-value validation.
 
 ## GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```csharp
 public Task<UncertaintyCovarianceMatrix>
@@ -2520,7 +2520,7 @@ uncertainty state and are never automatically replayed.
 
 ## ConstructMeasuredPointUncertaintyEllipsoidsAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
 
 ```csharp
 public Task ConstructMeasuredPointUncertaintyEllipsoidsAsync(
@@ -2530,7 +2530,7 @@ public Task ConstructMeasuredPointUncertaintyEllipsoidsAsync(
 
 ## GetWrtlChannelAndStatusAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/instrument-operations#get-wrtl-channel-and-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-wrtl-channel-and-status)
 
 ```csharp
 public Task<WrtlChannelStatus> GetWrtlChannelAndStatusAsync(
@@ -2540,7 +2540,7 @@ public Task<WrtlChannelStatus> GetWrtlChannelAndStatusAsync(
 
 ## SetWrtlChannelAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/instrument-operations#set-wrtl-channel)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-wrtl-channel)
 
 ```csharp
 public Task SetWrtlChannelAsync(

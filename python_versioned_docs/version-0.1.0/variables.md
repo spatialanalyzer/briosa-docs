@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Add Double to Named Double List Variable
 
-[Add Double to Named Double List Variable](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC contract](/api/grpc/variables#add-double-to-named-double-list-variable)
+[Add Double to Named Double List Variable](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#add-double-to-named-double-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Clear Named Double List Variable
 
-[Clear Named Double List Variable](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC contract](/api/grpc/variables#clear-named-double-list-variable)
+[Clear Named Double List Variable](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#clear-named-double-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Variable
 
-[Delete Variable](/mp-command-catalog/commands/variables#delete-variable) · [gRPC contract](/api/grpc/variables#delete-variable)
+[Delete Variable](/mp-command-catalog/commands/variables#delete-variable) · [gRPC contract](/api/grpc/0.5.1/variables#delete-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -94,7 +94,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Delete Variables -- Wildcard Match
 
-[Delete Variables -- Wildcard Match](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC contract](/api/grpc/variables#delete-variables----wildcard-match)
+[Delete Variables -- Wildcard Match](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC contract](/api/grpc/0.5.1/variables#delete-variables----wildcard-match)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -121,7 +121,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Boolean Variable
 
-[Get Boolean Variable](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC contract](/api/grpc/variables#get-boolean-variable)
+[Get Boolean Variable](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-boolean-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -148,7 +148,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Collection Object Name Variable
 
-[Get Collection Object Name Variable](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-name-variable)
+[Get Collection Object Name Variable](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-collection-object-name-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -175,7 +175,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Collection Object Ref List Variable
 
-[Get Collection Object Ref List Variable](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-collection-object-ref-list-variable)
+[Get Collection Object Ref List Variable](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-collection-object-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -202,7 +202,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Double Variable
 
-[Get Double Variable](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC contract](/api/grpc/variables#get-double-variable)
+[Get Double Variable](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-double-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -229,7 +229,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Integer Variable
 
-[Get Integer Variable](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC contract](/api/grpc/variables#get-integer-variable)
+[Get Integer Variable](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-integer-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -256,7 +256,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Named Double List Variable
 
-[Get Named Double List Variable](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable)
+[Get Named Double List Variable](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-named-double-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -283,7 +283,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Named Double List Variable Min/Max
 
-[Get Named Double List Variable Min/Max](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC contract](/api/grpc/variables#get-named-double-list-variable-minmax)
+[Get Named Double List Variable Min/Max](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC contract](/api/grpc/0.5.1/variables#get-named-double-list-variable-minmax)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -317,7 +317,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Point Name Ref List Variable
 
-[Get Point Name Ref List Variable](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-point-name-ref-list-variable)
+[Get Point Name Ref List Variable](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-point-name-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -344,7 +344,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Point Name Variable
 
-[Get Point Name Variable](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC contract](/api/grpc/variables#get-point-name-variable)
+[Get Point Name Variable](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-point-name-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -371,7 +371,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Relationship Ref List Variable
 
-[Get Relationship Ref List Variable](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-relationship-ref-list-variable)
+[Get Relationship Ref List Variable](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-relationship-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -398,7 +398,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Report Items Reference List Variable
 
-[Get Report Items Reference List Variable](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#get-report-items-reference-list-variable)
+[Get Report Items Reference List Variable](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-report-items-reference-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -425,7 +425,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get String Ref List Variable
 
-[Get String Ref List Variable](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-string-ref-list-variable)
+[Get String Ref List Variable](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-string-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -452,7 +452,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get String Variable
 
-[Get String Variable](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC contract](/api/grpc/variables#get-string-variable)
+[Get String Variable](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-string-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -479,7 +479,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Transform Variable
 
-[Get Transform Variable](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC contract](/api/grpc/variables#get-transform-variable)
+[Get Transform Variable](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-transform-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -506,7 +506,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Vector Name Ref List Variable
 
-[Get Vector Name Ref List Variable](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#get-vector-name-ref-list-variable)
+[Get Vector Name Ref List Variable](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-vector-name-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -533,7 +533,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Vector Variable
 
-[Get Vector Variable](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC contract](/api/grpc/variables#get-vector-variable)
+[Get Vector Variable](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC contract](/api/grpc/0.5.1/variables#get-vector-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -560,7 +560,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Boolean Variable
 
-[Set Boolean Variable](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC contract](/api/grpc/variables#set-boolean-variable)
+[Set Boolean Variable](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-boolean-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -589,7 +589,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Collection Object Name Variable
 
-[Set Collection Object Name Variable](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-name-variable)
+[Set Collection Object Name Variable](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-collection-object-name-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -618,7 +618,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Collection Object Ref List Variable
 
-[Set Collection Object Ref List Variable](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-collection-object-ref-list-variable)
+[Set Collection Object Ref List Variable](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-collection-object-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -647,7 +647,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Double Variable
 
-[Set Double Variable](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC contract](/api/grpc/variables#set-double-variable)
+[Set Double Variable](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-double-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -676,7 +676,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Font Variable
 
-[Set Font Variable](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC contract](/api/grpc/variables#set-font-variable)
+[Set Font Variable](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-font-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -705,7 +705,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Integer Variable
 
-[Set Integer Variable](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC contract](/api/grpc/variables#set-integer-variable)
+[Set Integer Variable](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-integer-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -734,7 +734,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Named Double List Variable
 
-[Set Named Double List Variable](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC contract](/api/grpc/variables#set-named-double-list-variable)
+[Set Named Double List Variable](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-named-double-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -763,7 +763,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point Name Ref List Variable
 
-[Set Point Name Ref List Variable](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-point-name-ref-list-variable)
+[Set Point Name Ref List Variable](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-point-name-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -792,7 +792,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Point Name Variable
 
-[Set Point Name Variable](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC contract](/api/grpc/variables#set-point-name-variable)
+[Set Point Name Variable](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-point-name-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -821,7 +821,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Relationship Ref List Variable
 
-[Set Relationship Ref List Variable](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-relationship-ref-list-variable)
+[Set Relationship Ref List Variable](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-relationship-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -850,7 +850,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Report Items Reference List Variable
 
-[Set Report Items Reference List Variable](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC contract](/api/grpc/variables#set-report-items-reference-list-variable)
+[Set Report Items Reference List Variable](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-report-items-reference-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -879,7 +879,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set String Ref List Variable
 
-[Set String Ref List Variable](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-string-ref-list-variable)
+[Set String Ref List Variable](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-string-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -908,7 +908,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set String Variable
 
-[Set String Variable](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC contract](/api/grpc/variables#set-string-variable)
+[Set String Variable](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-string-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -937,7 +937,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Transform Variable
 
-[Set Transform Variable](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC contract](/api/grpc/variables#set-transform-variable)
+[Set Transform Variable](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-transform-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -966,7 +966,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector Name Ref List Variable
 
-[Set Vector Name Ref List Variable](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/variables#set-vector-name-ref-list-variable)
+[Set Vector Name Ref List Variable](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-vector-name-ref-list-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -995,7 +995,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Set Vector Variable
 
-[Set Vector Variable](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC contract](/api/grpc/variables#set-vector-variable)
+[Set Vector Variable](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC contract](/api/grpc/0.5.1/variables#set-vector-variable)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

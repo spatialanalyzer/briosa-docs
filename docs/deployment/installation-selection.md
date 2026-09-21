@@ -194,3 +194,7 @@ Server releases after the initial bootstrap must pass the
 [retained published-client gate](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/README.md).
 Discovery and lifecycle behavior are defined by the
 [shared contract](https://github.com/spatialanalyzer/briosa/blob/main/docs/architecture/installation-selection-and-compatibility.md).
+
+## API References and Inert Diagnostics
+
+The [.NET](/api/dotnet/installation-selection), [Python](/api/python/installation-selection), and [JavaScript/TypeScript](/api/javascript/installation-selection) references document every selector field, discovery report, and resolve API, with examples that inspect a selection without starting SA. Their SA 2024 counterparts are available in the target section of each reference. Discovery separates rejected candidate diagnostics from the overall selection failure; a structurally valid installation is not necessarily compatible.

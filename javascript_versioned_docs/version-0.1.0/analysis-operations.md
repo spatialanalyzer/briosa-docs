@@ -11,7 +11,7 @@ inputs use one readonly input object; call controls remain a separate final valu
 
 ## Angle Between Line and Plane
 
-[Angle Between Line and Plane](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC contract](/api/grpc/analysis-operations#angle-between-line-and-plane)
+[Angle Between Line and Plane](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-line-and-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Angle Between Two Lines
 
-[Angle Between Two Lines](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-lines)
+[Angle Between Two Lines](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-two-lines)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Angle Between Two Planes' normals
 
-[Angle Between Two Planes' normals](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC contract](/api/grpc/analysis-operations#angle-between-two-planes-normals)
+[Angle Between Two Planes' normals](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#angle-between-two-planes-normals)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -122,7 +122,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Best Fit Transformation - Group to Group
 
-[Best Fit Transformation - Group to Group](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC contract](/api/grpc/analysis-operations#best-fit-transformation---group-to-group)
+[Best Fit Transformation - Group to Group](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#best-fit-transformation---group-to-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -198,7 +198,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz)
 
-[Compute Group to Group Orientation (Rx,Ry,Rz)](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC contract](/api/grpc/analysis-operations#compute-group-to-group-orientation-rxryrz)
+[Compute Group to Group Orientation (Rx,Ry,Rz)](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#compute-group-to-group-orientation-rxryrz)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -240,7 +240,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create Point Uncertainty Cloud Point Sets
 
-[Create Point Uncertainty Cloud Point Sets](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-cloud-point-sets)
+[Create Point Uncertainty Cloud Point Sets](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#create-point-uncertainty-cloud-point-sets)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -288,7 +288,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Create Point Uncertainty Fields
 
-[Create Point Uncertainty Fields](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC contract](/api/grpc/analysis-operations#create-point-uncertainty-fields)
+[Create Point Uncertainty Fields](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#create-point-uncertainty-fields)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -321,7 +321,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Point Group
 
-[Fit Geometry to Point Group](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group)
+[Fit Geometry to Point Group](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-point-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -366,7 +366,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Point Group Projected to Plane
 
-[Fit Geometry to Point Group Projected to Plane](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+[Fit Geometry to Point Group Projected to Plane](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -413,7 +413,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Fit Geometry to Points
 
-[Fit Geometry to Points](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC contract](/api/grpc/analysis-operations#fit-geometry-to-points)
+[Fit Geometry to Points](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#fit-geometry-to-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -458,7 +458,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get B-Spline Properties
 
-[Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC contract](/api/grpc/analysis-operations#get-b-spline-properties)
+[Get B-Spline Properties](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-b-spline-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -504,7 +504,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Circle Properties
 
-[Get Circle Properties](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#get-circle-properties)
+[Get Circle Properties](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-circle-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -546,7 +546,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Cone Properties
 
-[Get Cone Properties](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cone-properties)
+[Get Cone Properties](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-cone-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -594,7 +594,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Coordinate for i-th Point in Point Set
 
-[Get Coordinate for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
+[Get Coordinate for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -634,7 +634,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Cylinder Properties
 
-[Get Cylinder Properties](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#get-cylinder-properties)
+[Get Cylinder Properties](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-cylinder-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -690,7 +690,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Ellipse Properties
 
-[Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#get-ellipse-properties)
+[Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-ellipse-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -732,7 +732,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Euler Parameters for Frame
 
-[Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-frame)
+[Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-euler-parameters-for-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -780,7 +780,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Euler Parameters for i-th Frame in Frame Set
 
-[Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
+[Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -830,7 +830,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Collection Name
 
-[Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-collection-name)
+[Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-i-th-collection-name)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -861,7 +861,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get i-th Point From Group
 
-[Get i-th Point From Group](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC contract](/api/grpc/analysis-operations#get-i-th-point-from-group)
+[Get i-th Point From Group](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-i-th-point-from-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -903,7 +903,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Line Properties
 
-[Get Line Properties](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC contract](/api/grpc/analysis-operations#get-line-properties)
+[Get Line Properties](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-line-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -951,7 +951,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Auxiliary Data
 
-[Get Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-auxiliary-data)
+[Get Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-auxiliary-data)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -991,7 +991,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Info Data
 
-[Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-info-data)
+[Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-info-data)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1022,7 +1022,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Measurement Weather Data
 
-[Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC contract](/api/grpc/analysis-operations#get-measurement-weather-data)
+[Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-measurement-weather-data)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1062,7 +1062,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Collections
 
-[Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-collections)
+[Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-collections)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1088,7 +1088,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Frames In Frame Set
 
-[Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-frames-in-frame-set)
+[Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-frames-in-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1119,7 +1119,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Points in Group
 
-[Get Number of Points in Group](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-group)
+[Get Number of Points in Group](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-points-in-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1150,7 +1150,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Number of Points In Point Set
 
-[Get Number of Points In Point Set](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-number-of-points-in-point-set)
+[Get Number of Points In Point Set](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-number-of-points-in-point-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1181,7 +1181,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Object Reporting Frame
 
-[Get Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#get-object-reporting-frame)
+[Get Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-object-reporting-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1212,7 +1212,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Plane Properties
 
-[Get Plane Properties](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC contract](/api/grpc/analysis-operations#get-plane-properties)
+[Get Plane Properties](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-plane-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1252,7 +1252,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate
 
-[Get Point Coordinate](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate)
+[Get Point Coordinate](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1294,7 +1294,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate (Cylindrical)
 
-[Get Point Coordinate (Cylindrical)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-cylindrical)
+[Get Point Coordinate (Cylindrical)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate-cylindrical)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1334,7 +1334,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Coordinate (Polar)
 
-[Get Point Coordinate (Polar)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC contract](/api/grpc/analysis-operations#get-point-coordinate-polar)
+[Get Point Coordinate (Polar)](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-coordinate-polar)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1374,7 +1374,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Properties
 
-[Get Point Properties](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC contract](/api/grpc/analysis-operations#get-point-properties)
+[Get Point Properties](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1424,7 +1424,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point To Line Distance
 
-[Get Point To Line Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-line-distance)
+[Get Point To Line Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-to-line-distance)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1470,7 +1470,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point To Point Distance
 
-[Get Point To Point Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC contract](/api/grpc/analysis-operations#get-point-to-point-distance)
+[Get Point To Point Distance](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-to-point-distance)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1516,7 +1516,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Point Tolerance
 
-[Get Point Tolerance](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC contract](/api/grpc/analysis-operations#get-point-tolerance)
+[Get Point Tolerance](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-point-tolerance)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1584,7 +1584,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Slot Properties
 
-[Get Slot Properties](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC contract](/api/grpc/analysis-operations#get-slot-properties)
+[Get Slot Properties](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-slot-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1634,7 +1634,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Sphere Properties
 
-[Get Sphere Properties](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC contract](/api/grpc/analysis-operations#get-sphere-properties)
+[Get Sphere Properties](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-sphere-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1674,7 +1674,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Surface Physical Stats
 
-[Get Surface Physical Stats](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC contract](/api/grpc/analysis-operations#get-surface-physical-stats)
+[Get Surface Physical Stats](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-surface-physical-stats)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1712,7 +1712,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Timestamp for i-th Frame in Frame Set
 
-[Get Timestamp for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
+[Get Timestamp for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1745,7 +1745,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Timestamp for i-th Point in Point Set
 
-[Get Timestamp for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
+[Get Timestamp for i-th Point in Point Set](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1778,7 +1778,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Torus Properties
 
-[Get Torus Properties](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC contract](/api/grpc/analysis-operations#get-torus-properties)
+[Get Torus Properties](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-torus-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1820,7 +1820,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Transform for i-th Frame in Frame Set
 
-[Get Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
+[Get Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1853,7 +1853,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Group To Surface Fit
 
-[Group To Surface Fit](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC contract](/api/grpc/analysis-operations#group-to-surface-fit)
+[Group To Surface Fit](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#group-to-surface-fit)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1901,7 +1901,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Import Geometry Fit Profiles
 
-[Import Geometry Fit Profiles](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC contract](/api/grpc/analysis-operations#import-geometry-fit-profiles)
+[Import Geometry Fit Profiles](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#import-geometry-fit-profiles)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1934,7 +1934,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Is Object of Type
 
-[Is Object of Type](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC contract](/api/grpc/analysis-operations#is-object-of-type)
+[Is Object of Type](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#is-object-of-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1967,7 +1967,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Circle Fit Profile
 
-[Make Circle Fit Profile](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-circle-fit-profile)
+[Make Circle Fit Profile](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-circle-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2020,7 +2020,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Cone Fit Profile
 
-[Make Cone Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cone-fit-profile)
+[Make Cone Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-cone-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2067,7 +2067,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Cylinder Fit Profile
 
-[Make Cylinder Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
+[Make Cylinder Fit Profile](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-cylinder-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2128,7 +2128,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Ellipse Fit Profile
 
-[Make Ellipse Fit Profile](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
+[Make Ellipse Fit Profile](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-ellipse-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2181,7 +2181,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Line Fit Profile
 
-[Make Line Fit Profile](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-line-fit-profile)
+[Make Line Fit Profile](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-line-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2222,7 +2222,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Paraboloid Fit Profile
 
-[Make Paraboloid Fit Profile](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-paraboloid-fit-profile)
+[Make Paraboloid Fit Profile](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-paraboloid-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2267,7 +2267,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Plane Fit Profile
 
-[Make Plane Fit Profile](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-plane-fit-profile)
+[Make Plane Fit Profile](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-plane-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2312,7 +2312,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Slot Fit Profile
 
-[Make Slot Fit Profile](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-slot-fit-profile)
+[Make Slot Fit Profile](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-slot-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2369,7 +2369,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Sphere Fit Profile
 
-[Make Sphere Fit Profile](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
+[Make Sphere Fit Profile](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#make-sphere-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2412,7 +2412,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Mushroom Target Hole Inspection
 
-[Mushroom Target Hole Inspection](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC contract](/api/grpc/analysis-operations#mushroom-target-hole-inspection)
+[Mushroom Target Hole Inspection](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#mushroom-target-hole-inspection)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2458,7 +2458,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Patch Normal Shift - Hole / Pin
 
-[Patch Normal Shift - Hole / Pin](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---hole--pin)
+[Patch Normal Shift - Hole / Pin](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#patch-normal-shift---hole--pin)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2495,7 +2495,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Patch Normal Shift - Point
 
-[Patch Normal Shift - Point](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC contract](/api/grpc/analysis-operations#patch-normal-shift---point)
+[Patch Normal Shift - Point](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#patch-normal-shift---point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2532,7 +2532,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Clouds to Objects
 
-[Query Clouds to Objects](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-objects)
+[Query Clouds to Objects](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-clouds-to-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2584,7 +2584,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Clouds to Surface
 
-[Query Clouds to Surface](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC contract](/api/grpc/analysis-operations#query-clouds-to-surface)
+[Query Clouds to Surface](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-clouds-to-surface)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2636,7 +2636,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Frame to Frame
 
-[Query Frame to Frame](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#query-frame-to-frame)
+[Query Frame to Frame](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-frame-to-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2684,7 +2684,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Groups to Objects
 
-[Query Groups to Objects](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-groups-to-objects)
+[Query Groups to Objects](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-groups-to-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2738,7 +2738,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Point to Objects
 
-[Query Point to Objects](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-objects)
+[Query Point to Objects](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-point-to-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2786,7 +2786,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Point to Point Along Curve
 
-[Query Point to Point Along Curve](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC contract](/api/grpc/analysis-operations#query-point-to-point-along-curve)
+[Query Point to Point Along Curve](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-point-to-point-along-curve)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2821,7 +2821,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Circle
 
-[Query Points to Circle](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-circle)
+[Query Points to Circle](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-circle)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2864,7 +2864,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Objects
 
-[Query Points to Objects](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-objects)
+[Query Points to Objects](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-objects)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2918,7 +2918,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Query Points to Single Point
 
-[Query Points to Single Point](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC contract](/api/grpc/analysis-operations#query-points-to-single-point)
+[Query Points to Single Point](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#query-points-to-single-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2953,7 +2953,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Re-Compute Calculated Items
 
-[Re-Compute Calculated Items](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC contract](/api/grpc/analysis-operations#re-compute-calculated-items)
+[Re-Compute Calculated Items](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#re-compute-calculated-items)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2990,7 +2990,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename points based on inter-point distance to reference points
 
-[Rename points based on inter-point distance to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
+[Rename points based on inter-point distance to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3027,7 +3027,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Rename points based on proximity to reference points
 
-[Rename points based on proximity to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC contract](/api/grpc/analysis-operations#rename-points-based-on-proximity-to-reference-points)
+[Rename points based on proximity to reference points](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#rename-points-based-on-proximity-to-reference-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3066,7 +3066,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse B-Splines
 
-[Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC contract](/api/grpc/analysis-operations#reverse-b-splines)
+[Reverse B-Splines](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-b-splines)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3097,7 +3097,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse Plane Normals
 
-[Reverse Plane Normals](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-plane-normals)
+[Reverse Plane Normals](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-plane-normals)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3128,7 +3128,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Reverse Surface Normals
 
-[Reverse Surface Normals](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC contract](/api/grpc/analysis-operations#reverse-surface-normals)
+[Reverse Surface Normals](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#reverse-surface-normals)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3159,7 +3159,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Circle Properties
 
-[Set Circle Properties](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC contract](/api/grpc/analysis-operations#set-circle-properties)
+[Set Circle Properties](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-circle-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3196,7 +3196,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Cone Properties
 
-[Set Cone Properties](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cone-properties)
+[Set Cone Properties](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-cone-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3241,7 +3241,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Cylinder Properties
 
-[Set Cylinder Properties](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC contract](/api/grpc/analysis-operations#set-cylinder-properties)
+[Set Cylinder Properties](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-cylinder-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3290,7 +3290,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Default Colorization Options
 
-[Set Default Colorization Options](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC contract](/api/grpc/analysis-operations#set-default-colorization-options)
+[Set Default Colorization Options](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-default-colorization-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3321,7 +3321,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Ellipse Properties
 
-[Set Ellipse Properties](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC contract](/api/grpc/analysis-operations#set-ellipse-properties)
+[Set Ellipse Properties](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-ellipse-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3360,7 +3360,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geometry Relationship Fit Profile
 
-[Set Geometry Relationship Fit Profile](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC contract](/api/grpc/analysis-operations#set-geometry-relationship-fit-profile)
+[Set Geometry Relationship Fit Profile](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-geometry-relationship-fit-profile)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3397,7 +3397,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Line Properties
 
-[Set Line Properties](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC contract](/api/grpc/analysis-operations#set-line-properties)
+[Set Line Properties](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-line-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3434,7 +3434,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Measurement Auxiliary Data
 
-[Set Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC contract](/api/grpc/analysis-operations#set-measurement-auxiliary-data)
+[Set Measurement Auxiliary Data](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-measurement-auxiliary-data)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3471,7 +3471,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object Reporting Frame
 
-[Set Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC contract](/api/grpc/analysis-operations#set-object-reporting-frame)
+[Set Object Reporting Frame](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-object-reporting-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3504,7 +3504,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Properties
 
-[Set Point Properties](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC contract](/api/grpc/analysis-operations#set-point-properties)
+[Set Point Properties](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-point-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3543,7 +3543,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Point Weights From Uncertainties
 
-[Set Point Weights From Uncertainties](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC contract](/api/grpc/analysis-operations#set-point-weights-from-uncertainties)
+[Set Point Weights From Uncertainties](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-point-weights-from-uncertainties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3584,7 +3584,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Transform for i-th Frame in Frame Set
 
-[Set Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
+[Set Transform for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3619,7 +3619,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Sphere Axis Check
 
-[Sphere Axis Check](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC contract](/api/grpc/analysis-operations#sphere-axis-check)
+[Sphere Axis Check](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#sphere-axis-check)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3673,7 +3673,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Temperature Compensate a group
 
-[Temperature Compensate a group](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC contract](/api/grpc/analysis-operations#temperature-compensate-a-group)
+[Temperature Compensate a group](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#temperature-compensate-a-group)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3714,7 +3714,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects - Frame To Frame
 
-[Transform Objects - Frame To Frame](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects---frame-to-frame)
+[Transform Objects - Frame To Frame](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects---frame-to-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3751,7 +3751,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects by Delta (About Working Frame)
 
-[Transform Objects by Delta (About Working Frame)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-about-working-frame)
+[Transform Objects by Delta (About Working Frame)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects-by-delta-about-working-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3784,7 +3784,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Transform Objects by Delta (World Transform Operator)
 
-[Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC contract](/api/grpc/analysis-operations#transform-objects-by-delta-world-transform-operator)
+[Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3817,7 +3817,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Translate Objects by Delta
 
-[Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC contract](/api/grpc/analysis-operations#translate-objects-by-delta)
+[Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC contract](/api/grpc/0.5.1/analysis-operations#translate-objects-by-delta)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

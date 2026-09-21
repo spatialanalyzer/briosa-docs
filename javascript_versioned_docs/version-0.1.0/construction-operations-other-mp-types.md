@@ -527,4 +527,4 @@ function decomposeWorldTransformOperatorIntoVectorsFixedXyzInWorld(
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types) ·
-[gRPC](/api/grpc/construction-operations-other-mp-types)
+[gRPC](/api/grpc/0.5.1/construction-operations-other-mp-types)

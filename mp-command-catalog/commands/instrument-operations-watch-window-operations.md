@@ -25,33 +25,33 @@ Watch Window Operations** in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Watch Point To Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point">Watch Point To Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Point To Point" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Point To Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-point">Watch Point To Point</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Point To Objects" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-objects">Watch Point To Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Point To Objects" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Point To Objects" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-objects">Watch Point To Objects</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Point To Edge" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-edge">Watch Point To Edge</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Point To Edge" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Point To Edge" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-edge">Watch Point To Edge</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Closest Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-closest-point">Watch Closest Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Closest Point" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Closest Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-closest-point">Watch Closest Point</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Instrument" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-instrument">Watch Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Instrument" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-instrument">Watch Instrument</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Window Template 3D" data-group="Instrument Operations / Watch Window Operations" data-status="uncommitted" data-validation="contract-clarification-required"><td><a href="#watch-window-template-3d">Watch Window Template 3D</a></td><td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td><td>Contract clarification required</td></tr>
@@ -61,9 +61,9 @@ Watch Window Operations** in SA 2026.1.0529.7.
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point-with-view-zooming">Watch Point To Point With View Zooming</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
-<tr data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-point-with-view-zooming">Watch Point To Point With View Zooming</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -77,17 +77,19 @@ Watch Window Operations** in SA 2026.1.0529.7.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -132,17 +134,19 @@ follows the exact-target SDK binding.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-objects) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-objects) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-objects) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-objects)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -180,17 +184,19 @@ the requested objects.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-edge) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-edge) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-edge) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-edge)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -229,17 +235,19 @@ Objects ` even though the public field name omits it.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-closest-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-closest-point) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-closest-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-closest-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -275,17 +283,19 @@ SA state used by the sequence.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-instrument) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-instrument) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-instrument) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-instrument)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -380,17 +390,19 @@ MP Editor review establishes the exact SA 2026.1.0529.7 signature.
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
   <span className="catalog-target-validation">At risk instrument watch window fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

@@ -25,21 +25,21 @@ These entries cover all three commands observed under **Instrument Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-active-instrument-interface-fixture"><td><a href="#issue-instrument-actuator-command">Issue Instrument Actuator Command</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - active instrument interface fixture</td></tr>
-<tr data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#issue-instrument-actuator-command">Issue Instrument Actuator Command</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-robot-instrument-fixture"><td><a href="#set-instrument-axes">Set Instrument Axes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - robot instrument fixture</td></tr>
-<tr data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-axes">Set Instrument Axes</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-projector-instrument-fixture"><td><a href="#set-alignment-projector">Set Alignment Projector</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projector instrument fixture</td></tr>
-<tr data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-alignment-projector">Set Alignment Projector</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -53,17 +53,19 @@ These entries cover all three commands observed under **Instrument Operations
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At risk active instrument interface fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -91,17 +93,19 @@ collection and its interface must be running.
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At risk robot instrument fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-instrument-axes)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -129,17 +133,19 @@ animation steps default to `0`; Briosa adds no axis-count or motion validation.
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At risk projector instrument fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [.NET](/api/dotnet/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [Python](/api/python/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations#set-alignment-projector)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

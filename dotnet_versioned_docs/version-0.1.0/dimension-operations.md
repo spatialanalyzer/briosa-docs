@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Delete Dimension
 
-[Delete Dimension](/mp-command-catalog/commands/dimension-operations#delete-dimension) · [gRPC contract](/api/grpc/dimension-operations#delete-dimension)
+[Delete Dimension](/mp-command-catalog/commands/dimension-operations#delete-dimension) · [gRPC contract](/api/grpc/0.5.1/dimension-operations#delete-dimension)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Dimension Value
 
-[Get Dimension Value](/mp-command-catalog/commands/dimension-operations#get-dimension-value) · [gRPC contract](/api/grpc/dimension-operations#get-dimension-value)
+[Get Dimension Value](/mp-command-catalog/commands/dimension-operations#get-dimension-value) · [gRPC contract](/api/grpc/0.5.1/dimension-operations#get-dimension-value)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Set Dimension Tolerance
 
-[Set Dimension Tolerance](/mp-command-catalog/commands/dimension-operations#set-dimension-tolerance) · [gRPC contract](/api/grpc/dimension-operations#set-dimension-tolerance)
+[Set Dimension Tolerance](/mp-command-catalog/commands/dimension-operations#set-dimension-tolerance) · [gRPC contract](/api/grpc/0.5.1/dimension-operations#set-dimension-tolerance)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

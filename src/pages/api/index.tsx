@@ -3,10 +3,14 @@ import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 import BrandImage from '@site/src/components/BrandImage';
+import grpcVersions from '@site/grpc_versions.json';
+import dotnetVersions from '@site/dotnet_versions.json';
+import pythonVersions from '@site/python_versions.json';
+import javascriptVersions from '@site/javascript_versions.json';
 
 const references = [
   {
-    eyebrow: 'Server 0.5.1',
+    eyebrow: `Server ${grpcVersions[0]} · SA 2024 and 2026`,
     product: 'server',
     title: 'gRPC API',
     description:
@@ -14,7 +18,7 @@ const references = [
     to: '/api/grpc',
   },
   {
-    eyebrow: 'Client 0.1.0 · SA 2026',
+    eyebrow: `Client ${dotnetVersions[0]} · SA 2024 and 2026`,
     product: 'dotnet',
     title: '.NET API',
     description:
@@ -22,7 +26,7 @@ const references = [
     to: '/api/dotnet',
   },
   {
-    eyebrow: 'Client 0.1.0 · SA 2026',
+    eyebrow: `Client ${pythonVersions[0]} · SA 2024 and 2026`,
     product: 'python',
     title: 'Python API',
     description:
@@ -30,7 +34,7 @@ const references = [
     to: '/api/python',
   },
   {
-    eyebrow: 'Client 0.1.0 · SA 2026',
+    eyebrow: `Client ${javascriptVersions[0]} · SA 2024 and 2026`,
     product: 'js',
     title: 'JavaScript and TypeScript API',
     description:

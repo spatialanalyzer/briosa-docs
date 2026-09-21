@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Scale Bar Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.5.1; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.7.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
@@ -29,10 +29,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Delete Scale Bar" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Scale Bar" data-group="Analysis Operations / Scale Bars" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-scale-bar">Delete Scale Bar</a></td>
   <td>Analysis Operations / Scale Bars</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Scale Bar Stats" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -41,10 +41,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Scale Bar Stats" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Scale Bar Stats" data-group="Analysis Operations / Scale Bars" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-scale-bar-stats">Get Scale Bar Stats</a></td>
   <td>Analysis Operations / Scale Bars</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Scale Bar Check" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -53,10 +53,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Scale Bar Check" data-group="Analysis Operations / Scale Bars" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Scale Bar Check" data-group="Analysis Operations / Scale Bars" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#scale-bar-check">Scale Bar Check</a></td>
   <td>Analysis Operations / Scale Bars</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Inward Positive Normal" data-group="Scale Bar Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -65,10 +65,10 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Inward Positive Normal" data-group="Analysis Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Inward Positive Normal" data-group="Analysis Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-inward-positive-normal">Set Inward Positive Normal</a></td>
   <td>Analysis Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Sort Point Group in Database" data-group="Scale Bar Operations" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -94,17 +94,19 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <span className="catalog-target-group">Scale Bar Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/scale-bar-operations#delete-scale-bar) · [.NET](/api/dotnet/sa-2024.1.0508.5/scale-bar-operations#delete-scale-bar) · [Python](/api/python/sa-2024.1.0508.5/scale-bar-operations#delete-scale-bar) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/scale-bar-operations#delete-scale-bar)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -145,17 +147,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Scale Bar Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/scale-bar-operations#get-scale-bar-stats) · [.NET](/api/dotnet/sa-2024.1.0508.5/scale-bar-operations#get-scale-bar-stats) · [Python](/api/python/sa-2024.1.0508.5/scale-bar-operations#get-scale-bar-stats) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/scale-bar-operations#get-scale-bar-stats)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -199,17 +203,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Scale Bar Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Scale Bars" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Scale Bars</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/scale-bar-operations#scale-bar-check) · [.NET](/api/dotnet/sa-2024.1.0508.5/scale-bar-operations#scale-bar-check) · [Python](/api/python/sa-2024.1.0508.5/scale-bar-operations#scale-bar-check) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/scale-bar-operations#scale-bar-check)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -254,17 +260,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Scale Bar Operations</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/scale-bar-operations#set-inward-positive-normal) · [.NET](/api/dotnet/sa-2024.1.0508.5/scale-bar-operations#set-inward-positive-normal) · [Python](/api/python/sa-2024.1.0508.5/scale-bar-operations#set-inward-positive-normal) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/scale-bar-operations#set-inward-positive-normal)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

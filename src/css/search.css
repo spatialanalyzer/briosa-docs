@@ -1,29 +1,142 @@
-/* Reuse Briosa's light/dark tokens in the standard DocSearch controls. */
+/* Theme the official DocSearch components with Briosa's light/dark tokens. */
 html .DocSearch {
   --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-soft-primary-color: var(--ifm-menu-color-background-active);
+  --docsearch-focus-color: var(--ifm-color-primary);
   --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-secondary-text-color: var(--briosa-muted);
   --docsearch-muted-color: var(--briosa-muted);
+  --docsearch-subtle-color: var(--briosa-border);
+  --docsearch-icon-color: var(--briosa-muted);
+  --docsearch-background-color: var(--briosa-soft);
+  --docsearch-search-button-background: #f1f5fa;
+  --docsearch-search-button-text-color: #52657a;
   --docsearch-searchbox-background: var(--briosa-soft);
   --docsearch-searchbox-focus-background: var(--briosa-surface);
-  --docsearch-modal-background: var(--briosa-soft);
+  --docsearch-modal-background: var(--briosa-surface);
+  --docsearch-modal-width: 760px;
+  --docsearch-modal-shadow: 0 24px 80px rgb(0 20 40 / 24%);
   --docsearch-footer-background: var(--briosa-surface);
-  --docsearch-hit-background: var(--briosa-surface);
+  --docsearch-footer-shadow: 0 -1px 0 var(--briosa-border);
+  --docsearch-hit-background: var(--briosa-soft);
   --docsearch-hit-color: var(--ifm-font-color-base);
-  --docsearch-hit-active-color: #fff;
+  --docsearch-hit-highlight-color: var(--ifm-menu-color-background-active);
   --docsearch-highlight-color: var(--ifm-color-primary);
-  --docsearch-logo-color: var(--ifm-color-primary);
-  --docsearch-container-background: rgb(0 20 40 / 75%);
+  --docsearch-logo-color: #003dff;
+  --docsearch-key-background: var(--briosa-surface);
+  --docsearch-key-color: var(--briosa-muted);
+  --docsearch-border-radius: 8px;
+  --docsearch-container-background: rgb(0 20 40 / 64%);
 }
 
 [data-theme='dark'] .DocSearch {
-  --docsearch-hit-active-color: #081f36;
+  --docsearch-search-button-background: #102f50;
+  --docsearch-search-button-text-color: #c6d5e4;
+  --docsearch-key-background: #081f36;
+  --docsearch-logo-color: #fff;
+  --docsearch-modal-shadow: 0 24px 80px rgb(0 8 20 / 55%);
 }
 
 .navbar .DocSearch-Button {
+  box-sizing: border-box;
+  width: 240px;
+  height: 44px;
   min-height: 44px;
   border: 1px solid var(--briosa-border);
-  border-radius: 6px;
+  border-radius: 12px;
   margin: 0;
+  padding: 0 12px;
+  box-shadow: 0 1px 2px rgb(0 20 40 / 4%);
+  transition: background-color 150ms ease, border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.navbar .DocSearch-Button:hover {
+  background: var(--ifm-menu-color-background-active);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+}
+
+.navbar .DocSearch-Button-Placeholder {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-inline: 10px 12px;
+}
+
+.navbar .DocSearch-Search-Icon {
+  width: 19px;
+  height: 19px;
+  color: var(--ifm-color-primary);
+  stroke-width: 1.8;
+}
+
+.navbar .DocSearch-Button-Keys {
+  min-width: auto;
+  gap: 3px;
+}
+
+.navbar .DocSearch-Button-Key {
+  box-sizing: border-box;
+  width: 23px;
+  height: 25px;
+  border: 1px solid var(--briosa-border);
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.navbar .DocSearch-Button-Key--ctrl {
+  width: 32px;
+}
+
+.navbar .DocSearch-Button-Key:first-child {
+  margin-inline-end: 0;
+}
+
+.DocSearch .DocSearch-Modal {
+  border: 1px solid var(--briosa-border);
+  border-radius: 16px;
+}
+
+.DocSearch .DocSearch-Form {
+  border: 1px solid var(--briosa-border);
+  border-radius: 10px;
+}
+
+.DocSearch .DocSearch-SearchBar {
+  padding: 12px;
+}
+
+.DocSearch .DocSearch-Form:focus-within {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary);
+}
+
+.DocSearch .DocSearch-Input {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* The containing form supplies the input's visible focus indicator. */
+.DocSearch .DocSearch-Input:focus-visible {
+  outline: none;
+}
+
+.DocSearch .DocSearch-Screen-Icon svg {
+  stroke: var(--briosa-muted);
+}
+
+.DocSearch .DocSearch-Hit a {
+  border-radius: 8px;
+}
+
+.DocSearch .DocSearch-Footer {
+  border-radius: 0 0 16px 16px;
+}
+
+/* The bundled logo paths use a fixed fill; honor DocSearch's theme token. */
+.DocSearch .DocSearch-Logo svg path {
+  fill: var(--docsearch-logo-color);
 }
 
 .navbar .DocSearch-Button:focus-visible,
@@ -32,10 +145,34 @@ html .DocSearch {
   outline-offset: 3px;
 }
 
-/* Keep the button labeled on small screens, where keyboard hints disappear. */
-@media (max-width: 768px) {
+/* Compact search keeps the navbar clear on tablets and phones. The official
+ * button retains its accessible label and keyboard shortcut. */
+@media (max-width: 1199px) {
+  .navbar .DocSearch-Button {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .navbar .DocSearch-Button-Keys,
   .navbar .DocSearch-Button-Placeholder {
-    display: inline;
+    display: none;
+  }
+
+  .navbar .DocSearch-Search-Icon {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .DocSearch .DocSearch-Modal,
+  .DocSearch .DocSearch-Footer {
+    border-radius: 0;
+  }
+
+  .DocSearch .DocSearch-Footer {
+    margin-top: auto;
   }
 }
 
@@ -50,6 +187,7 @@ html .DocSearch {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .DocSearch,
   .DocSearch *,
   .DocSearch *::before,
   .DocSearch *::after {

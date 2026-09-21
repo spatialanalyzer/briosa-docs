@@ -45,20 +45,20 @@ not supported today.
 
 ## First-Party Clients for Popular Runtimes
 
-Briosa is more than a server protocol. The project is building dedicated client
+Briosa is more than a server protocol. The project publishes dedicated client
 libraries for .NET, Python, and JavaScript so developers in those ecosystems
 can install and use Briosa like a normal application dependency.
 
-Each client will preserve the familiar MP command names and shared Briosa
+Each client preserves the familiar MP command names and shared Briosa
 behavior while presenting them in a form that suits its language:
 
 - An idiomatic asynchronous .NET client
 - An asynchronous Python client
 - An idiomatic JavaScript client for Node.js applications
 
-The clients will also provide a consistent experience for connecting to
+The clients also provide a consistent experience for connecting to
 Briosa, supplying command inputs, receiving typed results, and handling errors.
-Developers will not need to assemble those pieces separately for every
+Developers do not need to assemble those pieces separately for every
 application.
 
 Because the clients share the same Briosa API, teams can choose the language

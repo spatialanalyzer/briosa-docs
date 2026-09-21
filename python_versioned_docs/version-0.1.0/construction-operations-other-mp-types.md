@@ -469,4 +469,4 @@ async def decompose_world_transform_operator_into_vectors_fixed_xyz_in_world(
 ## Related References
 
 [Catalog](/mp-command-catalog/commands/construction-operations-other-mp-types) ·
-[gRPC](/api/grpc/construction-operations-other-mp-types)
+[gRPC](/api/grpc/0.5.1/construction-operations-other-mp-types)

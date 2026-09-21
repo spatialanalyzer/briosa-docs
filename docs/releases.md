@@ -91,18 +91,15 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 
 ## Documentation Versions
 
-The gRPC reference currently retains its **Server 0.5.1** snapshot. Each client
-reference has a **0.1.0** snapshot describing the SA 2026 API; use the installed
-SA 2024 package types and reviewed differences for legacy signatures. The
-[Server 0.7.0 source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets)
-provides the authoritative exact-target contracts. Client 0.1.1 changed the
-exact server pairing; its public API schemas were unchanged from 0.1.0.
-Client 0.2.0 adds installation discovery, per-application selection, and contract
-compatibility. The selection guide and the target-specific package READMEs in
-[.NET](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets),
-[JavaScript/TypeScript](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets),
-and [Python](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets)
-document those additions beyond the retained API snapshots.
+The current [gRPC reference](/api/grpc) documents **Server 0.7.0**; the [.NET](/api/dotnet), [Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references document **client 0.2.0**. Each includes a separate SA 2024 section alongside SA 2026. Historical references remain at [Server 0.5.1](/api/grpc/0.5.1), [.NET 0.1.0](/api/dotnet/0.1.0), [Python 0.1.0](/api/python/0.1.0), and [JavaScript 0.1.0](/api/javascript/0.1.0).
+
+| Client Line | Server Selection | Reference Guidance |
+| --- | --- | --- |
+| 0.1.0 | Exact Server 0.6.0 build | Retained 0.1.0 API |
+| 0.1.1 | Exact Server 0.6.1 build | Same public schemas as 0.1.0; changed server pin |
+| 0.2.0 | Contract major 1, revision at least 0, plus the exact reviewed 0.6.1 exception | Current API, including discovery and selection |
+
+The [public compatibility matrix](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/matrix.json) records 12 client/target/server pairs (three languages, two exact targets, Servers 0.6.1 and 0.7.0), with 12 fake-SDK scenarios per pair. This is compatibility evidence, not licensed validation of every MP operation. Preserve legacy installations until their consuming applications migrate. `BRIOSA_SERVER_PATH` requires explicit opt-in in client 0.2.0; prefer per-application selectors.
 The product guides, installation instructions, release status, and MP catalog
 remain unversioned so they can describe current availability across products.
 

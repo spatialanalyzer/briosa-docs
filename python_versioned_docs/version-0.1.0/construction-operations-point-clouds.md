@@ -141,4 +141,4 @@ async def extract_sphere_centers_from_point_cloud(
 The result is SpatialAnalyzer's `Number of Points Extracted`. The client adds no
 point-cloud or numeric safeguards and never automatically replays these calls.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [gRPC](/api/grpc/construction-operations-point-clouds)
+[Catalog](/mp-command-catalog/commands/construction-operations-point-clouds) · [gRPC](/api/grpc/0.5.1/construction-operations-point-clouds)

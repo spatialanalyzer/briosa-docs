@@ -21,4 +21,4 @@ public Task ConstructEllipseAsync(
 Every value is required and passed through without client-side geometry
 validation. The client never automatically replays this operation.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-ellipses#construct-ellipse) · [gRPC](/api/grpc/construction-operations-ellipses#construct-ellipse)
+[Catalog](/mp-command-catalog/commands/construction-operations-ellipses#construct-ellipse) · [gRPC](/api/grpc/0.5.1/construction-operations-ellipses#construct-ellipse)

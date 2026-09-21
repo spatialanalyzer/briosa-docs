@@ -12,7 +12,7 @@ export default function SearchBar(): React.JSX.Element | null {
         `/mp-command-catalog/commands?q=${encodeURIComponent(query)}`
       }
       translations={{
-        button: {buttonText: 'Search', buttonAriaLabel: 'Search All Documentation'},
+        button: {buttonText: 'Search docs…', buttonAriaLabel: 'Search All Documentation'},
         modal: {
           noResultsScreen: {
             noResultsText: 'No results for',

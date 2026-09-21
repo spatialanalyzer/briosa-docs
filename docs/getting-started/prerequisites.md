@@ -4,15 +4,17 @@ title: Prerequisites
 
 # Prerequisites
 
-For the current exact target you need:
+For either released exact target you need:
 
 - A Windows x64 workstation
-- SpatialAnalyzer `2026.1.0529.7` and its matching SDK, installed separately
+- SpatialAnalyzer `2024.1.0508.5` or `2026.1.0529.7` and its matching SDK, installed separately
 - A valid SpatialAnalyzer license for the operations you intend to perform
 - No competing Briosa worker, ObjectiveSA probe, SDK experiment, or other SDK
   client connected to the SpatialAnalyzer instance you intend to use
 - A first-party Briosa client, or a gRPC client such as
   [grpcurl](https://github.com/fullstorydev/grpcurl) for the source workflow
+
+Client 0.2.0 development requires .NET 10 for .NET, Python 3.10 or later for Python, or Node.js 20.19.0 or later for JavaScript/TypeScript. Use the package for your exact SA target. The self-contained server does not require a separately installed .NET runtime.
 
 Building Briosa from source additionally requires the .NET SDK selected by the
 server repository's `global.json`. Building this website requires Node.js 24,

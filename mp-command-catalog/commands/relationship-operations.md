@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries document Relationship Operations for SA 2026.1.0529.7.
 The MP Editor group paths and canonical command identities are preserved.
-Current entries are included in Briosa Server 0.5.1; runtime policy and readiness
+Current entries are included in Briosa Server 0.7.0; runtime policy and readiness
 still apply. Documentation-only identities retain their SDK limitations.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
@@ -32,10 +32,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Enable/Disable Relationships for Optimization" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Enable/Disable Relationships for Optimization" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-relationships-for-optimization">Enable/Disable Relationships for Optimization</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Geom Relationship Ignore Input Points" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -44,10 +44,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Geom Relationship Ignore Input Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Geom Relationship Ignore Input Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#geom-relationship-ignore-input-points">Geom Relationship Ignore Input Points</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Geom Relationship Reuse Ignored Input Points" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -56,10 +56,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Geom Relationship Reuse Ignored Input Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Geom Relationship Reuse Ignored Input Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#geom-relationship-reuse-ignored-input-points">Geom Relationship Reuse Ignored Input Points</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Auto Vectors" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -68,10 +68,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Auto Vectors" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Auto Vectors" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-auto-vectors">Get Geom Relationship Auto Vectors</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Cardinal Points" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -80,10 +80,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Cardinal Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Cardinal Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-cardinal-points">Get Geom Relationship Cardinal Points</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Criteria" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -92,10 +92,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Criteria" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Criteria" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-criteria">Get Geom Relationship Criteria</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Measured Avg Point" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -104,10 +104,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Measured Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Measured Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-measured-avg-point">Get Geom Relationship Measured Avg Point</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Measured Geometry" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -116,10 +116,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Measured Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Measured Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-measured-geometry">Get Geom Relationship Measured Geometry</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Nominal Avg Point" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -128,10 +128,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Nominal Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Nominal Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-nominal-avg-point">Get Geom Relationship Nominal Avg Point</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Nominal Geometry" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -140,10 +140,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Nominal Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Nominal Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-nominal-geometry">Get Geom Relationship Nominal Geometry</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Point List" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -152,10 +152,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Point List" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Point List" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-point-list">Get Geom Relationship Point List</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Projection Plane" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -164,10 +164,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Geom Relationship Projection Plane" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Projection Plane" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-projection-plane">Get Geom Relationship Projection Plane</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Pipe Relationship Cut Status" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -176,10 +176,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Pipe Relationship Cut Status" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Pipe Relationship Cut Status" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-pipe-relationship-cut-status">Get Pipe Relationship Cut Status</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Pipe Relationship Properties" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -188,10 +188,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Pipe Relationship Properties" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Pipe Relationship Properties" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-pipe-relationship-properties">Get Pipe Relationship Properties</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Pipe Relationship Weights" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -200,10 +200,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Pipe Relationship Weights" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Pipe Relationship Weights" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-pipe-relationship-weights">Get Pipe Relationship Weights</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Fit Constraints (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -212,10 +212,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Fit Constraints (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Fit Constraints (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-fit-constraints-scalar-type">Get Relationship Fit Constraints (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Outlier Rejection (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -224,10 +224,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Get Relationship Outlier Rejection (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Outlier Rejection (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-outlier-rejection-scalar-type">Get Relationship Outlier Rejection (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Projection Options" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -236,10 +236,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Projection Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Projection Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-projection-options">Get Relationship Projection Options</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Reporting Frame" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -248,10 +248,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Reporting Frame" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Reporting Frame" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-reporting-frame">Get Relationship Reporting Frame</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Sigmoidal Gap Fit Constraints" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="at-risk-relationship-fixture">
@@ -266,10 +266,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Sub Sampling Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Sub Sampling Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-sub-sampling-options">Get Relationship Sub Sampling Options</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Tolerance (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -278,10 +278,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Tolerance (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Tolerance (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-tolerance-scalar-type">Get Relationship Tolerance (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Tolerance (Vector Type)" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -290,10 +290,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Tolerance (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Tolerance (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-tolerance-vector-type">Get Relationship Tolerance (Vector Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Type" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -302,10 +302,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Type" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Type" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-type">Get Relationship Type</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Weighting" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -314,10 +314,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Get Relationship Weighting" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Weighting" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-weighting">Get Relationship Weighting</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Pipe Fitting Relationship" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -326,10 +326,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make Pipe Fitting Relationship" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Pipe Fitting Relationship" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-pipe-fitting-relationship">Make Pipe Fitting Relationship</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Pipe Relationship Cut" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -338,10 +338,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Make Pipe Relationship Cut" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Pipe Relationship Cut" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-pipe-relationship-cut">Make Pipe Relationship Cut</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Pipe Relationship Force Cut to Frame" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -350,10 +350,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Pipe Relationship Force Cut to Frame" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Pipe Relationship Force Cut to Frame" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#pipe-relationship-force-cut-to-frame">Pipe Relationship Force Cut to Frame</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rejection (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="sdk-unavailable" data-validation="not-applicable">
@@ -374,10 +374,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Auto Vectors Nominal (AVN)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Auto Vectors Nominal (AVN)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-auto-vectors-nominal-avn">Set Geom Relationship Auto Vectors Nominal (AVN)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Cardinal Points" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -386,10 +386,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Cardinal Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Cardinal Points" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-cardinal-points">Set Geom Relationship Cardinal Points</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Criteria" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -398,10 +398,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Criteria" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Criteria" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-criteria">Set Geom Relationship Criteria</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Measured Geometry" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -410,10 +410,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Measured Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Measured Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-measured-geometry">Set Geom Relationship Measured Geometry</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Nominal Avg Point" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -422,10 +422,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Nominal Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Nominal Avg Point" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-nominal-avg-point">Set Geom Relationship Nominal Avg Point</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Nominal Geometry" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -434,10 +434,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Nominal Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Nominal Geometry" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-nominal-geometry">Set Geom Relationship Nominal Geometry</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Geom Relationship Projection Plane" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -446,10 +446,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Geom Relationship Projection Plane" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Geom Relationship Projection Plane" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-geom-relationship-projection-plane">Set Geom Relationship Projection Plane</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Object to Object Direction Relationship Fit Constraints" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -458,10 +458,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Object to Object Direction Relationship Fit Constraints" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Object to Object Direction Relationship Fit Constraints" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-object-to-object-direction-relationship-fit-constraints">Set Object to Object Direction Relationship Fit Constraints</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Object to Object Direction Relationship Tolerances" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="at-risk-object-direction-relationship-fixture">
@@ -470,10 +470,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk - object-direction Relationship fixture</td>
 </tr>
-<tr data-command="Set Object to Object Direction Relationship Tolerances" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Object to Object Direction Relationship Tolerances" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-object-to-object-direction-relationship-tolerances">Set Object to Object Direction Relationship Tolerances</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Pipe Relationship Segment Properties" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -482,10 +482,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Pipe Relationship Segment Properties" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Pipe Relationship Segment Properties" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-pipe-relationship-segment-properties">Set Pipe Relationship Segment Properties</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Pipe Relationship Weights" data-group="Relationship Operations / Pipe Relationships" data-status="current" data-validation="portable-contract-review">
@@ -494,10 +494,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Pipe Relationship Weights" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Pipe Relationship Weights" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-pipe-relationship-weights">Set Pipe Relationship Weights</a></td>
   <td>Analysis Operations / Relationship Operations / Pipe Relationships</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Auto Vectors Fit (AVF)" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -506,10 +506,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Auto Vectors Fit (AVF)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Auto Vectors Fit (AVF)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-auto-vectors-fit-avf">Set Relationship Auto Vectors Fit (AVF)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Auto Vectors Group Default Prefix" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -524,10 +524,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Desired Meas Count" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Desired Meas Count" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-desired-meas-count">Set Relationship Desired Meas Count</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Dormant Status" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -536,10 +536,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Dormant Status" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Dormant Status" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-dormant-status">Set Relationship Dormant Status</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Fit Constraints (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -548,10 +548,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Fit Constraints (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Fit Constraints (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-fit-constraints-scalar-type">Set Relationship Fit Constraints (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Orientation Fit Constraints (Vector Type)" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -560,10 +560,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Orientation Fit Constraints (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Orientation Fit Constraints (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-orientation-fit-constraints-vector-type">Set Relationship Orientation Fit Constraints (Vector Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Outlier Rejection (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
@@ -572,10 +572,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — fixture or interactive validation required</td>
 </tr>
-<tr data-command="Set Relationship Outlier Rejection (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Outlier Rejection (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-outlier-rejection-scalar-type">Set Relationship Outlier Rejection (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Position Fit Constraints (Vector Type)" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -584,10 +584,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Position Fit Constraints (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Position Fit Constraints (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-position-fit-constraints-vector-type">Set Relationship Position Fit Constraints (Vector Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Projection Options" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -596,10 +596,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Projection Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Projection Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-projection-options">Set Relationship Projection Options</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Reporting Frame" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -608,10 +608,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Reporting Frame" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Reporting Frame" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-reporting-frame">Set Relationship Reporting Frame</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Sigmoidal Gap Fit Constraints" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -626,10 +626,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Sub Sampling Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Sub Sampling Options" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-sub-sampling-options">Set Relationship Sub Sampling Options</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Tolerance (Scalar Type)" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-status="current" data-validation="portable-contract-review">
@@ -638,10 +638,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Tolerance (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Tolerance (Scalar Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-tolerance-scalar-type">Set Relationship Tolerance (Scalar Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Tolerance (Vector Type)" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -650,10 +650,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Tolerance (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Tolerance (Vector Type)" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-tolerance-vector-type">Set Relationship Tolerance (Vector Type)</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Voxel Cloud Display" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -662,10 +662,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Voxel Cloud Display" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Voxel Cloud Display" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-voxel-cloud-display">Set Relationship Voxel Cloud Display</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Weighting" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -674,10 +674,10 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Weighting" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Weighting" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-weighting">Set Relationship Weighting</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Weights Normalized" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
@@ -686,37 +686,37 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Portable contract review</td>
 </tr>
-<tr data-command="Set Relationship Weights Normalized" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Weights Normalized" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-weights-normalized">Set Relationship Weights Normalized</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate Geometry Relationship Summary" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
   <td><a href="#generate-geometry-relationship-summary">Generate Geometry Relationship Summary</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
 </tr>
-<tr data-command="Generate Geometry Relationship Summary" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Generate Geometry Relationship Summary" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#generate-geometry-relationship-summary">Generate Geometry Relationship Summary</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Edit Geometry Relationship Point List" data-group="Relationship Operations" data-status="current" data-validation="at-risk-interactive-relationship-fixture">
   <td><a href="#edit-geometry-relationship-point-list">Edit Geometry Relationship Point List</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Interactive relationship fixture</td>
 </tr>
-<tr data-command="Edit Geometry Relationship Point List" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Edit Geometry Relationship Point List" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#edit-geometry-relationship-point-list">Edit Geometry Relationship Point List</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Filter Geometry Relationship Outlier Cloud Points" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture">
   <td><a href="#filter-geometry-relationship-outlier-cloud-points">Filter Geometry Relationship Outlier Cloud Points</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud relationship fixture</td>
 </tr>
-<tr data-command="Filter Geometry Relationship Outlier Cloud Points" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Filter Geometry Relationship Outlier Cloud Points" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#filter-geometry-relationship-outlier-cloud-points">Filter Geometry Relationship Outlier Cloud Points</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Number of Relationships in Relationship Ref List" data-group="Relationship Operations" data-status="excluded" data-validation="not-applicable">
@@ -758,273 +758,273 @@ still apply. Documentation-only identities retain their SDK limitations.
 <tr data-target="2026.1.0529.7" data-command="Relationship Watch Window Template" data-group="Relationship Operations" data-status="current" data-validation="at-risk-watch-window-relationship-fixture">
   <td><a href="#relationship-watch-window-template">Relationship Watch Window Template</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Watch-window relationship fixture</td>
 </tr>
-<tr data-command="Relationship Watch Window Template" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Relationship Watch Window Template" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#relationship-watch-window-template">Relationship Watch Window Template</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Point to Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
   <td><a href="#make-point-to-point-relationship">Make Point to Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
 </tr>
-<tr data-command="Make Point to Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Point to Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-point-to-point-relationship">Make Point to Point Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Frame to Frame Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
   <td><a href="#make-frame-to-frame-relationship">Make Frame to Frame Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
 </tr>
-<tr data-command="Make Frame to Frame Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Frame to Frame Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-frame-to-frame-relationship">Make Frame to Frame Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Points to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#make-points-to-objects-relationship">Make Points to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - points and objects fixture</td></tr>
-<tr data-command="Make Points to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Points to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-points-to-objects-relationship">Make Points to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Points to Points Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#make-points-to-points-relationship">Make Points to Points Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-points fixture</td></tr>
-<tr data-command="Make Points to Points Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Points to Points Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-points-to-points-relationship">Make Points to Points Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Groups to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-groups-objects-relationship-fixture"><td><a href="#make-groups-to-objects-relationship">Make Groups to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - groups and objects fixture</td></tr>
-<tr data-command="Make Groups to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Groups to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-groups-to-objects-relationship">Make Groups to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Object to Object Direction Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-object-to-object-direction-relationship">Make Object to Object Direction Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry fixture</td></tr>
-<tr data-command="Make Object to Object Direction Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Object to Object Direction Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-object-to-object-direction-relationship">Make Object to Object Direction Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Point Clouds to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#make-point-clouds-to-objects-relationship">Make Point Clouds to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud fixture</td></tr>
-<tr data-command="Make Point Clouds to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Point Clouds to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-point-clouds-to-objects-relationship">Make Point Clouds to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Group to Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-groups-relationship-fixture"><td><a href="#make-group-to-group-relationship">Make Group to Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-groups fixture</td></tr>
-<tr data-command="Make Group to Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Group to Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-group-to-group-relationship">Make Group to Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Group to Nominal Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#make-group-to-nominal-group-relationship">Make Group to Nominal Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal-group fixture</td></tr>
-<tr data-command="Make Group to Nominal Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Group to Nominal Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-group-to-nominal-group-relationship">Make Group to Nominal Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Average Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-average-point-relationship-fixture"><td><a href="#make-average-point-relationship">Make Average Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - average-point fixture</td></tr>
-<tr data-command="Make Average Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Average Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-average-point-relationship">Make Average Point Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Geometry Fit Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-only-relationship">Make Geometry Fit Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry-fit fixture</td></tr>
-<tr data-command="Make Geometry Fit Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Geometry Fit Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-fit-only-relationship">Make Geometry Fit Only Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-and-compare-to-nominal-relationship">Make Geometry Fit and Compare to Nominal Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry-fit fixture</td></tr>
-<tr data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-fit-and-compare-to-nominal-relationship">Make Geometry Fit and Compare to Nominal Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Geometry Compare Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-geometry-compare-only-relationship">Make Geometry Compare Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry fixture</td></tr>
-<tr data-command="Make Geometry Compare Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Geometry Compare Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-compare-only-relationship">Make Geometry Compare Only Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Dynamic Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-point-relationship">Make Dynamic Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
-<tr data-command="Make Dynamic Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Dynamic Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-point-relationship">Make Dynamic Point Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Dynamic Line Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-line-relationship">Make Dynamic Line Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
-<tr data-command="Make Dynamic Line Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Dynamic Line Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-line-relationship">Make Dynamic Line Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Dynamic Plane Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-plane-relationship">Make Dynamic Plane Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
-<tr data-command="Make Dynamic Plane Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Dynamic Plane Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-plane-relationship">Make Dynamic Plane Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Dynamic Circle Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-circle-relationship">Make Dynamic Circle Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
-<tr data-command="Make Dynamic Circle Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Dynamic Circle Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-circle-relationship">Make Dynamic Circle Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Dynamic Ellipse Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-ellipse-relationship">Make Dynamic Ellipse Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
-<tr data-command="Make Dynamic Ellipse Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Dynamic Ellipse Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-ellipse-relationship">Make Dynamic Ellipse Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Vector Group To Vector Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
-<tr data-command="Make Vector Group To Vector Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Make Vector Group To Vector Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
-<tr data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Weights" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
-<tr data-command="Set Vector Group To Vector Group Fit Weights" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Vector Group To Vector Group Fit Weights" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
-<tr data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
-<tr data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-destructive-relationship-fixture"><td><a href="#delete-relationship">Delete Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive Relationship fixture</td></tr>
-<tr data-command="Delete Relationship" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-relationship">Delete Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Optimization Search Options" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-search-options">Set Optimization Search Options</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
-<tr data-command="Set Optimization Search Options" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Optimization Search Options" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-optimization-search-options">Set Optimization Search Options</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Optimization Perturbation Parameters" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-perturbation-parameters">Set Optimization Perturbation Parameters</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
-<tr data-command="Set Optimization Perturbation Parameters" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Optimization Perturbation Parameters" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-optimization-perturbation-parameters">Set Optimization Perturbation Parameters</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Do Relationship Fit" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#do-relationship-fit">Do Relationship Fit</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
-<tr data-command="Do Relationship Fit" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Do Relationship Fit" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#do-relationship-fit">Do Relationship Fit</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Collections by Minimizing Relationships" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#move-collections-by-minimizing-relationships">Move Collections by Minimizing Relationships</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
-<tr data-command="Move Collections by Minimizing Relationships" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Move Collections by Minimizing Relationships" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-collections-by-minimizing-relationships">Move Collections by Minimizing Relationships</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get General Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-general-relationship-statistics">Get General Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
-<tr data-command="Get General Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get General Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-general-relationship-statistics">Get General Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Points to Objects Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#get-points-to-objects-relationship-statistics">Get Points to Objects Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - points and objects fixture</td></tr>
-<tr data-command="Get Points to Objects Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Points to Objects Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-points-to-objects-relationship-statistics">Get Points to Objects Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Start/Stop Relationship Trapping" data-group="Relationship Operations" data-status="current" data-validation="at-risk-instrument-relationship-fixture"><td><a href="#startstop-relationship-trapping">Start/Stop Relationship Trapping</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument and Relationship fixture</td></tr>
-<tr data-command="Start/Stop Relationship Trapping" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Start/Stop Relationship Trapping" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#startstop-relationship-trapping">Start/Stop Relationship Trapping</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Point to Point Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#get-point-to-point-relationship-statistics">Get Point to Point Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point Relationship fixture</td></tr>
-<tr data-command="Get Point to Point Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Point to Point Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-point-to-point-relationship-statistics">Get Point to Point Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Group To Nominal Group View Zooming" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#set-group-to-nominal-group-view-zooming">Set Group To Nominal Group View Zooming</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal-group Relationship fixture</td></tr>
-<tr data-command="Set Group To Nominal Group View Zooming" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Group To Nominal Group View Zooming" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-group-to-nominal-group-view-zooming">Set Group To Nominal Group View Zooming</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#set-relationship-associated-data">Set Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
-<tr data-command="Set Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-associated-data">Set Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-associated-data">Get Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
-<tr data-command="Get Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-associated-data">Get Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#set-points-to-points-relationship-associated-data">Set Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-Points Relationship fixture</td></tr>
-<tr data-command="Set Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-points-to-points-relationship-associated-data">Set Points to Points Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#get-points-to-points-relationship-associated-data">Get Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-Points Relationship fixture</td></tr>
-<tr data-command="Get Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-points-to-points-relationship-associated-data">Get Points to Points Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Auto Filter Proximity Settings" data-group="Relationship Operations" data-status="excluded" data-validation="not-applicable"><td><a href="#make-auto-filter-proximity-settings">Make Auto Filter Proximity Settings</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Not applicable</td></tr>
@@ -1035,68 +1035,68 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-3d">Auto Filter Clouds to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud and Relationship fixture</td></tr>
-<tr data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-clouds-to-nominal-geometry-3d">Auto Filter Clouds to Nominal Geometry 3D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-2d">Auto Filter Clouds to Nominal Geometry 2D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud and Relationship fixture</td></tr>
-<tr data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-clouds-to-nominal-geometry-2d">Auto Filter Clouds to Nominal Geometry 2D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#auto-filter-points-to-nominal-geometry-3d">Auto Filter Points to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point and Relationship fixture</td></tr>
-<tr data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-points-to-nominal-geometry-3d">Auto Filter Points to Nominal Geometry 3D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Relationship Operations" data-status="current" data-validation="at-risk-surface-filter-fixture"><td><a href="#auto-filter-pointsgroupsclouds-to-surface-faces">Auto Filter Points/Groups/Clouds to Surface Faces</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point, Group, Cloud, and Surface fixture</td></tr>
-<tr data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-pointsgroupsclouds-to-surface-faces">Auto Filter Points/Groups/Clouds to Surface Faces</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Extract Geometry From Point Clouds" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-geometry-extraction-fixture"><td><a href="#extract-geometry-from-point-clouds">Extract Geometry From Point Clouds</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud and geometry-extraction fixture</td></tr>
 <tr data-target="2026.1.0529.7" data-command="Create Points to Objects Map" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#create-points-to-objects-map">Create Points to Objects Map</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Points-to-objects map fixture</td></tr>
-<tr data-command="Create Points to Objects Map" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Create Points to Objects Map" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-points-to-objects-map">Create Points to Objects Map</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Objects From Points to Objects Map (Point List)" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#get-objects-from-points-to-objects-map-point-list">Get Objects From Points to Objects Map (Point List)</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Points-to-objects map fixture</td></tr>
-<tr data-command="Get Objects From Points to Objects Map (Point List)" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Objects From Points to Objects Map (Point List)" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-objects-from-points-to-objects-map-point-list">Get Objects From Points to Objects Map (Point List)</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Compute Geometry Relationship Uncertainties" data-group="Relationship Operations" data-status="current" data-validation="at-risk-uncertainty-relationship-fixture"><td><a href="#compute-geometry-relationship-uncertainties">Compute Geometry Relationship Uncertainties</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - uncertainty Relationship fixture</td></tr>
-<tr data-command="Compute Geometry Relationship Uncertainties" data-group="Analysis Operations / Relationship Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Compute Geometry Relationship Uncertainties" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#compute-geometry-relationship-uncertainties">Compute Geometry Relationship Uncertainties</a></td>
   <td>Analysis Operations / Relationship Operations</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Cloud to Swatch Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-swatch-relationship-fixture"><td><a href="#make-cloud-to-swatch-relationship">Make Cloud to Swatch Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud and Swatch Relationship fixture</td></tr>
 <tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Criteria Name List" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#get-geom-relationship-criteria-name-list">Get Geom Relationship Criteria Name List</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry Relationship fixture</td></tr>
-<tr data-command="Get Geom Relationship Criteria Name List" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Geom Relationship Criteria Name List" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-criteria-name-list">Get Geom Relationship Criteria Name List</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Status" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-status">Get Relationship Status</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
-<tr data-command="Get Relationship Status" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Relationship Status" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-status">Get Relationship Status</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -1110,17 +1110,19 @@ still apply. Documentation-only identities retain their SDK limitations.
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#enabledisable-relationships-for-optimization) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#enabledisable-relationships-for-optimization) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#enabledisable-relationships-for-optimization) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#enabledisable-relationships-for-optimization)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1160,17 +1162,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#geom-relationship-ignore-input-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#geom-relationship-ignore-input-points) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#geom-relationship-ignore-input-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#geom-relationship-ignore-input-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1212,17 +1216,19 @@ Executes the relationship command without the MP-only Outlier Rejection Options 
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#geom-relationship-reuse-ignored-input-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#geom-relationship-reuse-ignored-input-points) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#geom-relationship-reuse-ignored-input-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#geom-relationship-reuse-ignored-input-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1263,17 +1269,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-auto-vectors) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-auto-vectors) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-auto-vectors) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-auto-vectors)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1319,17 +1327,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-cardinal-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-cardinal-points) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-cardinal-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-cardinal-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1371,17 +1381,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1433,17 +1445,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-avg-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-avg-point) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-avg-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-avg-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1485,17 +1499,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-geometry) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-geometry) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-geometry) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-geometry)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1537,17 +1553,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-avg-point) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-avg-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-avg-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1589,17 +1607,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-geometry) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-geometry) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-geometry)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1641,17 +1661,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-point-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-point-list) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-point-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-point-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1695,17 +1717,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-projection-plane) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-projection-plane) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-projection-plane) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-projection-plane)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1747,17 +1771,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-cut-status) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-cut-status) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-cut-status) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-cut-status)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1802,17 +1828,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-properties) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-properties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1863,17 +1891,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-weights) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-weights) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-weights) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-weights)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1922,17 +1952,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-fit-constraints-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-fit-constraints-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-fit-constraints-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1978,17 +2010,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-outlier-rejection-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2034,17 +2068,19 @@ Retrieves the evidenced scalar settings without supplying the MP-only Outlier Re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-projection-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-projection-options) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-projection-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-projection-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2090,17 +2126,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-reporting-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-reporting-frame) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-reporting-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-reporting-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2184,17 +2222,19 @@ older installed topic title uses `Sigmoid`; the MP Editor and SDK step use
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-sub-sampling-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-sub-sampling-options) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-sub-sampling-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-sub-sampling-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2239,17 +2279,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2295,17 +2337,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-vector-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-vector-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-vector-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-vector-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2363,17 +2407,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2415,17 +2461,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-weighting) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-weighting) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-weighting) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-weighting)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2467,17 +2515,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-pipe-fitting-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-pipe-fitting-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-pipe-fitting-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-pipe-fitting-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2520,17 +2570,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-pipe-relationship-cut) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-pipe-relationship-cut) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-pipe-relationship-cut) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-pipe-relationship-cut)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2577,17 +2629,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#pipe-relationship-force-cut-to-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#pipe-relationship-force-cut-to-frame) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#pipe-relationship-force-cut-to-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#pipe-relationship-force-cut-to-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2705,17 +2759,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 signature has neither `Use Vector Group Custom Prefix?` nor `Vector Group Custom Prefix`. Retain the earlier automatic-vector settings.
 
@@ -2766,17 +2822,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-cardinal-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-cardinal-points) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-cardinal-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-cardinal-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2820,17 +2878,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-criteria) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-criteria) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-criteria) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-criteria)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2876,17 +2936,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-measured-geometry) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-measured-geometry) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-measured-geometry) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-measured-geometry)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2928,17 +2990,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-avg-point) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-avg-point) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-avg-point)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -2981,17 +3045,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-geometry) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-geometry) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-geometry)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3034,17 +3100,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-projection-plane) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-projection-plane) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-projection-plane) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-projection-plane)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3087,17 +3155,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3140,17 +3210,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">At risk object direction relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-tolerances)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3193,17 +3265,19 @@ bindings. Briosa preserves the two independent tolerance values.
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-segment-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-segment-properties) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-segment-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-segment-properties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3252,17 +3326,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Pipe Relationships" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Pipe Relationships</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-weights) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-weights) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-weights) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-weights)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3311,17 +3387,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-auto-vectors-fit-avf) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-auto-vectors-fit-avf) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-auto-vectors-fit-avf) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-auto-vectors-fit-avf)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 signature has neither `Use Vector Group Custom Prefix?` nor `Vector Group Custom Prefix`. Retain the earlier automatic-vector settings.
 
@@ -3405,17 +3483,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-desired-meas-count) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-desired-meas-count) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-desired-meas-count) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-desired-meas-count)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3457,17 +3537,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-dormant-status) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-dormant-status) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-dormant-status) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-dormant-status)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3507,17 +3589,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-fit-constraints-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-fit-constraints-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-fit-constraints-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3559,17 +3643,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3611,17 +3697,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-outlier-rejection-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3663,17 +3751,19 @@ Executes without exposing the MP-only Outlier Rejection Options input, so caller
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-position-fit-constraints-vector-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3715,17 +3805,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-projection-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-projection-options) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-projection-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-projection-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3767,17 +3859,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-reporting-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-reporting-frame) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-reporting-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-reporting-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3853,17 +3947,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-sub-sampling-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-sub-sampling-options) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-sub-sampling-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-sub-sampling-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3908,17 +4004,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-scalar-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-scalar-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-scalar-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -3960,17 +4058,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-vector-type) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-vector-type) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-vector-type) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-vector-type)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4012,17 +4112,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-voxel-cloud-display) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-voxel-cloud-display) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-voxel-cloud-display) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-voxel-cloud-display)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4070,17 +4172,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-weighting) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-weighting) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-weighting) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-weighting)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4122,17 +4226,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-weights-normalized) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-weights-normalized) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-weights-normalized) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-weights-normalized)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4171,17 +4277,19 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#generate-geometry-relationship-summary) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#generate-geometry-relationship-summary) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#generate-geometry-relationship-summary) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#generate-geometry-relationship-summary)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4208,17 +4316,19 @@ Builds an SA geometry-relationship summary table for the supplied Relationships.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk interactive relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#edit-geometry-relationship-point-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#edit-geometry-relationship-point-list) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#edit-geometry-relationship-point-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#edit-geometry-relationship-point-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4251,17 +4361,19 @@ that Briosa should expose one mode input.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk cloud relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#filter-geometry-relationship-outlier-cloud-points)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4450,17 +4562,19 @@ Use the client language's collection sorting tools instead.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk watch window relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#relationship-watch-window-template) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#relationship-watch-window-template) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#relationship-watch-window-template) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#relationship-watch-window-template)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4505,17 +4619,19 @@ broadcast enabled, an empty IP address, and port `10000`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-point-to-point-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-point-to-point-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-point-to-point-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-point-to-point-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4549,17 +4665,19 @@ limits enabled at zero, with both magnitude limits disabled.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-frame-to-frame-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-frame-to-frame-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-frame-to-frame-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-frame-to-frame-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4592,17 +4710,19 @@ and vector position tolerance default to every limit disabled at zero.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk points objects relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-points-to-objects-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-points-to-objects-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-points-to-objects-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-points-to-objects-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4635,17 +4755,19 @@ retain the lists or preflight their compatibility.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk paired points relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-points-to-points-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-points-to-points-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-points-to-points-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-points-to-points-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4681,17 +4803,19 @@ to X, Y, and Z limits enabled at zero and magnitude limits disabled.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk groups objects relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-groups-to-objects-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-groups-to-objects-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-groups-to-objects-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-groups-to-objects-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4725,17 +4849,19 @@ Group auto-update defaults to `false`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk geometry relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-object-to-object-direction-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-object-to-object-direction-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-object-to-object-direction-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-object-to-object-direction-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4767,17 +4893,19 @@ defaults to `0`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk cloud relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-point-clouds-to-objects-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-point-clouds-to-objects-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-point-clouds-to-objects-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-point-clouds-to-objects-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4811,17 +4939,19 @@ variants.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk paired groups relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-group-to-group-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-group-to-group-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-group-to-group-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-group-to-group-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4855,17 +4985,19 @@ auto-update, tolerance, and constraint defaults as the Points-to-Points form.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk nominal group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-group-to-nominal-group-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-group-to-nominal-group-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-group-to-nominal-group-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-group-to-nominal-group-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4908,17 +5040,19 @@ the paired-Point Relationship.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk average point relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-average-point-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-average-point-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-average-point-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-average-point-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4950,17 +5084,19 @@ Nominal Point identities are independently optional.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk geometry fit relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-only-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-only-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-only-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-only-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -4994,17 +5130,19 @@ success when only some supplied Point Groups can be used.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk geometry fit relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5038,17 +5176,19 @@ MP success remains distinct from complete success or failure.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk geometry relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-compare-only-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-geometry-compare-only-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-geometry-compare-only-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-geometry-compare-only-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5079,17 +5219,19 @@ without fitting either object.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-point-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-dynamic-point-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-dynamic-point-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-dynamic-point-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5124,17 +5266,19 @@ selected construction mode needs three geometries.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-line-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-dynamic-line-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-dynamic-line-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-dynamic-line-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5167,17 +5311,19 @@ two-plane intersection.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-plane-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-dynamic-plane-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-dynamic-plane-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-dynamic-plane-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5212,17 +5358,19 @@ enum value and maps it to the exact SDK literal internally.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-circle-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-dynamic-circle-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-dynamic-circle-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-dynamic-circle-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5255,17 +5403,19 @@ intersection.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-ellipse-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-dynamic-ellipse-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-dynamic-ellipse-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-dynamic-ellipse-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5297,17 +5447,19 @@ intersection. Cylinder/Plane is the default.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk vector group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-vector-group-to-vector-group-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#make-vector-group-to-vector-group-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#make-vector-group-to-vector-group-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#make-vector-group-to-vector-group-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5339,17 +5491,19 @@ defaults to `true`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk vector group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5381,17 +5535,19 @@ Sets radial, minimum axial, and maximum axial offsets. Exact defaults are `1`,
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk vector group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-weights)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5426,17 +5582,19 @@ are gaps `0`, minimum and maximum weights `10`, and nominal weight `1`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk vector group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5465,17 +5623,19 @@ Sets the fit-weight transition gradient factor, which defaults to `50`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk vector group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-relative-polarity)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5505,17 +5665,19 @@ passing `false` selects same-direction analysis.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk destructive relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#delete-relationship) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#delete-relationship) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#delete-relationship) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#delete-relationship)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5544,17 +5706,19 @@ destructive behavior and adds no confirmation or preflight safeguard.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fit fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-optimization-search-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-optimization-search-options) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-optimization-search-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-optimization-search-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5581,17 +5745,19 @@ The exact default is `5`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fit fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-optimization-perturbation-parameters) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-optimization-perturbation-parameters) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-optimization-perturbation-parameters) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-optimization-perturbation-parameters)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5621,17 +5787,19 @@ not cache them.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fit fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#do-relationship-fit) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#do-relationship-fit) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#do-relationship-fit) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#do-relationship-fit)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 signature has no `Enable Randomized Start` input. Retain the fit operation without the later randomized-start control.
 
@@ -5670,17 +5838,19 @@ working and world Transforms with scale, and objective value.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fit fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#move-collections-by-minimizing-relationships) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#move-collections-by-minimizing-relationships) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#move-collections-by-minimizing-relationships) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#move-collections-by-minimizing-relationships)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5713,17 +5883,19 @@ off, and uses the exact SA 2026.1 convergence-threshold default of `0`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-general-relationship-statistics) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-general-relationship-statistics) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-general-relationship-statistics) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-general-relationship-statistics)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 output label is `Max Deviation`, while 2026 uses `Absolute Max Deviation`. Preserve the 2024 label and binding. This review does not infer an absolute-value guarantee from the later label.
 
@@ -5757,17 +5929,19 @@ the signed maximum and minimum deviations.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk points objects relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-points-to-objects-relationship-statistics) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-points-to-objects-relationship-statistics) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-points-to-objects-relationship-statistics) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-points-to-objects-relationship-statistics)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 outputs do not include `Avg Deviation`. Retain the captured statistics without computing a substitute for the later output.
 
@@ -5807,17 +5981,19 @@ does not expose it.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk instrument relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#startstop-relationship-trapping) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#startstop-relationship-trapping) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#startstop-relationship-trapping) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#startstop-relationship-trapping)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5848,17 +6024,19 @@ is `false`, which stops trapping.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk point relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-point-to-point-relationship-statistics) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-point-to-point-relationship-statistics) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-point-to-point-relationship-statistics) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-point-to-point-relationship-statistics)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5892,17 +6070,19 @@ Frame.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk nominal group relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-group-to-nominal-group-view-zooming) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-group-to-nominal-group-view-zooming) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-group-to-nominal-group-view-zooming) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-group-to-nominal-group-view-zooming)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5936,17 +6116,19 @@ Group Relationship. Briosa does not retain these settings outside SA.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-associated-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-relationship-associated-data) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-relationship-associated-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-relationship-associated-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -5981,17 +6163,19 @@ changed. Briosa forwards the supplied lists and does not retain a copy.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-associated-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-associated-data) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-associated-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-associated-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6025,17 +6209,19 @@ Clouds, and other associated objects.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk paired points relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#set-points-to-points-relationship-associated-data) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#set-points-to-points-relationship-associated-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#set-points-to-points-relationship-associated-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6068,17 +6254,19 @@ Relationship. Each list is optional, `Ignore Empty Arguments?` defaults to
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk paired points relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-points-to-points-relationship-associated-data) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-points-to-points-relationship-associated-data) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-points-to-points-relationship-associated-data)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6157,17 +6345,19 @@ same fields and defaults for use with the selected auto-filter operations.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk cloud relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 signature has no `Use Feature Specific Filter Settings?` input. Retain the earlier filtering controls.
 
@@ -6199,17 +6389,19 @@ settings default to disabled.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk cloud relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The 2024 signature has no `Use Feature Specific Filter Settings?` input. Retain the earlier filtering controls.
 
@@ -6242,17 +6434,19 @@ default of `false`.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk point relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#auto-filter-points-to-nominal-geometry-3d)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6281,17 +6475,19 @@ proximity settings. Briosa adds no Relationship or Point preflight.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk surface filter fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6362,17 +6558,19 @@ the contract follows the complete exact SA 2026.1 SDK binding.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk points objects map fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#create-points-to-objects-map) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#create-points-to-objects-map) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#create-points-to-objects-map) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#create-points-to-objects-map)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6404,17 +6602,19 @@ does not retain, recreate, or otherwise manage the named map.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk points objects map fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-objects-from-points-to-objects-map-point-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6444,17 +6644,19 @@ exact SA 2026.1 MP identity and Point Name Ref List SDK binding.
   <span className="catalog-target-group">Relationship Operations</span>
   <span className="catalog-target-validation">At risk uncertainty relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#compute-geometry-relationship-uncertainties) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#compute-geometry-relationship-uncertainties) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#compute-geometry-relationship-uncertainties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#compute-geometry-relationship-uncertainties)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6505,17 +6707,19 @@ an implementation, so licensed validation requires a dedicated Swatch fixture.
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At risk geometry relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria-name-list) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria-name-list) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria-name-list) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria-name-list)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -6547,17 +6751,19 @@ complete result as a String Ref List.
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At risk relationship fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / Relationship Operations / Relationship Attributes</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-status) · [.NET](/api/dotnet/sa-2024.1.0508.5/relationship-operations#get-relationship-status) · [Python](/api/python/sa-2024.1.0508.5/relationship-operations#get-relationship-status) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/relationship-operations#get-relationship-status)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains separately qualified below.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 

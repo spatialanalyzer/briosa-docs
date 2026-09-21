@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Delete Event
 
-[Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/event-operations#delete-event)
+[Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/0.5.1/event-operations#delete-event)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Export Event Ref List
 
-[Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/event-operations#export-event-ref-list)
+[Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#export-event-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get i-th Event From Event Ref List
 
-[Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-i-th-event-from-event-ref-list)
+[Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#get-i-th-event-from-event-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -94,7 +94,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Get Number of Events in Event Ref List
 
-[Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-number-of-events-in-event-ref-list)
+[Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#get-number-of-events-in-event-ref-list)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -119,7 +119,7 @@ in-flight SA work stopped and never causes automatic replay.
 
 ## Rename Event
 
-[Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/event-operations#rename-event)
+[Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/0.5.1/event-operations#rename-event)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

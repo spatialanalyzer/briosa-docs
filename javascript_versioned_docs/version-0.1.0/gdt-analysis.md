@@ -290,7 +290,7 @@ const reporting = await getFeatureCheckReportingOptions(briosa, {featureCheck});
 ```
 
 Set defaults match the MP Editor and are listed in the
-[gRPC contract](/api/grpc/gdt-analysis). The exact getter returns seven
+[gRPC contract](/api/grpc/0.5.1/gdt-analysis). The exact getter returns seven
 `GdtOptions` properties; `distanceBetweenMode` and `evaluationMethod` are
 absent. `getGdtExtendedOptions` intentionally returns only the enable state.
 
@@ -305,4 +305,4 @@ Boolean options.
 Briosa does not maintain trapping or alignment workflow state, add movement
 safeguards, or automatically replay uncertain mutation or evaluation calls.
 
-[Catalog](/mp-command-catalog/commands/gdt-analysis) · [gRPC](/api/grpc/gdt-analysis)
+[Catalog](/mp-command-catalog/commands/gdt-analysis) · [gRPC](/api/grpc/0.5.1/gdt-analysis)

@@ -125,7 +125,7 @@ new Crawler({
       const apiSection = apiMatch && apiMatch[1];
       const versionLabel = text($('.theme-doc-version-badge').text());
       const section = apiSection
-        ? `${sections[apiSection]}${versionLabel ? ` · ${versionLabel}` : ''}`
+        ? `${sections[apiSection]}${versionLabel ? ` · ${versionLabel}` : ''} · SA ${path.includes('/sa-2024.1.0508.5') ? '2024.1.0508.5' : '2026.1.0529.7'}`
         : path === '/install' ? 'Install'
         : path.startsWith('/mp-command-catalog') ? 'MP Catalog'
         : path === '/api' ? 'API Reference'

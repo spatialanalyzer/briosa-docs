@@ -48,4 +48,4 @@ The operator selects CAD faces in SpatialAnalyzer. Escape is represented by the
 MP failure result. A deadline or cancellation does not prove the interaction
 stopped.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [.NET](/api/dotnet/construction-operations-spheres) · [Python](/api/python/construction-operations-spheres) · [JavaScript and TypeScript](/api/javascript/construction-operations-spheres)
+[Catalog](/mp-command-catalog/commands/construction-operations-spheres) · [.NET](/api/dotnet/0.1.0/construction-operations-spheres) · [Python](/api/python/0.1.0/construction-operations-spheres) · [JavaScript and TypeScript](/api/javascript/0.1.0/construction-operations-spheres)

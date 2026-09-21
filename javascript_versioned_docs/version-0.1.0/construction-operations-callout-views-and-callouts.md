@@ -72,7 +72,7 @@ function createVectorCallout(
 ): Promise<void>;
 ```
 
-Defaults follow the [catalog entry](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) and [gRPC contract](/api/grpc/construction-operations-callout-views-and-callouts#create-vector-callout).
+Defaults follow the [catalog entry](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) and [gRPC contract](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-vector-callout).
 
 ## Create Min/Max Vector Group Callout
 
@@ -108,7 +108,7 @@ function createMinMaxVectorGroupCallout(
 ): Promise<void>;
 ```
 
-The two vector counts default to 1. Other defaults follow the [gRPC contract](/api/grpc/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout).
+The two vector counts default to 1. Other defaults follow the [gRPC contract](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout).
 
 ## Create Point Callout
 
@@ -141,7 +141,7 @@ function createPointCallout(
 ): Promise<void>;
 ```
 
-The coordinate system defaults to Cartesian; other defaults follow the [gRPC contract](/api/grpc/construction-operations-callout-views-and-callouts#create-point-callout).
+The coordinate system defaults to Cartesian; other defaults follow the [gRPC contract](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-point-callout).
 
 ## Create Point Comparison Callout
 
@@ -178,7 +178,7 @@ function createPointComparisonCallout(
 ): Promise<void>;
 ```
 
-Defaults follow the [gRPC contract](/api/grpc/construction-operations-callout-views-and-callouts#create-point-comparison-callout).
+Defaults follow the [gRPC contract](/api/grpc/0.5.1/construction-operations-callout-views-and-callouts#create-point-comparison-callout).
 
 ## Create Relationship Callout
 

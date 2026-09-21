@@ -195,7 +195,7 @@ class WrtlChannelStatus:
 
 ## get_last_instrument_index
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/instrument-operations#get-last-instrument-index)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-instrument-index)
 
 ```python
 async def get_last_instrument_index(self) -> LastInstrumentIndexResult: ...
@@ -208,7 +208,7 @@ structured `instrument` identity.
 
 ## rename_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/instrument-operations#rename-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#rename-instrument)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -227,7 +227,7 @@ await briosa.instrument_operations.rename_instrument(instrument, "Tracker 1")
 
 ## get_instrument_id_from_name
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-id-from-name)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-id-from-name)
 
 ```python
 async def get_instrument_id_from_name(
@@ -240,7 +240,7 @@ instrument = await briosa.instrument_operations.get_instrument_id_from_name("Tra
 
 ## get_instrument_model
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-model)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-model)
 
 ```python
 async def get_instrument_model(
@@ -255,7 +255,7 @@ Returns the MP `Name` and `Model` strings.
 
 ## move_instrument_to_another_collection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/instrument-operations#move-instrument-to-another-collection)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-instrument-to-another-collection)
 
 ```python
 async def move_instrument_to_another_collection(
@@ -272,7 +272,7 @@ await briosa.instrument_operations.move_instrument_to_another_collection(
 
 ## save_instrument_configuration
 
-[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#save-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#save-instrument-configuration)
 
 ```python
 async def save_instrument_configuration(
@@ -289,7 +289,7 @@ await briosa.instrument_operations.save_instrument_configuration(
 
 ## load_instrument_configuration
 
-[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/instrument-operations#load-instrument-configuration)
+[MP command](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#load-instrument-configuration)
 
 ```python
 async def load_instrument_configuration(
@@ -306,7 +306,7 @@ await briosa.instrument_operations.load_instrument_configuration(
 
 ## export_instrument_history_to_xml_file
 
-[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/instrument-operations#export-instrument-history-to-xml-file)
+[MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#export-instrument-history-to-xml-file)
 
 ```python
 async def export_instrument_history_to_xml_file(
@@ -327,7 +327,7 @@ tools remain caller controls; the client does not replay uncertain work.
 
 ## point_at_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/instrument-operations#point-at-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#point-at-target)
 
 ```python
 async def point_at_target(
@@ -343,7 +343,7 @@ await briosa.instrument_operations.point_at_target(instrument, target)
 
 ## measure_single_point_here
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/instrument-operations#measure-single-point-here)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-single-point-here)
 
 ```python
 async def measure_single_point_here(
@@ -360,7 +360,7 @@ await briosa.instrument_operations.measure_single_point_here(instrument, target)
 
 ## get_current_instrument_position_update
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/instrument-operations#get-current-instrument-position-update)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-instrument-position-update)
 
 ```python
 async def get_current_instrument_position_update(
@@ -382,7 +382,7 @@ it.
 
 ## build_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/instrument-operations#build-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#build-target)
 
 ```python
 async def build_target(
@@ -407,7 +407,7 @@ check disabled at zero.
 
 ## measure_existing_single_point
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point)
 
 ```python
 async def measure_existing_single_point(
@@ -429,7 +429,7 @@ point = await briosa.instrument_operations.measure_existing_single_point(
 
 ## measure_existing_single_point_manual_guide
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-manual-guide)
 
 ```python
 async def measure_existing_single_point_manual_guide(
@@ -451,7 +451,7 @@ point = await briosa.instrument_operations.measure_existing_single_point_manual_
 
 ## measure_existing_single_point_and_compare
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-and-compare)
 
 ```python
 async def measure_existing_single_point_and_compare(
@@ -477,7 +477,7 @@ the resulting point identity.
 
 ## set_probe_offset_frame_online
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
 
 ```python
 async def set_probe_offset_frame_online(
@@ -500,7 +500,7 @@ await briosa.instrument_operations.set_probe_offset_frame_online(
 
 ## set_probe_offset_frame_offline
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
 
 ```python
 async def set_probe_offset_frame_offline(
@@ -523,7 +523,7 @@ await briosa.instrument_operations.set_probe_offset_frame_offline(
 
 ## stop_active_measurement_mode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/instrument-operations#stop-active-measurement-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-active-measurement-mode)
 
 ```python
 async def stop_active_measurement_mode(
@@ -540,7 +540,7 @@ physical or SA work stopped, and no uncertain operation is replayed.
 
 ## enable_disable_frame_set_scan_mode_all_instruments
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
 
 ```python
 async def enable_disable_frame_set_scan_mode_all_instruments(
@@ -554,7 +554,7 @@ await briosa.instrument_operations.enable_disable_frame_set_scan_mode_all_instru
 
 ## enable_disable_frame_set_scan_mode_by_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
 
 ```python
 async def enable_disable_frame_set_scan_mode_by_instrument(
@@ -571,7 +571,7 @@ await briosa.instrument_operations.enable_disable_frame_set_scan_mode_by_instrum
 
 ## enable_disable_point_set_scan_mode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/instrument-operations#enabledisable-point-set-scan-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-point-set-scan-mode)
 
 ```python
 async def enable_disable_point_set_scan_mode(
@@ -586,7 +586,7 @@ await briosa.instrument_operations.enable_disable_point_set_scan_mode(instrument
 
 ## add_new_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/instrument-operations#add-new-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-new-instrument)
 
 ```python
 async def add_new_instrument(
@@ -604,7 +604,7 @@ performed.
 
 ## delete_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/instrument-operations#delete-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-instrument)
 
 ```python
 async def delete_instrument(
@@ -622,7 +622,7 @@ The no-prompt default intentionally differs from the MP Editor default.
 
 ## delete_measurements
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/instrument-operations#delete-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurements)
 
 ```python
 async def delete_measurements(
@@ -638,7 +638,7 @@ await briosa.instrument_operations.delete_measurements(instrument, point)
 
 ## delete_measurement_observation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#delete-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurement-observation)
 
 ```python
 async def delete_measurement_observation(
@@ -654,7 +654,7 @@ await briosa.instrument_operations.delete_measurement_observation(point)
 
 ## move_measurement_observation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/instrument-operations#move-measurement-observation)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-measurement-observation)
 
 ```python
 async def move_measurement_observation(
@@ -679,7 +679,7 @@ mutation to be replayed.
 
 ## initiate_servo_guide
 
-[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/instrument-operations#initiate-servo-guide)
+[MP command](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#initiate-servo-guide)
 
 ```python
 async def initiate_servo_guide(
@@ -703,7 +703,7 @@ suffixes and tolerance for the selected servo instrument.
 
 ## start_theodolite_interface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/instrument-operations#start-theodolite-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-theodolite-interface)
 
 ```python
 async def start_theodolite_interface(
@@ -728,7 +728,7 @@ Briosa server address.
 
 ## start_instrument_interface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#start-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-instrument-interface)
 
 ```python
 async def start_instrument_interface(
@@ -750,7 +750,7 @@ Boolean options all default to `False`, preserving the reviewed MP defaults.
 
 ## stop_instrument_interface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#stop-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-instrument-interface)
 
 ```python
 async def stop_instrument_interface(
@@ -763,7 +763,7 @@ await briosa.instrument_operations.stop_instrument_interface(instrument)
 
 ## activate_deactivate_instrument_toolbar
 
-[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/instrument-operations#activatedeactivate-instrument-toolbar)
+[MP command](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#activatedeactivate-instrument-toolbar)
 
 ```python
 async def activate_deactivate_instrument_toolbar(
@@ -783,7 +783,7 @@ deactivate it.
 
 ## verify_instrument_connection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/instrument-operations#verify-instrument-connection)
+[MP command](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#verify-instrument-connection)
 
 ```python
 async def verify_instrument_connection(
@@ -801,7 +801,7 @@ Briosa's SA SDK connection state.
 
 ## configure_and_measure
 
-[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/instrument-operations#configure-and-measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#configure-and-measure)
 
 ```python
 async def configure_and_measure(
@@ -828,7 +828,7 @@ it does not remove the call deadline or Briosa worker watchdog.
 
 ## measure
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/instrument-operations#measure)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure)
 
 ```python
 async def measure(
@@ -844,7 +844,7 @@ validate a parallel measurement-state model.
 
 ## set_xyz_reference_frame_instrument_base_anchor_frame
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
 
 ```python
 async def set_xyz_reference_frame_instrument_base_anchor_frame(
@@ -863,7 +863,7 @@ await briosa.instrument_operations.set_xyz_reference_frame_instrument_base_ancho
 
 ## dock_instrument_interface
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/instrument-operations#dock-instrument-interface)
+[MP command](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dock-instrument-interface)
 
 ```python
 async def dock_instrument_interface(
@@ -885,7 +885,7 @@ whose completion is unknown.
 
 ## locate_instrument_ref_tie_in
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-ref-tie-in)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-ref-tie-in)
 
 ```python
 async def locate_instrument_ref_tie_in(
@@ -910,7 +910,7 @@ automatic measurement workflow and its intermediate state.
 
 ## locate_instrument_group_to_surface_quick_fit
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-group-to-surface-quick-fit)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
 ```python
 async def locate_instrument_group_to_surface_quick_fit(
@@ -938,7 +938,7 @@ Surface.
 
 ## multi_measurement_initiate
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-initiate)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-initiate)
 
 ```python
 async def multi_measurement_initiate(
@@ -959,7 +959,7 @@ await briosa.instrument_operations.multi_measurement_initiate(
 
 ## multi_measurement_stop
 
-[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/instrument-operations#multi-measurement-stop)
+[MP command](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#multi-measurement-stop)
 
 ```python
 async def multi_measurement_stop(
@@ -975,7 +975,7 @@ initiation call.
 
 ## align_laser_projector
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/instrument-operations#align-laser-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-laser-projector)
 
 ```python
 async def align_laser_projector(
@@ -991,7 +991,7 @@ await briosa.instrument_operations.align_laser_projector(instrument, group)
 
 ## locate_instruments_usmn
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/instrument-operations#locate-instruments-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instruments-usmn)
 
 ```python
 async def locate_instruments_usmn(
@@ -1024,7 +1024,7 @@ to `NO`.
 
 ## create_templated_instrument_usmn
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/instrument-operations#create-templated-instrument-usmn)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-templated-instrument-usmn)
 
 ```python
 async def create_templated_instrument_usmn(
@@ -1060,7 +1060,7 @@ and are never automatically replayed after an unknown outcome.
 
 ## locate_instrument_best_fit_group_to_group
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---group-to-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---group-to-group)
 
 ```python
 async def locate_instrument_best_fit_group_to_group(
@@ -1094,7 +1094,7 @@ report omitted by default.
 
 ## locate_instrument_best_fit_nominal_geometry
 
-[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/instrument-operations#locate-instrument-best-fit---nominal-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#locate-instrument-best-fit---nominal-geometry)
 
 ```python
 async def locate_instrument_best_fit_nominal_geometry(
@@ -1128,7 +1128,7 @@ fields match the group-to-group operation.
 
 ## get_instrument_transform
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-transform)
 
 ```python
 async def get_instrument_transform(
@@ -1147,7 +1147,7 @@ transform = await briosa.instrument_operations.get_instrument_transform(
 
 ## set_instrument_transform
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-transform)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-transform)
 
 ```python
 async def set_instrument_transform(
@@ -1170,7 +1170,7 @@ Animation steps default to `0`.
 
 ## get_tracker_edm_theodolite_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-trackeredm-theodolite-uncertainties)
 
 ```python
 async def get_tracker_edm_theodolite_uncertainties(
@@ -1188,7 +1188,7 @@ linear thresholds use current SA job units.
 
 ## set_tracker_edm_theodolite_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-trackeredm-theodolite-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-trackeredm-theodolite-uncertainties)
 
 ```python
 async def set_tracker_edm_theodolite_uncertainties(
@@ -1212,7 +1212,7 @@ The server preserves the spacing differences in the exact exported phi labels.
 
 ## get_pcmm_instrument_xyz_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
 
 ```python
 async def get_pcmm_instrument_xyz_uncertainties(
@@ -1227,7 +1227,7 @@ uncertainties = await briosa.instrument_operations.get_pcmm_instrument_xyz_uncer
 
 ## set_pcmm_instrument_xyz_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
 
 ```python
 async def set_pcmm_instrument_xyz_uncertainties(
@@ -1248,7 +1248,7 @@ The server binds `y_uncertainty` to the exported `Y Uncertainty)` label.
 
 ## get_xyz_instrument_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#get-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-xyz-instrument-uncertainties)
 
 ```python
 async def get_xyz_instrument_uncertainties(
@@ -1263,7 +1263,7 @@ uncertainties = await briosa.instrument_operations.get_xyz_instrument_uncertaint
 
 ## set_xyz_instrument_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#set-xyz-instrument-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-instrument-uncertainties)
 
 ```python
 async def set_xyz_instrument_uncertainties(
@@ -1284,7 +1284,7 @@ unknown outcome.
 
 ## get_instrument_weather_setting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-weather-setting)
 
 ```python
 async def get_instrument_weather_setting(
@@ -1302,7 +1302,7 @@ reports whether the values were set automatically.
 
 ## set_instrument_weather_setting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-weather-setting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-weather-setting)
 
 ```python
 async def set_instrument_weather_setting(
@@ -1327,7 +1327,7 @@ When `set_automatically` is true, SA ignores all three numeric values.
 
 ## get_instrument_part_temperature
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-part-temperature)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-part-temperature)
 
 ```python
 async def get_instrument_part_temperature(
@@ -1344,7 +1344,7 @@ The returned temperature is in degrees Fahrenheit.
 
 ## compute_cte_scale_factor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#compute-cte-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#compute-cte-scale-factor)
 
 ```python
 async def compute_cte_scale_factor(
@@ -1367,7 +1367,7 @@ operation.
 
 ## set_multiply_instrument_scale_factor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-multiply-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-multiply-instrument-scale-factor-caution)
 
 ```python
 async def set_multiply_instrument_scale_factor(
@@ -1392,7 +1392,7 @@ default is `0.0`, and Briosa adds no confirmation or range check.
 
 ## set_absolute_instrument_scale_factor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/instrument-operations#set-absolute-instrument-scale-factor-caution)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
 ```python
 async def set_absolute_instrument_scale_factor(
@@ -1417,7 +1417,7 @@ This replaces the current scale; it does not multiply it. The MP default is
 
 ## get_instrument_scale_factor
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-scale-factor)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-scale-factor)
 
 ```python
 async def get_instrument_scale_factor(
@@ -1432,7 +1432,7 @@ scale_factor = await briosa.instrument_operations.get_instrument_scale_factor(
 
 ## transform_instrument_frame_to_frame
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument---frame-to-frame)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument---frame-to-frame)
 
 ```python
 async def transform_instrument_frame_to_frame(
@@ -1455,7 +1455,7 @@ Both object identities must be existing SA Frames.
 
 ## transform_instrument_by_delta
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-instrument-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument-by-delta)
 
 ```python
 async def transform_instrument_by_delta(
@@ -1474,7 +1474,7 @@ await briosa.instrument_operations.transform_instrument_by_delta(
 
 ## transform_multiple_instruments_by_delta
 
-[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/instrument-operations#transform-multiple-instruments-by-delta)
+[MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-multiple-instruments-by-delta)
 
 ```python
 async def transform_multiple_instruments_by_delta(
@@ -1497,7 +1497,7 @@ never automatically replays an unknown outcome.
 
 ## instrument_operational_check
 
-[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/instrument-operations#instrument-operational-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#instrument-operational-check)
 
 ```python
 async def instrument_operational_check(
@@ -1517,7 +1517,7 @@ instrument-interface-specific command string.
 
 ## get_number_of_observations_on_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-number-of-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-number-of-observations-on-target)
 
 ```python
 async def get_number_of_observations_on_target(
@@ -1532,7 +1532,7 @@ observation_count = (
 
 ## get_instruments_with_observations_on_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/instrument-operations#get-instruments-with-observations-on-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instruments-with-observations-on-target)
 
 ```python
 async def get_instruments_with_observations_on_target(
@@ -1549,7 +1549,7 @@ The result preserves SA's order.
 
 ## get_targets_measured_by_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-targets-measured-by-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-targets-measured-by-instrument)
 
 ```python
 async def get_targets_measured_by_instrument(
@@ -1564,7 +1564,7 @@ targets = await briosa.instrument_operations.get_targets_measured_by_instrument(
 
 ## set_observation_status
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/instrument-operations#set-observation-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-status)
 
 ```python
 async def set_observation_status(
@@ -1586,7 +1586,7 @@ Observation indexes are zero-based. The defaults match the MP command.
 
 ## get_observation_info
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/instrument-operations#get-observation-info)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-observation-info)
 
 ```python
 async def get_observation_info(
@@ -1609,7 +1609,7 @@ parse `timestamp` and `info_data`. SA uses `0` for unavailable RMS error and
 
 ## fabricate_observations
 
-[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/instrument-operations#fabricate-observations)
+[MP command](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#fabricate-observations)
 
 ```python
 async def fabricate_observations(
@@ -1635,7 +1635,7 @@ adds no preflight, transaction, or rollback.
 
 ## get_obscured_points_from_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#get-obscured-points-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-obscured-points-from-instrument)
 
 ```python
 async def get_obscured_points_from_instrument(
@@ -1656,7 +1656,7 @@ The result preserves SA's order. Shot-line display defaults to disabled.
 
 ## get_instrument_targets_and_mode_profiles
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targets-and-modeprofiles)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targets-and-modeprofiles)
 
 ```python
 async def get_instrument_targets_and_mode_profiles(
@@ -1674,7 +1674,7 @@ uses the exact SA 2026.1 `Instrument to get` binding and does not zip them.
 
 ## set_instrument_measurement_mode_profile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-measurement-modeprofile)
 
 ```python
 async def set_instrument_measurement_mode_profile(
@@ -1695,7 +1695,7 @@ an unknown outcome.
 
 ## set_instrument_group_and_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-group-and-target)
 
 ```python
 async def set_instrument_group_and_target(
@@ -1715,7 +1715,7 @@ may ignore the target portion; Briosa does not retain the setting.
 
 ## set_instrument_targeting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-targeting)
 
 ```python
 async def set_instrument_targeting(
@@ -1732,7 +1732,7 @@ await briosa.instrument_operations.set_instrument_targeting(
 
 ## get_instrument_measurement_mode_profile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-measurement-modeprofile)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-measurement-modeprofile)
 
 ```python
 async def get_instrument_measurement_mode_profile(
@@ -1750,7 +1750,7 @@ This returns the active value, not the available lists returned by
 
 ## get_instrument_group_and_target
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-group-and-target)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-group-and-target)
 
 ```python
 async def get_instrument_group_and_target(
@@ -1765,7 +1765,7 @@ point = await briosa.instrument_operations.get_instrument_group_and_target(
 
 ## get_instrument_targeting
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-targeting)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targeting)
 
 ```python
 async def get_instrument_targeting(
@@ -1780,7 +1780,7 @@ targeting_name = await briosa.instrument_operations.get_instrument_targeting(
 
 ## set_target_computation_options
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/instrument-operations#set-target-computation-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-target-computation-options)
 
 ```python
 async def set_target_computation_options(
@@ -1799,7 +1799,7 @@ lease, or otherwise manage the option.
 
 ## set_observation_mirror_cube_shot_face
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/instrument-operations#set-observation-mirror-cube-shot-face)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-mirror-cube-shot-face)
 
 ```python
 async def set_observation_mirror_cube_shot_face(
@@ -1823,7 +1823,7 @@ SA documents faces 1 through 6; Briosa adds no range check.
 
 ## set_observation_collimation_shot_options
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/instrument-operations#set-observation-collimation-shot-options)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-observation-collimation-shot-options)
 
 ```python
 async def set_observation_collimation_shot_options(
@@ -1848,7 +1848,7 @@ the exact malformed SDK argument label internally.
 
 ## collimation
 
-[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/instrument-operations#collimation)
+[MP command](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#collimation)
 
 ```python
 async def collimation(
@@ -1880,7 +1880,7 @@ values to SA as empty MP identities and adds no preflight workflow validation.
 
 ## get_instrument_target_status
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-target-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-target-status)
 
 ```python
 async def get_instrument_target_status(
@@ -1899,7 +1899,7 @@ an unknown outcome.
 
 ## make_surface_face_list_from_point_proximity
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-surface-face-list-from-point-proximity)
 
 ```python
 async def make_surface_face_list_from_point_proximity(
@@ -1917,7 +1917,7 @@ operations.
 
 ## scan_within_perimeter
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/instrument-operations#scan-within-perimeter)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-within-perimeter)
 
 ```python
 async def scan_within_perimeter(
@@ -1944,7 +1944,7 @@ The exclusion list is part of the exact SA 2026.1 contract.
 
 ## edit_scan_perimeter_profile
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/instrument-operations#edit-scan-perimeter-profile)
+[MP command](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edit-scan-perimeter-profile)
 
 ```python
 async def edit_scan_perimeter_profile(
@@ -1962,7 +1962,7 @@ async def edit_scan_perimeter_profile(
 
 ## get_estimated_scan_time
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/instrument-operations#get-estimated-scan-time)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-estimated-scan-time)
 
 ```python
 async def get_estimated_scan_time(
@@ -1981,7 +1981,7 @@ This is SA's raw value; the available documentation does not identify its unit.
 
 ## construct_perimeters_from_surface_face_list
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-perimeters-from-surface-face-list)
 
 ```python
 async def construct_perimeters_from_surface_face_list(
@@ -1999,7 +1999,7 @@ lists separately.
 
 ## scan_cad_faces
 
-[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/instrument-operations#scan-cad-faces)
+[MP command](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#scan-cad-faces)
 
 ```python
 async def scan_cad_faces(
@@ -2021,7 +2021,7 @@ await briosa.instrument_operations.scan_cad_faces(
 
 ## edge_scan_measurement
 
-[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/instrument-operations#edge-scan-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#edge-scan-measurement)
 
 ```python
 async def edge_scan_measurement(
@@ -2037,7 +2037,7 @@ async def edge_scan_measurement(
 
 ## track_tape_measurement
 
-[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/instrument-operations#track-tape-measurement)
+[MP command](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#track-tape-measurement)
 
 ```python
 async def track_tape_measurement(
@@ -2055,7 +2055,7 @@ async def track_tape_measurement(
 
 ## auto_measure_points
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-points)
 
 ```python
 async def auto_measure_points(
@@ -2083,7 +2083,7 @@ level to suppress it.
 
 ## auto_measure_vectors
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-vectors)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-vectors)
 
 ```python
 async def auto_measure_vectors(
@@ -2110,7 +2110,7 @@ behavior.
 
 ## auto_measure_surface_vector_intersections
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-surface-vector-intersections)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-surface-vector-intersections)
 
 ```python
 async def auto_measure_surface_vector_intersections(
@@ -2125,7 +2125,7 @@ async def auto_measure_surface_vector_intersections(
 
 ## auto_measure_specified_geometry
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-specified-geometry)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-specified-geometry)
 
 ```python
 async def auto_measure_specified_geometry(
@@ -2140,7 +2140,7 @@ async def auto_measure_specified_geometry(
 
 ## auto_measure_batch_of_features
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/instrument-operations#auto-measure-batch-of-features)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-measure-batch-of-features)
 
 ```python
 async def auto_measure_batch_of_features(
@@ -2156,7 +2156,7 @@ async def auto_measure_batch_of_features(
 
 ## auto_correspond_closest_point
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-closest-point)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-closest-point)
 
 ```python
 async def auto_correspond_closest_point(
@@ -2179,7 +2179,7 @@ When waiting is false, SA may continue measuring after the coroutine returns.
 
 ## close_auto_correspond_closest_point_dialog
 
-[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
+[MP command](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#close-auto-correspond-closest-point-dialog)
 
 ```python
 async def close_auto_correspond_closest_point_dialog(
@@ -2196,7 +2196,7 @@ The caller does not need to have started the running workflow.
 
 ## auto_correspond_with_proximity_trigger
 
-[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/instrument-operations#auto-correspond-with-proximity-trigger)
+[MP command](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#auto-correspond-with-proximity-trigger)
 
 ```python
 async def auto_correspond_with_proximity_trigger(
@@ -2220,7 +2220,7 @@ The nominal group may identify a Point Group or Vector Group.
 
 ## construct_mirror_from_plane
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-plane)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-plane)
 
 ```python
 async def construct_mirror_from_plane(
@@ -2233,7 +2233,7 @@ async def construct_mirror_from_plane(
 
 ## construct_mirror_from_two_points
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/instrument-operations#construct-mirror-from-two-points)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-mirror-from-two-points)
 
 ```python
 async def construct_mirror_from_two_points(
@@ -2249,7 +2249,7 @@ async def construct_mirror_from_two_points(
 
 ## drift_check
 
-[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/instrument-operations#drift-check)
+[MP command](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#drift-check)
 
 ```python
 async def drift_check(
@@ -2276,7 +2276,7 @@ suppress this dialog.
 
 ## measure_nominal_feature
 
-[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/instrument-operations#measure-nominal-feature)
+[MP command](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-nominal-feature)
 
 ```python
 async def measure_nominal_feature(
@@ -2292,7 +2292,7 @@ automatically replayed after an unknown outcome.
 
 ## guide_objects_in_6d_based_on_point_measurements
 
-[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
+[MP command](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
 
 ```python
 async def guide_objects_in_6d_based_on_point_measurements(
@@ -2310,7 +2310,7 @@ async def guide_objects_in_6d_based_on_point_measurements(
 
 ## move_objects_in_6d_using_instrument_updates
 
-[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/instrument-operations#move-objects-in-6d-using-instrument-updates)
+[MP command](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#move-objects-in-6d-using-instrument-updates)
 
 ```python
 async def move_objects_in_6d_using_instrument_updates(
@@ -2323,7 +2323,7 @@ async def move_objects_in_6d_using_instrument_updates(
 
 ## align_two_targets_with_axis_wcf_x
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/instrument-operations#align-two-targets-with-axis-wcf---x)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-two-targets-with-axis-wcf---x)
 
 ```python
 async def align_two_targets_with_axis_wcf_x(
@@ -2339,7 +2339,7 @@ async def align_two_targets_with_axis_wcf_x(
 
 ## get_instrument_interface_response_timeout
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-interface-response-timeout)
 
 ```python
 async def get_instrument_interface_response_timeout(
@@ -2352,7 +2352,7 @@ The result is expressed in seconds.
 
 ## set_instrument_interface_response_timeout
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-interface-response-timeout)
 
 ```python
 async def set_instrument_interface_response_timeout(
@@ -2364,7 +2364,7 @@ async def set_instrument_interface_response_timeout(
 
 ## get_current_trapping_status
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/instrument-operations#get-current-trapping-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-current-trapping-status)
 
 ```python
 async def get_current_trapping_status(self) -> CurrentTrappingStatus: ...
@@ -2376,7 +2376,7 @@ status = await briosa.instrument_operations.get_current_trapping_status()
 
 ## wait_for_trapping_to_complete
 
-[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
+[MP command](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#wait-for-trapping-to-complete)
 
 ```python
 async def wait_for_trapping_to_complete(self) -> None: ...
@@ -2389,7 +2389,7 @@ stopped.
 
 ## jump_instrument_to_new_location
 
-[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/instrument-operations#jump-instrument-to-new-location)
+[MP command](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#jump-instrument-to-new-location)
 
 ```python
 async def jump_instrument_to_new_location(
@@ -2402,7 +2402,7 @@ async def jump_instrument_to_new_location(
 
 ## quick_align
 
-[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/instrument-operations#quick-align)
+[MP command](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#quick-align)
 
 ```python
 async def quick_align(
@@ -2421,7 +2421,7 @@ leaves length validation to SA.
 
 ## align_cloud_to_cad
 
-[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/instrument-operations#align-cloud-to-cad)
+[MP command](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#align-cloud-to-cad)
 
 ```python
 async def align_cloud_to_cad(
@@ -2440,7 +2440,7 @@ returned Working-frame transform is not applied.
 
 ## start_gdt_inspection_design
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-design)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-design)
 
 ```python
 async def start_gdt_inspection_design(
@@ -2455,7 +2455,7 @@ The filter maps directly to `ALL`, `CHECKS`, or `DATUMS`.
 
 ## start_gdt_inspection_rehearse
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection-rehearse)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection-rehearse)
 
 ```python
 async def start_gdt_inspection_rehearse(
@@ -2468,7 +2468,7 @@ async def start_gdt_inspection_rehearse(
 
 ## start_gdt_inspection
 
-[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/instrument-operations#start-gdt-inspection)
+[MP command](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#start-gdt-inspection)
 
 ```python
 async def start_gdt_inspection(
@@ -2482,7 +2482,7 @@ async def start_gdt_inspection(
 
 ## get_inspection_verification_mode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-inspection-verification-mode)
 
 ```python
 async def get_inspection_verification_mode(self) -> bool: ...
@@ -2490,7 +2490,7 @@ async def get_inspection_verification_mode(self) -> bool: ...
 
 ## set_inspection_verification_mode
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/instrument-operations#set-inspection-verification-mode)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-inspection-verification-mode)
 
 ```python
 async def set_inspection_verification_mode(
@@ -2504,7 +2504,7 @@ This modifies application-global SA state; Briosa does not restore it.
 
 ## set_remeasure_failed_checks_only
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/instrument-operations#set-remeasure-failed-checks-only)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-remeasure-failed-checks-only)
 
 ```python
 async def set_remeasure_failed_checks_only(
@@ -2518,7 +2518,7 @@ trapping. It adds no confirmation or rollback.
 
 ## associate_objects_with_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/instrument-operations#associate-objects-with-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#associate-objects-with-instrument)
 
 ```python
 async def associate_objects_with_instrument(
@@ -2530,7 +2530,7 @@ async def associate_objects_with_instrument(
 
 ## disassociate_objects_from_instrument
 
-[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/instrument-operations#disassociate-objects-from-instrument)
+[MP command](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#disassociate-objects-from-instrument)
 
 ```python
 async def disassociate_objects_from_instrument(
@@ -2543,7 +2543,7 @@ The exact 2026.1 binding intentionally has no instrument parameter.
 
 ## make_collection_object_name_ref_list_from_objects_associated_with_instruments
 
-[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
+[MP command](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
 ```python
 async def make_collection_object_name_ref_list_from_objects_associated_with_instruments(
@@ -2556,7 +2556,7 @@ This queries live SA association state and preserves the returned order.
 
 ## combine_point_groups
 
-[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/instrument-operations#combine-point-groups)
+[MP command](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#combine-point-groups)
 
 ```python
 async def combine_point_groups(
@@ -2568,7 +2568,7 @@ async def combine_point_groups(
 
 ## dissect_point_group
 
-[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/instrument-operations#dissect-point-group)
+[MP command](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#dissect-point-group)
 
 ```python
 async def dissect_point_group(
@@ -2580,7 +2580,7 @@ async def dissect_point_group(
 
 ## synchronized_measurement_master_slave
 
-[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/instrument-operations#synchronized-measurement-masterslave)
+[MP command](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#synchronized-measurement-masterslave)
 
 ```python
 async def synchronized_measurement_master_slave(
@@ -2600,7 +2600,7 @@ measurement.
 
 ## create_new_dynamic_reference
 
-[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/instrument-operations#create-new-dynamic-reference)
+[MP command](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#create-new-dynamic-reference)
 
 ```python
 async def create_new_dynamic_reference(
@@ -2615,7 +2615,7 @@ SA documents this operation for AICON/Hexagon MoveInspect systems.
 
 ## calculate_tcp_fixture_uncertainties
 
-[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/instrument-operations#calculate-tcp-fixture-uncertainties)
+[MP command](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#calculate-tcp-fixture-uncertainties)
 
 ```python
 async def calculate_tcp_fixture_uncertainties(
@@ -2631,7 +2631,7 @@ async def calculate_tcp_fixture_uncertainties(
 
 ## construct_tcp_fixture
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#construct-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-tcp-fixture)
 
 ```python
 async def construct_tcp_fixture(
@@ -2645,7 +2645,7 @@ async def construct_tcp_fixture(
 
 ## add_nominal_point_to_tcp_fixture
 
-[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/instrument-operations#add-nominal-point-to-tcp-fixture)
+[MP command](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-nominal-point-to-tcp-fixture)
 
 ```python
 async def add_nominal_point_to_tcp_fixture(
@@ -2665,7 +2665,7 @@ async def add_nominal_point_to_tcp_fixture(
 
 ## get_last_solved_tcp_fixture_uncertainty_covariance_matrix
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
 
 ```python
 async def get_last_solved_tcp_fixture_uncertainty_covariance_matrix(
@@ -2676,7 +2676,7 @@ async def get_last_solved_tcp_fixture_uncertainty_covariance_matrix(
 
 ## set_instrument_base_uncertainty_covariance_matrix_wrt_base
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
 ```python
 async def set_instrument_base_uncertainty_covariance_matrix_wrt_base(
@@ -2688,7 +2688,7 @@ async def set_instrument_base_uncertainty_covariance_matrix_wrt_base(
 
 ## set_instrument_base_uncertainty_covariance_matrix_wrt_world
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```python
 async def set_instrument_base_uncertainty_covariance_matrix_wrt_world(
@@ -2703,7 +2703,7 @@ matrix shape.
 
 ## get_instrument_base_uncertainty_covariance_matrix_wrt_world
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
 ```python
 async def get_instrument_base_uncertainty_covariance_matrix_wrt_world(
@@ -2717,7 +2717,7 @@ or uncertainty state and are never automatically replayed.
 
 ## construct_measured_point_uncertainty_ellipsoids
 
-[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
+[MP command](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
 
 ```python
 async def construct_measured_point_uncertainty_ellipsoids(
@@ -2728,7 +2728,7 @@ async def construct_measured_point_uncertainty_ellipsoids(
 
 ## get_wrtl_channel_and_status
 
-[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/instrument-operations#get-wrtl-channel-and-status)
+[MP command](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-wrtl-channel-and-status)
 
 ```python
 async def get_wrtl_channel_and_status(
@@ -2739,7 +2739,7 @@ async def get_wrtl_channel_and_status(
 
 ## set_wrtl_channel
 
-[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/instrument-operations#set-wrtl-channel)
+[MP command](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-wrtl-channel)
 
 ```python
 async def set_wrtl_channel(

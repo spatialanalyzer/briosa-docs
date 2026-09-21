@@ -27,4 +27,4 @@ async def construct_ellipsoid(
 Values are passed through without client-side geometry validation. The client
 never automatically replays this operation.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-ellipsoids#construct-ellipsoid) · [gRPC](/api/grpc/construction-operations-ellipsoids#construct-ellipsoid)
+[Catalog](/mp-command-catalog/commands/construction-operations-ellipsoids#construct-ellipsoid) · [gRPC](/api/grpc/0.5.1/construction-operations-ellipsoids#construct-ellipsoid)

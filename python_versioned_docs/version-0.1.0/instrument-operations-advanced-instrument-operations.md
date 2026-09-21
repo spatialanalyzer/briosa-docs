@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## issue_instrument_actuator_command
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command)
 
 ```python
 async def issue_instrument_actuator_command(
@@ -20,7 +20,7 @@ async def issue_instrument_actuator_command(
 
 ## set_instrument_axes
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-instrument-axes)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-instrument-axes)
 
 ```python
 async def set_instrument_axes(
@@ -37,7 +37,7 @@ validation.
 
 ## set_alignment_projector
 
-[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/instrument-operations-advanced-instrument-operations#set-alignment-projector)
+[MP command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-advanced-instrument-operations#set-alignment-projector)
 
 ```python
 async def set_alignment_projector(

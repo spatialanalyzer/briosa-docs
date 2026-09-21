@@ -1,0 +1,270 @@
+{
+  "pythonSidebar": [
+    "overview",
+    "installation-selection",
+    "value-types",
+    {
+      "type": "category",
+      "label": "SA 2024.1.0508.5",
+      "items": [
+        "sa-2024.1.0508.5/overview",
+        "sa-2024.1.0508.5/installation-selection",
+        "sa-2024.1.0508.5/value-types",
+        {
+          "type": "category",
+          "label": "Lifecycle",
+          "items": [
+            "sa-2024.1.0508.5/lifecycle",
+            "sa-2024.1.0508.5/start",
+            {
+              "type": "category",
+              "label": "SpatialAnalyzer Application",
+              "items": [
+                "sa-2024.1.0508.5/get-spatial-analyzer-state",
+                "sa-2024.1.0508.5/launch-spatial-analyzer",
+                "sa-2024.1.0508.5/close-owned-spatial-analyzer"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "SpatialAnalyzer SDK",
+              "items": [
+                "sa-2024.1.0508.5/get-spatial-analyzer-sdk-state",
+                "sa-2024.1.0508.5/start-spatial-analyzer-sdk",
+                "sa-2024.1.0508.5/connect-to-spatial-analyzer",
+                "sa-2024.1.0508.5/reconnect-to-spatial-analyzer",
+                "sa-2024.1.0508.5/stop-spatial-analyzer-sdk",
+                "sa-2024.1.0508.5/recover-spatial-analyzer-sdk"
+              ]
+            },
+            "sa-2024.1.0508.5/stop",
+            "sa-2024.1.0508.5/asynchronous-context-management"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "File Operations",
+          "items": [
+            "sa-2024.1.0508.5/get-working-directory"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "MP Commands",
+          "collapsed": true,
+          "items": [
+            "sa-2024.1.0508.5/analysis-operations",
+            "sa-2024.1.0508.5/dimension-operations",
+            "sa-2024.1.0508.5/event-operations",
+            "sa-2024.1.0508.5/file-operations",
+            "sa-2024.1.0508.5/mp-subroutines",
+            "sa-2024.1.0508.5/mp-task-overview",
+            "sa-2024.1.0508.5/process-flow-operations",
+            "sa-2024.1.0508.5/relationship-operations",
+            "sa-2024.1.0508.5/reporting-operations",
+            "sa-2024.1.0508.5/scale-bar-operations",
+            "sa-2024.1.0508.5/utility-operations",
+            "sa-2024.1.0508.5/variables",
+            "sa-2024.1.0508.5/vector-operations",
+            "sa-2024.1.0508.5/view-control",
+            "sa-2024.1.0508.5/cloud-and-mesh-operations",
+            {
+              "type": "category",
+              "label": "Construction Operations",
+              "link": {
+                "type": "doc",
+                "id": "sa-2024.1.0508.5/construction-operations"
+              },
+              "items": [
+                "sa-2024.1.0508.5/construction-operations-bsplines",
+                "sa-2024.1.0508.5/construction-operations-callout-views-and-callouts",
+                "sa-2024.1.0508.5/construction-operations-circles",
+                "sa-2024.1.0508.5/construction-operations-collections",
+                "sa-2024.1.0508.5/construction-operations-cones",
+                "sa-2024.1.0508.5/construction-operations-cylinders",
+                "sa-2024.1.0508.5/construction-operations-ellipses",
+                "sa-2024.1.0508.5/construction-operations-ellipsoids",
+                "sa-2024.1.0508.5/construction-operations-folders",
+                "sa-2024.1.0508.5/construction-operations-frames",
+                "sa-2024.1.0508.5/construction-operations-lines",
+                "sa-2024.1.0508.5/construction-operations-other-mp-types",
+                "sa-2024.1.0508.5/construction-operations-perimeters",
+                "sa-2024.1.0508.5/construction-operations-planes",
+                "sa-2024.1.0508.5/construction-operations-point-clouds",
+                "sa-2024.1.0508.5/construction-operations-points-and-groups",
+                "sa-2024.1.0508.5/construction-operations-polygonized-surfaces",
+                "sa-2024.1.0508.5/construction-operations-scale-bars",
+                "sa-2024.1.0508.5/construction-operations-spheres",
+                "sa-2024.1.0508.5/construction-operations-surfaces",
+                "sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "GDT Operations",
+              "items": [
+                "sa-2024.1.0508.5/gdt-analysis",
+                "sa-2024.1.0508.5/gdt-construction"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Instrument Operations",
+              "link": {
+                "type": "doc",
+                "id": "sa-2024.1.0508.5/instrument-operations"
+              },
+              "items": [
+                "sa-2024.1.0508.5/instrument-operations-advanced-instrument-operations",
+                "sa-2024.1.0508.5/instrument-operations-api-ladar",
+                "sa-2024.1.0508.5/instrument-operations-crib-sheet-operations",
+                "sa-2024.1.0508.5/instrument-operations-laser-projection",
+                {
+                  "type": "category",
+                  "label": "Nikon Metrology Laser Radars LR",
+                  "link": {
+                    "type": "doc",
+                    "id": "sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr"
+                  },
+                  "items": [
+                    "sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations"
+                  ]
+                },
+                "sa-2024.1.0508.5/instrument-operations-watch-window-operations"
+              ]
+            },
+            "sa-2024.1.0508.5/robot-calibration-appliance-node-operations",
+            "sa-2024.1.0508.5/robot-operations"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Lifecycle",
+      "items": [
+        "lifecycle",
+        "start",
+        {
+          "type": "category",
+          "label": "SpatialAnalyzer Application",
+          "items": [
+            "get-spatial-analyzer-state",
+            "launch-spatial-analyzer",
+            "close-owned-spatial-analyzer"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "SpatialAnalyzer SDK",
+          "items": [
+            "get-spatial-analyzer-sdk-state",
+            "start-spatial-analyzer-sdk",
+            "connect-to-spatial-analyzer",
+            "reconnect-to-spatial-analyzer",
+            "stop-spatial-analyzer-sdk",
+            "recover-spatial-analyzer-sdk"
+          ]
+        },
+        "stop",
+        "asynchronous-context-management"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "File Operations",
+      "items": [
+        "get-working-directory"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "MP Commands",
+      "collapsed": true,
+      "items": [
+        "analysis-operations",
+        "dimension-operations",
+        "event-operations",
+        "file-operations",
+        "mp-subroutines",
+        "mp-task-overview",
+        "process-flow-operations",
+        "relationship-operations",
+        "reporting-operations",
+        "scale-bar-operations",
+        "utility-operations",
+        "variables",
+        "vector-operations",
+        "view-control",
+        "cloud-and-mesh-operations",
+        {
+          "type": "category",
+          "label": "Construction Operations",
+          "link": {
+            "type": "doc",
+            "id": "construction-operations"
+          },
+          "items": [
+            "construction-operations-bsplines",
+            "construction-operations-callout-views-and-callouts",
+            "construction-operations-circles",
+            "construction-operations-collections",
+            "construction-operations-cones",
+            "construction-operations-cylinders",
+            "construction-operations-ellipses",
+            "construction-operations-ellipsoids",
+            "construction-operations-folders",
+            "construction-operations-frames",
+            "construction-operations-lines",
+            "construction-operations-other-mp-types",
+            "construction-operations-perimeters",
+            "construction-operations-planes",
+            "construction-operations-point-clouds",
+            "construction-operations-points-and-groups",
+            "construction-operations-polygonized-surfaces",
+            "construction-operations-scale-bars",
+            "construction-operations-spheres",
+            "construction-operations-surfaces",
+            "construction-operations-vectors-and-vector-groups"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "GDT Operations",
+          "items": [
+            "gdt-analysis",
+            "gdt-construction"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Instrument Operations",
+          "link": {
+            "type": "doc",
+            "id": "instrument-operations"
+          },
+          "items": [
+            "instrument-operations-advanced-instrument-operations",
+            "instrument-operations-api-ladar",
+            "instrument-operations-crib-sheet-operations",
+            "instrument-operations-laser-projection",
+            {
+              "type": "category",
+              "label": "Nikon Metrology Laser Radars LR",
+              "link": {
+                "type": "doc",
+                "id": "instrument-operations-nikon-metrology-laser-radars-lr"
+              },
+              "items": [
+                "instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations"
+              ]
+            },
+            "instrument-operations-watch-window-operations"
+          ]
+        },
+        "robot-calibration-appliance-node-operations",
+        "robot-operations"
+      ]
+    }
+  ]
+}

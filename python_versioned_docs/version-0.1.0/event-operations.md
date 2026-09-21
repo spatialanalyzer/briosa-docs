@@ -11,7 +11,7 @@ keyword-only, and generated gRPC request or result objects never escape.
 
 ## Delete Event
 
-[Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/event-operations#delete-event)
+[Delete Event](/mp-command-catalog/commands/event-operations#delete-event) · [gRPC contract](/api/grpc/0.5.1/event-operations#delete-event)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Export Event Ref List
 
-[Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/event-operations#export-event-ref-list)
+[Export Event Ref List](/mp-command-catalog/commands/event-operations#export-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#export-event-ref-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get i-th Event From Event Ref List
 
-[Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-i-th-event-from-event-ref-list)
+[Get i-th Event From Event Ref List](/mp-command-catalog/commands/event-operations#get-i-th-event-from-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#get-i-th-event-from-event-ref-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -99,7 +99,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Get Number of Events in Event Ref List
 
-[Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/event-operations#get-number-of-events-in-event-ref-list)
+[Get Number of Events in Event Ref List](/mp-command-catalog/commands/event-operations#get-number-of-events-in-event-ref-list) · [gRPC contract](/api/grpc/0.5.1/event-operations#get-number-of-events-in-event-ref-list)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -125,7 +125,7 @@ caller controls; the client does not replay uncertain work.
 
 ## Rename Event
 
-[Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/event-operations#rename-event)
+[Rename Event](/mp-command-catalog/commands/event-operations#rename-event) · [gRPC contract](/api/grpc/0.5.1/event-operations#rename-event)
 
 | Parameter | Python Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

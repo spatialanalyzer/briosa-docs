@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## SetLadarAutoMeasPointAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-point)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-point)
 
 ```csharp
 public Task SetLadarAutoMeasPointAsync(
@@ -21,7 +21,7 @@ The exact MP default is `0` despite the MP label documenting `1–2000`.
 
 ## SetLadarAutoMeasSphereAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
 ```csharp
 public Task SetLadarAutoMeasSphereAsync(
@@ -36,7 +36,7 @@ public Task SetLadarAutoMeasSphereAsync(
 
 ## SetLadarFeatureMeasSphereAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
 
 ```csharp
 public Task SetLadarFeatureMeasSphereAsync(
@@ -47,7 +47,7 @@ public Task SetLadarFeatureMeasSphereAsync(
 
 ## SetLadarFeatureMeasCircleAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
 ```csharp
 public Task SetLadarFeatureMeasCircleAsync(
@@ -59,7 +59,7 @@ public Task SetLadarFeatureMeasCircleAsync(
 
 ## SetLadarFeatureMeasSlotAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
 
 ```csharp
 public Task SetLadarFeatureMeasSlotAsync(
@@ -71,7 +71,7 @@ public Task SetLadarFeatureMeasSlotAsync(
 
 ## SetLadarFeatureMeasCylinderAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
 
 ```csharp
 public Task SetLadarFeatureMeasCylinderAsync(

@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## clear_cloud_viewer
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer)
 
 ```python
 async def clear_cloud_viewer(
@@ -19,7 +19,7 @@ async def clear_cloud_viewer(
 
 ## send_cloud_to_sa
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa)
 
 ```python
 async def send_cloud_to_sa(
@@ -33,7 +33,7 @@ All visible viewer points are added to the active SA collection.
 
 ## set_cloud_viewer_filter
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter)
 
 ```python
 async def set_cloud_viewer_filter(
@@ -48,7 +48,7 @@ SA describes a `0–100` quality scale; Briosa adds no range validation.
 
 ## save_cloud_viewer_point_cloud_file
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file)
 
 ```python
 async def save_cloud_viewer_point_cloud_file(
@@ -62,7 +62,7 @@ async def save_cloud_viewer_point_cloud_file(
 
 ## load_cloud_viewer_point_cloud_file
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file)
 
 ```python
 async def load_cloud_viewer_point_cloud_file(

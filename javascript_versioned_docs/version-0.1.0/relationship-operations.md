@@ -61,7 +61,7 @@ background, and visible units.
 
 ## Generate Geometry Relationship Summary
 
-[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
+[MP command](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#generate-geometry-relationship-summary)
 
 ```ts
 export interface GenerateGeometryRelationshipSummaryInput {
@@ -80,7 +80,7 @@ function generateGeometryRelationshipSummary(
 
 ## Edit Geometry Relationship Point List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#edit-geometry-relationship-point-list)
 
 ```ts
 export interface EditGeometryRelationshipPointListInput {
@@ -100,7 +100,7 @@ the client call does not prove that the interaction stopped.
 
 ## Filter Geometry Relationship Outlier Cloud Points
 
-[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+[MP command](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
 
 ```ts
 export interface FilterGeometryRelationshipOutlierCloudPointsInput {
@@ -121,7 +121,7 @@ result preserves all ten exact MP outputs.
 
 ## Relationship Watch Window Template
 
-[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/relationship-operations#relationship-watch-window-template)
+[MP command](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#relationship-watch-window-template)
 
 ```ts
 export interface RelationshipWatchWindowTemplateInput {
@@ -141,7 +141,7 @@ the `Relationship Template` collection.
 
 ## Make Point to Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-to-point-relationship)
 
 ```ts
 export interface MakePointToPointRelationshipInput {
@@ -164,7 +164,7 @@ defaults. Briosa adds no point or constraint preflight.
 
 ## Make Frame to Frame Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-frame-to-frame-relationship)
 
 ```ts
 export interface MakeFrameToFrameRelationshipInput {
@@ -188,7 +188,7 @@ work.
 
 ## Enable/Disable Relationships for Optimization
 
-[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
+[Enable/Disable Relationships for Optimization](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#enabledisable-relationships-for-optimization)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -265,7 +265,7 @@ to SA's exact misspelled SDK literal internally.
 
 ## Make Points to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-objects-relationship)
 
 ```ts
 export interface MakePointsToObjectsRelationshipInput {
@@ -287,7 +287,7 @@ controls disabled; auto-update defaults to `false`.
 
 ## Make Points to Points Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-points-to-points-relationship)
 
 ```ts
 export interface MakePointsToPointsRelationshipInput {
@@ -309,7 +309,7 @@ Omitted tolerance and constraint values use their distinct exact MP defaults.
 
 ## Make Groups to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-groups-to-objects-relationship)
 
 ```ts
 export interface MakeGroupsToObjectsRelationshipInput {
@@ -328,7 +328,7 @@ function makeGroupsToObjectsRelationship(
 
 ## Make Object to Object Direction Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-object-to-object-direction-relationship)
 
 ```ts
 export interface MakeObjectToObjectDirectionRelationshipInput {
@@ -348,7 +348,7 @@ function makeObjectToObjectDirectionRelationship(
 
 ## Make Point Clouds to Objects Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-point-clouds-to-objects-relationship)
 
 ```ts
 export interface MakePointCloudsToObjectsRelationshipInput {
@@ -367,7 +367,7 @@ function makePointCloudsToObjectsRelationship(
 
 ## Make Group to Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-group-relationship)
 
 ```ts
 export interface MakeGroupToGroupRelationshipInput {
@@ -387,7 +387,7 @@ function makeGroupToGroupRelationship(
 
 ## Make Group to Nominal Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-group-to-nominal-group-relationship)
 
 ```ts
 export interface MakeGroupToNominalGroupRelationshipInput {
@@ -417,7 +417,7 @@ three display and threshold controls `false`, threshold `0.01`, and fit weight
 
 ## Make Average Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-average-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-average-point-relationship)
 
 ```ts
 export interface MakeAveragePointRelationshipInput {
@@ -435,7 +435,7 @@ function makeAveragePointRelationship(
 
 ## Make Geometry Fit Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-only-relationship)
 
 ```ts
 export interface MakeGeometryFitOnlyRelationshipInput {
@@ -454,7 +454,7 @@ function makeGeometryFitOnlyRelationship(
 
 ## Make Geometry Fit and Compare to Nominal Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
 
 ```ts
 export interface MakeGeometryFitAndCompareToNominalRelationshipInput {
@@ -534,7 +534,7 @@ export interface PointToPointRelationshipStatistics {
 
 ## Make Geometry Compare Only Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-geometry-compare-only-relationship)
 
 ```ts
 export interface MakeGeometryCompareOnlyRelationshipInput {
@@ -551,7 +551,7 @@ function makeGeometryCompareOnlyRelationship(
 
 ## Make Dynamic Point Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-point-relationship)
 
 ```ts
 export interface MakeDynamicPointRelationshipInput {
@@ -573,7 +573,7 @@ unless the selected construction mode needs it.
 
 ## Make Dynamic Line Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-line-relationship)
 
 ```ts
 export interface MakeDynamicLineRelationshipInput {
@@ -593,7 +593,7 @@ The mode defaults to `"Intersection of Two Planes"`.
 
 ## Make Dynamic Plane Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-plane-relationship)
 
 ```ts
 export interface MakeDynamicPlaneRelationshipInput {
@@ -614,7 +614,7 @@ The mode defaults to `"Bisect Two Planes"` and the offset defaults to `0`.
 
 ## Make Dynamic Circle Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-circle-relationship)
 
 ```ts
 export interface MakeDynamicCircleRelationshipInput {
@@ -632,7 +632,7 @@ function makeDynamicCircleRelationship(
 
 ## Make Dynamic Ellipse Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-dynamic-ellipse-relationship)
 
 ```ts
 export interface MakeDynamicEllipseRelationshipInput {
@@ -650,7 +650,7 @@ function makeDynamicEllipseRelationship(
 
 ## Make Vector Group To Vector Group Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-vector-group-to-vector-group-relationship)
 
 ```ts
 export interface MakeVectorGroupToVectorGroupRelationshipInput {
@@ -670,7 +670,7 @@ Opposing polarity defaults to `true`.
 
 ## Set Vector Group To Vector Group Cylindrical Zone
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
 
 ```ts
 export interface SetVectorGroupToVectorGroupCylindricalZoneInput {
@@ -690,7 +690,7 @@ The offsets default to `1`, `-10`, and `10`.
 
 ## Set Vector Group To Vector Group Fit Weights
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-weights)
 
 ```ts
 export interface SetVectorGroupToVectorGroupFitWeightsInput {
@@ -714,7 +714,7 @@ nominal weight defaults to `1`.
 
 ## Set Vector Group To Vector Group Fit Gradient Factor
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
 
 ```ts
 export interface SetVectorGroupToVectorGroupFitGradientFactorInput {
@@ -794,7 +794,7 @@ Defaults are `0.0001`, `0.0001`, and `1`.
 
 ## Do Relationship Fit
 
-[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/relationship-operations#do-relationship-fit)
+[MP command](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#do-relationship-fit)
 
 ```ts
 export interface DoRelationshipFitInput {
@@ -934,7 +934,7 @@ Construction Operations / Point Clouds.
 
 ## Set Group To Nominal Group View Zooming
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-group-to-nominal-group-view-zooming)
 
 ```ts
 export interface SetGroupToNominalGroupViewZoomingInput {
@@ -956,7 +956,7 @@ The five defaults are `true`, `false`, `true`, `true`, and `0.01`.
 
 ## Set Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-associated-data)
 
 ```ts
 export interface SetRelationshipAssociatedDataInput {
@@ -979,7 +979,7 @@ remains a supplied collection. `ignoreEmptyArguments` defaults to `true`.
 
 ## Get Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-associated-data)
 
 ```ts
 export interface GetRelationshipAssociatedDataInput {
@@ -994,7 +994,7 @@ function getRelationshipAssociatedData(
 
 ## Set Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-points-to-points-relationship-associated-data)
 
 ```ts
 export interface SetPointsToPointsRelationshipAssociatedDataInput {
@@ -1012,7 +1012,7 @@ function setPointsToPointsRelationshipAssociatedData(
 
 ## Get Points to Points Relationship Associated Data
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-points-to-points-relationship-associated-data)
 
 ```ts
 export interface GetPointsToPointsRelationshipAssociatedDataInput {
@@ -1027,7 +1027,7 @@ function getPointsToPointsRelationshipAssociatedData(
 
 ## Auto Filter Clouds to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
 ```ts
 export interface AutoFilterCloudsToNominalGeometry3DInput {
@@ -1046,7 +1046,7 @@ function autoFilterCloudsToNominalGeometry3D(
 
 ## Auto Filter Clouds to Nominal Geometry 2D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
 ```ts
 export interface AutoFilterCloudsToNominalGeometry2DInput {
@@ -1069,7 +1069,7 @@ to `false`.
 
 ## Auto Filter Points to Nominal Geometry 3D
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
 
 ```ts
 export interface AutoFilterPointsToNominalGeometry3DInput {
@@ -1086,7 +1086,7 @@ function autoFilterPointsToNominalGeometry3D(
 
 ## Auto Filter Points/Groups/Clouds to Surface Faces
 
-[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+[MP command](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
 ```ts
 export interface AutoFilterPointsGroupsCloudsToSurfaceFacesInput {
@@ -1116,7 +1116,7 @@ uncertain work.
 
 ## Extract Geometry From Point Clouds
 
-[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
+[MP command](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#extract-geometry-from-point-clouds)
 
 ```ts
 export interface ExtractGeometryFromPointCloudsInput {
@@ -1141,7 +1141,7 @@ has no ObjectiveSA SA 2024.1 counterpart.
 
 ## Create Points to Objects Map
 
-[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/relationship-operations#create-points-to-objects-map)
+[MP command](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#create-points-to-objects-map)
 
 ```ts
 export interface CreatePointsToObjectsMapInput {
@@ -1163,7 +1163,7 @@ registry or intermediate workflow state.
 
 ## Get Objects From Points to Objects Map (Point List)
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-objects-from-points-to-objects-map-point-list)
 
 ```ts
 export interface GetObjectsFromPointsToObjectsMapPointListInput {
@@ -1181,7 +1181,7 @@ The function follows the exact SA 2026.1 Point-list binding.
 
 ## Compute Geometry Relationship Uncertainties
 
-[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
+[MP command](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#compute-geometry-relationship-uncertainties)
 
 ```ts
 export interface ComputeGeometryRelationshipUncertaintiesInput {
@@ -1199,7 +1199,7 @@ function computeGeometryRelationshipUncertainties(
 
 ## Make Cloud to Swatch Relationship
 
-[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+[MP command](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-cloud-to-swatch-relationship)
 
 ```ts
 export interface MakeCloudToSwatchRelationshipInput {
@@ -1248,7 +1248,7 @@ export interface RelationshipStatusFlags {
 
 ## Get Relationship Sigmoidal Gap Fit Constraints
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
 
 ```ts
 export interface GetRelationshipSigmoidalGapFitConstraintsInput {
@@ -1263,7 +1263,7 @@ function getRelationshipSigmoidalGapFitConstraints(
 
 ## Set Object to Object Direction Relationship Tolerances
 
-[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+[MP command](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-tolerances)
 
 ```ts
 export interface SetObjectToObjectDirectionRelationshipTolerancesInput {
@@ -1282,7 +1282,7 @@ Omitted tolerance values use the exact all-limits-disabled zero defaults.
 
 ## Get Geom Relationship Criteria Name List
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria-name-list)
 
 ```ts
 export interface GetGeomRelationshipCriteriaNameListInput {
@@ -1298,7 +1298,7 @@ function getGeomRelationshipCriteriaNameList(
 
 ## Get Relationship Status
 
-[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-status)
+[MP command](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-status)
 
 ```ts
 export interface GetRelationshipStatusInput {
@@ -1316,7 +1316,7 @@ These functions retain no Relationship state and never replay uncertain work.
 
 ## Geom Relationship Ignore Input Points
 
-[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
+[Geom Relationship Ignore Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-ignore-input-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1347,7 +1347,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Geom Relationship Reuse Ignored Input Points
 
-[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
+[Geom Relationship Reuse Ignored Input Points](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#geom-relationship-reuse-ignored-input-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1378,7 +1378,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Auto Vectors
 
-[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
+[Get Geom Relationship Auto Vectors](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-auto-vectors)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1422,7 +1422,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Cardinal Points
 
-[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
+[Get Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-cardinal-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1453,7 +1453,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Criteria
 
-[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
+[Get Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-criteria)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1509,7 +1509,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Measured Avg Point
 
-[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
+[Get Geom Relationship Measured Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-avg-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1540,7 +1540,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Measured Geometry
 
-[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
+[Get Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-measured-geometry)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1571,7 +1571,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Nominal Avg Point
 
-[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
+[Get Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-avg-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1602,7 +1602,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Nominal Geometry
 
-[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
+[Get Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-nominal-geometry)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1633,7 +1633,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Point List
 
-[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
+[Get Geom Relationship Point List](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-point-list)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1673,7 +1673,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Geom Relationship Projection Plane
 
-[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
+[Get Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-geom-relationship-projection-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1704,7 +1704,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Pipe Relationship Cut Status
 
-[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
+[Get Pipe Relationship Cut Status](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-cut-status)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1746,7 +1746,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Pipe Relationship Properties
 
-[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
+[Get Pipe Relationship Properties](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1800,7 +1800,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Pipe Relationship Weights
 
-[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
+[Get Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-pipe-relationship-weights)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1850,7 +1850,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Fit Constraints (Scalar Type)
 
-[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
+[Get Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-fit-constraints-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1894,7 +1894,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Outlier Rejection (Scalar Type)
 
-[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
+[Get Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-outlier-rejection-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1936,7 +1936,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Projection Options
 
-[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-projection-options)
+[Get Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-projection-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -1980,7 +1980,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Reporting Frame
 
-[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
+[Get Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-reporting-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2011,7 +2011,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Sub Sampling Options
 
-[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
+[Get Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-sub-sampling-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2053,7 +2053,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Tolerance (Scalar Type)
 
-[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
+[Get Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2097,7 +2097,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Tolerance (Vector Type)
 
-[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
+[Get Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-tolerance-vector-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2165,7 +2165,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Type
 
-[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-type)
+[Get Relationship Type](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2196,7 +2196,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Get Relationship Weighting
 
-[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#get-relationship-weighting)
+[Get Relationship Weighting](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#get-relationship-weighting)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2227,7 +2227,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Pipe Fitting Relationship
 
-[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
+[Make Pipe Fitting Relationship](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-fitting-relationship)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2262,7 +2262,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Make Pipe Relationship Cut
 
-[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+[Make Pipe Relationship Cut](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#make-pipe-relationship-cut)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2305,7 +2305,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Pipe Relationship Force Cut to Frame
 
-[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
+[Pipe Relationship Force Cut to Frame](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#pipe-relationship-force-cut-to-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2344,7 +2344,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Auto Measure Nominal Feature
 
-[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
+[Set Geom Relationship Auto Measure Nominal Feature](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2381,7 +2381,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
 
-[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
+[Set Geom Relationship Auto Vectors Nominal (AVN)](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2420,7 +2420,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Cardinal Points
 
-[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
+[Set Geom Relationship Cardinal Points](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-cardinal-points)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2457,7 +2457,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Criteria
 
-[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
+[Set Geom Relationship Criteria](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-criteria)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2498,7 +2498,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Measured Geometry
 
-[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
+[Set Geom Relationship Measured Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-measured-geometry)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2531,7 +2531,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Nominal Avg Point
 
-[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
+[Set Geom Relationship Nominal Avg Point](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-avg-point)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2566,7 +2566,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Nominal Geometry
 
-[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
+[Set Geom Relationship Nominal Geometry](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-nominal-geometry)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2601,7 +2601,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Geom Relationship Projection Plane
 
-[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
+[Set Geom Relationship Projection Plane](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-geom-relationship-projection-plane)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2636,7 +2636,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Object to Object Direction Relationship Fit Constraints
 
-[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
+[Set Object to Object Direction Relationship Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2671,7 +2671,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Pipe Relationship Segment Properties
 
-[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
+[Set Pipe Relationship Segment Properties](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-segment-properties)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2718,7 +2718,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Pipe Relationship Weights
 
-[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
+[Set Pipe Relationship Weights](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-pipe-relationship-weights)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2765,7 +2765,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Auto Vectors Fit (AVF)
 
-[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
+[Set Relationship Auto Vectors Fit (AVF)](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-fit-avf)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2802,7 +2802,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Auto Vectors Group Default Prefix
 
-[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
+[Set Relationship Auto Vectors Group Default Prefix](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2837,7 +2837,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Desired Meas Count
 
-[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
+[Set Relationship Desired Meas Count](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-desired-meas-count)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2870,7 +2870,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Dormant Status
 
-[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
+[Set Relationship Dormant Status](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-dormant-status)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2903,7 +2903,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Fit Constraints (Scalar Type)
 
-[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
+[Set Relationship Fit Constraints (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-fit-constraints-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2936,7 +2936,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
 
-[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
+[Set Relationship Orientation Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -2969,7 +2969,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Outlier Rejection (Scalar Type)
 
-[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
+[Set Relationship Outlier Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-outlier-rejection-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3000,7 +3000,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Position Fit Constraints (Vector Type)
 
-[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
+[Set Relationship Position Fit Constraints (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-position-fit-constraints-vector-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3033,7 +3033,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Projection Options
 
-[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-projection-options)
+[Set Relationship Projection Options](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-projection-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3066,7 +3066,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Reporting Frame
 
-[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
+[Set Relationship Reporting Frame](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-reporting-frame)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3099,7 +3099,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
 
-[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
+[Set Relationship Sigmoidal Gap Fit Constraints](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3132,7 +3132,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Sub Sampling Options
 
-[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
+[Set Relationship Sub Sampling Options](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-sub-sampling-options)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3171,7 +3171,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Tolerance (Scalar Type)
 
-[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
+[Set Relationship Tolerance (Scalar Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-scalar-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3204,7 +3204,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Tolerance (Vector Type)
 
-[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
+[Set Relationship Tolerance (Vector Type)](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-tolerance-vector-type)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3237,7 +3237,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Voxel Cloud Display
 
-[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
+[Set Relationship Voxel Cloud Display](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-voxel-cloud-display)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3282,7 +3282,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Weighting
 
-[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weighting)
+[Set Relationship Weighting](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weighting)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
@@ -3315,7 +3315,7 @@ contains only caller controls such as an `AbortSignal`.
 
 ## Set Relationship Weights Normalized
 
-[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)
+[Set Relationship Weights Normalized](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC contract](/api/grpc/0.5.1/relationship-operations#set-relationship-weights-normalized)
 
 | Input Property | TypeScript Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |

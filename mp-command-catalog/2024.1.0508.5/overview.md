@@ -1,6 +1,6 @@
 ---
 title: SA 2024.1.0508.5 Catalog
-description: Reviewed MP commands and planned Briosa support for SpatialAnalyzer 2024.1.0508.5.
+description: Reviewed MP commands and released Briosa support for SpatialAnalyzer 2024.1.0508.5.
 ---
 
 # SA 2024.1.0508.5 Catalog
@@ -9,8 +9,9 @@ This catalog documents **1,283 captured MP commands** across **79 command groups
 and subgroups** in SpatialAnalyzer 2024.1.0508.5. Each command links to a canonical
 entry with its exact-target group, disposition, signature, and reviewed differences.
 
-**Briosa support for this target is planned. No 2024 server or client package has
-been released, and no command is currently callable through a 2024 Briosa server.**
+**Server 0.7.0 and all three client families 0.2.0 are released for this target.**
+
+[Browse the exact-target gRPC reference](/api/grpc/sa-2024.1.0508.5), [.NET reference](/api/dotnet/sa-2024.1.0508.5), [Python reference](/api/python/sa-2024.1.0508.5), or [JavaScript/TypeScript reference](/api/javascript/sa-2024.1.0508.5).
 
 - [Browse the SpatialAnalyzer group hierarchy](./group-hierarchy.md)
 - [Search the 2024 command index](/mp-command-catalog/commands?target=2024.1.0508.5)
@@ -21,11 +22,10 @@ been released, and no command is currently callable through a 2024 Briosa server
 
 | Status | Commands | Meaning for This Target |
 | --- | ---: | --- |
-| Next | 996 | Selected for the planned 2024 implementation; not released. |
+| Current | 996 | Implemented in Server 0.7.0; runtime policy and readiness apply. |
 | Excluded | 171 | Existing product or workflow rationale also applies to 2024. |
 | SDK Unavailable | 75 | No complete reviewed useful SDK mapping is available. |
 | Uncommitted | 41 | Retained for reference, with no release commitment. |
-| Current | 0 | A 2024 server implementation has not been released. |
 
 The review matched every captured command to an existing canonical entry and
 carried forward applicable 2026 decisions. Version differences were reviewed
@@ -39,8 +39,10 @@ argument labels, and SDK mapping limitations. A 2026 API link or default is not
 a promise of the same 2024 API. Exported sample values alone do not establish
 defaults or omission behavior.
 
-This is an evidence and SDK-interface review. It does not establish licensed
-runtime success. Existing At Risk qualifications remain visible; fixture,
+Released support is reconciled with the Server 0.7.0 protobuf, handwritten
+operation registration, and capability source. A separate limited local licensed
+smoke test covered six read-only operations; it did not validate all 996 operations.
+Existing At Risk qualifications remain visible; fixture,
 equipment, interaction, and external-software needs carry forward to the 2024
 implementation. See [Release Status](/docs/releases) for the current v0.x
 validation policy.

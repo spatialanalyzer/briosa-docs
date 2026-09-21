@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 ## ClearCloudViewerAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer)
 
 ```csharp
 public Task ClearCloudViewerAsync(
@@ -18,7 +18,7 @@ public Task ClearCloudViewerAsync(
 
 ## SendCloudToSaAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa)
 
 ```csharp
 public Task SendCloudToSaAsync(
@@ -31,7 +31,7 @@ All visible viewer points are added to the active SA collection.
 
 ## SetCloudViewerFilterAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter)
 
 ```csharp
 public Task SetCloudViewerFilterAsync(
@@ -44,7 +44,7 @@ SA describes a `0–100` quality scale; Briosa adds no range validation.
 
 ## SaveCloudViewerPointCloudFileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file)
 
 ```csharp
 public Task SaveCloudViewerPointCloudFileAsync(
@@ -56,7 +56,7 @@ public Task SaveCloudViewerPointCloudFileAsync(
 
 ## LoadCloudViewerPointCloudFileAsync
 
-[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) · [gRPC contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file)
+[MP command](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file)
 
 ```csharp
 public Task LoadCloudViewerPointCloudFileAsync(

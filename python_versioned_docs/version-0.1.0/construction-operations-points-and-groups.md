@@ -518,4 +518,4 @@ print(result.rms_deviation)
 Callers own state across calls. Cancellation of an interactive coroutine does
 not prove the SpatialAnalyzer interaction stopped.
 
-[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/construction-operations-points-and-groups)
+[Catalog](/mp-command-catalog/commands/construction-operations-points-and-groups) · [gRPC](/api/grpc/0.5.1/construction-operations-points-and-groups)

@@ -31,9 +31,9 @@ Analysis** in SA 2026.1.0529.7.
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Feature Check Datum References" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#get-feature-check-datum-references">Get Feature Check Datum References</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Get Feature Check Datum References" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Feature Check Datum References" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-feature-check-datum-references">Get Feature Check Datum References</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get i-th Feature Check From Feature Check Ref List" data-group="GDT Operations / GDT Analysis" data-status="excluded" data-validation="not-applicable"><td><a href="#get-i-th-feature-check-from-feature-check-ref-list">Get i-th Feature Check From Feature Check Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Not applicable</td></tr>
@@ -79,131 +79,131 @@ Analysis** in SA 2026.1.0529.7.
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Datum Measurements" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#get-datum-measurements">Get Datum Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Get Datum Measurements" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Datum Measurements" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-datum-measurements">Get Datum Measurements</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Datum Measurements" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#set-datum-measurements">Set Datum Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Set Datum Measurements" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Datum Measurements" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-datum-measurements">Set Datum Measurements</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Feature Check Measurements" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#get-feature-check-measurements">Get Feature Check Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Get Feature Check Measurements" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Feature Check Measurements" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-feature-check-measurements">Get Feature Check Measurements</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Feature Check Measurements" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#set-feature-check-measurements">Set Feature Check Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Set Feature Check Measurements" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Feature Check Measurements" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-feature-check-measurements">Set Feature Check Measurements</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Feature Check Cylinder Eval Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-cylinder-feature-check-fixture"><td><a href="#get-feature-check-cylinder-eval-options">Get Feature Check Cylinder Eval Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cylinder feature-check fixture</td></tr>
-<tr data-command="Get Feature Check Cylinder Eval Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Feature Check Cylinder Eval Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-feature-check-cylinder-eval-options">Get Feature Check Cylinder Eval Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Feature Check Cylinder Eval Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-cylinder-feature-check-fixture"><td><a href="#set-feature-check-cylinder-eval-options">Set Feature Check Cylinder Eval Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cylinder feature-check fixture</td></tr>
-<tr data-command="Set Feature Check Cylinder Eval Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Feature Check Cylinder Eval Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-feature-check-cylinder-eval-options">Set Feature Check Cylinder Eval Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Feature Inspection Auto Filter" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#feature-inspection-auto-filter">Feature Inspection Auto Filter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Feature Inspection Auto Filter" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Feature Inspection Auto Filter" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#feature-inspection-auto-filter">Feature Inspection Auto Filter</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Global Force Simultaneous Evaluation" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-licensed-validation"><td><a href="#set-global-force-simultaneous-evaluation">Set Global Force Simultaneous Evaluation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - licensed validation</td></tr>
-<tr data-command="Set Global Force Simultaneous Evaluation" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Global Force Simultaneous Evaluation" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-global-force-simultaneous-evaluation">Set Global Force Simultaneous Evaluation</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Evaluate Feature Check" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#evaluate-feature-check">Evaluate Feature Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Evaluate Feature Check" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Evaluate Feature Check" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#evaluate-feature-check">Evaluate Feature Check</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Evaluate Feature Checks" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#evaluate-feature-checks">Evaluate Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Evaluate Feature Checks" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Evaluate Feature Checks" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#evaluate-feature-checks">Evaluate Feature Checks</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate Feature Check Summary" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#generate-feature-check-summary">Generate Feature Check Summary</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Generate Feature Check Summary" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Generate Feature Check Summary" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#generate-feature-check-summary">Generate Feature Check Summary</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Start/Stop Feature Check Trapping" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-instrument-gdt-fixture"><td><a href="#startstop-feature-check-trapping">Start/Stop Feature Check Trapping</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument and GD&amp;T fixture</td></tr>
-<tr data-command="Start/Stop Feature Check Trapping" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Start/Stop Feature Check Trapping" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#startstop-feature-check-trapping">Start/Stop Feature Check Trapping</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Enable/Disable Datum Alignment for Feature Check" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#enabledisable-datum-alignment-for-feature-check">Enable/Disable Datum Alignment for Feature Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Enable/Disable Datum Alignment for Feature Check" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Enable/Disable Datum Alignment for Feature Check" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-datum-alignment-for-feature-check">Enable/Disable Datum Alignment for Feature Check</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Datum Alignment" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#datum-alignment">Datum Alignment</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Datum Alignment" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Datum Alignment" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#datum-alignment">Datum Alignment</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get GD&amp;T Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="licensed-read-probe"><td><a href="#get-gdt-options">Get GD&amp;T Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed read probe</td></tr>
-<tr data-command="Get GD&amp;T Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get GD&amp;T Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-gdt-options">Get GD&amp;T Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set GD&amp;T Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-licensed-validation"><td><a href="#set-gdt-options">Set GD&amp;T Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - licensed validation</td></tr>
-<tr data-command="Set GD&amp;T Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set GD&amp;T Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-gdt-options">Set GD&amp;T Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set GD&amp;T Extended Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-licensed-validation"><td><a href="#set-gdt-extended-options">Set GD&amp;T Extended Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - licensed validation</td></tr>
 <tr data-target="2026.1.0529.7" data-command="Get GD&amp;T Extended Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-licensed-validation"><td><a href="#get-gdt-extended-options">Get GD&amp;T Extended Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - licensed validation</td></tr>
 <tr data-target="2026.1.0529.7" data-command="Refresh Datums/Feature Checks from Annotations" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#refresh-datumsfeature-checks-from-annotations">Refresh Datums/Feature Checks from Annotations</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Refresh Datums/Feature Checks from Annotations" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Refresh Datums/Feature Checks from Annotations" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#refresh-datumsfeature-checks-from-annotations">Refresh Datums/Feature Checks from Annotations</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Feature Check Reporting Frame" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#set-feature-check-reporting-frame">Set Feature Check Reporting Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Set Feature Check Reporting Frame" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Feature Check Reporting Frame" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-feature-check-reporting-frame">Set Feature Check Reporting Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Feature Check Reporting Frame" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#get-feature-check-reporting-frame">Get Feature Check Reporting Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
-<tr data-command="Get Feature Check Reporting Frame" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Feature Check Reporting Frame" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-feature-check-reporting-frame">Get Feature Check Reporting Frame</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Set Feature Check Reporting Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-partial-sdk-contract"><td><a href="#set-feature-check-reporting-options">Set Feature Check Reporting Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - partial SDK contract</td></tr>
-<tr data-command="Set Feature Check Reporting Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Set Feature Check Reporting Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-feature-check-reporting-options">Set Feature Check Reporting Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Feature Check Reporting Options" data-group="GDT Operations / GDT Analysis" data-status="current" data-validation="at-risk-partial-sdk-contract"><td><a href="#get-feature-check-reporting-options">Get Feature Check Reporting Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - partial SDK contract</td></tr>
-<tr data-command="Get Feature Check Reporting Options" data-group="Analysis Operations / GDT Operations" data-status="next" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Get Feature Check Reporting Options" data-group="Analysis Operations / GDT Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-feature-check-reporting-options">Get Feature Check Reporting Options</a></td>
-  <td><span className="catalog-status catalog-status--next">Next</span></td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 </tbody>
@@ -526,17 +526,19 @@ control flow.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -582,17 +584,19 @@ geometry relationships.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -620,17 +624,19 @@ Returns the Point Names and Cloud Names assigned to a Datum.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -660,17 +666,19 @@ Measurements?` defaults to `false`.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -698,17 +706,19 @@ Returns the Point Names and Cloud Names assigned to a Feature Check.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -738,17 +748,19 @@ Measurements?` defaults to `false`.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk cylinder feature check fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -776,17 +788,19 @@ Returns whether actual-diameter override is enabled and its current value.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk cylinder feature check fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -817,17 +831,19 @@ the override value defaults to `0.0`.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -865,17 +881,19 @@ enabled, and per-check cloud creation disabled.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk licensed validation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -900,17 +918,19 @@ setting.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -958,17 +978,19 @@ command.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -997,17 +1019,19 @@ Evaluates a supplied Feature Check reference list.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1032,17 +1056,19 @@ Generates the SpatialAnalyzer Feature Check summary for the supplied checks.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk instrument gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1070,17 +1096,19 @@ Starts or stops Feature Check trapping for a selected instrument.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1110,17 +1138,19 @@ Changes Datum Alignment behavior for the selected Feature Check.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#datum-alignment) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#datum-alignment) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#datum-alignment) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#datum-alignment)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1154,17 +1184,19 @@ a parallel model of that state or add workflow guards.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">Licensed read probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="evidence-review-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="evidence-review-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-gdt-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-gdt-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-gdt-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-gdt-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1198,17 +1230,19 @@ label `Check Pre-Eval Validator Type` was not accepted by the SDK.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk licensed validation</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-gdt-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-gdt-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-gdt-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-gdt-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1271,17 +1305,19 @@ not claim to return the nine selected geometry methods.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1305,17 +1341,19 @@ Refreshes a collection's Datums and Feature Checks from Annotations.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1342,17 +1380,19 @@ Sets the reporting Frame for a Feature Check.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk gdt fixture</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
@@ -1379,17 +1419,19 @@ Returns the reporting Frame for a Feature Check.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk partial sdk contract</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The 2024 signature has no `Only Create Failed Vectors?` input. Retain the earlier reporting options. The existing `Vector Creation` export limitation is shared with 2026 and retains the reviewed mapping decision; it is not a new 2024 difference.
 
@@ -1426,17 +1468,19 @@ vector-creation setting unchanged.
   <span className="catalog-target-group">GDT Operations / GDT Analysis</span>
   <span className="catalog-target-validation">At risk partial sdk contract</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="next" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--next">Next</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / GDT Operations" data-validation="at-risk-no-2024-runtime-validation">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations / GDT Operations</span>
   <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
 </div>
 </div>
 
+<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options) · [.NET](/api/dotnet/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options) · [Python](/api/python/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options)</p>
+
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
 
-Planned for the 2024 target; implementation and runtime validation are pending.
+Released in Server 0.7.0 for SA 2024.1.0508.5; runtime validation remains separately qualified.
 
 The 2024 outputs do not include `Only Create Failed Vectors?`. Retain the earlier reporting options. The existing `Vector Creation` export limitation is shared with 2026 and retains the reviewed mapping decision; it is not a new 2024 difference.
 

@@ -11,7 +11,7 @@ and expose one final optional `CancellationToken`.
 
 ## Run Subroutine
 
-[Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) · [gRPC contract](/api/grpc/mp-subroutines#run-subroutine)
+[Run Subroutine](/mp-command-catalog/commands/mp-subroutines#run-subroutine) · [gRPC contract](/api/grpc/0.5.1/mp-subroutines#run-subroutine)
 
 | Parameter | .NET Type | Exact MP Argument | Briosa Default |
 | --- | --- | --- | --- |
