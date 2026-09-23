@@ -1,10 +1,10 @@
 ---
-title: Construction Operations / BSpines
+title: Construction Operations / BSplines
 description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
-# Construction Operations / BSpines
+# Construction Operations / BSplines
 
 [SA 2026.1.0529.7](/api/dotnet/construction-operations-bsplines) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-bsplines)
 

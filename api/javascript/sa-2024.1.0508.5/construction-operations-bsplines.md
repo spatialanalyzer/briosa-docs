@@ -1,10 +1,10 @@
 ---
-title: Construction Operations / BSpines
+title: Construction Operations / BSplines
 description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
-# Construction Operations / BSpines
+# Construction Operations / BSplines
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-bsplines) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-bsplines)
 

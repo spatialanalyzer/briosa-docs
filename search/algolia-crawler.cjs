@@ -121,12 +121,36 @@ new Crawler({
         grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API',
         javascript: 'JavaScript and TypeScript API',
       };
-      const apiMatch = path.match(/^\/api\/(grpc|dotnet|python|javascript)(?:\/|$)/);
-      const apiSection = apiMatch && apiMatch[1];
-      const versionLabel = text($('.theme-doc-version-badge').text());
-      const section = apiSection
-        ? `${sections[apiSection]}${versionLabel ? ` · ${versionLabel}` : ''} · SA ${path.includes('/sa-2024.1.0508.5') ? '2024.1.0508.5' : '2026.1.0529.7'}`
-        : path === '/install' ? 'Install'
+      const apiFamily = $('meta[name="briosa:api-family"]').attr('content');
+      if (apiFamily) {
+        const release = $('meta[name="briosa:api-release"]').attr('content');
+        const target = $('meta[name="briosa:sa-target"]').attr('content');
+        const command = $('meta[name="briosa:command-id"]').attr('content');
+        const kind = $('meta[name="briosa:page-kind"]').attr('content');
+        if (kind === 'group' || kind === 'history') return [];
+        if (!release || !target || !command) throw new Error('Incomplete API context: ' + path);
+        const title = text($('article h1').first().text());
+        const root = 'https://briosa.dev' + path;
+        const headings = $('article .api-contract h2[id]');
+        const records = [];
+        const record = (anchor, sectionTitle, body, position) => ({
+          objectID: root + '#' + anchor,
+          url: root + (anchor ? '#' + anchor : ''), url_without_anchor: root, anchor,
+          type: anchor ? 'lvl2' : 'lvl1',
+          hierarchy: {lvl0: sections[apiFamily], lvl1: title + ' · ' + release + ' · SA ' + target, lvl2: sectionTitle || null, lvl3: null, lvl4: null, lvl5: null, lvl6: null},
+          content: text(body).slice(0, 3500), search_terms: spellings(title),
+          language: 'en', lang: 'en', version: release, docusaurus_tag: 'docs-' + apiFamily + '-' + release,
+          api_family: apiFamily, api_release: release, sa_target: target, command_id: command,
+          weight: {pageRank: 0, level: anchor ? 2 : 1, position},
+        });
+        records.push(record('', '', $('article .api-contract').children().first().text() || title, 0));
+        headings.each((i, element) => {
+          const heading = $(element);
+          records.push(record(heading.attr('id'), text(heading.text()), heading.nextUntil('h2').text(), i + 1));
+        });
+        return records;
+      }
+      const section = path === '/install' ? 'Install'
         : path.startsWith('/mp-command-catalog') ? 'MP Catalog'
         : path === '/api' ? 'API Reference'
         : path === '' ? 'Briosa' : 'Documentation';
@@ -150,7 +174,7 @@ new Crawler({
   }],
   initialIndexSettings: {
     YOUR_INDEX_NAME: {
-      attributesForFaceting: ['type', 'lang', 'language', 'version', 'docusaurus_tag'],
+      attributesForFaceting: ['type', 'lang', 'language', 'version', 'docusaurus_tag', 'api_family', 'api_release', 'sa_target'],
       attributesToRetrieve: ['hierarchy', 'content', 'anchor', 'url', 'url_without_anchor', 'type'],
       attributesToHighlight: ['hierarchy', 'content'],
       attributesToSnippet: ['content:20'],

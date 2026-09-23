@@ -13,7 +13,7 @@ jobs:
   build:
     name: Build Pages artifact
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     env:
       ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
       ALGOLIA_SEARCH_API_KEY: ${{ vars.ALGOLIA_SEARCH_API_KEY }}

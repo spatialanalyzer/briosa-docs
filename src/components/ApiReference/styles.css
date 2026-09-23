@@ -1,0 +1,49 @@
+.api-reference {display:grid;grid-template-columns:285px minmax(0, 1fr) 200px;max-width:1800px;margin:auto;width:100%;align-items:start}
+.api-navigation,.api-toc {position:sticky;top:var(--ifm-navbar-height);max-height:calc(100vh - var(--ifm-navbar-height));overflow:auto;scrollbar-width:thin;padding:1.25rem 1rem}
+.api-navigation {border-right:1px solid var(--briosa-border)}
+.api-navigation-toggle {display:none;background:none;color:var(--ifm-font-color-base);border:0;font:inherit;font-weight:650;padding:.5rem 0;cursor:pointer}
+.api-sidebar {font-size:.9rem}
+.api-sidebar a {display:block;color:var(--ifm-font-color-base);padding:.4rem .5rem;line-height:1.45;border-radius:4px}
+.api-sidebar a:hover,.api-sidebar .api-nav-active {background:var(--ifm-color-emphasis-200);color:var(--ifm-color-primary)}
+.api-sidebar summary {padding:.55rem .5rem;cursor:pointer;font-weight:650}
+.api-sidebar ul {list-style:none;margin:0;padding-left:.8rem}
+.api-sidebar small {display:block;padding-left:.5rem;color:var(--briosa-muted)}
+.api-group-title {display:flex;align-items:center;justify-content:space-between}
+.api-group-title a {flex:1}
+.api-group-title button {border:0;background:transparent;color:var(--ifm-font-color-base);min-width:32px;min-height:36px;font-size:1.2rem;cursor:pointer}
+.api-filter {display:block;margin:.5rem;font-size:.8rem}
+.api-filter input {width:100%;margin-top:.4rem;padding:.5rem;background:var(--ifm-background-color);color:var(--ifm-font-color-base);border:1px solid var(--briosa-border);border-radius:5px}
+.api-main {padding:1.25rem 2.5rem 3rem;min-width:0}
+.api-toolbar {display:flex;gap:1rem;justify-content:flex-end;align-items:flex-end;flex-wrap:wrap;border-bottom:1px solid var(--briosa-border);padding-bottom:1rem}
+.api-toolbar label {font-size:.75rem;color:var(--briosa-muted);font-weight:600}
+.api-toolbar select,.api-toolbar button {display:block;font:inherit;font-size:.9rem;color:var(--ifm-font-color-base);background:var(--ifm-background-surface-color);border:1px solid var(--briosa-border);border-radius:6px;padding:.55rem .65rem;min-height:40px}
+.api-toolbar select {margin-top:.25rem;max-width:100%}
+.api-toolbar button {cursor:pointer}
+.api-notice {font-size:.875rem;margin:.5rem 0;overflow-wrap:anywhere}
+.api-breadcrumbs {font-size:.8rem;margin:1.25rem 0}
+.api-eyebrow {font-size:.8rem;color:var(--briosa-muted);margin-bottom:.5rem}
+.api-main h1 {font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;overflow-wrap:anywhere}
+.api-contract {overflow-wrap:anywhere}
+.api-contract table,.api-versions table {display:block;overflow-x:auto;max-width:100%;font-size:.9rem}
+.api-contract table {overflow-wrap:normal}
+.api-contract table code,.api-contract table th {white-space:nowrap}
+.api-group-title>span {padding:.4rem .5rem;font-weight:600}
+.api-show-all {border:0;background:none;color:var(--ifm-color-primary);font:inherit;padding:.5rem;text-align:left;cursor:pointer}
+.api-search-all {font-size:.8rem;padding:.65rem 0}
+.api-difference {font-size:.8rem;margin:.5rem 0 0}
+.api-contract pre {overflow-x:auto;font-size:.85rem;white-space:pre}
+.api-contract h2,.api-versions h2,.api-method-index li {scroll-margin-top:calc(var(--ifm-navbar-height) + 1rem)}
+.api-contract aside {margin:1rem 0}
+.api-contract h2 {font-size:1.4rem}
+.api-method-index {columns:2;column-gap:2rem;list-style:none;padding:0}
+.api-method-index li {break-inside:avoid;padding:.6rem 0;border-bottom:1px solid var(--briosa-border)}
+.api-method-index span {font-size:.8rem;color:var(--briosa-muted)}
+.api-toc {font-size:.8rem;border-left:1px solid var(--briosa-border);margin-top:1.5rem}
+.api-toc ul {list-style:none;padding:0}
+.api-toc a {display:block;padding:.4rem 0}
+.api-versions {border-top:1px solid var(--briosa-border);margin-top:2rem;padding-top:1rem}
+.api-related {display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}
+.api-edit {font-size:.85rem}
+.api-reference :is(a,button,select,input,summary):focus-visible {outline:3px solid var(--ifm-color-primary);outline-offset:3px}
+@media(max-width:1200px){.api-reference{grid-template-columns:255px minmax(0,1fr)}.api-toc{display:none}.api-main{padding:1.25rem 1.5rem}}
+@media(max-width:800px){.api-reference{display:block}.api-navigation{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--briosa-border);padding:.5rem 1rem}.api-navigation-toggle{display:block}.api-navigation:not(.api-navigation-open) #api-navigation-content{display:none}.api-main{padding:1rem}.api-toolbar{justify-content:flex-start;gap:.7rem}.api-toolbar label{max-width:100%}.api-method-index{columns:1}}

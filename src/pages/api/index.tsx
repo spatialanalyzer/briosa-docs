@@ -71,9 +71,10 @@ export default function ApiReference(): ReactNode {
         <Heading as="h2">How Versions Fit Together</Heading>
         <p>
           The gRPC server and each client library have their own version. A
-          reference version selector therefore applies only to the product in
-          that section. SpatialAnalyzer compatibility remains organized by
-          exact release in the{' '}
+          reference release selector applies to the product in that section.
+          The SpatialAnalyzer selector carries your target across API references.
+          Shared method links preserve both the product release and SA target.
+          Reviewed availability and qualifications remain in the{' '}
           <Link to="/mp-command-catalog">MP Command Catalog</Link>.
         </p>
       </main>

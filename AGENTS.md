@@ -36,7 +36,9 @@ repository settings.
   catalog prose, including labels such as `BSplines` and `API - LADAR`.
 - Use workflow pages only as secondary cross-links. Do not move a command out
   of its SA group to create a Briosa-specific primary grouping, and do not
-  default to one page per command.
+  default to one page per command in the MP catalog. API references publish
+  individual method pages with static release/SA URLs, generated from the
+  released Markdown snapshots. Keep the catalog's canonical sections intact.
 - Some documentation-only records and installed-document paths use labels that
   differ from the SDK-observed hierarchy. Preserve the evidence and resolve those
   placements through reviewed catalog work instead of silently inventing a

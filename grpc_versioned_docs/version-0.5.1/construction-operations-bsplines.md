@@ -1,10 +1,10 @@
 ---
-title: Construction Operations / BSpines
-description: Released gRPC contracts for selected Construction Operations / BSpines MP commands.
+title: Construction Operations / BSplines
+description: Released gRPC contracts for selected Construction Operations / BSplines MP commands.
 toc_max_heading_level: 2
 ---
 
-# Construction Operations / BSpines
+# Construction Operations / BSplines
 
 :::note[Released Server API]
 
