@@ -1,10 +1,10 @@
 ---
-title: Construction Operations / BSpines
-description: Briosa 0.1.0 .NET APIs for selected Construction Operations / BSpines MP commands.
+title: Construction Operations / BSplines
+description: Briosa 0.1.0 .NET APIs for selected Construction Operations / BSplines MP commands.
 toc_max_heading_level: 2
 ---
 
-# Construction Operations / BSpines
+# Construction Operations / BSplines
 
 ## B-Spline Fit Options Value
 

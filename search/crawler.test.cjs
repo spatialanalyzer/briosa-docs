@@ -121,10 +121,8 @@ test('the command index preserves one disposition per command and exact target',
   assert.ok(statuses2024['sdk-unavailable'] > 0);
 });
 
-test('all reference instances and landing pages use content selectors and version context', () => {
-  for (const route of ['index', 'install', 'api', 'docs/intro',
-    'api/grpc/get-working-directory', 'api/dotnet/get-working-directory',
-    'api/python/get-working-directory', 'api/javascript/get-working-directory']) {
+test('product guides and landing pages use the DocSearch content selectors', () => {
+  for (const route of ['index', 'install', 'api', 'docs/intro']) {
     let called = false;
     const $ = load(html(route));
     extract({$, url: new URL(`https://briosa.dev/${route.replace(/(^|\/)index$/, '')}`),
@@ -133,13 +131,32 @@ test('all reference instances and landing pages use content selectors and versio
         assert.ok($(options.recordProps.lvl1).length, route);
         assert.ok($(options.recordProps.content).length, route);
         assert.equal($('nav, .catalog-command-table, .catalog-filter').length, 0);
-        if (route.startsWith('api/') && !route.endsWith('index')) {
-          assert.match(options.recordProps.lvl0.defaultValue,
-            route.startsWith('api/grpc/') ? /API · Version: 0\.7\.0 · SA 2026\.1\.0529\.7$/ : /API · Version: 0\.2\.0 · SA 2026\.1\.0529\.7$/);
-        }
         return [];
       }},
     });
     assert.ok(called, route);
   }
+});
+
+
+test('API results keep exact release/SA context and method-section destinations', () => {
+  for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
+    for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
+      const release = family === 'grpc' ? '0.7.0' : '0.2.0';
+      const route = `api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`;
+      const records = run(route);
+      assert.equal(run(`api/${family}/${release}/sa-${target}/analysis-operations/angle-between-line-and-plane`).length, 0);
+      assert.ok(records.length > 1);
+      for (const record of records) {
+        assert.equal(record.sa_target, target);
+        assert.equal(record.api_release, release);
+        assert.equal(record.api_family, family);
+        assert.ok(record.url.startsWith(`https://briosa.dev/${route}`));
+        assert.ok(Buffer.byteLength(JSON.stringify(record)) < 10000);
+      }
+    }
+  }
+  assert.equal(run('api/grpc/analysis-operations').length, 0);
+  assert.ok(run('api/grpc/sa-2024.1.0508.5/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length > 0);
+  assert.equal(run('api/grpc/sa-2026.1.0529.7/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length, 0);
 });

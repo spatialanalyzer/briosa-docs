@@ -1,0 +1,22 @@
+.briosa-toc {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  max-height: calc(100vh - var(--ifm-navbar-height) - 1.5rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  border-left: 1px solid var(--briosa-border);
+  margin-top: 1.5rem;
+  padding: 1.25rem 1rem;
+  font-size: .8rem;
+}
+
+.briosa-toc ul {list-style: none; padding: 0; margin-bottom: 0}
+.briosa-toc .briosa-toc-list {margin-top: 0}
+.briosa-toc.theme-doc-toc-desktop {margin-top: .5rem}
+.briosa-toc ul ul {margin-top: 0; padding-left: .8rem}
+.briosa-toc-link {display: block; padding: .4rem 0; color: var(--ifm-link-color); overflow-wrap: anywhere}
+.briosa-toc-link-active {font-weight: 650}
+.briosa-toc-link:focus-visible {outline: 3px solid var(--ifm-color-primary); outline-offset: 3px}
+
+@media (max-width: 996px) {.briosa-toc {display: none}}
+@media print {.briosa-toc {display: none}}

@@ -1,8 +1,10 @@
 import {lightCodeTheme, darkCodeTheme} from './src/theme/prism';
+import {flattenRoutes} from '@docusaurus/utils';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs';
 import type {Options as RedirectsPluginOptions} from '@docusaurus/plugin-client-redirects';
+
 
 // These are public browser connection settings, never an administration key.
 const algolia = {
@@ -41,76 +43,21 @@ const config: Config = {
           editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
         },
         blog: false,
-        sitemap: {ignorePatterns: ['/search', '/search/']},
+        sitemap: {
+          ignorePatterns: ['/search', '/search/'],
+          async createSitemapItems({defaultCreateSitemapItems, ...params}) {
+            const items = await defaultCreateSitemapItems(params);
+            const api = flattenRoutes(params.routes).filter((route) => route.path.startsWith('/api/'));
+            const excluded = new Set(api.filter((route) => (route.customData as {apiNoIndex?: boolean} | undefined)?.apiNoIndex).map((route) => 'https://briosa.dev' + route.path));
+            return items.filter((item) => !excluded.has(item.url));
+          },
+        },
         theme: {customCss: './src/css/custom.css'},
       } satisfies Preset.Options,
     ],
   ],
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'grpc',
-        includeCurrentVersion: false,
-        lastVersion: '0.7.0',
-        path: 'api/grpc',
-        routeBasePath: 'api/grpc',
-        sidebarPath: './sidebarsGrpc.ts',
-        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
-        versions: {
-          '0.7.0': {label: '0.7.0', path: '', banner: 'none', badge: true},
-          '0.5.1': {label: '0.5.1', path: '0.5.1', banner: 'unmaintained', badge: true},
-        },
-      } satisfies DocsPluginOptions,
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'dotnet',
-        includeCurrentVersion: false,
-        lastVersion: '0.2.0',
-        path: 'api/dotnet',
-        routeBasePath: 'api/dotnet',
-        sidebarPath: './sidebarsDotnet.ts',
-        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
-        versions: {
-          '0.2.0': {label: '0.2.0', path: '', banner: 'none', badge: true},
-          '0.1.0': {label: '0.1.0', path: '0.1.0', banner: 'unmaintained', badge: true},
-        },
-      } satisfies DocsPluginOptions,
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'python',
-        includeCurrentVersion: false,
-        lastVersion: '0.2.0',
-        path: 'api/python',
-        routeBasePath: 'api/python',
-        sidebarPath: './sidebarsPython.ts',
-        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
-        versions: {
-          '0.2.0': {label: '0.2.0', path: '', banner: 'none', badge: true},
-          '0.1.0': {label: '0.1.0', path: '0.1.0', banner: 'unmaintained', badge: true},
-        },
-      } satisfies DocsPluginOptions,
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'javascript',
-        includeCurrentVersion: false,
-        lastVersion: '0.2.0',
-        path: 'api/javascript',
-        routeBasePath: 'api/javascript',
-        sidebarPath: './sidebarsJavascript.ts',
-        editUrl: 'https://github.com/spatialanalyzer/briosa-docs/edit/main/',
-        versions: {
-          '0.2.0': {label: '0.2.0', path: '', banner: 'none', badge: true},
-          '0.1.0': {label: '0.1.0', path: '0.1.0', banner: 'unmaintained', badge: true},
-        },
-      } satisfies DocsPluginOptions,
-    ],
+    './plugins/api-reference/index.cjs',
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -157,7 +104,7 @@ const config: Config = {
         appId: algolia.appId!,
         apiKey: algolia.apiKey!,
         indexName: algolia.indexName!,
-        contextualSearch: true,
+        contextualSearch: false,
         searchPagePath: 'search',
         placeholder: 'Search All Documentation',
         insights: false,
@@ -200,30 +147,10 @@ const config: Config = {
           label: 'API Reference',
           to: '/api',
           items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'grpcSidebar',
-              docsPluginId: 'grpc',
-              label: 'gRPC API',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'dotnetSidebar',
-              docsPluginId: 'dotnet',
-              label: '.NET API',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'pythonSidebar',
-              docsPluginId: 'python',
-              label: 'Python API',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'javascriptSidebar',
-              docsPluginId: 'javascript',
-              label: 'JavaScript and TypeScript API',
-            },
+            {to: '/api/grpc', label: 'gRPC API'},
+            {to: '/api/dotnet', label: '.NET API'},
+            {to: '/api/python', label: 'Python API'},
+            {to: '/api/javascript', label: 'JavaScript and TypeScript API'},
           ],
         },
         {
@@ -232,30 +159,6 @@ const config: Config = {
           docsPluginId: 'catalog',
           position: 'left',
           label: 'MP Catalog',
-        },
-        {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'grpc',
-          position: 'right',
-          className: 'api-version-dropdown api-version-dropdown--grpc',
-        },
-        {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'dotnet',
-          position: 'right',
-          className: 'api-version-dropdown api-version-dropdown--dotnet',
-        },
-        {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'python',
-          position: 'right',
-          className: 'api-version-dropdown api-version-dropdown--python',
-        },
-        {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'javascript',
-          position: 'right',
-          className: 'api-version-dropdown api-version-dropdown--javascript',
         },
         ...(searchEnabled ? [{type: 'search', position: 'right' as const}] : []),
         {

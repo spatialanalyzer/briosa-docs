@@ -22,7 +22,7 @@ Build the same static output used by GitHub Pages:
 npm run check
 ```
 
-The site has three documentation collections:
+The site has these documentation collections:
 
 - `docs/` contains product guidance, setup, concepts, deployment, and contributing information
 - `api/grpc/` contains the versionable Briosa server and gRPC reference
@@ -30,15 +30,18 @@ The site has three documentation collections:
   versionable client-library references
 - `mp-command-catalog/` contains the complete exact-target SpatialAnalyzer MP catalog and support dispositions
 
-Each reference collection has its own Docusaurus plugin instance and sidebar.
-The `/api` route is an unversioned landing page that helps users choose the
-appropriate reference.
+Product guidance and the MP catalog use the native Docusaurus docs plugin.
+The four API families share `plugins/api-reference`, which splits committed
+release snapshots into static method pages and retains each target's saved MP
+group hierarchy. The `/api` route helps users choose a reference family.
 
 ## Documentation Search
 
 Global search uses the Algolia integration already supplied by the Docusaurus
 classic preset. The shared header provides Search and Ctrl/Cmd+K; `/search`
-provides the full result list and API version selectors when snapshots exist.
+provides the full result list across versions. The API context bar links to
+Search All Versions; the header search prefers the active API context while
+keeping other versions and general documentation discoverable.
 The Command Index retains its independent group, status, and validation filters.
 
 ### Public Connection Settings
@@ -92,11 +95,21 @@ existing index's settings.
 
 ### Indexing Rules
 
-The crawler uses the standard Docusaurus DocSearch helper for guides, API
-references, and landing pages. It keeps `language`, `version`, and
-`docusaurus_tag` metadata. Docusaurus contextual search searches all documentation
-instances, using the active version for the current reference and the preferred
-or latest version for each other reference.
+The crawler uses the standard Docusaurus DocSearch helper for product guides
+and landing pages. Static API pages produce method and section records with
+explicit `api_family`, `api_release`, `sa_target`, and `command_id` metadata,
+alongside `language`, `version`, and `docusaurus_tag`. Result URLs pin both
+release and SA target. API group indexes, history entry points, unavailable
+views, and legacy aliases do not create competing search records. Historical
+contracts remain searchable even when a newer target has no released API.
+
+When deploying the API redesign, update the hosted extractor and add
+`api_family`, `api_release`, and `sa_target` to the existing index's
+`attributesForFaceting`. Then run a full recrawl and verify a target-only method
+such as Run Crib Sheet, both Angle Between Line and Plane contracts, and
+Direct CAD Access's different defaults. Local tests do not apply these hosted
+changes. The sitemap already supplies the canonical routes; JavaScript
+rendering is not required to extract their contracts.
 
 Canonical catalog sections produce one DocSearch record per existing command
 anchor. The exact MP label is retained; breadcrumbs include the reviewed status,
@@ -208,7 +221,67 @@ npm run docusaurus docs:version:python <python-package-version>
 npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-Current defaults are Server **0.7.0** and clients **0.2.0**. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
+Current defaults are Server **0.7.0** and clients **0.2.0**. Working `api/`
+content is not published until snapshotted. The custom API plugin delegates
+these commands to Docusaurus's snapshot implementation and records the
+snapshot's default SA target in `plugins/api-reference/targets.json`.
+Set `workingDefault` there before cutting a release for a new target; never
+relabel an existing snapshot. Other exact targets remain in `sa-<target>/`
+source folders. This file describes publication layout, not protocol support.
+
+### API Routes And Authoring
+
+An exact reference has a permanent address such as
+`/api/grpc/sa-2024.1.0508.5/0.7.0/analysis-operations/angle-between-line-and-plane#request-parameters`.
+Target and release are independent; the SA target comes first in URLs and
+the context selectors. Every exact view contains its contract,
+metadata, and canonical link in static HTML. Short method URLs retain a
+cross-version history and resolve a remembered target when one exists. Old
+group URLs and command fragments retain HTML fallback links and migrate in
+the browser. Previous release/SA URLs also remain exact-target aliases; they
+are excluded from the sitemap and point to the new canonical SA/release URL.
+Unknown fragments display a recovery message.
+
+Version roots include directory-index fallbacks for static hosting. Use
+`npm run serve` to preview the build; the wrapper handles dotted version
+directories that Docusaurus's default preview server mistakes for files.
+
+API navigation uses the standard Docusaurus sidebar components, with scoped
+controls for command filtering and longer method lists. All desktop tables of
+contents share `src/theme/TOC` and `src/css/toc.css` across API, guide, and catalog
+pages. Keep those shared components consistent when adjusting navigation styles.
+
+The SA selector stores the explicit preference locally; following an exact
+URL sets the current browsing context without overriding that saved default.
+Both take precedence over the default target for a short entry URL. Storage
+failure does not prevent exact-URL navigation. The browser URL pins the current
+SA target, release, and section for copying or sharing. Version Differences
+provides ordinary links that work without JavaScript.
+
+Keep authoring contracts in the existing grouped Markdown snapshots and
+working sources. The renderer creates individual pages at build time, batches
+their data by group, and shares the layout across all four families. It
+preserves signatures, defaults, qualifications, shared types, and examples.
+Existing canonical catalog links supply reviewed command anchors where
+present; old heading anchors remain migration aliases. Do not merge renamed
+or superseded identities or change a published command slug without reviewed
+lineage evidence and retained aliases. The catalog itself is unchanged.
+Older JavaScript aggregate `Functions` sections lack per-method lineage links;
+their individual references retain a `functions/<function-name>` identity.
+They are not automatically merged into newer catalog-linked commands merely
+because a spelling resembles a newer function.
+
+Explicit "No released signature is available" placeholders and methods absent
+from a target render unavailable views with links to other references. They
+are excluded from search and the sitemap; their historical contracts remain
+indexable. Absence from a Briosa API snapshot never establishes that SA
+removed a command. Document an SA removal only with reviewed evidence.
+
+`tests/api-reference.test.cjs` checks every migrated contract and shared code
+block, stable anchors, target-only methods, first-call walkthroughs, and legacy
+links. Release, search, and SEO checks verify the built routes and metadata.
+Browser checks must also exercise target persistence, shared links, release
+switching, Back/Forward, mobile navigation, and keyboard access.
 
 ## Release Checklist
 
