@@ -1,6 +1,27 @@
 const {createHash} = require('node:crypto');
 const path = require('node:path');
 const fs = require('node:fs/promises');
+
+function routeTree(routes) {
+  const root = {children: new Map()};
+  for (const route of routes) {
+    let node = root;
+    let prefix = '/api';
+    for (const segment of route.path.split('/').slice(2)) {
+      prefix += '/' + segment;
+      if (!node.children.has(segment)) node.children.set(segment, {path: prefix, children: new Map()});
+      node = node.children.get(segment);
+    }
+    if (node.route) throw new Error(`Duplicate API route: ${route.path}`);
+    node.route = route;
+  }
+  const branch = (node) => node.children.size ? {
+    path: node.path, exact: false, component: '@site/src/components/ApiReference/RouteBranch.tsx',
+    routes: [...node.children.values()].map(branch).concat(node.route ? [node.route] : []),
+  } : node.route;
+  return [...root.children.values()].map(branch);
+}
+
 module.exports = function apiReference(context) {
   return {
     name: 'briosa-api-reference',
@@ -40,13 +61,15 @@ module.exports = function apiReference(context) {
         const data = await actions.createData(filename(key), JSON.stringify(batch));
         for (const path of Object.keys(batch)) pageFiles.set(path, data);
       }
+      const routes = [];
       for (const page of content.pages) {
-        actions.addRoute({path: page.path, exact: true, component: '@site/src/components/ApiReference/Page.tsx', modules: {pages: pageFiles.get(page.path), navigation: navFiles[page.base], manifest}, metadata: {sourceFilePath: page.source}, customData: {apiNoIndex: !page.available}});
+        routes.push({path: page.path, exact: true, component: '@site/src/components/ApiReference/Page.tsx', modules: {pages: pageFiles.get(page.path), navigation: navFiles[page.base], manifest}, metadata: {sourceFilePath: page.source}, customData: {apiNoIndex: !page.available}});
       }
       const redirectData = await actions.createData('redirects.json', JSON.stringify(content.redirects));
       for (const from of Object.keys(content.redirects)) {
-        actions.addRoute({path: from, exact: true, component: '@site/src/components/ApiReference/Legacy.tsx', modules: {redirects: redirectData, manifest}, customData: {apiNoIndex: true}});
+        routes.push({path: from, exact: true, component: '@site/src/components/ApiReference/Legacy.tsx', modules: {redirects: redirectData, manifest}, customData: {apiNoIndex: true}});
       }
+      for (const route of routeTree(routes)) actions.addRoute(route);
       actions.setGlobalData({releases: content.manifest.releases});
       console.log(`[API] ${content.pages.length} static references/history pages; ${Object.keys(content.redirects).length} preserved entry routes.`);
     },

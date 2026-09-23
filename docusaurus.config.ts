@@ -1,4 +1,5 @@
 import {lightCodeTheme, darkCodeTheme} from './src/theme/prism';
+import {flattenRoutes} from '@docusaurus/utils';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type {Options as DocsPluginOptions} from '@docusaurus/plugin-content-docs';
@@ -46,7 +47,7 @@ const config: Config = {
           ignorePatterns: ['/search', '/search/'],
           async createSitemapItems({defaultCreateSitemapItems, ...params}) {
             const items = await defaultCreateSitemapItems(params);
-            const api = params.routes.filter((route) => route.path.startsWith('/api/'));
+            const api = flattenRoutes(params.routes).filter((route) => route.path.startsWith('/api/'));
             const excluded = new Set(api.filter((route) => (route.customData as {apiNoIndex?: boolean} | undefined)?.apiNoIndex).map((route) => 'https://briosa.dev' + route.path));
             return items.filter((item) => !excluded.has(item.url));
           },

@@ -104,6 +104,7 @@ export async function loadReference(siteDir) {
             const legacyFunctions = [];
             for (const section of allSections.filter((s) => s.title === 'Functions')) {
               const codeBlocks = parser.parse(section.body).children.filter((n) => n.type === 'code');
+              const replacements = [];
               for (const block of codeBlocks) {
                 const starts = [...block.value.matchAll(/^function (\w+)\(/gm)];
                 for (const [index, start] of starts.entries()) {
@@ -113,8 +114,12 @@ export async function loadReference(siteDir) {
                   // Preserve its function identity without guessing a lineage merge.
                   legacyFunctions.push({title: start[1], anchor: `function-${slug}`, id: `${id}/functions/${slug}`, body: `\`\`\`${block.lang}\n${code}\n\`\`\``});
                 }
+                if (starts.length) {
+                  const prefix = block.value.slice(0, starts[0].index).trim();
+                  replacements.push({start: block.position.start.offset, end: block.position.end.offset, text: `${prefix ? `\`\`\`${block.lang}\n${prefix}\n\`\`\`\n\n` : ''}See the individual function references above.`});
+                }
               }
-              if (legacyFunctions.length) section.body = section.body.replace(/```[^\n]*\n[\s\S]*?```/g, 'See the individual function references above.');
+              for (const replacement of replacements.reverse()) section.body = section.body.slice(0, replacement.start) + replacement.text + section.body.slice(replacement.end);
             }
             const catalogAnchor = (s) => s.body.match(/\/mp-command-catalog\/commands\/[^\s)#]+#([^\s)]+)/)?.[1];
             const methods = [...allSections.filter((s) => catalogAnchor(s) || /\b(?:rpc |async def |public (?:static )?Task|(?:export )?(?:async )?function )/.test(s.body)), ...legacyFunctions];
@@ -130,6 +135,11 @@ export async function loadReference(siteDir) {
               const codes = parser.parse(body).children.filter((n) => n.type === 'code').map((n) => n.value);
               ctx.pages[methodId] = {id: methodId, title: method.title, group: id, anchor: method.anchor, kind: 'method', body, intro, shared: Boolean(shared), source, available: !/No released signature\s+is available/.test(body), releasedSource, contractHash: hash(body.replace(/\/api\/[^)\s]+/g, '/api')), codes};
             }
+            // Fail before bundling if a new source format would discard a code
+            // sample, type declaration, or signature during page extraction.
+            const retained = [...parser.parse(ctx.pages[id].body).children.filter((n) => n.type === 'code').map((n) => n.value), ...methods.flatMap((m) => ctx.pages[m.id].codes)];
+            const combined = retained.join('\n\n').replace(/\s+/g, ' ');
+            for (const original of ctx.pages[id].codes) if (!retained.includes(original) && !combined.includes(original.replace(/\s+/g, ' ').trim())) throw new Error(`API extraction lost a code block in ${source}`);
           } else ctx.pages[id] = {id, title: doc.title, label: doc.meta.sidebar_label, kind: 'guide', body: doc.body.replace(/^# .*\n/m, ''), source};
         }
         contexts.push(ctx);
