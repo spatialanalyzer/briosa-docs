@@ -8,54 +8,11 @@ import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import {rememberTarget, readTarget, routeFor, suffix, anchorOf} from './context';
 import type {Manifest, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
+import Sidebar from './Sidebar';
+import TOC from '@theme/TOC';
 import './styles.css';
 
 const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
-function Sidebar({navigation: nav, page}: {navigation: Navigation; page: PageData}) {
-  const [query, setQuery] = useState('');
-  const [expandedKeys, setExpandedKeys] = useState<Record<string, boolean>>({});
-  const [showAll, setShowAll] = useState<Record<string, boolean>>({});
-  const link = (id: string, title: string) => <Link className={page.id === id ? 'api-nav-active' : ''} aria-current={page.id === id ? 'page' : undefined} to={nav.base + suffix(id)}>{title}</Link>;
-  type Branch = {key: string; title: string; group?: Navigation['groups'][number]; children: Branch[]};
-  const roots: Branch[] = [];
-  for (const group of nav.groups) {
-    let children = roots;
-    let key = '';
-    for (const title of [...group.parents, group.title.split(' / ').at(-1)!]) {
-      key += '/' + title;
-      let branch = children.find((b) => b.key === key);
-      if (!branch) { branch = {key, title, children: []}; children.push(branch); }
-      if (title === group.title.split(' / ').at(-1)) branch.group = group;
-      children = branch.children;
-    }
-  }
-  const clean = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const matches = (branch: Branch): boolean => !query || Boolean(branch.group?.methods.some((m) => clean(m.title).includes(clean(query)))) || branch.children.some(matches);
-  const active = (branch: Branch): boolean => branch.group?.id === (page.group || page.id) || branch.children.some(active);
-  const renderBranch = (branch: Branch): React.ReactNode => {
-    if (!matches(branch)) return null;
-    const expanded = Boolean(query) || (expandedKeys[branch.key] ?? active(branch));
-    const methods = branch.group?.methods.filter((m) => !query || clean(m.title).includes(clean(query))) ?? [];
-    const currentIndex = Math.max(0, methods.findIndex((m) => m.id === page.id));
-    const start = Math.max(0, Math.min(currentIndex - 5, methods.length - 11));
-    const visibleMethods = query || showAll[branch.key] ? methods : methods.slice(start, start + 11);
-    return <li key={branch.key}><div className="api-group-title">{branch.group ? link(branch.group.id, branch.title) : <span>{branch.title}</span>}<button type="button" aria-expanded={expanded} aria-label={`${expanded ? 'Collapse' : 'Expand'} ${branch.title}`} onClick={() => setExpandedKeys((keys) => ({...keys, [branch.key]: !expanded}))}>{expanded ? '−' : '+'}</button></div>
-      {expanded && <ul>{visibleMethods.map((m) => <li key={m.id}>{link(m.id, m.title)}{!m.available && <small>Other SA Target</small>}</li>)}{visibleMethods.length < methods.length && <li><button className="api-show-all" type="button" onClick={() => setShowAll((all) => ({...all, [branch.key]: true}))}>Show All {methods.length} Commands</button></li>}{branch.children.map(renderBranch)}</ul>}
-    </li>;
-  };
-  return <nav className="api-sidebar" aria-label="API Documentation">
-    {link('overview', nav.label)}
-    {nav.discovery && link(nav.discovery, 'Server Discovery')}
-    <details open={nav.lifecycle.some((l) => l.id === page.id)}><summary>Lifecycle Methods</summary><ul>{nav.lifecycle.map((l) => <li key={l.id}>{link(l.id, l.title)}</li>)}</ul></details>
-    <details open={nav.firstCalls.some((l) => l.id === page.id)}><summary>First Calls</summary><ul>{nav.firstCalls.map((l) => <li key={l.id}>{link(l.id, l.title)}</li>)}</ul></details>
-    {nav.valueTypes && link('value-types', 'MP Value Types')}
-    <details open><summary>MP Commands</summary>
-      <label className="api-filter">Find a Command<input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name or API spelling" /></label>
-      <ul className="api-groups">{roots.map(renderBranch)}</ul>
-    </details>
-  </nav>;
-}
-
 export default function ApiPage({pages, navigation, manifest}: {pages: Record<string, PageData>; navigation: Navigation; manifest: Manifest}): React.JSX.Element {
   const history = useHistory();
   const location = useLocation();
@@ -93,7 +50,7 @@ export default function ApiPage({pages, navigation, manifest}: {pages: Record<st
     rememberTarget(target, true);
     history.push(to + location.hash);
   }
-  const toc = [...page.toc, {id: 'version-differences', title: 'Version Differences'}];
+  const toc = [...page.toc, {id: 'version-differences', title: 'Version Differences'}].map(({id, title}) => ({id, level: 2, value: title.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')}));
   return <Layout title={title} description={page.description} wrapperClassName="api-reference-layout">
     <Head>
       <link rel="canonical" href={`https://briosa.dev${page.path}`} />
@@ -106,7 +63,7 @@ export default function ApiPage({pages, navigation, manifest}: {pages: Record<st
     </Head>
     <div className="api-reference">
       <aside className={`api-navigation${mobileNavOpen ? ' api-navigation-open' : ''}`}>
-        <button className="api-navigation-toggle" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>API Navigation {mobileNavOpen ? '−' : '+'}</button>
+        <button className="api-navigation-toggle clean-btn menu__link menu__link--sublist-caret" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>API Navigation</button>
         <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} /></div>
       </aside>
       <main id="api-main" className="api-main">
@@ -134,7 +91,7 @@ export default function ApiPage({pages, navigation, manifest}: {pages: Record<st
           <p className="api-edit"><a href={`https://github.com/spatialanalyzer/briosa-docs/edit/main/${page.source}`}>Edit This Reference</a></p>
         </article>
       </main>
-      <aside className="api-toc"><nav aria-label="On This Page"><strong>On This Page</strong><ul>{toc.map((t) => <li key={t.id}><a href={`#${t.id}`}>{t.title}</a></li>)}</ul></nav></aside>
+      <aside className="api-toc"><TOC toc={toc} /></aside>
     </div>
   </Layout>;
 }

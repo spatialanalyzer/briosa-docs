@@ -27,7 +27,7 @@ export default function Legacy({redirects, manifest}: {redirects: Record<string,
     if (!route) { setProblem(`No reference is published for SA ${target} in this release. Choose a documented reference below.`); return; }
     history.replace(route + (method ? '' : location.hash));
   }, [history, location.hash, location.search, manifest, redirect]);
-  return <Layout title="API Reference Link" description="Continue to the versioned API reference.">
+  return <Layout noFooter title="API Reference Link" description="Continue to the versioned API reference.">
     <Head><meta name="robots" content="noindex, follow" /><link rel="canonical" href={`https://briosa.dev${redirect.to}`} /></Head>
     <main className="container margin-vert--lg"><h1>API Reference</h1><p role="status">{problem || 'This reference has a permanent versioned address.'}</p>
       <p><Link to={redirect.to}>Open the Reference</Link></p>

@@ -246,6 +246,11 @@ Version roots include directory-index fallbacks for static hosting. Use
 `npm run serve` to preview the build; the wrapper handles dotted version
 directories that Docusaurus's default preview server mistakes for files.
 
+API navigation uses the standard Docusaurus sidebar components, with scoped
+controls for command filtering and longer method lists. All desktop tables of
+contents share `src/theme/TOC` and `src/css/toc.css` across API, guide, and catalog
+pages. Keep those shared components consistent when adjusting navigation styles.
+
 The SA selector stores the explicit preference locally; following an exact
 URL sets the current browsing context without overriding that saved default.
 Both take precedence over the default target for a short entry URL. Storage
