@@ -9,7 +9,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
+    "serve": "node scripts/serve.cjs",
     "check": "npm run typecheck && npm run build && npm run check:search && npm run check:seo",
     "check:search": "node --test search/crawler.test.cjs",
     "check:seo": "node --test tests/seo.test.cjs tests/releases.test.cjs tests/api-reference.test.cjs",

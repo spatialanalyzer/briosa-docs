@@ -242,6 +242,10 @@ the browser. Previous release/SA URLs also remain exact-target aliases; they
 are excluded from the sitemap and point to the new canonical SA/release URL.
 Unknown fragments display a recovery message.
 
+Version roots include directory-index fallbacks for static hosting. Use
+`npm run serve` to preview the build; the wrapper handles dotted version
+directories that Docusaurus's default preview server mistakes for files.
+
 The SA selector stores the explicit preference locally; following an exact
 URL sets the current browsing context without overriding that saved default.
 Both take precedence over the default target for a short entry URL. Storage

@@ -43,6 +43,19 @@ module.exports = function apiReference(context) {
       const {compileReference} = await import('./content.mjs');
       return compileReference(context.siteDir);
     },
+    async postBuild({outDir, content}) {
+      // Version roots also contain child pages. Supply directory indexes for
+      // static hosts that resolve a directory before its sibling .html file.
+      const roots = new Set([
+        ...content.pages.filter((page) => page.id === 'overview').map((page) => page.path),
+        ...Object.entries(content.redirects).filter(([, redirect]) => redirect.id === 'overview').map(([from]) => from),
+      ]);
+      for (const route of roots) {
+        const destination = path.join(outDir, route.slice(1));
+        await fs.mkdir(destination, {recursive: true});
+        await fs.copyFile(`${destination}.html`, path.join(destination, 'index.html'));
+      }
+    },
     async contentLoaded({content, actions}) {
       const manifest = await actions.createData('manifest.json', JSON.stringify(content.manifest));
       const navFiles = {};

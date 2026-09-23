@@ -3,8 +3,29 @@ const assert = require('node:assert/strict');
 const {readFileSync, existsSync} = require('node:fs');
 const path = require('node:path');
 const {load} = require('cheerio');
+const {spawn} = require('node:child_process');
 const root = path.join(__dirname, '..');
 const read = (route) => load(readFileSync(path.join(root, 'build', route.slice(1) + '.html'), 'utf8'));
+
+test('version-root URLs serve real HTML instead of a client-recovered 404', async (t) => {
+  const server = spawn(process.execPath, ['scripts/serve.cjs', '--port', '0'], {cwd: root, stdio: ['ignore', 'pipe', 'pipe']});
+  t.after(() => server.kill());
+  const origin = await new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error('Preview server did not start')), 15000);
+    server.once('error', reject);
+    server.once('exit', (code) => { clearTimeout(timeout); reject(new Error(`Preview server exited: ${code}`)); });
+    server.stdout.on('data', (data) => {
+      const url = data.toString().match(/http:\/\/127\.0\.0\.1:\d+/)?.[0];
+      if (url) { clearTimeout(timeout); resolve(url); }
+    });
+  });
+  for (const route of ['/api/grpc/sa-2026.1.0529.7/0.7.0', '/api/dotnet/sa-2024.1.0508.5/0.2.0/', '/api/grpc/0.7.0/sa-2026.1.0529.7']) {
+    const response = await fetch(origin + route);
+    assert.equal(response.status, 200, route);
+    assert.doesNotMatch(load(await response.text())('h1').text(), /Page Not Found/);
+  }
+  assert.equal((await fetch(origin + '/api/grpc/sa-2026.1.0529.7/9.9.9')).status, 404);
+});
 
 test('API target preference survives navigation and denied storage keeps URL routing usable', async () => {
   const context = await import('../src/components/ApiReference/context.ts');
@@ -109,6 +130,9 @@ test('SA-first routes preserve exact release-first URLs and section links withou
     const toolbar = read(canonical)('.api-toolbar');
     assert.deepEqual(toolbar.find('.api-version-label').toArray().map((n) => n.children[0].data), ['SpatialAnalyzer', family === 'grpc' ? 'Server Release' : 'Client Release']);
     assert.doesNotMatch(toolbar.text(), /Copy (?:History )?Link/);
+    for (const base of [`/api/${family}/sa-${target}/${release}`, `/api/${family}/${release}/sa-${target}`]) {
+      assert.equal(readFileSync(path.join(root, 'build', base, 'index.html'), 'utf8'), readFileSync(path.join(root, 'build', base + '.html'), 'utf8'));
+    }
   }
 });
 
