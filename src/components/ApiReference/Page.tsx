@@ -7,6 +7,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import {rememberTarget, readTarget, routeFor, suffix, anchorOf} from './context';
 import type {Manifest, Navigation, PageData} from './types';
+import VersionSelect from './VersionSelect';
 import './styles.css';
 
 const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
@@ -92,10 +93,6 @@ export default function ApiPage({pages, navigation, manifest}: {pages: Record<st
     rememberTarget(target, true);
     history.push(to + location.hash);
   }
-  async function copyLink() {
-    try { await navigator.clipboard.writeText(`https://briosa.dev${page.path}${location.hash}`); setNotice('Link copied.'); }
-    catch { setNotice(`Copy this link: https://briosa.dev${page.path}${location.hash}`); }
-  }
   const toc = [...page.toc, {id: 'version-differences', title: 'Version Differences'}];
   return <Layout title={title} description={page.description} wrapperClassName="api-reference-layout">
     <Head>
@@ -114,9 +111,8 @@ export default function ApiPage({pages, navigation, manifest}: {pages: Record<st
       </aside>
       <main id="api-main" className="api-main">
         <div className="api-toolbar" aria-label="API Context">
-          <label>{page.family === 'grpc' ? 'Server Release' : 'Client Release'}<select value={page.release} onChange={(e) => select(e.target.value, page.target)}>{manifest.releases[page.family].map((v) => <option key={v}>{v}</option>)}</select></label>
-          <label>SpatialAnalyzer<select aria-label="SpatialAnalyzer Target" value={isHistory ? '' : page.target} onChange={(e) => select(page.release, e.target.value)}>{isHistory && <option value="">Choose a Target</option>}{targets.map((t, i) => <option value={t} key={t}>{i === 0 ? 'Latest — ' : ''}SA {t}</option>)}</select></label>
-          <button type="button" onClick={copyLink}>{isHistory ? 'Copy History Link' : 'Copy Link'}</button>
+          <VersionSelect label="SpatialAnalyzer" value={isHistory ? '' : page.target} onChange={(target) => select(page.release, target)} options={targets.map((target, i) => ({value: target, label: `SA ${target}`, badge: i === 0 ? 'Latest' : undefined}))} />
+          <VersionSelect label={page.family === 'grpc' ? 'Server Release' : 'Client Release'} value={page.release} onChange={(release) => select(release, page.target)} options={manifest.releases[page.family].map((release) => ({value: release, label: release}))} />
           {Boolean(siteConfig.themeConfig.algolia) && <Link to="/search" className="api-search-all">Search All Versions</Link>}
         </div>
         <p className="api-notice" role="status">{notice}</p>

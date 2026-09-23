@@ -15,10 +15,18 @@
 .api-filter input {width:100%;margin-top:.4rem;padding:.5rem;background:var(--ifm-background-color);color:var(--ifm-font-color-base);border:1px solid var(--briosa-border);border-radius:5px}
 .api-main {padding:1.25rem 2.5rem 3rem;min-width:0}
 .api-toolbar {display:flex;gap:1rem;justify-content:flex-end;align-items:flex-end;flex-wrap:wrap;border-bottom:1px solid var(--briosa-border);padding-bottom:1rem}
-.api-toolbar label {font-size:.75rem;color:var(--briosa-muted);font-weight:600}
-.api-toolbar select,.api-toolbar button {display:block;font:inherit;font-size:.9rem;color:var(--ifm-font-color-base);background:var(--ifm-background-surface-color);border:1px solid var(--briosa-border);border-radius:6px;padding:.55rem .65rem;min-height:40px}
-.api-toolbar select {margin-top:.25rem;max-width:100%}
-.api-toolbar button {cursor:pointer}
+.api-version-select {position:relative;max-width:100%;min-width:9rem}
+.api-version-label {display:block;font-size:.75rem;color:var(--briosa-muted);font-weight:600;margin-bottom:.25rem}
+.api-version-trigger {display:flex;align-items:center;justify-content:space-between;gap:.65rem;width:100%;font:inherit;font-size:.9rem;color:var(--ifm-font-color-base);background:var(--ifm-background-surface-color);border:1px solid var(--briosa-border);border-radius:6px;padding:.55rem .65rem;min-height:40px;cursor:pointer;text-align:left}
+.api-version-trigger:hover,.api-version-trigger[aria-expanded=true] {border-color:var(--ifm-color-primary)}
+.api-version-chevron {flex-shrink:0;color:var(--briosa-muted)}
+.api-version-trigger[aria-expanded=true] .api-version-chevron {transform:rotate(180deg)}
+.api-version-options {position:absolute;top:100%;right:0;z-index:20;list-style:none;margin:.4rem 0 0;padding:.35rem;min-width:100%;width:max-content;max-width:calc(100vw - 2rem);max-height:18rem;overflow-y:auto;background:var(--ifm-background-surface-color);color:var(--ifm-font-color-base);border:1px solid var(--briosa-border);border-radius:8px;box-shadow:0 8px 24px rgba(0,20,40,.18)}
+.api-version-options [role=option] {display:flex;align-items:center;gap:.55rem;padding:.6rem .55rem;min-height:44px;border-radius:4px;font-size:.875rem;cursor:pointer;white-space:nowrap}
+.api-version-options [aria-selected=true] {color:var(--ifm-color-primary);font-weight:600}
+.api-version-options .api-version-option-active {background:var(--ifm-menu-color-background-active);outline:1px solid var(--briosa-border);outline-offset:-1px}
+.api-version-check {width:1rem;flex-shrink:0;color:var(--ifm-color-primary)}
+.api-version-badge {margin-left:auto;border:1px solid var(--briosa-border);border-radius:4px;padding:.05rem .35rem;font-size:.65rem;font-weight:600;color:var(--briosa-muted);background:var(--briosa-soft)}
 .api-notice {font-size:.875rem;margin:.5rem 0;overflow-wrap:anywhere}
 .api-breadcrumbs {font-size:.8rem;margin:1.25rem 0}
 .api-eyebrow {font-size:.8rem;color:var(--briosa-muted);margin-bottom:.5rem}
@@ -46,4 +54,4 @@
 .api-edit {font-size:.85rem}
 .api-reference :is(a,button,select,input,summary):focus-visible {outline:3px solid var(--ifm-color-primary);outline-offset:3px}
 @media(max-width:1200px){.api-reference{grid-template-columns:255px minmax(0,1fr)}.api-toc{display:none}.api-main{padding:1.25rem 1.5rem}}
-@media(max-width:800px){.api-reference{display:block}.api-navigation{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--briosa-border);padding:.5rem 1rem}.api-navigation-toggle{display:block}.api-navigation:not(.api-navigation-open) #api-navigation-content{display:none}.api-main{padding:1rem}.api-toolbar{justify-content:flex-start;gap:.7rem}.api-toolbar label{max-width:100%}.api-method-index{columns:1}}
+@media(max-width:800px){.api-reference{display:block}.api-navigation{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--briosa-border);padding:.5rem 1rem}.api-navigation-toggle{display:block}.api-navigation:not(.api-navigation-open) #api-navigation-content{display:none}.api-main{padding:1rem}.api-toolbar{justify-content:flex-start;gap:.7rem}.api-version-options{left:0;right:auto}.api-method-index{columns:1}}

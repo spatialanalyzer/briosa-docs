@@ -232,19 +232,22 @@ source folders. This file describes publication layout, not protocol support.
 ### API Routes And Authoring
 
 An exact reference has a permanent address such as
-`/api/grpc/0.7.0/sa-2024.1.0508.5/analysis-operations/angle-between-line-and-plane#request-parameters`.
-Release and target are independent. Every exact view contains its contract,
+`/api/grpc/sa-2024.1.0508.5/0.7.0/analysis-operations/angle-between-line-and-plane#request-parameters`.
+Target and release are independent; the SA target comes first in URLs and
+the context selectors. Every exact view contains its contract,
 metadata, and canonical link in static HTML. Short method URLs retain a
 cross-version history and resolve a remembered target when one exists. Old
 group URLs and command fragments retain HTML fallback links and migrate in
-the browser. Unknown fragments display a recovery message.
+the browser. Previous release/SA URLs also remain exact-target aliases; they
+are excluded from the sitemap and point to the new canonical SA/release URL.
+Unknown fragments display a recovery message.
 
 The SA selector stores the explicit preference locally; following an exact
 URL sets the current browsing context without overriding that saved default.
 Both take precedence over the default target for a short entry URL. Storage
-failure does not prevent exact-URL navigation. Copy Link pins the current
-release, target, and section. Version Differences provides ordinary links
-that work without JavaScript.
+failure does not prevent exact-URL navigation. The browser URL pins the current
+SA target, release, and section for copying or sharing. Version Differences
+provides ordinary links that work without JavaScript.
 
 Keep authoring contracts in the existing grouped Markdown snapshots and
 working sources. The renderer creates individual pages at build time, batches

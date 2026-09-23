@@ -6,12 +6,12 @@ import {useLocation} from '@docusaurus/router';
 export default function SearchBar(): React.JSX.Element | null {
   const {siteConfig} = useDocusaurusContext();
   const {pathname} = useLocation();
-  const context = pathname.match(/^\/api\/(grpc|dotnet|python|javascript)\/([^/]+)\/sa-([^/]+)/);
+  const context = pathname.match(/^\/api\/(grpc|dotnet|python|javascript)\/sa-([^/]+)\/([^/]+)(?:\/|$)/);
   if (!siteConfig.themeConfig.algolia) return null;
 
   return (
     <OriginalSearchBar
-      searchParameters={context ? {optionalFilters: [`api_family:${context[1]}`, `api_release:${context[2]}`, `sa_target:${context[3]}`]} : undefined}
+      searchParameters={context ? {optionalFilters: [`api_family:${context[1]}`, `sa_target:${context[2]}`, `api_release:${context[3]}`]} : undefined}
       getMissingResultsUrl={({query}: {query: string}) =>
         `/mp-command-catalog/commands?q=${encodeURIComponent(query)}`
       }

@@ -14,7 +14,7 @@ const renderer = unified().use(remarkParse).use(remarkGfm).use(remarkRehype, {al
 const hash = (text) => createHash('sha256').update(text).digest('hex');
 const textOf = (node) => node.value ?? (node.children ?? []).map(textOf).join('');
 const walk = (node, visit) => { visit(node); for (const child of node.children ?? []) walk(child, visit); };
-export const exactBase = (family, release, target) => `/api/${family}/${release}/sa-${target}`;
+export const exactBase = (family, release, target) => `/api/${family}/sa-${target}/${release}`;
 export const suffix = (id) => id === 'overview' ? '' : `/${id}`;
 
 function document(raw) {
@@ -175,6 +175,8 @@ export async function compileReference(siteDir) {
       if (releases[family].includes(parts[0])) release = parts.shift();
       let target = ctx.target;
       if (parts[0]?.startsWith('sa-')) target = parts.shift().slice(3);
+      // Accept both canonical SA/release links and older release/SA snapshots.
+      if (releases[family].includes(parts[0])) release = parts.shift();
       dest = lookup(family, release, target);
       if (!dest) return href;
       destId = parts.join('/') || 'overview';
@@ -299,6 +301,20 @@ export async function compileReference(siteDir) {
       const sectionLinks = Object.fromEntries((canonical?.toc ?? []).map((s) => [s.id, `${destination}#${s.id}`]));
       redirects[legacyBase + suffix(id)] = {to: destination, sectionLinks, aliases: ctx.pages[id].methods ? Object.fromEntries(ctx.pages[id].methods.map((m) => [m.anchor, ctx.base + suffix(m.id)])) : {}, family: ctx.family, release: ctx.release, target: ctx.target, id: destId, explicitTarget: ctx.target !== ctx.defaultTarget};
     }
+  }
+  // Preserve the first redesign's release/SA addresses, including section links.
+  // Exact aliases stay pinned to their target regardless of browser preferences.
+  for (const page of pages) {
+    const {family, release, target, id} = page;
+    redirects[`/api/${family}/${release}/sa-${target}` + suffix(id)] = {
+      to: page.path, family, release, target, id, explicitTarget: true,
+      aliases: page.aliases,
+      sectionLinks: Object.fromEntries([...(page.anchors ?? []), 'version-differences'].map((anchor) => [anchor, `${page.path}#${anchor}`])),
+    };
+  }
+  for (const ctx of contexts) for (const id of Object.keys(firstCalls)) {
+    const redirect = redirects[ctx.base + suffix(id)];
+    if (redirect) redirects[`/api/${ctx.family}/${ctx.release}/sa-${ctx.target}` + suffix(id)] = redirect;
   }
   // Short method entry points retain useful cross-version history even after removal.
   for (const family of Object.keys(families)) {

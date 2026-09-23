@@ -143,8 +143,9 @@ test('API results keep exact release/SA context and method-section destinations'
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
       const release = family === 'grpc' ? '0.7.0' : '0.2.0';
-      const route = `api/${family}/${release}/sa-${target}/analysis-operations/angle-between-line-and-plane`;
+      const route = `api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`;
       const records = run(route);
+      assert.equal(run(`api/${family}/${release}/sa-${target}/analysis-operations/angle-between-line-and-plane`).length, 0);
       assert.ok(records.length > 1);
       for (const record of records) {
         assert.equal(record.sa_target, target);
@@ -156,6 +157,6 @@ test('API results keep exact release/SA context and method-section destinations'
     }
   }
   assert.equal(run('api/grpc/analysis-operations').length, 0);
-  assert.ok(run('api/grpc/0.7.0/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations/run-crib-sheet').length > 0);
-  assert.equal(run('api/grpc/0.7.0/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations/run-crib-sheet').length, 0);
+  assert.ok(run('api/grpc/sa-2024.1.0508.5/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length > 0);
+  assert.equal(run('api/grpc/sa-2026.1.0529.7/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length, 0);
 });

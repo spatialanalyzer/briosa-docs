@@ -21,7 +21,8 @@ export default function Legacy({redirects, manifest}: {redirects: Record<string,
     const target = redirect.explicitTarget ? redirect.target : queryTarget || readTarget() || redirect.target;
     const anchor = anchorOf(location.hash);
     const method = redirect.aliases[anchor];
-    const id = method ? method.split(/\/sa-[^/]+\//)[1] : redirect.id;
+    const base = manifest.contexts.find((c) => c.family === redirect.family && c.release === redirect.release && c.target === redirect.target)?.base;
+    const id = method && base ? method.slice(base.length + 1) : redirect.id;
     const route = routeFor(manifest, redirect.family, redirect.release, target, id);
     if (!route) { setProblem(`No reference is published for SA ${target} in this release. Choose a documented reference below.`); return; }
     history.replace(route + (method ? '' : location.hash));

@@ -65,9 +65,15 @@ module.exports = function apiReference(context) {
       for (const page of content.pages) {
         routes.push({path: page.path, exact: true, component: '@site/src/components/ApiReference/Page.tsx', modules: {pages: pageFiles.get(page.path), navigation: navFiles[page.base], manifest}, metadata: {sourceFilePath: page.source}, customData: {apiNoIndex: !page.available}});
       }
-      const redirectData = await actions.createData('redirects.json', JSON.stringify(content.redirects));
-      for (const from of Object.keys(content.redirects)) {
-        routes.push({path: from, exact: true, component: '@site/src/components/ApiReference/Legacy.tsx', modules: {redirects: redirectData, manifest}, customData: {apiNoIndex: true}});
+      const redirectBatches = new Map();
+      for (const [from, redirect] of Object.entries(content.redirects)) {
+        const key = `${redirect.family}/${redirect.target}/${redirect.release}/${redirect.id.split('/')[0]}`;
+        if (!redirectBatches.has(key)) redirectBatches.set(key, {});
+        redirectBatches.get(key)[from] = redirect;
+      }
+      for (const [key, batch] of redirectBatches) {
+        const data = await actions.createData(`redirect-${filename(key)}`, JSON.stringify(batch));
+        for (const from of Object.keys(batch)) routes.push({path: from, exact: true, component: '@site/src/components/ApiReference/Legacy.tsx', modules: {redirects: data, manifest}, customData: {apiNoIndex: true}});
       }
       for (const route of routeTree(routes)) actions.addRoute(route);
       actions.setGlobalData({releases: content.manifest.releases});

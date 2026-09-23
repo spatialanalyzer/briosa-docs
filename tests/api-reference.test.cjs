@@ -29,10 +29,10 @@ test('API target preference survives navigation and denied storage keeps URL rou
     assert.doesNotThrow(() => context.rememberTarget('2026.1.0529.7', true));
     assert.equal(context.readTarget(), null);
     const manifest = {releases: {grpc: ['0.7.0']}, contexts: [
-      {family: 'grpc', release: '0.7.0', target: '2024.1.0508.5', base: '/api/grpc/0.7.0/sa-2024.1.0508.5', ids: ['group/method']},
-      {family: 'grpc', release: '0.7.0', target: '2026.1.0529.7', base: '/api/grpc/0.7.0/sa-2026.1.0529.7', ids: []},
+      {family: 'grpc', release: '0.7.0', target: '2024.1.0508.5', base: '/api/grpc/sa-2024.1.0508.5/0.7.0', ids: ['group/method']},
+      {family: 'grpc', release: '0.7.0', target: '2026.1.0529.7', base: '/api/grpc/sa-2026.1.0529.7/0.7.0', ids: []},
     ]};
-    assert.equal(context.routeFor(manifest, 'grpc', '0.7.0', '2026.1.0529.7', 'group/method'), '/api/grpc/0.7.0/sa-2026.1.0529.7/group/method');
+    assert.equal(context.routeFor(manifest, 'grpc', '0.7.0', '2026.1.0529.7', 'group/method'), '/api/grpc/sa-2026.1.0529.7/0.7.0/group/method');
     assert.equal(context.routeFor(manifest, 'grpc', '0.5.1', '2024.1.0508.5', 'group/method'), undefined);
     assert.equal(context.anchorOf('#invalid%escape'), 'invalid%escape');
   } finally {
@@ -73,27 +73,47 @@ test('every released MP method preserves its original code, canonical route, and
 
 test('target-only methods retain historical documentation and explicit unavailable states', () => {
   const method = '/instrument-operations-crib-sheet-operations/run-crib-sheet';
-  const old = read('/api/grpc/0.7.0/sa-2024.1.0508.5' + method);
-  const current = read('/api/grpc/0.7.0/sa-2026.1.0529.7' + method);
+  const old = read('/api/grpc/sa-2024.1.0508.5/0.7.0' + method);
+  const current = read('/api/grpc/sa-2026.1.0529.7/0.7.0' + method);
   assert.match(old('.api-contract').text(), /rpc RunCribSheet/);
   assert.doesNotMatch(current('.api-contract').text(), /rpc RunCribSheet/);
   assert.match(current('article').text(), /Unavailable for This Target/);
   assert.match(current('meta[name="robots"]').attr('content'), /noindex/);
-  assert.ok(current(`a[href="/api/grpc/0.7.0/sa-2024.1.0508.5${method}"]`).length);
+  assert.ok(current(`a[href="/api/grpc/sa-2024.1.0508.5/0.7.0${method}"]`).length);
   const history = read('/api/grpc' + method);
   assert.match(history('h1').text(), /Run Crib Sheet/);
-  assert.ok(history(`a[href="/api/grpc/0.7.0/sa-2024.1.0508.5${method}"]`).length);
+  assert.ok(history(`a[href="/api/grpc/sa-2024.1.0508.5/0.7.0${method}"]`).length);
 });
 
 test('canonical method pages split requests/results and retain first-call walkthroughs', () => {
-  const $ = read('/api/grpc/0.7.0/sa-2024.1.0508.5/analysis-operations/angle-between-line-and-plane');
+  const $ = read('/api/grpc/sa-2024.1.0508.5/0.7.0/analysis-operations/angle-between-line-and-plane');
   for (const anchor of ['signature', 'request-parameters', 'response', 'request-selected-line', 'version-differences']) assert.equal($('#' + anchor).length, 1, anchor);
-  assert.match(read('/api/grpc/0.7.0/sa-2026.1.0529.7/file-operations/get-working-directory')('.api-contract').text(), /grpcurl/);
+  assert.match(read('/api/grpc/sa-2026.1.0529.7/0.7.0/file-operations/get-working-directory')('.api-contract').text(), /grpcurl/);
   assert.doesNotMatch($('.api-sidebar').first().text(), /SA 2024\.1\.0508\.5/);
 });
 
+test('SA-first routes preserve exact release-first URLs and section links without indexing aliases', () => {
+  const sitemap = readFileSync(path.join(root, 'build', 'sitemap.xml'), 'utf8');
+  for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
+    const release = family === 'grpc' ? '0.7.0' : '0.2.0';
+    const target = '2024.1.0508.5';
+    const method = '/analysis-operations/angle-between-line-and-plane';
+    const canonical = `/api/${family}/sa-${target}/${release}${method}`;
+    const old = `/api/${family}/${release}/sa-${target}${method}`;
+    const $ = read(old);
+    assert.match($('meta[name="robots"]').attr('content'), /noindex/);
+    assert.equal($('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + canonical);
+    assert.equal($('#signature a').attr('href'), canonical + '#signature');
+    assert.ok(sitemap.includes('https://briosa.dev' + canonical + '</loc>'));
+    assert.ok(!sitemap.includes('https://briosa.dev' + old + '</loc>'));
+    const toolbar = read(canonical)('.api-toolbar');
+    assert.deepEqual(toolbar.find('.api-version-label').toArray().map((n) => n.children[0].data), ['SpatialAnalyzer', family === 'grpc' ? 'Server Release' : 'Client Release']);
+    assert.doesNotMatch(toolbar.text(), /Copy (?:History )?Link/);
+  }
+});
+
 test('older aggregate JavaScript signatures receive pages without inferred lineage merges', () => {
-  const base = '/api/javascript/0.1.0/sa-2026.1.0529.7/construction-operations-point-clouds';
+  const base = '/api/javascript/sa-2026.1.0529.7/0.1.0/construction-operations-point-clouds';
   const $ = read(base + '/functions/construct-boundary-points-from-cloud');
   assert.match($('.api-contract').text(), /function constructBoundaryPointsFromCloud/);
   assert.ok($(`a[href="${base}"]`).length, 'shared types remain reachable');
