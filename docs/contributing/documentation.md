@@ -27,7 +27,7 @@ duplicating client usage guidance.
 
 ## Draft and Release API Contracts
 
-Current defaults are Server **0.7.0** and clients **0.2.0**. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
+Current defaults are Server **0.8.0** and clients **0.3.0**. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
 
 ## Release Checklist
 

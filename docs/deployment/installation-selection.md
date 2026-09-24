@@ -10,9 +10,9 @@ client from the Briosa distribution it can run. One workstation can keep SA
 2024.1.0508.5 and SA 2026.1.0529.7 products, including several Briosa versions
 for either target. Each application makes its own selection.
 
-:::note[Client 0.2.0]
+:::note[Client 0.3.0]
 
-This guide describes Server 0.7.0 and client 0.2.0, available for both exact SA
+This guide describes Server 0.8.0 and client 0.3.0, available for both exact SA
 targets. See [Release Status](/docs/releases) for package links and validation.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
@@ -66,7 +66,7 @@ using Briosa;
 
 var selection = new BriosaServerSelection
 {
-    Version = "0.7.0",
+    Version = "0.8.0",
     SearchRoots = [@"D:\Briosa Packages"],
 };
 var report = BriosaInstallations.Discover(selection);
@@ -84,7 +84,7 @@ For Node.js with the exact-target package installed under the `briosa` alias:
 ```typescript
 import { createBriosaClient, discoverInstallations } from 'briosa';
 
-const serverSelection = { version: '0.7.0' };
+const serverSelection = { version: '0.8.0' };
 const report = await discoverInstallations(serverSelection);
 const client = createBriosaClient();
 try {
@@ -101,7 +101,7 @@ For Python in an environment containing one exact-target distribution:
 from briosa import BriosaClient, BriosaServerSelection, BriosaStartOptions
 
 async def run():
-    selection = BriosaServerSelection(version="0.7.0")
+    selection = BriosaServerSelection(version="0.8.0")
     async with BriosaClient() as client:
         await client.start(BriosaStartOptions(
             server_selection=selection,
@@ -148,6 +148,7 @@ Existing packages retain their original runtime requirements:
 | 0.1.0 | Its exact pinned Server 0.6.0 build for the package's SA target |
 | 0.1.1 | Its exact pinned Server 0.6.1 build for the package's SA target |
 | 0.2.0 | Contract-aware selection, plus the reviewed Server 0.6.1 exception |
+| 0.3.0 | Same runtime contract; [MP argument name migration](/docs/mp-argument-name-migration) |
 
 Installing a new server does not broaden an old client's compatibility. Keep
 the old distribution installed until applications using it have migrated.

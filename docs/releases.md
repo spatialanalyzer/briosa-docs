@@ -13,11 +13,11 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.7.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.7.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 1.0 |
+| Briosa Server and Control Center | [0.8.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.8.0) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 1.0 |
 | Briosa Installer | [0.3.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0) | Signed Windows setup and portable distribution; side-by-side installation registration |
-| .NET client | 0.2.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.2.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.2.0) |
-| Python client | 0.2.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.2.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.2.0/) |
-| JavaScript/TypeScript client | 0.2.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.2.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.2.0) |
+| .NET client | 0.3.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.3.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.3.0) |
+| Python client | 0.3.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.3.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.3.0/) |
+| JavaScript/TypeScript client | 0.3.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.3.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.3.0) |
 
 Use [Install Briosa](/install) to obtain the released Windows products and
 [Install the Exact-Target Client](/docs/getting-started/run-the-server#install-the-exact-target-client)
@@ -25,11 +25,11 @@ for registry installation commands. A separately installed and licensed
 SpatialAnalyzer environment remains required for MP execution. Connections
 remain local and use loopback.
 
-Each package name contains the exact SA target; its **0.2.0** package version is
-independent of SA and the server version. Client 0.2.0 selects a server implementing
+Each package name contains the exact SA target; its **0.3.0** package version is
+independent of SA and the server version. Client 0.3.0 selects a server implementing
 behavioral contract major 1 with revision at least 0, with a tested exception for
 the exact published Server 0.6.1. Its generation artifact remains pinned to Server
-0.7.0. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
+0.8.0. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
 the npm alias `briosa`. Use separate environments or applications for different targets.
 See [installation selection and migration](/docs/deployment/installation-selection).
 
@@ -91,15 +91,16 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 
 ## Documentation Versions
 
-The current [gRPC reference](/api/grpc) documents **Server 0.7.0**; the [.NET](/api/dotnet), [Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references document **client 0.2.0**. Each includes a separate SA 2024 section alongside SA 2026. Historical references remain at [Server 0.5.1](/api/grpc/0.5.1), [.NET 0.1.0](/api/dotnet/0.1.0), [Python 0.1.0](/api/python/0.1.0), and [JavaScript 0.1.0](/api/javascript/0.1.0).
+The current [gRPC reference](/api/grpc) documents **Server 0.8.0**; the [.NET](/api/dotnet), [Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references document **client 0.3.0**. Each includes a separate SA 2024 section alongside SA 2026. Historical references include [Server 0.7.0](/api/grpc/0.7.0), [.NET 0.2.0](/api/dotnet/0.2.0), [Python 0.2.0](/api/python/0.2.0), [JavaScript 0.2.0](/api/javascript/0.2.0), and the earlier [Server 0.5.1](/api/grpc/0.5.1), [.NET 0.1.0](/api/dotnet/0.1.0), [Python 0.1.0](/api/python/0.1.0), and [JavaScript 0.1.0](/api/javascript/0.1.0).
 
 | Client Line | Server Selection | Reference Guidance |
 | --- | --- | --- |
 | 0.1.0 | Exact Server 0.6.0 build | Retained 0.1.0 API |
 | 0.1.1 | Exact Server 0.6.1 build | Same public schemas as 0.1.0; changed server pin |
-| 0.2.0 | Contract major 1, revision at least 0, plus the exact reviewed 0.6.1 exception | Current API, including discovery and selection |
+| 0.2.0 | Contract major 1, revision at least 0, plus the exact reviewed 0.6.1 exception | Retained API, including discovery and selection |
+| 0.3.0 | Same runtime contract | Current API with clean MP argument names; [migration guide](/docs/mp-argument-name-migration) |
 
-The [public compatibility matrix](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/matrix.json) records 12 client/target/server pairs (three languages, two exact targets, Servers 0.6.1 and 0.7.0), with 12 fake-SDK scenarios per pair. This is compatibility evidence, not licensed validation of every MP operation. Preserve legacy installations until their consuming applications migrate. `BRIOSA_SERVER_PATH` requires explicit opt-in in client 0.2.0; prefer per-application selectors.
+The [public compatibility matrix](https://github.com/spatialanalyzer/briosa/blob/main/compatibility/matrix.json) records the tested package identities and their fake-SDK scenarios, distinguishing published artifacts from development candidates. This is compatibility evidence, not licensed validation of every MP operation. Preserve legacy installations until their consuming applications migrate. `BRIOSA_SERVER_PATH` requires explicit opt-in; prefer per-application selectors.
 The product guides, installation instructions, release status, and MP catalog
 remain unversioned so they can describe current availability across products.
 

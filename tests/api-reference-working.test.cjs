@@ -28,8 +28,7 @@ test('working references render clean MP names and preserve qualifier meaning', 
         assert.match(page.html, family === 'dotnet' || family === 'javascript' ? /angleTolerance/ : /angle_tolerance/);
         assert.doesNotMatch(page.html, /angle_tolerance_0_0_for_none|angleTolerance00ForNone/);
         assert.match(page.html, /0\.0 disables this tolerance/);
-        assert.match(page.html, /unpublished candidate/);
-        assert.match(page.html, /Candidate Source/);
+        assert.match(page.html, /(?:Released|Candidate) Source/);
         const collision = pages.find((p) => p.path === `/api/${family}/sa-${target}/preview/gdt-analysis/evaluate-feature-check`);
         assert.ok(collision, `${family}/${target} collision exception is rendered`);
         if (family === 'grpc') assert.match(collision.html, /measured_deviation_upper/);

@@ -17,14 +17,14 @@ const products = [
     action: 'Install Briosa',
   },
   {
-    release: 'Server 0.7.0',
+    release: 'Server 0.8.0',
     title: 'Briosa Server',
     detail: 'Run read-only and mutating MP commands through a strongly typed local gRPC API.',
     href: '/api/grpc',
     action: 'Explore the Server API',
   },
   {
-    release: 'Included with Server 0.7.0',
+    release: 'Included with Server 0.8.0',
     title: 'Briosa Control Center',
     detail: 'Monitor server status and activity, and manage a local server and its SDK from the Windows tray.',
     href: '/docs/deployment/control-center',

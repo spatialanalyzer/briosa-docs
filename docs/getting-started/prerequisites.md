@@ -14,7 +14,7 @@ For either released exact target you need:
 - A first-party Briosa client, or a gRPC client such as
   [grpcurl](https://github.com/fullstorydev/grpcurl) for the source workflow
 
-Client 0.2.0 development requires .NET 10 for .NET, Python 3.10 or later for Python, or Node.js 20.19.0 or later for JavaScript/TypeScript. Use the package for your exact SA target. The self-contained server does not require a separately installed .NET runtime.
+Client 0.3.0 development requires .NET 10 for .NET, Python 3.10 or later for Python, or Node.js 20.19.0 or later for JavaScript/TypeScript. Use the package for your exact SA target. The self-contained server does not require a separately installed .NET runtime.
 
 Building Briosa from source additionally requires the .NET SDK selected by the
 server repository's `global.json`. Building this website requires Node.js 24,

@@ -10,7 +10,7 @@ operations, failures, and timing. Hidden client-launched servers write the same
 files as direct launches.
 
 :::note Availability
-These controls are included in Server **0.7.0** and first-party clients **0.2.0** for both exact targets.
+These controls are included in Server **0.8.0** and first-party clients **0.3.0** for both exact targets.
 They do not add a logging RPC or change SpatialAnalyzer's **Set Logging State** MP.
 :::
 
