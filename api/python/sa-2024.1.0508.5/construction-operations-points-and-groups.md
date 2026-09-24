@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -401,7 +401,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 async def get_gradient_at_projected_point_on_surface_edge(
         self,
         point_to_project: PointName,
-        surface_edge_b_spline: CollectionObjectName,
+        surface_edge: CollectionObjectName,
         surface_name: CollectionObjectName,
         *,
         edge_offset_direction: Vector | None = None,
@@ -411,6 +411,12 @@ async def get_gradient_at_projected_point_on_surface_edge(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surface_edge` | MP qualifier: B-Spline. |
 
 ## Construct Points By Projecting Points On Mesh Along Direction {/* #construct-points-by-projecting-points-on-mesh-along-direction */}
 
@@ -585,12 +591,18 @@ async def construct_points_cylindrically_shifted(
         group_for_new_points: CollectionObjectName,
         *,
         radial_shift: float = 0.0,
-        theta_shift_degrees: float = 0.0,
+        theta_shift: float = 0.0,
         planar_shift: float = 0.0,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_shift` | Angle in degrees. |
 
 ## Construct Points WildCard Selection {/* #construct-points-wildcard-selection */}
 
@@ -809,13 +821,20 @@ async def create_hidden_point_rod(
         self,
         hidden_point_rod_name: str,
         *,
-        target_to_target_distance: float = 0.0,
-        target_to_tip_distance: float = 0.0,
+        a_to_b_distance: float = 0.0,
+        a_to_c_distance: float = 0.0,
         inter_point_tolerance: float = 0.0,
     ) -> int: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `a_to_b_distance` | MP qualifier: Target to Target. |
+| `a_to_c_distance` | MP qualifier: Target to Tip. |
 
 ## Get Hidden Point Rod Index by Name {/* #get-hidden-point-rod-index-by-name */}
 
@@ -894,4 +913,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2024.1.0508.5)

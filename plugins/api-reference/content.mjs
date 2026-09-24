@@ -127,11 +127,11 @@ export async function loadReference(siteDir) {
             const intro = doc.body.slice(0, doc.body.indexOf('\n## ')).replace(/^# .*\n/m, '');
             const shared = allSections.filter((s) => !methods.includes(s)).map((s) => `## ${s.title} {/* #${s.anchor} */}\n\n${s.body}`).join('\n\n');
             ctx.pages[id] = {id, title: doc.title, kind: 'group', methods: methods.map((s) => ({id: s.id, title: s.title, anchor: s.anchor})), body: `${intro}\n\n${shared}`, source, codes: parser.parse(doc.body).children.filter((n) => n.type === 'code').map((n) => n.value)};
-            const releasedSource = doc.body.match(/\[Released Source\]\([^\n]+\)/)?.[0] ?? '';
+            const releasedSource = doc.body.match(/\[(?:Released|Candidate) Source\]\([^\n]+\)/)?.[0] ?? '';
             for (const method of methods) {
               const methodId = method.id;
               if (ctx.pages[methodId]) throw new Error(`Duplicate command identity in ${source}: ${methodId}`);
-              const body = method.body.replace(/\n?\[Released Source\]\([^\n]+\)/g, '');
+              const body = method.body.replace(/\n?\[(?:Released|Candidate) Source\]\([^\n]+\)/g, '');
               const codes = parser.parse(body).children.filter((n) => n.type === 'code').map((n) => n.value);
               ctx.pages[methodId] = {id: methodId, title: method.title, group: id, anchor: method.anchor, kind: 'method', body, intro, shared: Boolean(shared), source, available: !/No released signature\s+is available/.test(body), releasedSource, contractHash: hash(body.replace(/\/api\/[^)\s]+/g, '/api')), codes};
             }

@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/reporting-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -339,7 +339,7 @@ export interface CreateChartFromVectorGroupInput {
   readonly chartType: ChartType;
   readonly dataSetToChart: DatasetType;
   readonly auxDataSetToChart: DatasetType;
-  readonly templateChartNameOptional: ChartName;
+  readonly templateChartName: ChartName;
   readonly showInterface?: boolean;
 }
 
@@ -351,6 +351,12 @@ export declare function createChartFromVectorGroup(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `templateChartName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Define Report Template {/* #define-report-template */}
 
@@ -365,7 +371,7 @@ export interface DefineReportTemplateInput {
   readonly relationshipsToReport: Iterable<CollectionItemName>;
   readonly eventsToReport: Iterable<CollectionItemName>;
   readonly reportOutputOptions?: ReportOutputOptions;
-  readonly reportPageSettingsSaReportOnly?: ReportPageSettings;
+  readonly reportPageSettings?: ReportPageSettings;
   readonly generateNow?: boolean;
   readonly showGeneratedReport?: boolean;
 }
@@ -378,6 +384,12 @@ export declare function defineReportTemplate(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `reportPageSettings` | MP qualifier: SA Report only. |
 
 ## Delete Chart {/* #delete-chart */}
 
@@ -659,7 +671,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface MakeNewSaReportInput {
   readonly newSaReportName: CollectionObjectName;
-  readonly saReportTemplateOptional: CollectionObjectName;
+  readonly saReportTemplate: CollectionObjectName;
 }
 
 export declare function makeNewSaReport(
@@ -670,6 +682,12 @@ export declare function makeNewSaReport(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `saReportTemplate` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Make Utility Chart {/* #make-utility-chart */}
 
@@ -824,7 +842,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface QuickReportInput {
   readonly itemName: CollectionObjectName;
-  readonly reportNameOptional?: string;
+  readonly reportName?: string;
   readonly openReport?: boolean;
 }
 
@@ -836,6 +854,12 @@ export declare function quickReport(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `reportName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Refresh Callout Views in SA Report {/* #refresh-callout-views-in-sa-report */}
 
@@ -932,7 +956,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SaveCurrentViewBmpJpgPngGifTiffInput {
   readonly fileToSaveTo: FileReference;
-  readonly renderScaleFactor10UsesWindowSize?: number;
+  readonly renderScaleFactor?: number;
 }
 
 export declare function saveCurrentViewBmpJpgPngGifTiff(
@@ -943,6 +967,12 @@ export declare function saveCurrentViewBmpJpgPngGifTiff(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `renderScaleFactor` | 1.0 uses the window size. |
 
 ## Set Custom Table Cell Color {/* #set-custom-table-cell-color */}
 
@@ -1275,4 +1305,4 @@ export declare function setVectorGroupReportOptions(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

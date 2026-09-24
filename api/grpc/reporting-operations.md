@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/reporting-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -454,7 +454,7 @@ message CombineSaReportsResult {
 | Request | 3 | `chart_type` | `optional ChartType` | Chart Type | Required |
 | Request | 4 | `data_set_to_chart` | `optional DatasetType` | Data Set to Chart | Required |
 | Request | 5 | `aux_data_set_to_chart` | `optional DatasetType` | Aux Data Set to Chart | Required |
-| Request | 6 | `template_chart_name_optional` | `optional ChartName` | Template Chart Name (optional) | Required |
+| Request | 6 | `template_chart_name` | `optional ChartName` | Template Chart Name (optional) | Required |
 | Request | 7 | `show_interface` | `optional bool` | Show Interface? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -467,7 +467,7 @@ message CreateChartFromVectorGroupRequest {
   optional ChartType chart_type = 3;
   optional DatasetType data_set_to_chart = 4;
   optional DatasetType aux_data_set_to_chart = 5;
-  optional ChartName template_chart_name_optional = 6;
+  optional ChartName template_chart_name = 6;
   optional bool show_interface = 7;
 }
 
@@ -475,6 +475,12 @@ message CreateChartFromVectorGroupResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `template_chart_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Define Report Template {/* #define-report-template */}
 
@@ -491,7 +497,7 @@ message CreateChartFromVectorGroupResult {
 | Request | 5 | `relationships_to_report` | `repeated CollectionItemName` | Relationships To Report | Required |
 | Request | 6 | `events_to_report` | `repeated CollectionItemName` | Events To Report | Required |
 | Request | 7 | `report_output_options` | `optional ReportOutputOptions` | Report Output Options | ::My Report |
-| Request | 8 | `report_page_settings_sa_report_only` | `optional ReportPageSettings` | Report Page Settings ( SA Report only ) | Portrait |
+| Request | 8 | `report_page_settings` | `optional ReportPageSettings` | Report Page Settings ( SA Report only ) | Portrait |
 | Request | 9 | `generate_now` | `optional bool` | Generate Now? | false |
 | Request | 10 | `show_generated_report` | `optional bool` | Show Generated Report? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -507,7 +513,7 @@ message DefineReportTemplateRequest {
   repeated CollectionItemName relationships_to_report = 5;
   repeated CollectionItemName events_to_report = 6;
   optional ReportOutputOptions report_output_options = 7;
-  optional ReportPageSettings report_page_settings_sa_report_only = 8;
+  optional ReportPageSettings report_page_settings = 8;
   optional bool generate_now = 9;
   optional bool show_generated_report = 10;
 }
@@ -516,6 +522,12 @@ message DefineReportTemplateResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `report_page_settings` | MP qualifier: SA Report only. |
 
 ## Delete Chart {/* #delete-chart */}
 
@@ -898,7 +910,7 @@ message MakeCustomTableResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_sa_report_name` | `optional CollectionObjectName` | New SA Report Name | Required |
-| Request | 2 | `sa_report_template_optional` | `optional CollectionObjectName` | SA Report Template (optional) | Required |
+| Request | 2 | `sa_report_template` | `optional CollectionObjectName` | SA Report Template (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -906,13 +918,19 @@ rpc MakeNewSaReport(MakeNewSaReportRequest) returns (MakeNewSaReportResult);
 
 message MakeNewSaReportRequest {
   optional CollectionObjectName new_sa_report_name = 1;
-  optional CollectionObjectName sa_report_template_optional = 2;
+  optional CollectionObjectName sa_report_template = 2;
 }
 
 message MakeNewSaReportResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `sa_report_template` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Make Utility Chart {/* #make-utility-chart */}
 
@@ -1126,7 +1144,7 @@ message OutputSaReportToPdfResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `item_name` | `optional CollectionObjectName` | Item Name | Required |
-| Request | 2 | `report_name_optional` | `optional string` | Report Name (optional) | Empty |
+| Request | 2 | `report_name` | `optional string` | Report Name (optional) | Empty |
 | Request | 3 | `open_report` | `optional bool` | Open Report? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1135,7 +1153,7 @@ rpc QuickReport(QuickReportRequest) returns (QuickReportResult);
 
 message QuickReportRequest {
   optional CollectionObjectName item_name = 1;
-  optional string report_name_optional = 2;
+  optional string report_name = 2;
   optional bool open_report = 3;
 }
 
@@ -1143,6 +1161,12 @@ message QuickReportResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `report_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Refresh Callout Views in SA Report {/* #refresh-callout-views-in-sa-report */}
 
@@ -1273,7 +1297,7 @@ message SaveChartToJPegFileResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `file_to_save_to` | `optional FileReference` | File to save to | Required |
-| Request | 2 | `render_scale_factor_1_0_uses_window_size` | `optional double` | Render Scale Factor (1.0 uses window size) | 1.000000 |
+| Request | 2 | `render_scale_factor` | `optional double` | Render Scale Factor (1.0 uses window size) | 1.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1281,13 +1305,19 @@ rpc SaveCurrentViewBmpJpgPngGifTiff(SaveCurrentViewBmpJpgPngGifTiffRequest) retu
 
 message SaveCurrentViewBmpJpgPngGifTiffRequest {
   optional FileReference file_to_save_to = 1;
-  optional double render_scale_factor_1_0_uses_window_size = 2;
+  optional double render_scale_factor = 2;
 }
 
 message SaveCurrentViewBmpJpgPngGifTiffResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `render_scale_factor` | 1.0 uses the window size. |
 
 ## Set Custom Table Cell Color {/* #set-custom-table-cell-color */}
 
@@ -1743,4 +1773,4 @@ message SetVectorGroupReportOptionsResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

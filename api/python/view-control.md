@@ -1,6 +1,6 @@
 ---
 title: View Control
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/view-control) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/view-control)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -127,13 +127,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```python
 async def highlight_objects(
         self,
-        object_names_empty_to_clear_all: Iterable[CollectionObjectName],
+        object_names: Iterable[CollectionObjectName],
         *,
         high_light_objects: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `object_names` | An empty selection clears all highlights. |
 
 ## Highlight Point {/* #highlight-point */}
 
@@ -142,13 +148,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```python
 async def highlight_point(
         self,
-        point_name_empty_to_clear_all: PointName,
+        point_name: PointName,
         *,
         show_point: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `point_name` | An empty selection clears all highlights. |
 
 ## Highlight Relationships {/* #highlight-relationships */}
 
@@ -157,13 +169,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```python
 async def highlight_relationships(
         self,
-        relationships_empty_to_clear_all: Iterable[CollectionItemName],
+        relationships: Iterable[CollectionItemName],
         *,
         high_light_relationships: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `relationships` | An empty selection clears all highlights. |
 
 ## Load Ribbon Bar from XML File {/* #load-ribbon-bar-from-xml-file */}
 
@@ -462,11 +480,17 @@ async def show_hide_by_object_type(
         all_collections: bool = False,
         specific_collection: CollectionName,
         object_type_to_show_hide: ObjectType = ObjectType.ANY,
-        hide_show_false: bool = True,
+        hide: bool = True,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `hide` | False shows the objects. |
 
 ## Show / Hide Callout View {/* #show--hide-callout-view */}
 
@@ -507,11 +531,17 @@ async def show_hide_points(
         self,
         point_names: Iterable[PointName],
         *,
-        show_hide_false: bool = False,
+        show: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show` | False hides the points. |
 
 ## Show by Object Type {/* #show-by-object-type */}
 
@@ -704,4 +734,4 @@ async def show_hide_relationship_watch(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2026.1.0529.7)

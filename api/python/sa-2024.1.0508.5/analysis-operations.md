@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/analysis-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -23,11 +23,17 @@ async def angle_between_line_and_plane(
         selected_plane: CollectionObjectName,
         *,
         nominal_angle: float = 0.000000,
-        angle_tolerance_0_0_for_none: float = 0.000000,
+        angle_tolerance: float = 0.000000,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Lines {/* #angle-between-two-lines */}
 
@@ -40,11 +46,17 @@ async def angle_between_two_lines(
         line_2: CollectionObjectName,
         *,
         nominal_angle: float = 0.000000,
-        angle_tolerance_0_0_for_none: float = 0.000000,
+        angle_tolerance: float = 0.000000,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Planes' normals {/* #angle-between-two-planes-normals */}
 
@@ -57,11 +69,17 @@ async def angle_between_two_planes_normals(
         plane_b: CollectionObjectName,
         *,
         nominal_angle: float = 0.000000,
-        angle_tolerance_0_0_for_none: float = 0.000000,
+        angle_tolerance: float = 0.000000,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
@@ -74,8 +92,8 @@ async def best_fit_transformation_group_to_group(
         corresponding_group: CollectionObjectName,
         *,
         show_interface: bool = False,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
         allow_scale: bool = False,
         allow_x: bool = True,
         allow_y: bool = True,
@@ -85,11 +103,19 @@ async def best_fit_transformation_group_to_group(
         allow_rz: bool = True,
         lock_degrees_of_freedom: bool = False,
         generate_event: bool = False,
-        file_path_for_csv_text_report_requires_show_interface_true: FileReference,
+        file_path_for_csv_text_report: FileReference,
     ) -> BestFitTransformationGroupToGroupResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
+| `file_path_for_csv_text_report` | Requires Show Interface to be true. |
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz) {/* #compute-group-to-group-orientation-rxryrz */}
 
@@ -151,13 +177,20 @@ async def fit_geometry_to_point_group(
         *,
         fit_profile_name: str = "",
         report_deviations: bool = False,
-        fit_interface_tolerance_1_0_use_profile: float = -1.000000,
+        fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry_optional: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
@@ -173,13 +206,20 @@ async def fit_geometry_to_point_group_projected_to_plane(
         *,
         fit_profile_name: str = "",
         report_deviations: bool = False,
-        fit_interface_tolerance_1_0_use_profile: float = -1.000000,
+        fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry_optional: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
@@ -194,13 +234,20 @@ async def fit_geometry_to_points(
         *,
         fit_profile_name: str = "",
         report_deviations: bool = False,
-        fit_interface_tolerance_1_0_use_profile: float = -1.000000,
+        fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry_optional: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
@@ -240,6 +287,13 @@ async def get_cone_properties(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `cone_end_point` | Expressed in working coordinates. |
+| `cone_axis` | Expressed in working coordinates. |
 
 ## Get Coordinate for i-th Point in Point Set {/* #get-coordinate-for-i-th-point-in-point-set */}
 
@@ -392,6 +446,14 @@ async def get_measurement_weather_data(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `humidity` | Relative humidity in percent. |
 
 ## Get Number of Collections {/* #get-number-of-collections */}
 
@@ -574,6 +636,16 @@ async def get_slot_properties(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `slot_transform` | Expressed in working coordinates. |
+| `center` | Expressed in working coordinates. |
+| `normal_direction` | Expressed in working coordinates. |
+| `centerline_pt_1` | Expressed in working coordinates. |
+| `centerline_pt_2` | Expressed in working coordinates. |
+
 ## Get Sphere Properties {/* #get-sphere-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-sphere-properties)
@@ -669,12 +741,19 @@ async def group_to_surface_fit(
         surface: CollectionObjectName,
         *,
         do_conventional_fit: bool = False,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
     ) -> GroupToSurfaceFitResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Import Geometry Fit Profiles {/* #import-geometry-fit-profiles */}
 
@@ -716,11 +795,11 @@ async def make_circle_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
+        override_radial_offset: float = -1.000000,
         measured_side_for_planar_offset: MeasuredSideForPlanarOffset = MeasuredSideForPlanarOffset.ABOVE_PLANE,
-        override_planar_offset_1_0_use_current: float = -1.000000,
+        override_planar_offset: float = -1.000000,
         planar_offset_direction: NormalDirection = NormalDirection.PROBING_DIRECTION,
-        lock_radius_1_0_do_not_lock: float = -1.000000,
+        lock_radius: float = -1.000000,
         circle_computation_technique: CompTechnique = CompTechnique.STANDARD,
         reverse_normal_vector_after_fit: bool = False,
         make_cardinal_points: bool = True,
@@ -730,6 +809,14 @@ async def make_circle_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
 
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
@@ -741,8 +828,8 @@ async def make_cone_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
-        lock_angle_in_degrees_1_0_do_not_lock: float = -1.000000,
+        override_radial_offset: float = -1.000000,
+        lock_angle_in_degrees: float = -1.000000,
         use_exhaustive_search: bool = True,
         make_cardinal_points: bool = True,
         cardinal_pt_1_vertex: bool = True,
@@ -752,6 +839,13 @@ async def make_cone_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_angle_in_degrees` | -1.0 leaves this dimension unlocked. |
 
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
@@ -763,8 +857,8 @@ async def make_cylinder_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
-        lock_radius_1_0_do_not_lock: float = -1.000000,
+        override_radial_offset: float = -1.000000,
+        lock_radius: float = -1.000000,
         locked_radius_fit_method: FitMethod = FitMethod.MINIMUM_RMS,
         cylinder_computation_technique: CompTechnique = CompTechnique.STANDARD,
         use_exhaustive_search: bool = False,
@@ -777,6 +871,13 @@ async def make_cylinder_fit_profile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-ellipse-fit-profile)
@@ -787,9 +888,9 @@ async def make_ellipse_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
+        override_radial_offset: float = -1.000000,
         measured_side_for_planar_offset: MeasuredSideForPlanarOffset = MeasuredSideForPlanarOffset.ABOVE_PLANE,
-        override_planar_offset_1_0_use_current: float = -1.000000,
+        override_planar_offset: float = -1.000000,
         planar_offset_direction: NormalDirection = NormalDirection.PROBING_DIRECTION,
         reverse_normal_vector_after_fit: bool = False,
         make_cardinal_points: bool = True,
@@ -801,6 +902,13 @@ async def make_ellipse_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
 
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
@@ -831,8 +939,8 @@ async def make_paraboloid_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
-        lock_focal_length_1_0_do_not_lock: float = -1.000000,
+        override_radial_offset: float = -1.000000,
+        lock_focal_length: float = -1.000000,
         degree_of_freedom: DegreeOfFreedom = DegreeOfFreedom.ANY,
         make_cardinal_points: bool = True,
         cardinal_pt_1_vertex: bool = True,
@@ -841,6 +949,13 @@ async def make_paraboloid_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_focal_length` | -1.0 leaves this dimension unlocked. |
 
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
@@ -852,7 +967,7 @@ async def make_plane_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_planar_offset: MeasuredSideForPlanarOffset = MeasuredSideForPlanarOffset.ABOVE_PLANE,
-        override_planar_offset_1_0_use_current: float = -1.000000,
+        override_planar_offset: float = -1.000000,
         planar_offset_direction: NormalDirection = NormalDirection.PROBING_DIRECTION,
         reverse_normal_vector_after_fit: bool = False,
         make_cardinal_points: bool = True,
@@ -862,6 +977,12 @@ async def make_plane_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_planar_offset` | -1.0 uses the current offset. |
 
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
@@ -873,9 +994,9 @@ async def make_slot_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
+        override_radial_offset: float = -1.000000,
         measured_side_for_planar_offset: MeasuredSideForPlanarOffset = MeasuredSideForPlanarOffset.ABOVE_PLANE,
-        override_planar_offset_1_0_use_current: float = -1.000000,
+        override_planar_offset: float = -1.000000,
         planar_offset_direction: NormalDirection = NormalDirection.PROBING_DIRECTION,
         slot_type: SlotType = SlotType.ROUND,
         slot_computation_technique: CompTechnique = CompTechnique.STANDARD,
@@ -890,6 +1011,13 @@ async def make_slot_fit_profile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
+
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-sphere-fit-profile)
@@ -900,8 +1028,8 @@ async def make_sphere_fit_profile(
         *,
         fit_profile_name: str = "",
         measured_side_for_radial_offset: MeasuredSideForRadialOffset = MeasuredSideForRadialOffset.OUTSIDE,
-        override_radial_offset_1_0_use_current: float = -1.000000,
-        lock_radius_1_0_do_not_lock: float = -1.000000,
+        override_radial_offset: float = -1.000000,
+        lock_radius: float = -1.000000,
         make_cardinal_points: bool = True,
         cardinal_pt_1_center: bool = True,
         computation_method: SphereFitComputationMode = SphereFitComputationMode.STANDARD,
@@ -909,6 +1037,13 @@ async def make_sphere_fit_profile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
 
 ## Mushroom Target Hole Inspection {/* #mushroom-target-hole-inspection */}
 
@@ -976,12 +1111,19 @@ async def query_clouds_to_objects(
         projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
         proximity: float = 0.000000,
         skip_factor: int = 0,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
     ) -> QueryCloudsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
@@ -997,12 +1139,19 @@ async def query_clouds_to_surface(
         projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
         proximity: float = 0.000000,
         skip_factor: int = 0,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
     ) -> QueryCloudsToSurfaceResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Frame to Frame {/* #query-frame-to-frame */}
 
@@ -1018,6 +1167,14 @@ async def query_frame_to_frame(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rx` | MP qualifier: Roll. |
+| `ry` | MP qualifier: Pitch. |
+| `rz` | MP qualifier: Yaw. |
+
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-groups-to-objects)
@@ -1025,18 +1182,27 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```python
 async def query_groups_to_objects(
         self,
-        group_name_list_groups_to_project: Iterable[CollectionObjectName],
-        object_name_list_objects_to_project_to: Iterable[CollectionObjectName],
+        group_name_list: Iterable[CollectionObjectName],
+        object_name_list: Iterable[CollectionObjectName],
         resulting_object_name: CollectionObjectName,
         *,
         projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
         show_results_dialog: bool = False,
     ) -> QueryGroupsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `group_name_list` | MP qualifier: Groups to Project. |
+| `object_name_list` | MP qualifier: Objects to Project to. |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Point to Objects {/* #query-point-to-objects */}
 
@@ -1097,17 +1263,25 @@ The signature records required inputs and language defaults. The gRPC contract r
 async def query_points_to_objects(
         self,
         point_names: Iterable[PointName],
-        object_name_list_objects_to_project_to: Iterable[CollectionObjectName],
+        object_name_list: Iterable[CollectionObjectName],
         resulting_object_name: CollectionObjectName,
         *,
         projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
-        rms_tolerance_0_0_for_none: float = 0.000000,
-        maximum_absolute_tolerance_0_0_for_none: float = 0.000000,
+        rms_tolerance: float = 0.000000,
+        maximum_absolute_tolerance: float = 0.000000,
         show_results_dialog: bool = False,
     ) -> QueryPointsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `object_name_list` | MP qualifier: Objects to Project to. |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Points to Single Point {/* #query-points-to-single-point */}
 
@@ -1395,16 +1569,25 @@ The signature records required inputs and language defaults. The gRPC contract r
 async def temperature_compensate_a_group(
         self,
         original_group: CollectionObjectName,
-        scaling_origin_coordinate_frame: FrameName,
+        scaling_origin: FrameName,
         *,
-        material_cte_1_deg_f: float = 0.000000,
-        initial_temperature_f: float = 0.000000,
-        final_temperature_f: float = 0.000000,
+        material_cte: float = 0.000000,
+        initial_temperature: float = 0.000000,
+        final_temperature: float = 0.000000,
         scaled_group_name: CollectionObjectName,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `scaling_origin` | MP qualifier: coordinate frame. |
+| `material_cte` | Coefficient per degree Fahrenheit. |
+| `initial_temperature` | Temperature in degrees Fahrenheit. |
+| `final_temperature` | Temperature in degrees Fahrenheit. |
 
 ## Transform Objects - Frame To Frame {/* #transform-objects---frame-to-frame */}
 
@@ -1477,4 +1660,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2024.1.0508.5)

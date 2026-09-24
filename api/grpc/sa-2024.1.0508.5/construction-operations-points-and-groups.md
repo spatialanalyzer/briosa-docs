@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -697,7 +697,7 @@ message GetGradientAtProjectedPointOnSurfaceResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_to_project` | `optional PointName` | Point to Project | Required |
-| Request | 2 | `surface_edge_b_spline` | `optional CollectionObjectName` | Surface Edge (B-Spline) | Required |
+| Request | 2 | `surface_edge` | `optional CollectionObjectName` | Surface Edge (B-Spline) | Required |
 | Request | 3 | `surface_name` | `optional CollectionObjectName` | Surface Name | Required |
 | Request | 4 | `edge_offset_direction` | `optional Vector` | Edge Offset Direction | Required |
 | Request | 5 | `edge_offset_distance` | `optional double` | Edge Offset Distance | 0.01 |
@@ -710,7 +710,7 @@ rpc GetGradientAtProjectedPointOnSurfaceEdge(GetGradientAtProjectedPointOnSurfac
 
 message GetGradientAtProjectedPointOnSurfaceEdgeRequest {
   optional PointName point_to_project = 1;
-  optional CollectionObjectName surface_edge_b_spline = 2;
+  optional CollectionObjectName surface_edge = 2;
   optional CollectionObjectName surface_name = 3;
   optional Vector edge_offset_direction = 4;
   optional double edge_offset_distance = 5;
@@ -722,6 +722,12 @@ message GetGradientAtProjectedPointOnSurfaceEdgeResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surface_edge` | MP qualifier: B-Spline. |
 
 ## Construct Points By Projecting Points On Mesh Along Direction {/* #construct-points-by-projecting-points-on-mesh-along-direction */}
 
@@ -1016,7 +1022,7 @@ message ConstructPointsShiftedInWorkingFrameResult {
 | Request | 2 | `original_points` | `repeated PointName` | Original Points | Required |
 | Request | 3 | `group_for_new_points` | `optional CollectionObjectName` | Group for New Points | Required |
 | Request | 4 | `radial_shift` | `optional double` | Radial Shift | 0.000000 |
-| Request | 5 | `theta_shift_degrees` | `optional double` | Theta Shift (degrees) | 0.000000 |
+| Request | 5 | `theta_shift` | `optional double` | Theta Shift (degrees) | 0.000000 |
 | Request | 6 | `planar_shift` | `optional double` | Planar Shift | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1028,7 +1034,7 @@ message ConstructPointsCylindricallyShiftedRequest {
   repeated PointName original_points = 2;
   optional CollectionObjectName group_for_new_points = 3;
   optional double radial_shift = 4;
-  optional double theta_shift_degrees = 5;
+  optional double theta_shift = 5;
   optional double planar_shift = 6;
 }
 
@@ -1036,6 +1042,12 @@ message ConstructPointsCylindricallyShiftedResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_shift` | Angle in degrees. |
 
 ## Construct Points WildCard Selection {/* #construct-points-wildcard-selection */}
 
@@ -1414,8 +1426,8 @@ message ClearHiddenPointBarDatabaseResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `hidden_point_rod_name` | `optional string` | Hidden Point Rod Name | Empty |
-| Request | 2 | `target_to_target_distance` | `optional double` | A to B (Target to Target) Distance | 0.000000 |
-| Request | 3 | `target_to_tip_distance` | `optional double` | A to C (Target to Tip) Distance | 0.000000 |
+| Request | 2 | `a_to_b_distance` | `optional double` | A to B (Target to Target) Distance | 0.000000 |
+| Request | 3 | `a_to_c_distance` | `optional double` | A to C (Target to Tip) Distance | 0.000000 |
 | Request | 4 | `inter_point_tolerance` | `optional double` | A to B Inter-point Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `hidden_point_rod_index` | `int32` | Hidden Point Rod Index | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1425,8 +1437,8 @@ rpc CreateHiddenPointRod(CreateHiddenPointRodRequest) returns (CreateHiddenPoint
 
 message CreateHiddenPointRodRequest {
   optional string hidden_point_rod_name = 1;
-  optional double target_to_target_distance = 2;
-  optional double target_to_tip_distance = 3;
+  optional double a_to_b_distance = 2;
+  optional double a_to_c_distance = 3;
   optional double inter_point_tolerance = 4;
 }
 
@@ -1435,6 +1447,13 @@ message CreateHiddenPointRodResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `a_to_b_distance` | MP qualifier: Target to Target. |
+| `a_to_c_distance` | MP qualifier: Target to Tip. |
 
 ## Get Hidden Point Rod Index by Name {/* #get-hidden-point-rod-index-by-name */}
 
@@ -1551,4 +1570,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

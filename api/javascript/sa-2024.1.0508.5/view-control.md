@@ -1,6 +1,6 @@
 ---
 title: View Control
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/view-control) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/view-control)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -158,7 +158,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 ```ts
 export interface HighlightObjectsInput {
-  readonly objectNamesEmptyToClearAll: Iterable<CollectionObjectName>;
+  readonly objectNames: Iterable<CollectionObjectName>;
   readonly highLightObjects?: boolean;
 }
 
@@ -171,13 +171,19 @@ export declare function highlightObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `objectNames` | An empty selection clears all highlights. |
+
 ## Highlight Point {/* #highlight-point */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#highlight-point)
 
 ```ts
 export interface HighlightPointInput {
-  readonly pointNameEmptyToClearAll: PointName;
+  readonly pointName: PointName;
   readonly showPoint?: boolean;
 }
 
@@ -190,13 +196,19 @@ export declare function highlightPoint(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `pointName` | An empty selection clears all highlights. |
+
 ## Highlight Relationships {/* #highlight-relationships */}
 
 [MP Catalog](/mp-command-catalog/commands/view-control#highlight-relationships) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/view-control#highlight-relationships)
 
 ```ts
 export interface HighlightRelationshipsInput {
-  readonly relationshipsEmptyToClearAll: Iterable<CollectionItemName>;
+  readonly relationships: Iterable<CollectionItemName>;
   readonly highLightRelationships?: boolean;
 }
 
@@ -208,6 +220,12 @@ export declare function highlightRelationships(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `relationships` | An empty selection clears all highlights. |
 
 ## Load Ribbon Bar from XML File {/* #load-ribbon-bar-from-xml-file */}
 
@@ -590,7 +608,7 @@ export interface ShowHideByObjectTypeInput {
   readonly allCollections?: boolean;
   readonly specificCollection: CollectionName;
   readonly objectTypeToShowHide?: ObjectType;
-  readonly hideShowFalse?: boolean;
+  readonly hide?: boolean;
 }
 
 export declare function showHideByObjectType(
@@ -601,6 +619,12 @@ export declare function showHideByObjectType(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `hide` | False shows the objects. |
 
 ## Show / Hide Callout View {/* #show--hide-callout-view */}
 
@@ -647,7 +671,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface ShowHidePointsInput {
   readonly pointNames: Iterable<PointName>;
-  readonly showHideFalse?: boolean;
+  readonly show?: boolean;
 }
 
 export declare function showHidePoints(
@@ -658,6 +682,12 @@ export declare function showHidePoints(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show` | False hides the points. |
 
 ## Show by Object Type {/* #show-by-object-type */}
 
@@ -899,4 +929,4 @@ export declare function showHideRelationshipWatch(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

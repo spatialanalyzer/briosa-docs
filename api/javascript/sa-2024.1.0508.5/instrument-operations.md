@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/instrument-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -238,6 +238,15 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `yOrTheta` | Angle in degrees. |
+| `zOrPhi` | Angle in degrees. |
+| `timeSinceUpdate` | Time in seconds. |
+| `timestamp` | MP qualifier: Approximate. |
 
 ## 'Build' Target {/* #build-target */}
 
@@ -909,7 +918,7 @@ export interface LocateInstrumentsUsmnInput {
   readonly excludeSingleInstrumentPoints?: boolean;
   readonly runUncertaintyFieldAnalysis?: boolean;
   readonly analysisSamples?: number;
-  readonly analysisTimeLimitMinutes?: number;
+  readonly analysisTimeLimit?: number;
 }
 
 // Member of BriosaClient
@@ -922,6 +931,12 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
@@ -941,9 +956,9 @@ export interface CreateTemplatedInstrumentUsmnInput {
   readonly enableRz?: boolean;
   readonly enableScale?: boolean;
   readonly enableComponentWeights?: boolean;
-  readonly azimuthWeight?: number;
-  readonly elevationWeight?: number;
-  readonly distanceWeight?: number;
+  readonly component1Weight?: number;
+  readonly component2Weight?: number;
+  readonly component3Weight?: number;
 }
 
 // Member of BriosaClient
@@ -956,6 +971,14 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `component1Weight` | MP qualifier: Azimuth. |
+| `component2Weight` | MP qualifier: Elevation. |
+| `component3Weight` | MP qualifier: Distance. |
 
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
@@ -1089,6 +1112,14 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `thetaDispersion` | Angle in arcseconds. |
+| `phiDispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
+
 ## Set Tracker/EDM Theodolite Uncertainties {/* #set-trackeredm-theodolite-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-trackeredm-theodolite-uncertainties)
@@ -1096,11 +1127,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SetTrackerEdmTheodoliteUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
-  readonly thetaDispersionArcseconds?: number;
+  readonly thetaDispersion?: number;
   readonly thetaThreshold?: number;
-  readonly phiDispersionArcseconds?: number;
+  readonly phiDispersion?: number;
   readonly phiThreshold?: number;
-  readonly distancePpm?: number;
+  readonly distance?: number;
   readonly distanceThreshold?: number;
 }
 
@@ -1114,6 +1145,14 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `thetaDispersion` | Angle in arcseconds. |
+| `phiDispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
 
 ## Get PCMM Instrument XYZ Uncertainties {/* #get-pcmm-instrument-xyz-uncertainties */}
 
@@ -1221,6 +1260,14 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relativeHumidity` | Relative humidity in percent. |
+
 ## Set Instrument Weather Setting {/* #set-instrument-weather-setting */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-weather-setting)
@@ -1228,9 +1275,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SetInstrumentWeatherSettingInput {
   readonly instrument: CollectionInstrumentId;
-  readonly temperatureFahrenheit?: number;
-  readonly pressureMmHg?: number;
-  readonly relativeHumidityPercent?: number;
+  readonly temperature?: number;
+  readonly pressure?: number;
+  readonly relativeHumidity?: number;
   readonly setAutomatically?: boolean;
 }
 
@@ -1244,6 +1291,14 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relativeHumidity` | Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -1265,15 +1320,21 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `partTemperature` | Temperature in degrees Fahrenheit. |
+
 ## Compute CTE Scale Factor {/* #compute-cte-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#compute-cte-scale-factor)
 
 ```ts
 export interface ComputeCteScaleFactorInput {
-  readonly materialCtePerDegreeFahrenheit?: number;
-  readonly initialTemperatureFahrenheit?: number;
-  readonly finalTemperatureFahrenheit?: number;
+  readonly materialCte?: number;
+  readonly initialTemperature?: number;
+  readonly finalTemperature?: number;
 }
 
 // Member of BriosaClient
@@ -1286,6 +1347,14 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `materialCte` | Coefficient per degree Fahrenheit. |
+| `initialTemperature` | Temperature in degrees Fahrenheit. |
+| `finalTemperature` | Temperature in degrees Fahrenheit. |
 
 ## Set (multiply) Instrument Scale Factor (CAUTION!) {/* #set-multiply-instrument-scale-factor-caution */}
 
@@ -1539,6 +1608,14 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `relativeHumidity` | Relative humidity in percent. |
 
 ## Fabricate Observations {/* #fabricate-observations */}
 
@@ -2258,6 +2335,12 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
+
 ## Set Instrument Interface Response Timeout {/* #set-instrument-interface-response-timeout */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-interface-response-timeout)
@@ -2267,13 +2350,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 interface BriosaClient {
   setInstrumentInterfaceResponseTimeout(
     instrument: CollectionInstrumentId,
-    timeoutSeconds?: number,
+    timeout?: number,
     callOptions?: BriosaCallOptions,
   ): Promise<void>;
 }
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
 
 ## Get Current Trapping Status {/* #get-current-trapping-status */}
 
@@ -3351,4 +3440,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

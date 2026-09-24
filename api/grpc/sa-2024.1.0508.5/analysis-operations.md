@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/analysis-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -23,7 +23,7 @@ This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other e
 | Request | 1 | `selected_line` | `optional CollectionObjectName` | Selected Line | Required |
 | Request | 2 | `selected_plane` | `optional CollectionObjectName` | Selected Plane | Required |
 | Request | 3 | `nominal_angle` | `optional double` | Nominal Angle | 0.000000 |
-| Request | 4 | `angle_tolerance_0_0_for_none` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
+| Request | 4 | `angle_tolerance` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `angle` | `optional double` | Angle | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -34,7 +34,7 @@ message AngleBetweenLineAndPlaneRequest {
   optional CollectionObjectName selected_line = 1;
   optional CollectionObjectName selected_plane = 2;
   optional double nominal_angle = 3;
-  optional double angle_tolerance_0_0_for_none = 4;
+  optional double angle_tolerance = 4;
 }
 
 message AngleBetweenLineAndPlaneResult {
@@ -42,6 +42,12 @@ message AngleBetweenLineAndPlaneResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Lines {/* #angle-between-two-lines */}
 
@@ -54,7 +60,7 @@ message AngleBetweenLineAndPlaneResult {
 | Request | 1 | `line_1` | `optional CollectionObjectName` | Line 1 | Required |
 | Request | 2 | `line_2` | `optional CollectionObjectName` | Line 2 | Required |
 | Request | 3 | `nominal_angle` | `optional double` | Nominal Angle | 0.000000 |
-| Request | 4 | `angle_tolerance_0_0_for_none` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
+| Request | 4 | `angle_tolerance` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `angle` | `optional double` | Angle | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -65,7 +71,7 @@ message AngleBetweenTwoLinesRequest {
   optional CollectionObjectName line_1 = 1;
   optional CollectionObjectName line_2 = 2;
   optional double nominal_angle = 3;
-  optional double angle_tolerance_0_0_for_none = 4;
+  optional double angle_tolerance = 4;
 }
 
 message AngleBetweenTwoLinesResult {
@@ -73,6 +79,12 @@ message AngleBetweenTwoLinesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Planes' normals {/* #angle-between-two-planes-normals */}
 
@@ -85,7 +97,7 @@ message AngleBetweenTwoLinesResult {
 | Request | 1 | `plane_a` | `optional CollectionObjectName` | Plane A | Required |
 | Request | 2 | `plane_b` | `optional CollectionObjectName` | Plane B | Required |
 | Request | 3 | `nominal_angle` | `optional double` | Nominal Angle | 0.000000 |
-| Request | 4 | `angle_tolerance_0_0_for_none` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
+| Request | 4 | `angle_tolerance` | `optional double` | Angle Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `angle` | `optional double` | Angle | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -96,7 +108,7 @@ message AngleBetweenTwoPlanesNormalsRequest {
   optional CollectionObjectName plane_a = 1;
   optional CollectionObjectName plane_b = 2;
   optional double nominal_angle = 3;
-  optional double angle_tolerance_0_0_for_none = 4;
+  optional double angle_tolerance = 4;
 }
 
 message AngleBetweenTwoPlanesNormalsResult {
@@ -104,6 +116,12 @@ message AngleBetweenTwoPlanesNormalsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angle_tolerance` | 0.0 disables this tolerance. |
 
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
@@ -116,8 +134,8 @@ message AngleBetweenTwoPlanesNormalsResult {
 | Request | 1 | `reference_group` | `optional CollectionObjectName` | Reference Group | Required |
 | Request | 2 | `corresponding_group` | `optional CollectionObjectName` | Corresponding Group | Required |
 | Request | 3 | `show_interface` | `optional bool` | Show Interface | false |
-| Request | 4 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 5 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 4 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 5 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Request | 6 | `allow_scale` | `optional bool` | Allow Scale | false |
 | Request | 7 | `allow_x` | `optional bool` | Allow X | true |
 | Request | 8 | `allow_y` | `optional bool` | Allow Y | true |
@@ -127,7 +145,7 @@ message AngleBetweenTwoPlanesNormalsResult {
 | Request | 12 | `allow_rz` | `optional bool` | Allow Rz | true |
 | Request | 13 | `lock_degrees_of_freedom` | `optional bool` | Lock Degrees of Freedom | false |
 | Request | 14 | `generate_event` | `optional bool` | Generate Event | false |
-| Request | 15 | `file_path_for_csv_text_report_requires_show_interface_true` | `optional FileReference` | File Path for CSV Text Report (requires Show Interface = TRUE) | Required |
+| Request | 15 | `file_path_for_csv_text_report` | `optional FileReference` | File Path for CSV Text Report (requires Show Interface = TRUE) | Required |
 | Result | 1 | `transform_in_working` | `optional Transform` | Transform in Working | — |
 | Result | 2 | `optimum_transform` | `optional WorldTransform` | Optimum Transform | — |
 | Result | 3 | `rms_deviation` | `optional double` | RMS Deviation | — |
@@ -144,8 +162,8 @@ message BestFitTransformationGroupToGroupRequest {
   optional CollectionObjectName reference_group = 1;
   optional CollectionObjectName corresponding_group = 2;
   optional bool show_interface = 3;
-  optional double rms_tolerance_0_0_for_none = 4;
-  optional double maximum_absolute_tolerance_0_0_for_none = 5;
+  optional double rms_tolerance = 4;
+  optional double maximum_absolute_tolerance = 5;
   optional bool allow_scale = 6;
   optional bool allow_x = 7;
   optional bool allow_y = 8;
@@ -155,7 +173,7 @@ message BestFitTransformationGroupToGroupRequest {
   optional bool allow_rz = 12;
   optional bool lock_degrees_of_freedom = 13;
   optional bool generate_event = 14;
-  optional FileReference file_path_for_csv_text_report_requires_show_interface_true = 15;
+  optional FileReference file_path_for_csv_text_report = 15;
 }
 
 message BestFitTransformationGroupToGroupResult {
@@ -169,6 +187,14 @@ message BestFitTransformationGroupToGroupResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
+| `file_path_for_csv_text_report` | Requires Show Interface to be true. |
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz) {/* #compute-group-to-group-orientation-rxryrz */}
 
@@ -276,9 +302,9 @@ message CreatePointUncertaintyFieldsResult {
 | Request | 3 | `resulting_object_name` | `optional CollectionObjectName` | Resulting Object Name | Required |
 | Request | 4 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 5 | `report_deviations` | `optional bool` | Report Deviations | false |
-| Request | 6 | `fit_interface_tolerance_1_0_use_profile` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
+| Request | 6 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 7 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 8 | `starting_condition_geometry_optional` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -290,15 +316,22 @@ message FitGeometryToPointGroupRequest {
   optional CollectionObjectName resulting_object_name = 3;
   optional string fit_profile_name = 4;
   optional bool report_deviations = 5;
-  optional double fit_interface_tolerance_1_0_use_profile = 6;
+  optional double fit_interface_tolerance = 6;
   optional bool ignore_out_of_tolerance_points = 7;
-  optional CollectionObjectName starting_condition_geometry_optional = 8;
+  optional CollectionObjectName starting_condition_geometry = 8;
 }
 
 message FitGeometryToPointGroupResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
@@ -314,9 +347,9 @@ message FitGeometryToPointGroupResult {
 | Request | 4 | `resulting_object_name` | `optional CollectionObjectName` | Resulting Object Name | Required |
 | Request | 5 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 6 | `report_deviations` | `optional bool` | Report Deviations | false |
-| Request | 7 | `fit_interface_tolerance_1_0_use_profile` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
+| Request | 7 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 8 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 9 | `starting_condition_geometry_optional` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 9 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -329,15 +362,22 @@ message FitGeometryToPointGroupProjectedToPlaneRequest {
   optional CollectionObjectName resulting_object_name = 4;
   optional string fit_profile_name = 5;
   optional bool report_deviations = 6;
-  optional double fit_interface_tolerance_1_0_use_profile = 7;
+  optional double fit_interface_tolerance = 7;
   optional bool ignore_out_of_tolerance_points = 8;
-  optional CollectionObjectName starting_condition_geometry_optional = 9;
+  optional CollectionObjectName starting_condition_geometry = 9;
 }
 
 message FitGeometryToPointGroupProjectedToPlaneResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
@@ -352,9 +392,9 @@ message FitGeometryToPointGroupProjectedToPlaneResult {
 | Request | 3 | `resulting_object_name` | `optional CollectionObjectName` | Resulting Object Name | Required |
 | Request | 4 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 5 | `report_deviations` | `optional bool` | Report Deviations | false |
-| Request | 6 | `fit_interface_tolerance_1_0_use_profile` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
+| Request | 6 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 7 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 8 | `starting_condition_geometry_optional` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -366,15 +406,22 @@ message FitGeometryToPointsRequest {
   optional CollectionObjectName resulting_object_name = 3;
   optional string fit_profile_name = 4;
   optional bool report_deviations = 5;
-  optional double fit_interface_tolerance_1_0_use_profile = 6;
+  optional double fit_interface_tolerance = 6;
   optional bool ignore_out_of_tolerance_points = 7;
-  optional CollectionObjectName starting_condition_geometry_optional = 8;
+  optional CollectionObjectName starting_condition_geometry = 8;
 }
 
 message FitGeometryToPointsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
+| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
@@ -451,8 +498,8 @@ message GetCirclePropertiesResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cone_name` | `optional CollectionObjectName` | Cone Name | Required |
-| Result | 1 | `cone_end_point_in_working_coordinates` | `optional Vector` | Cone End Point (in working coordinates) | — |
-| Result | 2 | `cone_axis_in_working_coordinates` | `optional Vector` | Cone Axis (in working coordinates) | — |
+| Result | 1 | `cone_end_point` | `optional Vector` | Cone End Point (in working coordinates) | — |
+| Result | 2 | `cone_axis` | `optional Vector` | Cone Axis (in working coordinates) | — |
 | Result | 3 | `cone_length` | `optional double` | Cone Length | — |
 | Result | 4 | `cone_theta_start` | `optional double` | Cone Theta Start | — |
 | Result | 5 | `cone_theta_span` | `optional double` | Cone Theta Span | — |
@@ -467,8 +514,8 @@ message GetConePropertiesRequest {
 }
 
 message GetConePropertiesResult {
-  optional Vector cone_end_point_in_working_coordinates = 1;
-  optional Vector cone_axis_in_working_coordinates = 2;
+  optional Vector cone_end_point = 1;
+  optional Vector cone_axis = 2;
   optional double cone_length = 3;
   optional double cone_theta_start = 4;
   optional double cone_theta_span = 5;
@@ -476,6 +523,13 @@ message GetConePropertiesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `cone_end_point` | Expressed in working coordinates. |
+| `cone_axis` | Expressed in working coordinates. |
 
 ## Get Coordinate for i-th Point in Point Set {/* #get-coordinate-for-i-th-point-in-point-set */}
 
@@ -814,9 +868,9 @@ message GetMeasurementInfoDataResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
-| Result | 1 | `temperature_deg_f` | `optional double` | Temperature (deg F) | — |
-| Result | 2 | `pressure_in_hg` | `optional double` | Pressure (in. Hg) | — |
-| Result | 3 | `humidity_rh` | `optional double` | Humidity (% RH) | — |
+| Result | 1 | `temperature` | `optional double` | Temperature (deg F) | — |
+| Result | 2 | `pressure` | `optional double` | Pressure (in. Hg) | — |
+| Result | 3 | `humidity` | `optional double` | Humidity (% RH) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -827,12 +881,20 @@ message GetMeasurementWeatherDataRequest {
 }
 
 message GetMeasurementWeatherDataResult {
-  optional double temperature_deg_f = 1;
-  optional double pressure_in_hg = 2;
-  optional double humidity_rh = 3;
+  optional double temperature = 1;
+  optional double pressure = 2;
+  optional double humidity = 3;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `humidity` | Relative humidity in percent. |
 
 ## Get Number of Collections {/* #get-number-of-collections */}
 
@@ -1251,14 +1313,14 @@ message GetPointToleranceResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `slot_name` | `optional CollectionObjectName` | Slot Name | Required |
-| Result | 1 | `slot_transform_in_working_coordinates` | `optional Transform` | Slot Transform (in working coordinates | — |
-| Result | 2 | `center_in_working_coordinates` | `optional Vector` | Center (in working coordinates) | — |
-| Result | 3 | `normal_direction_in_working_coordinates` | `optional Vector` | Normal Direction (in working coordinates) | — |
+| Result | 1 | `slot_transform` | `optional Transform` | Slot Transform (in working coordinates | — |
+| Result | 2 | `center` | `optional Vector` | Center (in working coordinates) | — |
+| Result | 3 | `normal_direction` | `optional Vector` | Normal Direction (in working coordinates) | — |
 | Result | 4 | `slot_length` | `optional double` | Slot Length | — |
 | Result | 5 | `slot_width` | `optional double` | Slot Width | — |
 | Result | 6 | `round_slot_type` | `optional bool` | Round Slot Type | — |
-| Result | 7 | `centerline_pt_1_in_working_coordinates` | `optional Vector` | Centerline Pt. 1 (in working coordinates) | — |
-| Result | 8 | `centerline_pt_2_in_working_coordinates` | `optional Vector` | Centerline Pt. 2 (in working coordinates) | — |
+| Result | 7 | `centerline_pt_1` | `optional Vector` | Centerline Pt. 1 (in working coordinates) | — |
+| Result | 8 | `centerline_pt_2` | `optional Vector` | Centerline Pt. 2 (in working coordinates) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1269,17 +1331,27 @@ message GetSlotPropertiesRequest {
 }
 
 message GetSlotPropertiesResult {
-  optional Transform slot_transform_in_working_coordinates = 1;
-  optional Vector center_in_working_coordinates = 2;
-  optional Vector normal_direction_in_working_coordinates = 3;
+  optional Transform slot_transform = 1;
+  optional Vector center = 2;
+  optional Vector normal_direction = 3;
   optional double slot_length = 4;
   optional double slot_width = 5;
   optional bool round_slot_type = 6;
-  optional Vector centerline_pt_1_in_working_coordinates = 7;
-  optional Vector centerline_pt_2_in_working_coordinates = 8;
+  optional Vector centerline_pt_1 = 7;
+  optional Vector centerline_pt_2 = 8;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `slot_transform` | Expressed in working coordinates. |
+| `center` | Expressed in working coordinates. |
+| `normal_direction` | Expressed in working coordinates. |
+| `centerline_pt_1` | Expressed in working coordinates. |
+| `centerline_pt_2` | Expressed in working coordinates. |
 
 ## Get Sphere Properties {/* #get-sphere-properties */}
 
@@ -1460,8 +1532,8 @@ message GetTransformForIthFrameInFrameSetResult {
 | Request | 1 | `group_to_fit` | `optional CollectionObjectName` | Group to Fit | Required |
 | Request | 2 | `surface` | `optional CollectionObjectName` | Surface | Required |
 | Request | 3 | `do_conventional_fit` | `optional bool` | Do Conventional Fit | false |
-| Request | 4 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 5 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 4 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 5 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `optimum_transform` | `optional WorldTransform` | Optimum Transform | — |
 | Result | 2 | `rms_deviation` | `optional double` | RMS Deviation | — |
 | Result | 3 | `maximum_absolute_deviation` | `optional double` | Maximum Absolute Deviation | — |
@@ -1474,8 +1546,8 @@ message GroupToSurfaceFitRequest {
   optional CollectionObjectName group_to_fit = 1;
   optional CollectionObjectName surface = 2;
   optional bool do_conventional_fit = 3;
-  optional double rms_tolerance_0_0_for_none = 4;
-  optional double maximum_absolute_tolerance_0_0_for_none = 5;
+  optional double rms_tolerance = 4;
+  optional double maximum_absolute_tolerance = 5;
 }
 
 message GroupToSurfaceFitResult {
@@ -1485,6 +1557,13 @@ message GroupToSurfaceFitResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Import Geometry Fit Profiles {/* #import-geometry-fit-profiles */}
 
@@ -1548,11 +1627,11 @@ message IsObjectOfTypeResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
 | Request | 4 | `measured_side_for_planar_offset` | `optional MeasuredSideForPlanarOffset` | Measured Side for Planar Offset | Above Plane |
-| Request | 5 | `override_planar_offset_1_0_use_current` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
+| Request | 5 | `override_planar_offset` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
 | Request | 6 | `planar_offset_direction` | `optional NormalDirection` | Planar Offset Direction | Probing Direction |
-| Request | 7 | `lock_radius_1_0_do_not_lock` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
+| Request | 7 | `lock_radius` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
 | Request | 8 | `circle_computation_technique` | `optional CompTechnique` | Circle Computation Technique | Standard |
 | Request | 9 | `reverse_normal_vector_after_fit` | `optional bool` | Reverse Normal Vector after fit? | false |
 | Request | 10 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
@@ -1566,11 +1645,11 @@ rpc MakeCircleFitProfile(MakeCircleFitProfileRequest) returns (MakeCircleFitProf
 message MakeCircleFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
+  optional double override_radial_offset = 3;
   optional MeasuredSideForPlanarOffset measured_side_for_planar_offset = 4;
-  optional double override_planar_offset_1_0_use_current = 5;
+  optional double override_planar_offset = 5;
   optional NormalDirection planar_offset_direction = 6;
-  optional double lock_radius_1_0_do_not_lock = 7;
+  optional double lock_radius = 7;
   optional CompTechnique circle_computation_technique = 8;
   optional bool reverse_normal_vector_after_fit = 9;
   optional bool make_cardinal_points = 10;
@@ -1583,6 +1662,14 @@ message MakeCircleFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile)
@@ -1593,8 +1680,8 @@ message MakeCircleFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
-| Request | 4 | `lock_angle_in_degrees_1_0_do_not_lock` | `optional double` | Lock Angle in degrees (-1.0 do not lock) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 4 | `lock_angle_in_degrees` | `optional double` | Lock Angle in degrees (-1.0 do not lock) | -1.000000 |
 | Request | 5 | `use_exhaustive_search` | `optional bool` | Use Exhaustive Search? | true |
 | Request | 6 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
 | Request | 7 | `cardinal_pt_1_vertex` | `optional bool` | Cardinal Pt.1: Vertex? | true |
@@ -1608,8 +1695,8 @@ rpc MakeConeFitProfile(MakeConeFitProfileRequest) returns (MakeConeFitProfileRes
 message MakeConeFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
-  optional double lock_angle_in_degrees_1_0_do_not_lock = 4;
+  optional double override_radial_offset = 3;
+  optional double lock_angle_in_degrees = 4;
   optional bool use_exhaustive_search = 5;
   optional bool make_cardinal_points = 6;
   optional bool cardinal_pt_1_vertex = 7;
@@ -1622,6 +1709,13 @@ message MakeConeFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_angle_in_degrees` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile)
@@ -1632,8 +1726,8 @@ message MakeConeFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
-| Request | 4 | `lock_radius_1_0_do_not_lock` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 4 | `lock_radius` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
 | Request | 5 | `locked_radius_fit_method` | `optional FitMethod` | Locked Radius Fit Method | Minimum RMS |
 | Request | 11 | `cylinder_computation_technique` | `optional CompTechnique` | Cylinder Computation Technique | Standard |
 | Request | 12 | `use_exhaustive_search` | `optional bool` | Use Exhaustive Search? | false |
@@ -1649,8 +1743,8 @@ rpc MakeCylinderFitProfile(MakeCylinderFitProfileRequest) returns (MakeCylinderF
 message MakeCylinderFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
-  optional double lock_radius_1_0_do_not_lock = 4;
+  optional double override_radial_offset = 3;
+  optional double lock_radius = 4;
   optional FitMethod locked_radius_fit_method = 5;
   optional CompTechnique cylinder_computation_technique = 11;
   optional bool use_exhaustive_search = 12;
@@ -1665,6 +1759,13 @@ message MakeCylinderFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile)
@@ -1675,9 +1776,9 @@ message MakeCylinderFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
 | Request | 4 | `measured_side_for_planar_offset` | `optional MeasuredSideForPlanarOffset` | Measured Side for Planar Offset | Above Plane |
-| Request | 5 | `override_planar_offset_1_0_use_current` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
+| Request | 5 | `override_planar_offset` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
 | Request | 6 | `planar_offset_direction` | `optional NormalDirection` | Planar Offset Direction | Probing Direction |
 | Request | 7 | `reverse_normal_vector_after_fit` | `optional bool` | Reverse Normal Vector after fit? | false |
 | Request | 8 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
@@ -1693,9 +1794,9 @@ rpc MakeEllipseFitProfile(MakeEllipseFitProfileRequest) returns (MakeEllipseFitP
 message MakeEllipseFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
+  optional double override_radial_offset = 3;
   optional MeasuredSideForPlanarOffset measured_side_for_planar_offset = 4;
-  optional double override_planar_offset_1_0_use_current = 5;
+  optional double override_planar_offset = 5;
   optional NormalDirection planar_offset_direction = 6;
   optional bool reverse_normal_vector_after_fit = 7;
   optional bool make_cardinal_points = 8;
@@ -1709,6 +1810,13 @@ message MakeEllipseFitProfileResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
 
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
@@ -1753,8 +1861,8 @@ message MakeLineFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
-| Request | 4 | `lock_focal_length_1_0_do_not_lock` | `optional double` | Lock Focal Length (-1.0 do not lock) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 4 | `lock_focal_length` | `optional double` | Lock Focal Length (-1.0 do not lock) | -1.000000 |
 | Request | 5 | `degree_of_freedom` | `optional DegreeOfFreedom` | Degree of Freedom | Any |
 | Request | 6 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
 | Request | 7 | `cardinal_pt_1_vertex` | `optional bool` | Cardinal Pt.1: Vertex? | true |
@@ -1767,8 +1875,8 @@ rpc MakeParaboloidFitProfile(MakeParaboloidFitProfileRequest) returns (MakeParab
 message MakeParaboloidFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
-  optional double lock_focal_length_1_0_do_not_lock = 4;
+  optional double override_radial_offset = 3;
+  optional double lock_focal_length = 4;
   optional DegreeOfFreedom degree_of_freedom = 5;
   optional bool make_cardinal_points = 6;
   optional bool cardinal_pt_1_vertex = 7;
@@ -1780,6 +1888,13 @@ message MakeParaboloidFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_focal_length` | -1.0 leaves this dimension unlocked. |
+
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile)
@@ -1790,7 +1905,7 @@ message MakeParaboloidFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_planar_offset` | `optional MeasuredSideForPlanarOffset` | Measured Side for Planar Offset | Above Plane |
-| Request | 3 | `override_planar_offset_1_0_use_current` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
+| Request | 3 | `override_planar_offset` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
 | Request | 4 | `planar_offset_direction` | `optional NormalDirection` | Planar Offset Direction | Probing Direction |
 | Request | 5 | `reverse_normal_vector_after_fit` | `optional bool` | Reverse Normal Vector after fit? | false |
 | Request | 6 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
@@ -1804,7 +1919,7 @@ rpc MakePlaneFitProfile(MakePlaneFitProfileRequest) returns (MakePlaneFitProfile
 message MakePlaneFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForPlanarOffset measured_side_for_planar_offset = 2;
-  optional double override_planar_offset_1_0_use_current = 3;
+  optional double override_planar_offset = 3;
   optional NormalDirection planar_offset_direction = 4;
   optional bool reverse_normal_vector_after_fit = 5;
   optional bool make_cardinal_points = 6;
@@ -1817,6 +1932,12 @@ message MakePlaneFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_planar_offset` | -1.0 uses the current offset. |
+
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile)
@@ -1827,9 +1948,9 @@ message MakePlaneFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
 | Request | 4 | `measured_side_for_planar_offset` | `optional MeasuredSideForPlanarOffset` | Measured Side for Planar Offset | Above Plane |
-| Request | 5 | `override_planar_offset_1_0_use_current` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
+| Request | 5 | `override_planar_offset` | `optional double` | Override Planar Offset (-1.0 use current) | -1.000000 |
 | Request | 6 | `planar_offset_direction` | `optional NormalDirection` | Planar Offset Direction | Probing Direction |
 | Request | 7 | `slot_type` | `optional SlotType` | Slot Type | Round |
 | Request | 8 | `slot_computation_technique` | `optional CompTechnique` | Slot Computation Technique | Standard |
@@ -1847,9 +1968,9 @@ rpc MakeSlotFitProfile(MakeSlotFitProfileRequest) returns (MakeSlotFitProfileRes
 message MakeSlotFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
+  optional double override_radial_offset = 3;
   optional MeasuredSideForPlanarOffset measured_side_for_planar_offset = 4;
-  optional double override_planar_offset_1_0_use_current = 5;
+  optional double override_planar_offset = 5;
   optional NormalDirection planar_offset_direction = 6;
   optional SlotType slot_type = 7;
   optional CompTechnique slot_computation_technique = 8;
@@ -1866,6 +1987,13 @@ message MakeSlotFitProfileResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `override_planar_offset` | -1.0 uses the current offset. |
+
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile)
@@ -1876,8 +2004,8 @@ message MakeSlotFitProfileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
 | Request | 2 | `measured_side_for_radial_offset` | `optional MeasuredSideForRadialOffset` | Measured Side for Radial Offset | Outside |
-| Request | 3 | `override_radial_offset_1_0_use_current` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
-| Request | 4 | `lock_radius_1_0_do_not_lock` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
+| Request | 3 | `override_radial_offset` | `optional double` | Override Radial Offset (-1.0 use current) | -1.000000 |
+| Request | 4 | `lock_radius` | `optional double` | Lock Radius (-1.0 do not lock) | -1.000000 |
 | Request | 5 | `make_cardinal_points` | `optional bool` | Make Cardinal Points? | true |
 | Request | 6 | `cardinal_pt_1_center` | `optional bool` | Cardinal Pt.1: Center? | true |
 | Request | 7 | `computation_method` | `optional SphereFitComputationMode` | Computation Method | Standard |
@@ -1889,8 +2017,8 @@ rpc MakeSphereFitProfile(MakeSphereFitProfileRequest) returns (MakeSphereFitProf
 message MakeSphereFitProfileRequest {
   optional string fit_profile_name = 1;
   optional MeasuredSideForRadialOffset measured_side_for_radial_offset = 2;
-  optional double override_radial_offset_1_0_use_current = 3;
-  optional double lock_radius_1_0_do_not_lock = 4;
+  optional double override_radial_offset = 3;
+  optional double lock_radius = 4;
   optional bool make_cardinal_points = 5;
   optional bool cardinal_pt_1_center = 6;
   optional SphereFitComputationMode computation_method = 7;
@@ -1900,6 +2028,13 @@ message MakeSphereFitProfileResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `override_radial_offset` | -1.0 uses the current offset. |
+| `lock_radius` | -1.0 leaves this dimension unlocked. |
 
 ## Mushroom Target Hole Inspection {/* #mushroom-target-hole-inspection */}
 
@@ -2008,8 +2143,8 @@ message PatchNormalShiftPointResult {
 | Request | 4 | `projection_options` | `optional ProjectionOptions` | Projection Options | Object To Probe Vectors |
 | Request | 5 | `proximity` | `optional double` | Proximity | 0.000000 |
 | Request | 6 | `skip_factor` | `optional int32` | Skip Factor | 0 |
-| Request | 7 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 8 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 7 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 8 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `rms_deviation` | `optional double` | RMS Deviation | — |
 | Result | 2 | `maximum_absolute_deviation` | `optional double` | Maximum Absolute Deviation | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -2024,8 +2159,8 @@ message QueryCloudsToObjectsRequest {
   optional ProjectionOptions projection_options = 4;
   optional double proximity = 5;
   optional int32 skip_factor = 6;
-  optional double rms_tolerance_0_0_for_none = 7;
-  optional double maximum_absolute_tolerance_0_0_for_none = 8;
+  optional double rms_tolerance = 7;
+  optional double maximum_absolute_tolerance = 8;
 }
 
 message QueryCloudsToObjectsResult {
@@ -2034,6 +2169,13 @@ message QueryCloudsToObjectsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
@@ -2049,8 +2191,8 @@ message QueryCloudsToObjectsResult {
 | Request | 4 | `projection_options` | `optional ProjectionOptions` | Projection Options | Object To Probe Vectors |
 | Request | 5 | `proximity` | `optional double` | Proximity | 0.000000 |
 | Request | 6 | `skip_factor` | `optional int32` | Skip Factor | 0 |
-| Request | 7 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 8 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 7 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 8 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Result | 1 | `rms_deviation` | `optional double` | RMS Deviation | — |
 | Result | 2 | `maximum_absolute_deviation` | `optional double` | Maximum Absolute Deviation | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -2065,8 +2207,8 @@ message QueryCloudsToSurfaceRequest {
   optional ProjectionOptions projection_options = 4;
   optional double proximity = 5;
   optional int32 skip_factor = 6;
-  optional double rms_tolerance_0_0_for_none = 7;
-  optional double maximum_absolute_tolerance_0_0_for_none = 8;
+  optional double rms_tolerance = 7;
+  optional double maximum_absolute_tolerance = 8;
 }
 
 message QueryCloudsToSurfaceResult {
@@ -2075,6 +2217,13 @@ message QueryCloudsToSurfaceResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Frame to Frame {/* #query-frame-to-frame */}
 
@@ -2089,9 +2238,9 @@ message QueryCloudsToSurfaceResult {
 | Result | 1 | `x` | `optional double` | X | — |
 | Result | 2 | `y` | `optional double` | Y | — |
 | Result | 3 | `z` | `optional double` | Z | — |
-| Result | 4 | `rx_roll` | `optional double` | Rx (Roll) | — |
-| Result | 5 | `ry_pitch` | `optional double` | Ry (Pitch) | — |
-| Result | 6 | `rz_yaw` | `optional double` | Rz (Yaw) | — |
+| Result | 4 | `rx` | `optional double` | Rx (Roll) | — |
+| Result | 5 | `ry` | `optional double` | Ry (Pitch) | — |
+| Result | 6 | `rz` | `optional double` | Rz (Yaw) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -2106,12 +2255,20 @@ message QueryFrameToFrameResult {
   optional double x = 1;
   optional double y = 2;
   optional double z = 3;
-  optional double rx_roll = 4;
-  optional double ry_pitch = 5;
-  optional double rz_yaw = 6;
+  optional double rx = 4;
+  optional double ry = 5;
+  optional double rz = 6;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rx` | MP qualifier: Roll. |
+| `ry` | MP qualifier: Pitch. |
+| `rz` | MP qualifier: Yaw. |
 
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
@@ -2121,12 +2278,12 @@ message QueryFrameToFrameResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `group_name_list_groups_to_project` | `repeated CollectionObjectName` | Group Name List (Groups to Project) | Required |
-| Request | 2 | `object_name_list_objects_to_project_to` | `repeated CollectionObjectName` | Object Name List (Objects to Project to) | Required |
+| Request | 1 | `group_name_list` | `repeated CollectionObjectName` | Group Name List (Groups to Project) | Required |
+| Request | 2 | `object_name_list` | `repeated CollectionObjectName` | Object Name List (Objects to Project to) | Required |
 | Request | 3 | `resulting_object_name` | `optional CollectionObjectName` | Resulting Object Name | Required |
 | Request | 4 | `projection_options` | `optional ProjectionOptions` | Projection Options | Object To Probe Vectors |
-| Request | 5 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 6 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 5 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 6 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Request | 7 | `show_results_dialog` | `optional bool` | Show Results Dialog? | false |
 | Result | 1 | `rms_deviation` | `optional double` | RMS Deviation | — |
 | Result | 2 | `max_absolute_deviation` | `optional double` | Max Absolute Deviation | — |
@@ -2138,12 +2295,12 @@ message QueryFrameToFrameResult {
 rpc QueryGroupsToObjects(QueryGroupsToObjectsRequest) returns (QueryGroupsToObjectsResult);
 
 message QueryGroupsToObjectsRequest {
-  repeated CollectionObjectName group_name_list_groups_to_project = 1;
-  repeated CollectionObjectName object_name_list_objects_to_project_to = 2;
+  repeated CollectionObjectName group_name_list = 1;
+  repeated CollectionObjectName object_name_list = 2;
   optional CollectionObjectName resulting_object_name = 3;
   optional ProjectionOptions projection_options = 4;
-  optional double rms_tolerance_0_0_for_none = 5;
-  optional double maximum_absolute_tolerance_0_0_for_none = 6;
+  optional double rms_tolerance = 5;
+  optional double maximum_absolute_tolerance = 6;
   optional bool show_results_dialog = 7;
 }
 
@@ -2155,6 +2312,15 @@ message QueryGroupsToObjectsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `group_name_list` | MP qualifier: Groups to Project. |
+| `object_name_list` | MP qualifier: Objects to Project to. |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Point to Objects {/* #query-point-to-objects */}
 
@@ -2266,11 +2432,11 @@ message QueryPointsToCircleResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
-| Request | 2 | `object_name_list_objects_to_project_to` | `repeated CollectionObjectName` | Object Name List (Objects to Project to) | Required |
+| Request | 2 | `object_name_list` | `repeated CollectionObjectName` | Object Name List (Objects to Project to) | Required |
 | Request | 3 | `resulting_object_name` | `optional CollectionObjectName` | Resulting Object Name | Required |
 | Request | 4 | `projection_options` | `optional ProjectionOptions` | Projection Options | Object To Probe Vectors |
-| Request | 5 | `rms_tolerance_0_0_for_none` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
-| Request | 6 | `maximum_absolute_tolerance_0_0_for_none` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
+| Request | 5 | `rms_tolerance` | `optional double` | RMS Tolerance (0.0 for none) | 0.000000 |
+| Request | 6 | `maximum_absolute_tolerance` | `optional double` | Maximum Absolute Tolerance (0.0 for none) | 0.000000 |
 | Request | 7 | `show_results_dialog` | `optional bool` | Show Results Dialog? | false |
 | Result | 1 | `rms_deviation` | `optional double` | RMS Deviation | — |
 | Result | 2 | `max_absolute_deviation` | `optional double` | Max Absolute Deviation | — |
@@ -2283,11 +2449,11 @@ rpc QueryPointsToObjects(QueryPointsToObjectsRequest) returns (QueryPointsToObje
 
 message QueryPointsToObjectsRequest {
   repeated PointName point_names = 1;
-  repeated CollectionObjectName object_name_list_objects_to_project_to = 2;
+  repeated CollectionObjectName object_name_list = 2;
   optional CollectionObjectName resulting_object_name = 3;
   optional ProjectionOptions projection_options = 4;
-  optional double rms_tolerance_0_0_for_none = 5;
-  optional double maximum_absolute_tolerance_0_0_for_none = 6;
+  optional double rms_tolerance = 5;
+  optional double maximum_absolute_tolerance = 6;
   optional bool show_results_dialog = 7;
 }
 
@@ -2299,6 +2465,14 @@ message QueryPointsToObjectsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `object_name_list` | MP qualifier: Objects to Project to. |
+| `rms_tolerance` | 0.0 disables this tolerance. |
+| `maximum_absolute_tolerance` | 0.0 disables this tolerance. |
 
 ## Query Points to Single Point {/* #query-points-to-single-point */}
 
@@ -2804,10 +2978,10 @@ message SphereAxisCheckResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `original_group` | `optional CollectionObjectName` | Original Group | Required |
-| Request | 2 | `scaling_origin_coordinate_frame` | `optional FrameName` | Scaling Origin (coordinate frame) | Required |
-| Request | 3 | `material_cte_1_deg_f` | `optional double` | Material CTE (1/Deg F) | 0.000000 |
-| Request | 4 | `initial_temperature_f` | `optional double` | Initial Temperature (F) | 0.000000 |
-| Request | 5 | `final_temperature_f` | `optional double` | Final Temperature (F) | 0.000000 |
+| Request | 2 | `scaling_origin` | `optional FrameName` | Scaling Origin (coordinate frame) | Required |
+| Request | 3 | `material_cte` | `optional double` | Material CTE (1/Deg F) | 0.000000 |
+| Request | 4 | `initial_temperature` | `optional double` | Initial Temperature (F) | 0.000000 |
+| Request | 5 | `final_temperature` | `optional double` | Final Temperature (F) | 0.000000 |
 | Request | 6 | `scaled_group_name` | `optional CollectionObjectName` | Scaled Group Name | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -2816,10 +2990,10 @@ rpc TemperatureCompensateAGroup(TemperatureCompensateAGroupRequest) returns (Tem
 
 message TemperatureCompensateAGroupRequest {
   optional CollectionObjectName original_group = 1;
-  optional FrameName scaling_origin_coordinate_frame = 2;
-  optional double material_cte_1_deg_f = 3;
-  optional double initial_temperature_f = 4;
-  optional double final_temperature_f = 5;
+  optional FrameName scaling_origin = 2;
+  optional double material_cte = 3;
+  optional double initial_temperature = 4;
+  optional double final_temperature = 5;
   optional CollectionObjectName scaled_group_name = 6;
 }
 
@@ -2827,6 +3001,15 @@ message TemperatureCompensateAGroupResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `scaling_origin` | MP qualifier: coordinate frame. |
+| `material_cte` | Coefficient per degree Fahrenheit. |
+| `initial_temperature` | Temperature in degrees Fahrenheit. |
+| `final_temperature` | Temperature in degrees Fahrenheit. |
 
 ## Transform Objects - Frame To Frame {/* #transform-objects---frame-to-frame */}
 
@@ -2944,4 +3127,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

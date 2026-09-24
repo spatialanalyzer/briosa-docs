@@ -1,6 +1,6 @@
 ---
 title: Utility Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/utility-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/utility-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -117,6 +117,12 @@ export declare function getAngularRepresentation(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `value0360` | False selects the +/-180 angular representation. |
 
 ## Get Collection Notes {/* #get-collection-notes */}
 
@@ -287,7 +293,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 ```ts
 export interface GetScreenResolutionInput {
-  readonly display1Primary?: number;
+  readonly display?: number;
 }
 
 export declare function getScreenResolution(
@@ -298,6 +304,12 @@ export declare function getScreenResolution(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `display` | -1 selects the primary display. |
 
 ## Get Working Frame Properties {/* #get-working-frame-properties */}
 
@@ -531,7 +543,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 ```ts
 export interface SetAngularRepresentationInput {
-  readonly value0360False180?: boolean;
+  readonly value0360?: boolean;
 }
 
 export declare function setAngularRepresentation(
@@ -542,6 +554,12 @@ export declare function setAngularRepresentation(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `value0360` | False selects the +/-180 angular representation. |
 
 ## Set Auto Event Creation {/* #set-auto-event-creation */}
 
@@ -606,7 +624,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface SetCollectionNotesInput {
   readonly collection: CollectionName;
   readonly notes: Iterable<string>;
-  readonly appendFalseOverwrite?: boolean;
+  readonly append?: boolean;
 }
 
 export declare function setCollectionNotes(
@@ -617,6 +635,12 @@ export declare function setCollectionNotes(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Decimal Digits for Display {/* #set-decimal-digits-for-display */}
 
@@ -648,7 +672,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface SetFolderNotesInput {
   readonly folderPath?: string;
   readonly notes: Iterable<string>;
-  readonly appendFalseOverwrite?: boolean;
+  readonly append?: boolean;
 }
 
 export declare function setFolderNotes(
@@ -659,6 +683,12 @@ export declare function setFolderNotes(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Interaction Mode {/* #set-interaction-mode */}
 
@@ -724,7 +754,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface SetObjectNotesInput {
   readonly object: CollectionObjectName;
   readonly notes: Iterable<string>;
-  readonly appendFalseOverwrite?: boolean;
+  readonly append?: boolean;
 }
 
 export declare function setObjectNotes(
@@ -735,6 +765,12 @@ export declare function setObjectNotes(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set OPC DA Tag Value Double {/* #set-opc-da-tag-value-double */}
 
@@ -801,7 +837,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface SetPointNotesInput {
   readonly point: PointName;
   readonly notes: Iterable<string>;
-  readonly appendFalseOverwrite?: boolean;
+  readonly append?: boolean;
 }
 
 export declare function setPointNotes(
@@ -813,6 +849,12 @@ export declare function setPointNotes(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
+
 ## Set User Interface Profile {/* #set-user-interface-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/utility-operations#set-user-interface-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/utility-operations#set-user-interface-profile)
@@ -820,7 +862,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SetUserInterfaceProfileInput {
   readonly profileName?: string;
-  readonly profileFileNameOptional: FileReference;
+  readonly profileFileName: FileReference;
 }
 
 export declare function setUserInterfaceProfile(
@@ -831,6 +873,12 @@ export declare function setUserInterfaceProfile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `profileFileName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 
@@ -945,4 +993,4 @@ export declare function writeToLog(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

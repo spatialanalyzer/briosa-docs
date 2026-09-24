@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/reporting-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -271,13 +271,19 @@ async def create_chart_from_vector_group(
         chart_type: ChartType,
         data_set_to_chart: DatasetType,
         aux_data_set_to_chart: DatasetType,
-        template_chart_name_optional: ChartName,
+        template_chart_name: ChartName,
         *,
         show_interface: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `template_chart_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Define Report Template {/* #define-report-template */}
 
@@ -294,13 +300,19 @@ async def define_report_template(
         events_to_report: Iterable[CollectionItemName],
         *,
         report_output_options: ReportOutputOptions = ReportOutputOptions.DEFAULT,
-        report_page_settings_sa_report_only: ReportPageSettings = ReportPageSettings.PORTRAIT,
+        report_page_settings: ReportPageSettings = ReportPageSettings.PORTRAIT,
         generate_now: bool = False,
         show_generated_report: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `report_page_settings` | MP qualifier: SA Report only. |
 
 ## Delete Chart {/* #delete-chart */}
 
@@ -517,11 +529,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 async def make_new_sa_report(
         self,
         new_sa_report_name: CollectionObjectName,
-        sa_report_template_optional: CollectionObjectName,
+        sa_report_template: CollectionObjectName,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `sa_report_template` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Make Utility Chart {/* #make-utility-chart */}
 
@@ -649,12 +667,18 @@ async def quick_report(
         self,
         item_name: CollectionObjectName,
         *,
-        report_name_optional: str = "",
+        report_name: str = "",
         open_report: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `report_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Refresh Callout Views in SA Report {/* #refresh-callout-views-in-sa-report */}
 
@@ -732,11 +756,17 @@ async def save_current_view_bmp_jpg_png_gif_tiff(
         self,
         file_to_save_to: FileReference,
         *,
-        render_scale_factor_1_0_uses_window_size: float = 1.000000,
+        render_scale_factor: float = 1.000000,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `render_scale_factor` | 1.0 uses the window size. |
 
 ## Set Custom Table Cell Color {/* #set-custom-table-cell-color */}
 
@@ -1004,4 +1034,4 @@ async def set_vector_group_report_options(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2026.1.0529.7)

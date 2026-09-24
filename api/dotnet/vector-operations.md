@@ -1,6 +1,6 @@
 ---
 title: Vector Operations
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/vector-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/vector-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -33,11 +33,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task AutoRangeAndSetVectorGroupColorizationAllAsync(
         bool treatIndividually,
-        ColorizationOptions colorizationOptionsUsesModeOnly,
+        ColorizationOptions colorizationOptions,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorizationOptions` | MP qualifier: Uses Mode Only. |
 
 ## Auto-Range and Set Vector Group Colorization (Selected) {/* #auto-range-and-set-vector-group-colorization-selected */}
 
@@ -47,11 +53,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task AutoRangeAndSetVectorGroupColorizationSelectedAsync(
         IEnumerable<CollectionVectorGroupName> vectorGroupsToBeSet,
         bool treatIndividually,
-        ColorizationOptions colorizationOptionsUsesModeOnly,
+        ColorizationOptions colorizationOptions,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorizationOptions` | MP qualifier: Uses Mode Only. |
 
 ## Delete i-th Vector From Vector Group {/* #delete-i-th-vector-from-vector-group */}
 
@@ -212,4 +224,4 @@ public Task<VectorName[]> SortVectorsAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2026.1.0529.7)

@@ -1,6 +1,6 @@
 ---
 title: Robot Calibration Appliance Node Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/robot-calibration-appliance-node-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -192,7 +192,7 @@ message EnableDisableCalibrationApplianceNodeInstrumentAutoPointResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `calibration_appliance_node` | `optional CollectionObjectName` | Calibration Appliance Node | Required |
-| Request | 2 | `measurement_dwell_time_seconds` | `optional double` | Measurement Dwell Time (Seconds) | 0.000000 |
+| Request | 2 | `measurement_dwell_time` | `optional double` | Measurement Dwell Time (Seconds) | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -200,13 +200,19 @@ rpc SetCalibrationApplianceNodeInstrumentDwellTime(SetCalibrationApplianceNodeIn
 
 message SetCalibrationApplianceNodeInstrumentDwellTimeRequest {
   optional CollectionObjectName calibration_appliance_node = 1;
-  optional double measurement_dwell_time_seconds = 2;
+  optional double measurement_dwell_time = 2;
 }
 
 message SetCalibrationApplianceNodeInstrumentDwellTimeResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `measurement_dwell_time` | Time in seconds. |
 
 ## Skip Calibration Appliance Node Measurement {/* #skip-calibration-appliance-node-measurement */}
 
@@ -645,4 +651,4 @@ message GetCalibrationApplianceNodeStatusResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

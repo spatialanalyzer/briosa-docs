@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-callout-views-and-callouts) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -155,13 +155,13 @@ message CreateMinMaxVectorGroupCalloutResult {
 | Request | 5 | `show_point_collection` | `optional bool` | Show Point Collection? | false |
 | Request | 6 | `show_point_group` | `optional bool` | Show Point Group? | true |
 | Request | 7 | `show_point_target` | `optional bool` | Show Point Target? | true |
-| Request | 8 | `show_x_r` | `optional bool` | Show X (R)? | true |
-| Request | 9 | `show_y_theta` | `optional bool` | Show Y (Theta)? | true |
-| Request | 10 | `show_z_phi` | `optional bool` | Show Z (Phi)? | true |
+| Request | 8 | `show_x` | `optional bool` | Show X (R)? | true |
+| Request | 9 | `show_y` | `optional bool` | Show Y (Theta)? | true |
+| Request | 10 | `show_z` | `optional bool` | Show Z (Phi)? | true |
 | Request | 11 | `show_units` | `optional bool` | Show Units? | false |
-| Request | 12 | `show_ux_ur` | `optional bool` | Show Ux (Ur)? | false |
-| Request | 13 | `show_uy_utheta` | `optional bool` | Show Uy (Utheta)? | false |
-| Request | 14 | `show_uz_uphi` | `optional bool` | Show Uz (Uphi)? | false |
+| Request | 12 | `show_ux` | `optional bool` | Show Ux (Ur)? | false |
+| Request | 13 | `show_uy` | `optional bool` | Show Uy (Utheta)? | false |
+| Request | 14 | `show_uz` | `optional bool` | Show Uz (Uphi)? | false |
 | Request | 15 | `show_umag` | `optional bool` | Show Umag? | false |
 | Request | 16 | `desired_coordinate_system` | `optional CoordinateSystemType` | Desired Coordinate System | Required |
 | Request | 17 | `notes` | `repeated string` | Notes (blank for none) | Empty |
@@ -179,13 +179,13 @@ message CreatePointCalloutRequest {
   optional bool show_point_collection = 5;
   optional bool show_point_group = 6;
   optional bool show_point_target = 7;
-  optional bool show_x_r = 8;
-  optional bool show_y_theta = 9;
-  optional bool show_z_phi = 10;
+  optional bool show_x = 8;
+  optional bool show_y = 9;
+  optional bool show_z = 10;
   optional bool show_units = 11;
-  optional bool show_ux_ur = 12;
-  optional bool show_uy_utheta = 13;
-  optional bool show_uz_uphi = 14;
+  optional bool show_ux = 12;
+  optional bool show_uy = 13;
+  optional bool show_uz = 14;
   optional bool show_umag = 15;
   optional CoordinateSystemType desired_coordinate_system = 16;
   repeated string notes = 17;
@@ -196,6 +196,17 @@ message CreatePointCalloutResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show_x` | MP qualifier: R. |
+| `show_y` | MP qualifier: Theta. |
+| `show_z` | MP qualifier: Phi. |
+| `show_ux` | MP qualifier: Ur. |
+| `show_uy` | MP qualifier: Utheta. |
+| `show_uz` | MP qualifier: Uphi. |
 
 ## Create Point Comparison Callout {/* #create-point-comparison-callout */}
 
@@ -602,4 +613,4 @@ message SetIthCalloutPositionInCalloutViewResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

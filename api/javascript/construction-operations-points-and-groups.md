@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -558,7 +558,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface GetGradientAtProjectedPointOnSurfaceEdgeInput {
   readonly pointToProject: PointName;
-  readonly surfaceEdgeBSpline: CollectionObjectName;
+  readonly surfaceEdge: CollectionObjectName;
   readonly surfaceName: CollectionObjectName;
   readonly edgeOffsetDirection?: Vector;
   readonly edgeOffsetDistance?: number;
@@ -575,6 +575,12 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surfaceEdge` | MP qualifier: B-Spline. |
 
 ## Construct Points By Projecting Points On Mesh Along Direction {/* #construct-points-by-projecting-points-on-mesh-along-direction */}
 
@@ -806,7 +812,7 @@ export interface ConstructPointsCylindricallyShiftedInput {
   readonly originalPoints: Iterable<PointName>;
   readonly groupForNewPoints: CollectionObjectName;
   readonly radialShift?: number;
-  readonly thetaShiftDegrees?: number;
+  readonly thetaShift?: number;
   readonly planarShift?: number;
 }
 
@@ -820,6 +826,12 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `thetaShift` | Angle in degrees. |
 
 ## Construct Points WildCard Selection {/* #construct-points-wildcard-selection */}
 
@@ -1111,8 +1123,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface CreateHiddenPointRodInput {
   readonly hiddenPointRodName: string;
-  readonly targetToTargetDistance?: number;
-  readonly targetToTipDistance?: number;
+  readonly aToBDistance?: number;
+  readonly aToCDistance?: number;
   readonly interPointTolerance?: number;
 }
 
@@ -1126,6 +1138,13 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `aToBDistance` | MP qualifier: Target to Target. |
+| `aToCDistance` | MP qualifier: Target to Tip. |
 
 ## Get Hidden Point Rod Index by Name {/* #get-hidden-point-rod-index-by-name */}
 
@@ -1223,4 +1242,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2026.1.0529.7)

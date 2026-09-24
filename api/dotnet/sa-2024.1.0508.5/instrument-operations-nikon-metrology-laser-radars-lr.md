@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / Nikon Metrology Laser Radars LR
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations-nikon-metrology-laser-radars-lr) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -75,6 +75,13 @@ public Task<LrSnrInfo> LrGetMostRecentSnrInfoAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `PeakValue` | Value in decibels. |
+| `MeasuredRange` | Range in meters. |
+
 ## LR Self Test {/* #lr-self-test */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
@@ -86,6 +93,14 @@ public Task<LrSelfTestResult> LrSelfTestAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `ReferenceArmLength` | Length in inches. |
+| `MirrorMeasurementRangeMean` | Length in inches. |
+| `MirrorMeasurementRangeStandardDeviation` | Length in inches. |
 
 ## LR Self Test - Linearization {/* #lr-self-test---linearization */}
 
@@ -99,6 +114,12 @@ public Task<double> LrSelfTestLinearizationAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Linearity` | Frequency in kilohertz. |
+
 ## LR Self Test - Flip Test {/* #lr-self-test---flip-test */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
@@ -110,6 +131,20 @@ public Task<LrFlipTestResult> LrSelfTestFlipTestAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `FrontRange` | Length in inches. |
+| `FrontAzimuth` | Angle in degrees. |
+| `FrontElevation` | Angle in degrees. |
+| `BackRange` | Length in inches. |
+| `BackAzimuth` | Angle in degrees. |
+| `BackElevation` | Angle in degrees. |
+| `FrontBackDifferenceRange` | Length in inches. |
+| `FrontBackDifferenceAzimuth` | Angle in degrees. |
+| `FrontBackDifferenceElevation` | Angle in degrees. |
 
 ## LR Self Test - LO Sep {/* #lr-self-test---lo-sep */}
 
@@ -124,6 +159,17 @@ public Task<LrLoSeparationTestResult> LrSelfTestLoSepAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `PrimaryLo` | Indexing starts at 1. |
+| `SecondaryLo` | Indexing starts at 1. |
+| `PrimaryLoRangeMean` | Length in inches. |
+| `PrimaryLoRangeStandardDeviation` | Length in inches. |
+| `SecondaryLoRangeMean` | Length in inches. |
+| `SecondaryLoRangeStandardDeviation` | Length in inches. |
 
 ## LR APDIS Perform MCM Calibration {/* #lr-apdis-perform-mcm-calibration */}
 
@@ -218,4 +264,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2024.1.0508.5)

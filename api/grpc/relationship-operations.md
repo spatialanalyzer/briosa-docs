@@ -1,6 +1,6 @@
 ---
 title: Relationship Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/relationship-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/relationship-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -92,10 +92,10 @@ message GeomRelationshipReuseIgnoredInputPointsResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
-| Result | 1 | `auto_vectors_nominal_avn_enabled` | `optional bool` | Auto Vectors Nominal (AVN) - Enabled? | — |
-| Result | 2 | `auto_vectors_nominal_avn_name` | `optional CollectionObjectName` | Auto Vectors Nominal (AVN) - Name | — |
-| Result | 3 | `auto_vectors_fit_avf_enabled` | `optional bool` | Auto Vectors Fit (AVF) - Enabled? | — |
-| Result | 4 | `auto_vectors_fit_avf_name` | `optional CollectionObjectName` | Auto Vectors Fit (AVF) - Name | — |
+| Result | 1 | `auto_vectors_nominal_enabled` | `optional bool` | Auto Vectors Nominal (AVN) - Enabled? | — |
+| Result | 2 | `auto_vectors_nominal_name` | `optional CollectionObjectName` | Auto Vectors Nominal (AVN) - Name | — |
+| Result | 3 | `auto_vectors_fit_enabled` | `optional bool` | Auto Vectors Fit (AVF) - Enabled? | — |
+| Result | 4 | `auto_vectors_fit_name` | `optional CollectionObjectName` | Auto Vectors Fit (AVF) - Name | — |
 | Result | 5 | `points_type` | `optional string` | Points Type | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -107,14 +107,23 @@ message GetGeomRelationshipAutoVectorsRequest {
 }
 
 message GetGeomRelationshipAutoVectorsResult {
-  optional bool auto_vectors_nominal_avn_enabled = 1;
-  optional CollectionObjectName auto_vectors_nominal_avn_name = 2;
-  optional bool auto_vectors_fit_avf_enabled = 3;
-  optional CollectionObjectName auto_vectors_fit_avf_name = 4;
+  optional bool auto_vectors_nominal_enabled = 1;
+  optional CollectionObjectName auto_vectors_nominal_name = 2;
+  optional bool auto_vectors_fit_enabled = 3;
+  optional CollectionObjectName auto_vectors_fit_name = 4;
   optional string points_type = 5;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `auto_vectors_nominal_enabled` | MP qualifier: AVN. |
+| `auto_vectors_nominal_name` | MP qualifier: AVN. |
+| `auto_vectors_fit_enabled` | MP qualifier: AVF. |
+| `auto_vectors_fit_name` | MP qualifier: AVF. |
 
 ## Get Geom Relationship Cardinal Points {/* #get-geom-relationship-cardinal-points */}
 
@@ -873,7 +882,7 @@ message PipeRelationshipForceCutToFrameResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
-| Request | 2 | `trap_clouds_false_geometry` | `optional bool` | Trap Clouds? (FALSE = Geometry) | true |
+| Request | 2 | `trap_clouds` | `optional bool` | Trap Clouds? (FALSE = Geometry) | true |
 | Request | 3 | `instrument_id` | `optional CollectionInstrumentId` | Instrument ID | Required |
 | Request | 4 | `measurement_mode` | `optional string` | Measurement Mode | Empty |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -883,7 +892,7 @@ rpc SetGeomRelationshipAutoMeasureNominalFeature(SetGeomRelationshipAutoMeasureN
 
 message SetGeomRelationshipAutoMeasureNominalFeatureRequest {
   optional CollectionObjectName relationship_name = 1;
-  optional bool trap_clouds_false_geometry = 2;
+  optional bool trap_clouds = 2;
   optional CollectionInstrumentId instrument_id = 3;
   optional string measurement_mode = 4;
 }
@@ -892,6 +901,12 @@ message SetGeomRelationshipAutoMeasureNominalFeatureResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `trap_clouds` | False selects geometry. |
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN) {/* #set-geom-relationship-auto-vectors-nominal-avn */}
 
@@ -1594,9 +1609,9 @@ message SetRelationshipToleranceVectorTypeResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
 | Request | 2 | `enable_voxel_cloud_display` | `optional bool` | Enable Voxel Cloud Display? | true |
-| Request | 3 | `voxel_size_1_0_autodetect` | `optional double` | Voxel Size (-1.0 autodetect) | -1.000000 |
+| Request | 3 | `voxel_size` | `optional double` | Voxel Size (-1.0 autodetect) | -1.000000 |
 | Request | 4 | `min_pts_count_per_voxel` | `optional int32` | Min Pts Count Per Voxel | 3 |
-| Request | 5 | `voxel_rendering_diameter_1_0_fast` | `optional double` | Voxel Rendering Diameter % (-1.0 fast) | 125.000000 |
+| Request | 5 | `voxel_rendering_diameter` | `optional double` | Voxel Rendering Diameter % (-1.0 fast) | 125.000000 |
 | Request | 6 | `surface_analysis_mode` | `optional SurfaceAnalysisMode` | Surface Analysis Mode | Relationship |
 | Request | 7 | `colorization_options` | `optional ColorizationOptions` | Colorization Options | Red |
 | Request | 8 | `show_color_bar_in_view` | `optional bool` | Show Color Bar in View? | false |
@@ -1608,9 +1623,9 @@ rpc SetRelationshipVoxelCloudDisplay(SetRelationshipVoxelCloudDisplayRequest) re
 message SetRelationshipVoxelCloudDisplayRequest {
   optional CollectionObjectName relationship_name = 1;
   optional bool enable_voxel_cloud_display = 2;
-  optional double voxel_size_1_0_autodetect = 3;
+  optional double voxel_size = 3;
   optional int32 min_pts_count_per_voxel = 4;
-  optional double voxel_rendering_diameter_1_0_fast = 5;
+  optional double voxel_rendering_diameter = 5;
   optional SurfaceAnalysisMode surface_analysis_mode = 6;
   optional ColorizationOptions colorization_options = 7;
   optional bool show_color_bar_in_view = 8;
@@ -1620,6 +1635,13 @@ message SetRelationshipVoxelCloudDisplayResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `voxel_size` | -1.0 selects automatic detection. |
+| `voxel_rendering_diameter` | -1.0 selects fast rendering. |
 
 ## Set Relationship Weighting {/* #set-relationship-weighting */}
 
@@ -1765,9 +1787,9 @@ message FilterGeometryRelationshipOutlierCloudPointsResult {
 | Request | 5 | `text_color` | `optional Color` | Text Color | Message defaults |
 | Request | 6 | `background_color` | `optional Color` | Background Color | Message defaults |
 | Request | 7 | `highlight_color` | `optional Color` | Highlight Color | Message defaults |
-| Request | 8 | `show_deviation_x_rx` | `optional bool` | Show Deviation X (Rx)? | true |
-| Request | 9 | `show_deviation_y_ry` | `optional bool` | Show Deviation Y (Ry)? | true |
-| Request | 10 | `show_deviation_z_rz` | `optional bool` | Show Deviation Z (Rz)? | true |
+| Request | 8 | `show_deviation_x` | `optional bool` | Show Deviation X (Rx)? | true |
+| Request | 9 | `show_deviation_y` | `optional bool` | Show Deviation Y (Ry)? | true |
+| Request | 10 | `show_deviation_z` | `optional bool` | Show Deviation Z (Rz)? | true |
 | Request | 11 | `show_deviation_magnitude` | `optional bool` | Show Deviation Mag? | true |
 | Request | 12 | `udp_network_transmit_settings` | `optional RelationshipWatchWindowUdpSettings` | UDP Network Transmit Settings | Required |
 | Request | 13 | `transparent_background` | `optional bool` | Transparent Background? | false |
@@ -1785,9 +1807,9 @@ message RelationshipWatchWindowTemplateRequest {
   optional Color text_color = 5;
   optional Color background_color = 6;
   optional Color highlight_color = 7;
-  optional bool show_deviation_x_rx = 8;
-  optional bool show_deviation_y_ry = 9;
-  optional bool show_deviation_z_rz = 10;
+  optional bool show_deviation_x = 8;
+  optional bool show_deviation_y = 9;
+  optional bool show_deviation_z = 10;
   optional bool show_deviation_magnitude = 11;
   optional RelationshipWatchWindowUdpSettings udp_network_transmit_settings = 12;
   optional bool transparent_background = 13;
@@ -1798,6 +1820,14 @@ message RelationshipWatchWindowTemplateResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show_deviation_x` | MP qualifier: Rx. |
+| `show_deviation_y` | MP qualifier: Ry. |
+| `show_deviation_z` | MP qualifier: Rz. |
 
 ## Make Point to Point Relationship {/* #make-point-to-point-relationship */}
 
@@ -3299,4 +3329,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

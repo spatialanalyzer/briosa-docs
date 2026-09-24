@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/file-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -78,17 +78,24 @@ public Task<DirectCadAccessResult> DirectCadAccessAsync(
         bool centerViewOnImportedObjects = true,
         bool importIntoFoldersMatchingCadFileHierarchy = false,
         bool removeEmptyFolders = true,
-        int surfaceNormalsMode1Or2 = 1,
+        int surfaceNormalsMode = 1,
         bool promptOnMissingComponents = true,
         bool selectiveImport = false,
         bool surfaceCompatibilityMode = true,
         bool explodeSurfaces = false,
-        string cadFileUnitsLeaveBlankToUseTheUnitsSpecifiedInTheFile = "",
+        string cadFileUnits = "",
         bool buildCalloutViews = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surfaceNormalsMode` | MP qualifier: 1 or 2. |
+| `cadFileUnits` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
@@ -157,13 +164,19 @@ public Task ExportAsciiPointSetAsync(
         bool includeSaVersionAndFrameComments = false,
         bool includeAxisComments = false,
         bool includeExportFormatInfo = false,
-        bool maximumPrecisionScientificNotation = false,
+        bool maximumPrecision = false,
         int decimalPrecision = 6,
         bool append = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximumPrecision` | MP qualifier: Scientific Notation. |
 
 ## Export ASCII Points {/* #export-ascii-points */}
 
@@ -186,13 +199,19 @@ public Task ExportAsciiPointsAsync(
         bool includeExportFormatInfo = false,
         bool includeWeights = false,
         bool includeMeasurementDetails = false,
-        bool maximumPrecisionScientificNotation = false,
+        bool maximumPrecision = false,
         int decimalPrecision = 6,
         bool append = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximumPrecision` | MP qualifier: Scientific Notation. |
 
 ## Export DXF {/* #export-dxf */}
 
@@ -388,14 +407,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task ExportVectorContainerToAsciiFileAsync(
         FileReference asciiFilePath,
         IEnumerable<CollectionVectorGroupName> vectorGroupsToExport,
-        bool overwriteExistingFileFalseAppend,
-        bool useFullPrecisionScientificNotation,
+        bool overwriteExistingFile,
+        bool useFullPrecision,
         ExportVectorNameFormat vectorNameFormat,
         bool includeVectorLength = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overwriteExistingFile` | False appends to the existing file. |
+| `useFullPrecision` | MP qualifier: Scientific Notation. |
 
 ## Find Files in Directory {/* #find-files-in-directory */}
 
@@ -716,11 +742,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task ImportSaFileAsync(
         FileReference saFileName,
         bool allowOperatorSelections,
-        IEnumerable<string> selectedCollectionsOptional,
+        IEnumerable<string> selectedCollections,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `selectedCollections` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Import SA Windows Placement {/* #import-sa-windows-placement */}
 
@@ -1132,4 +1164,4 @@ public Task VerifyMpFileExistsAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2026.1.0529.7)

@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/file-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -115,12 +115,12 @@ message DeleteGeneralFileResult {
 | Request | 21 | `center_view_on_imported_objects` | `optional bool` | Center View on Imported Objects | true |
 | Request | 22 | `import_into_folders_matching_cad_file_hierarchy` | `optional bool` | Import into Folders matching CAD file hierarchy | false |
 | Request | 23 | `remove_empty_folders` | `optional bool` | Remove Empty Folders | true |
-| Request | 24 | `surface_normals_mode_1_or_2` | `optional int32` | Surface Normals Mode (1 or 2) | 1 |
+| Request | 24 | `surface_normals_mode` | `optional int32` | Surface Normals Mode (1 or 2) | 1 |
 | Request | 25 | `prompt_on_missing_components` | `optional bool` | Prompt on Missing Components | true |
 | Request | 26 | `selective_import` | `optional bool` | Selective Import | false |
 | Request | 27 | `surface_compatibility_mode` | `optional bool` | Surface Compatibility Mode | Required |
 | Request | 28 | `explode_surfaces` | `optional bool` | Explode Surfaces | false |
-| Request | 29 | `cad_file_units_leave_blank_to_use_the_units_specified_in_the_file` | `optional string` | CAD File Units (leave blank to use the units specified in the file) | Empty |
+| Request | 29 | `cad_file_units` | `optional string` | CAD File Units (leave blank to use the units specified in the file) | Empty |
 | Request | 30 | `build_callout_views` | `optional bool` | Build Callout Views | true |
 | Result | 1 | `import_warnings` | `optional bool` | Import Warnings | — |
 | Result | 2 | `import_warning_messages` | `optional string` | Import Warning Messages | — |
@@ -155,12 +155,12 @@ message DirectCadAccessRequest {
   optional bool center_view_on_imported_objects = 21;
   optional bool import_into_folders_matching_cad_file_hierarchy = 22;
   optional bool remove_empty_folders = 23;
-  optional int32 surface_normals_mode_1_or_2 = 24;
+  optional int32 surface_normals_mode = 24;
   optional bool prompt_on_missing_components = 25;
   optional bool selective_import = 26;
   optional bool surface_compatibility_mode = 27;
   optional bool explode_surfaces = 28;
-  optional string cad_file_units_leave_blank_to_use_the_units_specified_in_the_file = 29;
+  optional string cad_file_units = 29;
   optional bool build_callout_views = 30;
 }
 
@@ -172,6 +172,13 @@ message DirectCadAccessResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surface_normals_mode` | MP qualifier: 1 or 2. |
+| `cad_file_units` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
@@ -286,7 +293,7 @@ message ExportAsciiPointCloudsResult {
 | Request | 8 | `include_sa_version_and_frame_comments` | `optional bool` | Include SA version and frame comments? | false |
 | Request | 9 | `include_axis_comments` | `optional bool` | Include Axis Comments? | false |
 | Request | 10 | `include_export_format_info` | `optional bool` | Include Export Format Info? | false |
-| Request | 11 | `maximum_precision_scientific_notation` | `optional bool` | Maximum Precision (Scientific Notation)? | false |
+| Request | 11 | `maximum_precision` | `optional bool` | Maximum Precision (Scientific Notation)? | false |
 | Request | 12 | `decimal_precision` | `optional int32` | Decimal Precision | 6 |
 | Request | 13 | `append` | `optional bool` | Append? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -305,7 +312,7 @@ message ExportAsciiPointSetRequest {
   optional bool include_sa_version_and_frame_comments = 8;
   optional bool include_axis_comments = 9;
   optional bool include_export_format_info = 10;
-  optional bool maximum_precision_scientific_notation = 11;
+  optional bool maximum_precision = 11;
   optional int32 decimal_precision = 12;
   optional bool append = 13;
 }
@@ -314,6 +321,12 @@ message ExportAsciiPointSetResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximum_precision` | MP qualifier: Scientific Notation. |
 
 ## Export ASCII Points {/* #export-ascii-points */}
 
@@ -338,7 +351,7 @@ message ExportAsciiPointSetResult {
 | Request | 13 | `include_export_format_info` | `optional bool` | Include Export Format Info? | false |
 | Request | 14 | `include_weights` | `optional bool` | Include Weights? | false |
 | Request | 15 | `include_measurement_details` | `optional bool` | Include Measurement Details? | false |
-| Request | 16 | `maximum_precision_scientific_notation` | `optional bool` | Maximum Precision (Scientific Notation)? | false |
+| Request | 16 | `maximum_precision` | `optional bool` | Maximum Precision (Scientific Notation)? | false |
 | Request | 17 | `decimal_precision` | `optional int32` | Decimal Precision | 6 |
 | Request | 18 | `append` | `optional bool` | Append? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -362,7 +375,7 @@ message ExportAsciiPointsRequest {
   optional bool include_export_format_info = 13;
   optional bool include_weights = 14;
   optional bool include_measurement_details = 15;
-  optional bool maximum_precision_scientific_notation = 16;
+  optional bool maximum_precision = 16;
   optional int32 decimal_precision = 17;
   optional bool append = 18;
 }
@@ -371,6 +384,12 @@ message ExportAsciiPointsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximum_precision` | MP qualifier: Scientific Notation. |
 
 ## Export DXF {/* #export-dxf */}
 
@@ -741,8 +760,8 @@ message ExportVdaFsFilePartialModelResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `ascii_file_path` | `optional FileReference` | Ascii File Path | Required |
 | Request | 2 | `vector_groups_to_export` | `repeated CollectionVectorGroupName` | Vector group(s) to export | Required |
-| Request | 3 | `overwrite_existing_file_false_append` | `optional bool` | Overwrite existing file? (FALSE = Append) | true |
-| Request | 4 | `use_full_precision_scientific_notation` | `optional bool` | Use Full Precision (Scientific Notation)? | false |
+| Request | 3 | `overwrite_existing_file` | `optional bool` | Overwrite existing file? (FALSE = Append) | true |
+| Request | 4 | `use_full_precision` | `optional bool` | Use Full Precision (Scientific Notation)? | false |
 | Request | 5 | `vector_name_format` | `optional ExportVectorNameFormat` | Vector Name Format | Required |
 | Request | 6 | `include_vector_length` | `optional bool` | Include Vector Length? | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -753,8 +772,8 @@ rpc ExportVectorContainerToAsciiFile(ExportVectorContainerToAsciiFileRequest) re
 message ExportVectorContainerToAsciiFileRequest {
   optional FileReference ascii_file_path = 1;
   repeated CollectionVectorGroupName vector_groups_to_export = 2;
-  optional bool overwrite_existing_file_false_append = 3;
-  optional bool use_full_precision_scientific_notation = 4;
+  optional bool overwrite_existing_file = 3;
+  optional bool use_full_precision = 4;
   optional ExportVectorNameFormat vector_name_format = 5;
   optional bool include_vector_length = 6;
 }
@@ -763,6 +782,13 @@ message ExportVectorContainerToAsciiFileResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overwrite_existing_file` | False appends to the existing file. |
+| `use_full_precision` | MP qualifier: Scientific Notation. |
 
 ## Find Files in Directory {/* #find-files-in-directory */}
 
@@ -1394,7 +1420,7 @@ message ImportQdasCatalogFileResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `sa_file_name` | `optional FileReference` | SA File Name | Required |
 | Request | 2 | `allow_operator_selections` | `optional bool` | Allow Operator Selections | false |
-| Request | 3 | `selected_collections_optional` | `repeated string` | Selected Collections (optional) | Required |
+| Request | 3 | `selected_collections` | `repeated string` | Selected Collections (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1403,13 +1429,19 @@ rpc ImportSaFile(ImportSaFileRequest) returns (ImportSaFileResult);
 message ImportSaFileRequest {
   optional FileReference sa_file_name = 1;
   optional bool allow_operator_selections = 2;
-  repeated string selected_collections_optional = 3;
+  repeated string selected_collections = 3;
 }
 
 message ImportSaFileResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `selected_collections` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Import SA Windows Placement {/* #import-sa-windows-placement */}
 
@@ -2187,4 +2219,4 @@ message VerifyMpFileExistsResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

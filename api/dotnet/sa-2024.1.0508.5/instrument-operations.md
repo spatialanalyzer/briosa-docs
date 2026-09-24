@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -154,6 +154,15 @@ public Task<InstrumentPositionUpdate> GetCurrentInstrumentPositionUpdateAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `YOrTheta` | Angle in degrees. |
+| `ZOrPhi` | Angle in degrees. |
+| `TimeSinceUpdate` | Time in seconds. |
+| `Timestamp` | MP qualifier: Approximate. |
 
 ## 'Build' Target {/* #build-target */}
 
@@ -605,11 +614,17 @@ public Task<FitErrorResult> LocateInstrumentsUsmnAsync(
         bool excludeSingleInstrumentPoints = false,
         bool runUncertaintyFieldAnalysis = false,
         int analysisSamples = 300,
-        double analysisTimeLimitMinutes = 4.0,
+        double analysisTimeLimit = 4.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
@@ -629,13 +644,21 @@ public Task CreateTemplatedInstrumentUsmnAsync(
         bool enableRz = true,
         bool enableScale = false,
         bool enableComponentWeights = true,
-        double azimuthWeight = 1.0,
-        double elevationWeight = 1.0,
-        double distanceWeight = 1.0,
+        double component1Weight = 1.0,
+        double component2Weight = 1.0,
+        double component3Weight = 1.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `component1Weight` | MP qualifier: Azimuth. |
+| `component2Weight` | MP qualifier: Elevation. |
+| `component3Weight` | MP qualifier: Distance. |
 
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
@@ -729,6 +752,14 @@ public Task<TrackerEdmTheodoliteUncertainties> GetTrackerEdmTheodoliteUncertaint
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `ThetaDispersion` | Angle in arcseconds. |
+| `PhiDispersion` | Angle in arcseconds. |
+| `Distance` | Value in parts per million. |
+
 ## Set Tracker/EDM Theodolite Uncertainties {/* #set-trackeredm-theodolite-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-trackeredm-theodolite-uncertainties)
@@ -736,16 +767,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task SetTrackerEdmTheodoliteUncertaintiesAsync(
         CollectionInstrumentId instrument,
-        double thetaDispersionArcseconds = 1.0,
+        double thetaDispersion = 1.0,
         double thetaThreshold = 0.001,
-        double phiDispersionArcseconds = 1.0,
+        double phiDispersion = 1.0,
         double phiThreshold = 0.001,
-        double distancePpm = 2.5,
+        double distance = 2.5,
         double distanceThreshold = 0.0003,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `thetaDispersion` | Angle in arcseconds. |
+| `phiDispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
 
 ## Get PCMM Instrument XYZ Uncertainties {/* #get-pcmm-instrument-xyz-uncertainties */}
 
@@ -813,6 +852,14 @@ public Task<InstrumentWeatherSetting> GetInstrumentWeatherSettingAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Temperature` | Temperature in degrees Fahrenheit. |
+| `Pressure` | Pressure in millimeters of mercury. |
+| `RelativeHumidity` | Relative humidity in percent. |
+
 ## Set Instrument Weather Setting {/* #set-instrument-weather-setting */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-weather-setting)
@@ -820,14 +867,22 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task SetInstrumentWeatherSettingAsync(
         CollectionInstrumentId instrument,
-        double temperatureFahrenheit = 0.0,
-        double pressureMmHg = 0.0,
-        double relativeHumidityPercent = 0.0,
+        double temperature = 0.0,
+        double pressure = 0.0,
+        double relativeHumidity = 0.0,
         bool setAutomatically = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relativeHumidity` | Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -841,19 +896,33 @@ public Task<double> GetInstrumentPartTemperatureAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `PartTemperature` | Temperature in degrees Fahrenheit. |
+
 ## Compute CTE Scale Factor {/* #compute-cte-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#compute-cte-scale-factor)
 
 ```csharp
 public Task<double> ComputeCteScaleFactorAsync(
-        double materialCtePerDegreeFahrenheit = 0.0,
-        double initialTemperatureFahrenheit = 0.0,
-        double finalTemperatureFahrenheit = 0.0,
+        double materialCte = 0.0,
+        double initialTemperature = 0.0,
+        double finalTemperature = 0.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `materialCte` | Coefficient per degree Fahrenheit. |
+| `initialTemperature` | Temperature in degrees Fahrenheit. |
+| `finalTemperature` | Temperature in degrees Fahrenheit. |
 
 ## Set (multiply) Instrument Scale Factor (CAUTION!) {/* #set-multiply-instrument-scale-factor-caution */}
 
@@ -1011,6 +1080,14 @@ public Task<ObservationInfo> GetObservationInfoAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Temperature` | Temperature in degrees Fahrenheit. |
+| `Pressure` | Pressure in inches of mercury. |
+| `RelativeHumidity` | Relative humidity in percent. |
 
 ## Fabricate Observations {/* #fabricate-observations */}
 
@@ -1494,6 +1571,12 @@ public Task<double> GetInstrumentInterfaceResponseTimeoutAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Timeout` | Time in seconds. |
+
 ## Set Instrument Interface Response Timeout {/* #set-instrument-interface-response-timeout */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-interface-response-timeout)
@@ -1501,11 +1584,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task SetInstrumentInterfaceResponseTimeoutAsync(
         CollectionInstrumentId instrument,
-        double timeoutSeconds = 0.0,
+        double timeout = 0.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
 
 ## Get Current Trapping Status {/* #get-current-trapping-status */}
 
@@ -2403,4 +2492,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2024.1.0508.5)

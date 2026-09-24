@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Points and Groups
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/construction-operations-points-and-groups) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-points-and-groups)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -366,7 +366,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task<ProjectedPointGradient> GetGradientAtProjectedPointOnSurfaceEdgeAsync(
         PointName pointToProject,
-        CollectionObjectName surfaceEdgeBSpline,
+        CollectionObjectName surfaceEdge,
         CollectionObjectName surfaceName,
         Vector? edgeOffsetDirection = null,
         double edgeOffsetDistance = 0.01,
@@ -375,6 +375,12 @@ public Task<ProjectedPointGradient> GetGradientAtProjectedPointOnSurfaceEdgeAsyn
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surfaceEdge` | MP qualifier: B-Spline. |
 
 ## Construct Points By Projecting Points On Mesh Along Direction {/* #construct-points-by-projecting-points-on-mesh-along-direction */}
 
@@ -530,12 +536,18 @@ public Task ConstructPointsCylindricallyShiftedAsync(
         IEnumerable<PointName> originalPoints,
         CollectionObjectName groupForNewPoints,
         double radialShift = 0.0,
-        double thetaShiftDegrees = 0.0,
+        double thetaShift = 0.0,
         double planarShift = 0.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `thetaShift` | Angle in degrees. |
 
 ## Construct Points WildCard Selection {/* #construct-points-wildcard-selection */}
 
@@ -729,13 +741,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task<int> CreateHiddenPointRodAsync(
         string hiddenPointRodName,
-        double targetToTargetDistance = 0.0,
-        double targetToTipDistance = 0.0,
+        double aToBDistance = 0.0,
+        double aToCDistance = 0.0,
         double interPointTolerance = 0.0,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `aToBDistance` | MP qualifier: Target to Target. |
+| `aToCDistance` | MP qualifier: Target to Tip. |
 
 ## Get Hidden Point Rod Index by Name {/* #get-hidden-point-rod-index-by-name */}
 
@@ -809,4 +828,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2026.1.0529.7)

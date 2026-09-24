@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/file-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -82,17 +82,24 @@ async def direct_cad_access(
         center_view_on_imported_objects: bool = True,
         import_into_folders_matching_cad_file_hierarchy: bool = False,
         remove_empty_folders: bool = True,
-        surface_normals_mode_1_or_2: int = 1,
+        surface_normals_mode: int = 1,
         prompt_on_missing_components: bool = True,
         selective_import: bool = False,
         surface_compatibility_mode: bool = True,
         explode_surfaces: bool = False,
-        cad_file_units_leave_blank_to_use_the_units_specified_in_the_file: str = "",
+        cad_file_units: str = "",
         build_callout_views: bool = True,
     ) -> DirectCadAccessResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surface_normals_mode` | MP qualifier: 1 or 2. |
+| `cad_file_units` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
@@ -169,13 +176,19 @@ async def export_ascii_point_set(
         include_sa_version_and_frame_comments: bool = False,
         include_axis_comments: bool = False,
         include_export_format_info: bool = False,
-        maximum_precision_scientific_notation: bool = False,
+        maximum_precision: bool = False,
         decimal_precision: int = 6,
         append: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximum_precision` | MP qualifier: Scientific Notation. |
 
 ## Export ASCII Points {/* #export-ascii-points */}
 
@@ -200,13 +213,19 @@ async def export_ascii_points(
         include_export_format_info: bool = False,
         include_weights: bool = False,
         include_measurement_details: bool = False,
-        maximum_precision_scientific_notation: bool = False,
+        maximum_precision: bool = False,
         decimal_precision: int = 6,
         append: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximum_precision` | MP qualifier: Scientific Notation. |
 
 ## Export DXF {/* #export-dxf */}
 
@@ -421,14 +440,21 @@ async def export_vector_container_to_ascii_file(
         ascii_file_path: FileReference,
         vector_groups_to_export: Iterable[CollectionVectorGroupName],
         *,
-        overwrite_existing_file_false_append: bool = True,
-        use_full_precision_scientific_notation: bool = False,
+        overwrite_existing_file: bool = True,
+        use_full_precision: bool = False,
         vector_name_format: ExportVectorNameFormat,
         include_vector_length: bool = True,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overwrite_existing_file` | False appends to the existing file. |
+| `use_full_precision` | MP qualifier: Scientific Notation. |
 
 ## Find Files in Directory {/* #find-files-in-directory */}
 
@@ -788,11 +814,17 @@ async def import_sa_file(
         sa_file_name: FileReference,
         *,
         allow_operator_selections: bool = False,
-        selected_collections_optional: Iterable[str],
+        selected_collections: Iterable[str],
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `selected_collections` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Import SA Windows Placement {/* #import-sa-windows-placement */}
 
@@ -1244,4 +1276,4 @@ async def verify_mp_file_exists(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2026.1.0529.7)

@@ -1,6 +1,6 @@
 ---
 title: Relationship Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/relationship-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/relationship-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -65,6 +65,15 @@ async def get_geom_relationship_auto_vectors(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `auto_vectors_nominal_enabled` | MP qualifier: AVN. |
+| `auto_vectors_nominal_name` | MP qualifier: AVN. |
+| `auto_vectors_fit_enabled` | MP qualifier: AVF. |
+| `auto_vectors_fit_name` | MP qualifier: AVF. |
 
 ## Get Geom Relationship Cardinal Points {/* #get-geom-relationship-cardinal-points */}
 
@@ -758,9 +767,9 @@ async def set_relationship_voxel_cloud_display(
         relationship_name: CollectionObjectName,
         *,
         enable_voxel_cloud_display: bool = True,
-        voxel_size_1_0_autodetect: float = -1.000000,
+        voxel_size: float = -1.000000,
         min_pts_count_per_voxel: int = 3,
-        voxel_rendering_diameter_1_0_fast: float = 125.000000,
+        voxel_rendering_diameter: float = 125.000000,
         surface_analysis_mode: SurfaceAnalysisMode = SurfaceAnalysisMode.RELATIONSHIP,
         colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
         show_color_bar_in_view: bool = False,
@@ -768,6 +777,13 @@ async def set_relationship_voxel_cloud_display(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `voxel_size` | -1.0 selects automatic detection. |
+| `voxel_rendering_diameter` | -1.0 selects fast rendering. |
 
 ## Set Relationship Weighting {/* #set-relationship-weighting */}
 
@@ -859,6 +875,14 @@ async def relationship_watch_window_template(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show_deviation_x` | MP qualifier: Rx. |
+| `show_deviation_y` | MP qualifier: Ry. |
+| `show_deviation_z` | MP qualifier: Rz. |
 
 ## Make Point to Point Relationship {/* #make-point-to-point-relationship */}
 
@@ -1681,4 +1705,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/instrument-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -281,10 +281,10 @@ message MeasureSinglePointHereResult {
 | Request | 2 | `reporting_frame` | `optional InstrumentPositionReportingFrame` | Reporting Frame | Instrument Base |
 | Request | 3 | `polar_coordinates` | `optional bool` | Polar Coordinates? | false |
 | Result | 1 | `x_or_r` | `double` | X / R | — |
-| Result | 2 | `y_or_theta_degrees` | `double` | Y / Theta (Degrees) | — |
-| Result | 3 | `z_or_phi_degrees` | `double` | Z / Phi (Degrees) | — |
-| Result | 4 | `time_since_update_seconds` | `double` | Time Since Update (sec) | — |
-| Result | 5 | `timestamp_approximate` | `string` | Timestamp (Approximate) | — |
+| Result | 2 | `y_or_theta` | `double` | Y / Theta (Degrees) | — |
+| Result | 3 | `z_or_phi` | `double` | Z / Phi (Degrees) | — |
+| Result | 4 | `time_since_update` | `double` | Time Since Update (sec) | — |
+| Result | 5 | `timestamp` | `string` | Timestamp (Approximate) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -298,13 +298,22 @@ message GetCurrentInstrumentPositionUpdateRequest {
 
 message GetCurrentInstrumentPositionUpdateResult {
   double x_or_r = 1;
-  double y_or_theta_degrees = 2;
-  double z_or_phi_degrees = 3;
-  double time_since_update_seconds = 4;
-  string timestamp_approximate = 5;
+  double y_or_theta = 2;
+  double z_or_phi = 3;
+  double time_since_update = 4;
+  string timestamp = 5;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `y_or_theta` | Angle in degrees. |
+| `z_or_phi` | Angle in degrees. |
+| `time_since_update` | Time in seconds. |
+| `timestamp` | MP qualifier: Approximate. |
 
 ## 'Build' Target {/* #build-target */}
 
@@ -1184,7 +1193,7 @@ message AlignLaserProjectorResult {
 | Request | 10 | `exclude_single_instrument_points` | `optional bool` | Exclude Points Measured By Only One Instrument | false |
 | Request | 11 | `run_uncertainty_field_analysis` | `optional bool` | Run Uncertainty Field Analysis? | false |
 | Request | 12 | `analysis_samples` | `optional int32` | Analysis Samples | 300 |
-| Request | 13 | `analysis_time_limit_minutes` | `optional double` | Analysis Time Limit (Minutes - 0 for none) | 4.000000 |
+| Request | 13 | `analysis_time_limit` | `optional double` | Analysis Time Limit (Minutes - 0 for none) | 4.000000 |
 | Result | 1 | `rms_error` | `optional double` | RMS Error Value | — |
 | Result | 2 | `maximum_error` | `optional double` | Max Error Value | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1205,7 +1214,7 @@ message LocateInstrumentsUsmnRequest {
   optional bool exclude_single_instrument_points = 10;
   optional bool run_uncertainty_field_analysis = 11;
   optional int32 analysis_samples = 12;
-  optional double analysis_time_limit_minutes = 13;
+  optional double analysis_time_limit = 13;
 }
 
 message LocateInstrumentsUsmnResult {
@@ -1214,6 +1223,12 @@ message LocateInstrumentsUsmnResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `analysis_time_limit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
@@ -1235,9 +1250,9 @@ message LocateInstrumentsUsmnResult {
 | Request | 10 | `enable_rz` | `optional bool` | Enable Rz | true |
 | Request | 11 | `enable_scale` | `optional bool` | Enable Scale | false |
 | Request | 12 | `enable_component_weights` | `optional bool` | Enable Component Weights | true |
-| Request | 13 | `azimuth_weight` | `optional double` | Component 1 (Azimuth) Weight | 1.000000 |
-| Request | 14 | `elevation_weight` | `optional double` | Component 2 (Elevation) Weight | 1.000000 |
-| Request | 15 | `distance_weight` | `optional double` | Component 3 (Distance) Weight | 1.000000 |
+| Request | 13 | `component_1_weight` | `optional double` | Component 1 (Azimuth) Weight | 1.000000 |
+| Request | 14 | `component_2_weight` | `optional double` | Component 2 (Elevation) Weight | 1.000000 |
+| Request | 15 | `component_3_weight` | `optional double` | Component 3 (Distance) Weight | 1.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1256,15 +1271,23 @@ message CreateTemplatedInstrumentUsmnRequest {
   optional bool enable_rz = 10;
   optional bool enable_scale = 11;
   optional bool enable_component_weights = 12;
-  optional double azimuth_weight = 13;
-  optional double elevation_weight = 14;
-  optional double distance_weight = 15;
+  optional double component_1_weight = 13;
+  optional double component_2_weight = 14;
+  optional double component_3_weight = 15;
 }
 
 message CreateTemplatedInstrumentUsmnResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `component_1_weight` | MP qualifier: Azimuth. |
+| `component_2_weight` | MP qualifier: Elevation. |
+| `component_3_weight` | MP qualifier: Distance. |
 
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
@@ -1461,11 +1484,11 @@ message SetInstrumentTransformResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Result | 1 | `theta_dispersion_arcseconds` | `optional double` | Theta Dispersion (arcseconds) | — |
+| Result | 1 | `theta_dispersion` | `optional double` | Theta Dispersion (arcseconds) | — |
 | Result | 2 | `theta_threshold` | `optional double` | Theta Threshold (linear units) | — |
-| Result | 3 | `phi_dispersion_arcseconds` | `optional double` | Phi Dispersion (arcseconds) | — |
+| Result | 3 | `phi_dispersion` | `optional double` | Phi Dispersion (arcseconds) | — |
 | Result | 4 | `phi_threshold` | `optional double` | Phi Threshold (linear units) | — |
-| Result | 5 | `distance_ppm` | `optional double` | Distance (PPM) | — |
+| Result | 5 | `distance` | `optional double` | Distance (PPM) | — |
 | Result | 6 | `distance_threshold` | `optional double` | Distance Threshold (linear units) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1477,15 +1500,23 @@ message GetTrackerEdmTheodoliteUncertaintiesRequest {
 }
 
 message GetTrackerEdmTheodoliteUncertaintiesResult {
-  optional double theta_dispersion_arcseconds = 1;
+  optional double theta_dispersion = 1;
   optional double theta_threshold = 2;
-  optional double phi_dispersion_arcseconds = 3;
+  optional double phi_dispersion = 3;
   optional double phi_threshold = 4;
-  optional double distance_ppm = 5;
+  optional double distance = 5;
   optional double distance_threshold = 6;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_dispersion` | Angle in arcseconds. |
+| `phi_dispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
 
 ## Set Tracker/EDM Theodolite Uncertainties {/* #set-trackeredm-theodolite-uncertainties */}
 
@@ -1496,11 +1527,11 @@ message GetTrackerEdmTheodoliteUncertaintiesResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Request | 2 | `theta_dispersion_arcseconds` | `optional double` | Theta Dispersion (arcseconds) | 1.000000 |
+| Request | 2 | `theta_dispersion` | `optional double` | Theta Dispersion (arcseconds) | 1.000000 |
 | Request | 3 | `theta_threshold` | `optional double` | Theta Threshold (linear units) | 0.001000 |
-| Request | 4 | `phi_dispersion_arcseconds` | `optional double` | Phi Dispersion(arcseconds) | 1.000000 |
+| Request | 4 | `phi_dispersion` | `optional double` | Phi Dispersion(arcseconds) | 1.000000 |
 | Request | 5 | `phi_threshold` | `optional double` | Phi Threshold(linear units) | 0.001000 |
-| Request | 6 | `distance_ppm` | `optional double` | Distance (PPM) | 2.500000 |
+| Request | 6 | `distance` | `optional double` | Distance (PPM) | 2.500000 |
 | Request | 7 | `distance_threshold` | `optional double` | Distance Threshold (linear units) | 0.000300 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1509,11 +1540,11 @@ rpc SetTrackerEdmTheodoliteUncertainties(SetTrackerEdmTheodoliteUncertaintiesReq
 
 message SetTrackerEdmTheodoliteUncertaintiesRequest {
   optional CollectionInstrumentId instrument = 1;
-  optional double theta_dispersion_arcseconds = 2;
+  optional double theta_dispersion = 2;
   optional double theta_threshold = 3;
-  optional double phi_dispersion_arcseconds = 4;
+  optional double phi_dispersion = 4;
   optional double phi_threshold = 5;
-  optional double distance_ppm = 6;
+  optional double distance = 6;
   optional double distance_threshold = 7;
 }
 
@@ -1521,6 +1552,14 @@ message SetTrackerEdmTheodoliteUncertaintiesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_dispersion` | Angle in arcseconds. |
+| `phi_dispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
 
 ## Get PCMM Instrument XYZ Uncertainties {/* #get-pcmm-instrument-xyz-uncertainties */}
 
@@ -1647,9 +1686,9 @@ message SetXyzInstrumentUncertaintiesResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Result | 1 | `temperature_fahrenheit` | `optional double` | Temperature (F) | — |
-| Result | 2 | `pressure_mmhg` | `optional double` | Pressure (mmHg) | — |
-| Result | 3 | `relative_humidity_percent` | `optional double` | Humidity (%Rel) | — |
+| Result | 1 | `temperature` | `optional double` | Temperature (F) | — |
+| Result | 2 | `pressure` | `optional double` | Pressure (mmHg) | — |
+| Result | 3 | `relative_humidity` | `optional double` | Humidity (%Rel) | — |
 | Result | 4 | `set_automatically` | `optional bool` | Was Set Automatically? (using Inst or external sensor | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1661,13 +1700,21 @@ message GetInstrumentWeatherSettingRequest {
 }
 
 message GetInstrumentWeatherSettingResult {
-  optional double temperature_fahrenheit = 1;
-  optional double pressure_mmhg = 2;
-  optional double relative_humidity_percent = 3;
+  optional double temperature = 1;
+  optional double pressure = 2;
+  optional double relative_humidity = 3;
   optional bool set_automatically = 4;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
 
 ## Set Instrument Weather Setting {/* #set-instrument-weather-setting */}
 
@@ -1678,9 +1725,9 @@ message GetInstrumentWeatherSettingResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Request | 2 | `temperature_fahrenheit` | `optional double` | Temperature (F) | 0.000000 |
-| Request | 3 | `pressure_mmhg` | `optional double` | Pressure (mmHg) | 0.000000 |
-| Request | 4 | `relative_humidity_percent` | `optional double` | Humidity (%Rel) | 0.000000 |
+| Request | 2 | `temperature` | `optional double` | Temperature (F) | 0.000000 |
+| Request | 3 | `pressure` | `optional double` | Pressure (mmHg) | 0.000000 |
+| Request | 4 | `relative_humidity` | `optional double` | Humidity (%Rel) | 0.000000 |
 | Request | 5 | `set_automatically` | `optional bool` | Set Automatically? (Ignore above values) | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1689,9 +1736,9 @@ rpc SetInstrumentWeatherSetting(SetInstrumentWeatherSettingRequest) returns (Set
 
 message SetInstrumentWeatherSettingRequest {
   optional CollectionInstrumentId instrument = 1;
-  optional double temperature_fahrenheit = 2;
-  optional double pressure_mmhg = 3;
-  optional double relative_humidity_percent = 4;
+  optional double temperature = 2;
+  optional double pressure = 3;
+  optional double relative_humidity = 4;
   optional bool set_automatically = 5;
 }
 
@@ -1699,6 +1746,14 @@ message SetInstrumentWeatherSettingResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -1709,7 +1764,7 @@ message SetInstrumentWeatherSettingResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument's ID | Required |
-| Result | 1 | `part_temperature_fahrenheit` | `optional double` | Part Temperature (F) | — |
+| Result | 1 | `part_temperature` | `optional double` | Part Temperature (F) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1720,10 +1775,16 @@ message GetInstrumentPartTemperatureRequest {
 }
 
 message GetInstrumentPartTemperatureResult {
-  optional double part_temperature_fahrenheit = 1;
+  optional double part_temperature = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `part_temperature` | Temperature in degrees Fahrenheit. |
 
 ## Compute CTE Scale Factor {/* #compute-cte-scale-factor */}
 
@@ -1733,9 +1794,9 @@ message GetInstrumentPartTemperatureResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `material_cte_per_degree_fahrenheit` | `optional double` | Material CTE (1/Deg F) | 0.000000 |
-| Request | 2 | `initial_temperature_fahrenheit` | `optional double` | Initial Temperature (F) | 0.000000 |
-| Request | 3 | `final_temperature_fahrenheit` | `optional double` | Final Temperature (F) | 0.000000 |
+| Request | 1 | `material_cte` | `optional double` | Material CTE (1/Deg F) | 0.000000 |
+| Request | 2 | `initial_temperature` | `optional double` | Initial Temperature (F) | 0.000000 |
+| Request | 3 | `final_temperature` | `optional double` | Final Temperature (F) | 0.000000 |
 | Result | 1 | `scale_factor` | `optional double` | Scale Factor | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -1743,9 +1804,9 @@ message GetInstrumentPartTemperatureResult {
 rpc ComputeCteScaleFactor(ComputeCteScaleFactorRequest) returns (ComputeCteScaleFactorResult);
 
 message ComputeCteScaleFactorRequest {
-  optional double material_cte_per_degree_fahrenheit = 1;
-  optional double initial_temperature_fahrenheit = 2;
-  optional double final_temperature_fahrenheit = 3;
+  optional double material_cte = 1;
+  optional double initial_temperature = 2;
+  optional double final_temperature = 3;
 }
 
 message ComputeCteScaleFactorResult {
@@ -1753,6 +1814,14 @@ message ComputeCteScaleFactorResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `material_cte` | Coefficient per degree Fahrenheit. |
+| `initial_temperature` | Temperature in degrees Fahrenheit. |
+| `final_temperature` | Temperature in degrees Fahrenheit. |
 
 ## Set (multiply) Instrument Scale Factor (CAUTION!) {/* #set-multiply-instrument-scale-factor-caution */}
 
@@ -2065,6 +2134,14 @@ message GetObservationInfoResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
 
 ## Fabricate Observations {/* #fabricate-observations */}
 
@@ -3008,7 +3085,7 @@ message AlignTwoTargetsWithAxisWcfXResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
-| Result | 1 | `timeout_seconds` | `double` | Resulting Timeout Value (secs) | — |
+| Result | 1 | `timeout` | `double` | Resulting Timeout Value (secs) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -3019,10 +3096,16 @@ message GetInstrumentInterfaceResponseTimeoutRequest {
 }
 
 message GetInstrumentInterfaceResponseTimeoutResult {
-  double timeout_seconds = 1;
+  double timeout = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
 
 ## Set Instrument Interface Response Timeout {/* #set-instrument-interface-response-timeout */}
 
@@ -3033,7 +3116,7 @@ message GetInstrumentInterfaceResponseTimeoutResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
-| Request | 2 | `timeout_seconds` | `optional double` | Timeout (secs) | 0.000000 |
+| Request | 2 | `timeout` | `optional double` | Timeout (secs) | 0.000000 |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -3041,13 +3124,19 @@ rpc SetInstrumentInterfaceResponseTimeout(SetInstrumentInterfaceResponseTimeoutR
 
 message SetInstrumentInterfaceResponseTimeoutRequest {
   optional CollectionInstrumentId instrument = 1;
-  optional double timeout_seconds = 2;
+  optional double timeout = 2;
 }
 
 message SetInstrumentInterfaceResponseTimeoutResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
 
 ## Get Current Trapping Status {/* #get-current-trapping-status */}
 
@@ -3773,4 +3862,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

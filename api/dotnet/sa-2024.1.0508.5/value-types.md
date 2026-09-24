@@ -1089,17 +1089,17 @@ public enum ItemType
 ```csharp
 public sealed record LrFlipTestResult
 {
-    public required double FrontRangeInches { get; init; }
-    public required double FrontAzimuthDegrees { get; init; }
-    public required double FrontElevationDegrees { get; init; }
+    public required double FrontRange { get; init; }
+    public required double FrontAzimuth { get; init; }
+    public required double FrontElevation { get; init; }
     public required double FrontQuality { get; init; }
-    public required double BackRangeInches { get; init; }
-    public required double BackAzimuthDegrees { get; init; }
-    public required double BackElevationDegrees { get; init; }
+    public required double BackRange { get; init; }
+    public required double BackAzimuth { get; init; }
+    public required double BackElevation { get; init; }
     public required double BackQuality { get; init; }
-    public required double FrontBackDifferenceRangeInches { get; init; }
-    public required double FrontBackDifferenceAzimuthDegrees { get; init; }
-    public required double FrontBackDifferenceElevationDegrees { get; init; }
+    public required double FrontBackDifferenceRange { get; init; }
+    public required double FrontBackDifferenceAzimuth { get; init; }
+    public required double FrontBackDifferenceElevation { get; init; }
 }
 ```
 
@@ -1110,16 +1110,16 @@ public sealed record LrFlipTestResult
 ```csharp
 public sealed record LrLoSeparationTestResult
 {
-    public required int PrimaryLoIndex { get; init; }
-    public required int SecondaryLoIndex { get; init; }
+    public required int PrimaryLo { get; init; }
+    public required int SecondaryLo { get; init; }
     public required int PrimaryLoMeasurementCount { get; init; }
-    public required double PrimaryLoRangeMeanInches { get; init; }
-    public required double PrimaryLoRangeStandardDeviationInches { get; init; }
+    public required double PrimaryLoRangeMean { get; init; }
+    public required double PrimaryLoRangeStandardDeviation { get; init; }
     public required double PrimaryLoQualityMean { get; init; }
     public required double PrimaryLoQualityStandardDeviation { get; init; }
     public required int SecondaryLoMeasurementCount { get; init; }
-    public required double SecondaryLoRangeMeanInches { get; init; }
-    public required double SecondaryLoRangeStandardDeviationInches { get; init; }
+    public required double SecondaryLoRangeMean { get; init; }
+    public required double SecondaryLoRangeStandardDeviation { get; init; }
     public required double SecondaryLoQualityMean { get; init; }
     public required double SecondaryLoQualityStandardDeviation { get; init; }
 }
@@ -1135,8 +1135,8 @@ public sealed record LrSnrInfo
     public required double Snr { get; init; }
     public required int SizeOfDataArray { get; init; }
     public required int PeakValueIndex { get; init; }
-    public required double PeakValueDb { get; init; }
-    public required double MeasuredRangeMeters { get; init; }
+    public required double PeakValue { get; init; }
+    public required double MeasuredRange { get; init; }
 }
 ```
 
@@ -1179,8 +1179,8 @@ public sealed record MakeGdtFeatureCheckAnnotationOptions
     public bool IsSlot { get; init; }
     public bool PerUnitLengthOrArea { get; init; }
     public bool CircularArea { get; init; }
-    public double PerUnitAreaLengthDistance { get; init; }
-    public double PerUnitAreaLengthStepOverPercent { get; init; } = 50.0;
+    public double PerUnitLengthDistance { get; init; }
+    public double PerUnitLengthStepOverPercent { get; init; } = 50.0;
     public double PerUnitAreaWidthDistance { get; init; }
     public double PerUnitAreaWidthStepOverPercent { get; init; } = 50.0;
     public double PerUnitAreaCircleDiameter { get; init; }
@@ -1324,9 +1324,9 @@ public sealed record ObservationInfo
     public required bool Active { get; init; }
     public required string Timestamp { get; init; }
     public required double RmsError { get; init; }
-    public required double TemperatureFahrenheit { get; init; }
-    public required double PressureInHg { get; init; }
-    public required double RelativeHumidityPercent { get; init; }
+    public required double Temperature { get; init; }
+    public required double Pressure { get; init; }
+    public required double RelativeHumidity { get; init; }
     public required string InfoData { get; init; }
 }
 ```
@@ -1544,9 +1544,9 @@ public sealed record RelationshipWatchWindowTemplateOptions
     public Color TextColor { get; init; } = new(0, 0, 255);
     public Color BackgroundColor { get; init; } = new(255, 255, 255);
     public Color HighlightColor { get; init; } = new(255, 0, 0);
-    public bool ShowDeviationXRx { get; init; } = true;
-    public bool ShowDeviationYRy { get; init; } = true;
-    public bool ShowDeviationZRz { get; init; } = true;
+    public bool ShowDeviationX { get; init; } = true;
+    public bool ShowDeviationY { get; init; } = true;
+    public bool ShowDeviationZ { get; init; } = true;
     public bool ShowDeviationMagnitude { get; init; } = true;
     public RelationshipWatchWindowUdpSettings UdpNetworkTransmitSettings { get; init; } = new();
     public bool TransparentBackground { get; init; }
@@ -2356,10 +2356,10 @@ public sealed record InstrumentModelResult
 public sealed record InstrumentPositionUpdate
 {
     public required double XOrR { get; init; }
-    public required double YOrThetaDegrees { get; init; }
-    public required double ZOrPhiDegrees { get; init; }
-    public required double TimeSinceUpdateSeconds { get; init; }
-    public required string TimestampApproximate { get; init; }
+    public required double YOrTheta { get; init; }
+    public required double ZOrPhi { get; init; }
+    public required double TimeSinceUpdate { get; init; }
+    public required string Timestamp { get; init; }
 }
 ```
 
@@ -2378,9 +2378,9 @@ public sealed record InstrumentTargetsAndModeProfiles
 ```csharp
 public sealed record InstrumentWeatherSetting
 {
-    public required double TemperatureFahrenheit { get; init; }
-    public required double PressureMmHg { get; init; }
-    public required double RelativeHumidityPercent { get; init; }
+    public required double Temperature { get; init; }
+    public required double Pressure { get; init; }
+    public required double RelativeHumidity { get; init; }
     public required bool SetAutomatically { get; init; }
 }
 ```
@@ -2411,11 +2411,11 @@ public sealed record LastInstrumentIndexResult
 ```csharp
 public sealed record LrSelfTestResult
 {
-    public required double ReferenceArmLengthInches { get; init; }
+    public required double ReferenceArmLength { get; init; }
     public required double ReferenceArmQuality { get; init; }
     public required int MirrorMeasurementCount { get; init; }
-    public required double MirrorMeasurementRangeMeanInches { get; init; }
-    public required double MirrorMeasurementRangeStandardDeviationInches { get; init; }
+    public required double MirrorMeasurementRangeMean { get; init; }
+    public required double MirrorMeasurementRangeStandardDeviation { get; init; }
     public required double MirrorMeasurementQualityMean { get; init; }
     public required double MirrorMeasurementQualityStandardDeviation { get; init; }
     public required bool PassedReferenceArmQualityThreshold { get; init; }
@@ -2537,11 +2537,11 @@ public sealed record RobotModelLinkParameters
 ```csharp
 public sealed record TrackerEdmTheodoliteUncertainties
 {
-    public required double ThetaDispersionArcseconds { get; init; }
+    public required double ThetaDispersion { get; init; }
     public required double ThetaThreshold { get; init; }
-    public required double PhiDispersionArcseconds { get; init; }
+    public required double PhiDispersion { get; init; }
     public required double PhiThreshold { get; init; }
-    public required double DistancePpm { get; init; }
+    public required double Distance { get; init; }
     public required double DistanceThreshold { get; init; }
 }
 ```

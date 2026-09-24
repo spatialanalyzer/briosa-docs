@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/analysis-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -21,7 +21,7 @@ export interface AngleBetweenLineAndPlaneInput {
   readonly selectedLine: CollectionObjectName;
   readonly selectedPlane: CollectionObjectName;
   readonly nominalAngle?: number;
-  readonly angleTolerance00ForNone?: number;
+  readonly angleTolerance?: number;
 }
 
 export declare function angleBetweenLineAndPlane(
@@ -33,6 +33,12 @@ export declare function angleBetweenLineAndPlane(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
+
 ## Angle Between Two Lines {/* #angle-between-two-lines */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC Contract](/api/grpc/analysis-operations#angle-between-two-lines)
@@ -42,7 +48,7 @@ export interface AngleBetweenTwoLinesInput {
   readonly line1: CollectionObjectName;
   readonly line2: CollectionObjectName;
   readonly nominalAngle?: number;
-  readonly angleTolerance00ForNone?: number;
+  readonly angleTolerance?: number;
 }
 
 export declare function angleBetweenTwoLines(
@@ -54,6 +60,12 @@ export declare function angleBetweenTwoLines(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
+
 ## Angle Between Two Planes' normals {/* #angle-between-two-planes-normals */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC Contract](/api/grpc/analysis-operations#angle-between-two-planes-normals)
@@ -63,7 +75,7 @@ export interface AngleBetweenTwoPlanesNormalsInput {
   readonly planeA: CollectionObjectName;
   readonly planeB: CollectionObjectName;
   readonly nominalAngle?: number;
-  readonly angleTolerance00ForNone?: number;
+  readonly angleTolerance?: number;
 }
 
 export declare function angleBetweenTwoPlanesNormals(
@@ -75,6 +87,12 @@ export declare function angleBetweenTwoPlanesNormals(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
+
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC Contract](/api/grpc/analysis-operations#best-fit-transformation---group-to-group)
@@ -84,8 +102,8 @@ export interface BestFitTransformationGroupToGroupInput {
   readonly referenceGroup: CollectionObjectName;
   readonly correspondingGroup: CollectionObjectName;
   readonly showInterface?: boolean;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
   readonly allowScale?: boolean;
   readonly allowX?: boolean;
   readonly allowY?: boolean;
@@ -95,7 +113,7 @@ export interface BestFitTransformationGroupToGroupInput {
   readonly allowRz?: boolean;
   readonly lockDegreesOfFreedom?: boolean;
   readonly generateEvent?: boolean;
-  readonly filePathForCsvTextReportRequiresShowInterfaceTrue: FileReference;
+  readonly filePathForCsvTextReport: FileReference;
 }
 
 export declare function bestFitTransformationGroupToGroup(
@@ -106,6 +124,14 @@ export declare function bestFitTransformationGroupToGroup(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
+| `filePathForCsvTextReport` | Requires Show Interface to be true. |
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz) {/* #compute-group-to-group-orientation-rxryrz */}
 
@@ -178,9 +204,9 @@ export interface FitGeometryToPointGroupInput {
   readonly resultingObjectName: CollectionObjectName;
   readonly fitProfileName?: string;
   readonly reportDeviations?: boolean;
-  readonly fitInterfaceTolerance10UseProfile?: number;
+  readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometryOptional: CollectionObjectName;
+  readonly startingConditionGeometry: CollectionObjectName;
 }
 
 export declare function fitGeometryToPointGroup(
@@ -191,6 +217,13 @@ export declare function fitGeometryToPointGroup(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
@@ -204,9 +237,9 @@ export interface FitGeometryToPointGroupProjectedToPlaneInput {
   readonly resultingObjectName: CollectionObjectName;
   readonly fitProfileName?: string;
   readonly reportDeviations?: boolean;
-  readonly fitInterfaceTolerance10UseProfile?: number;
+  readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometryOptional: CollectionObjectName;
+  readonly startingConditionGeometry: CollectionObjectName;
 }
 
 export declare function fitGeometryToPointGroupProjectedToPlane(
@@ -217,6 +250,13 @@ export declare function fitGeometryToPointGroupProjectedToPlane(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
@@ -229,9 +269,9 @@ export interface FitGeometryToPointsInput {
   readonly resultingObjectName: CollectionObjectName;
   readonly fitProfileName?: string;
   readonly reportDeviations?: boolean;
-  readonly fitInterfaceTolerance10UseProfile?: number;
+  readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometryOptional: CollectionObjectName;
+  readonly startingConditionGeometry: CollectionObjectName;
 }
 
 export declare function fitGeometryToPoints(
@@ -242,6 +282,13 @@ export declare function fitGeometryToPoints(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
@@ -296,6 +343,13 @@ export declare function getConeProperties(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `coneEndPoint` | Expressed in working coordinates. |
+| `coneAxis` | Expressed in working coordinates. |
 
 ## Get Coordinate for i-th Point in Point Set {/* #get-coordinate-for-i-th-point-in-point-set */}
 
@@ -498,6 +552,14 @@ export declare function getMeasurementWeatherData(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `humidity` | Relative humidity in percent. |
 
 ## Get Number of Collections {/* #get-number-of-collections */}
 
@@ -748,6 +810,16 @@ export declare function getSlotProperties(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `slotTransform` | Expressed in working coordinates. |
+| `center` | Expressed in working coordinates. |
+| `normalDirection` | Expressed in working coordinates. |
+| `centerlinePt1` | Expressed in working coordinates. |
+| `centerlinePt2` | Expressed in working coordinates. |
+
 ## Get Sphere Properties {/* #get-sphere-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-sphere-properties)
@@ -868,8 +940,8 @@ export interface GroupToSurfaceFitInput {
   readonly groupToFit: CollectionObjectName;
   readonly surface: CollectionObjectName;
   readonly doConventionalFit?: boolean;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
 }
 
 export declare function groupToSurfaceFit(
@@ -880,6 +952,13 @@ export declare function groupToSurfaceFit(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Import Geometry Fit Profiles {/* #import-geometry-fit-profiles */}
 
@@ -927,11 +1006,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeCircleFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
+  readonly overrideRadialOffset?: number;
   readonly measuredSideForPlanarOffset?: MeasuredSideForPlanarOffset;
-  readonly overridePlanarOffset10UseCurrent?: number;
+  readonly overridePlanarOffset?: number;
   readonly planarOffsetDirection?: NormalDirection;
-  readonly lockRadius10DoNotLock?: number;
+  readonly lockRadius?: number;
   readonly circleComputationTechnique?: CompTechnique;
   readonly reverseNormalVectorAfterFit?: boolean;
   readonly makeCardinalPoints?: boolean;
@@ -948,6 +1027,14 @@ export declare function makeCircleFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cone-fit-profile)
@@ -956,8 +1043,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeConeFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
-  readonly lockAngleInDegrees10DoNotLock?: number;
+  readonly overrideRadialOffset?: number;
+  readonly lockAngleInDegrees?: number;
   readonly useExhaustiveSearch?: boolean;
   readonly makeCardinalPoints?: boolean;
   readonly cardinalPt1Vertex?: boolean;
@@ -974,6 +1061,13 @@ export declare function makeConeFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockAngleInDegrees` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
@@ -982,8 +1076,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeCylinderFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
-  readonly lockRadius10DoNotLock?: number;
+  readonly overrideRadialOffset?: number;
+  readonly lockRadius?: number;
   readonly lockedRadiusFitMethod?: FitMethod;
   readonly constrainToNominalAxis?: boolean;
   readonly constrainToNominalOrientation?: boolean;
@@ -1007,6 +1101,13 @@ export declare function makeCylinderFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
@@ -1015,9 +1116,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeEllipseFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
+  readonly overrideRadialOffset?: number;
   readonly measuredSideForPlanarOffset?: MeasuredSideForPlanarOffset;
-  readonly overridePlanarOffset10UseCurrent?: number;
+  readonly overridePlanarOffset?: number;
   readonly planarOffsetDirection?: NormalDirection;
   readonly reverseNormalVectorAfterFit?: boolean;
   readonly makeCardinalPoints?: boolean;
@@ -1035,6 +1136,13 @@ export declare function makeEllipseFitProfile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
 
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
@@ -1067,8 +1175,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeParaboloidFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
-  readonly lockFocalLength10DoNotLock?: number;
+  readonly overrideRadialOffset?: number;
+  readonly lockFocalLength?: number;
   readonly degreeOfFreedom?: DegreeOfFreedom;
   readonly makeCardinalPoints?: boolean;
   readonly cardinalPt1Vertex?: boolean;
@@ -1084,6 +1192,13 @@ export declare function makeParaboloidFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockFocalLength` | -1.0 leaves this dimension unlocked. |
+
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-plane-fit-profile)
@@ -1092,7 +1207,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakePlaneFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForPlanarOffset?: MeasuredSideForPlanarOffset;
-  readonly overridePlanarOffset10UseCurrent?: number;
+  readonly overridePlanarOffset?: number;
   readonly planarOffsetDirection?: NormalDirection;
   readonly reverseNormalVectorAfterFit?: boolean;
   readonly makeCardinalPoints?: boolean;
@@ -1109,6 +1224,12 @@ export declare function makePlaneFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-slot-fit-profile)
@@ -1117,9 +1238,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeSlotFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
+  readonly overrideRadialOffset?: number;
   readonly measuredSideForPlanarOffset?: MeasuredSideForPlanarOffset;
-  readonly overridePlanarOffset10UseCurrent?: number;
+  readonly overridePlanarOffset?: number;
   readonly planarOffsetDirection?: NormalDirection;
   readonly slotType?: SlotType;
   readonly slotComputationTechnique?: CompTechnique;
@@ -1140,6 +1261,13 @@ export declare function makeSlotFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
@@ -1148,8 +1276,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface MakeSphereFitProfileInput {
   readonly fitProfileName?: string;
   readonly measuredSideForRadialOffset?: MeasuredSideForRadialOffset;
-  readonly overrideRadialOffset10UseCurrent?: number;
-  readonly lockRadius10DoNotLock?: number;
+  readonly overrideRadialOffset?: number;
+  readonly lockRadius?: number;
   readonly makeCardinalPoints?: boolean;
   readonly cardinalPt1Center?: boolean;
   readonly computationMethod?: SphereFitComputationMode;
@@ -1163,6 +1291,13 @@ export declare function makeSphereFitProfile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
 
 ## Mushroom Target Hole Inspection {/* #mushroom-target-hole-inspection */}
 
@@ -1240,8 +1375,8 @@ export interface QueryCloudsToObjectsInput {
   readonly projectionOptions?: ProjectionOptions;
   readonly proximity?: number;
   readonly skipFactor?: number;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
 }
 
 export declare function queryCloudsToObjects(
@@ -1252,6 +1387,13 @@ export declare function queryCloudsToObjects(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
@@ -1265,8 +1407,8 @@ export interface QueryCloudsToSurfaceInput {
   readonly projectionOptions?: ProjectionOptions;
   readonly proximity?: number;
   readonly skipFactor?: number;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
 }
 
 export declare function queryCloudsToSurface(
@@ -1277,6 +1419,13 @@ export declare function queryCloudsToSurface(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Frame to Frame {/* #query-frame-to-frame */}
 
@@ -1297,18 +1446,26 @@ export declare function queryFrameToFrame(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rx` | MP qualifier: Roll. |
+| `ry` | MP qualifier: Pitch. |
+| `rz` | MP qualifier: Yaw. |
+
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-groups-to-objects)
 
 ```ts
 export interface QueryGroupsToObjectsInput {
-  readonly groupNameListGroupsToProject: Iterable<CollectionObjectName>;
-  readonly objectNameListObjectsToProjectTo: Iterable<CollectionObjectName>;
+  readonly groupNameList: Iterable<CollectionObjectName>;
+  readonly objectNameList: Iterable<CollectionObjectName>;
   readonly resultingObjectName: CollectionObjectName;
   readonly projectionOptions?: ProjectionOptions;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
   readonly showResultsDialog?: boolean;
 }
 
@@ -1320,6 +1477,15 @@ export declare function queryGroupsToObjects(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `groupNameList` | MP qualifier: Groups to Project. |
+| `objectNameList` | MP qualifier: Objects to Project to. |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Point to Objects {/* #query-point-to-objects */}
 
@@ -1392,11 +1558,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface QueryPointsToObjectsInput {
   readonly pointNames: Iterable<PointName>;
-  readonly objectNameListObjectsToProjectTo: Iterable<CollectionObjectName>;
+  readonly objectNameList: Iterable<CollectionObjectName>;
   readonly resultingObjectName: CollectionObjectName;
   readonly projectionOptions?: ProjectionOptions;
-  readonly rmsTolerance00ForNone?: number;
-  readonly maximumAbsoluteTolerance00ForNone?: number;
+  readonly rmsTolerance?: number;
+  readonly maximumAbsoluteTolerance?: number;
   readonly showResultsDialog?: boolean;
 }
 
@@ -1408,6 +1574,14 @@ export declare function queryPointsToObjects(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `objectNameList` | MP qualifier: Objects to Project to. |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Points to Single Point {/* #query-points-to-single-point */}
 
@@ -1575,8 +1749,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SetConePropertiesInput {
   readonly coneName: CollectionObjectName;
-  readonly coneEndPointInWorkingCoordinates: Vector;
-  readonly coneAxisInWorkingCoordinates: Vector;
+  readonly coneEndPoint: Vector;
+  readonly coneAxis: Vector;
   readonly coneLength?: number;
   readonly coneThetaStart?: number;
   readonly coneThetaSpan?: number;
@@ -1592,6 +1766,13 @@ export declare function setConeProperties(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `coneEndPoint` | Expressed in working coordinates. |
+| `coneAxis` | Expressed in working coordinates. |
 
 ## Set Cylinder Properties {/* #set-cylinder-properties */}
 
@@ -1690,7 +1871,7 @@ export interface SetLinePropertiesInput {
   readonly lineName: CollectionObjectName;
   readonly beginCoordinate: Vector;
   readonly endCoordinate: Vector;
-  readonly lengthOptional?: number;
+  readonly length?: number;
 }
 
 export declare function setLineProperties(
@@ -1701,6 +1882,12 @@ export declare function setLineProperties(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `length` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Set Measurement Auxiliary Data {/* #set-measurement-auxiliary-data */}
 
@@ -1835,10 +2022,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface TemperatureCompensateAGroupInput {
   readonly originalGroup: CollectionObjectName;
-  readonly scalingOriginCoordinateFrame: FrameName;
-  readonly materialCte1DegF?: number;
-  readonly initialTemperatureF?: number;
-  readonly finalTemperatureF?: number;
+  readonly scalingOrigin: FrameName;
+  readonly materialCte?: number;
+  readonly initialTemperature?: number;
+  readonly finalTemperature?: number;
   readonly scaledGroupName: CollectionObjectName;
 }
 
@@ -1850,6 +2037,15 @@ export declare function temperatureCompensateAGroup(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `scalingOrigin` | MP qualifier: coordinate frame. |
+| `materialCte` | Coefficient per degree Fahrenheit. |
+| `initialTemperature` | Temperature in degrees Fahrenheit. |
+| `finalTemperature` | Temperature in degrees Fahrenheit. |
 
 ## Transform Objects - Frame To Frame {/* #transform-objects---frame-to-frame */}
 
@@ -1929,4 +2125,4 @@ export declare function translateObjectsByDelta(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2026.1.0529.7)

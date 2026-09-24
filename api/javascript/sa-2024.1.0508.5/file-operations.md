@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/file-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -92,12 +92,12 @@ export interface DirectCadAccessInput {
   readonly centerViewOnImportedObjects?: boolean;
   readonly importIntoFoldersMatchingCadFileHierarchy?: boolean;
   readonly removeEmptyFolders?: boolean;
-  readonly surfaceNormalsMode1Or2?: number;
+  readonly surfaceNormalsMode?: number;
   readonly promptOnMissingComponents?: boolean;
   readonly selectiveImport?: boolean;
   readonly surfaceCompatibilityMode: boolean;
   readonly explodeSurfaces?: boolean;
-  readonly cadFileUnitsLeaveBlankToUseTheUnitsSpecifiedInTheFile?: string;
+  readonly cadFileUnits?: string;
   readonly buildCalloutViews?: boolean;
 }
 
@@ -109,6 +109,13 @@ export declare function directCadAccess(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `surfaceNormalsMode` | MP qualifier: 1 or 2. |
+| `cadFileUnits` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
@@ -193,7 +200,7 @@ export interface ExportAsciiPointSetInput {
   readonly includeSaVersionAndFrameComments?: boolean;
   readonly includeAxisComments?: boolean;
   readonly includeExportFormatInfo?: boolean;
-  readonly maximumPrecisionScientificNotation?: boolean;
+  readonly maximumPrecision?: boolean;
   readonly decimalPrecision?: number;
   readonly append?: boolean;
 }
@@ -206,6 +213,12 @@ export declare function exportAsciiPointSet(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximumPrecision` | MP qualifier: Scientific Notation. |
 
 ## Export ASCII Points {/* #export-ascii-points */}
 
@@ -228,7 +241,7 @@ export interface ExportAsciiPointsInput {
   readonly includeExportFormatInfo?: boolean;
   readonly includeWeights?: boolean;
   readonly includeMeasurementDetails?: boolean;
-  readonly maximumPrecisionScientificNotation?: boolean;
+  readonly maximumPrecision?: boolean;
   readonly decimalPrecision?: number;
   readonly append?: boolean;
 }
@@ -241,6 +254,12 @@ export declare function exportAsciiPoints(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `maximumPrecision` | MP qualifier: Scientific Notation. |
 
 ## Export DXF {/* #export-dxf */}
 
@@ -514,8 +533,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface ExportVectorContainerToAsciiFileInput {
   readonly asciiFilePath: FileReference;
   readonly vectorGroupsToExport: Iterable<CollectionVectorGroupName>;
-  readonly overwriteExistingFileFalseAppend?: boolean;
-  readonly useFullPrecisionScientificNotation?: boolean;
+  readonly overwriteExistingFile?: boolean;
+  readonly useFullPrecision?: boolean;
   readonly vectorNameFormat: ExportVectorNameFormat;
   readonly includeVectorLength?: boolean;
 }
@@ -528,6 +547,13 @@ export declare function exportVectorContainerToAsciiFile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overwriteExistingFile` | False appends to the existing file. |
+| `useFullPrecision` | MP qualifier: Scientific Notation. |
 
 ## Find Files in Directory {/* #find-files-in-directory */}
 
@@ -985,7 +1011,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface ImportSaFileInput {
   readonly saFileName: FileReference;
   readonly allowOperatorSelections?: boolean;
-  readonly selectedCollectionsOptional: Iterable<string>;
+  readonly selectedCollections: Iterable<string>;
 }
 
 export declare function importSaFile(
@@ -996,6 +1022,12 @@ export declare function importSaFile(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `selectedCollections` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Import SA Windows Placement {/* #import-sa-windows-placement */}
 
@@ -1561,4 +1593,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

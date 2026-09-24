@@ -1,6 +1,6 @@
 ---
 title: Process Flow Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/process-flow-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/process-flow-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -184,8 +184,8 @@ message AskForStringPullDownVersionResult {
 | Request | 1 | `image_file` | `optional FileReference` | Image File | Required |
 | Request | 2 | `image_map_xml_file` | `optional FileReference` | Image Map XML File | Required |
 | Request | 3 | `window_caption` | `optional string` | Window Caption | Empty |
-| Request | 4 | `window_width_0_default` | `optional int32` | Window Width (0 = default) | 0 |
-| Request | 5 | `window_height_0_default` | `optional int32` | Window Height (0 = default) | 0 |
+| Request | 4 | `window_width` | `optional int32` | Window Width (0 = default) | 0 |
+| Request | 5 | `window_height` | `optional int32` | Window Height (0 = default) | 0 |
 | Result | 1 | `user_choice` | `optional string` | User Choice | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -196,8 +196,8 @@ message AskForUserDecisionFromImageRequest {
   optional FileReference image_file = 1;
   optional FileReference image_map_xml_file = 2;
   optional string window_caption = 3;
-  optional int32 window_width_0_default = 4;
-  optional int32 window_height_0_default = 5;
+  optional int32 window_width = 4;
+  optional int32 window_height = 5;
 }
 
 message AskForUserDecisionFromImageResult {
@@ -205,6 +205,13 @@ message AskForUserDecisionFromImageResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `window_width` | 0 uses the default window dimension. |
+| `window_height` | 0 uses the default window dimension. |
 
 ## Ask for User Decision from Strings {/* #ask-for-user-decision-from-strings */}
 
@@ -216,9 +223,9 @@ message AskForUserDecisionFromImageResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `question_or_statement` | `repeated string` | Question or Statement | Required |
 | Request | 2 | `font` | `optional Font` | Font | MS Shell Dlg |
-| Request | 3 | `button1_text_empty_to_hide_button` | `optional string` | Button1 Text (Empty to hide button) | Empty |
-| Request | 4 | `button2_text_empty_to_hide_button` | `optional string` | Button2 Text (Empty to hide button) | Empty |
-| Request | 5 | `button3_text_empty_to_hide_button` | `optional string` | Button3 Text (Empty to hide button) | Empty |
+| Request | 3 | `button1_text` | `optional string` | Button1 Text (Empty to hide button) | Empty |
+| Request | 4 | `button2_text` | `optional string` | Button2 Text (Empty to hide button) | Empty |
+| Request | 5 | `button3_text` | `optional string` | Button3 Text (Empty to hide button) | Empty |
 | Result | 1 | `answer` | `optional string` | Answer | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -228,9 +235,9 @@ rpc AskForUserDecisionFromStrings(AskForUserDecisionFromStringsRequest) returns 
 message AskForUserDecisionFromStringsRequest {
   repeated string question_or_statement = 1;
   optional Font font = 2;
-  optional string button1_text_empty_to_hide_button = 3;
-  optional string button2_text_empty_to_hide_button = 4;
-  optional string button3_text_empty_to_hide_button = 5;
+  optional string button1_text = 3;
+  optional string button2_text = 4;
+  optional string button3_text = 5;
 }
 
 message AskForUserDecisionFromStringsResult {
@@ -238,6 +245,14 @@ message AskForUserDecisionFromStringsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `button1_text` | An empty string hides the button. |
+| `button2_text` | An empty string hides the button. |
+| `button3_text` | An empty string hides the button. |
 
 ## Object Existence Test (Check Only) {/* #object-existence-test-check-only */}
 
@@ -264,4 +279,4 @@ message ObjectExistenceTestCheckOnlyResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

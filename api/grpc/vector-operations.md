@@ -1,6 +1,6 @@
 ---
 title: Vector Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/vector-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/vector-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -48,7 +48,7 @@ message AddAVectorToVectorNameRefListResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `treat_individually` | `optional bool` | Treat Individually? | false |
-| Request | 2 | `colorization_options_uses_mode_only` | `optional ColorizationOptions` | Colorization Options (Uses Mode Only) | Red |
+| Request | 2 | `colorization_options` | `optional ColorizationOptions` | Colorization Options (Uses Mode Only) | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -56,13 +56,19 @@ rpc AutoRangeAndSetVectorGroupColorizationAll(AutoRangeAndSetVectorGroupColoriza
 
 message AutoRangeAndSetVectorGroupColorizationAllRequest {
   optional bool treat_individually = 1;
-  optional ColorizationOptions colorization_options_uses_mode_only = 2;
+  optional ColorizationOptions colorization_options = 2;
 }
 
 message AutoRangeAndSetVectorGroupColorizationAllResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorization_options` | MP qualifier: Uses Mode Only. |
 
 ## Auto-Range and Set Vector Group Colorization (Selected) {/* #auto-range-and-set-vector-group-colorization-selected */}
 
@@ -74,7 +80,7 @@ message AutoRangeAndSetVectorGroupColorizationAllResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_groups_to_be_set` | `repeated CollectionVectorGroupName` | Vector Groups to be Set | Required |
 | Request | 2 | `treat_individually` | `optional bool` | Treat Individually? | false |
-| Request | 3 | `colorization_options_uses_mode_only` | `optional ColorizationOptions` | Colorization Options (Uses Mode Only) | Red |
+| Request | 3 | `colorization_options` | `optional ColorizationOptions` | Colorization Options (Uses Mode Only) | Red |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -83,13 +89,19 @@ rpc AutoRangeAndSetVectorGroupColorizationSelected(AutoRangeAndSetVectorGroupCol
 message AutoRangeAndSetVectorGroupColorizationSelectedRequest {
   repeated CollectionVectorGroupName vector_groups_to_be_set = 1;
   optional bool treat_individually = 2;
-  optional ColorizationOptions colorization_options_uses_mode_only = 3;
+  optional ColorizationOptions colorization_options = 3;
 }
 
 message AutoRangeAndSetVectorGroupColorizationSelectedResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorization_options` | MP qualifier: Uses Mode Only. |
 
 ## Delete i-th Vector From Vector Group {/* #delete-i-th-vector-from-vector-group */}
 
@@ -473,4 +485,4 @@ message SortVectorsResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

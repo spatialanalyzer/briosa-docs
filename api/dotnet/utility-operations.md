@@ -1,6 +1,6 @@
 ---
 title: Utility Operations
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/utility-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/utility-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -91,6 +91,12 @@ public Task<bool> GetAngularRepresentationAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Value0360` | False selects the +/-180 angular representation. |
 
 ## Get Collection Notes {/* #get-collection-notes */}
 
@@ -207,11 +213,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 ```csharp
 public Task<GetScreenResolutionResult> GetScreenResolutionAsync(
-        int display1Primary = -1,
+        int display = -1,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `display` | -1 selects the primary display. |
 
 ## Get Working Frame Properties {/* #get-working-frame-properties */}
 
@@ -377,11 +389,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 ```csharp
 public Task SetAngularRepresentationAsync(
-        bool value0360False180 = false,
+        bool value0360 = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `value0360` | False selects the +/-180 angular representation. |
 
 ## Set Auto Event Creation {/* #set-auto-event-creation */}
 
@@ -428,11 +446,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task SetCollectionNotesAsync(
         CollectionName collection,
         IEnumerable<string> notes,
-        bool appendFalseOverwrite = true,
+        bool append = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Decimal Digits for Display {/* #set-decimal-digits-for-display */}
 
@@ -458,11 +482,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task SetFolderNotesAsync(
         string folderPath,
         IEnumerable<string> notes,
-        bool appendFalseOverwrite = true,
+        bool append = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Interaction Mode {/* #set-interaction-mode */}
 
@@ -510,11 +540,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task SetObjectNotesAsync(
         CollectionObjectName @object,
         IEnumerable<string> notes,
-        bool appendFalseOverwrite = true,
+        bool append = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set OPC DA Tag Value Double {/* #set-opc-da-tag-value-double */}
 
@@ -563,11 +599,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task SetPointNotesAsync(
         PointName point,
         IEnumerable<string> notes,
-        bool appendFalseOverwrite = true,
+        bool append = true,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set User Interface Profile {/* #set-user-interface-profile */}
 
@@ -576,11 +618,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task SetUserInterfaceProfileAsync(
         string profileName,
-        FileReference profileFileNameOptional,
+        FileReference profileFileName,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `profileFileName` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 
@@ -659,4 +707,4 @@ public Task WriteToLogAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2026.1.0529.7)

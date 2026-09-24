@@ -966,17 +966,17 @@ enum ItemType {
 
 ```proto
 message LrFlipTestResult {
-  double front_range_inches = 1;
-  double front_azimuth_degrees = 2;
-  double front_elevation_degrees = 3;
+  double front_range = 1;
+  double front_azimuth = 2;
+  double front_elevation = 3;
   double front_quality = 4;
-  double back_range_inches = 5;
-  double back_azimuth_degrees = 6;
-  double back_elevation_degrees = 7;
+  double back_range = 5;
+  double back_azimuth = 6;
+  double back_elevation = 7;
   double back_quality = 8;
-  double front_back_difference_range_inches = 9;
-  double front_back_difference_azimuth_degrees = 10;
-  double front_back_difference_elevation_degrees = 11;
+  double front_back_difference_range = 9;
+  double front_back_difference_azimuth = 10;
+  double front_back_difference_elevation = 11;
 }
 ```
 
@@ -984,16 +984,16 @@ message LrFlipTestResult {
 
 ```proto
 message LrLoSeparationTestResult {
-  int32 primary_lo_index = 1;
-  int32 secondary_lo_index = 2;
+  int32 primary_lo = 1;
+  int32 secondary_lo = 2;
   int32 primary_lo_measurement_count = 3;
-  double primary_lo_range_mean_inches = 4;
-  double primary_lo_range_standard_deviation_inches = 5;
+  double primary_lo_range_mean = 4;
+  double primary_lo_range_standard_deviation = 5;
   double primary_lo_quality_mean = 6;
   double primary_lo_quality_standard_deviation = 7;
   int32 secondary_lo_measurement_count = 8;
-  double secondary_lo_range_mean_inches = 9;
-  double secondary_lo_range_standard_deviation_inches = 10;
+  double secondary_lo_range_mean = 9;
+  double secondary_lo_range_standard_deviation = 10;
   double secondary_lo_quality_mean = 11;
   double secondary_lo_quality_standard_deviation = 12;
 }
@@ -1006,8 +1006,8 @@ message LrSnrInfo {
   double snr = 1;
   int32 size_of_data_array = 2;
   int32 peak_value_index = 3;
-  double peak_value_db = 4;
-  double measured_range_meters = 5;
+  double peak_value = 4;
+  double measured_range = 5;
 }
 ```
 
@@ -1164,9 +1164,9 @@ message ObservationInfo {
   bool active = 3;
   string timestamp = 4;
   double rms_error = 5;
-  double temperature_fahrenheit = 6;
-  double pressure_in_hg = 7;
-  double relative_humidity_percent = 8;
+  double temperature = 6;
+  double pressure = 7;
+  double relative_humidity = 8;
   string info_data = 9;
 }
 ```
@@ -1790,4 +1790,4 @@ message WrtlChannelStatus {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5/proto/briosa)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5/proto/briosa)

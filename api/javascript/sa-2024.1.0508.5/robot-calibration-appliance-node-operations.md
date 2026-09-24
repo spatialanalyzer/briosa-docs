@@ -1,6 +1,6 @@
 ---
 title: Robot Calibration Appliance Node Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/robot-calibration-appliance-node-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/robot-calibration-appliance-node-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -164,7 +164,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```ts
 export interface SetCalibrationApplianceNodeInstrumentDwellTimeInput {
   readonly calibrationApplianceNode: CollectionObjectName;
-  readonly measurementDwellTimeSeconds?: number;
+  readonly measurementDwellTime?: number;
 }
 
 // Member of BriosaClient
@@ -177,6 +177,12 @@ interface BriosaClient {
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `measurementDwellTime` | Time in seconds. |
 
 ## Skip Calibration Appliance Node Measurement {/* #skip-calibration-appliance-node-measurement */}
 
@@ -638,4 +644,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: View Control
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/view-control) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/view-control)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -241,7 +241,7 @@ message HideObjectsResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `object_names_empty_to_clear_all` | `repeated CollectionObjectName` | Object Names (Empty to clear all) | Required |
+| Request | 1 | `object_names` | `repeated CollectionObjectName` | Object Names (Empty to clear all) | Required |
 | Request | 2 | `high_light_objects` | `optional bool` | HighLight Objects? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -249,7 +249,7 @@ message HideObjectsResult {
 rpc HighlightObjects(HighlightObjectsRequest) returns (HighlightObjectsResult);
 
 message HighlightObjectsRequest {
-  repeated CollectionObjectName object_names_empty_to_clear_all = 1;
+  repeated CollectionObjectName object_names = 1;
   optional bool high_light_objects = 2;
 }
 
@@ -257,6 +257,12 @@ message HighlightObjectsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `object_names` | An empty selection clears all highlights. |
 
 ## Highlight Point {/* #highlight-point */}
 
@@ -266,7 +272,7 @@ message HighlightObjectsResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `point_name_empty_to_clear_all` | `optional PointName` | Point Name (Empty to clear all) | Required |
+| Request | 1 | `point_name` | `optional PointName` | Point Name (Empty to clear all) | Required |
 | Request | 2 | `show_point` | `optional bool` | Show Point? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -274,7 +280,7 @@ message HighlightObjectsResult {
 rpc HighlightPoint(HighlightPointRequest) returns (HighlightPointResult);
 
 message HighlightPointRequest {
-  optional PointName point_name_empty_to_clear_all = 1;
+  optional PointName point_name = 1;
   optional bool show_point = 2;
 }
 
@@ -282,6 +288,12 @@ message HighlightPointResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `point_name` | An empty selection clears all highlights. |
 
 ## Highlight Relationships {/* #highlight-relationships */}
 
@@ -291,7 +303,7 @@ message HighlightPointResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `relationships_empty_to_clear_all` | `repeated CollectionItemName` | Relationships (Empty to clear all) | Required |
+| Request | 1 | `relationships` | `repeated CollectionItemName` | Relationships (Empty to clear all) | Required |
 | Request | 2 | `high_light_relationships` | `optional bool` | HighLight Relationships? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -299,7 +311,7 @@ message HighlightPointResult {
 rpc HighlightRelationships(HighlightRelationshipsRequest) returns (HighlightRelationshipsResult);
 
 message HighlightRelationshipsRequest {
-  repeated CollectionItemName relationships_empty_to_clear_all = 1;
+  repeated CollectionItemName relationships = 1;
   optional bool high_light_relationships = 2;
 }
 
@@ -307,6 +319,12 @@ message HighlightRelationshipsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `relationships` | An empty selection clears all highlights. |
 
 ## Load Ribbon Bar from XML File {/* #load-ribbon-bar-from-xml-file */}
 
@@ -821,7 +839,7 @@ message SetWorkingColorAutoIncrementResult {
 | Request | 1 | `all_collections` | `optional bool` | All Collections? | false |
 | Request | 2 | `specific_collection` | `optional CollectionName` | Specific Collection | Required |
 | Request | 3 | `object_type_to_show_hide` | `optional ObjectType` | Object Type To Show / Hide | Any |
-| Request | 4 | `hide_show_false` | `optional bool` | Hide? (Show = FALSE) | true |
+| Request | 4 | `hide` | `optional bool` | Hide? (Show = FALSE) | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -831,13 +849,19 @@ message ShowHideByObjectTypeRequest {
   optional bool all_collections = 1;
   optional CollectionName specific_collection = 2;
   optional ObjectType object_type_to_show_hide = 3;
-  optional bool hide_show_false = 4;
+  optional bool hide = 4;
 }
 
 message ShowHideByObjectTypeResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `hide` | False shows the objects. |
 
 ## Show / Hide Callout View {/* #show--hide-callout-view */}
 
@@ -898,7 +922,7 @@ message ShowHideDimensionResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
-| Request | 2 | `show_hide_false` | `optional bool` | Show? (Hide = FALSE) | false |
+| Request | 2 | `show` | `optional bool` | Show? (Hide = FALSE) | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -906,13 +930,19 @@ rpc ShowHidePoints(ShowHidePointsRequest) returns (ShowHidePointsResult);
 
 message ShowHidePointsRequest {
   repeated PointName point_names = 1;
-  optional bool show_hide_false = 2;
+  optional bool show = 2;
 }
 
 message ShowHidePointsResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `show` | False hides the points. |
 
 ## Show by Object Type {/* #show-by-object-type */}
 
@@ -1238,4 +1268,4 @@ message ShowHideRelationshipWatchResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

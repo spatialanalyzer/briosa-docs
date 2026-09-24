@@ -1,6 +1,6 @@
 ---
 title: Process Flow Operations
-description: Released javascript 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased javascript 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/process-flow-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/process-flow-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -128,8 +128,8 @@ export interface AskForUserDecisionFromImageInput {
   readonly imageFile: FileReference;
   readonly imageMapXmlFile: FileReference;
   readonly windowCaption?: string;
-  readonly windowWidth0Default?: number;
-  readonly windowHeight0Default?: number;
+  readonly windowWidth?: number;
+  readonly windowHeight?: number;
 }
 
 export declare function askForUserDecisionFromImage(
@@ -141,6 +141,13 @@ export declare function askForUserDecisionFromImage(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `windowWidth` | 0 uses the default window dimension. |
+| `windowHeight` | 0 uses the default window dimension. |
+
 ## Ask for User Decision from Strings {/* #ask-for-user-decision-from-strings */}
 
 [MP Catalog](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/process-flow-operations#ask-for-user-decision-from-strings)
@@ -149,9 +156,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 export interface AskForUserDecisionFromStringsInput {
   readonly questionOrStatement: Iterable<string>;
   readonly font?: Font;
-  readonly button1TextEmptyToHideButton?: string;
-  readonly button2TextEmptyToHideButton?: string;
-  readonly button3TextEmptyToHideButton?: string;
+  readonly button1Text?: string;
+  readonly button2Text?: string;
+  readonly button3Text?: string;
 }
 
 export declare function askForUserDecisionFromStrings(
@@ -162,6 +169,14 @@ export declare function askForUserDecisionFromStrings(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `button1Text` | An empty string hides the button. |
+| `button2Text` | An empty string hides the button. |
+| `button3Text` | An empty string hides the button. |
 
 ## Object Existence Test (Check Only) {/* #object-existence-test-check-only */}
 
@@ -181,4 +196,4 @@ export declare function objectExistenceTestCheckOnly(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/f98eef683c941bf289c1d0ec411c13a1903bcca4/targets/2024.1.0508.5)

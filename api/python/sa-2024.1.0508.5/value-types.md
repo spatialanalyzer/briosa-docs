@@ -1383,8 +1383,8 @@ class GetCloudRGBValuesResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class GetConePropertiesResult:
-    cone_end_point_in_working_coordinates: Vector
-    cone_axis_in_working_coordinates: Vector
+    cone_end_point: Vector
+    cone_axis: Vector
     cone_length: float
     cone_theta_start: float
     cone_theta_span: float
@@ -1490,10 +1490,10 @@ class GetEulerParametersForIthFrameInFrameSetResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class GetGeomRelationshipAutoVectorsResult:
-    auto_vectors_nominal_avn_enabled: bool
-    auto_vectors_nominal_avn_name: CollectionObjectName
-    auto_vectors_fit_avf_enabled: bool
-    auto_vectors_fit_avf_name: CollectionObjectName
+    auto_vectors_nominal_enabled: bool
+    auto_vectors_nominal_name: CollectionObjectName
+    auto_vectors_fit_enabled: bool
+    auto_vectors_fit_name: CollectionObjectName
     points_type: str
 ```
 
@@ -1605,9 +1605,9 @@ class GetMeasurementAuxiliaryDataResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class GetMeasurementWeatherDataResult:
-    temperature_deg_f: float
-    pressure_in_hg: float
-    humidity_rh: float
+    temperature: float
+    pressure: float
+    humidity: float
 ```
 
 ## `GetNamedDoubleListVariableMinMaxResult`
@@ -1947,14 +1947,14 @@ class GetScreenResolutionResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class GetSlotPropertiesResult:
-    slot_transform_in_working_coordinates: Transform
-    center_in_working_coordinates: Vector
-    normal_direction_in_working_coordinates: Vector
+    slot_transform: Transform
+    center: Vector
+    normal_direction: Vector
     slot_length: float
     slot_width: float
     round_slot_type: bool
-    centerline_pt_1_in_working_coordinates: Vector
-    centerline_pt_2_in_working_coordinates: Vector
+    centerline_pt_1: Vector
+    centerline_pt_2: Vector
 ```
 
 ## `GetSpherePropertiesResult`
@@ -2114,10 +2114,10 @@ class InstrumentPositionReportingFrame(str, Enum):
 @dataclass(frozen=True, slots=True, kw_only=True)
 class InstrumentPositionUpdate:
     x_or_r: float
-    y_or_theta_degrees: float
-    z_or_phi_degrees: float
-    time_since_update_seconds: float
-    timestamp_approximate: str
+    y_or_theta: float
+    z_or_phi: float
+    time_since_update: float
+    timestamp: str
 ```
 
 ## `InstrumentTargetStatus`
@@ -2161,9 +2161,9 @@ class InstrumentTypeName:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class InstrumentWeatherSetting:
-    temperature_fahrenheit: float
-    pressure_mmhg: float
-    relative_humidity_percent: float
+    temperature: float
+    pressure: float
+    relative_humidity: float
     set_automatically: bool
 ```
 
@@ -2246,17 +2246,17 @@ class LastInstrumentIndexResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class LrFlipTestResult:
-    front_range_inches: float
-    front_azimuth_degrees: float
-    front_elevation_degrees: float
+    front_range: float
+    front_azimuth: float
+    front_elevation: float
     front_quality: float
-    back_range_inches: float
-    back_azimuth_degrees: float
-    back_elevation_degrees: float
+    back_range: float
+    back_azimuth: float
+    back_elevation: float
     back_quality: float
-    front_back_difference_range_inches: float
-    front_back_difference_azimuth_degrees: float
-    front_back_difference_elevation_degrees: float
+    front_back_difference_range: float
+    front_back_difference_azimuth: float
+    front_back_difference_elevation: float
 ```
 
 ## `LrLoSeparationTestResult`
@@ -2266,16 +2266,16 @@ class LrFlipTestResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class LrLoSeparationTestResult:
-    primary_lo_index: int
-    secondary_lo_index: int
+    primary_lo: int
+    secondary_lo: int
     primary_lo_measurement_count: int
-    primary_lo_range_mean_inches: float
-    primary_lo_range_standard_deviation_inches: float
+    primary_lo_range_mean: float
+    primary_lo_range_standard_deviation: float
     primary_lo_quality_mean: float
     primary_lo_quality_standard_deviation: float
     secondary_lo_measurement_count: int
-    secondary_lo_range_mean_inches: float
-    secondary_lo_range_standard_deviation_inches: float
+    secondary_lo_range_mean: float
+    secondary_lo_range_standard_deviation: float
     secondary_lo_quality_mean: float
     secondary_lo_quality_standard_deviation: float
 ```
@@ -2287,11 +2287,11 @@ class LrLoSeparationTestResult:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class LrSelfTestResult:
-    reference_arm_length_inches: float
+    reference_arm_length: float
     reference_arm_quality: float
     mirror_measurement_count: int
-    mirror_measurement_range_mean_inches: float
-    mirror_measurement_range_standard_deviation_inches: float
+    mirror_measurement_range_mean: float
+    mirror_measurement_range_standard_deviation: float
     mirror_measurement_quality_mean: float
     mirror_measurement_quality_standard_deviation: float
     passed_reference_arm_quality_threshold: bool
@@ -2311,8 +2311,8 @@ class LrSnrInfo:
     snr: float
     size_of_data_array: int
     peak_value_index: int
-    peak_value_db: float
-    measured_range_meters: float
+    peak_value: float
+    measured_range: float
 ```
 
 ## `MakeGdtDatumAnnotationOptions`
@@ -2353,8 +2353,8 @@ class MakeGdtFeatureCheckAnnotationOptions:
     is_slot: bool = False
     per_unit_length_or_area: bool = False
     circular_area: bool = False
-    per_unit_area_length_distance: float = 0.0
-    per_unit_area_length_step_over_percent: float = 50.0
+    per_unit_length_distance: float = 0.0
+    per_unit_length_step_over_percent: float = 50.0
     per_unit_area_width_distance: float = 0.0
     per_unit_area_width_step_over_percent: float = 50.0
     per_unit_area_circle_diameter: float = 0.0
@@ -2530,9 +2530,9 @@ class ObservationInfo:
     active: bool
     timestamp: str
     rms_error: float
-    temperature_fahrenheit: float
-    pressure_in_hg: float
-    relative_humidity_percent: float
+    temperature: float
+    pressure: float
+    relative_humidity: float
     info_data: str
 ```
 
@@ -2745,9 +2745,9 @@ class QueryFrameToFrameResult:
     x: float
     y: float
     z: float
-    rx_roll: float
-    ry_pitch: float
-    rz_yaw: float
+    rx: float
+    ry: float
+    rz: float
 ```
 
 ## `QueryGroupsToObjectsResult`
@@ -2885,9 +2885,9 @@ class RelationshipWatchWindowTemplateOptions:
     text_color: Color = Color(red=0, green=0, blue=255)
     background_color: Color = Color(red=255, green=255, blue=255)
     highlight_color: Color = Color(red=255, green=0, blue=0)
-    show_deviation_x_rx: bool = True
-    show_deviation_y_ry: bool = True
-    show_deviation_z_rz: bool = True
+    show_deviation_x: bool = True
+    show_deviation_y: bool = True
+    show_deviation_z: bool = True
     show_deviation_magnitude: bool = True
     udp_network_transmit_settings: RelationshipWatchWindowUdpSettings = (
         RelationshipWatchWindowUdpSettings()
@@ -3351,11 +3351,11 @@ class ToleranceVectorOptions:
 ```python
 @dataclass(frozen=True, slots=True, kw_only=True)
 class TrackerEdmTheodoliteUncertainties:
-    theta_dispersion_arcseconds: float
+    theta_dispersion: float
     theta_threshold: float
-    phi_dispersion_arcseconds: float
+    phi_dispersion: float
     phi_threshold: float
-    distance_ppm: float
+    distance: float
     distance_threshold: float
 ```
 

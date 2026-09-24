@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released dotnet 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased dotnet 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/analysis-operations) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -21,11 +21,17 @@ public Task<double> AngleBetweenLineAndPlaneAsync(
         CollectionObjectName selectedLine,
         CollectionObjectName selectedPlane,
         double nominalAngle = 0.000000,
-        double angleTolerance00ForNone = 0.000000,
+        double angleTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Lines {/* #angle-between-two-lines */}
 
@@ -36,11 +42,17 @@ public Task<double> AngleBetweenTwoLinesAsync(
         CollectionObjectName line1,
         CollectionObjectName line2,
         double nominalAngle = 0.000000,
-        double angleTolerance00ForNone = 0.000000,
+        double angleTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
 
 ## Angle Between Two Planes' normals {/* #angle-between-two-planes-normals */}
 
@@ -51,11 +63,17 @@ public Task<double> AngleBetweenTwoPlanesNormalsAsync(
         CollectionObjectName planeA,
         CollectionObjectName planeB,
         double nominalAngle = 0.000000,
-        double angleTolerance00ForNone = 0.000000,
+        double angleTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `angleTolerance` | 0.0 disables this tolerance. |
 
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
@@ -66,8 +84,8 @@ public Task<BestFitTransformationGroupToGroupResult> BestFitTransformationGroupT
         CollectionObjectName referenceGroup,
         CollectionObjectName correspondingGroup,
         bool showInterface,
-        double rmsTolerance00ForNone,
-        double maximumAbsoluteTolerance00ForNone,
+        double rmsTolerance,
+        double maximumAbsoluteTolerance,
         bool allowScale,
         bool allowX,
         bool allowY,
@@ -77,11 +95,19 @@ public Task<BestFitTransformationGroupToGroupResult> BestFitTransformationGroupT
         bool allowRz,
         bool lockDegreesOfFreedom,
         bool generateEvent,
-        FileReference filePathForCsvTextReportRequiresShowInterfaceTrue,
+        FileReference filePathForCsvTextReport,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
+| `filePathForCsvTextReport` | Requires Show Interface to be true. |
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz) {/* #compute-group-to-group-orientation-rxryrz */}
 
@@ -136,13 +162,20 @@ public Task FitGeometryToPointGroupAsync(
         CollectionObjectName resultingObjectName,
         string fitProfileName,
         bool reportDeviations,
-        double fitInterfaceTolerance10UseProfile,
+        double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometryOptional,
+        CollectionObjectName startingConditionGeometry,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
@@ -156,13 +189,20 @@ public Task FitGeometryToPointGroupProjectedToPlaneAsync(
         CollectionObjectName resultingObjectName,
         string fitProfileName,
         bool reportDeviations,
-        double fitInterfaceTolerance10UseProfile,
+        double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometryOptional,
+        CollectionObjectName startingConditionGeometry,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
@@ -175,13 +215,20 @@ public Task FitGeometryToPointsAsync(
         CollectionObjectName resultingObjectName,
         string fitProfileName,
         bool reportDeviations,
-        double fitInterfaceTolerance10UseProfile,
+        double fitInterfaceTolerance,
         bool ignoreOutOfTolerancePoints,
-        CollectionObjectName startingConditionGeometryOptional,
+        CollectionObjectName startingConditionGeometry,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
+| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
@@ -218,6 +265,13 @@ public Task<GetConePropertiesResult> GetConePropertiesAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `ConeEndPoint` | Expressed in working coordinates. |
+| `ConeAxis` | Expressed in working coordinates. |
 
 ## Get Coordinate for i-th Point in Point Set {/* #get-coordinate-for-i-th-point-in-point-set */}
 
@@ -354,6 +408,14 @@ public Task<GetMeasurementWeatherDataResult> GetMeasurementWeatherDataAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Temperature` | Temperature in degrees Fahrenheit. |
+| `Pressure` | Pressure in inches of mercury. |
+| `Humidity` | Relative humidity in percent. |
 
 ## Get Number of Collections {/* #get-number-of-collections */}
 
@@ -524,6 +586,16 @@ public Task<GetSlotPropertiesResult> GetSlotPropertiesAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `SlotTransform` | Expressed in working coordinates. |
+| `Center` | Expressed in working coordinates. |
+| `NormalDirection` | Expressed in working coordinates. |
+| `CenterlinePt1` | Expressed in working coordinates. |
+| `CenterlinePt2` | Expressed in working coordinates. |
+
 ## Get Sphere Properties {/* #get-sphere-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-sphere-properties)
@@ -608,12 +680,19 @@ public Task<GroupToSurfaceFitResult> GroupToSurfaceFitAsync(
         CollectionObjectName groupToFit,
         CollectionObjectName surface,
         bool doConventionalFit = false,
-        double rmsTolerance00ForNone = 0.000000,
-        double maximumAbsoluteTolerance00ForNone = 0.000000,
+        double rmsTolerance = 0.000000,
+        double maximumAbsoluteTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Import Geometry Fit Profiles {/* #import-geometry-fit-profiles */}
 
@@ -649,11 +728,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeCircleFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
+        double overrideRadialOffset,
         MeasuredSideForPlanarOffset measuredSideForPlanarOffset,
-        double overridePlanarOffset10UseCurrent,
+        double overridePlanarOffset,
         NormalDirection planarOffsetDirection,
-        double lockRadius10DoNotLock,
+        double lockRadius,
         CompTechnique circleComputationTechnique,
         bool reverseNormalVectorAfterFit = false,
         bool makeCardinalPoints = true,
@@ -664,6 +743,14 @@ public Task MakeCircleFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cone-fit-profile)
@@ -672,8 +759,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeConeFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent = -1.000000,
-        double lockAngleInDegrees10DoNotLock = -1.000000,
+        double overrideRadialOffset = -1.000000,
+        double lockAngleInDegrees = -1.000000,
         bool useExhaustiveSearch = true,
         bool makeCardinalPoints = true,
         bool cardinalPt1Vertex = true,
@@ -684,6 +771,13 @@ public Task MakeConeFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockAngleInDegrees` | -1.0 leaves this dimension unlocked. |
+
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
@@ -692,8 +786,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeCylinderFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
-        double lockRadius10DoNotLock,
+        double overrideRadialOffset,
+        double lockRadius,
         FitMethod lockedRadiusFitMethod,
         bool constrainToNominalAxis,
         bool constrainToNominalOrientation,
@@ -711,6 +805,13 @@ public Task MakeCylinderFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
+
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
@@ -719,9 +820,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeEllipseFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
+        double overrideRadialOffset,
         MeasuredSideForPlanarOffset measuredSideForPlanarOffset,
-        double overridePlanarOffset10UseCurrent,
+        double overridePlanarOffset,
         NormalDirection planarOffsetDirection,
         bool reverseNormalVectorAfterFit = false,
         bool makeCardinalPoints = true,
@@ -733,6 +834,13 @@ public Task MakeEllipseFitProfileAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
 
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
@@ -759,8 +867,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeParaboloidFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
-        double lockFocalLength10DoNotLock,
+        double overrideRadialOffset,
+        double lockFocalLength,
         DegreeOfFreedom degreeOfFreedom,
         bool makeCardinalPoints = true,
         bool cardinalPt1Vertex = true,
@@ -770,6 +878,13 @@ public Task MakeParaboloidFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockFocalLength` | -1.0 leaves this dimension unlocked. |
+
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-plane-fit-profile)
@@ -778,7 +893,7 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakePlaneFitProfileAsync(
         string fitProfileName,
         MeasuredSideForPlanarOffset measuredSideForPlanarOffset,
-        double overridePlanarOffset10UseCurrent,
+        double overridePlanarOffset,
         NormalDirection planarOffsetDirection,
         bool reverseNormalVectorAfterFit = false,
         bool makeCardinalPoints = true,
@@ -789,6 +904,12 @@ public Task MakePlaneFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-slot-fit-profile)
@@ -797,9 +918,9 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeSlotFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
+        double overrideRadialOffset,
         MeasuredSideForPlanarOffset measuredSideForPlanarOffset,
-        double overridePlanarOffset10UseCurrent,
+        double overridePlanarOffset,
         NormalDirection planarOffsetDirection,
         SlotType slotType,
         CompTechnique slotComputationTechnique,
@@ -814,6 +935,13 @@ public Task MakeSlotFitProfileAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `overridePlanarOffset` | -1.0 uses the current offset. |
+
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
@@ -822,8 +950,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 public Task MakeSphereFitProfileAsync(
         string fitProfileName,
         MeasuredSideForRadialOffset measuredSideForRadialOffset,
-        double overrideRadialOffset10UseCurrent,
-        double lockRadius10DoNotLock,
+        double overrideRadialOffset,
+        double lockRadius,
         bool makeCardinalPoints,
         bool cardinalPt1Center,
         SphereFitComputationMode computationMethod,
@@ -831,6 +959,13 @@ public Task MakeSphereFitProfileAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `overrideRadialOffset` | -1.0 uses the current offset. |
+| `lockRadius` | -1.0 leaves this dimension unlocked. |
 
 ## Mushroom Target Hole Inspection {/* #mushroom-target-hole-inspection */}
 
@@ -890,12 +1025,19 @@ public Task<QueryCloudsToObjectsResult> QueryCloudsToObjectsAsync(
         ProjectionOptions projectionOptions,
         double proximity = 0.000000,
         int skipFactor = 0,
-        double rmsTolerance00ForNone = 0.000000,
-        double maximumAbsoluteTolerance00ForNone = 0.000000,
+        double rmsTolerance = 0.000000,
+        double maximumAbsoluteTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
@@ -909,12 +1051,19 @@ public Task<QueryCloudsToSurfaceResult> QueryCloudsToSurfaceAsync(
         ProjectionOptions projectionOptions,
         double proximity = 0.000000,
         int skipFactor = 0,
-        double rmsTolerance00ForNone = 0.000000,
-        double maximumAbsoluteTolerance00ForNone = 0.000000,
+        double rmsTolerance = 0.000000,
+        double maximumAbsoluteTolerance = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Frame to Frame {/* #query-frame-to-frame */}
 
@@ -929,23 +1078,40 @@ public Task<QueryFrameToFrameResult> QueryFrameToFrameAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `Rx` | MP qualifier: Roll. |
+| `Ry` | MP qualifier: Pitch. |
+| `Rz` | MP qualifier: Yaw. |
+
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-groups-to-objects)
 
 ```csharp
 public Task<QueryGroupsToObjectsResult> QueryGroupsToObjectsAsync(
-        IEnumerable<CollectionObjectName> groupNameListGroupsToProject,
-        IEnumerable<CollectionObjectName> objectNameListObjectsToProjectTo,
+        IEnumerable<CollectionObjectName> groupNameList,
+        IEnumerable<CollectionObjectName> objectNameList,
         CollectionObjectName resultingObjectName,
         ProjectionOptions projectionOptions,
-        double rmsTolerance00ForNone = 0.000000,
-        double maximumAbsoluteTolerance00ForNone = 0.000000,
+        double rmsTolerance = 0.000000,
+        double maximumAbsoluteTolerance = 0.000000,
         bool showResultsDialog = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `groupNameList` | MP qualifier: Groups to Project. |
+| `objectNameList` | MP qualifier: Objects to Project to. |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Point to Objects {/* #query-point-to-objects */}
 
@@ -1000,16 +1166,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task<QueryPointsToObjectsResult> QueryPointsToObjectsAsync(
         IEnumerable<PointName> pointNames,
-        IEnumerable<CollectionObjectName> objectNameListObjectsToProjectTo,
+        IEnumerable<CollectionObjectName> objectNameList,
         CollectionObjectName resultingObjectName,
         ProjectionOptions projectionOptions,
-        double rmsTolerance00ForNone = 0.000000,
-        double maximumAbsoluteTolerance00ForNone = 0.000000,
+        double rmsTolerance = 0.000000,
+        double maximumAbsoluteTolerance = 0.000000,
         bool showResultsDialog = false,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `objectNameList` | MP qualifier: Objects to Project to. |
+| `rmsTolerance` | 0.0 disables this tolerance. |
+| `maximumAbsoluteTolerance` | 0.0 disables this tolerance. |
 
 ## Query Points to Single Point {/* #query-points-to-single-point */}
 
@@ -1129,8 +1303,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task SetConePropertiesAsync(
         CollectionObjectName coneName,
-        Vector coneEndPointInWorkingCoordinates,
-        Vector coneAxisInWorkingCoordinates,
+        Vector coneEndPoint,
+        Vector coneAxis,
         double coneLength = 0.000000,
         double coneThetaStart = 0.000000,
         double coneThetaSpan = 0.000000,
@@ -1140,6 +1314,13 @@ public Task SetConePropertiesAsync(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `coneEndPoint` | Expressed in working coordinates. |
+| `coneAxis` | Expressed in working coordinates. |
 
 ## Set Cylinder Properties {/* #set-cylinder-properties */}
 
@@ -1214,11 +1395,17 @@ public Task SetLinePropertiesAsync(
         CollectionObjectName lineName,
         Vector beginCoordinate,
         Vector endCoordinate,
-        double lengthOptional = 0.000000,
+        double length = 0.000000,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `length` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Set Measurement Auxiliary Data {/* #set-measurement-auxiliary-data */}
 
@@ -1317,15 +1504,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 ```csharp
 public Task TemperatureCompensateAGroupAsync(
         CollectionObjectName originalGroup,
-        FrameName scalingOriginCoordinateFrame,
-        double materialCte1DegF,
-        double initialTemperatureF,
-        double finalTemperatureF,
+        FrameName scalingOrigin,
+        double materialCte,
+        double initialTemperature,
+        double finalTemperature,
         CollectionObjectName scaledGroupName,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `scalingOrigin` | MP qualifier: coordinate frame. |
+| `materialCte` | Coefficient per degree Fahrenheit. |
+| `initialTemperature` | Temperature in degrees Fahrenheit. |
+| `finalTemperature` | Temperature in degrees Fahrenheit. |
 
 ## Transform Objects - Frame To Frame {/* #transform-objects---frame-to-frame */}
 
@@ -1381,4 +1577,4 @@ public Task TranslateObjectsByDeltaAsync(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/d9dc263acf3e41fe8fea6e88533a954394eb9ad4/targets/2026.1.0529.7)

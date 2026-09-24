@@ -1,6 +1,6 @@
 ---
 title: Robot Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/robot-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/robot-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -803,7 +803,7 @@ message SetActiveRobotCalibrationResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `calibration_name` | `optional string` | Calibration Name | Empty |
-| Request | 3 | `tool_frame_relative_to_flange` | `optional Transform` | Tool Frame (relative to flange) | Required |
+| Request | 3 | `tool_frame` | `optional Transform` | Tool Frame (relative to flange) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -812,13 +812,19 @@ rpc SetRobotCalibrationToolFrame(SetRobotCalibrationToolFrameRequest) returns (S
 message SetRobotCalibrationToolFrameRequest {
   optional CollectionMachineId machine_id = 1;
   optional string calibration_name = 2;
-  optional Transform tool_frame_relative_to_flange = 3;
+  optional Transform tool_frame = 3;
 }
 
 message SetRobotCalibrationToolFrameResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `tool_frame` | MP qualifier: relative to flange. |
 
 ## Set Robot Calibration Measurement Offset In Tool Frame {/* #set-robot-calibration-measurement-offset-in-tool-frame */}
 
@@ -830,7 +836,7 @@ message SetRobotCalibrationToolFrameResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `calibration_name` | `optional string` | Calibration Name | Empty |
-| Request | 3 | `measurement_frame_relative_to_tool` | `optional Transform` | Measurement Frame (relative to tool) | Required |
+| Request | 3 | `measurement_frame` | `optional Transform` | Measurement Frame (relative to tool) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -839,13 +845,19 @@ rpc SetRobotCalibrationMeasurementOffsetInToolFrame(SetRobotCalibrationMeasureme
 message SetRobotCalibrationMeasurementOffsetInToolFrameRequest {
   optional CollectionMachineId machine_id = 1;
   optional string calibration_name = 2;
-  optional Transform measurement_frame_relative_to_tool = 3;
+  optional Transform measurement_frame = 3;
 }
 
 message SetRobotCalibrationMeasurementOffsetInToolFrameResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `measurement_frame` | MP qualifier: relative to tool. |
 
 ## Get Robot Pose for a Frame {/* #get-robot-pose-for-a-frame */}
 
@@ -1038,4 +1050,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2024.1.0508.5)

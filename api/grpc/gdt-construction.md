@@ -1,6 +1,6 @@
 ---
 title: GDT Operations / GDT Construction
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/gdt-construction) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/gdt-construction)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -81,8 +81,8 @@ message MakeSurfaceFaceListFromSurfaceResult {
 | Request | 12 | `is_slot` | `optional bool` | Is Slot? | false |
 | Request | 13 | `per_unit_length_or_area` | `optional bool` | Per unit length/area | false |
 | Request | 14 | `circular_area` | `optional bool` | Circular area? (Rectangular default) | false |
-| Request | 15 | `per_unit_area_length_distance` | `optional double` | Per unit (area) length distance | 0.000000 |
-| Request | 16 | `per_unit_area_length_step_over_percent` | `optional double` | Per unit (area) length step over % | 50.000000 |
+| Request | 15 | `per_unit_length_distance` | `optional double` | Per unit (area) length distance | 0.000000 |
+| Request | 16 | `per_unit_length_step_over_percent` | `optional double` | Per unit (area) length step over % | 50.000000 |
 | Request | 17 | `per_unit_area_width_distance` | `optional double` | Per unit area width distance | 0.000000 |
 | Request | 18 | `per_unit_area_width_step_over_percent` | `optional double` | Per unit area width step over % | 50.000000 |
 | Request | 19 | `per_unit_area_circle_diameter` | `optional double` | Per unit area circle diameter | 0.000000 |
@@ -117,8 +117,8 @@ message MakeGdtFeatureCheckAnnotationRequest {
   optional bool is_slot = 12;
   optional bool per_unit_length_or_area = 13;
   optional bool circular_area = 14;
-  optional double per_unit_area_length_distance = 15;
-  optional double per_unit_area_length_step_over_percent = 16;
+  optional double per_unit_length_distance = 15;
+  optional double per_unit_length_step_over_percent = 16;
   optional double per_unit_area_width_distance = 17;
   optional double per_unit_area_width_step_over_percent = 18;
   optional double per_unit_area_circle_diameter = 19;
@@ -376,4 +376,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

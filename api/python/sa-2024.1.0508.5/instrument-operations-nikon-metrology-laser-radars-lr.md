@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / Nikon Metrology Laser Radars LR
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/instrument-operations-nikon-metrology-laser-radars-lr) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -81,6 +81,13 @@ async def lr_get_most_recent_snr_info(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `peak_value` | Value in decibels. |
+| `measured_range` | Range in meters. |
+
 ## LR Self Test {/* #lr-self-test */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
@@ -93,6 +100,14 @@ async def lr_self_test(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `reference_arm_length` | Length in inches. |
+| `mirror_measurement_range_mean` | Length in inches. |
+| `mirror_measurement_range_standard_deviation` | Length in inches. |
 
 ## LR Self Test - Linearization {/* #lr-self-test---linearization */}
 
@@ -107,6 +122,12 @@ async def lr_self_test_linearization(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `linearity` | Frequency in kilohertz. |
+
 ## LR Self Test - Flip Test {/* #lr-self-test---flip-test */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
@@ -119,6 +140,20 @@ async def lr_self_test_flip_test(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `front_range` | Length in inches. |
+| `front_azimuth` | Angle in degrees. |
+| `front_elevation` | Angle in degrees. |
+| `back_range` | Length in inches. |
+| `back_azimuth` | Angle in degrees. |
+| `back_elevation` | Angle in degrees. |
+| `front_back_difference_range` | Length in inches. |
+| `front_back_difference_azimuth` | Angle in degrees. |
+| `front_back_difference_elevation` | Angle in degrees. |
 
 ## LR Self Test - LO Sep {/* #lr-self-test---lo-sep */}
 
@@ -135,6 +170,17 @@ async def lr_self_test_lo_sep(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `primary_lo` | Indexing starts at 1. |
+| `secondary_lo` | Indexing starts at 1. |
+| `primary_lo_range_mean` | Length in inches. |
+| `primary_lo_range_standard_deviation` | Length in inches. |
+| `secondary_lo_range_mean` | Length in inches. |
+| `secondary_lo_range_standard_deviation` | Length in inches. |
 
 ## LR APDIS Perform MCM Calibration {/* #lr-apdis-perform-mcm-calibration */}
 
@@ -234,4 +280,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2024.1.0508.5)

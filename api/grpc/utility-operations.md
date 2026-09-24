@@ -1,6 +1,6 @@
 ---
 title: Utility Operations
-description: Released grpc 0.7.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased grpc 0.8.0-dev.1 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/utility-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/utility-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.7.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.8.0-dev.1** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -165,7 +165,7 @@ message GetActiveUnitsResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Result | 1 | `value_0_360_false_180` | `optional bool` | 0-360, (FALSE = +/-180) | — |
+| Result | 1 | `value_0_360` | `optional bool` | 0-360, (FALSE = +/-180) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -176,10 +176,16 @@ message GetAngularRepresentationRequest {
 }
 
 message GetAngularRepresentationResult {
-  optional bool value_0_360_false_180 = 1;
+  optional bool value_0_360 = 1;
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `value_0_360` | False selects the +/-180 angular representation. |
 
 ## Get Collection Notes {/* #get-collection-notes */}
 
@@ -416,7 +422,7 @@ message GetPointNotesResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `display_1_primary` | `optional int32` | Display (-1 = Primary) | -1 |
+| Request | 1 | `display` | `optional int32` | Display (-1 = Primary) | -1 |
 | Result | 1 | `integer_window_top_left_x_position` | `optional int32` | Integer Window Top Left X Position | — |
 | Result | 2 | `integer_window_top_left_y_position` | `optional int32` | Integer Window Top Left Y Position | — |
 | Result | 3 | `integer_width` | `optional int32` | Integer Width | — |
@@ -429,7 +435,7 @@ message GetPointNotesResult {
 rpc GetScreenResolution(GetScreenResolutionRequest) returns (GetScreenResolutionResult);
 
 message GetScreenResolutionRequest {
-  optional int32 display_1_primary = 1;
+  optional int32 display = 1;
 }
 
 message GetScreenResolutionResult {
@@ -442,6 +448,12 @@ message GetScreenResolutionResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `display` | -1 selects the primary display. |
 
 ## Get Working Frame Properties {/* #get-working-frame-properties */}
 
@@ -764,20 +776,26 @@ message SetActiveUnitsResult {
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `value_0_360_false_180` | `optional bool` | 0-360, (FALSE = +/-180) | false |
+| Request | 1 | `value_0_360` | `optional bool` | 0-360, (FALSE = +/-180) | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
 rpc SetAngularRepresentation(SetAngularRepresentationRequest) returns (SetAngularRepresentationResult);
 
 message SetAngularRepresentationRequest {
-  optional bool value_0_360_false_180 = 1;
+  optional bool value_0_360 = 1;
 }
 
 message SetAngularRepresentationResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `value_0_360` | False selects the +/-180 angular representation. |
 
 ## Set Auto Event Creation {/* #set-auto-event-creation */}
 
@@ -860,7 +878,7 @@ message SetAutomaticRelationshipConstructionStateResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection | Required |
 | Request | 2 | `notes` | `repeated string` | Notes | Required |
-| Request | 3 | `append_false_overwrite` | `optional bool` | Append? (FALSE = Overwrite) | true |
+| Request | 3 | `append` | `optional bool` | Append? (FALSE = Overwrite) | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -869,13 +887,19 @@ rpc SetCollectionNotes(SetCollectionNotesRequest) returns (SetCollectionNotesRes
 message SetCollectionNotesRequest {
   optional CollectionName collection = 1;
   repeated string notes = 2;
-  optional bool append_false_overwrite = 3;
+  optional bool append = 3;
 }
 
 message SetCollectionNotesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Decimal Digits for Display {/* #set-decimal-digits-for-display */}
 
@@ -918,7 +942,7 @@ message SetDecimalDigitsForDisplayResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `folder_path` | `optional string` | Folder Path | Empty |
 | Request | 2 | `notes` | `repeated string` | Notes | Required |
-| Request | 3 | `append_false_overwrite` | `optional bool` | Append? (FALSE = Overwrite) | true |
+| Request | 3 | `append` | `optional bool` | Append? (FALSE = Overwrite) | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -927,13 +951,19 @@ rpc SetFolderNotes(SetFolderNotesRequest) returns (SetFolderNotesResult);
 message SetFolderNotesRequest {
   optional string folder_path = 1;
   repeated string notes = 2;
-  optional bool append_false_overwrite = 3;
+  optional bool append = 3;
 }
 
 message SetFolderNotesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set Interaction Mode {/* #set-interaction-mode */}
 
@@ -1018,7 +1048,7 @@ message SetNotificationCancelOverrideResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object` | `optional CollectionObjectName` | Object | Required |
 | Request | 2 | `notes` | `repeated string` | Notes | Required |
-| Request | 3 | `append_false_overwrite` | `optional bool` | Append? (FALSE = Overwrite) | true |
+| Request | 3 | `append` | `optional bool` | Append? (FALSE = Overwrite) | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1027,13 +1057,19 @@ rpc SetObjectNotes(SetObjectNotesRequest) returns (SetObjectNotesResult);
 message SetObjectNotesRequest {
   optional CollectionObjectName object = 1;
   repeated string notes = 2;
-  optional bool append_false_overwrite = 3;
+  optional bool append = 3;
 }
 
 message SetObjectNotesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set OPC DA Tag Value Double {/* #set-opc-da-tag-value-double */}
 
@@ -1120,7 +1156,7 @@ message SetOpcDaTagValueStringResult {
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point | Required |
 | Request | 2 | `notes` | `repeated string` | Notes | Required |
-| Request | 3 | `append_false_overwrite` | `optional bool` | Append? (FALSE = Overwrite) | true |
+| Request | 3 | `append` | `optional bool` | Append? (FALSE = Overwrite) | true |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1129,13 +1165,19 @@ rpc SetPointNotes(SetPointNotesRequest) returns (SetPointNotesResult);
 message SetPointNotesRequest {
   optional PointName point = 1;
   repeated string notes = 2;
-  optional bool append_false_overwrite = 3;
+  optional bool append = 3;
 }
 
 message SetPointNotesResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `append` | False overwrites existing notes. |
 
 ## Set User Interface Profile {/* #set-user-interface-profile */}
 
@@ -1146,7 +1188,7 @@ message SetPointNotesResult {
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `profile_name` | `optional string` | Profile Name | Default |
-| Request | 2 | `profile_file_name_optional` | `optional FileReference` | Profile File Name (optional) | Required |
+| Request | 2 | `profile_file_name` | `optional FileReference` | Profile File Name (optional) | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1154,13 +1196,19 @@ rpc SetUserInterfaceProfile(SetUserInterfaceProfileRequest) returns (SetUserInte
 
 message SetUserInterfaceProfileRequest {
   optional string profile_name = 1;
-  optional FileReference profile_file_name_optional = 2;
+  optional FileReference profile_file_name = 2;
 }
 
 message SetUserInterfaceProfileResult {
   MpExecutionDetails execution = 1000;
 }
 ```
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `profile_file_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
 
 ## Set View Idle Update Frequency {/* #set-view-idle-update-frequency */}
 
@@ -1310,4 +1358,4 @@ message WriteToLogResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/3306d43253a1e4e41b75b83360ad4f6f2b7f60b7/targets/2026.1.0529.7)

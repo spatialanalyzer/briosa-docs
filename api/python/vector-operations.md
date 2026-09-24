@@ -1,6 +1,6 @@
 ---
 title: Vector Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/vector-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/vector-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -37,11 +37,17 @@ async def auto_range_and_set_vector_group_colorization_all(
         self,
         *,
         treat_individually: bool = False,
-        colorization_options_uses_mode_only: ColorizationOptions = ColorizationOptions.DEFAULT,
+        colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorization_options` | MP qualifier: Uses Mode Only. |
 
 ## Auto-Range and Set Vector Group Colorization (Selected) {/* #auto-range-and-set-vector-group-colorization-selected */}
 
@@ -53,11 +59,17 @@ async def auto_range_and_set_vector_group_colorization_selected(
         vector_groups_to_be_set: Iterable[CollectionVectorGroupName],
         *,
         treat_individually: bool = False,
-        colorization_options_uses_mode_only: ColorizationOptions = ColorizationOptions.DEFAULT,
+        colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `colorization_options` | MP qualifier: Uses Mode Only. |
 
 ## Delete i-th Vector From Vector Group {/* #delete-i-th-vector-from-vector-group */}
 
@@ -238,4 +250,4 @@ async def sort_vectors(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2026.1.0529.7)

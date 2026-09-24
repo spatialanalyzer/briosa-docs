@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released python 0.2.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Unreleased python 0.3.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/instrument-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.2.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.3.0** (unpublished candidate). Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -168,6 +168,15 @@ async def get_current_instrument_position_update(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `y_or_theta` | Angle in degrees. |
+| `z_or_phi` | Angle in degrees. |
+| `time_since_update` | Time in seconds. |
+| `timestamp` | MP qualifier: Approximate. |
 
 ## 'Build' Target {/* #build-target */}
 
@@ -673,11 +682,17 @@ async def locate_instruments_usmn(
         exclude_single_instrument_points: bool = False,
         run_uncertainty_field_analysis: bool = False,
         analysis_samples: int = 300,
-        analysis_time_limit_minutes: float = 4.0,
+        analysis_time_limit: float = 4.0,
     ) -> FitErrorResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `analysis_time_limit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
@@ -699,13 +714,21 @@ async def create_templated_instrument_usmn(
         enable_rz: bool = True,
         enable_scale: bool = False,
         enable_component_weights: bool = True,
-        azimuth_weight: float = 1.0,
-        elevation_weight: float = 1.0,
-        distance_weight: float = 1.0,
+        component_1_weight: float = 1.0,
+        component_2_weight: float = 1.0,
+        component_3_weight: float = 1.0,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `component_1_weight` | MP qualifier: Azimuth. |
+| `component_2_weight` | MP qualifier: Elevation. |
+| `component_3_weight` | MP qualifier: Distance. |
 
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
@@ -807,6 +830,14 @@ async def get_tracker_edm_theodolite_uncertainties(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_dispersion` | Angle in arcseconds. |
+| `phi_dispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
+
 ## Set Tracker/EDM Theodolite Uncertainties {/* #set-trackeredm-theodolite-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-trackeredm-theodolite-uncertainties)
@@ -816,16 +847,24 @@ async def set_tracker_edm_theodolite_uncertainties(
         self,
         instrument: CollectionInstrumentId,
         *,
-        theta_dispersion_arcseconds: float = 1.0,
+        theta_dispersion: float = 1.0,
         theta_threshold: float = 0.001,
-        phi_dispersion_arcseconds: float = 1.0,
+        phi_dispersion: float = 1.0,
         phi_threshold: float = 0.001,
-        distance_ppm: float = 2.5,
+        distance: float = 2.5,
         distance_threshold: float = 0.0003,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `theta_dispersion` | Angle in arcseconds. |
+| `phi_dispersion` | Angle in arcseconds. |
+| `distance` | Value in parts per million. |
 
 ## Get PCMM Instrument XYZ Uncertainties {/* #get-pcmm-instrument-xyz-uncertainties */}
 
@@ -900,6 +939,14 @@ async def get_instrument_weather_setting(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
+
 ## Set Instrument Weather Setting {/* #set-instrument-weather-setting */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-weather-setting)
@@ -909,14 +956,22 @@ async def set_instrument_weather_setting(
         self,
         instrument: CollectionInstrumentId,
         *,
-        temperature_fahrenheit: float = 0.0,
-        pressure_mmhg: float = 0.0,
-        relative_humidity_percent: float = 0.0,
+        temperature: float = 0.0,
+        pressure: float = 0.0,
+        relative_humidity: float = 0.0,
         set_automatically: bool = False,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in millimeters of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
@@ -931,6 +986,12 @@ async def get_instrument_part_temperature(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `part_temperature` | Temperature in degrees Fahrenheit. |
+
 ## Compute CTE Scale Factor {/* #compute-cte-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#compute-cte-scale-factor)
@@ -939,13 +1000,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 async def compute_cte_scale_factor(
         self,
         *,
-        material_cte_per_degree_fahrenheit: float = 0.0,
-        initial_temperature_fahrenheit: float = 0.0,
-        final_temperature_fahrenheit: float = 0.0,
+        material_cte: float = 0.0,
+        initial_temperature: float = 0.0,
+        final_temperature: float = 0.0,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `material_cte` | Coefficient per degree Fahrenheit. |
+| `initial_temperature` | Temperature in degrees Fahrenheit. |
+| `final_temperature` | Temperature in degrees Fahrenheit. |
 
 ## Set (multiply) Instrument Scale Factor (CAUTION!) {/* #set-multiply-instrument-scale-factor-caution */}
 
@@ -1122,6 +1191,14 @@ async def get_observation_info(
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `temperature` | Temperature in degrees Fahrenheit. |
+| `pressure` | Pressure in inches of mercury. |
+| `relative_humidity` | Relative humidity in percent. |
 
 ## Fabricate Observations {/* #fabricate-observations */}
 
@@ -1654,6 +1731,12 @@ async def get_instrument_interface_response_timeout(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
+
 ## Set Instrument Interface Response Timeout {/* #set-instrument-interface-response-timeout */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/instrument-operations#set-instrument-interface-response-timeout)
@@ -1663,11 +1746,17 @@ async def set_instrument_interface_response_timeout(
         self,
         instrument: CollectionInstrumentId,
         *,
-        timeout_seconds: float = 0.0,
+        timeout: float = 0.0,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `timeout` | Time in seconds. |
 
 ## Get Current Trapping Status {/* #get-current-trapping-status */}
 
@@ -2594,4 +2683,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.2.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/62742ed39d1ce8508664c585c906948122e7517d/targets/2024.1.0508.5)

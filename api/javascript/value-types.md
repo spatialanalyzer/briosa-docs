@@ -889,10 +889,10 @@ export interface InstrumentModelResult {
 ```ts
 export interface InstrumentPositionUpdate {
   readonly xOrR: number;
-  readonly yOrThetaDegrees: number;
-  readonly zOrPhiDegrees: number;
-  readonly timeSinceUpdateSeconds: number;
-  readonly timestampApproximate: string;
+  readonly yOrTheta: number;
+  readonly zOrPhi: number;
+  readonly timeSinceUpdate: number;
+  readonly timestamp: string;
 }
 ```
 
@@ -936,9 +936,9 @@ export interface InstrumentTypeName {
 
 ```ts
 export interface InstrumentWeatherSetting {
-  readonly temperatureFahrenheit: number;
-  readonly pressureMmHg: number;
-  readonly relativeHumidityPercent: number;
+  readonly temperature: number;
+  readonly pressure: number;
+  readonly relativeHumidity: number;
   readonly setAutomatically: boolean;
 }
 ```
@@ -1024,17 +1024,17 @@ export interface LastInstrumentIndexResult {
 
 ```ts
 export interface LrFlipTestResult {
-  readonly frontRangeInches: number;
-  readonly frontAzimuthDegrees: number;
-  readonly frontElevationDegrees: number;
+  readonly frontRange: number;
+  readonly frontAzimuth: number;
+  readonly frontElevation: number;
   readonly frontQuality: number;
-  readonly backRangeInches: number;
-  readonly backAzimuthDegrees: number;
-  readonly backElevationDegrees: number;
+  readonly backRange: number;
+  readonly backAzimuth: number;
+  readonly backElevation: number;
   readonly backQuality: number;
-  readonly frontBackDifferenceRangeInches: number;
-  readonly frontBackDifferenceAzimuthDegrees: number;
-  readonly frontBackDifferenceElevationDegrees: number;
+  readonly frontBackDifferenceRange: number;
+  readonly frontBackDifferenceAzimuth: number;
+  readonly frontBackDifferenceElevation: number;
 }
 ```
 
@@ -1054,16 +1054,16 @@ export interface LrInstrumentInput {
 
 ```ts
 export interface LrLoSeparationTestResult {
-  readonly primaryLoIndex: number;
-  readonly secondaryLoIndex: number;
+  readonly primaryLo: number;
+  readonly secondaryLo: number;
   readonly primaryLoMeasurementCount: number;
-  readonly primaryLoRangeMeanInches: number;
-  readonly primaryLoRangeStandardDeviationInches: number;
+  readonly primaryLoRangeMean: number;
+  readonly primaryLoRangeStandardDeviation: number;
   readonly primaryLoQualityMean: number;
   readonly primaryLoQualityStandardDeviation: number;
   readonly secondaryLoMeasurementCount: number;
-  readonly secondaryLoRangeMeanInches: number;
-  readonly secondaryLoRangeStandardDeviationInches: number;
+  readonly secondaryLoRangeMean: number;
+  readonly secondaryLoRangeStandardDeviation: number;
   readonly secondaryLoQualityMean: number;
   readonly secondaryLoQualityStandardDeviation: number;
 }
@@ -1078,8 +1078,8 @@ export interface LrSnrInfo {
   readonly snr: number;
   readonly sizeOfDataArray: number;
   readonly peakValueIndex: number;
-  readonly peakValueDb: number;
-  readonly measuredRangeMeters: number;
+  readonly peakValue: number;
+  readonly measuredRange: number;
 }
 ```
 
@@ -1120,8 +1120,8 @@ export interface MakeGdtFeatureCheckAnnotationOptions {
   isSlot?: boolean;
   perUnitLengthOrArea?: boolean;
   circularArea?: boolean;
-  perUnitAreaLengthDistance?: number;
-  perUnitAreaLengthStepOverPercent?: number;
+  perUnitLengthDistance?: number;
+  perUnitLengthStepOverPercent?: number;
   perUnitAreaWidthDistance?: number;
   perUnitAreaWidthStepOverPercent?: number;
   perUnitAreaCircleDiameter?: number;
@@ -1263,9 +1263,9 @@ export interface ObservationInfo {
   readonly active: boolean;
   readonly timestamp: string;
   readonly rmsError: number;
-  readonly temperatureFahrenheit: number;
-  readonly pressureInHg: number;
-  readonly relativeHumidityPercent: number;
+  readonly temperature: number;
+  readonly pressure: number;
+  readonly relativeHumidity: number;
   readonly infoData: string;
 }
 ```
@@ -1501,9 +1501,9 @@ export interface RelationshipWatchWindowTemplateOptions {
   readonly textColor?: Color;
   readonly backgroundColor?: Color;
   readonly highlightColor?: Color;
-  readonly showDeviationXRx?: boolean;
-  readonly showDeviationYRy?: boolean;
-  readonly showDeviationZRz?: boolean;
+  readonly showDeviationX?: boolean;
+  readonly showDeviationY?: boolean;
+  readonly showDeviationZ?: boolean;
   readonly showDeviationMagnitude?: boolean;
   readonly udpNetworkTransmitSettings?: RelationshipWatchWindowUdpSettings;
   readonly transparentBackground?: boolean;
@@ -1863,11 +1863,11 @@ export interface ToleranceVectorOptions {
 
 ```ts
 export interface TrackerEdmTheodoliteUncertainties {
-  readonly thetaDispersionArcseconds: number;
+  readonly thetaDispersion: number;
   readonly thetaThreshold: number;
-  readonly phiDispersionArcseconds: number;
+  readonly phiDispersion: number;
   readonly phiThreshold: number;
-  readonly distancePpm: number;
+  readonly distance: number;
   readonly distanceThreshold: number;
 }
 ```
@@ -2118,8 +2118,8 @@ export interface GetCirclePropertiesResult {
 
 ```ts
 export interface GetConePropertiesResult {
-  readonly coneEndPointInWorkingCoordinates: Vector;
-  readonly coneAxisInWorkingCoordinates: Vector;
+  readonly coneEndPoint: Vector;
+  readonly coneAxis: Vector;
   readonly coneLength: number;
   readonly coneThetaStart: number;
   readonly coneThetaSpan: number;
@@ -2212,10 +2212,10 @@ export interface GetEulerParametersForIthFrameInFrameSetResult {
 
 ```ts
 export interface GetGeomRelationshipAutoVectorsResult {
-  readonly autoVectorsNominalAvnEnabled: boolean;
-  readonly autoVectorsNominalAvnName: CollectionObjectName;
-  readonly autoVectorsFitAvfEnabled: boolean;
-  readonly autoVectorsFitAvfName: CollectionObjectName;
+  readonly autoVectorsNominalEnabled: boolean;
+  readonly autoVectorsNominalName: CollectionObjectName;
+  readonly autoVectorsFitEnabled: boolean;
+  readonly autoVectorsFitName: CollectionObjectName;
   readonly pointsType: string;
 }
 ```
@@ -2311,9 +2311,9 @@ export interface GetMeasurementAuxiliaryDataResult {
 
 ```ts
 export interface GetMeasurementWeatherDataResult {
-  readonly temperatureDegF: number;
-  readonly pressureInHg: number;
-  readonly humidityRh: number;
+  readonly temperature: number;
+  readonly pressure: number;
+  readonly humidity: number;
 }
 ```
 
@@ -2607,14 +2607,14 @@ export interface GetScreenResolutionResult {
 
 ```ts
 export interface GetSlotPropertiesResult {
-  readonly slotTransformInWorkingCoordinates: Transform;
-  readonly centerInWorkingCoordinates: Vector;
-  readonly normalDirectionInWorkingCoordinates: Vector;
+  readonly slotTransform: Transform;
+  readonly center: Vector;
+  readonly normalDirection: Vector;
   readonly slotLength: number;
   readonly slotWidth: number;
   readonly roundSlotType: boolean;
-  readonly centerlinePt1InWorkingCoordinates: Vector;
-  readonly centerlinePt2InWorkingCoordinates: Vector;
+  readonly centerlinePt1: Vector;
+  readonly centerlinePt2: Vector;
 }
 ```
 
@@ -2728,9 +2728,9 @@ export interface QueryFrameToFrameResult {
   readonly x: number;
   readonly y: number;
   readonly z: number;
-  readonly rxRoll: number;
-  readonly ryPitch: number;
-  readonly rzYaw: number;
+  readonly rx: number;
+  readonly ry: number;
+  readonly rz: number;
 }
 ```
 
@@ -2931,11 +2931,11 @@ export interface DriftCheckResult {
 
 ```ts
 export interface LrSelfTestResult {
-  readonly referenceArmLengthInches: number;
+  readonly referenceArmLength: number;
   readonly referenceArmQuality: number;
   readonly mirrorMeasurementCount: number;
-  readonly mirrorMeasurementRangeMeanInches: number;
-  readonly mirrorMeasurementRangeStandardDeviationInches: number;
+  readonly mirrorMeasurementRangeMean: number;
+  readonly mirrorMeasurementRangeStandardDeviation: number;
   readonly mirrorMeasurementQualityMean: number;
   readonly mirrorMeasurementQualityStandardDeviation: number;
   readonly passedReferenceArmQualityThreshold: boolean;
