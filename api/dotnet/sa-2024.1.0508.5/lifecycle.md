@@ -1,6 +1,6 @@
 ---
 title: BriosaClient Lifecycle
-description: Unreleased client API for independently managing Briosa, SpatialAnalyzer, and the SpatialAnalyzer SDK from .NET.
+description: Released client API for independently managing Briosa, SpatialAnalyzer, and the SpatialAnalyzer SDK from .NET.
 sidebar_label: Overview and Types
 ---
 

@@ -36,7 +36,7 @@ values, or complete logs.
 
 ## Client Installation Selection Failures
 
-Client 0.2.0 checks installation evidence before starting SA. Use its inert discovery report to inspect candidate rejection codes and the overall selection result.
+Client 0.3.0 checks installation evidence before starting SA. Use its inert discovery report to inspect candidate rejection codes and the overall selection result.
 
 | Code | Action |
 | --- | --- |

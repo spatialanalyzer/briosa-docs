@@ -13,7 +13,7 @@ high-contrast settings taking priority.
 Control Center is included in [Briosa 0.5.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.5.1)
 and later Windows server packages. Briosa Installer **0.2.0** and later provide
 the **Open Control Center** action. Get both through [Install Briosa](/install).
-Earlier server packages omit the companion. Server **0.7.0** includes Control Center for both **2024.1.0508.5** and **2026.1.0529.7**. Select the installed distribution matching your application. Control Center shares the server release version.
+Earlier server packages omit the companion. Server **0.8.0** includes Control Center for both **2024.1.0508.5** and **2026.1.0529.7**. Select the installed distribution matching your application. Control Center shares the server release version.
 :::
 
 ## Open Control Center

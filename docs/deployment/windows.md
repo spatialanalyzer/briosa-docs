@@ -19,10 +19,10 @@ Briosa release archives are self-contained .NET 10 Windows x64 products for one
 exact SpatialAnalyzer target:
 
 ```text
-briosa-0.7.0-sa-<exact-sa-target>-win-x64.zip
+briosa-0.8.0-sa-<exact-sa-target>-win-x64.zip
 ```
 
-Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.7.0 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.7.0). Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
+Choose exact target `2024.1.0508.5` or `2026.1.0529.7` from the [Server 0.8.0 assets](https://github.com/spatialanalyzer/briosa/releases/tag/v0.8.0). Use the adjacent ZIP checksum and provenance. Schema-3 packages require Installer **0.3.0** or later. Manual extraction alone does not create a registered, committed package-store receipt; use Installer to manage discovery, or an explicitly selected validated server path as described in [Installation Selection](./installation-selection). Raw gRPC users should also read [Protocol Artifacts](./protocol-artifacts).
 
 The archive does not contain SpatialAnalyzer, its installer, SDK executable,
 original type library, license material, or vendor documentation.

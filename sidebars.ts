@@ -4,6 +4,7 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     'intro',
     'releases',
+    'mp-argument-name-migration',
     {
       type: 'category',
       label: 'Get Started',

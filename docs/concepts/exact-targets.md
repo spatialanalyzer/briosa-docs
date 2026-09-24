@@ -123,7 +123,7 @@ the release-specific implementation behind the client library.
 
 ## Released Targets
 
-Server 0.7.0 and clients 0.2.0 are released separately for SpatialAnalyzer `2024.1.0508.5` and `2026.1.0529.7`. Use the [SA 2024 reference](/api/grpc/sa-2024.1.0508.5) or [SA 2026 reference](/api/grpc). The SA 2026
+Server 0.8.0 and clients 0.3.0 are released separately for SpatialAnalyzer `2024.1.0508.5` and `2026.1.0529.7`. Use the [SA 2024 reference](/api/grpc/sa-2024.1.0508.5) or [SA 2026 reference](/api/grpc). The SA 2026
 [version-specific MP Command Catalog](/mp-command-catalog/2026.1.0529.7/overview)
 shows the commands identified for that release and which ones Briosa currently
 supports.
@@ -131,4 +131,4 @@ supports.
 For the underlying readiness checks, see
 [Readiness is more than connection](./readiness). The authoritative target
 implementation lives in the
-[Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/v0.7.0/targets).
+[Briosa server repository](https://github.com/spatialanalyzer/briosa/tree/v0.8.0/targets).
