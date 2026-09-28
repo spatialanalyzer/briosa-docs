@@ -13,6 +13,12 @@ their released behavior.
 
 :::
 
+The frozen server candidate is `0.9.0-dev.1` from source revision
+`89b59aa0ddd05ea868d94c4e4a4f89ee0fbcbccb`. Exact-target .NET, Python,
+and JavaScript client `0.4.0` candidates pin its protocol packages; these are
+local review artifacts and have not been published. The current API reference
+pages remain the published `0.8.0` server and `0.3.0` client snapshots.
+
 The redesign changes overload and lifecycle behavior while keeping each server
 locked to its exact SpatialAnalyzer release. Compatibility major is a behavioral
 contract identifier; it is separate from server versions, client package versions,
@@ -76,6 +82,12 @@ readiness. Tutorial dependencies remain pinned to published packages until the
 coordinated release is available. Do not mix a released major-1 tutorial dependency
 with a major-2 candidate runtime.
 
-The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/221-typed-runtime/docs/architecture/client-library-behavioral-contract.md)
-and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/221-typed-runtime/docs/development/runtime-redesign-migration.md)
+Portable checks passed for both packaged server targets, the packaged installer,
+and all six client candidates. The final packaged compatibility matrix and
+licensed SpatialAnalyzer validation remain separate acceptance steps. The
+published tutorials continue to use their pinned major-1 dependencies until a
+coordinated release is available.
+
+The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/221-integrated-redesign/docs/architecture/client-library-behavioral-contract.md)
+and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/221-integrated-redesign/docs/development/runtime-redesign-migration.md)
 in the server repository define the candidate behavior and validation status.
