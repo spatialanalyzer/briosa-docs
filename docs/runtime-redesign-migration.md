@@ -88,6 +88,6 @@ licensed SpatialAnalyzer validation remain separate acceptance steps. The
 published tutorials continue to use their pinned major-1 dependencies until a
 coordinated release is available.
 
-The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/221-integrated-redesign/docs/architecture/client-library-behavioral-contract.md)
-and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/221-integrated-redesign/docs/development/runtime-redesign-migration.md)
+The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/a6f79e001163521e19778bd6d333eab17bf09624/docs/architecture/client-library-behavioral-contract.md)
+and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/a6f79e001163521e19778bd6d333eab17bf09624/docs/development/runtime-redesign-migration.md)
 in the server repository define the candidate behavior and validation status.
