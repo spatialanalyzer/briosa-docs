@@ -24,6 +24,10 @@ Extract the complete archive and locate its protobuf import root containing `bri
 
 Run the matching Windows server locally and inspect [Server Discovery](/api/grpc/discovery) ([SA 2024](/api/grpc/sa-2024.1.0508.5/discovery)) before SDK/SA activity. Implement the required lifecycle, exact-target checks, capability/readiness checks, cancellation, and execution-outcome handling. Raw bindings do not supply the first-party clients' installation selector or lifecycle policy automatically.
 
+Server 0.9.0 accepts inbound gRPC messages of at most **64 KiB (65,536 bytes)**
+for either exact target. This is the encoded request size. Requests above the
+limit are rejected at the transport boundary before MP operation mapping.
+
 ## Build Pins and Runtime Compatibility
 
 The protocol ZIP's version and source pin identify the schema used to build your client. Server behavioral contract 2.0 is a separate runtime promise for an exact target, not a product v1 release. A raw client must implement and validate its own admission policy; downloading a compatible-looking schema alone does not establish runtime compatibility. Never retry uncertain MP work automatically.

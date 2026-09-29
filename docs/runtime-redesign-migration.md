@@ -45,6 +45,16 @@ Cancellation, a deadline, or a lost response after dispatch can still mean that
 completion is unknown. Follow the returned execution and replay evidence rather
 than treating every transport failure as safe to repeat.
 
+## Keep Requests Within the Transport Limit
+
+Server 0.9.0 limits each inbound gRPC message to **64 KiB (65,536 bytes)** for
+both SA targets. This applies to the encoded request message, not separately to
+each field. An oversized message is rejected by gRPC before operation mapping;
+it is a transport limit, separate from the structured `Overloaded` admission
+outcome above. Do not expect an `OperationError` payload for that rejection.
+Raw gRPC clients and applications sending large lists should account for the
+limit when constructing requests.
+
 ## Preserve Completed Work When Outputs Are Unavailable
 
 A command can finish successfully in SA while its outputs cannot be retrieved or
