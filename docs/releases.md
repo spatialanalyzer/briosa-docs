@@ -91,6 +91,12 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 
 ## Documentation Versions
 
+The [unreleased runtime redesign migration guide](/docs/runtime-redesign-migration)
+tracks the compatibility-major-2 server `0.9.0-dev.2` and client `0.4.0`
+candidates. Their package and protocol checks do not change the released API
+reference snapshots below. New versioned API references will accompany the
+coordinated release.
+
 The current [gRPC reference](/api/grpc) documents **Server 0.8.0**; the [.NET](/api/dotnet), [Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references document **client 0.3.0**. Each includes a separate SA 2024 section alongside SA 2026. Historical references include [Server 0.7.0](/api/grpc/0.7.0), [.NET 0.2.0](/api/dotnet/0.2.0), [Python 0.2.0](/api/python/0.2.0), [JavaScript 0.2.0](/api/javascript/0.2.0), and the earlier [Server 0.5.1](/api/grpc/0.5.1), [.NET 0.1.0](/api/dotnet/0.1.0), [Python 0.1.0](/api/python/0.1.0), and [JavaScript 0.1.0](/api/javascript/0.1.0).
 
 | Client Line | Server Selection | Reference Guidance |

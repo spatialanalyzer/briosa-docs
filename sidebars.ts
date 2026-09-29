@@ -5,6 +5,7 @@ const sidebars: SidebarsConfig = {
     'intro',
     'releases',
     'mp-argument-name-migration',
+    'runtime-redesign-migration',
     {
       type: 'category',
       label: 'Get Started',
