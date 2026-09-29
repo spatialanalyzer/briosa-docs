@@ -8,7 +8,7 @@ const html = (route) => load(readFileSync(join(__dirname, '..', 'build', `${rout
 
 test('current, historical, and exact-target references have distinct identities', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const current = family === 'grpc' ? '0.8.0' : '0.3.0';
+    const current = family === 'grpc' ? '0.9.0' : '0.4.0';
     const previous = family === 'grpc' ? '0.5.1' : '0.1.0';
     const root = `api/${family}`;
     assert.match(html(`${root}/sa-2026.1.0529.7/${current}/analysis-operations`)('title').text(), new RegExp(`${current} · SA 2026`));
@@ -39,6 +39,18 @@ test('client discovery references expose the current selector and reports', () =
       assert.ok(html(`api/${family}${target}/0.2.0/start`)('article').text().includes(field));
       const content = html(`api/${family}${target}/0.2.0/installation-selection`)('article').text();
       for (const model of ['BriosaServerSelection', 'BriosaInstallation', 'BriosaDiscoveryReport', 'BriosaDiscoveryDiagnostic']) assert.ok(content.includes(model));
+    }
+  }
+});
+
+test('major-2 robot Machine ID references use the instrument ID family', () => {
+  for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
+    for (const [family, version] of [['grpc', '0.9.0'], ['dotnet', '0.4.0'], ['python', '0.4.0'], ['javascript', '0.4.0']]) {
+      for (const operation of ['get-robotmachine-parameter', 'start-robotmachine-interface', 'stop-robotmachine-interface']) {
+        const contract = html(`api/${family}/sa-${target}/${version}/robot-operations/${operation}`)('.api-contract').text();
+        assert.match(contract, /CollectionInstrumentId/, `${family} ${target} ${operation}`);
+        assert.doesNotMatch(contract, /CollectionMachineId/, `${family} ${target} ${operation}`);
+      }
     }
   }
 });

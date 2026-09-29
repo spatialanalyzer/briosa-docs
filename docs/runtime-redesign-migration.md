@@ -1,25 +1,14 @@
 ---
-title: Runtime Redesign Migration — Unreleased
+title: Runtime Redesign Migration
 ---
 
-# Runtime Redesign Migration — Unreleased
+# Runtime Redesign Migration
 
-:::caution Unreleased Candidate
-
-This page describes the committed compatibility-major-2 redesign under review.
-It is not a release announcement. Use the [release table](./releases.md) for
-published server and client packages. Existing API reference snapshots retain
-their released behavior.
-
-:::
-
-The current server candidate is `0.9.0-dev.2` from source revision
-`aa0c7ae1a2c5529033a2772ef9aad7b37321c58c`. Exact-target .NET, Python,
-and JavaScript client `0.4.0` candidates retain the unchanged `0.9.0-dev.1`
-protocol inputs. Local candidate checks used the new conformance packages for
-this source revision.
-These are local review artifacts and have not been published. The current API reference
-pages remain the published `0.8.0` server and `0.3.0` client snapshots.
+Server [0.9.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.0)
+and exact-target .NET, Python, and JavaScript client 0.4.0 packages are
+published for both SA targets. The current API references document these
+releases. See the [release table](./releases.md) for package links and
+validation limits.
 
 The redesign changes overload and lifecycle behavior while keeping each server
 locked to its exact SpatialAnalyzer release. Compatibility major is a behavioral
@@ -30,7 +19,7 @@ and SpatialAnalyzer versions.
 
 Major-1 clients cannot select a major-2 runtime. Installing a new server does not
 update an application's .NET, Python, or JavaScript dependency. Keep the previous
-server installed while validating the matching client and server candidates for
+server installed while validating the matching client and server releases for
 the same exact SA target. Test each consuming application before switching it.
 
 For direct gRPC use, regenerate from the matching protocol artifact with standard
@@ -78,18 +67,16 @@ proof for the current generation. A successful connection alone is insufficient.
 ## Installer and Examples
 
 The installer manages complete server packages without executing the SDK. Its
-schema-3 package contract already represents compatibility major 2; package
+schema-3 package contract represents compatibility major 2; package
 verification does not establish an application's client compatibility or SA
-readiness. Tutorial dependencies remain pinned to published packages until the
-coordinated release is available. Do not mix a released major-1 tutorial dependency
-with a major-2 candidate runtime.
+readiness. The [tutorials](https://github.com/spatialanalyzer/briosa-examples)
+use published 0.4.0 dependencies and the 0.9.0 protocol artifact.
 
 Portable checks passed for both packaged server targets, the packaged installer,
-and all six client candidates. The final packaged compatibility matrix and
-licensed SpatialAnalyzer validation remain separate acceptance steps. The
-published tutorials continue to use their pinned major-1 dependencies until a
-coordinated release is available.
+and all six published client packages. Protected licensed validation for the
+final release packages remains outstanding; candidate licensed observations
+do not establish every operation or deployment environment.
 
-The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/a6f79e001163521e19778bd6d333eab17bf09624/docs/architecture/client-library-behavioral-contract.md)
-and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/a6f79e001163521e19778bd6d333eab17bf09624/docs/development/runtime-redesign-migration.md)
-in the server repository define the candidate behavior and validation status.
+The [shared client behavioral contract](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/docs/architecture/client-library-behavioral-contract.md)
+and [implementation migration record](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/docs/development/runtime-redesign-migration.md)
+in the server repository define the released behavior and validation status.

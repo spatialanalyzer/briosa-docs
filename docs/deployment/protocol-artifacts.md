@@ -1,6 +1,6 @@
 ---
 title: Protocol Artifacts for Raw gRPC Clients
-description: Choose, verify, and use the exact-target Server 0.8.0 protobuf distribution.
+description: Choose, verify, and use the exact-target Server 0.9.0 protobuf distribution.
 ---
 
 # Protocol Artifacts for Raw gRPC Clients
@@ -9,10 +9,10 @@ First-party clients package their own transport bindings. Raw gRPC applications 
 
 ## Choose and Verify the Artifact
 
-From the [Server 0.8.0 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.8.0), download one of:
+From the [Server 0.9.0 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.0), download one of:
 
-- `briosa-protocol-0.8.0-sa-2024.1.0508.5.zip`
-- `briosa-protocol-0.8.0-sa-2026.1.0529.7.zip`
+- `briosa-protocol-0.9.0-sa-2024.1.0508.5.zip`
+- `briosa-protocol-0.9.0-sa-2026.1.0529.7.zip`
 
 Download its adjacent `.sha256` and `.provenance.json` files. In PowerShell, calculate `Get-FileHash -Algorithm SHA256 <zip-path>` and compare the complete digest with the checksum before extracting. Inspect provenance for the release, source revision, and exact target. A matching checksum establishes file agreement; use the official release as the provenance source.
 
@@ -26,6 +26,6 @@ Run the matching Windows server locally and inspect [Server Discovery](/api/grpc
 
 ## Build Pins and Runtime Compatibility
 
-The protocol ZIP's version and source pin identify the schema used to build your client. Server behavioral contract 1.0 is a separate runtime promise for an exact target, not a product v1 release. A raw client must implement and validate its own admission policy; downloading a compatible-looking schema alone does not establish runtime compatibility. Never retry uncertain MP work automatically.
+The protocol ZIP's version and source pin identify the schema used to build your client. Server behavioral contract 2.0 is a separate runtime promise for an exact target, not a product v1 release. A raw client must implement and validate its own admission policy; downloading a compatible-looking schema alone does not establish runtime compatibility. Never retry uncertain MP work automatically.
 
 SpatialAnalyzer must be separately installed, running when MP work executes, and licensed. Briosa is independent and does not imply Hexagon endorsement or support.
