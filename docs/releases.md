@@ -92,7 +92,7 @@ Tracking: [licensed environment](https://github.com/spatialanalyzer/briosa/issue
 ## Documentation Versions
 
 The [unreleased runtime redesign migration guide](/docs/runtime-redesign-migration)
-tracks the compatibility-major-2 server `0.9.0-dev.1` and client `0.4.0`
+tracks the compatibility-major-2 server `0.9.0-dev.2` and client `0.4.0`
 candidates. Their package and protocol checks do not change the released API
 reference snapshots below. New versioned API references will accompany the
 coordinated release.

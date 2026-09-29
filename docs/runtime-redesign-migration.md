@@ -13,10 +13,12 @@ their released behavior.
 
 :::
 
-The frozen server candidate is `0.9.0-dev.1` from source revision
-`89b59aa0ddd05ea868d94c4e4a4f89ee0fbcbccb`. Exact-target .NET, Python,
-and JavaScript client `0.4.0` candidates pin its protocol packages; these are
-local review artifacts and have not been published. The current API reference
+The current server candidate is `0.9.0-dev.2` from source revision
+`aa0c7ae1a2c5529033a2772ef9aad7b37321c58c`. Exact-target .NET, Python,
+and JavaScript client `0.4.0` candidates retain the unchanged `0.9.0-dev.1`
+protocol inputs. Local candidate checks used the new conformance packages for
+this source revision.
+These are local review artifacts and have not been published. The current API reference
 pages remain the published `0.8.0` server and `0.3.0` client snapshots.
 
 The redesign changes overload and lifecycle behavior while keeping each server
