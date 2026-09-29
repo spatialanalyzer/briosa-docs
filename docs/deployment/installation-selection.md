@@ -10,9 +10,9 @@ client from the Briosa distribution it can run. One workstation can keep SA
 2024.1.0508.5 and SA 2026.1.0529.7 products, including several Briosa versions
 for either target. Each application makes its own selection.
 
-:::note[Client 0.3.0]
+:::note[Client 0.4.0]
 
-This guide describes Server 0.8.0 and client 0.3.0, available for both exact SA
+This guide describes Server 0.9.0 and client 0.4.0, available for both exact SA
 targets. See [Release Status](/docs/releases) for package links and validation.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
@@ -30,14 +30,12 @@ server does not change those clients.
 | Generation artifact | Remains pinned for reproducible client builds |
 | Running server provenance | Matches the selected installation's manifest |
 
-Contract **1.0** covers lifecycle, errors, execution outcomes, presence,
-capabilities, and ownership. A matching protobuf package alone is insufficient.
-The initial client requires major 1, revision 0. A newer sufficient revision
-within major 1 is eligible unless explicitly excluded.
-
-The only legacy exception is the published Server **0.6.1** build at source
-`32a3b56ba4ae31ea5ec6ec3b2aa051eb61c866aa`, for the exact target. Other servers
-without contract metadata are rejected.
+Contract **2.0** covers lifecycle, errors, execution outcomes, presence,
+capabilities, admission, and ownership. A matching protobuf package alone
+is insufficient. Client 0.4.0 requires major 2, revision 0; a newer
+sufficient revision within major 2 is eligible unless excluded. Older
+clients retain their original major-1 rules, including the reviewed exact
+Server 0.6.1 exception. Other servers without contract metadata are rejected.
 
 ## Automatic Selection
 
@@ -66,7 +64,7 @@ using Briosa;
 
 var selection = new BriosaServerSelection
 {
-    Version = "0.8.0",
+    Version = "0.9.0",
     SearchRoots = [@"D:\Briosa Packages"],
 };
 var report = BriosaInstallations.Discover(selection);
@@ -84,7 +82,7 @@ For Node.js with the exact-target package installed under the `briosa` alias:
 ```typescript
 import { createBriosaClient, discoverInstallations } from 'briosa';
 
-const serverSelection = { version: '0.8.0' };
+const serverSelection = { version: '0.9.0' };
 const report = await discoverInstallations(serverSelection);
 const client = createBriosaClient();
 try {
@@ -101,7 +99,7 @@ For Python in an environment containing one exact-target distribution:
 from briosa import BriosaClient, BriosaServerSelection, BriosaStartOptions
 
 async def run():
-    selection = BriosaServerSelection(version="0.8.0")
+    selection = BriosaServerSelection(version="0.9.0")
     async with BriosaClient() as client:
         await client.start(BriosaStartOptions(
             server_selection=selection,
@@ -148,7 +146,8 @@ Existing packages retain their original runtime requirements:
 | 0.1.0 | Its exact pinned Server 0.6.0 build for the package's SA target |
 | 0.1.1 | Its exact pinned Server 0.6.1 build for the package's SA target |
 | 0.2.0 | Contract-aware selection, plus the reviewed Server 0.6.1 exception |
-| 0.3.0 | Same runtime contract; [MP argument name migration](/docs/mp-argument-name-migration) |
+| 0.3.0 | Major 1; [MP argument name migration](/docs/mp-argument-name-migration) |
+| 0.4.0 | Major 2; [runtime redesign migration](/docs/runtime-redesign-migration) |
 
 Installing a new server does not broaden an old client's compatibility. Keep
 the old distribution installed until applications using it have migrated.

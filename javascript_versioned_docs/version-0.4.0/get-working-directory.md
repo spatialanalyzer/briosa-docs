@@ -1,0 +1,67 @@
+---
+title: getWorkingDirectory
+description: Call SpatialAnalyzer's Get Working Directory MP command from the Briosa JavaScript and TypeScript client.
+---
+
+# getWorkingDirectory
+
+[SA 2026.1.0529.7](/api/javascript/get-working-directory) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/get-working-directory)
+
+Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
+`Directory` output as a JavaScript string.
+
+| API Item | Value |
+| --- | --- |
+| MP Command | [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) |
+| SpatialAnalyzer Group | File Operations |
+| MP Command Status | **Current** |
+| Package Export | `getWorkingDirectory` |
+| MP Inputs | None |
+| Return Value | `Promise<string>` |
+
+## Example
+
+```ts
+import {
+  createBriosaClient,
+  getWorkingDirectory,
+} from 'briosa';
+
+await using briosa = createBriosaClient();
+await briosa.start();
+
+const workingDirectory = await getWorkingDirectory(briosa);
+```
+
+`start()` must complete before the command is called. Its default procedure
+launches the local server, SDK, and a fresh SpatialAnalyzer application, then
+connects and verifies MP readiness.
+
+## Signature
+
+```ts
+function getWorkingDirectory(
+  client: BriosaClient,
+  options?: BriosaCallOptions,
+): Promise<string>;
+```
+
+The command has no MP input object. The optional call options contain only an
+`AbortSignal`; they remain separate from the MP command.
+
+## Return Value
+
+The promise resolves to the working directory reported by SpatialAnalyzer. The
+client validates the required MP output and does not expose the generated gRPC
+result message.
+
+## Failures and Cancellation
+
+A command failure rejects the returned promise through the handwritten Briosa
+error hierarchy. Aborting the call does not prove that an in-flight
+SpatialAnalyzer command was stopped, and the client does not automatically
+replay a call with an uncertain outcome.
+
+- [gRPC operation](/api/grpc/get-working-directory)
+- [`BriosaClient` lifecycle](./lifecycle)
+- [Understanding execution outcomes](/docs/concepts/execution-outcomes)

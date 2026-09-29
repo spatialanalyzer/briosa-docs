@@ -21,10 +21,10 @@ SDK Setup describe that machine; it does not manage other hosts remotely.
 · [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0)
 · [All downloads](https://briosa.dev/downloads)
 
-Installer 0.3.0 and Server 0.8.0 include security-patched .NET runtime 10.0.12.
-Update both the Installer and your installed server packages to receive the fixes;
-installing a newer system-wide .NET runtime does not update these self-contained
-packages.
+Installer 0.3.0 and Server 0.9.0 are self-contained distributions. Update
+both the Installer and installed server packages to receive their bundled
+runtime fixes; installing a newer system-wide .NET runtime does not update
+these packages.
 
 ## Before You Begin
 
@@ -264,4 +264,4 @@ Hexagon.
 
 ## Server Package Compatibility
 
-Server 0.8.0 schema-3 distributions require **Briosa Installer 0.3.0** or later. Install each exact SA target independently. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.3.0 discovery and migration.
+Server 0.9.0 schema-3 distributions require **Briosa Installer 0.3.0** or later. Install each exact SA target independently. The installer does not supply SpatialAnalyzer or its license. See [Installation Selection](/docs/deployment/installation-selection) for client 0.4.0 discovery and migration.
