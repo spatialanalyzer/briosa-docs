@@ -13,10 +13,8 @@ jobs:
   build:
     name: Build Pages artifact
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 30
     env:
-      # Each renderer loads the full route registry; use one on the 16 GB runner.
-      DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1
       ALGOLIA_APP_ID: ${{ vars.ALGOLIA_APP_ID }}
       ALGOLIA_SEARCH_API_KEY: ${{ vars.ALGOLIA_SEARCH_API_KEY }}
       ALGOLIA_INDEX_NAME: ${{ vars.ALGOLIA_INDEX_NAME }}
