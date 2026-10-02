@@ -10,8 +10,8 @@ description: Reviewed cylinder-construction MP commands for exact SpatialAnalyze
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Construct Cylinder](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder) | **Next** | At Risk - fixture validation required |
-| [Construct Cylinder From End Points](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder-from-end-points) | **Next** | At Risk - fixture validation required |
-| [Construct Cylinders From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select) | **Next** | At Risk - interactive fixture validation required |
+| [Construct Cylinder](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder) | **Current** | At Risk - fixture validation required |
+| [Construct Cylinder From End Points](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinder-from-end-points) | **Current** | At Risk - fixture validation required |
+| [Construct Cylinders From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select) | **Current** | At Risk - interactive fixture validation required |
 
 [Open the canonical Cylinders command reference →](/mp-command-catalog/commands/construction-operations-cylinders)

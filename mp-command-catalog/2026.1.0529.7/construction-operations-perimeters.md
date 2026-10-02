@@ -8,10 +8,10 @@ description: Reviewed perimeter-construction MP commands for exact SpatialAnalyz
 
 <p className="catalog-path">SA 2026.1.0529.7 <span aria-hidden="true">/</span> Construction Operations <span aria-hidden="true">/</span> Perimeters</p>
 
-The subgroup's single command is selected as a **Next** operation.
+The subgroup's single command is a **Current** operation.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Construct Perimeter From Points](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) | **Next** |
+| [Construct Perimeter From Points](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) | **Current** |
 
 [Open the canonical Perimeters command reference →](/mp-command-catalog/commands/construction-operations-perimeters)

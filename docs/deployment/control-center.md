@@ -13,7 +13,7 @@ high-contrast settings taking priority.
 Control Center is included in [Briosa 0.5.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.5.1)
 and later Windows server packages. Briosa Installer **0.2.0** and later provide
 the **Open Control Center** action. Get both through [Install Briosa](/install).
-Earlier server packages omit the companion. Server **0.9.0** includes Control Center for both **2024.1.0508.5** and **2026.1.0529.7**. Select the installed distribution matching your application. Control Center shares the server release version.
+Earlier server packages omit the companion. Server **0.9.1** includes Control Center for both **2024.1.0508.5** and **2026.1.0529.7**. Select the installed distribution matching your application. Control Center shares the server release version.
 :::
 
 ## Open Control Center
@@ -83,7 +83,9 @@ activated executable or supply missing evidence.
 ## Recover or Stop
 
 - **Connect** attaches a started SDK. **Reconnect** is available when the current
-  generation's connection state permits it.
+  generation's connection state permits it. It is rejected while an attached
+  generation is not ready for commands, and Control Center shows the typed
+  diagnostic; stop the SDK and start a new generation after correcting the cause.
 - **Recover SDK** replaces a faulted generation without connecting or replaying.
   Correct competing-client or environment problems first.
 - **Restart server** waits for confirmed shutdown before starting a replacement.

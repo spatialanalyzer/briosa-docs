@@ -75,10 +75,10 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.7.0** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
+Released availability reflects Briosa Server **0.9.1** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 
-Released server support and client-package publication are separate. The three
-client implementations are available as source, but their packages remain
-unpublished. See [Release Status](/docs/releases).
+Released server support and client-package publication are separate. The .NET,
+Python, and JavaScript/TypeScript clients are published as package version
+**0.4.0** for each exact target. See [Release Status](/docs/releases).

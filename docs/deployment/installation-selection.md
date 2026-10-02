@@ -12,7 +12,7 @@ for either target. Each application makes its own selection.
 
 :::note[Client 0.4.0]
 
-This guide describes Server 0.9.0 and client 0.4.0, available for both exact SA
+This guide describes Server 0.9.1 and client 0.4.0, available for both exact SA
 targets. See [Release Status](/docs/releases) for package links and validation.
 Published 0.1.1 clients keep their exact Server 0.6.1 pin; installing a newer
 server does not change those clients.
@@ -64,7 +64,7 @@ using Briosa;
 
 var selection = new BriosaServerSelection
 {
-    Version = "0.9.0",
+    Version = "0.9.1",
     SearchRoots = [@"D:\Briosa Packages"],
 };
 var report = BriosaInstallations.Discover(selection);
@@ -82,7 +82,7 @@ For Node.js with the exact-target package installed under the `briosa` alias:
 ```typescript
 import { createBriosaClient, discoverInstallations } from 'briosa';
 
-const serverSelection = { version: '0.9.0' };
+const serverSelection = { version: '0.9.1' };
 const report = await discoverInstallations(serverSelection);
 const client = createBriosaClient();
 try {
@@ -99,7 +99,7 @@ For Python in an environment containing one exact-target distribution:
 from briosa import BriosaClient, BriosaServerSelection, BriosaStartOptions
 
 async def run():
-    selection = BriosaServerSelection(version="0.9.0")
+    selection = BriosaServerSelection(version="0.9.1")
     async with BriosaClient() as client:
         await client.start(BriosaStartOptions(
             server_selection=selection,

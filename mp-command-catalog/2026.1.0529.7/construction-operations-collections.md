@@ -10,10 +10,10 @@ description: Reviewed collection-management MP commands for exact SpatialAnalyze
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Set (or construct) default collection](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection) | **Next** | At Risk - fixture validation required |
-| [Construct Collection](/mp-command-catalog/commands/construction-operations-collections#construct-collection) | **Next** | At Risk - fixture validation required |
+| [Set (or construct) default collection](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection) | **Current** | At Risk - fixture validation required |
+| [Construct Collection](/mp-command-catalog/commands/construction-operations-collections#construct-collection) | **Current** | At Risk - fixture validation required |
 | [Get Active Collection Name](/mp-command-catalog/commands/construction-operations-collections#get-active-collection-name) | **Current** | Licensed exact-target validation complete |
-| [Delete Collection](/mp-command-catalog/commands/construction-operations-collections#delete-collection) | **Next** | At Risk - destructive fixture validation required |
-| [Delete Collections by Wildcard](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) | **Next** | At Risk - destructive fixture validation required |
+| [Delete Collection](/mp-command-catalog/commands/construction-operations-collections#delete-collection) | **Current** | At Risk - destructive fixture validation required |
+| [Delete Collections by Wildcard](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) | **Current** | At Risk - destructive fixture validation required |
 
 [Open the canonical Collections command reference →](/mp-command-catalog/commands/construction-operations-collections)

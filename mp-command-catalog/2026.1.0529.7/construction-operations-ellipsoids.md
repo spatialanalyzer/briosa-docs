@@ -10,6 +10,6 @@ description: Reviewed ellipsoid-construction MP commands for exact SpatialAnalyz
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Construct Ellipsoid](/mp-command-catalog/commands/construction-operations-ellipsoids#construct-ellipsoid) | **Next** | At Risk - fixture validation required |
+| [Construct Ellipsoid](/mp-command-catalog/commands/construction-operations-ellipsoids#construct-ellipsoid) | **Current** | At Risk - fixture validation required |
 
 [Open the canonical Ellipsoids command reference →](/mp-command-catalog/commands/construction-operations-ellipsoids)

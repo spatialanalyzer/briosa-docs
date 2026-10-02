@@ -8,10 +8,10 @@ description: Reviewed scale-bar construction MP commands for exact SpatialAnalyz
 
 <p className="catalog-path">SA 2026.1.0529.7 <span aria-hidden="true">/</span> Construction Operations <span aria-hidden="true">/</span> Scale Bars</p>
 
-The subgroup contains one command, selected as a **Next** operation.
+The subgroup contains one command, a **Current** operation.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Construct Scale Bar](/mp-command-catalog/commands/construction-operations-scale-bars#construct-scale-bar) | **Next** |
+| [Construct Scale Bar](/mp-command-catalog/commands/construction-operations-scale-bars#construct-scale-bar) | **Current** |
 
 [Open the canonical Scale Bars command reference →](/mp-command-catalog/commands/construction-operations-scale-bars)

@@ -100,4 +100,4 @@ is rejected. QDAS timestamp inputs also require explicit values. Use the release
 
 The review inspected type-library metadata without starting or connecting to
 SpatialAnalyzer, changing SDK registration, or executing MP commands. Portable
-or licensed 2026 test results do not become 2024 validation results. Server 0.7.0 implements the 996 Current commands. A separate limited local licensed smoke test covered Get Working Directory, Get Number of Collections, Get i-th Collection Name, Get Active Collection Name, Get Active Units, and Get Working Frame Properties. It did not establish complete fixture or licensed validation for the remaining operations.
+or licensed 2026 test results do not become 2024 validation results. Server 0.7.0 implemented the 996 Current commands, and Server 0.9.1 registers the same set. A separate limited local licensed smoke test covered Get Working Directory, Get Number of Collections, Get i-th Collection Name, Get Active Collection Name, Get Active Units, and Get Working Frame Properties. It did not establish complete fixture or licensed validation for the remaining operations.
