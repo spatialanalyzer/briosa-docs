@@ -221,7 +221,8 @@ npm run docusaurus docs:version:python <python-package-version>
 npm run docusaurus docs:version:javascript <javascript-package-version>
 ```
 
-Current defaults are Server **0.9.0** and clients **0.4.0**. Working `api/`
+Current defaults are Server **0.9.0** and clients **0.4.0**; schema-identical
+Server 0.9.1 has no separate API snapshot. Working `api/`
 content is not published until snapshotted. The custom API plugin delegates
 these commands to Docusaurus's snapshot implementation and records the
 snapshot's default SA target in `plugins/api-reference/targets.json`.

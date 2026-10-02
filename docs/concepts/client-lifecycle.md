@@ -17,7 +17,7 @@ This separation lets you keep the control plane available without starting SA,
 restart a failed SDK without restarting Briosa, and leave SpatialAnalyzer open
 when your client exits.
 
-:::note[Client 0.4.0 and Server 0.9.0]
+:::note[Client 0.4.0 and Server 0.9.1]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. Client 0.4.0 selects a
@@ -138,6 +138,17 @@ Use the language client's state method to inspect that information:
 Use reconnect when the current SDK generation is still healthy but its SA
 connection or readiness needs to be re-established. Reconnect calls
 `ConnectEx("localhost", ...)` again on that same SDK generation.
+
+Reconnect cannot change the activated SDK or supply missing identity evidence.
+Server 0.9.1 rejects it while the generation is still connected but not ready
+for commands, which is the default when no connected-SA attestation is
+configured. When runtime identity is not ready, the call fails with
+`FAILED_PRECONDITION`, kind `IDENTITY_MISMATCH`, diagnostic code
+`runtime-identity-not-ready`, and recovery guidance `STOP_SDK_FIRST`; other
+connected-but-not-ready states use kind `SDK_ALREADY_CONNECTED` with the same
+guidance. Stop the SDK, supply the missing evidence or correct the cause, then
+start and connect a new generation. Server 0.9.0 reported this case as gRPC
+`UNKNOWN`.
 
 Use recovery when the SDK or its worker is unhealthy. Recovery replaces the
 failed generation and leaves the replacement `RUNNING` and `DISCONNECTED`.

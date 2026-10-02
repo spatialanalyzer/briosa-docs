@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the five commands observed under **Construction
 Operations → Collections** in SA 2026.1.0529.7. `Get Active Collection Name`
-is available in the current Briosa server; the other four operations are also included in Briosa Server 0.7.0.
+is available in the current Briosa server; the other four operations are also included in Briosa Server 0.9.1.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 

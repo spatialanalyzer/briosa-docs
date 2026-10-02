@@ -10,6 +10,6 @@ description: Reviewed ellipse-construction MP commands for exact SpatialAnalyzer
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Construct Ellipse](/mp-command-catalog/commands/construction-operations-ellipses#construct-ellipse) | **Next** | At Risk - fixture validation required |
+| [Construct Ellipse](/mp-command-catalog/commands/construction-operations-ellipses#construct-ellipse) | **Current** | At Risk - fixture validation required |
 
 [Open the canonical Ellipses command reference →](/mp-command-catalog/commands/construction-operations-ellipses)

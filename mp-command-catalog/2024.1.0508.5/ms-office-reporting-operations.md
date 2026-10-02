@@ -9,7 +9,7 @@ description: Reviewed MS Office Reporting Operations commands and released Brios
 **SA 2024.1.0508.5 · MS Office Reporting Operations**
 
 This group contains 13 reviewed command entries. **Current** means implemented
-in Briosa Server 0.7.0 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.9.1 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |

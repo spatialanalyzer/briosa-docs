@@ -10,7 +10,7 @@ description: Reviewed cone-construction MP commands for exact SpatialAnalyzer ta
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Construct Cone](/mp-command-catalog/commands/construction-operations-cones#construct-cone) | **Next** | At Risk - fixture validation required |
-| [Construct Cones From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) | **Next** | At Risk - interactive fixture validation required |
+| [Construct Cone](/mp-command-catalog/commands/construction-operations-cones#construct-cone) | **Current** | At Risk - fixture validation required |
+| [Construct Cones From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) | **Current** | At Risk - interactive fixture validation required |
 
 [Open the canonical Cones command reference →](/mp-command-catalog/commands/construction-operations-cones)

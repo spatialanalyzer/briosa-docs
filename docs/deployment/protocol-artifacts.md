@@ -1,6 +1,6 @@
 ---
 title: Protocol Artifacts for Raw gRPC Clients
-description: Choose, verify, and use the exact-target Server 0.9.0 protobuf distribution.
+description: Choose, verify, and use the exact-target Server 0.9.1 protobuf distribution.
 ---
 
 # Protocol Artifacts for Raw gRPC Clients
@@ -9,10 +9,10 @@ First-party clients package their own transport bindings. Raw gRPC applications 
 
 ## Choose and Verify the Artifact
 
-From the [Server 0.9.0 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.0), download one of:
+From the [Server 0.9.1 release](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.1), download one of:
 
-- `briosa-protocol-0.9.0-sa-2024.1.0508.5.zip`
-- `briosa-protocol-0.9.0-sa-2026.1.0529.7.zip`
+- `briosa-protocol-0.9.1-sa-2024.1.0508.5.zip`
+- `briosa-protocol-0.9.1-sa-2026.1.0529.7.zip`
 
 Download its adjacent `.sha256` and `.provenance.json` files. In PowerShell, calculate `Get-FileHash -Algorithm SHA256 <zip-path>` and compare the complete digest with the checksum before extracting. Inspect provenance for the release, source revision, and exact target. A matching checksum establishes file agreement; use the official release as the provenance source.
 
@@ -24,7 +24,7 @@ Extract the complete archive and locate its protobuf import root containing `bri
 
 Run the matching Windows server locally and inspect [Server Discovery](/api/grpc/discovery) ([SA 2024](/api/grpc/sa-2024.1.0508.5/discovery)) before SDK/SA activity. Implement the required lifecycle, exact-target checks, capability/readiness checks, cancellation, and execution-outcome handling. Raw bindings do not supply the first-party clients' installation selector or lifecycle policy automatically.
 
-Server 0.9.0 accepts inbound gRPC messages of at most **64 KiB (65,536 bytes)**
+Server 0.9.1 accepts inbound gRPC messages of at most **64 KiB (65,536 bytes)**
 for either exact target. This is the encoded request size. Requests above the
 limit are rejected at the transport boundary before MP operation mapping.
 

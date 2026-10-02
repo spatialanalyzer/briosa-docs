@@ -10,8 +10,8 @@ description: Reviewed circle-construction MP commands for exact SpatialAnalyzer 
 
 | MP Command | Briosa Status | Validation |
 | --- | --- | --- |
-| [Construct Circle](/mp-command-catalog/commands/construction-operations-circles#construct-circle) | **Next** | At Risk - fixture validation required |
-| [Construct Circles From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) | **Next** | At Risk - interactive fixture validation required |
-| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | **Next** | At Risk - setter probe and fixture validation required |
+| [Construct Circle](/mp-command-catalog/commands/construction-operations-circles#construct-circle) | **Current** | At Risk - fixture validation required |
+| [Construct Circles From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) | **Current** | At Risk - interactive fixture validation required |
+| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | **Current** | At Risk - setter probe and fixture validation required |
 
 [Open the canonical Circles command reference ->](/mp-command-catalog/commands/construction-operations-circles)
