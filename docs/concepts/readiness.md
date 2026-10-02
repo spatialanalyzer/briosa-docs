@@ -41,7 +41,8 @@ Use the explicit names for deployment checks. Restarting a healthy host merely
 because SpatialAnalyzer is unavailable can make diagnosis harder.
 
 If the probe times out or reports an ambiguous execution state, Briosa closes
-MP admission and reports that operator action is required. If the current SDK
-is still healthy, correct the condition and call reconnect. If the SDK or
-worker is unhealthy, recover it and then call connect. Neither path replays the
+MP admission, marks the worker generation degraded, and reports that operator
+action is required. Reconnect is rejected in that state with
+`SDK_RECOVERY_REQUIRED` and `RECOVER_SDK_WITHOUT_REPLAY` guidance: correct the
+condition, recover the SDK, and then call connect. Recovery does not replay the
 failed probe or any user MP command.
