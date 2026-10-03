@@ -1554,7 +1554,19 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Field Name` | String |
+| Input | `K-Field` | String |
+| Input | `Characteristic Number` | Integer |
+| Input | `Value Max Length` | Integer |
+| Input | `Value Type` | Binding not emitted by the SDK exporter |
+| Input | `Value` | String |
+| Input | `Catalog Entry Identifier` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1609,7 +1621,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `Parent Node XPath` | String |
 
 </details>
 
@@ -1658,7 +1675,9 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -1707,7 +1726,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dialog Title (Optional)` | String |
+| Output | `Directory Path` | String |
 
 </details>
 
@@ -1756,7 +1780,20 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Open Dialog? (FALSE = Save As Dialog)` | Boolean |
+| Input | `Working Directory (Optional)` | Binding not emitted by the SDK exporter |
+| Input | `File Extension (Optional)` | String |
+| Input | `Dialog Title (Optional)` | String |
+| Output | `File Selected (FALSE = Cancelled)` | Boolean |
+| Output | `File Name` | String |
+| Output | `Path` | String |
+| Output | `Path with File Name` | String |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1812,7 +1849,9 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -1861,7 +1900,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Handle` | Integer |
+| Input | `Save?` | Boolean |
 
 </details>
 
@@ -1911,7 +1955,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `Save?` | Boolean |
 
 </details>
 
@@ -1961,7 +2010,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `Save?` | Boolean |
 
 </details>
 
@@ -2011,7 +2065,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source Directory` | Binding not emitted by the SDK exporter |
+| Input | `Destination Directory` | Binding not emitted by the SDK exporter |
+| Input | `Replace Existing?` | Boolean |
+| Input | `Show Progress?` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -2065,7 +2128,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source File Name` | File Path or Embedded File |
+| Input | `Destination File Name` | File Path or Embedded File |
+| Input | `Overwrite?` | Boolean |
 
 </details>
 
@@ -2116,7 +2185,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -2165,7 +2240,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Connection String` | String |
+| Input | `Table Name` | String |
+| Input | `WHERE` | String |
 
 </details>
 
@@ -2218,7 +2299,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Name` | File Path or Embedded File |
 
 </details>
 
@@ -2269,7 +2354,44 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The captured `Surface Compatibility Mode` sample is `false` in 2024 and `true` in 2026. The released SA 2024 API requires an explicit choice, including an explicit false value; it does not import the SA 2026 default.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `CAD File Name` | File Path or Embedded File |
+| Input | `Import Solids` | Boolean |
+| Input | `Import Surfaces` | Boolean |
+| Input | `Import Polygonized Surfaces` | Boolean |
+| Input | `Import Annotations` | Boolean |
+| Input | `Import Vectors` | Boolean |
+| Input | `Import Points` | Boolean |
+| Input | `Point Group Name` | String |
+| Input | `Import Attributes/Metadata` | Boolean |
+| Input | `Import Cooordinate Frames` | Boolean |
+| Input | `Import Planes` | Boolean |
+| Input | `Import 3D Curves - Lines` | Boolean |
+| Input | `Import 3D Curves - Circles` | Boolean |
+| Input | `Import 3D Curves - General Curves` | Boolean |
+| Input | `Import Construction Geometry` | Boolean |
+| Input | `Import Hidden Entities` | Boolean |
+| Input | `Import all Surfaces as Mesh Graphical Entities` | Boolean |
+| Input | `Do Not Import Fillets` | Boolean |
+| Input | `Do Not Import Dittos` | Boolean |
+| Input | `Ditto Threshold` | Integer |
+| Input | `Center View on Imported Objects` | Boolean |
+| Input | `Import into Folders matching CAD file hierarchy` | Boolean |
+| Input | `Remove Empty Folders` | Boolean |
+| Input | `Surface Normals Mode (1 or 2)` | Integer |
+| Input | `Prompt on Missing Components` | Boolean |
+| Input | `Selective Import` | Boolean |
+| Input | `Surface Compatibility Mode` | Boolean |
+| Input | `Explode Surfaces` | Boolean |
+| Input | `CAD File Units (leave blank to use the units specified in the file)` | String |
+| Input | `Build Callout Views` | Boolean |
+| Output | `Import Warnings` | Boolean |
+| Output | `Import Warning Messages` | String |
+| Output | `Extents Min` | Vector |
+| Output | `Extents Max` | Vector |
 
 </details>
 
@@ -2351,7 +2473,14 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Directory` | Binding not emitted by the SDK exporter |
+| Output | `Exists?` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -2401,7 +2530,9 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -2454,7 +2585,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `Frame Set Container` | Collection Object Name |
+| Input | `Data Delimiter` | Export Data Delimeter Type |
+| Input | `File Format` | Ascii File Format |
+| Input | `Include Export Format Info?` | Boolean |
+| Input | `Decimal Precision` | Integer |
+| Input | `Append?` | Boolean |
 
 </details>
 
@@ -2511,7 +2652,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `Object List` | Collection Object Name Ref List |
+| Input | `Export Frame Mode` | String |
+| Input | `Overwrite existing file?` | Boolean |
 
 </details>
 
@@ -2632,7 +2780,23 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `Point Set Container` | Collection Object Name |
+| Input | `Data Delimiter` | Export Data Delimeter Type |
+| Input | `Target Name Format` | Export Target Name Format |
+| Input | `Desired Coordinate System` | Coordinate System Type |
+| Input | `Include Target Offsets?` | Boolean |
+| Input | `Include Timestamps?` | Boolean |
+| Input | `Include SA version and frame comments?` | Boolean |
+| Input | `Include Axis Comments?` | Boolean |
+| Input | `Include Export Format Info?` | Boolean |
+| Input | `Maximum Precision (Scientific Notation)?` | Boolean |
+| Input | `Decimal Precision` | Integer |
+| Input | `Append?` | Boolean |
 
 </details>
 
@@ -2740,7 +2904,28 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `Group Names to export` | Collection Group Name Ref List |
+| Input | `Data Delimiter` | Export Data Delimeter Type |
+| Input | `Target Name Format` | Export Target Name Format |
+| Input | `Desired Coordinate System` | Coordinate System Type |
+| Input | `Include Target Offsets?` | Boolean |
+| Input | `Include Target Comments?` | Boolean |
+| Input | `Include Timestamps?` | Boolean |
+| Input | `Include Tolerances?` | Boolean |
+| Input | `Include Coordinate Uncertainties?` | Boolean |
+| Input | `Include SA version and frame comments?` | Boolean |
+| Input | `Include Axis Comments?` | Boolean |
+| Input | `Include Export Format Info?` | Boolean |
+| Input | `Include Weights?` | Boolean |
+| Input | `Include Measurement Details?` | Boolean |
+| Input | `Maximum Precision (Scientific Notation)?` | Boolean |
+| Input | `Decimal Precision` | Integer |
+| Input | `Append?` | Boolean |
 
 </details>
 
@@ -2858,7 +3043,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DXF File Path` | File Path or Embedded File |
+| Input | `Point Names` | Point Name Ref List |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Include Point Labels?` | Boolean |
 
 </details>
 
@@ -2912,7 +3104,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Embedded File Collection Name` | Collection Name |
+| Input | `Embedded File Name` | String |
+| Input | `External File Name` | File Path or Embedded File |
+| Input | `Replace Existing?` | Boolean |
 
 </details>
 
@@ -2966,7 +3165,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Path` | File Path or Embedded File |
 
 </details>
 
@@ -3017,7 +3220,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `IGES File Path` | File Path or Embedded File |
 
 </details>
 
@@ -3068,7 +3275,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `IGES File Path` | File Path or Embedded File |
+| Input | `Object Name List` | Collection Object Name Ref List |
 
 </details>
 
@@ -3120,7 +3332,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `PTX File Path` | File Path or Embedded File |
+| Input | `Point Cloud List` | Collection Object Name Ref List |
+| Input | `Overwrite existing file?` | Boolean |
+| Input | `Show Progress Dialog?` | Boolean |
 
 </details>
 
@@ -3174,7 +3393,31 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The `K0004: Date Time Stamp` samples differ only by capture time. They are not reusable defaults and do not change the command disposition. A 2024 caller must provide its intended timestamp. Existing dimension-list limitations retain the reviewed 2026 handling.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `QDAS Export File Path` | File Path or Embedded File |
+| Input | `K1001: Part Number` | String |
+| Input | `K1002: Part Description` | String |
+| Input | `K1071: Supplier Number` | String |
+| Input | `K1072: Supplier Description` | String |
+| Input | `K1203: Reason for Test` | String |
+| Input | `K1303: Plant` | String |
+| Input | `K1900: Part Remark` | String |
+| Input | `K0006: Batch Number` | String |
+| Input | `K0014: Part ID` | String |
+| Input | `K0053: Order Number` | String |
+| Input | `K0004: Date Time Stamp` | String |
+| Input | `K0008: Operator Identifier` | Integer |
+| Input | `K0010: Machine Identifier` | Integer |
+| Input | `K0012: Gage Identifier` | Integer |
+| Input | `Relationship List` | Collection Object Name Ref List |
+| Input | `Feature Check List` | Collection Object Name Ref List |
+| Input | `Dimension List` | Binding not emitted by the SDK exporter |
+| Input | `Vector Group List` | Collection Object Name Ref List |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -3243,7 +3486,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `QDAS Export File Path` | File Path or Embedded File |
 
 </details>
 
@@ -3296,7 +3543,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `STL File Path` | File Path or Embedded File |
+| Input | `Mesh` | Collection Object Name |
 
 </details>
 
@@ -3348,7 +3600,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `STEP File Path` | File Path or Embedded File |
 
 </details>
 
@@ -3399,7 +3655,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `STEP File Path` | File Path or Embedded File |
+| Input | `Object Name List` | Collection Object Name Ref List |
 
 </details>
 
@@ -3451,7 +3712,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `VDA/FS File Path` | File Path or Embedded File |
 
 </details>
 
@@ -3502,7 +3767,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `VDA/FS File Path` | File Path or Embedded File |
+| Input | `Object Name List` | Collection Object Name Ref List |
 
 </details>
 
@@ -3554,7 +3824,16 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Ascii File Path` | File Path or Embedded File |
+| Input | `Vector group(s) to export` | Collection Vector Group Name Ref List |
+| Input | `Overwrite existing file? (FALSE = Append)` | Boolean |
+| Input | `Use Full Precision (Scientific Notation)?` | Boolean |
+| Input | `Vector Name Format` | Export Vector Name Format |
+| Input | `Include Vector Length?` | Boolean |
 
 </details>
 
@@ -3608,7 +3887,15 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Excel File Path` | File Path or Embedded File |
+| Input | `Vector group(s) to export` | Collection Vector Group Name Ref List |
+| Input | `Overwrite existing file? (FALSE = No Export)` | Boolean |
+| Input | `Vector Name Format` | Export Vector Name Format |
+| Input | `Include Vector Length?` | Boolean |
 
 </details>
 
@@ -3663,7 +3950,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Directory` | String |
+| Input | `File Name Pattern` | String |
+| Input | `Recursive?` | Boolean |
+| Output | `Files` | String Ref List |
 
 </details>
 
@@ -3717,7 +4011,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Directory` | String |
+| Input | `Recursive?` | Boolean |
+| Output | `Sub-Directories` | String Ref List |
 
 </details>
 
@@ -3770,7 +4070,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Boolean Name` | String |
+| Output | `Boolean Value` | Boolean |
 
 </details>
 
@@ -3821,7 +4127,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Path` | String |
+| Output | `Directory` | String |
+| Output | `Filename` | String |
+| Output | `Directory List` | String Ref List |
 
 </details>
 
@@ -3875,7 +4188,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Double Name` | String |
+| Output | `Double Value` | Double |
 
 </details>
 
@@ -3926,7 +4245,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Connection String` | String |
+| Input | `Table Name` | String |
+| Input | `WHERE` | String |
 
 </details>
 
@@ -3979,7 +4304,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Integer Name` | String |
+| Output | `Integer Value` | Integer |
 
 </details>
 
@@ -4030,7 +4361,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `JSON Pointer` | String |
+| Output | `Array Size` | Integer |
 
 </details>
 
@@ -4081,7 +4418,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `JSON Pointer` | String |
+| Output | `Double Value` | Double |
 
 </details>
 
@@ -4132,7 +4475,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `JSON Pointer` | String |
+| Output | `Integer Value` | Integer |
 
 </details>
 
@@ -4183,7 +4532,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `JSON Pointer` | String |
+| Output | `Object Size` | Integer |
+| Output | `Object Items` | String Ref List |
 
 </details>
 
@@ -4235,7 +4591,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `JSON Pointer` | String |
+| Output | `String Value` | String |
 
 </details>
 
@@ -4286,7 +4648,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Handle` | Integer |
+| Input | `Parent JSON Pointer` | String |
+| Output | `JSON Pointer List` | String Ref List |
 
 </details>
 
@@ -4339,7 +4707,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `K-Field Target` | String |
+| Output | `Catalog Entries` | String Ref List |
 
 </details>
 
@@ -4389,7 +4762,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `K-Field Target` | String |
+| Input | `User Prompt` | String Ref List |
+| Input | `Font` | Font Type |
+| Output | `Entry Identifier` | Integer |
 
 </details>
 
@@ -4443,7 +4823,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `String Name` | String |
+| Output | `String Value` | String |
 
 </details>
 
@@ -4496,7 +4882,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Transform Name` | String |
+| Output | `Transform Value` | Transform |
 
 </details>
 
@@ -4549,7 +4941,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Vector Name` | String |
+| Output | `Vector Value` | Vector |
 
 </details>
 
@@ -4602,7 +5000,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. A limited local licensed s
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Output | `Directory` | String |
 
 </details>
 
@@ -4651,7 +5053,12 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `XPath` | String |
 
 </details>
 
@@ -4701,7 +5108,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `XPath` | String |
+| Output | `Text Content` | String Ref List |
 
 </details>
 
@@ -4756,7 +5169,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `File Format` | Ascii File Format |
+| Input | `Units` | Distance Units |
+| Input | `Angular Units` | Angular Units |
+| Input | `Group Name` | Collection Object Name |
+| Input | `Import as Cloud` | Boolean |
+| Input | `Ensure New Point Group` | Boolean |
+| Input | `Ensure Unique Names` | Boolean |
 
 </details>
 
@@ -4816,7 +5240,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Input | `File Format` | Ascii File Format |
+| Input | `Units` | Distance Units |
+| Input | `Angular Units` | Angular Units |
+| Input | `Frame Set Container Name` | Collection Object Name |
+| Input | `Ensure Unique Name` | Boolean |
 
 </details>
 
@@ -4872,7 +5305,17 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `E57 File Path` | File Path or Embedded File |
+| Input | `Save Converted File` | Boolean |
+| Input | `Use Square Root of Intensity` | Boolean |
+| Input | `Automatically Close Converter` | Boolean |
+| Input | `Prioritize Color Over Intensity` | Boolean |
+| Input | `Import Scan Blocks As Separate Clouds` | Boolean |
+| Input | `Units` | Distance Units |
 
 </details>
 
@@ -4929,7 +5372,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `External File Name` | File Path or Embedded File |
+| Input | `Replace Existing?` | Boolean |
 
 </details>
 
@@ -4981,7 +5429,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `External File Name` | File Path or Embedded File |
+| Input | `Replace Existing?` | Boolean |
 
 </details>
 
@@ -5033,7 +5486,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Path` | File Path or Embedded File |
+| Input | `Replace Existing Entries?` | Boolean |
 
 </details>
 
@@ -5085,7 +5543,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `IGES File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5138,7 +5600,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Instrument ID` | Collection Instrument ID |
+| Input | `Group Name` | Collection Object Name |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5193,7 +5661,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Instrument ID` | Collection Instrument ID |
+| Input | `Scan Cloud Name` | Collection Object Name |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5246,7 +5720,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `External MP File Name` | File Path or Embedded File |
+| Input | `Replace Existing?` | Boolean |
 
 </details>
 
@@ -5298,7 +5777,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5351,7 +5834,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Name` | Collection Object Name |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5403,7 +5891,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `QDAS DFD File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5454,7 +5946,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `SA File Name` | File Path or Embedded File |
+| Input | `Allow Operator Selections` | Boolean |
+| Input | `Selected Collections (optional)` | String Ref List |
 
 </details>
 
@@ -5507,7 +6005,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5558,7 +6060,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `SAT File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5609,7 +6115,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `STEP File Path` | File Path or Embedded File |
+| Input | `Display Entity Filters` | Boolean |
+| Input | `Display Residuals` | Boolean |
 
 </details>
 
@@ -5662,7 +6174,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `STL File Path` | File Path or Embedded File |
+| Input | `Units` | Distance Units |
+| Input | `Import Mesh` | Boolean |
+| Input | `Import Point Cloud` | Boolean |
 
 </details>
 
@@ -5716,7 +6235,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `VDA/FS File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5767,7 +6290,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5818,7 +6345,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Path` | File Path or Embedded File |
 
 </details>
 
@@ -5867,7 +6398,12 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Make Variables?` | Boolean |
 
 </details>
 
@@ -5919,7 +6455,22 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Input HTML Form Path` | File Path or Embedded File |
+| Input | `Window Width` | Integer |
+| Input | `Window Height` | Integer |
+| Input | `Input DataShare File Path` | File Path or Embedded File |
+| Input | `Output DataShare File Path` | File Path or Embedded File |
+| Input | `Save in Binary Format?` | Boolean |
+| Input | `Step to jump to if Canceled (-1 will fail Step on Cancel)` | Binding not emitted by the SDK exporter |
+| Input | `Save Button Text` | String |
+| Input | `Cancel Button Text` | String |
+| Input | `Hide Save and Cancel buttons?` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -5979,7 +6530,19 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Input HTML Form Path` | File Path or Embedded File |
+| Input | `Window Width` | Integer |
+| Input | `Window Height` | Integer |
+| Input | `Input DataShare File Path` | File Path or Embedded File |
+| Input | `Output DataShare File Path` | File Path or Embedded File |
+| Input | `Save in Binary Format?` | Boolean |
+| Input | `Step to jump to if Canceled (-1 will fail Step on Cancel)` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -6034,7 +6597,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -6085,7 +6654,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Wildcard Criteria` | String |
+| Input | `File Name Pattern` | String |
+| Output | `Embedded Files` | String Ref List |
 
 </details>
 
@@ -6136,7 +6711,27 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Use High X Limit` | Boolean |
+| Input | `High X Limit` | Double |
+| Input | `Use High Y Limit` | Boolean |
+| Input | `High Y Limit` | Double |
+| Input | `Use High Z Limit` | Boolean |
+| Input | `High Z Limit` | Double |
+| Input | `Use High Mag Limit` | Boolean |
+| Input | `High Mag Limit` | Double |
+| Input | `Use Low X Limit` | Boolean |
+| Input | `Low X Limit` | Double |
+| Input | `Use Low Y Limit` | Boolean |
+| Input | `Low Y Limit` | Double |
+| Input | `Use Low Z Limit` | Boolean |
+| Input | `Low Z Limit` | Double |
+| Input | `Use Low Mag Limit` | Boolean |
+| Input | `Low Mag Limit` | Double |
+| Output | `Resultant Vector Constraint` | Tolerance Vector Options |
 
 </details>
 
@@ -6201,7 +6796,27 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Use High X Tolerance` | Boolean |
+| Input | `High X Tolerance` | Double |
+| Input | `Use High Y Tolerance` | Boolean |
+| Input | `High Y Tolerance` | Double |
+| Input | `Use High Z Tolerance` | Boolean |
+| Input | `High Z Tolerance` | Double |
+| Input | `Use High Mag Tolerance` | Boolean |
+| Input | `High Mag Tolerance` | Double |
+| Input | `Use Low X Tolerance` | Boolean |
+| Input | `Low X Tolerance` | Double |
+| Input | `Use Low Y Tolerance` | Boolean |
+| Input | `Low Y Tolerance` | Double |
+| Input | `Use Low Z Tolerance` | Boolean |
+| Input | `Low Z Tolerance` | Double |
+| Input | `Use Low Mag Tolerance` | Boolean |
+| Input | `Low Mag Tolerance` | Double |
+| Output | `Resultant Vector Tolerance` | Tolerance Vector Options |
 
 </details>
 
@@ -6270,7 +6885,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Path` | File Path or Embedded File |
+| Input | `Group Name` | Collection Object Name |
 
 </details>
 
@@ -6322,7 +6942,9 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -6371,7 +6993,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Path` | File Path or Embedded File |
+| Output | `ASCII File Handle` | Integer |
+| Output | `ASCII File Size (Lines)` | Integer |
 
 </details>
 
@@ -6422,7 +7050,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `JSON File Path` | File Path or Embedded File |
+| Output | `JSON File Handle` | Integer |
 
 </details>
 
@@ -6474,7 +7107,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `SA File Name` | File Path or Embedded File |
 
 </details>
 
@@ -6525,7 +7162,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Template File Name` | File Path or Embedded File |
 
 </details>
 
@@ -6574,7 +7215,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Path` | File Path or Embedded File |
+| Output | `XML File Handle` | Integer |
 
 </details>
 
@@ -6626,7 +7272,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Materials File Path` | String |
+| Input | `Bay File Path` | String |
 
 </details>
 
@@ -6678,7 +7329,30 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The `K0004: Date Time Stamp` samples differ only by capture time. They are not reusable defaults and do not change the command disposition. A 2024 caller must provide its intended timestamp. Existing dimension-list limitations retain the reviewed 2026 handling.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `K1001: Part Number` | String |
+| Input | `K1002: Part Description` | String |
+| Input | `K1071: Supplier Number` | String |
+| Input | `K1072: Supplier Description` | String |
+| Input | `K1203: Reason for Test` | String |
+| Input | `K1303: Plant` | String |
+| Input | `K1900: Part Remark` | String |
+| Input | `K0006: Batch Number` | String |
+| Input | `K0014: Part ID` | String |
+| Input | `K0053: Order Number` | String |
+| Input | `K0004: Date Time Stamp` | String |
+| Input | `K0008: Operator Identifier` | Integer |
+| Input | `K0010: Machine Identifier` | Integer |
+| Input | `K0012: Gage Identifier` | Integer |
+| Input | `Relationship List` | Collection Object Name Ref List |
+| Input | `Feature Check List` | Collection Object Name Ref List |
+| Input | `Dimension List` | Binding not emitted by the SDK exporter |
+| Input | `Vector Group List` | Collection Object Name Ref List |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -6744,7 +7418,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Connection String` | String |
+| Input | `Table Name` | String |
 
 </details>
 
@@ -6794,7 +7473,16 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Handle` | Integer |
+| Input | `Line Index` | Integer |
+| Input | `Step to Jump at End of List` | Binding not emitted by the SDK exporter |
+| Input | `Data Delimiter` | Export Data Delimeter Type |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -6846,7 +7534,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `XPath` | String |
+| Input | `Attribute Name` | String |
+| Input | `Remove All Attributes?` | Boolean |
 
 </details>
 
@@ -6898,7 +7593,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `Element to Remove XPath` | String |
 
 </details>
 
@@ -6950,7 +7650,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source File Name` | File Path or Embedded File |
+| Input | `Destination File Name` | File Path or Embedded File |
+| Input | `Overwrite?` | Boolean |
 
 </details>
 
@@ -7001,7 +7707,14 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Program Path` | File Path or Embedded File |
+| Input | `Command Line Arguments (optional)` | String |
+| Input | `Wait For Program Completion` | Boolean |
+| Output | `Process Exit Code` | Integer |
 
 </details>
 
@@ -7053,7 +7766,14 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Powershell Script Path` | File Path or Embedded File |
+| Input | `Script Arguments (optional)` | String |
+| Input | `Wait For Program Completion` | Boolean |
+| Output | `Process Exit Code` | Integer |
 
 </details>
 
@@ -7107,7 +7827,9 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -7158,7 +7880,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Template File Name` | File Path or Embedded File |
 
 </details>
 
@@ -7209,7 +7935,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Name` | File Path or Embedded File |
+| Input | `Add Serial Number?` | Boolean |
+| Input | `Optional Number` | Integer |
 
 </details>
 
@@ -7260,7 +7992,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Save in Binary Format?` | Boolean |
+| Input | `Append to existing file?` | Boolean |
 
 </details>
 
@@ -7311,7 +8049,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Backup Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -7362,7 +8106,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Boolean Name` | String |
+| Input | `Boolean Value` | Boolean |
 
 </details>
 
@@ -7413,7 +8163,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Root Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -7464,7 +8220,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Double Name` | String |
+| Input | `Double Value` | Double |
 
 </details>
 
@@ -7517,7 +8279,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Integer Name` | String |
+| Input | `Integer Value` | Integer |
 
 </details>
 
@@ -7568,7 +8336,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Output | `K0007: Cavity Identifier` | Integer |
+| Output | `K0008: Operator Identifier` | Integer |
+| Output | `K0010: Machine Identifier` | Integer |
+| Output | `K0012: Gage Identifier` | Integer |
 
 </details>
 
@@ -7620,7 +8395,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reports Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -7671,7 +8452,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `String Name` | String |
+| Input | `String Value` | String |
 
 </details>
 
@@ -7722,7 +8509,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Templates Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -7773,7 +8566,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Transform Name` | String |
+| Input | `Transform Value` | Transform |
 
 </details>
 
@@ -7826,7 +8625,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `DataShare File Path` | File Path or Embedded File |
+| Input | `Vector Name` | String |
+| Input | `Vector Value` | Vector |
 
 </details>
 
@@ -7877,7 +8682,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Working Directory` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -7926,7 +8737,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `XML File Handle` | Integer |
+| Input | `XPath` | String |
+| Input | `Add Attribute if Missing?` | Boolean |
 
 </details>
 
@@ -7977,7 +8794,9 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -8028,7 +8847,9 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -8112,7 +8933,15 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `File Name` | File Path or Embedded File |
+| Input | `Step if File does exist` | Binding not emitted by the SDK exporter |
+| Input | `Step if File doesn't exist` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -8165,7 +8994,15 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `MP File Name` | File Path or Embedded File |
+| Input | `Step if MP File does exist` | Binding not emitted by the SDK exporter |
+| Input | `Step if MP File doesn't exist` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -8216,7 +9053,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ASCII File Handle` | Integer |
+| Input | `MakeCSVRow` | Boolean |
 
 </details>
 

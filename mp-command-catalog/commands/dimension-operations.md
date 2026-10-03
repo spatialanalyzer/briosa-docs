@@ -290,7 +290,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimensions List` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -342,7 +349,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Object` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -395,7 +410,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `First Object` | Collection Object Name |
+| Input | `Second Object` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+| Input | `Reference Frame Name` | Collection Object Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -450,7 +475,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Point` | Point Name |
+| Input | `Object` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -504,7 +538,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `First Point` | Point Name |
+| Input | `Second Point` | Point Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+| Input | `Reference Frame Name` | Collection Object Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -559,7 +603,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Object` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -614,7 +666,11 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
 
 </details>
 
@@ -667,7 +723,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Output | `Dimensions Value` | Double |
+| Output | `Nominal Value Enabled?` | Boolean |
+| Output | `High Tolerance Enabled?` | Boolean |
+| Output | `Low Tolerance Enabled?` | Boolean |
+| Output | `Nominal Value` | Double |
+| Output | `High Tolerance` | Double |
+| Output | `Low Tolerance` | Double |
 
 </details>
 
@@ -723,7 +790,15 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimensions List` | Binding not emitted by the SDK exporter |
+| Input | `Dimension Index` | Integer |
+| Output | `Resultant Item` | Collection Object Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -774,7 +849,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimensions List` | Binding not emitted by the SDK exporter |
+| Input | `Dimension Index` | Integer |
+| Input | `Step to Jump at End of List` | Binding not emitted by the SDK exporter |
+| Output | `Resultant Item` | Collection Object Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -826,7 +910,14 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimensions List` | Binding not emitted by the SDK exporter |
+| Output | `Total Count` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -876,7 +967,14 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Name` | Collection Name |
+| Input | `Dimension Ref List` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -926,7 +1024,15 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Wildcard Criteria` | String |
+| Input | `Dimension Wildcard Criteria` | String |
+| Input | `Resultant Dimension Ref List` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -977,7 +1083,15 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimensions List` | Binding not emitted by the SDK exporter |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+| Input | `Show? (Hide = FALSE)` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1030,7 +1144,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1084,7 +1205,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Enable Nominal` | Boolean |
+| Input | `Enable High` | Boolean |
+| Input | `Enable Low` | Boolean |
+| Input | `Nominal` | Double |
+| Input | `High Tolerance` | Double |
+| Input | `Low Tolerance` | Double |
 
 </details>
 
@@ -1141,7 +1272,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1193,7 +1331,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1245,7 +1390,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+| Input | `Reference Frame Name` | Collection Object Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1298,7 +1451,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Dimension Name` | Collection Object Name |
+| Input | `Dimension Properties` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 

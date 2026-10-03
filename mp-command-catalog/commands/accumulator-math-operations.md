@@ -144,7 +144,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double Argument` | Double |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -194,7 +199,11 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -243,7 +252,9 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+The captured command has no SDK argument calls.
 
 </details>
 
@@ -292,7 +303,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double Argument` | Double |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -342,7 +358,11 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -391,7 +411,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double Argument` | Double |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -441,7 +466,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double Argument` | Double |
+| Output | `Accumulator` | Double |
 
 </details>
 
@@ -491,7 +521,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double Argument` | Double |
+| Output | `Accumulator` | Double |
 
 </details>
 

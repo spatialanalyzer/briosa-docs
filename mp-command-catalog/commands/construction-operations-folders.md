@@ -67,7 +67,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Folder Path` | String |
 
 </details>
 
@@ -108,7 +112,15 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Search String` | String |
+| Input | `Case Sensitive Search` | Boolean |
+| Input | `Allow Deleting all Folders` | Boolean |
+| Output | `Num Deleted` | Integer |
+| Output | `Num Failed` | Integer |
 
 </details>
 

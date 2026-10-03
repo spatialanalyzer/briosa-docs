@@ -194,7 +194,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Object(s)` | Collection Object Name Ref List |
+| Input | `Frame Name` | Collection Object Name |
+| Input | `Frame Plane to Mirror Around` | Binding not emitted by the SDK exporter |
+| Input | `Copy? [FALSE = Move]` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -253,7 +262,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source Object` | Collection Object Name |
+| Input | `New Object Name` | Collection Object Name |
+| Input | `Overwrite if exists?` | Boolean |
 
 </details>
 
@@ -302,7 +317,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source Objects` | Collection Object Name Ref List |
+| Input | `Destination Collection Name` | Collection Name |
 
 </details>
 
@@ -351,7 +371,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source Objects` | Collection Object Name Ref List |
+| Input | `Destination Collection Name` | Collection Name |
 
 </details>
 
@@ -399,7 +424,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Objects to Copy` | Collection Object Name Ref List |
+| Input | `First Delta Point` | Point Name |
+| Input | `Second Delta Point` | Point Name |
+| Input | `Destination Collection Name (Optional)` | Collection Name |
 
 </details>
 
@@ -450,7 +482,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Objects to Move` | Collection Object Name Ref List |
+| Input | `First Delta Point` | Point Name |
+| Input | `Second Delta Point` | Point Name |
 
 </details>
 
@@ -499,7 +537,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Original Point Name` | Point Name |
+| Input | `New Point Name` | Point Name |
+| Input | `Overwrite if exists?` | Boolean |
 
 </details>
 
@@ -548,7 +592,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Point Names` | Point Name Ref List |
+| Input | `Name Pattern` | String |
+| Input | `Start Value` | Integer |
 
 </details>
 
@@ -597,7 +647,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Original Collection Name` | Collection Name |
+| Input | `New Collection Name` | Collection Name |
 
 </details>
 
@@ -647,7 +702,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Original Object Name` | Collection Object Name |
+| Input | `New Object Name` | Collection Object Name |
+| Input | `Overwrite if exists?` | Boolean |
 
 </details>
 
@@ -700,7 +761,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Original Item Name` | Collection Object Name |
+| Input | `New Item Name` | Collection Object Name |
+| Input | `Overwrite if exists?` | Boolean |
 
 </details>
 
@@ -752,7 +819,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Point Names` | Point Name Ref List |
 
 </details>
 
@@ -800,7 +871,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Groups to Delete From` | Collection Object Name Ref List |
+| Input | `WildCard Selection Names` | Point Name |
 
 </details>
 

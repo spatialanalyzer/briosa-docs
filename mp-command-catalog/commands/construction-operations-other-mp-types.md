@@ -994,7 +994,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The 2024 choices include `User Name`. They do not include the later `License User Name`, `Windows User Name`, or `Computer Name` choices. Keep `User Name` as its own exact-target choice; do not silently identify it with either later user-name choice.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `String Content` | System String |
+| Input | `Format String (Optional)` | String |
+| Output | `Resultant String` | String |
 
 </details>
 
@@ -1219,7 +1225,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `User Prompt` | String |
+| Output | `Resultant Collection Name` | Collection Name |
 
 </details>
 
@@ -1297,7 +1308,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain: 25 object choices or 41 item choices, as applicable to this argument. The later choice must not be accepted implicitly. The command retains its existing support or exclusion rationale.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Wildcard Criteria` | String |
+| Input | `Item Wildcard Criteria` | String |
+| Input | `Item Type` | Item Type |
+| Output | `Resultant Collection Item Name Reference List` | Collection Object Name Ref List |
 
 </details>
 
@@ -1377,7 +1395,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain: 25 object choices or 41 item choices, as applicable to this argument. The later choice must not be accepted implicitly. The command retains its existing support or exclusion rationale.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `User Prompt` | String |
+| Input | `Object Type` | Object Type |
+| Output | `Resultant Collection Object Name` | Collection Object Name |
 
 </details>
 
@@ -1420,7 +1444,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Object Name` | Collection Object Name |
+| Input | `Use Number Suffix?` | Boolean |
 
 </details>
 
@@ -2513,7 +2542,17 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `X` | Double |
+| Input | `Y` | Double |
+| Input | `Z` | Double |
+| Input | `Rx (Roll)` | Double |
+| Input | `Ry (Pitch)` | Double |
+| Input | `Rz (Yaw)` | Double |
+| Output | `Resultant Transform` | Transform |
 
 </details>
 
@@ -2555,7 +2594,18 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `X` | Double |
+| Input | `Y` | Double |
+| Input | `Z` | Double |
+| Input | `e1` | Double |
+| Input | `e2` | Double |
+| Input | `e3` | Double |
+| Input | `e4` | Double |
+| Output | `Resultant Transform` | Transform |
 
 </details>
 

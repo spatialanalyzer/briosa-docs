@@ -112,7 +112,11 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Scale Bar Name` | Collection Object Name |
 
 </details>
 
@@ -165,7 +169,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Scale Bar Name` | Collection Object Name |
+| Output | `Nominal Length` | Double |
+| Output | `Actual Length` | Double |
+| Output | `Deviation` | Double |
 
 </details>
 
@@ -219,7 +230,17 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `ScaleBar Point A` | Point Name |
+| Input | `ScaleBar Point B` | Point Name |
+| Input | `Current Temperature (F)` | Double |
+| Input | `Length of Bar at 68F` | Double |
+| Input | `Material CTE (PPM/F)` | Double |
+| Input | `Tolerance` | Double |
+| Output | `Deviation at 68F` | Double |
 
 </details>
 
@@ -278,7 +299,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Object Name` | Collection Object Name |
+| Input | `Inward Positive?` | Boolean |
 
 </details>
 
@@ -330,7 +356,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Point Group` | Collection Object Name |
+| Input | `Point Group Sort Options` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 

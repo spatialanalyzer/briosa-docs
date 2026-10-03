@@ -61,7 +61,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Ellipse Name` | Collection Object Name |
+| Input | `X-Axis Radius` | Double |
+| Input | `Y-Axis Radius` | Double |
+| Input | `Z-Axis Radius` | Double |
+| Input | `Magnification` | Double |
+| Input | `Uncertainty Ellipsoid?` | Boolean |
+| Input | `Transform in Working Coordinates` | Transform |
+| Input | `Ellipse Color` | Color |
 
 </details>
 

@@ -77,7 +77,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Circle Name` | Collection Object Name |
+| Input | `Circle Center (in working coordinates)` | Vector |
+| Input | `Circle Normal (in working coordinates)` | Vector |
+| Input | `Circle Radius` | Double |
 
 </details>
 
@@ -160,7 +167,21 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Surfaces` | Collection Object Name Ref List |
+| Input | `Minimum Diameter` | Double |
+| Input | `Maximum Diameter` | Double |
+| Input | `Tolerance` | Double |
+| Input | `Single Surface?` | Boolean |
+| Input | `Circle Line Mode` | Binding not emitted by the SDK exporter |
+| Input | `Destination Collection Name` | Collection Name |
+| Input | `Base Name` | String |
+| Output | `Geometry Objects` | Collection Object Name Ref List |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 

@@ -300,7 +300,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Boolean A` | Boolean |
+| Input | `Boolean B` | Boolean |
+| Input | `Step if Same` | Binding not emitted by the SDK exporter |
+| Input | `Step if Different` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -352,7 +361,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Boolean A` | Boolean |
+| Input | `Boolean B` | Boolean |
+| Output | `Resultant Value` | Boolean |
 
 </details>
 
@@ -403,7 +418,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `String` | String |
+| Input | `Upper Case?` | Boolean |
+| Output | `Resultant String` | String |
 
 </details>
 
@@ -454,7 +475,19 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Color A` | Color |
+| Input | `Color B` | Color |
+| Input | `Allowable Deviation (Red)` | Integer |
+| Input | `Allowable Deviation (Green)` | Integer |
+| Input | `Allowable Deviation (Blue)` | Integer |
+| Input | `Step if Same` | Binding not emitted by the SDK exporter |
+| Input | `Step if Different` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -509,7 +542,16 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Color A` | Color |
+| Input | `Color B` | Color |
+| Input | `Allowable Deviation (Red)` | Integer |
+| Input | `Allowable Deviation (Green)` | Integer |
+| Input | `Allowable Deviation (Blue)` | Integer |
+| Output | `Resultant Value` | Boolean |
 
 </details>
 
@@ -563,7 +605,18 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `String to Check` | String |
+| Input | `Sub-String` | String |
+| Input | `Case sensitive?` | Boolean |
+| Input | `Step if TRUE` | Binding not emitted by the SDK exporter |
+| Input | `Step if FALSE` | Binding not emitted by the SDK exporter |
+| Output | `First Character index` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -617,7 +670,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double In` | Double |
+| Output | `Double Result` | Double |
 
 </details>
 
@@ -667,7 +725,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Input Ang Units` | Angular Units |
+| Input | `Input Angle Double` | Double |
+| Input | `Output Ang Units` | Angular Units |
+| Output | `Output Angle Double` | Double |
 
 </details>
 
@@ -719,7 +784,17 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double A` | Double |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `Double B` | Double |
+| Input | `Step if TRUE` | Binding not emitted by the SDK exporter |
+| Input | `Step if FALSE` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -772,7 +847,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double A` | Double |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `Double B` | Double |
+| Output | `Resultant Value` | Boolean |
 
 </details>
 
@@ -824,7 +906,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Value` | Double |
+| Input | `Operation` | Math Operation |
+| Input | `Second Value` | Double |
+| Output | `Resultant Value` | Double |
 
 </details>
 
@@ -876,7 +965,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double In` | Double |
+| Output | `Double Result` | Double |
 
 </details>
 
@@ -926,7 +1020,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Integer In` | Integer |
+| Output | `Integer Result` | Integer |
 
 </details>
 
@@ -976,7 +1075,18 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Integer A` | Integer |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `Integer B` | Integer |
+| Input | `Step if TRUE` | Binding not emitted by the SDK exporter |
+| Input | `Step if FALSE` | Binding not emitted by the SDK exporter |
+| Input | `Use for % complete` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1030,7 +1140,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Integer A` | Integer |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `Integer B` | Integer |
+| Output | `Resultant Value` | Boolean |
 
 </details>
 
@@ -1082,7 +1199,14 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Value` | Integer |
+| Input | `Operation` | Math Operation |
+| Input | `Second Value` | Integer |
+| Output | `Resultant Value` | Integer |
 
 </details>
 
@@ -1134,7 +1258,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Function` | Logarithmic Function |
+| Input | `X Double In` | Double |
+| Output | `Double Result` | Double |
 
 </details>
 
@@ -1185,7 +1315,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Double In` | Double |
+| Input | `Decimal Precision` | Integer |
+| Output | `Double Result` | Double |
 
 </details>
 
@@ -1236,7 +1372,18 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `String A` | String |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `String B` | String |
+| Input | `Case sensitive?` | Boolean |
+| Input | `Step if TRUE` | Binding not emitted by the SDK exporter |
+| Input | `Step if FALSE` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1290,7 +1437,15 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `String A` | String |
+| Input | `Comparison Type` | Num Comparison Type |
+| Input | `String B` | String |
+| Input | `Case sensitive?` | Boolean |
+| Output | `Resultant Value` | Boolean |
 
 </details>
 
@@ -1343,7 +1498,15 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Function` | Trig Function |
+| Input | `Angular Units` | Angular Units |
+| Input | `X Double In` | Double |
+| Input | `Y Double In` | Double |
+| Output | `Double Result` | Double |
 
 </details>
 
