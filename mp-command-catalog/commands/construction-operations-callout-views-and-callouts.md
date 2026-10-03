@@ -179,7 +179,32 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Destination Callout View` | Collection Object Name |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Name` | String |
+| Input | `View X Position` | Double |
+| Input | `View Y Position` | Double |
+| Input | `Show Collection?` | Boolean |
+| Input | `Show Vector Group?` | Boolean |
+| Input | `Show Vector Name?` | Boolean |
+| Input | `Show dX?` | Boolean |
+| Input | `Show dY?` | Boolean |
+| Input | `Show dZ?` | Boolean |
+| Input | `Show dMag?` | Boolean |
+| Input | `Show Tolerance Color?` | Boolean |
+| Input | `Show Out of Tolerance Value?` | Boolean |
+| Input | `Show Tolerance Range?` | Boolean |
+| Input | `Show Vector Color?` | Boolean |
+| Input | `Show Start Point?` | Boolean |
+| Input | `Show End Point?` | Boolean |
+| Input | `Show Units?` | Boolean |
+| Input | `Additional Notes (blank for none)` | Edit Text |
+| Input | `Attach Callout to End Point?` | Boolean |
+| Input | `Use default placement?` | Boolean |
 
 </details>
 
@@ -226,7 +251,31 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Destination Callout View` | Collection Object Name |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Number of vectors with Highest Mag?` | Integer |
+| Input | `Number of vectors with Lowest Mag?` | Integer |
+| Input | `Show Collection?` | Boolean |
+| Input | `Show Vector Group?` | Boolean |
+| Input | `Show Vector Name?` | Boolean |
+| Input | `Show dX?` | Boolean |
+| Input | `Show dY?` | Boolean |
+| Input | `Show dZ?` | Boolean |
+| Input | `Show dMag?` | Boolean |
+| Input | `Show Tolerance Color?` | Boolean |
+| Input | `Tolerance Color Blue(+)/Green/Red(-)?` | Boolean |
+| Input | `Show Out of Tolerance Value?` | Boolean |
+| Input | `Show Tolerance Range?` | Boolean |
+| Input | `Show Vector Color?` | Boolean |
+| Input | `Show Start Point?` | Boolean |
+| Input | `Show End Point?` | Boolean |
+| Input | `Show Units?` | Boolean |
+| Input | `Attach Callout to End Point?` | Boolean |
+| Input | `Use default placement?` | Boolean |
 
 </details>
 
@@ -271,7 +320,28 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Destination Callout View` | Collection Object Name |
+| Input | `Point` | Point Name |
+| Input | `View X Position` | Double |
+| Input | `View Y Position` | Double |
+| Input | `Show Point Collection?` | Boolean |
+| Input | `Show Point Group?` | Boolean |
+| Input | `Show Point Target?` | Boolean |
+| Input | `Show X (R)?` | Boolean |
+| Input | `Show Y (Theta)?` | Boolean |
+| Input | `Show Z (Phi)?` | Boolean |
+| Input | `Show Units?` | Boolean |
+| Input | `Show Ux (Ur)?` | Boolean |
+| Input | `Show Uy (Utheta)?` | Boolean |
+| Input | `Show Uz (Uphi)?` | Boolean |
+| Input | `Show Umag?` | Boolean |
+| Input | `Desired Coordinate System` | Coordinate System Type |
+| Input | `Notes (blank for none)` | Edit Text |
+| Input | `Use default placement?` | Boolean |
 
 </details>
 
@@ -316,7 +386,32 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Destination Callout View` | Collection Object Name |
+| Input | `First Point` | Point Name |
+| Input | `Second Point` | Point Name |
+| Input | `View X Position` | Double |
+| Input | `View Y Position` | Double |
+| Input | `Show First Point Collection?` | Boolean |
+| Input | `Show First Point Group?` | Boolean |
+| Input | `Show First Point Target?` | Boolean |
+| Input | `Show First Point Coordinates?` | Boolean |
+| Input | `Show Second Point Collection?` | Boolean |
+| Input | `Show Second Point Group?` | Boolean |
+| Input | `Show Second Point Target?` | Boolean |
+| Input | `Show Second Point Coordinates?` | Boolean |
+| Input | `Show dX?` | Boolean |
+| Input | `Show dY?` | Boolean |
+| Input | `Show dZ?` | Boolean |
+| Input | `Show dMag?` | Boolean |
+| Input | `Additional X Comments (blank for none)` | String |
+| Input | `Additional Y Comments (blank for none)` | String |
+| Input | `Additional Z Comments (blank for none)` | String |
+| Input | `Additional Notes (blank for none)` | Edit Text |
+| Input | `Use default placement?` | Boolean |
 
 </details>
 
@@ -527,7 +622,17 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Wildcard Criteria` | String |
+| Input | `Callout View Wildcard Criteria` | String |
+| Input | `Resultant Callout View List` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
+
+The exporter places `Resultant Callout View List` in its input position without a getter; the reference below documents it as an output.
 
 </details>
 

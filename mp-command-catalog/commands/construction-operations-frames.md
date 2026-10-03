@@ -162,7 +162,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `New Frame Name` | Collection Object Name |
+| Input | `Wait for Completion` | Boolean |
 
 </details>
 
@@ -203,7 +208,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `New Frame Name` | Collection Object Name |
+| Input | `Transform in Working Coordinates` | Transform |
 
 </details>
 
@@ -243,7 +253,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `New Frame Name` | Collection Object Name |
+| Input | `Transform in World Coordinates` | Transform |
 
 </details>
 
@@ -280,7 +295,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Instrument ID` | Collection Instrument ID |
+| Input | `Frame Name (Optional)` | Frame Name |
 
 </details>
 
@@ -321,7 +341,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Object` | Collection Object Name |
+| Input | `Frame Name (Optional)` | Collection Object Name |
 
 </details>
 
@@ -358,7 +383,15 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Construction Method` | String |
+| Input | `Origin Point` | Point Name |
+| Input | `Primary Axis Point` | Point Name |
+| Input | `Secondary Axis Point` | Point Name |
+| Input | `Frame Name (Optional)` | Frame Name |
 
 </details>
 
@@ -399,7 +432,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Origin Point` | Point Name |
+| Input | `Clocked axis` | Axis Name |
+| Input | `Clocking Point` | Point Name |
+| Input | `Frame Name (Optional)` | Frame Name |
 
 </details>
 
@@ -438,7 +478,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Origin Point` | Point Name |
+| Input | `Point on X-Axis` | Point Name |
+| Input | `Frame Name (Optional)` | Frame Name |
 
 </details>
 
@@ -479,7 +525,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Known Point` | Point Name |
+| Input | `Known Point Value in New Frame` | Vector |
+| Input | `Primary Axis Object` | Collection Object Name |
+| Input | `Primary Axis Defines Which Axis` | Axis Name |
+| Input | `Secondary Axis Object` | Collection Object Name |
+| Input | `Secondary Axis Defines Which Axis` | Axis Name |
+| Input | `Frame Name (Optional)` | Collection Object Name |
 
 </details>
 
@@ -524,7 +580,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `X Plane` | Collection Object Name |
+| Input | `X Value on PLane` | Double |
+| Input | `Y Plane` | Collection Object Name |
+| Input | `Y Value on PLane` | Double |
+| Input | `Z Plane` | Collection Object Name |
+| Input | `Z Value on Plane` | Double |
+| Input | `Frame Name (Optional)` | Collection Object Name |
 
 </details>
 
@@ -569,7 +635,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Frame` | Collection Object Name |
+| Input | `Frame Name (Optional)` | Collection Object Name |
+| Input | `Axis to reverse` | Axis Name |
 
 </details>
 
@@ -609,7 +681,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Objects` | Collection Object Name Ref List |
+| Input | `Frame Name (Optional)` | Collection Object Name |
 
 </details>
 
@@ -649,7 +726,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Machine ID` | Collection Machine ID |
+| Input | `Link Name` | String |
+| Input | `Resulting Frame` | Collection Object Name |
 
 </details>
 
@@ -688,7 +771,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Point List` | Point Name Ref List |
+| Input | `Show Frame? (Hide = FALSE)` | Boolean |
 
 </details>
 
@@ -728,7 +816,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Mirror Cube Frame Name` | Collection Object Name |
+| Input | `Point Name` | Point Name |
+| Input | `Use Current Measurements Marked as Mirror Shots` | Boolean |
+| Input | `Nominal Cube Face Angle` | Double |
+| Output | `Total Angular Error` | Double |
 
 </details>
 
@@ -771,7 +867,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Frame Names` | Collection Object Name Ref List |
+| Input | `Base Name For Projected Frames` | Collection Object Name |
+| Input | `Bi-directional projection?` | Boolean |
+| Input | `Mesh Serving As Projection Target` | Collection Object Name |
+| Output | `Resultant Frame Name List` | Collection Object Name Ref List |
 
 </details>
 
@@ -814,7 +918,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Frame Names` | Collection Object Name Ref List |
+| Input | `Base Name For Projected Frames` | Collection Object Name |
+| Input | `Object Providing Direction Reference` | Collection Object Name |
+| Input | `Bi-directional projection?` | Boolean |
+| Input | `Mesh Serving As Projection Target` | Collection Object Name |
+| Output | `Resultant Frame Name List` | Collection Object Name Ref List |
 
 </details>
 
@@ -858,7 +971,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Frame Names` | Collection Object Name Ref List |
+| Input | `Surface for Offset Distance Computation` | Collection Object Name |
+| Input | `Surface Offset Range` | Double |
+| Input | `Collection for Result Frames` | String |
+| Input | `Object Providing Direction Reference` | Collection Object Name |
+| Input | `Bi-directional projection?` | Boolean |
+| Input | `Mesh Serving As Projection Target` | Collection Object Name |
 
 </details>
 

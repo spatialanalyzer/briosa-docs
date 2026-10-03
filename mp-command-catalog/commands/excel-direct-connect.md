@@ -246,7 +246,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Save?` | Boolean |
 
 </details>
 
@@ -329,7 +334,15 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Output | `Absolute Position Worksheet Name` | String |
+| Output | `Absolute Position Column (A, B, C, ...)` | String |
+| Output | `Absolute Position Row (1, 2, 3, ...)` | Integer |
+| Output | `Auto Move # Cells` | Integer |
 
 </details>
 
@@ -382,7 +395,13 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook File Path` | File Path or Embedded File |
+| Input | `Verify File Exists?` | Boolean |
+| Output | `Workbook Handle` | Integer |
 
 </details>
 
@@ -433,7 +452,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Output | `Resultant Data` | Double |
 
 </details>
 
@@ -483,7 +507,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Output | `Resultant Data` | Integer |
 
 </details>
 
@@ -533,7 +562,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Output | `Resultant Data` | String |
 
 </details>
 
@@ -583,7 +617,11 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
 
 </details>
 
@@ -632,7 +670,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Macro Name` | String |
 
 </details>
 
@@ -682,7 +725,11 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
 
 </details>
 
@@ -731,7 +778,16 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Clear Comments` | Boolean |
+| Input | `Clear Formulas` | Boolean |
+| Input | `Clear Formats` | Boolean |
+| Input | `Clear Notes` | Boolean |
+| Input | `Clear Outline` | Boolean |
 
 </details>
 
@@ -785,7 +841,21 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Addressing Mode` | Workbook Address Mode Type |
+| Input | `Absolute Position Worksheet Name` | String |
+| Input | `Absolute Position Column (A, B, C, ...)` | String |
+| Input | `Absolute Position Row (1, 2, 3, ...)` | Integer |
+| Input | `Relative Move Direction` | Move Direction Type |
+| Input | `Relative Move # Cells` | Integer |
+| Input | `Named Cell/Range in Workbook` | String |
+| Input | `Write Mode` | Write Mode Type |
+| Input | `Auto Move Direction` | Move Direction Type |
+| Input | `Auto Move # Cells` | Integer |
 
 </details>
 
@@ -844,7 +914,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Data to Write` | Double |
 
 </details>
 
@@ -894,7 +969,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Data to Write` | Integer |
 
 </details>
 
@@ -946,7 +1026,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Picture Name` | Collection Object Name |
 
 </details>
 
@@ -996,7 +1081,12 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
+| Input | `Data to Write` | String |
 
 </details>
 
@@ -1046,7 +1136,11 @@ The deferral and recommended alternative below also apply to 2024; no release is
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Workbook Handle` | Integer |
 
 </details>
 

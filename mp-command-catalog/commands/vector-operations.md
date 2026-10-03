@@ -352,7 +352,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Name` | String |
+| Input | `Vector Name List` | Vector Name Ref List |
 
 </details>
 
@@ -405,7 +411,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Treat Individually?` | Boolean |
+| Input | `Colorization Options (Uses Mode Only)` | Colorization Options |
 
 </details>
 
@@ -457,7 +468,13 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Groups to be Set` | Collection Vector Group Name Ref List |
+| Input | `Treat Individually?` | Boolean |
+| Input | `Colorization Options (Uses Mode Only)` | Colorization Options |
 
 </details>
 
@@ -512,7 +529,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Index` | Integer |
 
 </details>
 
@@ -566,7 +588,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Name` | String |
 
 </details>
 
@@ -618,7 +645,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Name List` | Vector Name Ref List |
 
 </details>
 
@@ -671,7 +702,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Index` | Integer |
+| Output | `Vector Name` | String |
+| Output | `Begin in Working` | Vector |
+| Output | `End in Working` | Vector |
+| Output | `Total Delta in Working` | Vector |
+| Output | `ijk Unit Vector in Working` | Vector |
+| Output | `Magnitude` | Double |
 
 </details>
 
@@ -729,7 +771,19 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Name List` | Vector Name Ref List |
+| Input | `Vector Index` | Integer |
+| Output | `Vector Group Name` | Collection Object Name |
+| Output | `Vector Name` | String |
+| Output | `Begin in Working` | Vector |
+| Output | `End in Working` | Vector |
+| Output | `Total Delta in Working` | Vector |
+| Output | `ijk Unit Vector in Working` | Vector |
+| Output | `Magnitude` | Double |
 
 </details>
 
@@ -790,7 +844,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Output | `Total Count` | Integer |
 
 </details>
 
@@ -842,7 +901,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Name List` | Vector Name Ref List |
+| Output | `Total Count` | Integer |
 
 </details>
 
@@ -896,7 +960,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Input | `Vector Name` | String |
+| Output | `Begin in Working` | Vector |
+| Output | `End in Working` | Vector |
+| Output | `Total Delta in Working` | Vector |
+| Output | `ijk Unit Vector in Working` | Vector |
+| Output | `Magnitude` | Double |
 
 </details>
 
@@ -953,7 +1027,11 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
 
 </details>
 
@@ -1002,7 +1080,33 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Colorization Options` | Colorization Options |
+| Output | `Draw Arrowheads?` | Boolean |
+| Output | `Indicate Values?` | Boolean |
+| Output | `Vector Magnification` | Double |
+| Output | `Vector Width` | Integer |
+| Output | `Draw Color Blotches?` | Boolean |
+| Output | `Blotch Size` | Double |
+| Output | `Show Out of Tolerance Only?` | Boolean |
+| Output | `Show Color Bar in View?` | Boolean |
+| Output | `Show Color Bar Percentages?` | Boolean |
+| Output | `Show Color Bar Fractions?` | Boolean |
+| Output | `High Saturation Limit` | Double |
+| Output | `Low Saturation Limit` | Double |
+| Output | `High Tolerance` | Double |
+| Output | `Low Tolerance` | Double |
+| Output | `High Warning` | Double |
+| Output | `Low Warning` | Double |
+| Output | `Draw Tubes?` | Boolean |
+| Output | `Render in 2D?` | Boolean |
+| Output | `Draw Trifoils?` | Boolean |
+| Output | `Trifoil Magnification` | Double |
+| Output | `Absolute Trifoil Values?` | Boolean |
+| Output | `Show Zero Trifoil Values?` | Boolean |
 
 </details>
 
@@ -1077,7 +1181,28 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Group Name` | Collection Object Name |
+| Output | `Total Vectors` | Integer |
+| Output | `Vectors In Tolerance` | Integer |
+| Output | `Vectors Out Of Tolerance` | Integer |
+| Output | `Invalid Vectors` | Integer |
+| Output | `% Vectors In Tolerance` | Double |
+| Output | `% Vectors Out Of Tolerance` | Double |
+| Output | `Absolute Max Magnitude` | Double |
+| Output | `Absolute Min Magnitude` | Double |
+| Output | `Max Magnitude` | Double |
+| Output | `Min Magnitude` | Double |
+| Output | `Standard Deviation From Zero` | Double |
+| Output | `Standard Deviation From Mean` | Double |
+| Output | `Avg Magnitude` | Double |
+| Output | `Avg of Abs Magnitude` | Double |
+| Output | `High Tolerance Value` | Double |
+| Output | `Low Tolerance Value` | Double |
+| Output | `RMS Value` | Double |
 
 </details>
 
@@ -1145,7 +1270,11 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Colorization Options` | Colorization Options |
 
 </details>
 
@@ -1196,7 +1325,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector Groups to be Set` | Collection Vector Group Name Ref List |
+| Input | `Colorization Options` | Colorization Options |
 
 </details>
 
@@ -1246,7 +1380,38 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Draw Arrowheads?` | Boolean |
+| Input | `Indicate Values?` | Boolean |
+| Input | `Vector Magnification` | Double |
+| Input | `Vector Width` | Integer |
+| Input | `Draw Color Blotches?` | Boolean |
+| Input | `Blotch Size` | Double |
+| Input | `Show Out of Tolerance Only?` | Boolean |
+| Input | `Show Color Bar in View?` | Boolean |
+| Input | `Show Color Bar Percentages?` | Boolean |
+| Input | `Show Color Bar Fractions?` | Boolean |
+| Input | `High Saturation Limit Type` | Saturation Limit Type |
+| Input | `High Saturation Limit` | Double |
+| Input | `Low Saturation Limit Type` | Saturation Limit Type |
+| Input | `Low Saturation Limit` | Double |
+| Input | `High Tolerance` | Double |
+| Input | `Low Tolerance` | Double |
+| Input | `High Warning` | Double |
+| Input | `Low Warning` | Double |
+| Input | `Color Ranging Method` | Color Range Method |
+| Input | `Base High Color` | Base Color Type |
+| Input | `Base Mid Color` | Base Mid Color Type |
+| Input | `Base Low Color` | Base Color Type |
+| Input | `Draw Tubes?` | Boolean |
+| Input | `Render in 2D?` | Boolean |
+| Input | `Draw Trifoils?` | Boolean |
+| Input | `Trifoil Magnification` | Double |
+| Input | `Absolute Trifoil Values?` | Boolean |
+| Input | `Show Zero Trifoil Values?` | Boolean |
 
 </details>
 
@@ -1324,7 +1489,21 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Source Vectors` | Vector Name Ref List |
+| Input | `Sort Method` | String |
+| Input | `Coordinate System` | Coordinate System Type |
+| Input | `Primary Sort Coordinate` | String |
+| Input | `Secondary Sort Coordinate` | String |
+| Input | `Tertiary Sort Coordinate` | String |
+| Input | `Primary Coordinate Granularity` | Double |
+| Input | `Secondary Coordinate Granularity` | Double |
+| Input | `Tertiary Coordinate Granularity` | Double |
+| Input | `Ascending?` | Boolean |
+| Output | `Sorted Vectors` | Vector Name Ref List |
 
 </details>
 
@@ -1383,7 +1562,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Vector` | Vector |
+| Input | `Second Vector` | Vector |
+| Output | `Resultant Vector` | Vector |
 
 </details>
 
@@ -1434,7 +1619,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Vector` | Vector |
+| Input | `Second Vector` | Vector |
+| Output | `Resultant Vector` | Vector |
 
 </details>
 
@@ -1485,7 +1676,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Vector` | Vector |
+| Input | `Second Vector` | Vector |
+| Output | `Resultant Value` | Double |
 
 </details>
 
@@ -1536,7 +1733,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector` | Vector |
+| Output | `Resultant Value` | Double |
 
 </details>
 
@@ -1586,7 +1788,12 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector` | Vector |
+| Output | `Resultant Vector` | Vector |
 
 </details>
 
@@ -1636,7 +1843,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Vector` | Vector |
+| Input | `Scale Factor` | Double |
+| Output | `Resultant Vector` | Vector |
 
 </details>
 
@@ -1687,7 +1900,13 @@ The exclusion and recommended alternative below also apply to 2024.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Vector` | Vector |
+| Input | `Second Vector` | Vector |
+| Output | `Resultant Vector` | Vector |
 
 </details>
 
