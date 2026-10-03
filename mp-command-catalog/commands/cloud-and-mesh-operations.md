@@ -344,7 +344,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Thin (Draw Increment)` | Integer |
+| Input | `Point Size` | Integer |
 
 </details>
 
@@ -399,7 +404,25 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Name` | Collection Object Name |
+| Input | `Cloud Box Type` | String |
+| Input | `Show Bounding Box?` | Boolean |
+| Input | `Use All Points?` | Boolean |
+| Input | `Desired Point Count` | Integer |
+| Output | `X-Axis Dimension` | Double |
+| Output | `Y-Axis Dimension` | Double |
+| Output | `Z-Axis Dimension` | Double |
+| Output | `X-Axis (in WORLD)` | Vector |
+| Output | `Y-Axis (in WORLD)` | Vector |
+| Output | `Z-Axis (in WORLD)` | Vector |
+| Output | `Centroid (in WORLD)` | Vector |
+| Output | `Reference Transform (in WORLD)` | Transform |
+| Output | `Reference Transform (in WORKING)` | Transform |
+| Output | `Points Used for Bounding Box` | Integer |
 
 </details>
 
@@ -467,7 +490,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Name` | Collection Object Name |
+| Output | `Points Count` | Integer |
+| Output | `Planar Offset` | Double |
+| Output | `Radial Offset` | Double |
+| Output | `Active Clipping Planes` | Integer |
 
 </details>
 
@@ -525,7 +556,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Enable Cloud Clipping?` | Boolean |
+| Input | `Reference Object` | Collection Object Name |
+| Input | `Clipping Options` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -581,7 +620,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Edge Surface Name` | Collection Object Name |
+| Input | `BSpline Edge List` | Collection Object Name Ref List |
+| Input | `Prefix for Output Groups` | Collection Object Name |
+| Input | `Tolerance` | Double |
+| Input | `Minimum Number of "Good" Points per Unit Length` | Integer |
+| Input | `Maximum Percentage of "Bad" Points (0-100)` | Double |
+| Output | `Summary Result` | String |
 
 </details>
 
@@ -642,7 +692,22 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Edge Cloud Names` | Collection Object Name Ref List |
+| Input | `Edge Surface Name` | Collection Object Name |
+| Input | `Edge BSpline Name` | Collection Object Name |
+| Input | `Output Prefix` | Collection Object Name |
+| Input | `Inspection Increment` | Double |
+| Input | `Proximity Filter Distance` | Double |
+| Input | `Edge Bias Value` | Double |
+| Input | `Error Tolerance` | Double |
+| Input | `Use Cosine Projection Method` | Boolean |
+| Input | `Minimum Number of Edge Points per segment` | Integer |
+| Input | `Intermediate Calculation Results File(optional)` | File Path or Embedded File |
+| Output | `Summary Result` | String |
 
 </details>
 
@@ -741,7 +806,11 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cross Section Cloud Name` | Collection Object Name |
 
 </details>
 
@@ -795,7 +864,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cross Section Cloud Name` | Collection Object Name |
+| Input | `Cross Section ID` | Integer |
+| Input | `Enable (TRUE) / Disable (FALSE)?` | Boolean |
 
 </details>
 
@@ -851,7 +926,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cross Section Cloud Name` | Collection Object Name |
+| Input | `Cross Section ID` | Integer |
 
 </details>
 
@@ -906,7 +986,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cross Section Cloud Name` | Collection Object Name |
+| Output | `Cross Section Count` | Integer |
 
 </details>
 
@@ -961,7 +1046,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Filter Plane's Name` | Collection Object Name |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Proximity` | Double |
+| Input | `Allowable Offset Dir` | Offset Direction Type |
+| Input | `Output Type` | String |
 
 </details>
 
@@ -1020,7 +1114,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Filter Group's Name` | Collection Object Name |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Proximity (0 for Closest Point only)` | Double |
+| Input | `Maximum Number of Points (0 for Unlimited)` | Integer |
+| Input | `Output Type` | String |
 
 </details>
 
@@ -1079,7 +1182,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Filter Surface's Name` | Collection Object Name |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Low Proximity` | Double |
+| Input | `High Proximity` | Double |
+| Input | `Skip Factor` | Integer |
+| Input | `Output Type` | String |
 
 </details>
 
@@ -1139,7 +1252,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Filter BSpline Names` | Collection Object Name Ref List |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Minimum Proximity` | Double |
+| Input | `Maximum Proximity` | Double |
+| Input | `Output Type` | String |
 
 </details>
 
@@ -1198,7 +1320,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `First Line End Point` | Point Name |
+| Input | `Second Line End Point` | Point Name |
+| Input | `Output Group Name` | Collection Object Name |
+| Input | `Minimum Proximity` | Double |
+| Input | `Maximum Proximity` | Double |
+| Input | `Output Type` | String |
 
 </details>
 
@@ -1369,7 +1501,33 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Filter Name` | String |
+| Input | `Clouds To Be Filtered` | Collection Object Name Ref List |
+| Input | `Red Enabled` | Boolean |
+| Input | `Red High Enabled` | Boolean |
+| Input | `Red High Threshold` | Integer |
+| Input | `Red Low Enabled` | Boolean |
+| Input | `Red Low Threshold` | Integer |
+| Input | `Green Enabled` | Boolean |
+| Input | `Green High Enabled` | Boolean |
+| Input | `Green High Threshold` | Integer |
+| Input | `Green Low Enabled` | Boolean |
+| Input | `Green Low Threshold` | Integer |
+| Input | `Blue Enabled` | Boolean |
+| Input | `Blue High Enabled` | Boolean |
+| Input | `Blue High Threshold` | Integer |
+| Input | `Blue Low Enabled` | Boolean |
+| Input | `Blue Low Threshold` | Integer |
+| Input | `Gray Scale Enabled` | Boolean |
+| Input | `Gray Scale High Enabled` | Boolean |
+| Input | `Gray Scale High Threshold` | Integer |
+| Input | `Gray Scale Low Enabled` | Boolean |
+| Input | `Gray Scale Low Threshold` | Integer |
+| Input | `RGB Filter Operation` | String |
 
 </details>
 
@@ -1561,7 +1719,14 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `Points` | Point Name Ref List |
+| Input | `Radius` | Double |
+| Input | `Delete Inside` | Boolean |
 
 </details>
 
@@ -1616,7 +1781,20 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Names` | Collection Object Name Ref List |
+| Input | `X Min` | Binding not emitted by the SDK exporter |
+| Input | `X Max` | Binding not emitted by the SDK exporter |
+| Input | `Y Min` | Binding not emitted by the SDK exporter |
+| Input | `Y Max` | Binding not emitted by the SDK exporter |
+| Input | `Z Min` | Binding not emitted by the SDK exporter |
+| Input | `Z Max` | Binding not emitted by the SDK exporter |
+| Input | `Delete Inside` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1677,7 +1855,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Output Mesh Name` | Collection Object Name |
+| Input | `Clouds to Mesh` | Collection Object Name Ref List |
+| Input | `Maximum Triangle Size` | Double |
+| Input | `Smallest Hole Diameter` | Double |
+| Input | `Finalize` | Boolean |
+| Input | `Use Scan Direction For Point Normal` | Boolean |
+| Input | `JSON File(optional)` | String |
 
 </details>
 
@@ -1771,7 +1959,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Mesh` | Collection Object Name |
+| Input | `Plane` | Collection Object Name |
+| Output | `Above` | Double |
+| Output | `Below` | Double |
 
 </details>
 

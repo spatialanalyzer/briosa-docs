@@ -1126,7 +1126,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationships` | Collection Object Name Ref List |
+| Input | `Enable?` | Boolean |
 
 </details>
 
@@ -1180,7 +1185,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Outlier Rejection Options` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1234,7 +1246,11 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
 
 </details>
 
@@ -1287,7 +1303,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Auto Vectors Nominal (AVN) - Enabled?` | Boolean |
+| Output | `Auto Vectors Nominal (AVN) - Name` | Collection Object Name |
+| Output | `Auto Vectors Fit (AVF) - Enabled?` | Boolean |
+| Output | `Auto Vectors Fit (AVF) - Name` | Collection Object Name |
+| Output | `Points Type` | String |
 
 </details>
 
@@ -1345,7 +1370,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Cardinal Point Name List` | Point Name Ref List |
 
 </details>
 
@@ -1399,7 +1429,22 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Criteria` | String |
+| Output | `Nominal` | Double |
+| Output | `Measured` | Double |
+| Output | `Delta` | Double |
+| Output | `Low Tolerance` | Double |
+| Output | `High Tolerance` | Double |
+| Output | `Optimization: Delta Weight` | Double |
+| Output | `Optimization: Out of Tolerance Weight` | Double |
+| Output | `Is within Tolerance?` | String |
+| Output | `Has Uncertainty?` | Boolean |
+| Output | `Uncertainty` | Double |
 
 </details>
 
@@ -1463,7 +1508,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Measured Average Point` | Point Name |
 
 </details>
 
@@ -1517,7 +1567,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Measured Geometry` | Collection Object Name |
 
 </details>
 
@@ -1571,7 +1626,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Nominal Average Point` | Point Name |
 
 </details>
 
@@ -1625,7 +1685,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Nominal Geometry` | Collection Object Name |
 
 </details>
 
@@ -1679,7 +1744,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `All Points` | Point Name Ref List |
+| Output | `Used Points` | Point Name Ref List |
+| Output | `Ignored Points` | Point Name Ref List |
 
 </details>
 
@@ -1735,7 +1807,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Projection Plane Name` | Collection Object Name |
 
 </details>
 
@@ -1789,7 +1866,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Pipe 1 - Cut Available?` | Boolean |
+| Output | `Pipe 1 - Cut Active?` | Boolean |
+| Output | `Pipe 2 - Cut Available?` | Boolean |
+| Output | `Pipe 2 - Cut Active?` | Boolean |
 
 </details>
 
@@ -1846,7 +1931,21 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Pipe 1 - Object Name` | Collection Object Name |
+| Output | `Pipe 1 - Inner Diameter` | Double |
+| Output | `Pipe 1 - Outer Diameter` | Double |
+| Output | `Pipe 1 - Cut Begin` | Double |
+| Output | `Pipe 1 - Cut End` | Double |
+| Output | `Pipe 2 - Object Name` | Collection Object Name |
+| Output | `Pipe 2 - Inner Diameter` | Double |
+| Output | `Pipe 2 - Outer Diameter` | Double |
+| Output | `Pipe 2 - Cut Begin` | Double |
+| Output | `Pipe 2 - Cut End` | Double |
 
 </details>
 
@@ -1909,7 +2008,19 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Overall Weight` | Double |
+| Output | `Axis Offset` | Double |
+| Output | `Axis Alignment` | Double |
+| Output | `Center Pull` | Double |
+| Output | `Out of material - Weight` | Double |
+| Output | `Out of material - Static Offset` | Double |
+| Output | `Constrain Region at OD` | Boolean |
+| Output | `Constrain ID/OD overlap` | Boolean |
 
 </details>
 
@@ -1970,7 +2081,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Use High Tolerance?` | Boolean |
+| Output | `High Tolerance` | Double |
+| Output | `Use Low Tolerance?` | Boolean |
+| Output | `Low Tolerance` | Double |
+| Output | `Fit Constraint Options` | Fit Constraint Scalar Options |
 
 </details>
 
@@ -2028,7 +2148,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Outlier Rejection Options` | Binding not emitted by the SDK exporter |
+| Output | `Use High Limit?` | Boolean |
+| Output | `High Limit` | Double |
+| Output | `Use Low Limit?` | Boolean |
+| Output | `Low Limit` | Double |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -2086,7 +2217,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Ignore Edge Projections?` | Boolean |
+| Output | `Probe Offsets - Override Target Values?` | Boolean |
+| Output | `Probe Offsets - Override Value` | Double |
+| Output | `Add Extra Material?` | Boolean |
+| Output | `Extra Material Thickness` | Double |
 
 </details>
 
@@ -2144,7 +2284,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Reporting Frame` | Collection Object Name |
 
 </details>
 
@@ -2240,7 +2385,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Use every i-th point` | Boolean |
+| Output | `i value` | Integer |
+| Output | `Use no more than n points` | Boolean |
+| Output | `n value` | Integer |
 
 </details>
 
@@ -2297,7 +2450,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Use High Tolerance?` | Boolean |
+| Output | `High Tolerance` | Double |
+| Output | `Use Low Tolerance?` | Boolean |
+| Output | `Low Tolerance` | Double |
+| Output | `Tolerance Options` | Tolerance Scalar Options |
 
 </details>
 
@@ -2355,7 +2517,28 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Use High X Tolerance?` | Boolean |
+| Output | `High X Tolerance` | Double |
+| Output | `Use High Y Tolerance?` | Boolean |
+| Output | `High Y Tolerance` | Double |
+| Output | `Use High Z Tolerance?` | Boolean |
+| Output | `High Z Tolerance` | Double |
+| Output | `Use High Mag Tolerance?` | Boolean |
+| Output | `High Mag Tolerance` | Double |
+| Output | `Use Low X Tolerance?` | Boolean |
+| Output | `Low X Tolerance` | Double |
+| Output | `Use Low Y Tolerance?` | Boolean |
+| Output | `Low Y Tolerance` | Double |
+| Output | `Use Low Z Tolerance?` | Boolean |
+| Output | `Low Z Tolerance` | Double |
+| Output | `Use Low Mag Tolerance?` | Boolean |
+| Output | `Low Mag Tolerance` | Double |
+| Output | `Vector Tolerance` | Tolerance Vector Options |
 
 </details>
 
@@ -2425,7 +2608,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Relationship Type` | String |
 
 </details>
 
@@ -2479,7 +2667,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Output | `Weight` | Double |
 
 </details>
 
@@ -2533,7 +2726,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Pipe 1 - Object Name` | Collection Object Name |
+| Input | `Pipe 2 - Object Name` | Collection Object Name |
 
 </details>
 
@@ -2588,7 +2787,17 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Pipe 1 - Make Cut` | Boolean |
+| Input | `Pipe 1 - Create Frame` | Boolean |
+| Input | `Pipe 1 - Frame Name` | Collection Object Name |
+| Input | `Pipe 2 - Make Cut` | Boolean |
+| Input | `Pipe 2 - Create Frame` | Boolean |
+| Input | `Pipe 2 - Frame Name` | Collection Object Name |
 
 </details>
 
@@ -2647,7 +2856,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Pipe 1 - Force Cut to Frame?` | Boolean |
+| Input | `Pipe 1 - Frame Name` | Collection Object Name |
+| Input | `Pipe 2 - Force Cut to Frame?` | Boolean |
+| Input | `Pipe 2 - Frame Name` | Collection Object Name |
 
 </details>
 
@@ -2840,7 +3057,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Create Cardinal Pts when Fitting?` | Boolean |
+| Input | `Prefix Cardinal Pts name with Rel name?` | Boolean |
+| Input | `Cardinal Pts Group Name` | String |
 
 </details>
 
@@ -2896,7 +3120,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Criteria` | String |
+| Input | `Show in Report` | Boolean |
+| Input | `Tolerance Options` | Tolerance Scalar Options |
+| Input | `Optimization: Delta Weight` | Double |
+| Input | `Optimization: Out of Tolerance Weight` | Double |
 
 </details>
 
@@ -2954,7 +3187,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Measured Geometry` | Collection Object Name |
 
 </details>
 
@@ -3008,7 +3246,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Compare To Nominal?` | Boolean |
+| Input | `Nominal Average Point` | Point Name |
 
 </details>
 
@@ -3063,7 +3307,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Compare To Nominal?` | Boolean |
+| Input | `Nominal Geometry` | Collection Object Name |
 
 </details>
 
@@ -3118,7 +3368,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Project to Plane?` | Boolean |
+| Input | `Projection Plane Name` | Collection Object Name |
 
 </details>
 
@@ -3173,7 +3429,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Angle Between Vectors Fit Constraints` | Fit Constraint Scalar Options |
+| Input | `Mutual Perpendicular Length Fit Constraints` | Fit Constraint Scalar Options |
 
 </details>
 
@@ -3228,7 +3490,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Angle Between Vectors Tolerances` | Tolerance Scalar Options |
+| Input | `Mutual Perpendicular Length Tolerances` | Tolerance Scalar Options |
 
 </details>
 
@@ -3283,7 +3551,19 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Pipe 1 - Inner Diameter` | Double |
+| Input | `Pipe 1 - Outer Diameter` | Double |
+| Input | `Pipe 1 - Cut Begin` | Double |
+| Input | `Pipe 1 - Cut End` | Double |
+| Input | `Pipe 2 - Inner Diameter` | Double |
+| Input | `Pipe 2 - Outer Diameter` | Double |
+| Input | `Pipe 2 - Cut Begin` | Double |
+| Input | `Pipe 2 - Cut End` | Double |
 
 </details>
 
@@ -3344,7 +3624,19 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Overall Weight` | Double |
+| Input | `Axis Offset` | Double |
+| Input | `Axis Alignment` | Double |
+| Input | `Center Pull` | Double |
+| Input | `Out of material - Weight` | Double |
+| Input | `Out of material - Offset` | Double |
+| Input | `Constrain Region at OD` | Boolean |
+| Input | `Constrain ID/OD overlap` | Boolean |
 
 </details>
 
@@ -3501,7 +3793,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Desired Measurement Count` | Integer |
 
 </details>
 
@@ -3553,7 +3850,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationships` | Collection Object Name Ref List |
+| Input | `Dormant Status` | Boolean |
 
 </details>
 
@@ -3607,7 +3909,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Fit Constraint Options` | Fit Constraint Scalar Options |
 
 </details>
 
@@ -3661,7 +3968,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Orientation Vector Constraint` | Tolerance Vector Options |
 
 </details>
 
@@ -3715,7 +4027,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Outlier Rejection Options` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -3769,7 +4088,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Position Vector Constraint` | Tolerance Vector Options |
 
 </details>
 
@@ -3823,7 +4147,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Projection Options` | Projection Options |
 
 </details>
 
@@ -3877,7 +4206,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Reporting Frame` | Collection Object Name |
 
 </details>
 
@@ -3965,7 +4299,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Use every i-th point` | Boolean |
+| Input | `i value` | Integer |
+| Input | `Use no more than n points` | Boolean |
+| Input | `n value` | Integer |
 
 </details>
 
@@ -4022,7 +4364,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Tolerance Options` | Tolerance Scalar Options |
 
 </details>
 
@@ -4076,7 +4423,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Vector Tolerance` | Tolerance Vector Options |
 
 </details>
 
@@ -4130,7 +4482,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Enable Voxel Cloud Display?` | Boolean |
+| Input | `Voxel Size (-1.0 autodetect)` | Double |
+| Input | `Min Pts Count Per Voxel` | Integer |
+| Input | `Voxel Rendering Diameter % (-1.0 fast)` | Double |
+| Input | `Surface Analysis Mode` | Surface Analysis Mode |
+| Input | `Colorization Options` | Colorization Options |
+| Input | `Show Color Bar in View?` | Boolean |
 
 </details>
 
@@ -4190,7 +4553,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Weight` | Double |
 
 </details>
 
@@ -4242,7 +4610,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Name` | Collection Name |
+| Input | `Pick Weighting Mode` | Rel Weighting Mode |
 
 </details>
 
@@ -4293,7 +4666,12 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Ref List` | Collection Object Name Ref List |
+| Input | `Summary Table Name` | String |
 
 </details>
 
@@ -4334,7 +4712,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Point Edit Mode` | String |
 
 </details>
 
@@ -4379,7 +4762,23 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Sigma Threshold` | Double |
+| Input | `Modify Existing Input Clouds` | Boolean |
+| Output | `First Pass RMS Error` | Double |
+| Output | `First Pass Maximum Error` | Double |
+| Output | `First Pass Minimum Error` | Double |
+| Output | `First Pass Average Error` | Double |
+| Output | `Final Pass RMS Error` | Double |
+| Output | `Final Pass Maximum Error` | Double |
+| Output | `Final Pass Minimum Error` | Double |
+| Output | `Final Pass Average Error` | Double |
+| Output | `Total Input Point Count` | Integer |
+| Output | `Exclude Point Count` | Integer |
 
 </details>
 
@@ -4728,7 +5127,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Points in Relationship` | Point Name Ref List |
+| Input | `Objects in Relationship` | Collection Object Name Ref List |
+| Input | `Projection Options` | Projection Options |
+| Input | `Auto Update a Vector Group?` | Boolean |
 
 </details>
 
@@ -6088,7 +6495,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Use Closest Point` | Boolean |
+| Input | `Show Closest Point Watch Window` | Boolean |
+| Input | `Use View Zooming` | Boolean |
+| Input | `Ignore Points Beyond Threshold` | Boolean |
+| Input | `Proximity Threshold` | Double |
 
 </details>
 
@@ -6134,7 +6550,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Relationship Name` | Collection Object Name |
+| Input | `Individual Points` | Point Name Ref List |
+| Input | `Point Groups` | Collection Object Name Ref List |
+| Input | `Point Clouds` | Collection Object Name Ref List |
+| Input | `Objects` | Collection Object Name Ref List |
+| Input | `Ignore Empty Arguments?` | Boolean |
 
 </details>
 
