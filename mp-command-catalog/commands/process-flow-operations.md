@@ -326,7 +326,20 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question to ask` | String |
+| Input | `Initial Value` | Double |
+| Input | `Enforce Min/Max Values?` | Boolean |
+| Input | `Min Value` | Double |
+| Input | `Max Value` | Double |
+| Input | `Font` | Font Type |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | Double |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -384,7 +397,20 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question to ask` | String |
+| Input | `Initial Value` | Integer |
+| Input | `Enforce Min/Max Values?` | Boolean |
+| Input | `Min Value` | Integer |
+| Input | `Max Value` | Integer |
+| Input | `Font` | Font Type |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -442,7 +468,17 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question to ask` | String |
+| Input | `Initial Value` | Point Name |
+| Input | `Font` | Font Type |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | Point Name |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -497,7 +533,18 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question to ask` | String |
+| Input | `Password Entry?` | Boolean |
+| Input | `Initial Answer` | String |
+| Input | `Font` | Font Type |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | String |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -553,7 +600,18 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question or Statement` | String Ref List |
+| Input | `Possible Answers` | String Ref List |
+| Input | `Font` | Font Type |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | String |
+| Output | `Answer Index` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -607,7 +665,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question or Statement` | Edit Text |
+| Input | `Font` | Font Type |
+| Input | `Possible Answers` | Binding not emitted by the SDK exporter |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -659,7 +726,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question or Statement` | Edit Text |
+| Input | `Font` | Font Type |
+| Input | `Button Answers` | Binding not emitted by the SDK exporter |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -713,7 +789,19 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Image File` | File Path or Embedded File |
+| Input | `Image Map XML File` | File Path or Embedded File |
+| Input | `Window Caption` | String |
+| Input | `Window Width (0 = default)` | Integer |
+| Input | `Window Height (0 = default)` | Integer |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `User Choice` | String |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -770,7 +858,19 @@ Released in Briosa Server 0.7.0 for SA 2024.1.0508.5. Runtime validation remains
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Question or Statement` | Edit Text |
+| Input | `Font` | Font Type |
+| Input | `Button1 Text (Empty to hide button)` | String |
+| Input | `Button2 Text (Empty to hide button)` | String |
+| Input | `Button3 Text (Empty to hide button)` | String |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+| Output | `Answer` | String |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -825,7 +925,21 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Path to HTML File` | File Path or Embedded File |
+| Input | `Font` | Font Type |
+| Input | `Button1 Text` | String |
+| Input | `Button2 Text` | String |
+| Input | `Button3 Text` | String |
+| Input | `Step to jump to for Button1 (-1 to hide button)` | Binding not emitted by the SDK exporter |
+| Input | `Step to jump to for Button2 (-1 to hide button)` | Binding not emitted by the SDK exporter |
+| Input | `Step to jump to for Button3 (-1 to hide button)` | Binding not emitted by the SDK exporter |
+| Input | `Step to jump to if Canceled (-1 will fail step on Cancel)` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -882,7 +996,15 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Collection Name to check` | Collection Name |
+| Input | `Step if Collection does exist` | Binding not emitted by the SDK exporter |
+| Input | `Step if Collection doesn't exist` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -933,7 +1055,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Counter Value` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -982,7 +1110,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Counter Reference` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1031,7 +1165,18 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Step in Range` | Binding not emitted by the SDK exporter |
+| Input | `Last Step in Range` | Binding not emitted by the SDK exporter |
+| Input | `Minor Error is OK?` | Boolean |
+| Input | `Message for Go` | String |
+| Input | `Message for No Go` | String |
+| Output | `Result` | Boolean |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1085,7 +1230,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Counter Reference` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1134,7 +1285,17 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `First Step in Range` | Binding not emitted by the SDK exporter |
+| Input | `Last Step in Range` | Binding not emitted by the SDK exporter |
+| Input | `Step if Go` | Binding not emitted by the SDK exporter |
+| Input | `Step if Partial Go` | Binding not emitted by the SDK exporter |
+| Input | `Step if No Go` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1187,7 +1348,14 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `MP filename to Jump To` | File Path or Embedded File |
+| Input | `Step index to begin at` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1237,7 +1405,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Step to Jump To` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1288,7 +1462,15 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Object Name` | Collection Object Name |
+| Input | `Step if Object does exist` | Binding not emitted by the SDK exporter |
+| Input | `Step if Object doesn't exist` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1343,7 +1525,12 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Object Name` | Collection Object Name |
+| Output | `Exists?` | Boolean |
 
 </details>
 
@@ -1393,7 +1580,14 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Counter Reference` | Binding not emitted by the SDK exporter |
+| Input | `Counter Value` | Integer |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1443,7 +1637,16 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Step in question` | Binding not emitted by the SDK exporter |
+| Input | `Step if success` | Binding not emitted by the SDK exporter |
+| Input | `Step if partial success` | Binding not emitted by the SDK exporter |
+| Input | `Step if failure` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 
@@ -1495,7 +1698,13 @@ No complete reviewed useful SDK mapping is available for this 2024 command.
 
 The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition rationale also applies to 2024.
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Steps to Await Completion` | Binding not emitted by the SDK exporter |
+
+A missing exported binding is recorded explicitly. Existing limitations retain their reviewed handling; a generic SDK method alone does not prove a replacement binding.
 
 </details>
 

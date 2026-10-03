@@ -540,7 +540,18 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Cloud Name` | Collection Object Name |
+| Input | `Desired Diameter` | Double |
+| Input | `Extraction Tolerance` | Double |
+| Input | `Minimum Point Count` | Integer |
+| Input | `Group Name for Points` | Collection Object Name |
+| Input | `Perform Final Fit` | Boolean |
+| Input | `Final Fit Cone Angle` | Double |
+| Output | `Number of Points Extracted` | Integer |
 
 </details>
 

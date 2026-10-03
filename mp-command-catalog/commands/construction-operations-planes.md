@@ -89,7 +89,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Plane Name` | Collection Object Name |
+| Input | `Plane Center (in working coordinates)` | Vector |
+| Input | `Plane Normal (in working coordinates)` | Vector |
+| Input | `Plane Edge Dimension` | Double |
 
 </details>
 
@@ -133,7 +140,14 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Resultant Plane Name` | Collection Object Name |
+| Input | `'Normal to' Object Name` | Collection Object Name |
+| Input | `'Through' Point Name` | Point Name |
+| Input | `Plane Edge Dimension` | Double |
 
 </details>
 
@@ -177,7 +191,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Reference Plane Name` | Collection Object Name |
+| Input | `Group to bound` | Collection Object Name |
+| Input | `Resulting 'High' Plane Name` | Collection Object Name |
+| Input | `Resulting 'Low' Plane Name` | Collection Object Name |
+| Input | `Override Target/Point Offsets` | Boolean |
+| Input | `Offset Value` | Double |
 
 </details>
 
@@ -222,7 +245,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Resultant Plane Name` | Collection Object Name |
+| Input | `First Plane` | Collection Object Name |
+| Input | `Second Plane` | Collection Object Name |
 
 </details>
 
@@ -263,7 +292,13 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Collection-object inputs use the [2024 collection/name binding](/mp-command-catalog/2024.1.0508.5/review-notes#collection-object-bindings).
 
-The reference signature below applies with these 2024 adjustments. Briosa defaults and API links remain specific to 2026.
+**Captured 2024 Argument Signature**
+
+| Direction | Exact MP Argument | Argument Kind |
+| --- | --- | --- |
+| Input | `Plane` | Collection Object Name |
+| Input | `Shift Along Normal` | Double |
+| Input | `Grow Bounds by Factor` | Double |
 
 </details>
 
