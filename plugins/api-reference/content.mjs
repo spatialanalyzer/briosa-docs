@@ -67,12 +67,14 @@ function revisionChanges(older, newer) {
   const changes = [];
   for (const [key, field] of after) {
     const previous = before.get(key);
-    if (!previous) changes.push(`Added ${field.name}`);
-    else if (previous.type !== field.type) changes.push(`${field.name}: ${previous.type} → ${field.type}`);
-    else if (previous.value !== field.value) changes.push(`${field.name}: ${previous.value} → ${field.value}`);
+    if (!previous) { changes.push(`Added ${field.name}`); continue; }
+    if (previous.name !== field.name) changes.push(`Renamed ${previous.name} → ${field.name}`);
+    if (previous.type !== field.type) changes.push(`${field.name}: ${previous.type} → ${field.type}`);
+    if (previous.value !== field.value) changes.push(`${field.name}: ${previous.value} → ${field.value}`);
   }
   for (const [key, field] of before) if (!after.has(key)) changes.push(`Removed ${field.name}`);
-  return changes;
+  // Only a parsed parameter table supports a claim that the tables match.
+  return {changes, tables: before.size > 0 && after.size > 0};
 }
 
 function differenceSummary(a, b) {
@@ -417,10 +419,11 @@ export async function compileReference(siteDir) {
       const releasesIn = [...new Set(revision.pairs.map((c) => c.release))].sort((a, b) => compareVersions(b, a));
       const heading = `Revision ${revision.n}: ${releaseLabel(family)} ${releasesIn.join(', ')}`;
       const older = list[revision.n - 2];
-      const changes = older ? revisionChanges(older.ctx.pages[id], original) : [];
+      const {changes, tables} = older ? revisionChanges(older.ctx.pages[id], original) : {changes: [], tables: false};
       const change = !older ? `First documented in ${releaseLabel(family)} ${revision.pairs[0].release}.`
         : changes.length ? `Changes from Revision ${older.n}: ${changes.join('; ')}.`
-        : `Parameter tables match Revision ${older.n}; the signature, notes, or examples differ.`;
+        : tables ? `Parameter tables match Revision ${older.n}; the signature, notes, or examples differ.`
+        : `The signature, notes, or examples differ from Revision ${older.n}.`;
       const pairs = [...revision.pairs].sort(newestFirst).map((c) => {
         const source = c.pages[id].releasedSource.match(/^\[([^\]]+)\]\(([^)\s]+)\)/);
         const group = c.pages[id].group;

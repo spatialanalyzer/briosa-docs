@@ -73,6 +73,10 @@ test('the naming release preserves historical signatures and qualifier notes', (
       assert.doesNotMatch(after, /angle_tolerance_0_0_for_none|angleTolerance00ForNone/);
       assert.match(after, /angle_tolerance|angleTolerance/);
       assert.match(after, /0\.0 disables this tolerance/);
+      // The history summary must report the rename, never claim the tables match.
+      const summary = revision(family, id, current, target).find('.api-revision-changes').text();
+      if (family === 'grpc') assert.match(summary, /Renamed angle_tolerance_0_0_for_none → angle_tolerance/);
+      else assert.doesNotMatch(summary, /Parameter tables match/);
     }
   }
 });
