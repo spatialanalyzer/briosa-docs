@@ -9,7 +9,7 @@ This catalog documents **1,283 captured MP commands** across **79 command groups
 and subgroups** in SpatialAnalyzer 2024.1.0508.5. Each command links to a canonical
 entry with its exact-target group, disposition, signature, and reviewed differences.
 
-**Server 0.9.1 and all three client families 0.4.0 are released for this target.**
+**Server 0.9.2 and all three client families 0.4.0 are released for this target.**
 
 [Browse the exact-target gRPC reference](/api/grpc/sa-2024.1.0508.5), [.NET reference](/api/dotnet/sa-2024.1.0508.5), [Python reference](/api/python/sa-2024.1.0508.5), or [JavaScript/TypeScript reference](/api/javascript/sa-2024.1.0508.5).
 
@@ -22,7 +22,7 @@ entry with its exact-target group, disposition, signature, and reviewed differen
 
 | Status | Commands | Meaning for This Target |
 | --- | ---: | --- |
-| Current | 996 | Implemented in Server 0.9.1; runtime policy and readiness apply. |
+| Current | 996 | Implemented in Server 0.9.2; runtime policy and readiness apply. |
 | Excluded | 171 | Existing product or workflow rationale also applies to 2024. |
 | SDK Unavailable | 75 | No complete reviewed useful SDK mapping is available. |
 | Uncommitted | 41 | Retained for reference, with no release commitment. |
@@ -40,7 +40,7 @@ a promise of the same 2024 API. Exported sample values alone do not establish
 defaults or omission behavior.
 
 Released support was reconciled with the Server 0.7.0 protobuf, handwritten
-operation registration, and capability source; Server 0.9.1 registers the same
+operation registration, and capability source; Server 0.9.2 registers the same
 996 operations. A separate limited local licensed
 smoke test covered six read-only operations; it did not validate all 996 operations.
 Existing At Risk qualifications remain visible; fixture,

@@ -9,7 +9,7 @@ description: Reviewed View Control / Highlight Operations commands and released 
 **SA 2024.1.0508.5 · View Control / Highlight Operations**
 
 This group contains 3 reviewed command entries. **Current** means implemented
-in Briosa Server 0.9.1 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |

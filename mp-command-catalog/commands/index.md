@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Reviewed Command Index
 
 Search the reviewed command identities for SpatialAnalyzer 2026.1.0529.7 and
-2024.1.0508.5. Both targets have released Server 0.9.1 distributions.
+2024.1.0508.5. Both targets have released Server 0.9.2 distributions.
 Select an exact target to see its own groups, status, and validation. Filters are
 stored in the page URL so a filtered catalog view can be bookmarked or shared.
 
