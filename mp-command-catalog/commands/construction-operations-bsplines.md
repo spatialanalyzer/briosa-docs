@@ -257,7 +257,7 @@ validation are required before the implementation can be marked validated.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-spline-from-points) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-spline-from-points) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-spline-from-points) | [Function](/api/javascript/construction-operations-bsplines#construct-b-spline-from-points) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-points) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-points) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-points) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-points) |
 
 ## Construct B-Spline From Point Set
 
@@ -314,7 +314,7 @@ Point Set, and licensed geometry validation remains outstanding.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-spline-from-point-set) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-spline-from-point-set) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-spline-from-point-set) | [Function](/api/javascript/construction-operations-bsplines#construct-b-spline-from-point-set) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-point-set) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-point-set) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-point-set) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-point-set) |
 
 ## Construct B-Spline From Several B-Splines
 
@@ -371,7 +371,7 @@ and does not close the result unless the caller requests it.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-spline-from-several-b-splines) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-spline-from-several-b-splines) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-spline-from-several-b-splines) | [Function](/api/javascript/construction-operations-bsplines#construct-b-spline-from-several-b-splines) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-several-b-splines) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-several-b-splines) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-several-b-splines) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-several-b-splines) |
 
 ## Construct B-Spline From Intersection of Plane and Surface
 
@@ -430,7 +430,7 @@ plane-and-surface fixtures are still required.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) | [Function](/api/javascript/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-plane-and-surface) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-plane-and-surface) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-plane-and-surface) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-plane-and-surface) |
 
 ## Construct B-Spline From Intersection of Surfaces
 
@@ -490,7 +490,7 @@ than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) | [Function](/api/javascript/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-surfaces) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-surfaces) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-surfaces) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-spline-from-intersection-of-surfaces) |
 
 ## Construct B-Splines From Surfaces
 
@@ -545,7 +545,7 @@ and omits the optional prefix unless the caller supplies one.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-splines-from-surfaces) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-splines-from-surfaces) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-splines-from-surfaces) | [Function](/api/javascript/construction-operations-bsplines#construct-b-splines-from-surfaces) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-surfaces) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-surfaces) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-surfaces) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-surfaces) |
 
 ## Construct B-Splines From Lines
 
@@ -600,7 +600,7 @@ with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-splines-from-lines) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-splines-from-lines) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-splines-from-lines) | [Function](/api/javascript/construction-operations-bsplines#construct-b-splines-from-lines) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-lines) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-lines) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-lines) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-lines) |
 
 ## Construct B-Splines From Intersection of Plane and Mesh
 
@@ -666,4 +666,4 @@ requested base name.
 
 | gRPC | .NET | Python | JavaScript / TypeScript |
 | --- | --- | --- | --- |
-| [RPC](/api/grpc/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) | [Method](/api/dotnet/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) | [Coroutine](/api/python/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) | [Function](/api/javascript/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) |
+| [RPC](/api/grpc/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-intersection-of-plane-and-mesh) | [Method](/api/dotnet/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-intersection-of-plane-and-mesh) | [Coroutine](/api/python/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-intersection-of-plane-and-mesh) | [Function](/api/javascript/sa-2026.1.0529.7/construction-operations-bsplines/construct-b-splines-from-intersection-of-plane-and-mesh) |

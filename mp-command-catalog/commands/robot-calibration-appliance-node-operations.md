@@ -1188,7 +1188,7 @@ broader Briosa execution-readiness claim, and Briosa does not retain it.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/robot-calibration-appliance-node-operations)
-- [.NET](/api/dotnet/robot-calibration-appliance-node-operations)
-- [Python](/api/python/robot-calibration-appliance-node-operations)
-- [JavaScript and TypeScript](/api/javascript/robot-calibration-appliance-node-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/robot-calibration-appliance-node-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/robot-calibration-appliance-node-operations)
+- [Python](/api/python/sa-2026.1.0529.7/robot-calibration-appliance-node-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/robot-calibration-appliance-node-operations)

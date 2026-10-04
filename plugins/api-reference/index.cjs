@@ -22,6 +22,17 @@ function routeTree(routes) {
   return [...root.children.values()].map(branch);
 }
 
+const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+
+// A former address as a static document: it costs a file, not a client route.
+// Fragments, method anchors, and a remembered SA target are honored when
+// JavaScript runs; otherwise the refresh and plain links reach the reference.
+function redirectDocument({to, aliases = {}, prefix = '', choices}) {
+  const data = JSON.stringify({to, aliases, prefix, choices}).replaceAll('<', '\\u003c');
+  const links = Object.entries(aliases).map(([anchor, href]) => `<p id="${escape(anchor)}"><a href="${escape(href)}">${escape(anchor.replaceAll('-', ' '))}</a></p>`).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>(function(){var d=${data},t=d.to,a=d.aliases,h=location.hash.slice(1),own=function(o,k){return Object.prototype.hasOwnProperty.call(o,k)};try{h=decodeURIComponent(h)}catch(e){}try{var s=new URLSearchParams(location.search).get('sa')||sessionStorage.getItem('briosa.api.browsing-target')||localStorage.getItem('briosa.api.sa-target');if(d.choices&&s&&own(d.choices,s)){t=d.choices[s].to;a=d.choices[s].aliases}}catch(e){}if(h&&own(a,h))t=a[h];else if(h&&(d.prefix||t.indexOf('#')<0))t=t.split('#')[0]+'#'+d.prefix+h;location.replace(t)})()</script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
+}
+
 module.exports = function apiReference(context) {
   return {
     name: 'briosa-api-reference',
@@ -44,20 +55,28 @@ module.exports = function apiReference(context) {
       return compileReference(context.siteDir);
     },
     async postBuild({outDir, content}) {
-      // Version roots also contain child pages. Supply directory indexes for
-      // static hosts that resolve a directory before its sibling .html file.
-      const roots = new Set([
-        ...content.pages.filter((page) => page.id === 'overview').map((page) => page.path),
-        ...Object.entries(content.redirects).filter(([, redirect]) => redirect.id === 'overview').map(([from]) => from),
-      ]);
-      for (const route of roots) {
-        const destination = path.join(outDir, route.slice(1));
-        await fs.mkdir(destination, {recursive: true});
-        await fs.copyFile(`${destination}.html`, path.join(destination, 'index.html'));
-      }
+      const write = async (route, html) => {
+        const file = path.join(outDir, route.slice(1) + '.html');
+        await fs.mkdir(path.dirname(file), {recursive: true});
+        await fs.writeFile(file, html, {flag: 'wx'});
+      };
+      for (const [from, redirect] of Object.entries(content.redirects)) await write(from, redirectDocument(redirect));
+      // Static hosts read a dotted final segment (an SA target or release) as a
+      // file extension and never try its .html sibling, so supply a directory index.
+      const index = async (dir) => {
+        for (const entry of await fs.readdir(dir, {withFileTypes: true})) {
+          const child = path.join(dir, entry.name);
+          if (entry.isDirectory()) await index(child);
+          else if (/\.\d+\.html$/.test(entry.name)) {
+            const directory = child.slice(0, -'.html'.length);
+            await fs.mkdir(directory, {recursive: true});
+            await fs.copyFile(child, path.join(directory, 'index.html'), fs.constants.COPYFILE_EXCL);
+          }
+        }
+      };
+      await index(path.join(outDir, 'api'));
     },
     async contentLoaded({content, actions}) {
-      const manifest = await actions.createData('manifest.json', JSON.stringify(content.manifest));
       const navFiles = {};
       for (const [base, nav] of Object.entries(content.navigation)) navFiles[base] = await actions.createData(`nav-${base.replaceAll('/', '-')}.json`, JSON.stringify(nav));
       const filename = (p) => createHash('sha256').update(p).digest('hex').slice(0, 24) + '.json';
@@ -76,21 +95,14 @@ module.exports = function apiReference(context) {
       }
       const routes = [];
       for (const page of content.pages) {
-        routes.push({path: page.path, exact: true, component: '@site/src/components/ApiReference/Page.tsx', modules: {pages: pageFiles.get(page.path), navigation: navFiles[page.base], manifest}, metadata: {sourceFilePath: page.source}, customData: {apiNoIndex: !page.available}});
+        routes.push({path: page.path, exact: true, component: '@site/src/components/ApiReference/Page.tsx', modules: {pages: pageFiles.get(page.path), navigation: navFiles[page.base]}, metadata: {sourceFilePath: page.source}, customData: {apiNoIndex: page.noindex}});
       }
-      const redirectBatches = new Map();
-      for (const [from, redirect] of Object.entries(content.redirects)) {
-        const key = `${redirect.family}/${redirect.target}/${redirect.release}/${redirect.id.split('/')[0]}`;
-        if (!redirectBatches.has(key)) redirectBatches.set(key, {});
-        redirectBatches.get(key)[from] = redirect;
-      }
-      for (const [key, batch] of redirectBatches) {
-        const data = await actions.createData(`redirect-${filename(key)}`, JSON.stringify(batch));
-        for (const from of Object.keys(batch)) routes.push({path: from, exact: true, component: '@site/src/components/ApiReference/Legacy.tsx', modules: {redirects: data, manifest}, customData: {apiNoIndex: true}});
+      for (const [family, index] of Object.entries(content.index)) {
+        const data = await actions.createData(`index-${family}.json`, JSON.stringify(index));
+        routes.push({path: `/api/${family}`, exact: true, component: '@site/src/components/ApiReference/FamilyIndex.tsx', modules: {index: data}});
       }
       for (const route of routeTree(routes)) actions.addRoute(route);
-      actions.setGlobalData({releases: content.manifest.releases});
-      console.log(`[API] ${content.pages.length} static references/history pages; ${Object.keys(content.redirects).length} preserved entry routes.`);
+      console.log(`[API] ${content.pages.length} reference and history pages; ${Object.keys(content.redirects).length} static redirect documents.`);
     },
   };
 };

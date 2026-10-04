@@ -351,4 +351,4 @@ inside SpatialAnalyzer and creates every available plane from that selection.
 It is deliberately interactive. Cancellation or an RPC deadline does not
 prove that the SpatialAnalyzer interaction stopped.
 
-**API References:** [gRPC](/api/grpc/construction-operations-planes) · [.NET](/api/dotnet/construction-operations-planes) · [Python](/api/python/construction-operations-planes) · [JavaScript and TypeScript](/api/javascript/construction-operations-planes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-planes) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-planes) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-planes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-planes)

@@ -54,9 +54,9 @@ appsettings, environment variables, or command-line arguments. For example:
 
 First-party clients expose typed startup options:
 
-- [.NET StartAsync](/api/dotnet/start#server-logging)
-- [JavaScript/TypeScript start](/api/javascript/start#server-logging)
-- [Python start](/api/python/start#server-logging)
+- [.NET StartAsync](/api/dotnet/sa-2026.1.0529.7/start#server-logging)
+- [JavaScript/TypeScript start](/api/javascript/sa-2026.1.0529.7/start#server-logging)
+- [Python start](/api/python/sa-2026.1.0529.7/start#server-logging)
 
 Omitted client fields preserve the server configuration. Custom directories
 must be absolute Windows paths. Invalid settings fail startup; a later sink

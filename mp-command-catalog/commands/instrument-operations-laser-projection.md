@@ -123,7 +123,7 @@ client APIs. The descriptions above describe proposed behavior, not a callable
 implementation. Their SA 2026 Next status does not establish a release date. SA 2024 implementations were first released in Server 0.7.0 and clients 0.2.0 and remain available in Server 0.9.2 and clients 0.4.0; use the target-specific references above.
 
 
-- [gRPC](/api/grpc/instrument-operations-laser-projection)
-- [.NET](/api/dotnet/instrument-operations-laser-projection)
-- [Python](/api/python/instrument-operations-laser-projection)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-laser-projection)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-laser-projection)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-laser-projection)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-laser-projection)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-laser-projection)

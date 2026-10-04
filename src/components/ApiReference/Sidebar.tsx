@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import type {PropSidebarItem, PropSidebarItemCategory} from '@docusaurus/plugin-content-docs';
 import type {Navigation, PageData} from './types';
-import {suffix} from './context';
+import {suffix, methodHref} from './context';
 import {SidebarControls} from './SidebarControls';
 
 export default function Sidebar({navigation: nav, page}: {navigation: Navigation; page: PageData}): React.JSX.Element {
   const [query, setQuery] = useState('');
   const [showAll, setShowAll] = useState<Record<string, boolean>>({});
-  const link = (id: string, label: string): PropSidebarItem => ({type: 'link', label, href: nav.base + suffix(id)});
+  const link = (id: string, label: string, href = nav.base + suffix(id)): PropSidebarItem => ({type: 'link', label, href});
   const category = (label: string, items: PropSidebarItem[], extra: Partial<PropSidebarItemCategory> = {}): PropSidebarItemCategory => ({type: 'category', label, items, collapsible: true, collapsed: true, ...extra});
   const control = (key: string): PropSidebarItem => ({type: 'html', value: '', customProps: {apiControl: key}});
   const controls: Record<string, React.ReactNode> = {
@@ -36,7 +36,7 @@ export default function Sidebar({navigation: nav, page}: {navigation: Navigation
     const currentIndex = Math.max(0, methods.findIndex((m) => m.id === page.id));
     const start = Math.max(0, Math.min(currentIndex - 5, methods.length - 11));
     const visible = query || showAll[branch.key] ? methods : methods.slice(start, start + 11);
-    const items = visible.map((m) => link(m.id, m.title + (m.available ? '' : ' (Other SA Target)')));
+    const items = visible.map((m) => link(m.id, m.title + (m.available ? '' : ' (Other SA Target)'), methodHref(nav, m)));
     if (visible.length < methods.length) {
       controls[branch.key] = <button className="clean-btn menu__link api-show-all" type="button" onClick={() => setShowAll((all) => ({...all, [branch.key]: true}))}>Show All {methods.length} Commands</button>;
       items.push(control(branch.key));
@@ -49,10 +49,10 @@ export default function Sidebar({navigation: nav, page}: {navigation: Navigation
       customProps: {apiFilterKey: query},
     });
   }
-  const items: PropSidebarItem[] = [link('overview', nav.label)];
+  const items: PropSidebarItem[] = [link('overview', nav.current ? nav.label : `${nav.label} ${nav.release}`)];
   if (nav.discovery) items.push(link(nav.discovery, 'Server Discovery'));
   items.push(category('Lifecycle Methods', nav.lifecycle.map((l) => link(l.id, l.title))));
-  items.push(category('First Calls', nav.firstCalls.map((l) => link(l.id, l.title))));
+  items.push(category('First Calls', nav.firstCalls.map((l) => link(l.id, l.title, methodHref(nav, l)))));
   if (nav.valueTypes) items.push(link('value-types', 'MP Value Types'));
   items.push(category('MP Commands', [control('filter'), ...roots.filter(matches).map(groupItem)], {collapsed: false}));
 

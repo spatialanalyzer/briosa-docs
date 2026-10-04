@@ -22,7 +22,7 @@ The matching source revision is recorded in the verified release provenance. Kee
 
 Extract the complete archive and locate its protobuf import root containing `briosa/`. Configure your language's protobuf and gRPC plugins with that directory as an include path, then generate the required services and imported messages together. Do not combine proto files from different targets or releases. Follow the chosen plugin's instructions for its runtime dependencies.
 
-Run the matching Windows server locally and inspect [Server Discovery](/api/grpc/discovery) ([SA 2024](/api/grpc/sa-2024.1.0508.5/discovery)) before SDK/SA activity. Implement the required lifecycle, exact-target checks, capability/readiness checks, cancellation, and execution-outcome handling. Raw bindings do not supply the first-party clients' installation selector or lifecycle policy automatically.
+Run the matching Windows server locally and inspect [Server Discovery](/api/grpc/sa-2026.1.0529.7/discovery) ([SA 2024](/api/grpc/sa-2024.1.0508.5/discovery)) before SDK/SA activity. Implement the required lifecycle, exact-target checks, capability/readiness checks, cancellation, and execution-outcome handling. Raw bindings do not supply the first-party clients' installation selector or lifecycle policy automatically.
 
 Server 0.9.2 accepts inbound gRPC messages of at most **64 KiB (65,536 bytes)**
 for either exact target. This is the encoded request size. Requests above the

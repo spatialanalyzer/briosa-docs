@@ -82,7 +82,7 @@ client APIs. The descriptions above describe proposed behavior, not a callable
 implementation. Their SA 2026 Next status does not establish a release date. SA 2024 implementations were first released in Server 0.7.0 and clients 0.2.0 and remain available in Server 0.9.2 and clients 0.4.0; use the target-specific references above.
 
 
-- [gRPC](/api/grpc/instrument-operations-crib-sheet-operations)
-- [.NET](/api/dotnet/instrument-operations-crib-sheet-operations)
-- [Python](/api/python/instrument-operations-crib-sheet-operations)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-crib-sheet-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations)

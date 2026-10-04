@@ -694,7 +694,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/dimension-operations#delete-dimension) · [.NET](/api/dotnet/dimension-operations#delete-dimension) · [Python](/api/python/dimension-operations#delete-dimension) · [JavaScript and TypeScript](/api/javascript/dimension-operations#delete-dimension)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/dimension-operations/delete-dimension) · [.NET](/api/dotnet/sa-2026.1.0529.7/dimension-operations/delete-dimension) · [Python](/api/python/sa-2026.1.0529.7/dimension-operations/delete-dimension) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/dimension-operations/delete-dimension)
 
 
 ## Get Dimension Value
@@ -765,7 +765,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/dimension-operations#get-dimension-value) · [.NET](/api/dotnet/dimension-operations#get-dimension-value) · [Python](/api/python/dimension-operations#get-dimension-value) · [JavaScript and TypeScript](/api/javascript/dimension-operations#get-dimension-value)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/dimension-operations/get-dimension-value) · [.NET](/api/dotnet/sa-2026.1.0529.7/dimension-operations/get-dimension-value) · [Python](/api/python/sa-2026.1.0529.7/dimension-operations/get-dimension-value) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/dimension-operations/get-dimension-value)
 
 
 ## Get i-th Dimension From Dimension Ref List
@@ -1245,7 +1245,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/dimension-operations#set-dimension-tolerance) · [.NET](/api/dotnet/dimension-operations#set-dimension-tolerance) · [Python](/api/python/dimension-operations#set-dimension-tolerance) · [JavaScript and TypeScript](/api/javascript/dimension-operations#set-dimension-tolerance)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/dimension-operations/set-dimension-tolerance) · [.NET](/api/dotnet/sa-2026.1.0529.7/dimension-operations/set-dimension-tolerance) · [Python](/api/python/sa-2026.1.0529.7/dimension-operations/set-dimension-tolerance) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/dimension-operations/set-dimension-tolerance)
 
 
 ## Set Object to Object Dimension Properties

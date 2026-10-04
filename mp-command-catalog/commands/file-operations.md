@@ -1701,7 +1701,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#backup-now) · [.NET](/api/dotnet/file-operations#backup-now) · [Python](/api/python/file-operations#backup-now) · [JavaScript and TypeScript](/api/javascript/file-operations#backup-now)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/backup-now) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/backup-now) · [Python](/api/python/sa-2026.1.0529.7/file-operations/backup-now) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/backup-now)
 
 
 ## Browse for Directory
@@ -2160,7 +2160,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#copy-general-file) · [.NET](/api/dotnet/file-operations#copy-general-file) · [Python](/api/python/file-operations#copy-general-file) · [JavaScript and TypeScript](/api/javascript/file-operations#copy-general-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/copy-general-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/copy-general-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/copy-general-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/copy-general-file)
 
 
 ## Delete Directory
@@ -2327,7 +2327,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#delete-general-file) · [.NET](/api/dotnet/file-operations#delete-general-file) · [Python](/api/python/file-operations#delete-general-file) · [JavaScript and TypeScript](/api/javascript/file-operations#delete-general-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/delete-general-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/delete-general-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/delete-general-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/delete-general-file)
 
 
 ## Direct CAD Access
@@ -2448,7 +2448,7 @@ The captured `Surface Compatibility Mode` sample is `false` in 2024 and `true` i
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#direct-cad-access) · [.NET](/api/dotnet/file-operations#direct-cad-access) · [Python](/api/python/file-operations#direct-cad-access) · [JavaScript and TypeScript](/api/javascript/file-operations#direct-cad-access)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/direct-cad-access) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/direct-cad-access) · [Python](/api/python/sa-2026.1.0529.7/file-operations/direct-cad-access) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/direct-cad-access)
 
 
 ## Directory Existence
@@ -2625,7 +2625,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ascii-frame-set) · [.NET](/api/dotnet/file-operations#export-ascii-frame-set) · [Python](/api/python/file-operations#export-ascii-frame-set) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ascii-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ascii-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ascii-frame-set) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ascii-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ascii-frame-set)
 
 
 ## Export ASCII Frames
@@ -2686,7 +2686,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ascii-frames) · [.NET](/api/dotnet/file-operations#export-ascii-frames) · [Python](/api/python/file-operations#export-ascii-frames) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ascii-frames)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ascii-frames) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ascii-frames) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ascii-frames) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ascii-frames)
 
 
 ## Export ASCII Point Clouds
@@ -2751,7 +2751,7 @@ The 2024 signature has neither `Include Cloud Point Labeling?` nor `Include Scan
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ascii-point-clouds) · [.NET](/api/dotnet/file-operations#export-ascii-point-clouds) · [Python](/api/python/file-operations#export-ascii-point-clouds) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ascii-point-clouds)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ascii-point-clouds) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ascii-point-clouds) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ascii-point-clouds) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ascii-point-clouds)
 
 
 ## Export ASCII Point Set
@@ -2832,7 +2832,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ascii-point-set) · [.NET](/api/dotnet/file-operations#export-ascii-point-set) · [Python](/api/python/file-operations#export-ascii-point-set) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ascii-point-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ascii-point-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ascii-point-set) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ascii-point-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ascii-point-set)
 
 
 ## Export ASCII Point Sets
@@ -2966,7 +2966,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ascii-points) · [.NET](/api/dotnet/file-operations#export-ascii-points) · [Python](/api/python/file-operations#export-ascii-points) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ascii-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ascii-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ascii-points) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ascii-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ascii-points)
 
 
 ## Export ASII Points
@@ -3077,7 +3077,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-dxf) · [.NET](/api/dotnet/file-operations#export-dxf) · [Python](/api/python/file-operations#export-dxf) · [JavaScript and TypeScript](/api/javascript/file-operations#export-dxf)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-dxf) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-dxf) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-dxf) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-dxf)
 
 
 ## Export Embedded File
@@ -3138,7 +3138,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-embedded-file) · [.NET](/api/dotnet/file-operations#export-embedded-file) · [Python](/api/python/file-operations#export-embedded-file) · [JavaScript and TypeScript](/api/javascript/file-operations#export-embedded-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-embedded-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-embedded-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-embedded-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-embedded-file)
 
 
 ## Export Hidden Point Bar XML File
@@ -3193,7 +3193,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-hidden-point-bar-xml-file) · [.NET](/api/dotnet/file-operations#export-hidden-point-bar-xml-file) · [Python](/api/python/file-operations#export-hidden-point-bar-xml-file) · [JavaScript and TypeScript](/api/javascript/file-operations#export-hidden-point-bar-xml-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-hidden-point-bar-xml-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-hidden-point-bar-xml-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-hidden-point-bar-xml-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-hidden-point-bar-xml-file)
 
 
 ## Export IGES File  - Entire Model
@@ -3248,7 +3248,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-iges-file----entire-model) · [.NET](/api/dotnet/file-operations#export-iges-file----entire-model) · [Python](/api/python/file-operations#export-iges-file----entire-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-iges-file----entire-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-iges-file----entire-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-iges-file----entire-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-iges-file----entire-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-iges-file----entire-model)
 
 
 ## Export IGES File - Partial Model
@@ -3305,7 +3305,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-iges-file---partial-model) · [.NET](/api/dotnet/file-operations#export-iges-file---partial-model) · [Python](/api/python/file-operations#export-iges-file---partial-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-iges-file---partial-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-iges-file---partial-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-iges-file---partial-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-iges-file---partial-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-iges-file---partial-model)
 
 
 ## Export PTX Point Clouds
@@ -3366,7 +3366,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-ptx-point-clouds) · [.NET](/api/dotnet/file-operations#export-ptx-point-clouds) · [Python](/api/python/file-operations#export-ptx-point-clouds) · [JavaScript and TypeScript](/api/javascript/file-operations#export-ptx-point-clouds)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-ptx-point-clouds) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-ptx-point-clouds) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-ptx-point-clouds) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-ptx-point-clouds)
 
 
 ## Export QDAS Characteristics
@@ -3459,7 +3459,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The SDK cannot supply the documented dimension list.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-qdas-characteristics) · [.NET](/api/dotnet/file-operations#export-qdas-characteristics) · [Python](/api/python/file-operations#export-qdas-characteristics) · [JavaScript and TypeScript](/api/javascript/file-operations#export-qdas-characteristics)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-qdas-characteristics) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-qdas-characteristics) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-qdas-characteristics) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-qdas-characteristics)
 
 
 ## Export QDAS Data List
@@ -3514,7 +3514,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-qdas-data-list) · [.NET](/api/dotnet/file-operations#export-qdas-data-list) · [Python](/api/python/file-operations#export-qdas-data-list) · [JavaScript and TypeScript](/api/javascript/file-operations#export-qdas-data-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-qdas-data-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-qdas-data-list) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-qdas-data-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-qdas-data-list)
 
 
 ## Export Scan Stripe Mesh to STL File
@@ -3573,7 +3573,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-scan-stripe-mesh-to-stl-file) · [.NET](/api/dotnet/file-operations#export-scan-stripe-mesh-to-stl-file) · [Python](/api/python/file-operations#export-scan-stripe-mesh-to-stl-file) · [JavaScript and TypeScript](/api/javascript/file-operations#export-scan-stripe-mesh-to-stl-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-scan-stripe-mesh-to-stl-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-scan-stripe-mesh-to-stl-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-scan-stripe-mesh-to-stl-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-scan-stripe-mesh-to-stl-file)
 
 
 ## Export STEP File - Entire Model
@@ -3628,7 +3628,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-step-file---entire-model) · [.NET](/api/dotnet/file-operations#export-step-file---entire-model) · [Python](/api/python/file-operations#export-step-file---entire-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-step-file---entire-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-step-file---entire-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-step-file---entire-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-step-file---entire-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-step-file---entire-model)
 
 
 ## Export STEP File - Partial Model
@@ -3685,7 +3685,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-step-file---partial-model) · [.NET](/api/dotnet/file-operations#export-step-file---partial-model) · [Python](/api/python/file-operations#export-step-file---partial-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-step-file---partial-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-step-file---partial-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-step-file---partial-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-step-file---partial-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-step-file---partial-model)
 
 
 ## Export VDA/FS File  - Entire Model
@@ -3740,7 +3740,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-vdafs-file----entire-model) · [.NET](/api/dotnet/file-operations#export-vdafs-file----entire-model) · [Python](/api/python/file-operations#export-vdafs-file----entire-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-vdafs-file----entire-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-vdafs-file----entire-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-vdafs-file----entire-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-vdafs-file----entire-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-vdafs-file----entire-model)
 
 
 ## Export VDA/FS File - Partial Model
@@ -3797,7 +3797,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-vdafs-file---partial-model) · [.NET](/api/dotnet/file-operations#export-vdafs-file---partial-model) · [Python](/api/python/file-operations#export-vdafs-file---partial-model) · [JavaScript and TypeScript](/api/javascript/file-operations#export-vdafs-file---partial-model)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-vdafs-file---partial-model) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-vdafs-file---partial-model) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-vdafs-file---partial-model) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-vdafs-file---partial-model)
 
 
 ## Export Vector Container to ASCII File
@@ -3862,7 +3862,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#export-vector-container-to-ascii-file) · [.NET](/api/dotnet/file-operations#export-vector-container-to-ascii-file) · [Python](/api/python/file-operations#export-vector-container-to-ascii-file) · [JavaScript and TypeScript](/api/javascript/file-operations#export-vector-container-to-ascii-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/export-vector-container-to-ascii-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/export-vector-container-to-ascii-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/export-vector-container-to-ascii-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/export-vector-container-to-ascii-file)
 
 
 ## Export Vector Container to Excel File
@@ -3984,7 +3984,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#find-files-in-directory) · [.NET](/api/dotnet/file-operations#find-files-in-directory) · [Python](/api/python/file-operations#find-files-in-directory) · [JavaScript and TypeScript](/api/javascript/file-operations#find-files-in-directory)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/find-files-in-directory) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/find-files-in-directory) · [Python](/api/python/sa-2026.1.0529.7/file-operations/find-files-in-directory) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/find-files-in-directory)
 
 
 ## Find Sub-Directories in Directory
@@ -4043,7 +4043,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#find-sub-directories-in-directory) · [.NET](/api/dotnet/file-operations#find-sub-directories-in-directory) · [Python](/api/python/file-operations#find-sub-directories-in-directory) · [JavaScript and TypeScript](/api/javascript/file-operations#find-sub-directories-in-directory)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/find-sub-directories-in-directory) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/find-sub-directories-in-directory) · [Python](/api/python/sa-2026.1.0529.7/file-operations/find-sub-directories-in-directory) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/find-sub-directories-in-directory)
 
 
 ## Get Boolean From DataShare File
@@ -4102,7 +4102,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-boolean-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-boolean-from-datashare-file) · [Python](/api/python/file-operations#get-boolean-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-boolean-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-boolean-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-boolean-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-boolean-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-boolean-from-datashare-file)
 
 
 ## Get Directory and Filename from Path
@@ -4220,7 +4220,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-double-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-double-from-datashare-file) · [Python](/api/python/file-operations#get-double-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-double-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-double-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-double-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-double-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-double-from-datashare-file)
 
 
 ## Get from ODBC Database
@@ -4336,7 +4336,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-integer-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-integer-from-datashare-file) · [Python](/api/python/file-operations#get-integer-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-integer-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-integer-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-integer-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-integer-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-integer-from-datashare-file)
 
 
 ## Get JSON Array Size
@@ -4737,7 +4737,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-qdas-catalog-entries) · [.NET](/api/dotnet/file-operations#get-qdas-catalog-entries) · [Python](/api/python/file-operations#get-qdas-catalog-entries) · [JavaScript and TypeScript](/api/javascript/file-operations#get-qdas-catalog-entries)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-qdas-catalog-entries) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-qdas-catalog-entries) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-qdas-catalog-entries) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-qdas-catalog-entries)
 
 
 ## Get QDAS Catalog Entry Identifier
@@ -4855,7 +4855,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-string-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-string-from-datashare-file) · [Python](/api/python/file-operations#get-string-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-string-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-string-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-string-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-string-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-string-from-datashare-file)
 
 
 ## Get Transform From DataShare File
@@ -4914,7 +4914,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-transform-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-transform-from-datashare-file) · [Python](/api/python/file-operations#get-transform-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-transform-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-transform-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-transform-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-transform-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-transform-from-datashare-file)
 
 
 ## Get Vector From DataShare File
@@ -4973,7 +4973,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-vector-from-datashare-file) · [.NET](/api/dotnet/file-operations#get-vector-from-datashare-file) · [Python](/api/python/file-operations#get-vector-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#get-vector-from-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-vector-from-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-vector-from-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-vector-from-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-vector-from-datashare-file)
 
 
 ## Get Working Directory
@@ -5028,7 +5028,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Implemented and callable for this exact target.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#get-working-directory) · [.NET](/api/dotnet/file-operations#get-working-directory) · [Python](/api/python/file-operations#get-working-directory) · [JavaScript and TypeScript](/api/javascript/file-operations#get-working-directory)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/get-working-directory) · [Python](/api/python/sa-2026.1.0529.7/file-operations/get-working-directory) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/get-working-directory)
 
 
 ## Get XML Attribute
@@ -5211,7 +5211,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-ascii-predefined-formats) · [.NET](/api/dotnet/file-operations#import-ascii-predefined-formats) · [Python](/api/python/file-operations#import-ascii-predefined-formats) · [JavaScript and TypeScript](/api/javascript/file-operations#import-ascii-predefined-formats)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-ascii-predefined-formats) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-ascii-predefined-formats) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-ascii-predefined-formats) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-ascii-predefined-formats)
 
 
 ## Import ASCII: Predefined Frame Set Formats
@@ -5278,7 +5278,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-ascii-predefined-frame-set-formats) · [.NET](/api/dotnet/file-operations#import-ascii-predefined-frame-set-formats) · [Python](/api/python/file-operations#import-ascii-predefined-frame-set-formats) · [JavaScript and TypeScript](/api/javascript/file-operations#import-ascii-predefined-frame-set-formats)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-ascii-predefined-frame-set-formats) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-ascii-predefined-frame-set-formats) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-ascii-predefined-frame-set-formats) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-ascii-predefined-frame-set-formats)
 
 
 ## Import E57 File
@@ -5345,7 +5345,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-e57-file) · [.NET](/api/dotnet/file-operations#import-e57-file) · [Python](/api/python/file-operations#import-e57-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-e57-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-e57-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-e57-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-e57-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-e57-file)
 
 
 ## Import File as Embedded File
@@ -5402,7 +5402,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-file-as-embedded-file) · [.NET](/api/dotnet/file-operations#import-file-as-embedded-file) · [Python](/api/python/file-operations#import-file-as-embedded-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-file-as-embedded-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-file-as-embedded-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-file-as-embedded-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-file-as-embedded-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-file-as-embedded-file)
 
 
 ## Import File as Picture
@@ -5459,7 +5459,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-file-as-picture) · [.NET](/api/dotnet/file-operations#import-file-as-picture) · [Python](/api/python/file-operations#import-file-as-picture) · [JavaScript and TypeScript](/api/javascript/file-operations#import-file-as-picture)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-file-as-picture) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-file-as-picture) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-file-as-picture) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-file-as-picture)
 
 
 ## Import Hidden Point Bar XML File
@@ -5516,7 +5516,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-hidden-point-bar-xml-file) · [.NET](/api/dotnet/file-operations#import-hidden-point-bar-xml-file) · [Python](/api/python/file-operations#import-hidden-point-bar-xml-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-hidden-point-bar-xml-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-hidden-point-bar-xml-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-hidden-point-bar-xml-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-hidden-point-bar-xml-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-hidden-point-bar-xml-file)
 
 
 ## Import IGES File
@@ -5571,7 +5571,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-iges-file) · [.NET](/api/dotnet/file-operations#import-iges-file) · [Python](/api/python/file-operations#import-iges-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-iges-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-iges-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-iges-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-iges-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-iges-file)
 
 
 ## Import Leica GSI File
@@ -5632,7 +5632,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-leica-gsi-file) · [.NET](/api/dotnet/file-operations#import-leica-gsi-file) · [Python](/api/python/file-operations#import-leica-gsi-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-leica-gsi-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-leica-gsi-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-leica-gsi-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-leica-gsi-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-leica-gsi-file)
 
 
 ## Import Leica SDB File
@@ -5693,7 +5693,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-leica-sdb-file) · [.NET](/api/dotnet/file-operations#import-leica-sdb-file) · [Python](/api/python/file-operations#import-leica-sdb-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-leica-sdb-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-leica-sdb-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-leica-sdb-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-leica-sdb-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-leica-sdb-file)
 
 
 ## Import MP File as Embedded MP
@@ -5750,7 +5750,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-mp-file-as-embedded-mp) · [.NET](/api/dotnet/file-operations#import-mp-file-as-embedded-mp) · [Python](/api/python/file-operations#import-mp-file-as-embedded-mp) · [JavaScript and TypeScript](/api/javascript/file-operations#import-mp-file-as-embedded-mp)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-mp-file-as-embedded-mp) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-mp-file-as-embedded-mp) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-mp-file-as-embedded-mp) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-mp-file-as-embedded-mp)
 
 
 ## Import Nominals from XML File
@@ -5805,7 +5805,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-nominals-from-xml-file) · [.NET](/api/dotnet/file-operations#import-nominals-from-xml-file) · [Python](/api/python/file-operations#import-nominals-from-xml-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-nominals-from-xml-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-nominals-from-xml-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-nominals-from-xml-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-nominals-from-xml-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-nominals-from-xml-file)
 
 
 ## Import Polyworks File
@@ -5864,7 +5864,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-polyworks-file) · [.NET](/api/dotnet/file-operations#import-polyworks-file) · [Python](/api/python/file-operations#import-polyworks-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-polyworks-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-polyworks-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-polyworks-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-polyworks-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-polyworks-file)
 
 
 ## Import QDAS Catalog File
@@ -5919,7 +5919,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-qdas-catalog-file) · [.NET](/api/dotnet/file-operations#import-qdas-catalog-file) · [Python](/api/python/file-operations#import-qdas-catalog-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-qdas-catalog-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-qdas-catalog-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-qdas-catalog-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-qdas-catalog-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-qdas-catalog-file)
 
 
 ## Import SA File
@@ -5978,7 +5978,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-sa-file) · [.NET](/api/dotnet/file-operations#import-sa-file) · [Python](/api/python/file-operations#import-sa-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-sa-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-sa-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-sa-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-sa-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-sa-file)
 
 
 ## Import SA Windows Placement
@@ -6033,7 +6033,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-sa-windows-placement) · [.NET](/api/dotnet/file-operations#import-sa-windows-placement) · [Python](/api/python/file-operations#import-sa-windows-placement) · [JavaScript and TypeScript](/api/javascript/file-operations#import-sa-windows-placement)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-sa-windows-placement) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-sa-windows-placement) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-sa-windows-placement) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-sa-windows-placement)
 
 
 ## Import SAT File
@@ -6088,7 +6088,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-sat-file) · [.NET](/api/dotnet/file-operations#import-sat-file) · [Python](/api/python/file-operations#import-sat-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-sat-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-sat-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-sat-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-sat-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-sat-file)
 
 
 ## Import STEP File
@@ -6147,7 +6147,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-step-file) · [.NET](/api/dotnet/file-operations#import-step-file) · [Python](/api/python/file-operations#import-step-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-step-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-step-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-step-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-step-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-step-file)
 
 
 ## Import STL File
@@ -6208,7 +6208,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-stl-file) · [.NET](/api/dotnet/file-operations#import-stl-file) · [Python](/api/python/file-operations#import-stl-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-stl-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-stl-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-stl-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-stl-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-stl-file)
 
 
 ## Import VDA/FS File
@@ -6263,7 +6263,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-vdafs-file) · [.NET](/api/dotnet/file-operations#import-vdafs-file) · [Python](/api/python/file-operations#import-vdafs-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-vdafs-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-vdafs-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-vdafs-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-vdafs-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-vdafs-file)
 
 
 ## Import VSTARS .xyz File
@@ -6318,7 +6318,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-vstars-xyz-file) · [.NET](/api/dotnet/file-operations#import-vstars-xyz-file) · [Python](/api/python/file-operations#import-vstars-xyz-file) · [JavaScript and TypeScript](/api/javascript/file-operations#import-vstars-xyz-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-vstars-xyz-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-vstars-xyz-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-vstars-xyz-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-vstars-xyz-file)
 
 
 ## Import VSTARS Cameras
@@ -6373,7 +6373,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#import-vstars-cameras) · [.NET](/api/dotnet/file-operations#import-vstars-cameras) · [Python](/api/python/file-operations#import-vstars-cameras) · [JavaScript and TypeScript](/api/javascript/file-operations#import-vstars-cameras)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/import-vstars-cameras) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/import-vstars-cameras) · [Python](/api/python/sa-2026.1.0529.7/file-operations/import-vstars-cameras) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/import-vstars-cameras)
 
 
 ## Load DataShare File
@@ -6503,7 +6503,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; the DataShare result remains available.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#load-html-form) · [.NET](/api/dotnet/file-operations#load-html-form) · [Python](/api/python/file-operations#load-html-form) · [JavaScript and TypeScript](/api/javascript/file-operations#load-html-form)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/load-html-form) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/load-html-form) · [Python](/api/python/sa-2026.1.0529.7/file-operations/load-html-form) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/load-html-form)
 
 
 ## Load HTML Form in Edge Browser
@@ -6572,7 +6572,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; the DataShare result remains available.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#load-html-form-in-edge-browser) · [.NET](/api/dotnet/file-operations#load-html-form-in-edge-browser) · [Python](/api/python/file-operations#load-html-form-in-edge-browser) · [JavaScript and TypeScript](/api/javascript/file-operations#load-html-form-in-edge-browser)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/load-html-form-in-edge-browser) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/load-html-form-in-edge-browser) · [Python](/api/python/sa-2026.1.0529.7/file-operations/load-html-form-in-edge-browser) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/load-html-form-in-edge-browser)
 
 
 ## Make Directory
@@ -6686,7 +6686,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#make-embedded-file-name-list) · [.NET](/api/dotnet/file-operations#make-embedded-file-name-list) · [Python](/api/python/file-operations#make-embedded-file-name-list) · [JavaScript and TypeScript](/api/javascript/file-operations#make-embedded-file-name-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/make-embedded-file-name-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/make-embedded-file-name-list) · [Python](/api/python/sa-2026.1.0529.7/file-operations/make-embedded-file-name-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/make-embedded-file-name-list)
 
 
 ## Make Vector Fit Constraint
@@ -6915,7 +6915,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#merge-measurements-into-xml-file) · [.NET](/api/dotnet/file-operations#merge-measurements-into-xml-file) · [Python](/api/python/file-operations#merge-measurements-into-xml-file) · [JavaScript and TypeScript](/api/javascript/file-operations#merge-measurements-into-xml-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/merge-measurements-into-xml-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/merge-measurements-into-xml-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/merge-measurements-into-xml-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/merge-measurements-into-xml-file)
 
 
 ## New SA File
@@ -6968,7 +6968,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#new-sa-file) · [.NET](/api/dotnet/file-operations#new-sa-file) · [Python](/api/python/file-operations#new-sa-file) · [JavaScript and TypeScript](/api/javascript/file-operations#new-sa-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/new-sa-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/new-sa-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/new-sa-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/new-sa-file)
 
 
 ## Open ASCII File
@@ -7135,7 +7135,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#open-sa-file) · [.NET](/api/dotnet/file-operations#open-sa-file) · [Python](/api/python/file-operations#open-sa-file) · [JavaScript and TypeScript](/api/javascript/file-operations#open-sa-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/open-sa-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/open-sa-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/open-sa-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/open-sa-file)
 
 
 ## Open Template File
@@ -7190,7 +7190,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#open-template-file) · [.NET](/api/dotnet/file-operations#open-template-file) · [Python](/api/python/file-operations#open-template-file) · [JavaScript and TypeScript](/api/javascript/file-operations#open-template-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/open-template-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/open-template-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/open-template-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/open-template-file)
 
 
 ## Open XML File
@@ -7302,7 +7302,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#pop-polybay-analysis-window) · [.NET](/api/dotnet/file-operations#pop-polybay-analysis-window) · [Python](/api/python/file-operations#pop-polybay-analysis-window) · [JavaScript and TypeScript](/api/javascript/file-operations#pop-polybay-analysis-window)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/pop-polybay-analysis-window) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/pop-polybay-analysis-window) · [Python](/api/python/sa-2026.1.0529.7/file-operations/pop-polybay-analysis-window) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/pop-polybay-analysis-window)
 
 
 ## Prepare QDAS Data List
@@ -7393,7 +7393,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The SDK cannot supply the documented dimension list.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#prepare-qdas-data-list) · [.NET](/api/dotnet/file-operations#prepare-qdas-data-list) · [Python](/api/python/file-operations#prepare-qdas-data-list) · [JavaScript and TypeScript](/api/javascript/file-operations#prepare-qdas-data-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/prepare-qdas-data-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/prepare-qdas-data-list) · [Python](/api/python/sa-2026.1.0529.7/file-operations/prepare-qdas-data-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/prepare-qdas-data-list)
 
 
 ## Put to ODBC Database
@@ -7682,7 +7682,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#rename-general-file) · [.NET](/api/dotnet/file-operations#rename-general-file) · [Python](/api/python/file-operations#rename-general-file) · [JavaScript and TypeScript](/api/javascript/file-operations#rename-general-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/rename-general-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/rename-general-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/rename-general-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/rename-general-file)
 
 
 ## Run Another Program
@@ -7853,7 +7853,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#save) · [.NET](/api/dotnet/file-operations#save) · [Python](/api/python/file-operations#save) · [JavaScript and TypeScript](/api/javascript/file-operations#save)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/save) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/save) · [Python](/api/python/sa-2026.1.0529.7/file-operations/save) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/save)
 
 
 ## Save As Read-Only Template
@@ -7908,7 +7908,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#save-as-read-only-template) · [.NET](/api/dotnet/file-operations#save-as-read-only-template) · [Python](/api/python/file-operations#save-as-read-only-template) · [JavaScript and TypeScript](/api/javascript/file-operations#save-as-read-only-template)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/save-as-read-only-template) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/save-as-read-only-template) · [Python](/api/python/sa-2026.1.0529.7/file-operations/save-as-read-only-template) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/save-as-read-only-template)
 
 
 ## Save As...
@@ -7967,7 +7967,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#save-as) · [.NET](/api/dotnet/file-operations#save-as) · [Python](/api/python/file-operations#save-as) · [JavaScript and TypeScript](/api/javascript/file-operations#save-as)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/save-as) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/save-as) · [Python](/api/python/sa-2026.1.0529.7/file-operations/save-as) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/save-as)
 
 
 ## Save DataShare File
@@ -8138,7 +8138,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-boolean-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-boolean-in-datashare-file) · [Python](/api/python/file-operations#set-boolean-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-boolean-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-boolean-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-boolean-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-boolean-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-boolean-in-datashare-file)
 
 
 ## Set Data Root Directory
@@ -8252,7 +8252,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-double-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-double-in-datashare-file) · [Python](/api/python/file-operations#set-double-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-double-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-double-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-double-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-double-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-double-in-datashare-file)
 
 
 ## Set Integer In DataShare File
@@ -8311,7 +8311,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-integer-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-integer-in-datashare-file) · [Python](/api/python/file-operations#set-integer-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-integer-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-integer-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-integer-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-integer-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-integer-in-datashare-file)
 
 
 ## Set K-Field from QDAS Catalog
@@ -8484,7 +8484,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-string-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-string-in-datashare-file) · [Python](/api/python/file-operations#set-string-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-string-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-string-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-string-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-string-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-string-in-datashare-file)
 
 
 ## Set Templates Directory
@@ -8598,7 +8598,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-transform-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-transform-in-datashare-file) · [Python](/api/python/file-operations#set-transform-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-transform-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-transform-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-transform-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-transform-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-transform-in-datashare-file)
 
 
 ## Set Vector In DataShare File
@@ -8657,7 +8657,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#set-vector-in-datashare-file) · [.NET](/api/dotnet/file-operations#set-vector-in-datashare-file) · [Python](/api/python/file-operations#set-vector-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/file-operations#set-vector-in-datashare-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/set-vector-in-datashare-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/set-vector-in-datashare-file) · [Python](/api/python/sa-2026.1.0529.7/file-operations/set-vector-in-datashare-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/set-vector-in-datashare-file)
 
 
 ## Set Working Directory
@@ -8873,7 +8873,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#terminate-all-running-mps) · [.NET](/api/dotnet/file-operations#terminate-all-running-mps) · [Python](/api/python/file-operations#terminate-all-running-mps) · [JavaScript and TypeScript](/api/javascript/file-operations#terminate-all-running-mps)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/terminate-all-running-mps) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/terminate-all-running-mps) · [Python](/api/python/sa-2026.1.0529.7/file-operations/terminate-all-running-mps) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/terminate-all-running-mps)
 
 
 ## Use NRKXML Library
@@ -8906,7 +8906,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#use-nrkxml-library) · [.NET](/api/dotnet/file-operations#use-nrkxml-library) · [Python](/api/python/file-operations#use-nrkxml-library) · [JavaScript and TypeScript](/api/javascript/file-operations#use-nrkxml-library)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/use-nrkxml-library) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/use-nrkxml-library) · [Python](/api/python/sa-2026.1.0529.7/file-operations/use-nrkxml-library) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/use-nrkxml-library)
 
 
 ## Verify General File Exists
@@ -8967,7 +8967,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 MP jump targets are omitted; existence is represented by the MP execution outcome.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#verify-general-file-exists) · [.NET](/api/dotnet/file-operations#verify-general-file-exists) · [Python](/api/python/file-operations#verify-general-file-exists) · [JavaScript and TypeScript](/api/javascript/file-operations#verify-general-file-exists)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/verify-general-file-exists) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/verify-general-file-exists) · [Python](/api/python/sa-2026.1.0529.7/file-operations/verify-general-file-exists) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/verify-general-file-exists)
 
 
 ## Verify MP File Exists
@@ -9028,7 +9028,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 MP jump targets are omitted; existence is represented by the MP execution outcome.
 
 
-**API References:** [gRPC](/api/grpc/file-operations#verify-mp-file-exists) · [.NET](/api/dotnet/file-operations#verify-mp-file-exists) · [Python](/api/python/file-operations#verify-mp-file-exists) · [JavaScript and TypeScript](/api/javascript/file-operations#verify-mp-file-exists)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/file-operations/verify-mp-file-exists) · [.NET](/api/dotnet/sa-2026.1.0529.7/file-operations/verify-mp-file-exists) · [Python](/api/python/sa-2026.1.0529.7/file-operations/verify-mp-file-exists) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/file-operations/verify-mp-file-exists)
 
 
 ## Write ASCII Line

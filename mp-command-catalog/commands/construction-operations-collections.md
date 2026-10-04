@@ -111,7 +111,7 @@ constructs the collection when it does not already exist. The collection-name
 field is required, but its supplied value is passed through without an
 additional Briosa validation policy.
 
-[gRPC](/api/grpc/construction-operations-collections#set-or-construct-default-collection) · [.NET](/api/dotnet/construction-operations-collections#set-or-construct-default-collection) · [Python](/api/python/construction-operations-collections#set-or-construct-default-collection) · [JavaScript](/api/javascript/construction-operations-collections#set-or-construct-default-collection)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-collections/set-or-construct-default-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-collections/set-or-construct-default-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-collections/set-or-construct-default-collection) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-collections/set-or-construct-default-collection)
 
 ## Construct Collection
 
@@ -159,7 +159,7 @@ Constructs a collection, optionally places it under a folder path, and can make
 it the active default collection. The collection name is required; the other
 two inputs retain the MP defaults.
 
-[gRPC](/api/grpc/construction-operations-collections#construct-collection) · [.NET](/api/dotnet/construction-operations-collections#construct-collection) · [Python](/api/python/construction-operations-collections#construct-collection) · [JavaScript](/api/javascript/construction-operations-collections#construct-collection)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-collections/construct-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-collections/construct-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-collections/construct-collection) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-collections/construct-collection)
 
 ## Get Active Collection Name
 
@@ -204,7 +204,7 @@ Returns the name of SpatialAnalyzer's active collection. The exact SA
 the current Briosa operation preserves that string contract. This read-only
 operation is safe to replay.
 
-[gRPC](/api/grpc/construction-operations-collections#get-active-collection-name) · [.NET](/api/dotnet/construction-operations-collections#get-active-collection-name) · [Python](/api/python/construction-operations-collections#get-active-collection-name) · [JavaScript](/api/javascript/construction-operations-collections#get-active-collection-name)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-collections/get-active-collection-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-collections/get-active-collection-name) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-collections/get-active-collection-name) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-collections/get-active-collection-name)
 
 ## Delete Collection
 
@@ -248,7 +248,7 @@ Deletes one named collection. The collection-name field is required and passed
 through to SpatialAnalyzer. Briosa never automatically replays this destructive
 operation after an unknown execution outcome.
 
-[gRPC](/api/grpc/construction-operations-collections#delete-collection) · [.NET](/api/dotnet/construction-operations-collections#delete-collection) · [Python](/api/python/construction-operations-collections#delete-collection) · [JavaScript](/api/javascript/construction-operations-collections#delete-collection)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-collections/delete-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-collections/delete-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-collections/delete-collection) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-collections/delete-collection)
 
 ## Delete Collections by Wildcard
 
@@ -304,4 +304,4 @@ through to SpatialAnalyzer. Callers must opt in when a search is allowed to
 delete every collection. Briosa never automatically replays this destructive
 operation after an unknown execution outcome.
 
-[gRPC](/api/grpc/construction-operations-collections#delete-collections-by-wildcard) · [.NET](/api/dotnet/construction-operations-collections#delete-collections-by-wildcard) · [Python](/api/python/construction-operations-collections#delete-collections-by-wildcard) · [JavaScript](/api/javascript/construction-operations-collections#delete-collections-by-wildcard)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-collections/delete-collections-by-wildcard) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-collections/delete-collections-by-wildcard) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-collections/delete-collections-by-wildcard) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-collections/delete-collections-by-wildcard)

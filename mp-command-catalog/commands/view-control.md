@@ -688,7 +688,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#auto-scale) · [.NET](/api/dotnet/view-control#auto-scale) · [Python](/api/python/view-control#auto-scale) · [JavaScript and TypeScript](/api/javascript/view-control#auto-scale)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/auto-scale) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/auto-scale) · [Python](/api/python/sa-2026.1.0529.7/view-control/auto-scale) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/auto-scale)
 
 
 ## Center Graphics About Object(s)
@@ -747,7 +747,7 @@ The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain:
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#center-graphics-about-objects) · [.NET](/api/dotnet/view-control#center-graphics-about-objects) · [Python](/api/python/view-control#center-graphics-about-objects) · [JavaScript and TypeScript](/api/javascript/view-control#center-graphics-about-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/center-graphics-about-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/center-graphics-about-objects) · [Python](/api/python/sa-2026.1.0529.7/view-control/center-graphics-about-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/center-graphics-about-objects)
 
 
 ## Center Graphics About Point
@@ -802,7 +802,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#center-graphics-about-point) · [.NET](/api/dotnet/view-control#center-graphics-about-point) · [Python](/api/python/view-control#center-graphics-about-point) · [JavaScript and TypeScript](/api/javascript/view-control#center-graphics-about-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/center-graphics-about-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/center-graphics-about-point) · [Python](/api/python/sa-2026.1.0529.7/view-control/center-graphics-about-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/center-graphics-about-point)
 
 
 ## Convert Integer Values to RGB
@@ -991,7 +991,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#define-point-of-view) · [.NET](/api/dotnet/view-control#define-point-of-view) · [Python](/api/python/view-control#define-point-of-view) · [JavaScript and TypeScript](/api/javascript/view-control#define-point-of-view)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/define-point-of-view) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/define-point-of-view) · [Python](/api/python/sa-2026.1.0529.7/view-control/define-point-of-view) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/define-point-of-view)
 
 
 ## Get Active Clipping Planes
@@ -1046,7 +1046,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#get-active-clipping-planes) · [.NET](/api/dotnet/view-control#get-active-clipping-planes) · [Python](/api/python/view-control#get-active-clipping-planes) · [JavaScript and TypeScript](/api/javascript/view-control#get-active-clipping-planes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/get-active-clipping-planes) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/get-active-clipping-planes) · [Python](/api/python/sa-2026.1.0529.7/view-control/get-active-clipping-planes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/get-active-clipping-planes)
 
 
 ## Get Object Color
@@ -1172,7 +1172,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns the eight evidenced values; the documented rendering mode output is omitted.
 
 
-**API References:** [gRPC](/api/grpc/view-control#get-point-of-view-parameters) · [.NET](/api/dotnet/view-control#get-point-of-view-parameters) · [Python](/api/python/view-control#get-point-of-view-parameters) · [JavaScript and TypeScript](/api/javascript/view-control#get-point-of-view-parameters)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/get-point-of-view-parameters) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/get-point-of-view-parameters) · [Python](/api/python/sa-2026.1.0529.7/view-control/get-point-of-view-parameters) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/get-point-of-view-parameters)
 
 
 ## Hide All Callout View
@@ -1258,7 +1258,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#hide-all-callout-views) · [.NET](/api/dotnet/view-control#hide-all-callout-views) · [Python](/api/python/view-control#hide-all-callout-views) · [JavaScript and TypeScript](/api/javascript/view-control#hide-all-callout-views)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/hide-all-callout-views) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/hide-all-callout-views) · [Python](/api/python/sa-2026.1.0529.7/view-control/hide-all-callout-views) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/hide-all-callout-views)
 
 
 ## Hide Objects
@@ -1313,7 +1313,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#hide-objects) · [.NET](/api/dotnet/view-control#hide-objects) · [Python](/api/python/view-control#hide-objects) · [JavaScript and TypeScript](/api/javascript/view-control#hide-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/hide-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/hide-objects) · [Python](/api/python/sa-2026.1.0529.7/view-control/hide-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/hide-objects)
 
 
 ## Highlight Objects
@@ -1370,7 +1370,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#highlight-objects) · [.NET](/api/dotnet/view-control#highlight-objects) · [Python](/api/python/view-control#highlight-objects) · [JavaScript and TypeScript](/api/javascript/view-control#highlight-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/highlight-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/highlight-objects) · [Python](/api/python/sa-2026.1.0529.7/view-control/highlight-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/highlight-objects)
 
 
 ## Highlight Point
@@ -1427,7 +1427,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#highlight-point) · [.NET](/api/dotnet/view-control#highlight-point) · [Python](/api/python/view-control#highlight-point) · [JavaScript and TypeScript](/api/javascript/view-control#highlight-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/highlight-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/highlight-point) · [Python](/api/python/sa-2026.1.0529.7/view-control/highlight-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/highlight-point)
 
 
 ## Highlight Relationships
@@ -1484,7 +1484,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#highlight-relationships) · [.NET](/api/dotnet/view-control#highlight-relationships) · [Python](/api/python/view-control#highlight-relationships) · [JavaScript and TypeScript](/api/javascript/view-control#highlight-relationships)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/highlight-relationships) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/highlight-relationships) · [Python](/api/python/sa-2026.1.0529.7/view-control/highlight-relationships) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/highlight-relationships)
 
 
 ## Load Ribbon Bar from XML File
@@ -1539,7 +1539,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#load-ribbon-bar-from-xml-file) · [.NET](/api/dotnet/view-control#load-ribbon-bar-from-xml-file) · [Python](/api/python/view-control#load-ribbon-bar-from-xml-file) · [JavaScript and TypeScript](/api/javascript/view-control#load-ribbon-bar-from-xml-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/load-ribbon-bar-from-xml-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/load-ribbon-bar-from-xml-file) · [Python](/api/python/sa-2026.1.0529.7/view-control/load-ribbon-bar-from-xml-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/load-ribbon-bar-from-xml-file)
 
 
 ## Refresh Views
@@ -1592,7 +1592,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#refresh-views) · [.NET](/api/dotnet/view-control#refresh-views) · [Python](/api/python/view-control#refresh-views) · [JavaScript and TypeScript](/api/javascript/view-control#refresh-views)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/refresh-views) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/refresh-views) · [Python](/api/python/sa-2026.1.0529.7/view-control/refresh-views) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/refresh-views)
 
 
 ## Reset Ribbon Bar to Default
@@ -1645,7 +1645,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#reset-ribbon-bar-to-default) · [.NET](/api/dotnet/view-control#reset-ribbon-bar-to-default) · [Python](/api/python/view-control#reset-ribbon-bar-to-default) · [JavaScript and TypeScript](/api/javascript/view-control#reset-ribbon-bar-to-default)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/reset-ribbon-bar-to-default) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/reset-ribbon-bar-to-default) · [Python](/api/python/sa-2026.1.0529.7/view-control/reset-ribbon-bar-to-default) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/reset-ribbon-bar-to-default)
 
 
 ## Save point of view
@@ -1702,7 +1702,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#save-point-of-view) · [.NET](/api/dotnet/view-control#save-point-of-view) · [Python](/api/python/view-control#save-point-of-view) · [JavaScript and TypeScript](/api/javascript/view-control#save-point-of-view)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/save-point-of-view) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/save-point-of-view) · [Python](/api/python/sa-2026.1.0529.7/view-control/save-point-of-view) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/save-point-of-view)
 
 
 ## Set Background Color
@@ -1769,7 +1769,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Sets the four color values; background type and gradient direction cannot be selected.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-background-color) · [.NET](/api/dotnet/view-control#set-background-color) · [Python](/api/python/view-control#set-background-color) · [JavaScript and TypeScript](/api/javascript/view-control#set-background-color)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-background-color) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-background-color) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-background-color) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-background-color)
 
 
 ## Set MP's Window State
@@ -1824,7 +1824,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-mps-window-state) · [.NET](/api/dotnet/view-control#set-mps-window-state) · [Python](/api/python/view-control#set-mps-window-state) · [JavaScript and TypeScript](/api/javascript/view-control#set-mps-window-state)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-mps-window-state) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-mps-window-state) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-mps-window-state) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-mps-window-state)
 
 
 ## Set Object(s) Color
@@ -1883,7 +1883,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-objects-color) · [.NET](/api/dotnet/view-control#set-objects-color) · [Python](/api/python/view-control#set-objects-color) · [JavaScript and TypeScript](/api/javascript/view-control#set-objects-color)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-objects-color) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-objects-color) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-objects-color) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-objects-color)
 
 
 ## Set Object(s) Translucency
@@ -1942,7 +1942,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-objects-translucency) · [.NET](/api/dotnet/view-control#set-objects-translucency) · [Python](/api/python/view-control#set-objects-translucency) · [JavaScript and TypeScript](/api/javascript/view-control#set-objects-translucency)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-objects-translucency) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-objects-translucency) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-objects-translucency) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-objects-translucency)
 
 
 ## Set point of view
@@ -1997,7 +1997,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-point-of-view) · [.NET](/api/dotnet/view-control#set-point-of-view) · [Python](/api/python/view-control#set-point-of-view) · [JavaScript and TypeScript](/api/javascript/view-control#set-point-of-view)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-point-of-view) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-point-of-view) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-point-of-view) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-point-of-view)
 
 
 ## Set Point of View from Frame
@@ -2054,7 +2054,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-point-of-view-from-frame) · [.NET](/api/dotnet/view-control#set-point-of-view-from-frame) · [Python](/api/python/view-control#set-point-of-view-from-frame) · [JavaScript and TypeScript](/api/javascript/view-control#set-point-of-view-from-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-point-of-view-from-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-point-of-view-from-frame) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-point-of-view-from-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-point-of-view-from-frame)
 
 
 ## Set Point of View from Instrument Updates
@@ -2133,7 +2133,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-point-of-view-from-instrument-updates) · [.NET](/api/dotnet/view-control#set-point-of-view-from-instrument-updates) · [Python](/api/python/view-control#set-point-of-view-from-instrument-updates) · [JavaScript and TypeScript](/api/javascript/view-control#set-point-of-view-from-instrument-updates)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-point-of-view-from-instrument-updates) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-point-of-view-from-instrument-updates) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-point-of-view-from-instrument-updates) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-point-of-view-from-instrument-updates)
 
 
 ## Set Render Mode Type
@@ -2188,7 +2188,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-render-mode-type) · [.NET](/api/dotnet/view-control#set-render-mode-type) · [Python](/api/python/view-control#set-render-mode-type) · [JavaScript and TypeScript](/api/javascript/view-control#set-render-mode-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-render-mode-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-render-mode-type) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-render-mode-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-render-mode-type)
 
 
 ## Set SA's Window Pos
@@ -2245,7 +2245,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-sas-window-pos) · [.NET](/api/dotnet/view-control#set-sas-window-pos) · [Python](/api/python/view-control#set-sas-window-pos) · [JavaScript and TypeScript](/api/javascript/view-control#set-sas-window-pos)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-sas-window-pos) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-sas-window-pos) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-sas-window-pos) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-sas-window-pos)
 
 
 ## Set SA's Window Size
@@ -2302,7 +2302,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-sas-window-size) · [.NET](/api/dotnet/view-control#set-sas-window-size) · [Python](/api/python/view-control#set-sas-window-size) · [JavaScript and TypeScript](/api/javascript/view-control#set-sas-window-size)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-sas-window-size) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-sas-window-size) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-sas-window-size) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-sas-window-size)
 
 
 ## Set SA's Window State
@@ -2357,7 +2357,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-sas-window-state) · [.NET](/api/dotnet/view-control#set-sas-window-state) · [Python](/api/python/view-control#set-sas-window-state) · [JavaScript and TypeScript](/api/javascript/view-control#set-sas-window-state)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-sas-window-state) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-sas-window-state) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-sas-window-state) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-sas-window-state)
 
 
 ## Set Target Labels Use Full Names
@@ -2412,7 +2412,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-target-labels-use-full-names) · [.NET](/api/dotnet/view-control#set-target-labels-use-full-names) · [Python](/api/python/view-control#set-target-labels-use-full-names) · [JavaScript and TypeScript](/api/javascript/view-control#set-target-labels-use-full-names)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-target-labels-use-full-names) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-target-labels-use-full-names) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-target-labels-use-full-names) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-target-labels-use-full-names)
 
 
 ## Set Toolkit Visibility
@@ -2471,7 +2471,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Shows or hides the toolkit; the toolkit page cannot be selected.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-toolkit-visibility) · [.NET](/api/dotnet/view-control#set-toolkit-visibility) · [Python](/api/python/view-control#set-toolkit-visibility) · [JavaScript and TypeScript](/api/javascript/view-control#set-toolkit-visibility)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-toolkit-visibility) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-toolkit-visibility) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-toolkit-visibility) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-toolkit-visibility)
 
 
 ## Set View Clipping Plane
@@ -2530,7 +2530,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-view-clipping-plane) · [.NET](/api/dotnet/view-control#set-view-clipping-plane) · [Python](/api/python/view-control#set-view-clipping-plane) · [JavaScript and TypeScript](/api/javascript/view-control#set-view-clipping-plane)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-view-clipping-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-view-clipping-plane) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-view-clipping-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-view-clipping-plane)
 
 
 ## Set Working Color
@@ -2585,7 +2585,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-working-color) · [.NET](/api/dotnet/view-control#set-working-color) · [Python](/api/python/view-control#set-working-color) · [JavaScript and TypeScript](/api/javascript/view-control#set-working-color)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-working-color) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-working-color) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-working-color) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-working-color)
 
 
 ## Set Working Color Auto Increment
@@ -2640,7 +2640,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#set-working-color-auto-increment) · [.NET](/api/dotnet/view-control#set-working-color-auto-increment) · [Python](/api/python/view-control#set-working-color-auto-increment) · [JavaScript and TypeScript](/api/javascript/view-control#set-working-color-auto-increment)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/set-working-color-auto-increment) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/set-working-color-auto-increment) · [Python](/api/python/sa-2026.1.0529.7/view-control/set-working-color-auto-increment) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/set-working-color-auto-increment)
 
 
 ## Show / Hide by Object Type
@@ -2701,7 +2701,7 @@ The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain:
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show--hide-by-object-type) · [.NET](/api/dotnet/view-control#show--hide-by-object-type) · [Python](/api/python/view-control#show--hide-by-object-type) · [JavaScript and TypeScript](/api/javascript/view-control#show--hide-by-object-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show--hide-by-object-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show--hide-by-object-type) · [Python](/api/python/sa-2026.1.0529.7/view-control/show--hide-by-object-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show--hide-by-object-type)
 
 
 ## Show / Hide Callout View
@@ -2760,7 +2760,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show--hide-callout-view) · [.NET](/api/dotnet/view-control#show--hide-callout-view) · [Python](/api/python/view-control#show--hide-callout-view) · [JavaScript and TypeScript](/api/javascript/view-control#show--hide-callout-view)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show--hide-callout-view) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show--hide-callout-view) · [Python](/api/python/sa-2026.1.0529.7/view-control/show--hide-callout-view) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show--hide-callout-view)
 
 
 ## Show / Hide Dimension
@@ -2819,7 +2819,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show--hide-dimension) · [.NET](/api/dotnet/view-control#show--hide-dimension) · [Python](/api/python/view-control#show--hide-dimension) · [JavaScript and TypeScript](/api/javascript/view-control#show--hide-dimension)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show--hide-dimension) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show--hide-dimension) · [Python](/api/python/sa-2026.1.0529.7/view-control/show--hide-dimension) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show--hide-dimension)
 
 
 ## Show / Hide Points
@@ -2876,7 +2876,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show--hide-points) · [.NET](/api/dotnet/view-control#show--hide-points) · [Python](/api/python/view-control#show--hide-points) · [JavaScript and TypeScript](/api/javascript/view-control#show--hide-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show--hide-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show--hide-points) · [Python](/api/python/sa-2026.1.0529.7/view-control/show--hide-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show--hide-points)
 
 
 ## Show by Object Type
@@ -2935,7 +2935,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show-by-object-type) · [.NET](/api/dotnet/view-control#show-by-object-type) · [Python](/api/python/view-control#show-by-object-type) · [JavaScript and TypeScript](/api/javascript/view-control#show-by-object-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show-by-object-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show-by-object-type) · [Python](/api/python/sa-2026.1.0529.7/view-control/show-by-object-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show-by-object-type)
 
 
 ## Show Items in Tree
@@ -3002,7 +3002,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show-items-in-tree) · [.NET](/api/dotnet/view-control#show-items-in-tree) · [Python](/api/python/view-control#show-items-in-tree) · [JavaScript and TypeScript](/api/javascript/view-control#show-items-in-tree)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show-items-in-tree) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show-items-in-tree) · [Python](/api/python/sa-2026.1.0529.7/view-control/show-items-in-tree) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show-items-in-tree)
 
 
 ## Show Labels
@@ -3059,7 +3059,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show-labels) · [.NET](/api/dotnet/view-control#show-labels) · [Python](/api/python/view-control#show-labels) · [JavaScript and TypeScript](/api/javascript/view-control#show-labels)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show-labels) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show-labels) · [Python](/api/python/sa-2026.1.0529.7/view-control/show-labels) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show-labels)
 
 
 ## Show Objects
@@ -3114,7 +3114,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#show-objects) · [.NET](/api/dotnet/view-control#show-objects) · [Python](/api/python/view-control#show-objects) · [JavaScript and TypeScript](/api/javascript/view-control#show-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/show-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/show-objects) · [Python](/api/python/sa-2026.1.0529.7/view-control/show-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/show-objects)
 
 
 ## Show/Hide Annotations for Datums
@@ -3175,7 +3175,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-annotations-for-datums) · [.NET](/api/dotnet/view-control#showhide-annotations-for-datums) · [Python](/api/python/view-control#showhide-annotations-for-datums) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-annotations-for-datums)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-annotations-for-datums) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-annotations-for-datums) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-annotations-for-datums) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-annotations-for-datums)
 
 
 ## Show/Hide Annotations for Feature Checks
@@ -3236,7 +3236,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-annotations-for-feature-checks) · [.NET](/api/dotnet/view-control#showhide-annotations-for-feature-checks) · [Python](/api/python/view-control#showhide-annotations-for-feature-checks) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-annotations-for-feature-checks)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-annotations-for-feature-checks) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-annotations-for-feature-checks) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-annotations-for-feature-checks) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-annotations-for-feature-checks)
 
 
 ## Show/Hide Dimensions
@@ -3325,7 +3325,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-inspection-bar) · [.NET](/api/dotnet/view-control#showhide-inspection-bar) · [Python](/api/python/view-control#showhide-inspection-bar) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-inspection-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-inspection-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-inspection-bar) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-inspection-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-inspection-bar)
 
 
 ## Show/Hide Instrument Interface
@@ -3384,7 +3384,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-instrument-interface) · [.NET](/api/dotnet/view-control#showhide-instrument-interface) · [Python](/api/python/view-control#showhide-instrument-interface) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-instrument-interface)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-instrument-interface) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-instrument-interface) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-instrument-interface) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-instrument-interface)
 
 
 ## Show/Hide Instrument Probe Tip
@@ -3439,7 +3439,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-instrument-probe-tip) · [.NET](/api/dotnet/view-control#showhide-instrument-probe-tip) · [Python](/api/python/view-control#showhide-instrument-probe-tip) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-instrument-probe-tip)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-instrument-probe-tip) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-instrument-probe-tip) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-instrument-probe-tip) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-instrument-probe-tip)
 
 
 ## Show/Hide Instruments
@@ -3496,7 +3496,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-instruments) · [.NET](/api/dotnet/view-control#showhide-instruments) · [Python](/api/python/view-control#showhide-instruments) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-instruments)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-instruments) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-instruments) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-instruments) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-instruments)
 
 
 ## Show/Hide Relationship Report
@@ -3553,7 +3553,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-relationship-report) · [.NET](/api/dotnet/view-control#showhide-relationship-report) · [Python](/api/python/view-control#showhide-relationship-report) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-relationship-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-relationship-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-relationship-report) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-relationship-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-relationship-report)
 
 
 ## Show/Hide Relationship Watch
@@ -3622,4 +3622,4 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/view-control#showhide-relationship-watch) · [.NET](/api/dotnet/view-control#showhide-relationship-watch) · [Python](/api/python/view-control#showhide-relationship-watch) · [JavaScript and TypeScript](/api/javascript/view-control#showhide-relationship-watch)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/view-control/showhide-relationship-watch) · [.NET](/api/dotnet/sa-2026.1.0529.7/view-control/showhide-relationship-watch) · [Python](/api/python/sa-2026.1.0529.7/view-control/showhide-relationship-watch) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/view-control/showhide-relationship-watch)

@@ -234,7 +234,7 @@ the MP Editor export marking this argument `NOT_SUPPORTED`. The probe never
 called `ExecuteStep`; actual copy and move behavior still requires a protected
 fixture scenario.
 
-**API References:** [gRPC](/api/grpc/construction-operations#mirror-objects) · [.NET](/api/dotnet/construction-operations#mirror-objects) · [Python](/api/python/construction-operations#mirror-objects) · [JavaScript and TypeScript](/api/javascript/construction-operations#mirror-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/mirror-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/mirror-objects) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/mirror-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/mirror-objects)
 
 ## Copy Object
 
@@ -291,7 +291,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Copies one collection object to a caller-supplied object name.
 
-**API References:** [gRPC](/api/grpc/construction-operations#copy-object) · [.NET](/api/dotnet/construction-operations#copy-object) · [Python](/api/python/construction-operations#copy-object) · [JavaScript and TypeScript](/api/javascript/construction-operations#copy-object)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/copy-object) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/copy-object) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/copy-object) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/copy-object)
 
 ## Copy Objects to a collection
 
@@ -345,7 +345,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Copies selected objects into a destination collection. SpatialAnalyzer creates
 the destination collection when it does not already exist.
 
-**API References:** [gRPC](/api/grpc/construction-operations#copy-objects-to-a-collection) · [.NET](/api/dotnet/construction-operations#copy-objects-to-a-collection) · [Python](/api/python/construction-operations#copy-objects-to-a-collection) · [JavaScript and TypeScript](/api/javascript/construction-operations#copy-objects-to-a-collection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/copy-objects-to-a-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/copy-objects-to-a-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/copy-objects-to-a-collection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/copy-objects-to-a-collection)
 
 ## Move Objects to a collection
 
@@ -398,7 +398,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Moves selected objects into a destination collection.
 
-**API References:** [gRPC](/api/grpc/construction-operations#move-objects-to-a-collection) · [.NET](/api/dotnet/construction-operations#move-objects-to-a-collection) · [Python](/api/python/construction-operations#move-objects-to-a-collection) · [JavaScript and TypeScript](/api/javascript/construction-operations#move-objects-to-a-collection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/move-objects-to-a-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/move-objects-to-a-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/move-objects-to-a-collection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/move-objects-to-a-collection)
 
 ## Copy Objects - Point to Point Delta
 
@@ -456,7 +456,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Copies selected objects by the delta from the first point to the second point,
 optionally placing the copies in another collection.
 
-**API References:** [gRPC](/api/grpc/construction-operations#copy-objects---point-to-point-delta) · [.NET](/api/dotnet/construction-operations#copy-objects---point-to-point-delta) · [Python](/api/python/construction-operations#copy-objects---point-to-point-delta) · [JavaScript and TypeScript](/api/javascript/construction-operations#copy-objects---point-to-point-delta)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/copy-objects---point-to-point-delta) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/copy-objects---point-to-point-delta) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/copy-objects---point-to-point-delta) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/copy-objects---point-to-point-delta)
 
 ## Move Objects - Point to Point Delta
 
@@ -511,7 +511,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Moves selected objects by the delta from the first point to the second point.
 
-**API References:** [gRPC](/api/grpc/construction-operations#move-objects---point-to-point-delta) · [.NET](/api/dotnet/construction-operations#move-objects---point-to-point-delta) · [Python](/api/python/construction-operations#move-objects---point-to-point-delta) · [JavaScript and TypeScript](/api/javascript/construction-operations#move-objects---point-to-point-delta)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/move-objects---point-to-point-delta) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/move-objects---point-to-point-delta) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/move-objects---point-to-point-delta) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/move-objects---point-to-point-delta)
 
 ## Rename Point
 
@@ -566,7 +566,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Renames one point and optionally permits replacement of an existing target.
 
-**API References:** [gRPC](/api/grpc/construction-operations#rename-point) · [.NET](/api/dotnet/construction-operations#rename-point) · [Python](/api/python/construction-operations#rename-point) · [JavaScript and TypeScript](/api/javascript/construction-operations#rename-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/rename-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/rename-point) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/rename-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/rename-point)
 
 ## Rename Points with Name Pattern
 
@@ -621,7 +621,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Renames a list of points using a numbered `%d` name pattern.
 
-**API References:** [gRPC](/api/grpc/construction-operations#rename-points-with-name-pattern) · [.NET](/api/dotnet/construction-operations#rename-points-with-name-pattern) · [Python](/api/python/construction-operations#rename-points-with-name-pattern) · [JavaScript and TypeScript](/api/javascript/construction-operations#rename-points-with-name-pattern)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/rename-points-with-name-pattern) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/rename-points-with-name-pattern) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/rename-points-with-name-pattern) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/rename-points-with-name-pattern)
 
 ## Rename Collection
 
@@ -674,7 +674,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Renames one collection.
 
-**API References:** [gRPC](/api/grpc/construction-operations#rename-collection) · [.NET](/api/dotnet/construction-operations#rename-collection) · [Python](/api/python/construction-operations#rename-collection) · [JavaScript and TypeScript](/api/javascript/construction-operations#rename-collection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/rename-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/rename-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/rename-collection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/rename-collection)
 
 ## Rename Object
 
@@ -733,7 +733,7 @@ Renames a collection object. Callers should provide the object type in the
 structured name so SpatialAnalyzer does not select a same-named object of a
 different type.
 
-**API References:** [gRPC](/api/grpc/construction-operations#rename-object) · [.NET](/api/dotnet/construction-operations#rename-object) · [Python](/api/python/construction-operations#rename-object) · [JavaScript and TypeScript](/api/javascript/construction-operations#rename-object)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/rename-object) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/rename-object) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/rename-object) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/rename-object)
 
 ## Rename Item
 
@@ -793,7 +793,7 @@ charts, dimensions, events, pictures, relationships, and reports. Briosa uses
 `CollectionItemName` so this broader item domain remains distinct from geometry
 objects.
 
-**API References:** [gRPC](/api/grpc/construction-operations#rename-item) · [.NET](/api/dotnet/construction-operations#rename-item) · [Python](/api/python/construction-operations#rename-item) · [JavaScript and TypeScript](/api/javascript/construction-operations#rename-item)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/rename-item) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/rename-item) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/rename-item) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/rename-item)
 
 ## Delete Points
 
@@ -845,7 +845,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Deletes the selected points. Briosa does not automatically retry this
 destructive operation after an unknown execution outcome.
 
-**API References:** [gRPC](/api/grpc/construction-operations#delete-points) · [.NET](/api/dotnet/construction-operations#delete-points) · [Python](/api/python/construction-operations#delete-points) · [JavaScript and TypeScript](/api/javascript/construction-operations#delete-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/delete-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/delete-points) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/delete-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/delete-points)
 
 ## Delete Points WildCard Selection
 
@@ -900,7 +900,7 @@ Deletes points matching a SpatialAnalyzer wildcard point-name selection within
 the supplied groups. Briosa does not automatically retry this destructive
 operation after an unknown execution outcome.
 
-**API References:** [gRPC](/api/grpc/construction-operations#delete-points-wildcard-selection) · [.NET](/api/dotnet/construction-operations#delete-points-wildcard-selection) · [Python](/api/python/construction-operations#delete-points-wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations#delete-points-wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/delete-points-wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/delete-points-wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/delete-points-wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/delete-points-wildcard-selection)
 
 ## Construct Objects From Surface Faces - Runtime Select
 
@@ -972,4 +972,4 @@ desired. The surface-face selection itself remains interactive.
 Use explicit construction commands or an existing MP workflow when the
 geometry type and selection process are already known.
 
-**API References:** [gRPC](/api/grpc/construction-operations#construct-objects-from-surface-faces---runtime-select) · [.NET](/api/dotnet/construction-operations#construct-objects-from-surface-faces---runtime-select) · [Python](/api/python/construction-operations#construct-objects-from-surface-faces---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations#construct-objects-from-surface-faces---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/construct-objects-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/construct-objects-from-surface-faces---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/construct-objects-from-surface-faces---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/construct-objects-from-surface-faces---runtime-select)

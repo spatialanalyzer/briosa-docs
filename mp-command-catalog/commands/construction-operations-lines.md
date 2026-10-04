@@ -492,4 +492,4 @@ requires a suitable instrument-measurement fixture.
 
 ## API References
 
-All nine contracts are published together in the [gRPC](/api/grpc/construction-operations-lines), [.NET](/api/dotnet/construction-operations-lines), [Python](/api/python/construction-operations-lines), and [JavaScript/TypeScript](/api/javascript/construction-operations-lines) references.
+All nine contracts are published together in the [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-lines), [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-lines), [Python](/api/python/sa-2026.1.0529.7/construction-operations-lines), and [JavaScript/TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-lines) references.

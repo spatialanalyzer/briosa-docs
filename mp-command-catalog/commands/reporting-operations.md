@@ -1013,7 +1013,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-charts-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-charts-to-report-bar) · [Python](/api/python/reporting-operations#add-charts-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-charts-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-charts-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-charts-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-charts-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-charts-to-report-bar)
 
 
 ## Add Custom Table to SA Report
@@ -1074,7 +1074,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-custom-table-to-sa-report) · [.NET](/api/dotnet/reporting-operations#add-custom-table-to-sa-report) · [Python](/api/python/reporting-operations#add-custom-table-to-sa-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-custom-table-to-sa-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-custom-table-to-sa-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-custom-table-to-sa-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-custom-table-to-sa-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-custom-table-to-sa-report)
 
 
 ## Add Custom Tables to Report Bar
@@ -1131,7 +1131,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-custom-tables-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-custom-tables-to-report-bar) · [Python](/api/python/reporting-operations#add-custom-tables-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-custom-tables-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-custom-tables-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-custom-tables-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-custom-tables-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-custom-tables-to-report-bar)
 
 
 ## Add Datums to Report Bar
@@ -1188,7 +1188,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-datums-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-datums-to-report-bar) · [Python](/api/python/reporting-operations#add-datums-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-datums-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-datums-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-datums-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-datums-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-datums-to-report-bar)
 
 
 ## Add Dimensions to Report Bar
@@ -1302,7 +1302,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-events-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-events-to-report-bar) · [Python](/api/python/reporting-operations#add-events-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-events-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-events-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-events-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-events-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-events-to-report-bar)
 
 
 ## Add Feature Checks to Report Bar
@@ -1359,7 +1359,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-feature-checks-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-feature-checks-to-report-bar) · [Python](/api/python/reporting-operations#add-feature-checks-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-feature-checks-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-feature-checks-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-feature-checks-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-feature-checks-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-feature-checks-to-report-bar)
 
 
 ## Add Item to SA Report at Location
@@ -1426,7 +1426,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-item-to-sa-report-at-location) · [.NET](/api/dotnet/reporting-operations#add-item-to-sa-report-at-location) · [Python](/api/python/reporting-operations#add-item-to-sa-report-at-location) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-item-to-sa-report-at-location)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-item-to-sa-report-at-location) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-item-to-sa-report-at-location) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-item-to-sa-report-at-location) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-item-to-sa-report-at-location)
 
 
 ## Add Objects to Report Bar
@@ -1483,7 +1483,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-objects-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-objects-to-report-bar) · [Python](/api/python/reporting-operations#add-objects-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-objects-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-objects-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-objects-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-objects-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-objects-to-report-bar)
 
 
 ## Add Pictures to Report Bar
@@ -1540,7 +1540,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-pictures-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-pictures-to-report-bar) · [Python](/api/python/reporting-operations#add-pictures-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-pictures-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-pictures-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-pictures-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-pictures-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-pictures-to-report-bar)
 
 
 ## Add Relationships to Report Bar
@@ -1597,7 +1597,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#add-relationships-to-report-bar) · [.NET](/api/dotnet/reporting-operations#add-relationships-to-report-bar) · [Python](/api/python/reporting-operations#add-relationships-to-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#add-relationships-to-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/add-relationships-to-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/add-relationships-to-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/add-relationships-to-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/add-relationships-to-report-bar)
 
 
 ## Add Scale Bars to Report Bar
@@ -1717,7 +1717,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#append-items-to-sa-report) · [.NET](/api/dotnet/reporting-operations#append-items-to-sa-report) · [Python](/api/python/reporting-operations#append-items-to-sa-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#append-items-to-sa-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/append-items-to-sa-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/append-items-to-sa-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/append-items-to-sa-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/append-items-to-sa-report)
 
 
 ## Capture Current View
@@ -1774,7 +1774,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#capture-current-view) · [.NET](/api/dotnet/reporting-operations#capture-current-view) · [Python](/api/python/reporting-operations#capture-current-view) · [JavaScript and TypeScript](/api/javascript/reporting-operations#capture-current-view)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/capture-current-view) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/capture-current-view) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/capture-current-view) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/capture-current-view)
 
 
 ## Capture Screen to File (BMP/JPG/PNG/GIF/TIFF)
@@ -1829,7 +1829,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [.NET](/api/dotnet/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [Python](/api/python/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff) · [JavaScript and TypeScript](/api/javascript/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/capture-screen-to-file-bmpjpgpnggiftiff) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/capture-screen-to-file-bmpjpgpnggiftiff) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/capture-screen-to-file-bmpjpgpnggiftiff) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/capture-screen-to-file-bmpjpgpnggiftiff)
 
 
 ## Clear Custom Table
@@ -1886,7 +1886,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#clear-custom-table) · [.NET](/api/dotnet/reporting-operations#clear-custom-table) · [Python](/api/python/reporting-operations#clear-custom-table) · [JavaScript and TypeScript](/api/javascript/reporting-operations#clear-custom-table)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/clear-custom-table) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/clear-custom-table) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/clear-custom-table) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/clear-custom-table)
 
 
 ## Close All Reports
@@ -1939,7 +1939,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#close-all-reports) · [.NET](/api/dotnet/reporting-operations#close-all-reports) · [Python](/api/python/reporting-operations#close-all-reports) · [JavaScript and TypeScript](/api/javascript/reporting-operations#close-all-reports)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/close-all-reports) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/close-all-reports) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/close-all-reports) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/close-all-reports)
 
 
 ## Close HTML Display Board
@@ -1992,7 +1992,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#close-html-display-board) · [.NET](/api/dotnet/reporting-operations#close-html-display-board) · [Python](/api/python/reporting-operations#close-html-display-board) · [JavaScript and TypeScript](/api/javascript/reporting-operations#close-html-display-board)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/close-html-display-board) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/close-html-display-board) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/close-html-display-board) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/close-html-display-board)
 
 
 ## Combine SA Reports
@@ -2053,7 +2053,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#combine-sa-reports) · [.NET](/api/dotnet/reporting-operations#combine-sa-reports) · [Python](/api/python/reporting-operations#combine-sa-reports) · [JavaScript and TypeScript](/api/javascript/reporting-operations#combine-sa-reports)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/combine-sa-reports) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/combine-sa-reports) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/combine-sa-reports) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/combine-sa-reports)
 
 
 ## Create Chart from Vector Group
@@ -2122,7 +2122,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#create-chart-from-vector-group) · [.NET](/api/dotnet/reporting-operations#create-chart-from-vector-group) · [Python](/api/python/reporting-operations#create-chart-from-vector-group) · [JavaScript and TypeScript](/api/javascript/reporting-operations#create-chart-from-vector-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/create-chart-from-vector-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/create-chart-from-vector-group) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/create-chart-from-vector-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/create-chart-from-vector-group)
 
 
 ## Define Report Template
@@ -2201,7 +2201,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The SDK cannot supply the documented Dimensions To Report input.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#define-report-template) · [.NET](/api/dotnet/reporting-operations#define-report-template) · [Python](/api/python/reporting-operations#define-report-template) · [JavaScript and TypeScript](/api/javascript/reporting-operations#define-report-template)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/define-report-template) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/define-report-template) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/define-report-template) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/define-report-template)
 
 
 ## Delete Chart
@@ -2258,7 +2258,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-chart) · [.NET](/api/dotnet/reporting-operations#delete-chart) · [Python](/api/python/reporting-operations#delete-chart) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-chart)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-chart) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-chart) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-chart) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-chart)
 
 
 ## Delete Custom Table
@@ -2315,7 +2315,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-custom-table) · [.NET](/api/dotnet/reporting-operations#delete-custom-table) · [Python](/api/python/reporting-operations#delete-custom-table) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-custom-table)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-custom-table) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-custom-table) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-custom-table) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-custom-table)
 
 
 ## Delete Picture
@@ -2372,7 +2372,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-picture) · [.NET](/api/dotnet/reporting-operations#delete-picture) · [Python](/api/python/reporting-operations#delete-picture) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-picture)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-picture) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-picture) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-picture) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-picture)
 
 
 ## Delete SA Doc
@@ -2429,7 +2429,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-sa-doc) · [.NET](/api/dotnet/reporting-operations#delete-sa-doc) · [Python](/api/python/reporting-operations#delete-sa-doc) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-sa-doc)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-sa-doc) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-sa-doc) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-sa-doc) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-sa-doc)
 
 
 ## Delete SA Report
@@ -2486,7 +2486,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-sa-report) · [.NET](/api/dotnet/reporting-operations#delete-sa-report) · [Python](/api/python/reporting-operations#delete-sa-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-sa-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-sa-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-sa-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-sa-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-sa-report)
 
 
 ## Delete SA Report Template
@@ -2543,7 +2543,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#delete-sa-report-template) · [.NET](/api/dotnet/reporting-operations#delete-sa-report-template) · [Python](/api/python/reporting-operations#delete-sa-report-template) · [JavaScript and TypeScript](/api/javascript/reporting-operations#delete-sa-report-template)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/delete-sa-report-template) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/delete-sa-report-template) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/delete-sa-report-template) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/delete-sa-report-template)
 
 
 ## Generate Custom HTML Report
@@ -2659,7 +2659,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#generate-quick-report-from-tab-order) · [.NET](/api/dotnet/reporting-operations#generate-quick-report-from-tab-order) · [Python](/api/python/reporting-operations#generate-quick-report-from-tab-order) · [JavaScript and TypeScript](/api/javascript/reporting-operations#generate-quick-report-from-tab-order)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/generate-quick-report-from-tab-order) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/generate-quick-report-from-tab-order) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/generate-quick-report-from-tab-order) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/generate-quick-report-from-tab-order)
 
 
 ## Generate Standard HTML Report
@@ -2716,7 +2716,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#generate-standard-html-report) · [.NET](/api/dotnet/reporting-operations#generate-standard-html-report) · [Python](/api/python/reporting-operations#generate-standard-html-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#generate-standard-html-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/generate-standard-html-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/generate-standard-html-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/generate-standard-html-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/generate-standard-html-report)
 
 
 ## Generate/Update Templated Report
@@ -2773,7 +2773,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#generateupdate-templated-report) · [.NET](/api/dotnet/reporting-operations#generateupdate-templated-report) · [Python](/api/python/reporting-operations#generateupdate-templated-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#generateupdate-templated-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/generateupdate-templated-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/generateupdate-templated-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/generateupdate-templated-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/generateupdate-templated-report)
 
 
 ## Get Custom Table Cell Double
@@ -2836,7 +2836,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#get-custom-table-cell-double) · [.NET](/api/dotnet/reporting-operations#get-custom-table-cell-double) · [Python](/api/python/reporting-operations#get-custom-table-cell-double) · [JavaScript and TypeScript](/api/javascript/reporting-operations#get-custom-table-cell-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-double) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-double)
 
 
 ## Get Custom Table Cell String
@@ -2899,7 +2899,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#get-custom-table-cell-string) · [.NET](/api/dotnet/reporting-operations#get-custom-table-cell-string) · [Python](/api/python/reporting-operations#get-custom-table-cell-string) · [JavaScript and TypeScript](/api/javascript/reporting-operations#get-custom-table-cell-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-string) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/get-custom-table-cell-string)
 
 
 ## Get Defined Report Tags
@@ -2954,7 +2954,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#get-defined-report-tags) · [.NET](/api/dotnet/reporting-operations#get-defined-report-tags) · [Python](/api/python/reporting-operations#get-defined-report-tags) · [JavaScript and TypeScript](/api/javascript/reporting-operations#get-defined-report-tags)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/get-defined-report-tags) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/get-defined-report-tags) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/get-defined-report-tags) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/get-defined-report-tags)
 
 
 ## Get Report Tag Value
@@ -3015,7 +3015,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#get-report-tag-value) · [.NET](/api/dotnet/reporting-operations#get-report-tag-value) · [Python](/api/python/reporting-operations#get-report-tag-value) · [JavaScript and TypeScript](/api/javascript/reporting-operations#get-report-tag-value)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/get-report-tag-value) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/get-report-tag-value) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/get-report-tag-value) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/get-report-tag-value)
 
 
 ## HTML Display Board
@@ -3072,7 +3072,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#html-display-board) · [.NET](/api/dotnet/reporting-operations#html-display-board) · [Python](/api/python/reporting-operations#html-display-board) · [JavaScript and TypeScript](/api/javascript/reporting-operations#html-display-board)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/html-display-board) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/html-display-board) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/html-display-board) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/html-display-board)
 
 
 ## Insert Page Break
@@ -3182,7 +3182,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 If SA uniquifies a duplicate table name, the exact resulting name cannot be retrieved through this binding.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#make-custom-table) · [.NET](/api/dotnet/reporting-operations#make-custom-table) · [Python](/api/python/reporting-operations#make-custom-table) · [JavaScript and TypeScript](/api/javascript/reporting-operations#make-custom-table)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/make-custom-table) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/make-custom-table) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/make-custom-table) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/make-custom-table)
 
 
 ## Make New SA Report
@@ -3241,7 +3241,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#make-new-sa-report) · [.NET](/api/dotnet/reporting-operations#make-new-sa-report) · [Python](/api/python/reporting-operations#make-new-sa-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#make-new-sa-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/make-new-sa-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/make-new-sa-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/make-new-sa-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/make-new-sa-report)
 
 
 ## Make Report Graphical View Options
@@ -3448,7 +3448,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#make-utility-chart) · [.NET](/api/dotnet/reporting-operations#make-utility-chart) · [Python](/api/python/reporting-operations#make-utility-chart) · [JavaScript and TypeScript](/api/javascript/reporting-operations#make-utility-chart)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/make-utility-chart) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/make-utility-chart) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/make-utility-chart) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/make-utility-chart)
 
 
 ## Notify User Double
@@ -3511,7 +3511,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#notify-user-double) · [.NET](/api/dotnet/reporting-operations#notify-user-double) · [Python](/api/python/reporting-operations#notify-user-double) · [JavaScript and TypeScript](/api/javascript/reporting-operations#notify-user-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/notify-user-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/notify-user-double) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/notify-user-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/notify-user-double)
 
 
 ## Notify User HTML
@@ -3570,7 +3570,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#notify-user-html) · [.NET](/api/dotnet/reporting-operations#notify-user-html) · [Python](/api/python/reporting-operations#notify-user-html) · [JavaScript and TypeScript](/api/javascript/reporting-operations#notify-user-html)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/notify-user-html) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/notify-user-html) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/notify-user-html) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/notify-user-html)
 
 
 ## Notify User Integer
@@ -3631,7 +3631,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#notify-user-integer) · [.NET](/api/dotnet/reporting-operations#notify-user-integer) · [Python](/api/python/reporting-operations#notify-user-integer) · [JavaScript and TypeScript](/api/javascript/reporting-operations#notify-user-integer)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/notify-user-integer) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/notify-user-integer) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/notify-user-integer) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/notify-user-integer)
 
 
 ## Notify User Text Array
@@ -3692,7 +3692,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#notify-user-text-array) · [.NET](/api/dotnet/reporting-operations#notify-user-text-array) · [Python](/api/python/reporting-operations#notify-user-text-array) · [JavaScript and TypeScript](/api/javascript/reporting-operations#notify-user-text-array)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/notify-user-text-array) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/notify-user-text-array) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/notify-user-text-array) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/notify-user-text-array)
 
 
 ## Output SA Report to Excel
@@ -3753,7 +3753,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#output-sa-report-to-excel) · [.NET](/api/dotnet/reporting-operations#output-sa-report-to-excel) · [Python](/api/python/reporting-operations#output-sa-report-to-excel) · [JavaScript and TypeScript](/api/javascript/reporting-operations#output-sa-report-to-excel)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-excel) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-excel) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-excel) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-excel)
 
 
 ## Output SA Report to PDF
@@ -3814,7 +3814,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#output-sa-report-to-pdf) · [.NET](/api/dotnet/reporting-operations#output-sa-report-to-pdf) · [Python](/api/python/reporting-operations#output-sa-report-to-pdf) · [JavaScript and TypeScript](/api/javascript/reporting-operations#output-sa-report-to-pdf)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-pdf) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-pdf) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-pdf) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/output-sa-report-to-pdf)
 
 
 ## Quick Report
@@ -3875,7 +3875,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#quick-report) · [.NET](/api/dotnet/reporting-operations#quick-report) · [Python](/api/python/reporting-operations#quick-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#quick-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/quick-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/quick-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/quick-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/quick-report)
 
 
 ## Refresh Callout Views in SA Report
@@ -3932,7 +3932,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#refresh-callout-views-in-sa-report) · [.NET](/api/dotnet/reporting-operations#refresh-callout-views-in-sa-report) · [Python](/api/python/reporting-operations#refresh-callout-views-in-sa-report) · [JavaScript and TypeScript](/api/javascript/reporting-operations#refresh-callout-views-in-sa-report)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/refresh-callout-views-in-sa-report) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/refresh-callout-views-in-sa-report) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/refresh-callout-views-in-sa-report) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/refresh-callout-views-in-sa-report)
 
 
 ## Refresh Report Bar
@@ -3985,7 +3985,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#refresh-report-bar) · [.NET](/api/dotnet/reporting-operations#refresh-report-bar) · [Python](/api/python/reporting-operations#refresh-report-bar) · [JavaScript and TypeScript](/api/javascript/reporting-operations#refresh-report-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/refresh-report-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/refresh-report-bar) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/refresh-report-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/refresh-report-bar)
 
 
 ## Remove Report Tag
@@ -4040,7 +4040,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#remove-report-tag) · [.NET](/api/dotnet/reporting-operations#remove-report-tag) · [Python](/api/python/reporting-operations#remove-report-tag) · [JavaScript and TypeScript](/api/javascript/reporting-operations#remove-report-tag)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/remove-report-tag) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/remove-report-tag) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/remove-report-tag) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/remove-report-tag)
 
 
 ## Rename Picture
@@ -4101,7 +4101,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#rename-picture) · [.NET](/api/dotnet/reporting-operations#rename-picture) · [Python](/api/python/reporting-operations#rename-picture) · [JavaScript and TypeScript](/api/javascript/reporting-operations#rename-picture)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/rename-picture) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/rename-picture) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/rename-picture) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/rename-picture)
 
 
 ## Save Chart to JPeg file
@@ -4158,7 +4158,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#save-chart-to-jpeg-file) · [.NET](/api/dotnet/reporting-operations#save-chart-to-jpeg-file) · [Python](/api/python/reporting-operations#save-chart-to-jpeg-file) · [JavaScript and TypeScript](/api/javascript/reporting-operations#save-chart-to-jpeg-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/save-chart-to-jpeg-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/save-chart-to-jpeg-file) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/save-chart-to-jpeg-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/save-chart-to-jpeg-file)
 
 
 ## Save Current View (BMP/JPG/PNG/GIF/TIFF)
@@ -4215,7 +4215,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [.NET](/api/dotnet/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [Python](/api/python/reporting-operations#save-current-view-bmpjpgpnggiftiff) · [JavaScript and TypeScript](/api/javascript/reporting-operations#save-current-view-bmpjpgpnggiftiff)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/save-current-view-bmpjpgpnggiftiff) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/save-current-view-bmpjpgpnggiftiff) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/save-current-view-bmpjpgpnggiftiff) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/save-current-view-bmpjpgpnggiftiff)
 
 
 ## Set Custom Table Cell Color
@@ -4280,7 +4280,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-cell-color) · [.NET](/api/dotnet/reporting-operations#set-custom-table-cell-color) · [Python](/api/python/reporting-operations#set-custom-table-cell-color) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-cell-color)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-color) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-color) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-color) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-color)
 
 
 ## Set Custom Table Cell Double
@@ -4351,7 +4351,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Cell alignment cannot be selected through the SDK.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-cell-double) · [.NET](/api/dotnet/reporting-operations#set-custom-table-cell-double) · [Python](/api/python/reporting-operations#set-custom-table-cell-double) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-cell-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-double) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-double)
 
 
 ## Set Custom Table Cell Font
@@ -4414,7 +4414,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-cell-font) · [.NET](/api/dotnet/reporting-operations#set-custom-table-cell-font) · [Python](/api/python/reporting-operations#set-custom-table-cell-font) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-cell-font)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-font) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-font) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-font) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-font)
 
 
 ## Set Custom Table Cell String
@@ -4483,7 +4483,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Cell alignment cannot be selected through the SDK.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-cell-string) · [.NET](/api/dotnet/reporting-operations#set-custom-table-cell-string) · [Python](/api/python/reporting-operations#set-custom-table-cell-string) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-cell-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-string) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-cell-string)
 
 
 ## Set Custom Table Header Cell
@@ -4552,7 +4552,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Cell alignment cannot be selected through the SDK.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-header-cell) · [.NET](/api/dotnet/reporting-operations#set-custom-table-header-cell) · [Python](/api/python/reporting-operations#set-custom-table-header-cell) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-header-cell)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-cell) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-cell) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-cell) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-cell)
 
 
 ## Set Custom Table Header Row
@@ -4617,7 +4617,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Cell alignment cannot be selected through the SDK.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-header-row) · [.NET](/api/dotnet/reporting-operations#set-custom-table-header-row) · [Python](/api/python/reporting-operations#set-custom-table-header-row) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-header-row)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-row) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-row) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-row) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-header-row)
 
 
 ## Set Custom Table Title
@@ -4678,7 +4678,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-custom-table-title) · [.NET](/api/dotnet/reporting-operations#set-custom-table-title) · [Python](/api/python/reporting-operations#set-custom-table-title) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-custom-table-title)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-custom-table-title) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-custom-table-title) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-custom-table-title) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-custom-table-title)
 
 
 ## Set Point Delta Report Options
@@ -4842,7 +4842,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-point-group-report-options) · [.NET](/api/dotnet/reporting-operations#set-point-group-report-options) · [Python](/api/python/reporting-operations#set-point-group-report-options) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-point-group-report-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-point-group-report-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-point-group-report-options) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-point-group-report-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-point-group-report-options)
 
 
 ## Set Relationship Report Options
@@ -4901,7 +4901,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-relationship-report-options) · [.NET](/api/dotnet/reporting-operations#set-relationship-report-options) · [Python](/api/python/reporting-operations#set-relationship-report-options) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-relationship-report-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-relationship-report-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-relationship-report-options) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-relationship-report-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-relationship-report-options)
 
 
 ## Set Report Bar Visibility
@@ -4956,7 +4956,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-report-bar-visibility) · [.NET](/api/dotnet/reporting-operations#set-report-bar-visibility) · [Python](/api/python/reporting-operations#set-report-bar-visibility) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-report-bar-visibility)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-report-bar-visibility) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-report-bar-visibility) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-report-bar-visibility) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-report-bar-visibility)
 
 
 ## Set Report Options for Object
@@ -5013,7 +5013,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-report-options-for-object) · [.NET](/api/dotnet/reporting-operations#set-report-options-for-object) · [Python](/api/python/reporting-operations#set-report-options-for-object) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-report-options-for-object)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-report-options-for-object) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-report-options-for-object) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-report-options-for-object) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-report-options-for-object)
 
 
 ## Set Report Tag Value From Double
@@ -5070,7 +5070,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-report-tag-value-from-double) · [.NET](/api/dotnet/reporting-operations#set-report-tag-value-from-double) · [Python](/api/python/reporting-operations#set-report-tag-value-from-double) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-report-tag-value-from-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-double) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-double)
 
 
 ## Set Report Tag Value From Integer
@@ -5127,7 +5127,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-report-tag-value-from-integer) · [.NET](/api/dotnet/reporting-operations#set-report-tag-value-from-integer) · [Python](/api/python/reporting-operations#set-report-tag-value-from-integer) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-report-tag-value-from-integer)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-integer) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-integer) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-integer) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-integer)
 
 
 ## Set Report Tag Value From String
@@ -5184,7 +5184,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-report-tag-value-from-string) · [.NET](/api/dotnet/reporting-operations#set-report-tag-value-from-string) · [Python](/api/python/reporting-operations#set-report-tag-value-from-string) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-report-tag-value-from-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-string) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-report-tag-value-from-string)
 
 
 ## Set Scale for Picture
@@ -5243,7 +5243,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-scale-for-picture) · [.NET](/api/dotnet/reporting-operations#set-scale-for-picture) · [Python](/api/python/reporting-operations#set-scale-for-picture) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-scale-for-picture)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-scale-for-picture) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-scale-for-picture) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-scale-for-picture) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-scale-for-picture)
 
 
 ## Set Vector Group Report Options
@@ -5302,4 +5302,4 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/reporting-operations#set-vector-group-report-options) · [.NET](/api/dotnet/reporting-operations#set-vector-group-report-options) · [Python](/api/python/reporting-operations#set-vector-group-report-options) · [JavaScript and TypeScript](/api/javascript/reporting-operations#set-vector-group-report-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/reporting-operations/set-vector-group-report-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/reporting-operations/set-vector-group-report-options) · [Python](/api/python/sa-2026.1.0529.7/reporting-operations/set-vector-group-report-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/reporting-operations/set-vector-group-report-options)

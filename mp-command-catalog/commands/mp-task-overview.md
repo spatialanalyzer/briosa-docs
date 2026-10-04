@@ -214,7 +214,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#add-task-overview-item) · [.NET](/api/dotnet/mp-task-overview#add-task-overview-item) · [Python](/api/python/mp-task-overview#add-task-overview-item) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#add-task-overview-item)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/add-task-overview-item) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/add-task-overview-item) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/add-task-overview-item) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/add-task-overview-item)
 
 
 ## Create/Clear Task Overview List
@@ -271,7 +271,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#createclear-task-overview-list) · [.NET](/api/dotnet/mp-task-overview#createclear-task-overview-list) · [Python](/api/python/mp-task-overview#createclear-task-overview-list) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#createclear-task-overview-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/createclear-task-overview-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/createclear-task-overview-list) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/createclear-task-overview-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/createclear-task-overview-list)
 
 
 ## Set Current Task
@@ -326,7 +326,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-current-task) · [.NET](/api/dotnet/mp-task-overview#set-current-task) · [Python](/api/python/mp-task-overview#set-current-task) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-current-task)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-current-task) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-current-task) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-current-task) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-current-task)
 
 
 ## Set Overview Image
@@ -381,7 +381,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-overview-image) · [.NET](/api/dotnet/mp-task-overview#set-overview-image) · [Python](/api/python/mp-task-overview#set-overview-image) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-overview-image)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-overview-image) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-overview-image) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-overview-image) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-overview-image)
 
 
 ## Set Overview Title
@@ -436,7 +436,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-overview-title) · [.NET](/api/dotnet/mp-task-overview#set-overview-title) · [Python](/api/python/mp-task-overview#set-overview-title) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-overview-title)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-overview-title) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-overview-title) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-overview-title) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-overview-title)
 
 
 ## Set Task Item Comment
@@ -493,7 +493,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-task-item-comment) · [.NET](/api/dotnet/mp-task-overview#set-task-item-comment) · [Python](/api/python/mp-task-overview#set-task-item-comment) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-task-item-comment)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-task-item-comment) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-task-item-comment) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-task-item-comment) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-task-item-comment)
 
 
 ## Set Task Item Completion Values
@@ -552,7 +552,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-task-item-completion-values) · [.NET](/api/dotnet/mp-task-overview#set-task-item-completion-values) · [Python](/api/python/mp-task-overview#set-task-item-completion-values) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-task-item-completion-values)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-task-item-completion-values) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-task-item-completion-values) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-task-item-completion-values) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-task-item-completion-values)
 
 
 ## Set Task Item Name
@@ -609,7 +609,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#set-task-item-name) · [.NET](/api/dotnet/mp-task-overview#set-task-item-name) · [Python](/api/python/mp-task-overview#set-task-item-name) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#set-task-item-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/set-task-item-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/set-task-item-name) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/set-task-item-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/set-task-item-name)
 
 
 ## Set Task Item Status
@@ -723,7 +723,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#show-progress-for-task-item) · [.NET](/api/dotnet/mp-task-overview#show-progress-for-task-item) · [Python](/api/python/mp-task-overview#show-progress-for-task-item) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#show-progress-for-task-item)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/show-progress-for-task-item) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/show-progress-for-task-item) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/show-progress-for-task-item) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/show-progress-for-task-item)
 
 
 ## Show Task Overview List
@@ -778,4 +778,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-task-overview#show-task-overview-list) · [.NET](/api/dotnet/mp-task-overview#show-task-overview-list) · [Python](/api/python/mp-task-overview#show-task-overview-list) · [JavaScript and TypeScript](/api/javascript/mp-task-overview#show-task-overview-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-task-overview/show-task-overview-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-task-overview/show-task-overview-list) · [Python](/api/python/sa-2026.1.0529.7/mp-task-overview/show-task-overview-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-task-overview/show-task-overview-list)

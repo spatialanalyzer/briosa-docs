@@ -100,7 +100,7 @@ silently applying the MP Editor's placeholders. The values are passed through
 without Briosa-specific geometry validation, including zero or negative
 values, so SpatialAnalyzer determines the outcome just as it does for an MP.
 
-[gRPC](/api/grpc/construction-operations-cones#construct-cone) · [.NET](/api/dotnet/construction-operations-cones#construct-cone) · [Python](/api/python/construction-operations-cones#construct-cone) · [JavaScript](/api/javascript/construction-operations-cones#construct-cone)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-cones/construct-cone) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-cones/construct-cone) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-cones/construct-cone) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-cones/construct-cone)
 
 ## Construct Cones From Surface Faces - Runtime Select
 
@@ -139,4 +139,4 @@ SpatialAnalyzer while the request is active. Cancellation or a client deadline
 does not prove that the SA interaction stopped, and Briosa never automatically
 replays the operation.
 
-[gRPC](/api/grpc/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [.NET](/api/dotnet/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [Python](/api/python/construction-operations-cones#construct-cones-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/construction-operations-cones#construct-cones-from-surface-faces---runtime-select)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-cones/construct-cones-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-cones/construct-cones-from-surface-faces---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-cones/construct-cones-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-cones/construct-cones-from-surface-faces---runtime-select)

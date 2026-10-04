@@ -2635,4 +2635,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Requires endpoint A, endpoint B, and result Point Names. Rod index defaults to `0` and overwrite defaults to `false`; a tolerance violation is preserved as partial success.
 
-**API References:** [gRPC](/api/grpc/construction-operations-points-and-groups) · [.NET](/api/dotnet/construction-operations-points-and-groups) · [Python](/api/python/construction-operations-points-and-groups) · [JavaScript and TypeScript](/api/javascript/construction-operations-points-and-groups)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-points-and-groups) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-points-and-groups) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-points-and-groups) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-points-and-groups)

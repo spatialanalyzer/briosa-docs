@@ -37,8 +37,11 @@ repository settings.
 - Use workflow pages only as secondary cross-links. Do not move a command out
   of its SA group to create a Briosa-specific primary grouping, and do not
   default to one page per command in the MP catalog. API references publish
-  individual method pages with static release/SA URLs, generated from the
-  released Markdown snapshots. Keep the catalog's canonical sections intact.
+  an individual page for each MP method at a stable SA-target URL, showing the
+  newest release that documents that target, plus one history page per method
+  that preserves every distinct published contract with its releases and
+  targets. Both are generated from the released Markdown snapshots. Keep
+  earlier SpatialAnalyzer targets as visible as the latest one. Keep the catalog's canonical sections intact.
 - Some documentation-only records and installed-document paths use labels that
   differ from the SDK-observed hierarchy. Preserve the evidence and resolve those
   placements through reviewed catalog work instead of silently inventing a

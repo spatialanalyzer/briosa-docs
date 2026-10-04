@@ -102,7 +102,7 @@ the MP Editor's placeholders. The values are passed through to SpatialAnalyzer,
 including zero or negative values, so MP-compatible behavior determines the
 result.
 
-[gRPC](/api/grpc/construction-operations-circles#construct-circle) · [.NET](/api/dotnet/construction-operations-circles#construct-circle) · [Python](/api/python/construction-operations-circles#construct-circle) · [JavaScript](/api/javascript/construction-operations-circles#construct-circle)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-circles/construct-circle) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-circles/construct-circle) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-circles/construct-circle) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-circles/construct-circle)
 
 ## Construct Circles From Surface Faces - Runtime Select
 
@@ -141,7 +141,7 @@ SpatialAnalyzer while the request is active. Cancellation or a client deadline
 does not prove that the SA interaction stopped, and Briosa never automatically
 replays the operation.
 
-[gRPC](/api/grpc/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) · [.NET](/api/dotnet/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) · [Python](/api/python/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/construction-operations-circles#construct-circles-from-surface-faces---runtime-select)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-circles/construct-circles-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-circles/construct-circles-from-surface-faces---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-circles/construct-circles-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-circles/construct-circles-from-surface-faces---runtime-select)
 
 ## Construct Circles (Lines) From Surfaces
 
@@ -204,4 +204,4 @@ includes it, so Briosa preserves it. `Circle Line Mode` is exposed as a
 controlled Circle/Line enum. Its generic string-setter mapping requires an
 exact-target setter probe before this operation is considered validated.
 
-[gRPC](/api/grpc/construction-operations-circles#construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/construction-operations-circles#construct-circles-lines-from-surfaces) · [Python](/api/python/construction-operations-circles#construct-circles-lines-from-surfaces) · [JavaScript](/api/javascript/construction-operations-circles#construct-circles-lines-from-surfaces)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces)

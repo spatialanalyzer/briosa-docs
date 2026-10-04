@@ -200,9 +200,9 @@ so the 0.9.0 gRPC reference also describes their services and messages; their
 runtime corrections are listed in
 [Server 0.9.2 Corrections](#server-092-corrections) and
 [Server 0.9.1 Corrections](#server-091-corrections).
-Historical references include [Server 0.8.0](/api/grpc/0.8.0),
-[client 0.3.0](/api/dotnet/0.3.0), [Server 0.7.0](/api/grpc/0.7.0), and
-[client 0.2.0](/api/dotnet/0.2.0).
+Historical references include [Server 0.8.0](/api/grpc/sa-2026.1.0529.7/0.8.0),
+[client 0.3.0](/api/dotnet/sa-2026.1.0529.7/0.3.0), [Server 0.7.0](/api/grpc/sa-2026.1.0529.7/0.7.0), and
+[client 0.2.0](/api/dotnet/sa-2026.1.0529.7/0.2.0).
 
 | Client Line | Server Selection | Reference Guidance |
 | --- | --- | --- |

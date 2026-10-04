@@ -232,18 +232,25 @@ source folders. This file describes publication layout, not protocol support.
 
 ### API Routes And Authoring
 
-An exact reference has a permanent address such as
-`/api/grpc/sa-2024.1.0508.5/0.7.0/analysis-operations/angle-between-line-and-plane#request-parameters`.
-Target and release are independent; the SA target comes first in URLs and
-the context selectors. Every exact view contains its contract,
-metadata, and canonical link in static HTML. Short method URLs retain a
-cross-version history and resolve a remembered target when one exists. Old
-group URLs and command fragments retain HTML fallback links and migrate in
-the browser. Previous release/SA URLs also remain exact-target aliases; they
-are excluded from the sitemap and point to the new canonical SA/release URL.
-Unknown fragments display a recovery message.
+Each SpatialAnalyzer target has a stable reference address, such as
+`/api/grpc/sa-2024.1.0508.5/analysis-operations/angle-between-line-and-plane#request-parameters`,
+that shows the newest Briosa release documenting that target. Readers building
+for an earlier SpatialAnalyzer choose it at `/api/<family>`. Every method page
+opens with a SpatialAnalyzer Compatibility table. Each method also has an
+indexed history page, `/api/<family>/<group>/<method>`, that shows each
+distinct contract once, with the releases and targets that published it and
+an anchor per release/SA pair (for example `#release-0.7.0-sa-2024.1.0508.5`).
+Earlier releases keep their guides and group notes at
+`/api/<family>/sa-<target>/<release>/`.
 
-Version roots include directory-index fallbacks for static hosting. Use
+Release-qualified method addresses, pre-redesign group URLs, and command
+fragments are static redirect documents written after the build, not client
+routes. They are excluded from the sitemap, carry a canonical link and
+no-JavaScript fallback links, and honor fragments and a remembered SA target.
+Keeping them out of the route table is what keeps the build within a hosted
+runner's memory. Unknown fragments display a recovery message.
+
+Dotted SA-target and release roots include directory-index fallbacks for static hosting. Use
 `npm run serve` to preview the build; the wrapper handles dotted version
 directories that Docusaurus's default preview server mistakes for files.
 

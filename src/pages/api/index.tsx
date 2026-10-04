@@ -68,13 +68,22 @@ export default function ApiReference(): ReactNode {
           ))}
         </div>
 
+        <Heading as="h2">Building for an Earlier SpatialAnalyzer</Heading>
+        <p>
+          Each reference starts by asking which SpatialAnalyzer version you build
+          for, and every documented version keeps its own complete reference.
+          Every method page opens with a SpatialAnalyzer Compatibility table and
+          links to its release history, which shows the exact contract each
+          Briosa release published for each SpatialAnalyzer version.
+        </p>
+
         <Heading as="h2">How Versions Fit Together</Heading>
         <p>
-          The gRPC server and each client library have their own version. A
-          reference release selector applies to the product in that section.
-          The SpatialAnalyzer selector carries your target across API references.
-          Shared method links preserve both the product release and SA target.
-          Reviewed availability and qualifications remain in the{' '}
+          The gRPC server and each client library have their own version. For
+          each SpatialAnalyzer version, a reference shows the newest product
+          release that documents it, at an address that stays the same across
+          releases. The SpatialAnalyzer selector carries your target across API
+          references. Reviewed availability and qualifications remain in the{' '}
           <Link to="/mp-command-catalog">MP Command Catalog</Link>.
         </p>
       </main>

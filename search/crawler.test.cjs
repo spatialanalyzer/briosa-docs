@@ -139,13 +139,13 @@ test('product guides and landing pages use the DocSearch content selectors', () 
 });
 
 
-test('API results keep exact release/SA context and method-section destinations', () => {
+test('API results keep exact current release/SA context and method-section destinations', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
-      const release = family === 'grpc' ? '0.7.0' : '0.2.0';
-      const route = `api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`;
+      const release = family === 'grpc' ? '0.9.0' : '0.4.0';
+      const route = `api/${family}/sa-${target}/analysis-operations/angle-between-line-and-plane`;
       const records = run(route);
-      assert.equal(run(`api/${family}/${release}/sa-${target}/analysis-operations/angle-between-line-and-plane`).length, 0);
+      assert.equal(run(`api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`).length, 0);
       assert.ok(records.length > 1);
       for (const record of records) {
         assert.equal(record.sa_target, target);
@@ -157,6 +157,21 @@ test('API results keep exact release/SA context and method-section destinations'
     }
   }
   assert.equal(run('api/grpc/analysis-operations').length, 0);
-  assert.ok(run('api/grpc/sa-2024.1.0508.5/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length > 0);
-  assert.equal(run('api/grpc/sa-2026.1.0529.7/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet').length, 0);
+  assert.ok(run('api/grpc/sa-2024.1.0508.5/instrument-operations-crib-sheet-operations/run-crib-sheet').length > 0);
+  assert.equal(run('api/grpc/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations/run-crib-sheet').length, 0);
+});
+
+test('API history records keep every published contract findable by release and SA target', () => {
+  const records = run('api/grpc/instrument-operations-crib-sheet-operations/run-crib-sheet');
+  assert.ok(records.length > 0);
+  for (const record of records) {
+    assert.match(record.url, /^https:\/\/briosa\.dev\/api\/grpc\/instrument-operations-crib-sheet-operations\/run-crib-sheet#revision-\d+$/);
+    assert.match(record.hierarchy.lvl1, /Run Crib Sheet · Release History/);
+    assert.ok(Array.isArray(record.sa_target) && record.sa_target.length > 0);
+    assert.ok(Array.isArray(record.api_release) && record.api_release.length > 0);
+    assert.ok(Buffer.byteLength(JSON.stringify(record)) < 10000);
+  }
+  assert.ok(records.some((record) => record.sa_target.includes('2024.1.0508.5') && record.api_release.includes('0.7.0')));
+  const ids = records.map((record) => record.objectID);
+  assert.equal(new Set(ids).size, ids.length);
 });

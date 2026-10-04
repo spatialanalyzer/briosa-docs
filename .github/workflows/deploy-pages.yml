@@ -31,7 +31,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build site
-        run: npm run build
+        # Report peak runner memory so build growth is visible before it fails.
+        run: |
+          (peak=0; while sleep 2; do used=$(free -m | awk '/^Mem:/ {print $3}'); if [ "$used" -gt "$peak" ]; then peak=$used; echo "$peak" > "$RUNNER_TEMP/peak-memory-mb"; fi; done) &
+          npm run build
+          echo "Peak runner memory in use during the build: $(cat "$RUNNER_TEMP/peak-memory-mb") MB of $(free -m | awk '/^Mem:/ {print $2}') MB" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:

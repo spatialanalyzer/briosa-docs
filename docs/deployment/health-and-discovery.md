@@ -38,11 +38,11 @@ Discovery deliberately excludes hostnames, ports, process IDs, SDK status
 codes, credentials, license information, raw diagnostics, arguments, returned
 values, and the installed SA command inventory.
 
-See the [gRPC lifecycle API](/api/grpc/lifecycle) for the operations that move
+See the [gRPC lifecycle API](/api/grpc/sa-2026.1.0529.7/lifecycle) for the operations that move
 between these states.
 
 [Read the source-of-truth health guide](https://github.com/spatialanalyzer/briosa/blob/main/targets/2026.1.0529.7/docs/operations/health-and-discovery.md).
 
 ## Behavioral Compatibility
 
-`GetServerInfoResponse.compatibility` reports the behavioral contract for the exact target. Server 0.7.0 introduced it with major **1**, revision **0**. The current Server **0.9.2** reports major **2**, revision **0** for both exact targets, and the published 0.4.0 clients require major 2 with revision at least 0. These are behavioral coordinates, not a product v1 release. They do not replace build/source identity or runtime SA/SDK verification. See the complete [SA 2026 discovery contract](/api/grpc/discovery) or [SA 2024 discovery contract](/api/grpc/sa-2024.1.0508.5/discovery).
+`GetServerInfoResponse.compatibility` reports the behavioral contract for the exact target. Server 0.7.0 introduced it with major **1**, revision **0**. The current Server **0.9.2** reports major **2**, revision **0** for both exact targets, and the published 0.4.0 clients require major 2 with revision at least 0. These are behavioral coordinates, not a product v1 release. They do not replace build/source identity or runtime SA/SDK verification. See the complete [SA 2026 discovery contract](/api/grpc/sa-2026.1.0529.7/discovery) or [SA 2024 discovery contract](/api/grpc/sa-2024.1.0508.5/discovery).

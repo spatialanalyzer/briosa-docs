@@ -118,7 +118,7 @@ Before making that call, a direct gRPC application must:
 4. Call `ConnectToSpatialAnalyzer` and require `ready_for_mp = true`.
 
 Starting the server or SDK alone is not enough. See the
-[gRPC lifecycle API](/api/grpc/lifecycle) and
+[gRPC lifecycle API](/api/grpc/sa-2026.1.0529.7/lifecycle) and
 [Health and Discovery](../deployment/health-and-discovery) for the complete
 contract.
 

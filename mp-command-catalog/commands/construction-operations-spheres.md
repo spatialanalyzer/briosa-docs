@@ -120,4 +120,4 @@ interaction stopped.
 
 Neither operation is automatically replayed.
 
-**API References:** [gRPC](/api/grpc/construction-operations-spheres) · [.NET](/api/dotnet/construction-operations-spheres) · [Python](/api/python/construction-operations-spheres) · [JavaScript and TypeScript](/api/javascript/construction-operations-spheres)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-spheres) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-spheres) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-spheres) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-spheres)

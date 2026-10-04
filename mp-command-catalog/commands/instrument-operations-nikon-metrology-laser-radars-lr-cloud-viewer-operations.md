@@ -251,7 +251,7 @@ detects ASCII or binary format automatically.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
-- [.NET](/api/dotnet/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
-- [Python](/api/python/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)

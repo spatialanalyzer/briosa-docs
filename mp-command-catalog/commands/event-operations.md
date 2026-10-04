@@ -152,7 +152,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/event-operations#delete-event) · [.NET](/api/dotnet/event-operations#delete-event) · [Python](/api/python/event-operations#delete-event) · [JavaScript and TypeScript](/api/javascript/event-operations#delete-event)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/event-operations/delete-event) · [.NET](/api/dotnet/sa-2026.1.0529.7/event-operations/delete-event) · [Python](/api/python/sa-2026.1.0529.7/event-operations/delete-event) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/event-operations/delete-event)
 
 
 ## Export Event Ref List
@@ -213,7 +213,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/event-operations#export-event-ref-list) · [.NET](/api/dotnet/event-operations#export-event-ref-list) · [Python](/api/python/event-operations#export-event-ref-list) · [JavaScript and TypeScript](/api/javascript/event-operations#export-event-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/event-operations/export-event-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/event-operations/export-event-ref-list) · [Python](/api/python/sa-2026.1.0529.7/event-operations/export-event-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/event-operations/export-event-ref-list)
 
 
 ## Get i-th Event From Event Ref List
@@ -272,7 +272,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/event-operations#get-i-th-event-from-event-ref-list) · [.NET](/api/dotnet/event-operations#get-i-th-event-from-event-ref-list) · [Python](/api/python/event-operations#get-i-th-event-from-event-ref-list) · [JavaScript and TypeScript](/api/javascript/event-operations#get-i-th-event-from-event-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/event-operations/get-i-th-event-from-event-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/event-operations/get-i-th-event-from-event-ref-list) · [Python](/api/python/sa-2026.1.0529.7/event-operations/get-i-th-event-from-event-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/event-operations/get-i-th-event-from-event-ref-list)
 
 
 ## Get i-th Event From Event Ref List (Iterator)
@@ -398,7 +398,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/event-operations#get-number-of-events-in-event-ref-list) · [.NET](/api/dotnet/event-operations#get-number-of-events-in-event-ref-list) · [Python](/api/python/event-operations#get-number-of-events-in-event-ref-list) · [JavaScript and TypeScript](/api/javascript/event-operations#get-number-of-events-in-event-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/event-operations/get-number-of-events-in-event-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/event-operations/get-number-of-events-in-event-ref-list) · [Python](/api/python/sa-2026.1.0529.7/event-operations/get-number-of-events-in-event-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/event-operations/get-number-of-events-in-event-ref-list)
 
 
 ## Rename Event
@@ -459,4 +459,4 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/event-operations#rename-event) · [.NET](/api/dotnet/event-operations#rename-event) · [Python](/api/python/event-operations#rename-event) · [JavaScript and TypeScript](/api/javascript/event-operations#rename-event)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/event-operations/rename-event) · [.NET](/api/dotnet/sa-2026.1.0529.7/event-operations/rename-event) · [Python](/api/python/sa-2026.1.0529.7/event-operations/rename-event) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/event-operations/rename-event)

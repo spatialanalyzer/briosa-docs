@@ -86,7 +86,7 @@ SpatialAnalyzer accepts one or two colons between path segments, such as
 `A:B:C` or `A::B::C`. The field is required, but Briosa passes its supplied
 value through unchanged. Existing folders are left in place by the MP command.
 
-[gRPC](/api/grpc/construction-operations-folders#construct-folders) · [.NET](/api/dotnet/construction-operations-folders#construct-folders) · [Python](/api/python/construction-operations-folders#construct-folders) · [JavaScript](/api/javascript/construction-operations-folders#construct-folders)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-folders/construct-folders) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-folders/construct-folders) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-folders/construct-folders) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-folders/construct-folders)
 
 ## Delete Folders by Wildcard
 
@@ -140,4 +140,4 @@ unchanged. The MP command itself fails when every folder matches while `Allow
 Deleting all Folders` is false. Briosa preserves that default and never
 automatically replays this destructive operation after an unknown outcome.
 
-[gRPC](/api/grpc/construction-operations-folders#delete-folders-by-wildcard) · [.NET](/api/dotnet/construction-operations-folders#delete-folders-by-wildcard) · [Python](/api/python/construction-operations-folders#delete-folders-by-wildcard) · [JavaScript](/api/javascript/construction-operations-folders#delete-folders-by-wildcard)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-folders/delete-folders-by-wildcard) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-folders/delete-folders-by-wildcard) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-folders/delete-folders-by-wildcard) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-folders/delete-folders-by-wildcard)

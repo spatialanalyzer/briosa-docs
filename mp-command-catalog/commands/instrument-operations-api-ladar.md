@@ -130,7 +130,7 @@ instrument-specific settings.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/instrument-operations-api-ladar)
-- [.NET](/api/dotnet/instrument-operations-api-ladar)
-- [Python](/api/python/instrument-operations-api-ladar)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-api-ladar)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-api-ladar)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-api-ladar)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-api-ladar)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-api-ladar)

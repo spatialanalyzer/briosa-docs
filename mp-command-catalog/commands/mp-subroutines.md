@@ -285,4 +285,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/mp-subroutines#run-subroutine) · [.NET](/api/dotnet/mp-subroutines#run-subroutine) · [Python](/api/python/mp-subroutines#run-subroutine) · [JavaScript and TypeScript](/api/javascript/mp-subroutines#run-subroutine)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/mp-subroutines/run-subroutine) · [.NET](/api/dotnet/sa-2026.1.0529.7/mp-subroutines/run-subroutine) · [Python](/api/python/sa-2026.1.0529.7/mp-subroutines/run-subroutine) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/mp-subroutines/run-subroutine)

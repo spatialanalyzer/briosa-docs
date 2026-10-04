@@ -127,7 +127,32 @@ new Crawler({
         const target = $('meta[name="briosa:sa-target"]').attr('content');
         const command = $('meta[name="briosa:command-id"]').attr('content');
         const kind = $('meta[name="briosa:page-kind"]').attr('content');
-        if (kind === 'group' || kind === 'history') return [];
+        if (kind === 'group') return [];
+        if (kind === 'history') {
+          // One record per published contract, faceted by every release and
+          // SA target that published it, so earlier targets stay discoverable.
+          const title = text($('article h1').first().text());
+          const root = 'https://briosa.dev' + path;
+          const records = [];
+          $('article section.api-revision').each((position, element) => {
+            const revision = $(element);
+            const heading = revision.children('h2[id]').first();
+            const pairs = revision.find('.api-revision-pairs li[id]').toArray()
+              .map((li) => $(li).attr('id').match(/^release-(.+?)-sa-(.+)$/)).filter(Boolean);
+            if (!heading.length || !pairs.length || !command) throw new Error('Incomplete API history: ' + path);
+            const releases = [...new Set(pairs.map((pair) => pair[1]))];
+            const anchor = heading.attr('id');
+            records.push({
+              objectID: root + '#' + anchor, url: root + '#' + anchor, url_without_anchor: root, anchor, type: 'lvl2',
+              hierarchy: {lvl0: sections[apiFamily], lvl1: title + ' · Release History', lvl2: text(heading.text()), lvl3: null, lvl4: null, lvl5: null, lvl6: null},
+              content: text(revision.find('.api-revision-pairs').text() + ' ' + revision.find('.api-revision-contract').text()).slice(0, 3500),
+              search_terms: spellings(title), language: 'en', lang: 'en', version: releases[0], docusaurus_tag: 'docs-' + apiFamily + '-history',
+              api_family: apiFamily, api_release: releases, sa_target: [...new Set(pairs.map((pair) => pair[2]))], command_id: command,
+              weight: {pageRank: 0, level: 2, position},
+            });
+          });
+          return records;
+        }
         if (!release || !target || !command) throw new Error('Incomplete API context: ' + path);
         const title = text($('article h1').first().text());
         const root = 'https://briosa.dev' + path;
@@ -152,7 +177,7 @@ new Crawler({
       }
       const section = path === '/install' ? 'Install'
         : path.startsWith('/mp-command-catalog') ? 'MP Catalog'
-        : path === '/api' ? 'API Reference'
+        : /^\/api(?:\/[a-z]+)?$/.test(path) ? 'API Reference'
         : path === '' ? 'Briosa' : 'Documentation';
 
       return helpers.docsearch({

@@ -687,4 +687,4 @@ This calculation does not require SpatialAnalyzer state.
 The selected mutation and interactive operations are never automatically
 replayed after an unknown execution outcome.
 
-**API References:** [gRPC](/api/grpc/construction-operations-vectors-and-vector-groups) · [.NET](/api/dotnet/construction-operations-vectors-and-vector-groups) · [Python](/api/python/construction-operations-vectors-and-vector-groups) · [JavaScript and TypeScript](/api/javascript/construction-operations-vectors-and-vector-groups)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-vectors-and-vector-groups) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-vectors-and-vector-groups) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-vectors-and-vector-groups) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-vectors-and-vector-groups)

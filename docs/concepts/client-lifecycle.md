@@ -185,8 +185,8 @@ reconnect, stop, recovery, or close.
 
 ## API References
 
-- [gRPC lifecycle APIs](/api/grpc/lifecycle)
-- [.NET lifecycle APIs](/api/dotnet/lifecycle)
-- [Python lifecycle APIs](/api/python/lifecycle)
-- [JavaScript and TypeScript lifecycle APIs](/api/javascript/lifecycle)
+- [gRPC lifecycle APIs](/api/grpc/sa-2026.1.0529.7/lifecycle)
+- [.NET lifecycle APIs](/api/dotnet/sa-2026.1.0529.7/lifecycle)
+- [Python lifecycle APIs](/api/python/sa-2026.1.0529.7/lifecycle)
+- [JavaScript and TypeScript lifecycle APIs](/api/javascript/sa-2026.1.0529.7/lifecycle)
 - [Readiness Is More Than Connection](./readiness)
