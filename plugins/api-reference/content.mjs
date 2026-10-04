@@ -445,7 +445,9 @@ export async function compileReference(siteDir) {
 
   // Former addresses become static redirect documents, not client routes.
   const stub = (from, to, extra = {}) => { if (!redirects[from]) redirects[from] = {to, ...extra}; };
-  const aliasesOf = (ctx, id) => Object.fromEntries((ctx.pages[id]?.methods ?? []).map((m) => [m.anchor, locate(ctx, m.id)]));
+  // Method anchors a former address published, resolved where it now leads: an
+  // unversioned address follows the current reference, not its frozen release.
+  const aliasesOf = (ctx, id, dest = ctx) => Object.fromEntries([...(ctx.pages[id]?.methods ?? []), ...(dest === ctx ? [] : dest.pages[id]?.methods ?? [])].map((m) => [m.anchor, locate(dest, m.id)]));
   // Only addresses published before references became release-independent get a
   // redirect document (targets.json compatibilityAddresses). Later releases are
   // published at stable addresses, so the set never grows with new releases.
@@ -457,7 +459,7 @@ export async function compileReference(siteDir) {
     const sameRelease = contexts.filter((c) => c.family === ctx.family && c.release === ctx.release);
     for (const id of new Set(sameRelease.flatMap((c) => Object.keys(c.pages)))) {
       const revision = methodIds[ctx.family].has(id) && !ctx.current ? revisionOf(ctx, id) : null;
-      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), target: ctx.target, ...(revision && {prefix: `revision-${revision.n}-`})});
+      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), target: ctx.target, ...(revision && {prefix: `revision-${revision.n}-`, release: ctx.release})});
     }
     // Pre-redesign entry routes, relative to the newest release published with
     // them. Without an explicit SA segment, a reader's remembered target
@@ -466,8 +468,8 @@ export async function compileReference(siteDir) {
     const legacyBase = `/api/${ctx.family}${latest ? '' : `/${ctx.release}`}${ctx.target === ctx.defaultTarget ? '' : `/sa-${ctx.target}`}`;
     for (const id of Object.keys(ctx.pages)) {
       if (id.includes('/')) continue;
-      const choices = ctx.target === ctx.defaultTarget ? Object.fromEntries(sameRelease.map((c) => [c.target, {to: locate(latest ? current[c.family][c.target] : c, id), aliases: aliasesOf(c, id)}])) : undefined;
-      stub(legacyBase + suffix(id), locate(latest ? current[ctx.family][ctx.target] : ctx, id), {aliases: aliasesOf(ctx, id), ...(choices && {choices})});
+      const choices = ctx.target === ctx.defaultTarget ? Object.fromEntries(sameRelease.map((c) => [c.target, {to: locate(latest ? current[c.family][c.target] : c, id), aliases: aliasesOf(c, id, latest ? current[c.family][c.target] : c)}])) : undefined;
+      stub(legacyBase + suffix(id), locate(latest ? current[ctx.family][ctx.target] : ctx, id), {aliases: aliasesOf(ctx, id, latest ? current[ctx.family][ctx.target] : ctx), ...(choices && {choices})});
     }
   }
   const routes = new Set([...pages.map((p) => p.path), ...Object.keys(families).map((f) => `/api/${f}`)]);

@@ -18,6 +18,7 @@ const read = (route) => {
 const sitemap = () => readFileSync(path.join(root, 'build', 'sitemap.xml'), 'utf8');
 const pair = (release, target) => `release-${release}-sa-${target}`;
 // The revision section of a method history page that documents one release/SA pair.
+const revisionNumber = (family, id, release, target) => Number(revision(family, id, release, target).find('h2[id]').attr('id').replace('revision-', ''));
 const revision = (family, id, release, target) => {
   const $ = read(`/api/${family}/${id}`);
   return $(`li[id="${pair(release, target)}"]`).closest('section.api-revision');
@@ -102,6 +103,31 @@ test('history selectors keep the SA target being read and never substitute anoth
   const remembered = choices(page, nav, {target: t24});
   assert.equal(remembered.releases.find((r) => r.value === '0.8.0').href, `${history}#release-0.8.0-sa-${t24}`);
   assert.equal(remembered.targets.find((t) => t.value === t24).href, page.compatibility.targets[1].href);
+});
+
+test('section links from release-qualified addresses keep their release and SA target', async () => {
+  const vm = require('node:vm');
+  const {selection, choices} = await import('../src/components/ApiReference/context.ts');
+  // Run the redirect document's own script against a section bookmark.
+  const stub = readFileSync(path.join(root, 'build', 'api/grpc/sa-2024.1.0508.5/0.7.0/file-operations/direct-cad-access.html'), 'utf8');
+  let destination;
+  const storage = () => { const values = new Map(); return {getItem: (k) => values.get(k) ?? null, setItem: (k, v) => values.set(k, v)}; };
+  vm.runInNewContext(stub.match(/<script>([\s\S]*?)<\/script>/)[1], {
+    location: {hash: '#request-parameters', search: '', replace: (to) => { destination = to; }},
+    sessionStorage: storage(), localStorage: storage(), URLSearchParams, decodeURIComponent, encodeURIComponent,
+  });
+  const history = '/api/grpc/file-operations/direct-cad-access';
+  const number = revisionNumber('grpc', 'file-operations/direct-cad-access', '0.7.0', '2024.1.0508.5');
+  assert.equal(destination, `${history}?release=0.7.0&sa=2024.1.0508.5#revision-${number}-request-parameters`);
+  // The history page reads that pair back, so changing only the SA target keeps Server 0.7.0.
+  const [t24, t26] = ['2024.1.0508.5', '2026.1.0529.7'];
+  const variant = (release, target) => ({release, target, href: `#release-${release}-sa-${target}`, available: true});
+  const page = {kind: 'history', path: history, variants: [variant('0.9.0', t26), variant('0.9.0', t24), variant('0.7.0', t26), variant('0.7.0', t24)], compatibility: {targets: []}};
+  const [hash, search] = [destination.slice(destination.indexOf('#')), destination.slice(destination.indexOf('?'), destination.indexOf('#'))];
+  const shown = selection(page, hash, search, null);
+  assert.deepEqual(shown, {release: '0.7.0', target: t24});
+  assert.equal(choices(page, {targets: [t26, t24], releases: ['0.9.0', '0.7.0']}, shown).targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`);
+  assert.deepEqual(selection(page, hash, '?release=0.8.0&sa=' + t24, t26), {target: t24}, 'an undocumented pair keeps only its target');
 });
 
 test('search prefers the release of the reference being read, including release-independent addresses', async () => {

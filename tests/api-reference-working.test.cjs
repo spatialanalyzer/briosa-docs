@@ -70,8 +70,15 @@ test('a new release adds no compatibility redirect documents', async () => {
       assert.ok(!from.some((address) => address.startsWith(`/api/${family}/${latest[family]}/`)), `${family}: no new pre-redesign entry routes for the superseded release`);
       // The published release's own method addresses now lead to its history revision.
       const method = 'analysis-operations/angle-between-line-and-plane';
-      assert.match(redirects[`/api/${family}/sa-2024.1.0508.5/${latest[family]}/${method}`]?.to ?? '', new RegExp(`^/api/${family}/${method}#release-${latest[family].replaceAll('.', '\.')}-sa-2024`));
+      assert.match(redirects[`/api/${family}/sa-2024.1.0508.5/${latest[family]}/${method}`]?.to ?? '', new RegExp(`^/api/${family}/${method}#release-${latest[family].replaceAll('.', '\\.')}-sa-2024`));
       assert.ok(pages.some((p) => p.path === `/api/${family}/sa-2024.1.0508.5/${method}` && p.release === 'next'));
+      // Unversioned group addresses and their method anchors follow the current reference.
+      const group = redirects[`/api/${family}/analysis-operations`];
+      for (const target of ['2026.1.0529.7', '2024.1.0508.5']) {
+        const choice = target === '2026.1.0529.7' ? group : group.choices[target];
+        assert.equal(choice.to, `/api/${family}/sa-${target}/analysis-operations`);
+        assert.equal(choice.aliases['angle-between-line-and-plane'], `/api/${family}/sa-${target}/${method}`, `${family} ${target} unversioned anchor`);
+      }
     }
   } finally {
     // mkdtemp owns this unique fixture; released snapshots are never modified.

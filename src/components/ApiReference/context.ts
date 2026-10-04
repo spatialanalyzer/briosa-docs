@@ -22,6 +22,18 @@ export function pairOf(hash: string): {release: string; target: string} | null {
   const match = anchorOf(hash).match(/^release-(.+?)-sa-(.+)$/);
   return match ? {release: match[1], target: match[2]} : null;
 }
+// What a history page is showing: a documented pair from its anchor, else from
+// ?release=&sa= (section links keep their pair there), else the reader's target.
+export function selection(page: PageData, hash: string, search: string, remembered: string | null): {release?: string; target?: string | null} {
+  const documented = (release?: string | null, target?: string | null) => Boolean(release && target && page.variants.some((v) => v.release === release && v.target === target && v.href));
+  const pair = pairOf(hash);
+  if (pair && documented(pair.release, pair.target)) return pair;
+  const query = new URLSearchParams(search);
+  const release = query.get('release');
+  const target = query.get('sa');
+  if (documented(release, target)) return {release: release!, target};
+  return {target: target ?? remembered};
+}
 // Selector destinations follow from the documented variants of this page. On a
 // history page, a change of release keeps the SA target being read (the pair
 // shown, else the reader's target) and a change of target keeps the release;

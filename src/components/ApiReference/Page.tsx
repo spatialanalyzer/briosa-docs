@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, readTarget, anchorOf, pairOf, methodHref, choices, htmlReferences} from './context';
+import {rememberTarget, readTarget, anchorOf, selection, methodHref, choices, htmlReferences} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
@@ -41,15 +41,15 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     setMobileNavOpen(false);
     if (!isHistory) rememberTarget(page.target);
     else {
-      const pair = pairOf(location.hash);
-      if (pair) rememberTarget(pair.target);
-      setSelected(pair ?? {target: readTarget()});
+      const shown = selection(page, location.hash, location.search, readTarget());
+      if (shown.release && shown.target) rememberTarget(shown.target);
+      setSelected(shown);
     }
     const anchor = anchorOf(location.hash);
     const mapped = aliases[anchor];
     if (mapped) history.replace(mapped);
     else if (anchor && !document.getElementById(anchor)) setNotice('This section is not present in the selected reference. See Version Differences for other documented versions.');
-  }, [page.path, location.hash]);
+  }, [page.path, location.hash, location.search]);
   function go(options: Choice[], value: string, missing: string, target?: string) {
     const to = options.find((c) => c.value === value)?.href;
     if (!to) { setNotice(missing); return; }
