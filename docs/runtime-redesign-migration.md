@@ -7,9 +7,10 @@ title: Runtime Redesign Migration
 Server [0.9.0](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.0)
 and exact-target .NET, Python, and JavaScript client 0.4.0 packages are
 published for both SA targets. The current API references document these
-releases. Server [0.9.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.1)
-is a compatible correction release with the same contract major 2, revision 0,
-and the same 0.4.0 clients; upgrading from 0.9.0 to 0.9.1 needs no client or
+releases. Servers [0.9.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.1)
+and [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2)
+are compatible correction releases with the same contract major 2, revision 0,
+and the same 0.4.0 clients; upgrading from 0.9.0 to 0.9.2 needs no client or
 binding change. See the [release table](./releases.md) for package links and
 validation limits.
 
@@ -50,7 +51,7 @@ than treating every transport failure as safe to repeat.
 
 ## Keep Requests Within the Transport Limit
 
-Servers 0.9.0 and 0.9.1 limit each inbound gRPC message to **64 KiB (65,536 bytes)** for
+Servers 0.9.0 through 0.9.2 limit each inbound gRPC message to **64 KiB (65,536 bytes)** for
 both SA targets. This applies to the encoded request message, not separately to
 each field. An oversized message is rejected by gRPC before operation mapping;
 it is a transport limit, separate from the structured `Overloaded` admission

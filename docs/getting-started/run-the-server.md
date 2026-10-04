@@ -16,7 +16,7 @@ The Briosa server, SDK, and SpatialAnalyzer application still have independent
 lifecycles. Direct gRPC users can start and control each resource separately,
 and client applications can diagnose or recover the SDK without restarting SA.
 
-:::note[Client 0.4.0 and Server 0.9.1]
+:::note[Client 0.4.0 and Server 0.9.2]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. Client 0.4.0 selects a
@@ -44,7 +44,7 @@ Each first-party client distribution identifies the exact SpatialAnalyzer
 release it supports. The package version remains an independent Briosa client
 version; it is not the SpatialAnalyzer version.
 
-Both targets are published as client **0.4.0**. Use Server **0.9.1** for
+Both targets are published as client **0.4.0**. Use Server **0.9.2** for
 the same exact target. Compatible contract revisions can be selected
 independently of the client's generation artifact.
 Choose one exact target for each application environment. The examples below
