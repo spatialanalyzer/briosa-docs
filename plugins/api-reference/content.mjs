@@ -164,7 +164,7 @@ export async function loadReference(siteDir) {
       }
     }
   }
-  return {contexts, releases};
+  return {contexts, releases, compatibility: targets.compatibilityAddresses ?? {}};
 }
 
 const firstCalls = {'get-working-directory': 'file-operations/get-working-directory', 'get-number-of-collections': 'analysis-operations/get-number-of-collections', 'get-ith-collection-name': 'analysis-operations/get-i-th-collection-name'};
@@ -186,7 +186,7 @@ const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '
 // release-independent address. Earlier releases remain as method histories
 // (every distinct published contract) and as their release-specific guides.
 export async function compileReference(siteDir) {
-  const {contexts, releases} = await loadReference(siteDir);
+  const {contexts, releases, compatibility: published} = await loadReference(siteDir);
   const contextMap = new Map(contexts.map((ctx) => [`${ctx.family}/${ctx.release}/${ctx.target}`, ctx]));
   const lookup = (family, release, target) => contextMap.get(`${family}/${release}/${target}`);
   const rank = (ctx) => releases[ctx.family].indexOf(ctx.release);
@@ -446,17 +446,23 @@ export async function compileReference(siteDir) {
   // Former addresses become static redirect documents, not client routes.
   const stub = (from, to, extra = {}) => { if (!redirects[from]) redirects[from] = {to, ...extra}; };
   const aliasesOf = (ctx, id) => Object.fromEntries((ctx.pages[id]?.methods ?? []).map((m) => [m.anchor, locate(ctx, m.id)]));
+  // Only addresses published before references became release-independent get a
+  // redirect document (targets.json compatibilityAddresses). Later releases are
+  // published at stable addresses, so the set never grows with new releases.
+  const latestPublished = Object.fromEntries(Object.keys(families).map((family) => [family, releases[family].find((r) => published[family]?.includes(r))]));
   for (const ctx of contexts) {
+    if (ctx.current) for (const id of Object.keys(firstCalls)) if (isAlias(ctx, id)) stub(ctx.url + suffix(id), locate(ctx, id));
+    if (!published[ctx.family]?.includes(ctx.release)) continue;
     // Release-qualified addresses published since the first redesign.
     const sameRelease = contexts.filter((c) => c.family === ctx.family && c.release === ctx.release);
     for (const id of new Set(sameRelease.flatMap((c) => Object.keys(c.pages)))) {
       const revision = methodIds[ctx.family].has(id) && !ctx.current ? revisionOf(ctx, id) : null;
-      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), ...(revision && {prefix: `revision-${revision.n}-`})});
+      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), target: ctx.target, ...(revision && {prefix: `revision-${revision.n}-`})});
     }
-    if (ctx.current) for (const id of Object.keys(firstCalls)) if (isAlias(ctx, id)) stub(ctx.url + suffix(id), locate(ctx, id));
-    // Pre-redesign entry routes. Without an explicit SA segment, a reader's
-    // remembered target chooses among the release's documented targets.
-    const latest = ctx.release === releases[ctx.family][0];
+    // Pre-redesign entry routes, relative to the newest release published with
+    // them. Without an explicit SA segment, a reader's remembered target
+    // chooses among the release's documented targets.
+    const latest = ctx.release === latestPublished[ctx.family];
     const legacyBase = `/api/${ctx.family}${latest ? '' : `/${ctx.release}`}${ctx.target === ctx.defaultTarget ? '' : `/sa-${ctx.target}`}`;
     for (const id of Object.keys(ctx.pages)) {
       if (id.includes('/')) continue;

@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, anchorOf, methodHref, choices, htmlReferences} from './context';
+import {rememberTarget, readTarget, anchorOf, pairOf, methodHref, choices, htmlReferences} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
@@ -26,7 +26,9 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   const methods = page.kind === 'group' ? (navigation.groups.find((g) => g.id === page.id)?.methods ?? []).map((m) => ({...m, href: methodHref(navigation, m)})) : [];
   const aliases: Record<string, string> = Object.fromEntries(methods.map((m) => [m.anchor, m.href]));
   const references = useMemo(() => htmlReferences(page.html), [page.html]);
-  const switcher = choices(page, navigation);
+  // On a history page, the release/SA pair being read (from its anchor), else the reader's SA target.
+  const [selected, setSelected] = useState<{release?: string; target?: string | null} | null>(null);
+  const switcher = choices(page, navigation, isHistory ? selected : null);
   const fixedAnchors = [page.compatibility ? 'sa-compatibility' : '', 'version-differences'].filter(Boolean);
   for (const anchor of [...references.anchors, ...Object.keys(aliases), ...fixedAnchors]) brokenLinks.collectAnchor(anchor);
   for (const href of references.links) brokenLinks.collectLink(href);
@@ -38,6 +40,11 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     setNotice('');
     setMobileNavOpen(false);
     if (!isHistory) rememberTarget(page.target);
+    else {
+      const pair = pairOf(location.hash);
+      if (pair) rememberTarget(pair.target);
+      setSelected(pair ?? {target: readTarget()});
+    }
     const anchor = anchorOf(location.hash);
     const mapped = aliases[anchor];
     if (mapped) history.replace(mapped);
@@ -47,7 +54,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     const to = options.find((c) => c.value === value)?.href;
     if (!to) { setNotice(missing); return; }
     if (target) rememberTarget(target, true);
-    history.push(to.includes('#') ? to : to + location.hash);
+    history.push(to.includes('#') || isHistory ? to : to + location.hash);
   }
   const toc = [...(page.compatibility ? [{id: 'sa-compatibility', title: 'SpatialAnalyzer Compatibility'}] : []), ...(isHistory ? [{id: 'version-differences', title: 'Availability by Release'}] : []), ...page.toc, ...(isHistory ? [] : [{id: 'version-differences', title: 'Version Differences'}])]
     .map(({id, title}) => ({id, level: 2, value: title.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')}));
@@ -82,8 +89,8 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
       </aside>
       <main id="api-main" className="api-main">
         <div className="api-toolbar" aria-label="API Context">
-          <VersionSelect label="SpatialAnalyzer" value={isHistory ? '' : page.target} placeholder="Choose a Target" onChange={(target) => go(switcher.targets, target, `This reference is not published for SA ${target}. The SpatialAnalyzer Compatibility table lists where it is documented.`, target)} options={targets.map((target, i) => ({value: target, label: `SA ${target}`, badge: i === 0 ? 'Latest' : undefined}))} />
-          <VersionSelect label={`${releaseLabel(page.family)} Release`} value={isHistory ? '' : page.release} placeholder="Choose a Release" onChange={(release) => go(switcher.releases, release, `No reference is published for this page in release ${release} with SA ${page.target}. Documented versions are listed under Version Differences.`)} options={switcher.releases.map((r) => ({value: r.value, label: r.value, badge: r.current ? 'Current' : undefined}))} />
+          <VersionSelect label="SpatialAnalyzer" value={isHistory ? selected?.target ?? '' : page.target} placeholder="Choose a Target" onChange={(target) => go(switcher.targets, target, isHistory && selected?.release ? `${releaseLabel(page.family)} ${selected.release} does not document this method for SA ${target}. Availability by Release lists every documented pair.` : `This reference is not published for SA ${target}. The SpatialAnalyzer Compatibility table lists where it is documented.`, target)} options={targets.map((target, i) => ({value: target, label: `SA ${target}`, badge: i === 0 ? 'Latest' : undefined}))} />
+          <VersionSelect label={`${releaseLabel(page.family)} Release`} value={isHistory ? selected?.release ?? '' : page.release} placeholder="Choose a Release" onChange={(release) => go(switcher.releases, release, `No reference is published for this page in release ${release} with SA ${isHistory ? selected?.target ?? 'any target' : page.target}. ${isHistory ? 'Availability by Release' : 'Version Differences'} lists every documented version.`)} options={switcher.releases.map((r) => ({value: r.value, label: r.value, badge: r.current ? 'Current' : undefined}))} />
           {Boolean(siteConfig.themeConfig.algolia) && <Link to="/search" className="api-search-all">Search All Versions</Link>}
         </div>
         <p className="api-notice" role="status">{notice}</p>

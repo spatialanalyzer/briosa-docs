@@ -85,6 +85,39 @@ test('API target preference survives navigation and denied storage keeps URL rou
   }
 });
 
+test('history selectors keep the SA target being read and never substitute another contract', async () => {
+  const {choices, pairOf} = await import('../src/components/ApiReference/context.ts');
+  const history = '/api/grpc/file-operations/direct-cad-access';
+  const [t24, t26] = ['2024.1.0508.5', '2026.1.0529.7'];
+  const variant = (release, target, current = false) => ({release, target, href: `#release-${release}-sa-${target}`, available: true, current});
+  const page = {kind: 'history', path: history, variants: [variant('0.9.0', t26, true), variant('0.9.0', t24, true), variant('0.8.0', t26), variant('0.8.0', t24), variant('0.7.0', t26), variant('0.7.0', t24), variant('0.5.1', t26)],
+    compatibility: {targets: [{target: t26, href: '/api/grpc/sa-2026.1.0529.7/file-operations/direct-cad-access'}, {target: t24, href: '/api/grpc/sa-2024.1.0508.5/file-operations/direct-cad-access'}]}};
+  const nav = {targets: [t26, t24], releases: ['0.9.0', '0.8.0', '0.7.0', '0.5.1']};
+  const selected = pairOf(`#release-0.7.0-sa-${t24}`);
+  assert.deepEqual(selected, {release: '0.7.0', target: t24});
+  const fromPair = choices(page, nav, selected);
+  assert.equal(fromPair.releases.find((r) => r.value === '0.8.0').href, `${history}#release-0.8.0-sa-${t24}`, 'release change keeps SA 2024');
+  assert.equal(fromPair.releases.find((r) => r.value === '0.5.1').href, null, 'no SA 2024 contract in 0.5.1 is reported, not replaced');
+  assert.equal(fromPair.targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`, 'target change keeps the release');
+  const remembered = choices(page, nav, {target: t24});
+  assert.equal(remembered.releases.find((r) => r.value === '0.8.0').href, `${history}#release-0.8.0-sa-${t24}`);
+  assert.equal(remembered.targets.find((t) => t.value === t24).href, page.compatibility.targets[1].href);
+});
+
+test('search prefers the release of the reference being read, including release-independent addresses', async () => {
+  const {searchFilters} = await import('../src/components/ApiReference/context.ts');
+  const current = {grpc: {'2024.1.0508.5': '0.9.0', '2026.1.0529.7': '0.9.0'}};
+  assert.deepEqual(searchFilters('/api/grpc/sa-2024.1.0508.5/file-operations/direct-cad-access', current), ['api_family:grpc', 'sa_target:2024.1.0508.5', 'api_release:0.9.0']);
+  assert.deepEqual(searchFilters('/api/grpc/sa-2024.1.0508.5', current), ['api_family:grpc', 'sa_target:2024.1.0508.5', 'api_release:0.9.0']);
+  assert.deepEqual(searchFilters('/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations', current), ['api_family:grpc', 'sa_target:2024.1.0508.5', 'api_release:0.7.0']);
+  assert.deepEqual(searchFilters('/api/grpc/file-operations/direct-cad-access', current), ['api_family:grpc']);
+  assert.equal(searchFilters('/docs/intro', current), undefined);
+  const built = JSON.parse(readFileSync(path.join(root, '.docusaurus', 'globalData.json'), 'utf8'))['briosa-api-reference'].default.current;
+  for (const [family, release] of Object.entries({grpc: '0.9.0', dotnet: '0.4.0', python: '0.4.0', javascript: '0.4.0'})) {
+    for (const target of ['2024.1.0508.5', '2026.1.0529.7']) assert.equal(built[family][target], release, `${family} ${target}`);
+  }
+});
+
 test('every released MP method preserves its original code at its current page or history revision', async () => {
   const {contexts} = await reference();
   let methods = 0;

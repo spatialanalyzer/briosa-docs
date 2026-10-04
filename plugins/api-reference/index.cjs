@@ -27,10 +27,10 @@ const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '
 // A former address as a static document: it costs a file, not a client route.
 // Fragments, method anchors, and a remembered SA target are honored when
 // JavaScript runs; otherwise the refresh and plain links reach the reference.
-function redirectDocument({to, aliases = {}, prefix = '', choices}) {
-  const data = JSON.stringify({to, aliases, prefix, choices}).replaceAll('<', '\\u003c');
+function redirectDocument({to, aliases = {}, prefix = '', choices, target}) {
+  const data = JSON.stringify({to, aliases, prefix, choices, target}).replaceAll('<', '\\u003c');
   const links = Object.entries(aliases).map(([anchor, href]) => `<p id="${escape(anchor)}"><a href="${escape(href)}">${escape(anchor.replaceAll('-', ' '))}</a></p>`).join('');
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>(function(){var d=${data},t=d.to,a=d.aliases,h=location.hash.slice(1),own=function(o,k){return Object.prototype.hasOwnProperty.call(o,k)};try{h=decodeURIComponent(h)}catch(e){}try{var s=new URLSearchParams(location.search).get('sa')||sessionStorage.getItem('briosa.api.browsing-target')||localStorage.getItem('briosa.api.sa-target');if(d.choices&&s&&own(d.choices,s)){t=d.choices[s].to;a=d.choices[s].aliases}}catch(e){}if(h&&own(a,h))t=a[h];else if(h&&(d.prefix||t.indexOf('#')<0))t=t.split('#')[0]+'#'+d.prefix+h;location.replace(t)})()</script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>(function(){var d=${data},t=d.to,a=d.aliases,h=location.hash.slice(1),own=function(o,k){return Object.prototype.hasOwnProperty.call(o,k)};try{h=decodeURIComponent(h)}catch(e){}try{if(d.target)sessionStorage.setItem('briosa.api.browsing-target',d.target)}catch(e){}try{var s=new URLSearchParams(location.search).get('sa')||sessionStorage.getItem('briosa.api.browsing-target')||localStorage.getItem('briosa.api.sa-target');if(d.choices&&s&&own(d.choices,s)){t=d.choices[s].to;a=d.choices[s].aliases}}catch(e){}if(h&&own(a,h))t=a[h];else if(h&&(d.prefix||t.indexOf('#')<0))t=t.split('#')[0]+'#'+d.prefix+h;location.replace(t)})()</script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
 }
 
 module.exports = function apiReference(context) {
@@ -102,6 +102,8 @@ module.exports = function apiReference(context) {
         routes.push({path: `/api/${family}`, exact: true, component: '@site/src/components/ApiReference/FamilyIndex.tsx', modules: {index: data}});
       }
       for (const route of routeTree(routes)) actions.addRoute(route);
+      // Each SA target's current release, for search on release-independent addresses.
+      actions.setGlobalData({current: Object.fromEntries(Object.entries(content.index).map(([family, index]) => [family, Object.fromEntries(index.targets.map((t) => [t.target, t.release]))]))});
       console.log(`[API] ${content.pages.length} reference and history pages; ${Object.keys(content.redirects).length} static redirect documents.`);
     },
   };
