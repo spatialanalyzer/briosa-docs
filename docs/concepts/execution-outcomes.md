@@ -51,6 +51,25 @@ Briosa retrieves command outputs only after it confirms MP success. If an output
 cannot be retrieved, Briosa reports that problem instead of substituting an
 empty string, zero, or another value that could be mistaken for a real result.
 
+## When the SDK Raises an Exception
+
+Starting with Server 0.9.2, an exception from the SA SDK during an MP sequence
+does not stop the Briosa worker. Briosa reports the phase it can prove, with a
+diagnostic code and without the exception text:
+
+- **Before `ExecuteStep`**, for example while setting the step or an input, the
+  command is **not started**. Briosa currently reports this as an internal
+  error marked **do not replay**.
+- **During `ExecuteStep` or `GetMPStepResult`**, the **outcome is unknown**,
+  and the error asks you to reconcile before replay.
+- **In an output getter after MP success**, the command is **completed**, but
+  that output is reported as unavailable rather than replaced with a default
+  value.
+
+The worker stays in service for later commands. An exception that leaves the
+worker's SDK thread in an untrustworthy state still stops the worker, and the
+command's outcome is then unknown.
+
 ## The Three Outcomes That Matter
 
 Briosa reports what it can prove about each command:

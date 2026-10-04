@@ -18,7 +18,7 @@ Before continuing, install and license the supported SpatialAnalyzer release,
 close competing SA and SDK instances, and complete the
 [startup prerequisites](./prerequisites).
 
-:::note[Client 0.4.0 and Server 0.9.1]
+:::note[Client 0.4.0 and Server 0.9.2]
 
 Client packages are available for SA 2024.1.0508.5 and SA 2026.1.0529.7.
 Install the package matching your exact SA release. Client 0.4.0 selects a

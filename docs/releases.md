@@ -13,7 +13,7 @@ not mean that every documented API is only a proposal.
 
 | Product | Released Version | Availability |
 | --- | --- | --- |
-| Briosa Server and Control Center | [0.9.1](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.1) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 2.0 |
+| Briosa Server and Control Center | [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 2.0 |
 | Briosa Installer | [0.3.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0) | Signed Windows setup and portable distribution; side-by-side installation registration |
 | .NET client | 0.4.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.4.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.4.0) |
 | Python client | 0.4.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.4.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.4.0/) |
@@ -31,6 +31,52 @@ behavioral contract major 2 with revision at least 0. Its generation artifact is
 pinned to Server 0.9.0. C# uses `using Briosa;`, Python uses `import briosa`, and JavaScript uses
 the npm alias `briosa`. Use separate environments or applications for different targets.
 See [installation selection and migration](/docs/deployment/installation-selection).
+
+## Server 0.9.2 Corrections
+
+Server [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2),
+released on October 4, 2026 for both exact targets, is a compatible correction
+release. It keeps behavioral contract major 2, revision 0, works with the same
+0.4.0 clients, and makes no protobuf or public API schema change. Default
+operation admission is unchanged. Moving an application from 0.9.1 to 0.9.2
+requires no client or generated-binding change.
+
+- **Exact SDK step text.** 25 SA 2026 operations now send the step text shown
+  by the SDK instead of the installed-documentation text. 13 differ in
+  punctuation or spacing, such as `Save As...`, `Set SA's Window Pos` with a
+  straight apostrophe, `(Rx,Ry,Rz)`, and two spaces before the hyphen in
+  `Export IGES File  - Entire Model`; 12 differ only in letter case. Both
+  targets now send `Make Pipe Relationship Cut`.
+- **SDK exceptions no longer stop the worker.** When the SDK raises an
+  exception during an MP sequence, Briosa now reports the phase it can prove,
+  with a diagnostic code and no exception text, and keeps the worker in
+  service. A fault before `ExecuteStep` is not started; a fault during
+  execution or MP result retrieval leaves the outcome unknown; a fault in an
+  output getter after MP success completes the command with that output
+  unavailable. A fault before execution currently reports kind `Internal`, not
+  started, and do not replay. Faults that leave the worker's STA untrustworthy
+  still stop the worker. See
+  [Understand MP Command Results](/docs/concepts/execution-outcomes#when-the-sdk-raises-an-exception).
+- **Validation only.** All supervisor deadlines use the injected time provider,
+  with unchanged production timeouts. New portable checks compare every
+  implemented SA 2026 binding with the committed exact-target evidence and
+  report protobuf differences between the two exact targets, and an opt-in
+  harness prepares the licensed probe session. None of these changes runtime
+  behavior.
+
+:::warning[Corrected Step Text Is At Risk]
+
+The 25 corrected SA 2026 steps and the SA 2024 `Make Pipe Relationship Cut`
+step have no licensed validation. Treat them as **At Risk** until the licensed
+probe session ([briosa#277](https://github.com/spatialanalyzer/briosa/issues/277))
+runs.
+
+:::
+
+Portable CI and the release workflow ran the full server suites, package smoke
+tests, and the retained-client gate against the published major-2 and major-1
+clients. 0.9.2 was not run against licensed SpatialAnalyzer. The corrected step
+text and the new SDK-exception reporting have no licensed validation.
 
 ## Server 0.9.1 Corrections
 
@@ -149,9 +195,11 @@ explains the major-2 behavior and the client upgrade. The current [gRPC
 reference](/api/grpc) documents **Server 0.9.0**; the [.NET](/api/dotnet),
 [Python](/api/python), and [JavaScript/TypeScript](/api/javascript) references
 document **client 0.4.0**. Each includes a separate SA 2024 section alongside
-SA 2026. Server 0.9.1 has the same protobuf and public API schemas, so the
-0.9.0 gRPC reference also describes its services and messages; its runtime
-corrections are listed in [Server 0.9.1 Corrections](#server-091-corrections).
+SA 2026. Servers 0.9.1 and 0.9.2 have the same protobuf and public API schemas,
+so the 0.9.0 gRPC reference also describes their services and messages; their
+runtime corrections are listed in
+[Server 0.9.2 Corrections](#server-092-corrections) and
+[Server 0.9.1 Corrections](#server-091-corrections).
 Historical references include [Server 0.8.0](/api/grpc/0.8.0),
 [client 0.3.0](/api/dotnet/0.3.0), [Server 0.7.0](/api/grpc/0.7.0), and
 [client 0.2.0](/api/dotnet/0.2.0).
