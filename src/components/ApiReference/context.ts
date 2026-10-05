@@ -27,37 +27,50 @@ export function anchorOf(hash: string): string {
 // their history page, anchored at the pair when that release documented them.
 export function methodHref(nav: Navigation, method: {id: string; available: boolean}): string {
   if (nav.current) return nav.base + suffix(method.id);
-  return `/api/${nav.family}/${method.id}${method.available ? `#release-${nav.release}-sa-${nav.target}` : ''}`;
+  return `/api/${nav.family}/${method.id}${method.available ? `#release-${nav.release}-sa-${nav.target}` : `?release=${nav.release}&sa=${nav.target}`}`;
 }
 // The release/SA pair a history page is showing, from its per-pair anchor.
 export function pairOf(hash: string): {release: string; target: string} | null {
   const match = anchorOf(hash).match(/^release-(.+?)-sa-(.+)$/);
   return match ? {release: match[1], target: match[2]} : null;
 }
-// What a history page is showing. The URL decides first: a pair anchor, then
-// ?release=&sa=. Otherwise the pair already being read in this tab continues
-// through section links and history navigation; a section link alone selects
-// that revision's newest pair for the reader's target. `fromUrl` is false when
-// the page should write the pair into its URL.
-export function selection(page: PageData, hash: string, search: string, remembered: string | null, stored: Pair | null = null): {release?: string; target?: string | null; fromUrl: boolean} {
+export type Selection = {release?: string; target?: string | null; missing?: boolean; replace: string | null};
+// What a history page is showing, and the address that states it. The address
+// decides: a pair anchor names the pair; a section anchor names a revision and
+// keeps a query pair only when that pair published the revision; a query pair
+// without a section names the pair, and is reported as missing when it was not
+// documented. Only when the address names no pair does the pair already being
+// read in this tab continue. `replace` corrects a stale or absent query, so the
+// address always agrees with the selectors.
+export function selection(page: PageData, hash: string, search: string, remembered: string | null, stored: Pair | null = null): Selection {
   const documented = (release?: string | null, target?: string | null) => release && target ? page.variants.find((v) => v.release === release && v.target === target && v.href) : undefined;
+  const params = new URLSearchParams(search);
+  const queried = params.get('release') && params.get('sa') ? {release: params.get('release')!, target: params.get('sa')!} : null;
+  const address = (pair?: Pair | null) => {
+    const next = new URLSearchParams(search);
+    next.delete('release');
+    next.delete('sa');
+    if (pair) { next.set('release', pair.release); next.set('sa', pair.target); }
+    const query = next.toString();
+    const url = `${page.path}${query ? `?${query}` : ''}${hash}`;
+    return url === `${page.path}${search}${hash}` ? null : url;
+  };
+  const show = (pair: Pair, inQuery: boolean): Selection => ({release: pair.release, target: pair.target, replace: address(inQuery ? pair : null)});
   const pair = pairOf(hash);
-  if (pair && documented(pair.release, pair.target)) return {...pair, fromUrl: true};
-  const query = new URLSearchParams(search);
-  const release = query.get('release');
-  const queried = query.get('sa');
-  if (documented(release, queried)) return {release: release!, target: queried, fromUrl: true};
-  const target = queried ?? stored?.target ?? remembered;
+  if (pair) return documented(pair.release, pair.target) ? show(pair, false) : {...pair, missing: true, replace: address(null)};
   const section = anchorOf(hash).match(/^revision-(\d+)(?:-|$)/);
-  const kept = stored && documented(stored.release, stored.target);
   if (section) {
+    // A query that names another revision is stale; the pair read most recently decides the target.
+    const target = stored?.target ?? params.get('sa') ?? remembered;
     const revision = Number(section[1]);
-    if (kept?.revision === revision) return {...stored!, fromUrl: false};
-    const newest = page.variants.find((v) => v.revision === revision && v.href && (!target || v.target === target));
-    return newest ? {release: newest.release, target: newest.target, fromUrl: false} : {target, fromUrl: true};
+    const candidates = [queried, stored].filter((c): c is Pair => Boolean(c && documented(c.release, c.target)?.revision === revision));
+    if (candidates.length) return show(candidates[0], true);
+    const newest = page.variants.find((v) => v.revision === revision && v.href && v.target === target) ?? page.variants.find((v) => v.revision === revision && v.href);
+    return newest ? show(newest, true) : {target, replace: address(null)};
   }
-  if (kept) return {...stored!, fromUrl: false};
-  return {target, fromUrl: true};
+  if (queried) return documented(queried.release, queried.target) ? show(queried, true) : {...queried, missing: true, replace: null};
+  if (stored && documented(stored.release, stored.target)) return show(stored, true);
+  return {target: params.get('sa') ?? stored?.target ?? remembered, replace: null};
 }
 // The group page for the pair being read on a history page, or none.
 export function historyGroupHref(page: PageData, selected: {release?: string; target?: string | null} | null): string | null {

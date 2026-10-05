@@ -231,7 +231,9 @@ export async function compileReference(siteDir) {
   function locate(ctx, id) {
     if (isAlias(ctx, id)) id = firstCalls[id];
     if (ctx.rendered.has(id)) return ctx.url + suffix(id);
-    if (methodIds[ctx.family].has(id)) return historyPath(ctx.family, id) + (revisionOf(ctx, id) ? '#' + pairAnchor(ctx.release, ctx.target) : '');
+    // A pair that does not document the method is named in the query, so its
+    // history page reports the gap rather than showing another pair's contract.
+    if (methodIds[ctx.family].has(id)) return historyPath(ctx.family, id) + (revisionOf(ctx, id) ? '#' + pairAnchor(ctx.release, ctx.target) : `?release=${ctx.release}&sa=${ctx.target}`);
     return ctx.url;
   }
 

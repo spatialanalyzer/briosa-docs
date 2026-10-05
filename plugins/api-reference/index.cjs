@@ -57,7 +57,7 @@ function redirectDocument(redirect) {
   const {to, aliases = {}} = redirect;
   const data = JSON.stringify(redirect).replaceAll('<', '\\u003c');
   const links = Object.entries(aliases).map(([anchor, href]) => `<p id="${escape(anchor)}"><a href="${escape(href)}">${escape(anchor.replaceAll('-', ' '))}</a></p>`).join('');
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>window.briosaRedirect=${data}</script><script src="${followScript}"></script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to.replace(/\?[^#]*/, ''))}"><script>window.briosaRedirect=${data}</script><script src="${followScript}"></script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
 }
 
 module.exports = function apiReference(context) {

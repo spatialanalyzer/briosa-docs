@@ -146,6 +146,11 @@ test('former method sections reach their retained content, never a manufactured 
   const walkthrough = follow('/api/grpc/sa-2026.1.0529.7/0.7.0/file-operations/get-working-directory', '#first-call-walkthrough');
   assert.equal(walkthrough, '/api/grpc/sa-2026.1.0529.7/0.7.0/get-working-directory');
   assert.match(read(walkthrough)('article').text(), /grpcurl/);
+  // A former address for a pair that never documented the method names that pair,
+  // so its history page reports the gap instead of reopening another target's contract.
+  const crib = '/api/grpc/instrument-operations-crib-sheet-operations/run-crib-sheet';
+  assert.equal(follow('/api/grpc/sa-2026.1.0529.7/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet', ''), `${crib}?release=0.7.0&sa=2026.1.0529.7`);
+  assert.equal(read('/api/grpc/sa-2026.1.0529.7/0.7.0/instrument-operations-crib-sheet-operations/run-crib-sheet')('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + crib, 'canonical addresses carry no query');
   // Client references have no parameter tables, so no table anchor is invented.
   const client = follow('/api/python/sa-2024.1.0508.5/0.2.0/analysis-operations/angle-between-line-and-plane', '#request-parameters');
   assert.equal(client, '/api/python/analysis-operations/angle-between-line-and-plane#release-0.2.0-sa-2024.1.0508.5');
@@ -174,15 +179,25 @@ test('section and history navigation keep the release/SA pair being read', async
   const page = {kind: 'history', path: history, family: 'grpc', group: 'file-operations', variants: [variant('0.9.0', t26, 5, true), variant('0.9.0', t24, 4, true), variant('0.8.0', t26, 5), variant('0.8.0', t24, 4), variant('0.7.0', t26, 3), variant('0.7.0', t24, 2)], compatibility: {targets: []}};
   const nav = {targets: [t26, t24], releases: ['0.9.0', '0.8.0', '0.7.0']};
   const stored = {release: '0.7.0', target: t24};
+  const query = (release, target) => `?release=${release}&sa=${target}`;
   // Reading Server 0.7.0 / SA 2024, then following its Request Parameters permalink.
   const shown = selection(page, '#revision-2-request-parameters', '', t24, stored);
-  assert.deepEqual(shown, {...stored, fromUrl: false}, 'the section link keeps the pair, and the page writes it to the URL');
+  assert.deepEqual(shown, {...stored, replace: `${history}${query('0.7.0', t24)}#revision-2-request-parameters`}, 'the section link keeps the pair, and the address states it');
   assert.equal(choices(page, nav, shown).targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`, 'changing only the target keeps Server 0.7.0');
-  assert.deepEqual(selection(page, '#version-differences', '', t24, stored), {...stored, fromUrl: false});
-  assert.deepEqual(selection(page, '', '', t24, stored), {...stored, fromUrl: false}, 'history navigation keeps the pair');
-  assert.deepEqual(selection(page, `#release-0.8.0-sa-${t26}`, '', t24, stored), {release: '0.8.0', target: t26, fromUrl: true}, 'the URL decides first');
-  assert.deepEqual(selection(page, '#revision-4-signature', '', t24, null), {release: '0.9.0', target: t24, fromUrl: false}, 'a cold section link selects that revision\'s newest pair for the reader\'s target');
-  assert.deepEqual(selection(page, '', '', t24, {release: '0.5.1', target: t26}), {target: t26, fromUrl: true}, 'an undocumented stored pair keeps only its target');
+  assert.deepEqual(selection(page, '#revision-2-request-parameters', query('0.7.0', t24), t24, stored), {...stored, replace: null}, 'an address that already agrees is left alone');
+  assert.deepEqual(selection(page, '#version-differences', '', t24, stored), {...stored, replace: `${history}${query('0.7.0', t24)}#version-differences`});
+  assert.deepEqual(selection(page, '', '', t24, stored), {...stored, replace: `${history}${query('0.7.0', t24)}`}, 'history navigation keeps the pair');
+  assert.deepEqual(selection(page, '#revision-4-signature', '', t24, null), {release: '0.9.0', target: t24, replace: `${history}${query('0.9.0', t24)}#revision-4-signature`}, 'a cold section link selects that revision\'s newest pair for the reader\'s target');
+  assert.deepEqual(selection(page, '', '', t24, {release: '0.5.1', target: t26}), {target: t26, replace: null}, 'an undocumented stored pair keeps only its target');
+  // A stale query never outlives a pair chosen in the page: choosing 0.8.0 / SA 2026 in the
+  // availability table, then that revision's permalink, keeps 0.8.0 / SA 2026.
+  const chosen = selection(page, `#release-0.8.0-sa-${t26}`, query('0.7.0', t24), t24, stored);
+  assert.deepEqual(chosen, {release: '0.8.0', target: t26, replace: `${history}#release-0.8.0-sa-${t26}`}, 'a pair anchor decides and the conflicting query is removed');
+  const after = {release: '0.8.0', target: t26};
+  assert.deepEqual(selection(page, '#revision-5-request-parameters', query('0.7.0', t24), t26, after), {...after, replace: `${history}${query('0.8.0', t26)}#revision-5-request-parameters`}, 'a query naming another revision is stale and corrected');
+  // An explicitly requested pair that is not documented is reported, never replaced by memory.
+  assert.deepEqual(selection(page, '', query('0.7.0', '2030.1'), t24, stored), {release: '0.7.0', target: '2030.1', missing: true, replace: null});
+  assert.deepEqual(selection(page, '#release-0.5.1-sa-' + t24, '', t24, stored), {release: '0.5.1', target: t24, missing: true, replace: null});
   // The breadcrumb group follows the pair, and those group pages exist.
   for (const [pair, to] of [[stored, '/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations'], [{release: '0.9.0', target: t24}, '/api/grpc/sa-2024.1.0508.5/file-operations']]) {
     assert.equal(historyGroupHref(page, pair), to);
@@ -331,7 +346,7 @@ test('all old grouped command anchors have useful HTML links without JavaScript'
       const $ = read(prefix + '/' + group.id);
       for (const method of group.methods) {
         const documented = ctx.pages[method.id] && !/No released signature\s+is available/.test(ctx.pages[method.id].body);
-        const expected = latest ? `/api/${ctx.family}/sa-${ctx.target}/${method.id}` : `/api/${ctx.family}/${method.id}${documented ? '#' + pair(ctx.release, ctx.target) : ''}`;
+        const expected = latest ? `/api/${ctx.family}/sa-${ctx.target}/${method.id}` : `/api/${ctx.family}/${method.id}${documented ? '#' + pair(ctx.release, ctx.target) : `?release=${ctx.release}&sa=${ctx.target}`}`;
         const anchor = $('[id]').filter((_, n) => $(n).attr('id') === method.anchor);
         assert.equal(anchor.find('a').attr('href'), expected, `${prefix}/${group.id}#${method.anchor}`);
       }
