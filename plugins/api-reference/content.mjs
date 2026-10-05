@@ -202,7 +202,9 @@ export async function compileReference(siteDir) {
     methodIds[family] = new Set(own.flatMap((c) => Object.keys(c.pages).filter((id) => c.pages[id].kind === 'method')));
     currentIds[family] = new Set(Object.values(current[family]).flatMap((c) => Object.keys(c.pages)));
   }
-  const isAlias = (ctx, id) => Boolean(firstCalls[id] && ctx.pages[firstCalls[id]]);
+  // The current reference folds each first-call guide into its method page;
+  // earlier releases keep the guide, since their method pages are history revisions.
+  const isAlias = (ctx, id) => Boolean(ctx.current && firstCalls[id] && ctx.pages[firstCalls[id]]);
   for (const ctx of contexts) {
     ctx.current = current[ctx.family][ctx.target] === ctx;
     ctx.url = ctx.current ? targetBase(ctx.family, ctx.target) : ctx.base;
@@ -416,6 +418,7 @@ export async function compileReference(siteDir) {
       const original = revision.ctx.pages[id];
       const prefix = `revision-${revision.n}-`;
       const rendered = await html(methodMarkdown(revision.ctx, original, id, {notes: false}), revision.ctx, id, {prefix, demote: 1});
+      revision.anchors = rendered.anchors.map((a) => a.slice(prefix.length));
       const releasesIn = [...new Set(revision.pairs.map((c) => c.release))].sort((a, b) => compareVersions(b, a));
       const heading = `Revision ${revision.n}: ${releaseLabel(family)} ${releasesIn.join(', ')}`;
       const older = list[revision.n - 2];
@@ -427,7 +430,8 @@ export async function compileReference(siteDir) {
       const pairs = [...revision.pairs].sort(newestFirst).map((c) => {
         const source = c.pages[id].releasedSource.match(/^\[([^\]]+)\]\(([^)\s]+)\)/);
         const group = c.pages[id].group;
-        const links = [group && `<a href="${escape(locate(c, group))}">Group Notes</a>`, source && `<a href="${escape(source[2])}">${escape(source[1])}</a>`].filter(Boolean).join(' · ');
+        const guide = !c.current && Object.keys(firstCalls).find((k) => firstCalls[k] === id && c.rendered.has(k));
+        const links = [group && `<a href="${escape(locate(c, group))}">Group Notes</a>`, guide && `<a href="${escape(locate(c, guide))}">First Call Walkthrough</a>`, source && `<a href="${escape(source[2])}">${escape(source[1])}</a>`].filter(Boolean).join(' · ');
         return `<li id="${pairAnchor(c.release, c.target)}">${releaseLabel(family)} ${escape(c.release)} · SA ${escape(c.target)}${c.current ? ' (current reference)' : ''}${links ? ` — ${links}` : ''}</li>`;
       }).join('');
       sections.push(`<section class="api-revision" aria-labelledby="revision-${revision.n}"><h2 id="revision-${revision.n}">${escape(heading)}<a href="#revision-${revision.n}" class="hash-link" aria-label="Link to ${escape(heading)}">#</a></h2><p class="api-revision-scope">Documented for:</p><ul class="api-revision-pairs">${pairs}</ul><p class="api-revision-changes">${escape(change)}</p><div class="api-revision-contract">${rendered.html}</div></section>`);
@@ -445,6 +449,21 @@ export async function compileReference(siteDir) {
 
   // Former addresses become static redirect documents, not client routes.
   const stub = (from, to, extra = {}) => { if (!redirects[from]) redirects[from] = {to, ...extra}; };
+  // How a former method page's sections reach their content in history: the
+  // contract's sections in its revision, Execution Notes in the release's group
+  // notes, a first-call walkthrough on the release's guide page. Headings are
+  // listed; parameter-row anchors are matched by pattern where the revision has rows.
+  const parameterRow = /^(?:request|response)-(?!parameters$)/;
+  function formerSections(ctx, id, revision) {
+    const guideId = Object.keys(firstCalls).find((k) => firstCalls[k] === id && ctx.rendered.has(k));
+    const guideAnchors = guideId ? pages.find((p) => p.path === locate(ctx, guideId))?.toc.map((t) => t.id) ?? [] : [];
+    return {
+      prefix: `revision-${revision.n}-`, release: ctx.release, kept: revision.anchors.filter((a) => !parameterRow.test(a)),
+      ...(revision.anchors.some((a) => parameterRow.test(a)) && {rows: true}),
+      ...(ctx.pages[id].group && {group: locate(ctx, ctx.pages[id].group)}),
+      ...(guideId && {guide: locate(ctx, guideId), guideAnchors}),
+    };
+  }
   // Method anchors a former address published, resolved where it now leads: an
   // unversioned address follows the current reference, not its frozen release.
   const aliasesOf = (ctx, id, dest = ctx) => Object.fromEntries([...(ctx.pages[id]?.methods ?? []), ...(dest === ctx ? [] : dest.pages[id]?.methods ?? [])].map((m) => [m.anchor, locate(dest, m.id)]));
@@ -459,7 +478,7 @@ export async function compileReference(siteDir) {
     const sameRelease = contexts.filter((c) => c.family === ctx.family && c.release === ctx.release);
     for (const id of new Set(sameRelease.flatMap((c) => Object.keys(c.pages)))) {
       const revision = methodIds[ctx.family].has(id) && !ctx.current ? revisionOf(ctx, id) : null;
-      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), target: ctx.target, ...(revision && {prefix: `revision-${revision.n}-`, release: ctx.release})});
+      stub(ctx.base + suffix(id), locate(ctx, id), {aliases: aliasesOf(ctx, id), target: ctx.target, ...(methodIds[ctx.family].has(id) && !ctx.current && {history: true, ...(revision && formerSections(ctx, id, revision))})});
     }
     // Pre-redesign entry routes, relative to the newest release published with
     // them. Without an explicit SA segment, a reader's remembered target
@@ -468,7 +487,7 @@ export async function compileReference(siteDir) {
     const legacyBase = `/api/${ctx.family}${latest ? '' : `/${ctx.release}`}${ctx.target === ctx.defaultTarget ? '' : `/sa-${ctx.target}`}`;
     for (const id of Object.keys(ctx.pages)) {
       if (id.includes('/')) continue;
-      const choices = ctx.target === ctx.defaultTarget ? Object.fromEntries(sameRelease.map((c) => [c.target, {to: locate(latest ? current[c.family][c.target] : c, id), aliases: aliasesOf(c, id, latest ? current[c.family][c.target] : c)}])) : undefined;
+      const choices = ctx.target === ctx.defaultTarget ? Object.fromEntries(sameRelease.filter((c) => c !== ctx).map((c) => [c.target, {to: locate(latest ? current[c.family][c.target] : c, id), aliases: aliasesOf(c, id, latest ? current[c.family][c.target] : c)}])) : undefined;
       stub(legacyBase + suffix(id), locate(latest ? current[ctx.family][ctx.target] : ctx, id), {aliases: aliasesOf(ctx, id, latest ? current[ctx.family][ctx.target] : ctx), ...(choices && {choices})});
     }
   }

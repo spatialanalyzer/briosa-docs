@@ -105,29 +105,96 @@ test('history selectors keep the SA target being read and never substitute anoth
   assert.equal(remembered.targets.find((t) => t.value === t24).href, page.compatibility.targets[1].href);
 });
 
-test('section links from release-qualified addresses keep their release and SA target', async () => {
+// Run a redirect document's data through the shared redirect script.
+function follow(route, hash, search = '') {
   const vm = require('node:vm');
-  const {selection, choices} = await import('../src/components/ApiReference/context.ts');
-  // Run the redirect document's own script against a section bookmark.
-  const stub = readFileSync(path.join(root, 'build', 'api/grpc/sa-2024.1.0508.5/0.7.0/file-operations/direct-cad-access.html'), 'utf8');
+  const html = readFileSync(path.join(root, 'build', route.slice(1) + '.html'), 'utf8');
+  const data = html.match(/<script>window\.briosaRedirect=([\s\S]*?)<\/script>/)[1];
+  const script = readFileSync(path.join(root, 'build', 'assets', 'api-redirect.js'), 'utf8');
   let destination;
   const storage = () => { const values = new Map(); return {getItem: (k) => values.get(k) ?? null, setItem: (k, v) => values.set(k, v)}; };
-  vm.runInNewContext(stub.match(/<script>([\s\S]*?)<\/script>/)[1], {
-    location: {hash: '#request-parameters', search: '', replace: (to) => { destination = to; }},
-    sessionStorage: storage(), localStorage: storage(), URLSearchParams, decodeURIComponent, encodeURIComponent,
-  });
+  const context = {location: {hash, search, replace: (to) => { destination = to; }}, sessionStorage: storage(), localStorage: storage(), URLSearchParams, decodeURIComponent, encodeURIComponent};
+  context.window = context;
+  vm.runInNewContext(`window.briosaRedirect=${data};${script}`, context);
+  return destination;
+}
+// A destination exists when its page exists and, if it names an anchor, the anchor does.
+function reaches(destination) {
+  const [address, anchor] = destination.split('#');
+  const $ = read(address.split('?')[0]);
+  return !anchor || $('[id]').toArray().some((n) => $(n).attr('id') === anchor);
+}
+
+test('former method sections reach their retained content, never a manufactured anchor', () => {
   const history = '/api/grpc/file-operations/direct-cad-access';
-  const number = revisionNumber('grpc', 'file-operations/direct-cad-access', '0.7.0', '2024.1.0508.5');
-  assert.equal(destination, `${history}?release=0.7.0&sa=2024.1.0508.5#revision-${number}-request-parameters`);
-  // The history page reads that pair back, so changing only the SA target keeps Server 0.7.0.
+  const old = '/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations/direct-cad-access';
+  const n = revisionNumber('grpc', 'file-operations/direct-cad-access', '0.7.0', '2024.1.0508.5');
+  const query = '?release=0.7.0&sa=2024.1.0508.5';
+  const expected = {
+    '#request-parameters': `${history}${query}#revision-${n}-request-parameters`,
+    '#request-surface-compatibility-mode': `${history}${query}#revision-${n}-request-surface-compatibility-mode`,
+    '#version-differences': `${history}${query}#version-differences`,
+    '#execution-notes': '/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations',
+    '#no-such-section': `${history}#release-0.7.0-sa-2024.1.0508.5`,
+  };
+  for (const [hash, to] of Object.entries(expected)) {
+    assert.equal(follow(old, hash), to, hash);
+    assert.ok(reaches(to), `${hash} → ${to}`);
+  }
+  assert.match(read('/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations')('article').text(), /This reference covers SA 2024\.1\.0508\.5, Server 0\.7\.0/, 'execution notes are the release group notes');
+  // An earlier release keeps its first-call walkthrough as a guide page.
+  const walkthrough = follow('/api/grpc/sa-2026.1.0529.7/0.7.0/file-operations/get-working-directory', '#first-call-walkthrough');
+  assert.equal(walkthrough, '/api/grpc/sa-2026.1.0529.7/0.7.0/get-working-directory');
+  assert.match(read(walkthrough)('article').text(), /grpcurl/);
+  // Client references have no parameter tables, so no table anchor is invented.
+  const client = follow('/api/python/sa-2024.1.0508.5/0.2.0/analysis-operations/angle-between-line-and-plane', '#request-parameters');
+  assert.equal(client, '/api/python/analysis-operations/angle-between-line-and-plane#release-0.2.0-sa-2024.1.0508.5');
+  // Every former method address of one earlier release, for each kind of section.
+  const directory = path.join(root, 'build', 'api/grpc/sa-2024.1.0508.5/0.7.0');
+  const stubs = [];
+  const walk = (dir) => { for (const entry of require('node:fs').readdirSync(dir, {withFileTypes: true})) { const file = path.join(dir, entry.name); if (entry.isDirectory()) walk(file); else if (entry.name.endsWith('.html') && entry.name !== 'index.html') stubs.push('/' + path.relative(path.join(root, 'build'), file).split(path.sep).join('/').slice(0, -5)); } };
+  walk(directory);
+  let checked = 0;
+  for (const route of stubs.sort()) {
+    if (!readFileSync(path.join(root, 'build', route.slice(1) + '.html'), 'utf8').includes('"history":true')) continue;
+    for (const hash of ['#signature', '#request-parameters', '#response', '#version-differences', '#execution-notes', '#first-call-walkthrough', '#no-such-section']) {
+      const to = follow(route, hash);
+      assert.ok(reaches(to), `${route}${hash} → ${to}`);
+      checked++;
+    }
+  }
+  assert.ok(checked > 5000, `only ${checked} section links checked`);
+});
+
+test('section and history navigation keep the release/SA pair being read', async () => {
+  const {selection, choices, historyGroupHref} = await import('../src/components/ApiReference/context.ts');
+  const history = '/api/grpc/file-operations/direct-cad-access';
   const [t24, t26] = ['2024.1.0508.5', '2026.1.0529.7'];
-  const variant = (release, target) => ({release, target, href: `#release-${release}-sa-${target}`, available: true});
-  const page = {kind: 'history', path: history, variants: [variant('0.9.0', t26), variant('0.9.0', t24), variant('0.7.0', t26), variant('0.7.0', t24)], compatibility: {targets: []}};
-  const [hash, search] = [destination.slice(destination.indexOf('#')), destination.slice(destination.indexOf('?'), destination.indexOf('#'))];
-  const shown = selection(page, hash, search, null);
-  assert.deepEqual(shown, {release: '0.7.0', target: t24});
-  assert.equal(choices(page, {targets: [t26, t24], releases: ['0.9.0', '0.7.0']}, shown).targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`);
-  assert.deepEqual(selection(page, hash, '?release=0.8.0&sa=' + t24, t26), {target: t24}, 'an undocumented pair keeps only its target');
+  const variant = (release, target, revision, current = false) => ({release, target, revision, href: `#release-${release}-sa-${target}`, available: true, current});
+  const page = {kind: 'history', path: history, family: 'grpc', group: 'file-operations', variants: [variant('0.9.0', t26, 5, true), variant('0.9.0', t24, 4, true), variant('0.8.0', t26, 5), variant('0.8.0', t24, 4), variant('0.7.0', t26, 3), variant('0.7.0', t24, 2)], compatibility: {targets: []}};
+  const nav = {targets: [t26, t24], releases: ['0.9.0', '0.8.0', '0.7.0']};
+  const stored = {release: '0.7.0', target: t24};
+  // Reading Server 0.7.0 / SA 2024, then following its Request Parameters permalink.
+  const shown = selection(page, '#revision-2-request-parameters', '', t24, stored);
+  assert.deepEqual(shown, {...stored, fromUrl: false}, 'the section link keeps the pair, and the page writes it to the URL');
+  assert.equal(choices(page, nav, shown).targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`, 'changing only the target keeps Server 0.7.0');
+  assert.deepEqual(selection(page, '#version-differences', '', t24, stored), {...stored, fromUrl: false});
+  assert.deepEqual(selection(page, '', '', t24, stored), {...stored, fromUrl: false}, 'history navigation keeps the pair');
+  assert.deepEqual(selection(page, `#release-0.8.0-sa-${t26}`, '', t24, stored), {release: '0.8.0', target: t26, fromUrl: true}, 'the URL decides first');
+  assert.deepEqual(selection(page, '#revision-4-signature', '', t24, null), {release: '0.9.0', target: t24, fromUrl: false}, 'a cold section link selects that revision\'s newest pair for the reader\'s target');
+  assert.deepEqual(selection(page, '', '', t24, {release: '0.5.1', target: t26}), {target: t26, fromUrl: true}, 'an undocumented stored pair keeps only its target');
+  // The breadcrumb group follows the pair, and those group pages exist.
+  for (const [pair, to] of [[stored, '/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations'], [{release: '0.9.0', target: t24}, '/api/grpc/sa-2024.1.0508.5/file-operations']]) {
+    assert.equal(historyGroupHref(page, pair), to);
+    assert.ok(existsSync(path.join(root, 'build', to.slice(1) + '.html')), to);
+  }
+  assert.equal(historyGroupHref(page, {target: t24}), null);
+  // A history page's own navigation stays among histories instead of entering one target's reference.
+  const $ = read(history);
+  const links = $('.api-sidebar a[href]').toArray().map((a) => $(a).attr('href'));
+  assert.ok(links.includes('/api/grpc') && links.includes(history));
+  assert.deepEqual(links.filter((href) => href.startsWith('/api/grpc/sa-')), []);
+  assert.equal($('.api-breadcrumbs a[href^="/api/grpc/sa-"]').length, 0);
 });
 
 test('search prefers the release of the reference being read, including release-independent addresses', async () => {

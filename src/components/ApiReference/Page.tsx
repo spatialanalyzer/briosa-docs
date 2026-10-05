@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, readTarget, anchorOf, selection, methodHref, choices, htmlReferences} from './context';
+import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
@@ -39,10 +39,15 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   useEffect(() => {
     setNotice('');
     setMobileNavOpen(false);
-    if (!isHistory) rememberTarget(page.target);
+    if (!isHistory) { rememberTarget(page.target); rememberPair(null); }
     else {
-      const shown = selection(page, location.hash, location.search, readTarget());
-      if (shown.release && shown.target) rememberTarget(shown.target);
+      const shown = selection(page, location.hash, location.search, readTarget(), readPair());
+      if (shown.release && shown.target) {
+        rememberTarget(shown.target);
+        rememberPair({release: shown.release, target: shown.target});
+        // Keep the pair in the address, so section links and reloads retain it.
+        if (!shown.fromUrl) history.replace(`${page.path}?release=${encodeURIComponent(shown.release)}&sa=${encodeURIComponent(shown.target)}${location.hash}`);
+      }
       setSelected(shown);
     }
     const anchor = anchorOf(location.hash);
@@ -85,7 +90,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     <div className="api-reference">
       <aside className={`api-navigation${mobileNavOpen ? ' api-navigation-open' : ''}`}>
         <button className="api-navigation-toggle clean-btn menu__link menu__link--sublist-caret" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>API Navigation</button>
-        <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} /></div>
+        <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} history={isHistory} /></div>
       </aside>
       <main id="api-main" className="api-main">
         <div className="api-toolbar" aria-label="API Context">
@@ -94,9 +99,9 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
           {Boolean(siteConfig.themeConfig.algolia) && <Link to="/search" className="api-search-all">Search All Versions</Link>}
         </div>
         <p className="api-notice" role="status">{notice}</p>
-        <nav className="api-breadcrumbs" aria-label="Breadcrumbs"><Link to="/api">API Reference</Link><span> / </span><Link to={`/api/${page.family}`}>{labels[page.family]}</Link>{!isHistory && <><span> / </span><Link to={page.base}>SA {page.target}{page.current ? '' : ` · ${page.release}`}</Link></>}{page.groupHref && <><span> / </span><Link to={page.groupHref}>{groupTitle}</Link></>}</nav>
+        <nav className="api-breadcrumbs" aria-label="Breadcrumbs"><Link to="/api">API Reference</Link><span> / </span><Link to={`/api/${page.family}`}>{labels[page.family]}</Link>{!isHistory && <><span> / </span><Link to={page.base}>SA {page.target}{page.current ? '' : ` · ${page.release}`}</Link></>}{isHistory ? groupTitle && <><span> / </span>{historyGroupHref(page, selected) ? <Link to={historyGroupHref(page, selected)!}>{groupTitle} · {releaseLabel(page.family)} {selected?.release} · SA {selected?.target}</Link> : <span>{groupTitle}</span>}</> : page.groupHref && <><span> / </span><Link to={page.groupHref}>{groupTitle}</Link></>}</nav>
         <article className="markdown" data-api-kind={page.kind}>
-          <header><p className="api-eyebrow">{isHistory ? 'SpatialAnalyzer and Release History' : `${page.current ? 'Current Reference' : 'Earlier Release'} · ${releaseLabel(page.family)} ${page.release} · SA ${page.target}`}</p><h1>{page.title}</h1></header>
+          <header><p className="api-eyebrow">{isHistory ? `SpatialAnalyzer and Release History${selected?.release ? ` · ${releaseLabel(page.family)} ${selected.release} · SA ${selected.target}` : ''}` : `${page.current ? 'Current Reference' : 'Earlier Release'} · ${releaseLabel(page.family)} ${page.release} · SA ${page.target}`}</p><h1>{page.title}</h1></header>
           {!page.current && !isHistory && <div className="alert alert--info api-earlier"><strong>Earlier {releaseLabel(page.family)} Release</strong><p>This page describes Briosa {releaseLabel(page.family)} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></div>}
           {!page.available && !isHistory && <div className="alert alert--warning"><strong>Unavailable for This Target</strong><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></div>}
           {isHistory && <p>This page shows which Briosa releases document this method for each SpatialAnalyzer version, and the exact contract each one published. Use it to confirm what works with the SpatialAnalyzer version you build for.</p>}

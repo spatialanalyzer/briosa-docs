@@ -24,13 +24,40 @@ function routeTree(routes) {
 
 const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
+// Runs in the browser from one shared file; each redirect document supplies
+// only its data. Honors fragments, method anchors, and the reader's SA target.
+function follow(d) {
+  var t = d.to, a = d.aliases || {}, h = location.hash.slice(1);
+  var own = function (o, k) { return !!o && Object.prototype.hasOwnProperty.call(o, k); };
+  try { h = decodeURIComponent(h); } catch (e) {}
+  try { if (d.target) sessionStorage.setItem('briosa.api.browsing-target', d.target); } catch (e) {}
+  try {
+    var s = new URLSearchParams(location.search).get('sa') || sessionStorage.getItem('briosa.api.browsing-target') || localStorage.getItem('briosa.api.sa-target');
+    if (s && own(d.choices, s)) { t = d.choices[s].to; a = d.choices[s].aliases; }
+  } catch (e) {}
+  if (h && own(a, h)) t = a[h];
+  else if (h && d.history) {
+    // A former method section goes where its content now lives; anything else
+    // lands on the release/SA pair rather than on an anchor that does not exist.
+    if (d.prefix) {
+      var base = t.split('#')[0] + '?release=' + encodeURIComponent(d.release) + '&sa=' + encodeURIComponent(d.target);
+      if (h === 'version-differences') t = base + '#version-differences';
+      else if (h === 'execution-notes' && d.group) t = d.group;
+      else if (d.guide && (h === 'first-call-walkthrough' || (d.guideAnchors || []).indexOf(h) >= 0)) t = d.guide + (h === 'first-call-walkthrough' ? '' : '#' + h);
+      else if (d.kept.indexOf(h) >= 0 || (d.rows && /^(?:request|response)-(?!parameters$)/.test(h))) t = base + '#' + d.prefix + h;
+    }
+  } else if (h && t.indexOf('#') < 0) t += '#' + h;
+  location.replace(t);
+}
+const followScript = '/assets/api-redirect.js';
+
 // A former address as a static document: it costs a file, not a client route.
-// Fragments, method anchors, and a remembered SA target are honored when
-// JavaScript runs; otherwise the refresh and plain links reach the reference.
-function redirectDocument({to, aliases = {}, prefix = '', choices, target, release}) {
-  const data = JSON.stringify({to, aliases, prefix, choices, target, release}).replaceAll('<', '\\u003c');
+// Without JavaScript, the refresh and plain links reach the reference.
+function redirectDocument(redirect) {
+  const {to, aliases = {}} = redirect;
+  const data = JSON.stringify(redirect).replaceAll('<', '\\u003c');
   const links = Object.entries(aliases).map(([anchor, href]) => `<p id="${escape(anchor)}"><a href="${escape(href)}">${escape(anchor.replaceAll('-', ' '))}</a></p>`).join('');
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>(function(){var d=${data},t=d.to,a=d.aliases,h=location.hash.slice(1),own=function(o,k){return Object.prototype.hasOwnProperty.call(o,k)};try{h=decodeURIComponent(h)}catch(e){}try{if(d.target)sessionStorage.setItem('briosa.api.browsing-target',d.target)}catch(e){}try{var s=new URLSearchParams(location.search).get('sa')||sessionStorage.getItem('briosa.api.browsing-target')||localStorage.getItem('briosa.api.sa-target');if(d.choices&&s&&own(d.choices,s)){t=d.choices[s].to;a=d.choices[s].aliases}}catch(e){}if(h&&own(a,h))t=a[h];else if(h&&d.prefix)t=t.split('#')[0]+'?release='+encodeURIComponent(d.release)+'&sa='+encodeURIComponent(d.target)+'#'+d.prefix+h;else if(h&&t.indexOf('#')<0)t+='#'+h;location.replace(t)})()</script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API Reference Link | Briosa</title><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://briosa.dev${escape(to)}"><script>window.briosaRedirect=${data}</script><script src="${followScript}"></script><meta http-equiv="refresh" content="0; url=${escape(to)}"></head><body><main><h1>API Reference</h1><p>This reference has a permanent address.</p><p><a href="${escape(to)}">Open the Reference</a></p>${links}</main></body></html>`;
 }
 
 module.exports = function apiReference(context) {
@@ -60,6 +87,7 @@ module.exports = function apiReference(context) {
         await fs.mkdir(path.dirname(file), {recursive: true});
         await fs.writeFile(file, html, {flag: 'wx'});
       };
+      await fs.writeFile(path.join(outDir, followScript.slice(1)), `(${follow})(window.briosaRedirect);\n`);
       for (const [from, redirect] of Object.entries(content.redirects)) await write(from, redirectDocument(redirect));
       // Static hosts read a dotted final segment (an SA target or release) as a
       // file extension and never try its .html sibling, so supply a directory index.
