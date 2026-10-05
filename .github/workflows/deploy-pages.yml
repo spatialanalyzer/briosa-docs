@@ -33,17 +33,21 @@ jobs:
       - name: Build site
         # Report the build's own peak memory (resident memory of its Node
         # processes) against the 10 GB budget in #94, and the runner's total.
+        # A Node process name need not be "node", so match the executable in the
+        # command line. Measurement never fails the build.
         run: |
           (build_peak=0; runner_peak=0; while sleep 1; do
-            build=$( (ps -C node -o rss= || true) | awk '{s += $1} END {print int(s / 1024)}')
+            build=$(ps -eo rss=,args= | awk '{rss = $1; $1 = ""} $0 ~ /(^|[ \/])node( |$)/ {s += rss} END {print int(s / 1024)}')
             runner=$(free -m | awk '/^Mem:/ {print $3}')
             if [ "$build" -gt "$build_peak" ]; then build_peak=$build; echo "$build_peak" > "$RUNNER_TEMP/peak-build-mb"; fi
             if [ "$runner" -gt "$runner_peak" ]; then runner_peak=$runner; echo "$runner_peak" > "$RUNNER_TEMP/peak-runner-mb"; fi
           done) &
           npm run build
-          build=$(cat "$RUNNER_TEMP/peak-build-mb")
-          echo "Peak build memory (Node processes, resident): $build MB of a 10240 MB budget. Peak runner memory in use: $(cat "$RUNNER_TEMP/peak-runner-mb") MB of $(free -m | awk '/^Mem:/ {print $2}') MB." | tee -a "$GITHUB_STEP_SUMMARY"
-          if [ "$build" -gt 10240 ]; then echo "::warning title=Build memory::The build's Node processes peaked at $build MB, above the 10 GB budget in #94."; fi
+          build=$(cat "$RUNNER_TEMP/peak-build-mb" 2>/dev/null || echo 0)
+          runner=$(cat "$RUNNER_TEMP/peak-runner-mb" 2>/dev/null || echo 0)
+          echo "Peak build memory (Node processes, resident): $build MB of a 10240 MB budget. Peak runner memory in use: $runner MB of $(free -m | awk '/^Mem:/ {print $2}') MB." | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ "$build" -eq 0 ]; then echo "::warning title=Build memory::No Node build process was sampled, so build memory was not measured."
+          elif [ "$build" -gt 10240 ]; then echo "::warning title=Build memory::The build's Node processes peaked at $build MB, above the 10 GB budget in #94."; fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
