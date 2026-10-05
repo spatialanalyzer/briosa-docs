@@ -43,7 +43,8 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     else {
       const shown = selection(page, location.hash, location.search, readTarget(), readPair());
       if (shown.target) rememberTarget(shown.target);
-      if (shown.release && shown.target && !shown.missing) rememberPair({release: shown.release, target: shown.target});
+      // An unavailable request is still the pair being read; the next history page continues it.
+      if (shown.remember) rememberPair(shown.remember);
       // The address always states the pair the selectors show.
       if (shown.replace) history.replace(shown.replace);
       setSelected(shown);

@@ -34,14 +34,16 @@ export function pairOf(hash: string): {release: string; target: string} | null {
   const match = anchorOf(hash).match(/^release-(.+?)-sa-(.+)$/);
   return match ? {release: match[1], target: match[2]} : null;
 }
-export type Selection = {release?: string; target?: string | null; missing?: boolean; replace: string | null};
+export type Selection = {release?: string; target?: string | null; missing?: boolean; replace: string | null; remember?: Pair};
 // What a history page is showing, and the address that states it. The address
 // decides: a pair anchor names the pair; a section anchor names a revision and
 // keeps a query pair only when that pair published the revision; a query pair
 // without a section names the pair, and is reported as missing when it was not
 // documented. Only when the address names no pair does the pair already being
-// read in this tab continue. `replace` corrects a stale or absent query, so the
-// address always agrees with the selectors.
+// read in this tab continue, and it continues even where it is not documented,
+// so a request is never silently swapped for an older one. `replace` corrects a
+// stale or absent query, so the address always agrees with the selectors;
+// `remember` is the pair the tab carries to the next history page.
 export function selection(page: PageData, hash: string, search: string, remembered: string | null, stored: Pair | null = null): Selection {
   const documented = (release?: string | null, target?: string | null) => release && target ? page.variants.find((v) => v.release === release && v.target === target && v.href) : undefined;
   const params = new URLSearchParams(search);
@@ -55,9 +57,10 @@ export function selection(page: PageData, hash: string, search: string, remember
     const url = `${page.path}${query ? `?${query}` : ''}${hash}`;
     return url === `${page.path}${search}${hash}` ? null : url;
   };
-  const show = (pair: Pair, inQuery: boolean): Selection => ({release: pair.release, target: pair.target, replace: address(inQuery ? pair : null)});
+  const show = (pair: Pair, inQuery: boolean): Selection => ({release: pair.release, target: pair.target, replace: address(inQuery ? pair : null), remember: {release: pair.release, target: pair.target}});
+  const missing = (pair: Pair, replace: string | null): Selection => ({release: pair.release, target: pair.target, missing: true, replace, remember: {release: pair.release, target: pair.target}});
   const pair = pairOf(hash);
-  if (pair) return documented(pair.release, pair.target) ? show(pair, false) : {...pair, missing: true, replace: address(null)};
+  if (pair) return documented(pair.release, pair.target) ? show(pair, false) : missing(pair, address(null));
   const section = anchorOf(hash).match(/^revision-(\d+)(?:-|$)/);
   if (section) {
     // A query that names another revision is stale; the pair read most recently decides the target.
@@ -68,9 +71,9 @@ export function selection(page: PageData, hash: string, search: string, remember
     const newest = page.variants.find((v) => v.revision === revision && v.href && v.target === target) ?? page.variants.find((v) => v.revision === revision && v.href);
     return newest ? show(newest, true) : {target, replace: address(null)};
   }
-  if (queried) return documented(queried.release, queried.target) ? show(queried, true) : {...queried, missing: true, replace: null};
-  if (stored && documented(stored.release, stored.target)) return show(stored, true);
-  return {target: params.get('sa') ?? stored?.target ?? remembered, replace: null};
+  if (queried) return documented(queried.release, queried.target) ? show(queried, true) : missing(queried, null);
+  if (stored) return documented(stored.release, stored.target) ? show(stored, true) : missing(stored, address(stored));
+  return {target: params.get('sa') ?? remembered, replace: null};
 }
 // The group page for the pair being read on a history page, or none.
 export function historyGroupHref(page: PageData, selected: {release?: string; target?: string | null} | null): string | null {

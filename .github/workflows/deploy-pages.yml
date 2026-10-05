@@ -31,11 +31,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build site
-        # Report peak runner memory so build growth is visible before it fails.
+        # Report the build's own peak memory (resident memory of its Node
+        # processes) against the 10 GB budget in #94, and the runner's total.
         run: |
-          (peak=0; while sleep 2; do used=$(free -m | awk '/^Mem:/ {print $3}'); if [ "$used" -gt "$peak" ]; then peak=$used; echo "$peak" > "$RUNNER_TEMP/peak-memory-mb"; fi; done) &
+          (build_peak=0; runner_peak=0; while sleep 1; do
+            build=$( (ps -C node -o rss= || true) | awk '{s += $1} END {print int(s / 1024)}')
+            runner=$(free -m | awk '/^Mem:/ {print $3}')
+            if [ "$build" -gt "$build_peak" ]; then build_peak=$build; echo "$build_peak" > "$RUNNER_TEMP/peak-build-mb"; fi
+            if [ "$runner" -gt "$runner_peak" ]; then runner_peak=$runner; echo "$runner_peak" > "$RUNNER_TEMP/peak-runner-mb"; fi
+          done) &
           npm run build
-          echo "Peak runner memory in use during the build: $(cat "$RUNNER_TEMP/peak-memory-mb") MB of $(free -m | awk '/^Mem:/ {print $2}') MB" | tee -a "$GITHUB_STEP_SUMMARY"
+          build=$(cat "$RUNNER_TEMP/peak-build-mb")
+          echo "Peak build memory (Node processes, resident): $build MB of a 10240 MB budget. Peak runner memory in use: $(cat "$RUNNER_TEMP/peak-runner-mb") MB of $(free -m | awk '/^Mem:/ {print $2}') MB." | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ "$build" -gt 10240 ]; then echo "::warning title=Build memory::The build's Node processes peaked at $build MB, above the 10 GB budget in #94."; fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:

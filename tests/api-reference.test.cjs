@@ -180,24 +180,35 @@ test('section and history navigation keep the release/SA pair being read', async
   const nav = {targets: [t26, t24], releases: ['0.9.0', '0.8.0', '0.7.0']};
   const stored = {release: '0.7.0', target: t24};
   const query = (release, target) => `?release=${release}&sa=${target}`;
+  // A shown or requested pair is the one the tab carries to the next history page.
+  const reading = (pair, extra) => ({release: pair.release, target: pair.target, ...extra, remember: {release: pair.release, target: pair.target}});
   // Reading Server 0.7.0 / SA 2024, then following its Request Parameters permalink.
   const shown = selection(page, '#revision-2-request-parameters', '', t24, stored);
-  assert.deepEqual(shown, {...stored, replace: `${history}${query('0.7.0', t24)}#revision-2-request-parameters`}, 'the section link keeps the pair, and the address states it');
+  assert.deepEqual(shown, reading(stored, {replace: `${history}${query('0.7.0', t24)}#revision-2-request-parameters`}), 'the section link keeps the pair, and the address states it');
   assert.equal(choices(page, nav, shown).targets.find((t) => t.value === t26).href, `${history}#release-0.7.0-sa-${t26}`, 'changing only the target keeps Server 0.7.0');
-  assert.deepEqual(selection(page, '#revision-2-request-parameters', query('0.7.0', t24), t24, stored), {...stored, replace: null}, 'an address that already agrees is left alone');
-  assert.deepEqual(selection(page, '#version-differences', '', t24, stored), {...stored, replace: `${history}${query('0.7.0', t24)}#version-differences`});
-  assert.deepEqual(selection(page, '', '', t24, stored), {...stored, replace: `${history}${query('0.7.0', t24)}`}, 'history navigation keeps the pair');
-  assert.deepEqual(selection(page, '#revision-4-signature', '', t24, null), {release: '0.9.0', target: t24, replace: `${history}${query('0.9.0', t24)}#revision-4-signature`}, 'a cold section link selects that revision\'s newest pair for the reader\'s target');
-  assert.deepEqual(selection(page, '', '', t24, {release: '0.5.1', target: t26}), {target: t26, replace: null}, 'an undocumented stored pair keeps only its target');
+  assert.deepEqual(selection(page, '#revision-2-request-parameters', query('0.7.0', t24), t24, stored), reading(stored, {replace: null}), 'an address that already agrees is left alone');
+  assert.deepEqual(selection(page, '#version-differences', '', t24, stored), reading(stored, {replace: `${history}${query('0.7.0', t24)}#version-differences`}));
+  assert.deepEqual(selection(page, '', '', t24, stored), reading(stored, {replace: `${history}${query('0.7.0', t24)}`}), 'history navigation keeps the pair');
+  assert.deepEqual(selection(page, '#revision-4-signature', '', t24, null), reading({release: '0.9.0', target: t24}, {replace: `${history}${query('0.9.0', t24)}#revision-4-signature`}), 'a cold section link selects that revision\'s newest pair for the reader\'s target');
+  const older = {release: '0.5.1', target: t24};
+  assert.deepEqual(selection(page, '', '', t24, older), reading(older, {missing: true, replace: `${history}${query('0.5.1', t24)}`}), 'a pair this page does not document is reported and kept, not swapped');
   // A stale query never outlives a pair chosen in the page: choosing 0.8.0 / SA 2026 in the
   // availability table, then that revision's permalink, keeps 0.8.0 / SA 2026.
   const chosen = selection(page, `#release-0.8.0-sa-${t26}`, query('0.7.0', t24), t24, stored);
-  assert.deepEqual(chosen, {release: '0.8.0', target: t26, replace: `${history}#release-0.8.0-sa-${t26}`}, 'a pair anchor decides and the conflicting query is removed');
+  assert.deepEqual(chosen, reading({release: '0.8.0', target: t26}, {replace: `${history}#release-0.8.0-sa-${t26}`}), 'a pair anchor decides and the conflicting query is removed');
   const after = {release: '0.8.0', target: t26};
-  assert.deepEqual(selection(page, '#revision-5-request-parameters', query('0.7.0', t24), t26, after), {...after, replace: `${history}${query('0.8.0', t26)}#revision-5-request-parameters`}, 'a query naming another revision is stale and corrected');
+  assert.deepEqual(selection(page, '#revision-5-request-parameters', query('0.7.0', t24), t26, after), reading(after, {replace: `${history}${query('0.8.0', t26)}#revision-5-request-parameters`}), 'a query naming another revision is stale and corrected');
   // An explicitly requested pair that is not documented is reported, never replaced by memory.
-  assert.deepEqual(selection(page, '', query('0.7.0', '2030.1'), t24, stored), {release: '0.7.0', target: '2030.1', missing: true, replace: null});
-  assert.deepEqual(selection(page, '#release-0.5.1-sa-' + t24, '', t24, stored), {release: '0.5.1', target: t24, missing: true, replace: null});
+  assert.deepEqual(selection(page, '', query('0.7.0', '2030.1'), t24, stored), reading({release: '0.7.0', target: '2030.1'}, {missing: true, replace: null}));
+  assert.deepEqual(selection(page, '#release-0.5.1-sa-' + t24, '', t24, stored), reading(older, {missing: true, replace: null}));
+  // Regression: read 0.7.0 / SA 2024, open the former 0.7.0 / SA 2026 Run Crib Sheet address
+  // (unavailable), then Direct CAD Access in the history sidebar. The request carries on.
+  const cribPath = '/api/grpc/instrument-operations-crib-sheet-operations/run-crib-sheet';
+  const crib = {kind: 'history', path: cribPath, family: 'grpc', variants: [variant('0.9.0', t24, 1, true), {release: '0.9.0', target: t26}, variant('0.8.0', t24, 1), {release: '0.8.0', target: t26}, variant('0.7.0', t24, 1), {release: '0.7.0', target: t26}], compatibility: {targets: []}};
+  const unavailable = selection(crib, '', query('0.7.0', t26), t24, stored);
+  assert.deepEqual(unavailable, reading({release: '0.7.0', target: t26}, {missing: true, replace: null}));
+  const next = selection(page, '', '', t26, unavailable.remember);
+  assert.deepEqual(next, reading({release: '0.7.0', target: t26}, {replace: `${history}${query('0.7.0', t26)}`}), 'the next history page shows the requested 0.7.0 / SA 2026, not the older 0.7.0 / SA 2024');
   // The breadcrumb group follows the pair, and those group pages exist.
   for (const [pair, to] of [[stored, '/api/grpc/sa-2024.1.0508.5/0.7.0/file-operations'], [{release: '0.9.0', target: t24}, '/api/grpc/sa-2024.1.0508.5/file-operations']]) {
     assert.equal(historyGroupHref(page, pair), to);
