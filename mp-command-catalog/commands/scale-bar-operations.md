@@ -140,7 +140,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/scale-bar-operations#delete-scale-bar) · [.NET](/api/dotnet/scale-bar-operations#delete-scale-bar) · [Python](/api/python/scale-bar-operations#delete-scale-bar) · [JavaScript and TypeScript](/api/javascript/scale-bar-operations#delete-scale-bar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/scale-bar-operations/delete-scale-bar) · [.NET](/api/dotnet/sa-2026.1.0529.7/scale-bar-operations/delete-scale-bar) · [Python](/api/python/sa-2026.1.0529.7/scale-bar-operations/delete-scale-bar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/scale-bar-operations/delete-scale-bar)
 
 
 ## Get Scale Bar Stats
@@ -203,7 +203,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/scale-bar-operations#get-scale-bar-stats) · [.NET](/api/dotnet/scale-bar-operations#get-scale-bar-stats) · [Python](/api/python/scale-bar-operations#get-scale-bar-stats) · [JavaScript and TypeScript](/api/javascript/scale-bar-operations#get-scale-bar-stats)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/scale-bar-operations/get-scale-bar-stats) · [.NET](/api/dotnet/sa-2026.1.0529.7/scale-bar-operations/get-scale-bar-stats) · [Python](/api/python/sa-2026.1.0529.7/scale-bar-operations/get-scale-bar-stats) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/scale-bar-operations/get-scale-bar-stats)
 
 
 ## Scale Bar Check
@@ -270,7 +270,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/scale-bar-operations#scale-bar-check) · [.NET](/api/dotnet/scale-bar-operations#scale-bar-check) · [Python](/api/python/scale-bar-operations#scale-bar-check) · [JavaScript and TypeScript](/api/javascript/scale-bar-operations#scale-bar-check)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/scale-bar-operations/scale-bar-check) · [.NET](/api/dotnet/sa-2026.1.0529.7/scale-bar-operations/scale-bar-check) · [Python](/api/python/sa-2026.1.0529.7/scale-bar-operations/scale-bar-check) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/scale-bar-operations/scale-bar-check)
 
 
 ## Set Inward Positive Normal
@@ -329,7 +329,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/scale-bar-operations#set-inward-positive-normal) · [.NET](/api/dotnet/scale-bar-operations#set-inward-positive-normal) · [Python](/api/python/scale-bar-operations#set-inward-positive-normal) · [JavaScript and TypeScript](/api/javascript/scale-bar-operations#set-inward-positive-normal)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/scale-bar-operations/set-inward-positive-normal) · [.NET](/api/dotnet/sa-2026.1.0529.7/scale-bar-operations/set-inward-positive-normal) · [Python](/api/python/sa-2026.1.0529.7/scale-bar-operations/set-inward-positive-normal) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/scale-bar-operations/set-inward-positive-normal)
 
 
 ## Sort Point Group in Database

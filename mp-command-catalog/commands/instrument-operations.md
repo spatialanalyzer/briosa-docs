@@ -6563,7 +6563,7 @@ does not establish valid channel limits.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/instrument-operations)
-- [.NET](/api/dotnet/instrument-operations)
-- [Python](/api/python/instrument-operations)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations)

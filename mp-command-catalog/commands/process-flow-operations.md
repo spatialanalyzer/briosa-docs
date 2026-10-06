@@ -370,7 +370,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the entered value or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-double) · [.NET](/api/dotnet/process-flow-operations#ask-for-double) · [Python](/api/python/process-flow-operations#ask-for-double) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-double) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-double)
 
 
 ## Ask for Integer
@@ -441,7 +441,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the entered value or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-integer) · [.NET](/api/dotnet/process-flow-operations#ask-for-integer) · [Python](/api/python/process-flow-operations#ask-for-integer) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-integer)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-integer) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-integer) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-integer) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-integer)
 
 
 ## Ask for Point Name
@@ -506,7 +506,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the selected point or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-point-name) · [.NET](/api/dotnet/process-flow-operations#ask-for-point-name) · [Python](/api/python/process-flow-operations#ask-for-point-name) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-point-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-point-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-point-name) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-point-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-point-name)
 
 
 ## Ask for String
@@ -573,7 +573,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the entered value or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-string) · [.NET](/api/dotnet/process-flow-operations#ask-for-string) · [Python](/api/python/process-flow-operations#ask-for-string) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-string) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-string)
 
 
 ## Ask for String (Pull-Down Version)
@@ -640,7 +640,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the selected value or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-string-pull-down-version) · [.NET](/api/dotnet/process-flow-operations#ask-for-string-pull-down-version) · [Python](/api/python/process-flow-operations#ask-for-string-pull-down-version) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-string-pull-down-version)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-string-pull-down-version) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-string-pull-down-version) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-string-pull-down-version) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-string-pull-down-version)
 
 
 ## Ask for User Decision (Pull-Down Version)
@@ -831,7 +831,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the decision or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-user-decision-from-image) · [.NET](/api/dotnet/process-flow-operations#ask-for-user-decision-from-image) · [Python](/api/python/process-flow-operations#ask-for-user-decision-from-image) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-user-decision-from-image)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-image) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-image) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-image) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-image)
 
 
 ## Ask for User Decision from Strings
@@ -900,7 +900,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 The MP cancel-jump target is not exposed; Briosa returns the decision or reports the execution outcome instead of branching.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#ask-for-user-decision-from-strings) · [.NET](/api/dotnet/process-flow-operations#ask-for-user-decision-from-strings) · [Python](/api/python/process-flow-operations#ask-for-user-decision-from-strings) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#ask-for-user-decision-from-strings)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-strings) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-strings) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-strings) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/ask-for-user-decision-from-strings)
 
 
 ## Ask for User Decision(HTML)
@@ -1555,7 +1555,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/process-flow-operations#object-existence-test-check-only) · [.NET](/api/dotnet/process-flow-operations#object-existence-test-check-only) · [Python](/api/python/process-flow-operations#object-existence-test-check-only) · [JavaScript and TypeScript](/api/javascript/process-flow-operations#object-existence-test-check-only)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/process-flow-operations/object-existence-test-check-only) · [.NET](/api/dotnet/sa-2026.1.0529.7/process-flow-operations/object-existence-test-check-only) · [Python](/api/python/sa-2026.1.0529.7/process-flow-operations/object-existence-test-check-only) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/process-flow-operations/object-existence-test-check-only)
 
 
 ## Reset Counter

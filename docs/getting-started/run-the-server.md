@@ -191,14 +191,14 @@ SDK, launch SpatialAnalyzer, or call `ConnectEx`.
 
 A direct gRPC application uses this explicit sequence:
 
-1. Call [`StartSpatialAnalyzerSdk`](/api/grpc/start-spatial-analyzer-sdk). The
+1. Call [`StartSpatialAnalyzerSdk`](/api/grpc/sa-2026.1.0529.7/start-spatial-analyzer-sdk). The
    new SDK is running but disconnected.
-2. Optionally call [`LaunchSpatialAnalyzer`](/api/grpc/launch-spatial-analyzer)
+2. Optionally call [`LaunchSpatialAnalyzer`](/api/grpc/sa-2026.1.0529.7/launch-spatial-analyzer)
    to launch a fresh exact-target application. Skip this when an eligible SA
    application is already running. The request can select an initial local job
    file or quick-start instrument and can start SA minimized.
 3. Call
-   [`ConnectToSpatialAnalyzer`](/api/grpc/connect-to-spatial-analyzer). This is
+   [`ConnectToSpatialAnalyzer`](/api/grpc/sa-2026.1.0529.7/connect-to-spatial-analyzer). This is
    the only step that calls `ConnectEx("localhost", ...)` and establishes MP
    readiness.
 

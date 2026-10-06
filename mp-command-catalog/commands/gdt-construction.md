@@ -564,4 +564,4 @@ Briosa keeps these operations stateless and never automatically replays a
 construction, deletion, wildcard, or interactive call after an unknown
 execution outcome.
 
-**API References:** [gRPC](/api/grpc/gdt-construction) · [.NET](/api/dotnet/gdt-construction) · [Python](/api/python/gdt-construction) · [JavaScript and TypeScript](/api/javascript/gdt-construction)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/gdt-construction) · [.NET](/api/dotnet/sa-2026.1.0529.7/gdt-construction) · [Python](/api/python/sa-2026.1.0529.7/gdt-construction) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/gdt-construction)

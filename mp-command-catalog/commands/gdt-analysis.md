@@ -1511,4 +1511,4 @@ the unavailable `Vector Creation` value.
 All mutation, evaluation, and interactive operations prohibit automatic replay
 after an unknown execution outcome.
 
-**API References:** [gRPC](/api/grpc/gdt-analysis) · [.NET](/api/dotnet/gdt-analysis) · [Python](/api/python/gdt-analysis) · [JavaScript and TypeScript](/api/javascript/gdt-analysis)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/gdt-analysis) · [.NET](/api/dotnet/sa-2026.1.0529.7/gdt-analysis) · [Python](/api/python/sa-2026.1.0529.7/gdt-analysis) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/gdt-analysis)

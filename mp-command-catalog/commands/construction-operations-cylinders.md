@@ -104,7 +104,7 @@ not add client- or server-side geometry safeguards: zero or negative dimensions
 and any axis vector are passed to SpatialAnalyzer, which determines the MP
 execution outcome.
 
-[gRPC](/api/grpc/construction-operations-cylinders#construct-cylinder) · [.NET](/api/dotnet/construction-operations-cylinders#construct-cylinder) · [Python](/api/python/construction-operations-cylinders#construct-cylinder) · [JavaScript](/api/javascript/construction-operations-cylinders#construct-cylinder)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder)
 
 ## Construct Cylinder From End Points
 
@@ -156,7 +156,7 @@ Briosa passes coincident endpoints and zero or negative diameters through to
 SpatialAnalyzer. This preserves MP-compatible behavior rather than introducing
 an initial-release geometry policy.
 
-[gRPC](/api/grpc/construction-operations-cylinders#construct-cylinder-from-end-points) · [.NET](/api/dotnet/construction-operations-cylinders#construct-cylinder-from-end-points) · [Python](/api/python/construction-operations-cylinders#construct-cylinder-from-end-points) · [JavaScript](/api/javascript/construction-operations-cylinders#construct-cylinder-from-end-points)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder-from-end-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder-from-end-points) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder-from-end-points) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinder-from-end-points)
 
 ## Construct Cylinders From Surface Faces - Runtime Select
 
@@ -195,4 +195,4 @@ SpatialAnalyzer while the request is active. Cancellation or a client deadline
 does not prove that the SA interaction stopped, and Briosa never automatically
 replays the operation.
 
-[gRPC](/api/grpc/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select) · [.NET](/api/dotnet/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select) · [Python](/api/python/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/construction-operations-cylinders#construct-cylinders-from-surface-faces---runtime-select)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinders-from-surface-faces---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinders-from-surface-faces---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinders-from-surface-faces---runtime-select) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-cylinders/construct-cylinders-from-surface-faces---runtime-select)

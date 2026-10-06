@@ -1156,7 +1156,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization) · [.NET](/api/dotnet/relationship-operations#enabledisable-relationships-for-optimization) · [Python](/api/python/relationship-operations#enabledisable-relationships-for-optimization) · [JavaScript and TypeScript](/api/javascript/relationship-operations#enabledisable-relationships-for-optimization)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/enabledisable-relationships-for-optimization) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/enabledisable-relationships-for-optimization) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/enabledisable-relationships-for-optimization) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/enabledisable-relationships-for-optimization)
 
 
 ## Geom Relationship Ignore Input Points
@@ -1217,7 +1217,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Executes the relationship command without the MP-only Outlier Rejection Options input. Its exact default behavior still requires licensed validation.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#geom-relationship-ignore-input-points) · [.NET](/api/dotnet/relationship-operations#geom-relationship-ignore-input-points) · [Python](/api/python/relationship-operations#geom-relationship-ignore-input-points) · [JavaScript and TypeScript](/api/javascript/relationship-operations#geom-relationship-ignore-input-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/geom-relationship-ignore-input-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/geom-relationship-ignore-input-points) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/geom-relationship-ignore-input-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/geom-relationship-ignore-input-points)
 
 
 ## Geom Relationship Reuse Ignored Input Points
@@ -1274,7 +1274,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points) · [.NET](/api/dotnet/relationship-operations#geom-relationship-reuse-ignored-input-points) · [Python](/api/python/relationship-operations#geom-relationship-reuse-ignored-input-points) · [JavaScript and TypeScript](/api/javascript/relationship-operations#geom-relationship-reuse-ignored-input-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/geom-relationship-reuse-ignored-input-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/geom-relationship-reuse-ignored-input-points) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/geom-relationship-reuse-ignored-input-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/geom-relationship-reuse-ignored-input-points)
 
 
 ## Get Geom Relationship Auto Vectors
@@ -1341,7 +1341,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-auto-vectors) · [Python](/api/python/relationship-operations#get-geom-relationship-auto-vectors) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-auto-vectors)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-auto-vectors) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-auto-vectors) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-auto-vectors) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-auto-vectors)
 
 
 ## Get Geom Relationship Cardinal Points
@@ -1400,7 +1400,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-cardinal-points) · [Python](/api/python/relationship-operations#get-geom-relationship-cardinal-points) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-cardinal-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-cardinal-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-cardinal-points) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-cardinal-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-cardinal-points)
 
 
 ## Get Geom Relationship Criteria
@@ -1479,7 +1479,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-criteria) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-criteria) · [Python](/api/python/relationship-operations#get-geom-relationship-criteria) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-criteria)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria)
 
 
 ## Get Geom Relationship Measured Avg Point
@@ -1538,7 +1538,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-measured-avg-point) · [Python](/api/python/relationship-operations#get-geom-relationship-measured-avg-point) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-measured-avg-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-avg-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-avg-point) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-avg-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-avg-point)
 
 
 ## Get Geom Relationship Measured Geometry
@@ -1597,7 +1597,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-measured-geometry) · [Python](/api/python/relationship-operations#get-geom-relationship-measured-geometry) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-measured-geometry)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-geometry) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-geometry) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-geometry) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-measured-geometry)
 
 
 ## Get Geom Relationship Nominal Avg Point
@@ -1656,7 +1656,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-nominal-avg-point) · [Python](/api/python/relationship-operations#get-geom-relationship-nominal-avg-point) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-nominal-avg-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-avg-point) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-avg-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-avg-point)
 
 
 ## Get Geom Relationship Nominal Geometry
@@ -1715,7 +1715,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-nominal-geometry) · [Python](/api/python/relationship-operations#get-geom-relationship-nominal-geometry) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-nominal-geometry)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-geometry) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-geometry) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-nominal-geometry)
 
 
 ## Get Geom Relationship Point List
@@ -1778,7 +1778,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-point-list) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-point-list) · [Python](/api/python/relationship-operations#get-geom-relationship-point-list) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-point-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-point-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-point-list) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-point-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-point-list)
 
 
 ## Get Geom Relationship Projection Plane
@@ -1837,7 +1837,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-projection-plane) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-projection-plane) · [Python](/api/python/relationship-operations#get-geom-relationship-projection-plane) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-projection-plane)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-projection-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-projection-plane) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-projection-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-projection-plane)
 
 
 ## Get Pipe Relationship Cut Status
@@ -1902,7 +1902,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-pipe-relationship-cut-status) · [.NET](/api/dotnet/relationship-operations#get-pipe-relationship-cut-status) · [Python](/api/python/relationship-operations#get-pipe-relationship-cut-status) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-pipe-relationship-cut-status)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-cut-status) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-cut-status) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-cut-status) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-cut-status)
 
 
 ## Get Pipe Relationship Properties
@@ -1979,7 +1979,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-pipe-relationship-properties) · [.NET](/api/dotnet/relationship-operations#get-pipe-relationship-properties) · [Python](/api/python/relationship-operations#get-pipe-relationship-properties) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-pipe-relationship-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-properties) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-properties)
 
 
 ## Get Pipe Relationship Weights
@@ -2052,7 +2052,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-pipe-relationship-weights) · [.NET](/api/dotnet/relationship-operations#get-pipe-relationship-weights) · [Python](/api/python/relationship-operations#get-pipe-relationship-weights) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-pipe-relationship-weights)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-weights) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-weights) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-weights) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-pipe-relationship-weights)
 
 
 ## Get Relationship Fit Constraints (Scalar Type)
@@ -2119,7 +2119,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/relationship-operations#get-relationship-fit-constraints-scalar-type) · [Python](/api/python/relationship-operations#get-relationship-fit-constraints-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-fit-constraints-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-fit-constraints-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-fit-constraints-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-fit-constraints-scalar-type)
 
 
 ## Get Relationship Outlier Rejection (Scalar Type)
@@ -2188,7 +2188,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Retrieves the evidenced scalar settings without supplying the MP-only Outlier Rejection Options input. The partial call still requires licensed validation.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [Python](/api/python/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-outlier-rejection-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-outlier-rejection-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-outlier-rejection-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-outlier-rejection-scalar-type)
 
 
 ## Get Relationship Projection Options
@@ -2255,7 +2255,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-projection-options) · [.NET](/api/dotnet/relationship-operations#get-relationship-projection-options) · [Python](/api/python/relationship-operations#get-relationship-projection-options) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-projection-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-projection-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-projection-options) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-projection-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-projection-options)
 
 
 ## Get Relationship Reporting Frame
@@ -2314,7 +2314,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-reporting-frame) · [.NET](/api/dotnet/relationship-operations#get-relationship-reporting-frame) · [Python](/api/python/relationship-operations#get-relationship-reporting-frame) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-reporting-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-reporting-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-reporting-frame) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-reporting-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-reporting-frame)
 
 
 ## Get Relationship Sigmoidal Gap Fit Constraints
@@ -2356,7 +2356,7 @@ Selected using the exact MP identity and complete SA 2026.1 SDK binding. The
 older installed topic title uses `Sigmoid`; the MP Editor and SDK step use
 `Sigmoidal`, which is the canonical Briosa name.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [.NET](/api/dotnet/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [Python](/api/python/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-sigmoidal-gap-fit-constraints) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-sigmoidal-gap-fit-constraints) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-sigmoidal-gap-fit-constraints) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-sigmoidal-gap-fit-constraints)
 
 
 ## Get Relationship Sub Sampling Options
@@ -2421,7 +2421,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-sub-sampling-options) · [.NET](/api/dotnet/relationship-operations#get-relationship-sub-sampling-options) · [Python](/api/python/relationship-operations#get-relationship-sub-sampling-options) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-sub-sampling-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-sub-sampling-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-sub-sampling-options) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-sub-sampling-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-sub-sampling-options)
 
 
 ## Get Relationship Tolerance (Scalar Type)
@@ -2488,7 +2488,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/relationship-operations#get-relationship-tolerance-scalar-type) · [Python](/api/python/relationship-operations#get-relationship-tolerance-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-tolerance-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-scalar-type)
 
 
 ## Get Relationship Tolerance (Vector Type)
@@ -2579,7 +2579,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type) · [.NET](/api/dotnet/relationship-operations#get-relationship-tolerance-vector-type) · [Python](/api/python/relationship-operations#get-relationship-tolerance-vector-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-tolerance-vector-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-vector-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-vector-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-vector-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-tolerance-vector-type)
 
 
 ## Get Relationship Type
@@ -2638,7 +2638,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-type) · [.NET](/api/dotnet/relationship-operations#get-relationship-type) · [Python](/api/python/relationship-operations#get-relationship-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-type)
 
 
 ## Get Relationship Weighting
@@ -2697,7 +2697,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-weighting) · [.NET](/api/dotnet/relationship-operations#get-relationship-weighting) · [Python](/api/python/relationship-operations#get-relationship-weighting) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-weighting)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-weighting) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-weighting) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-weighting) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-weighting)
 
 
 ## Make Pipe Fitting Relationship
@@ -2758,7 +2758,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-pipe-fitting-relationship) · [.NET](/api/dotnet/relationship-operations#make-pipe-fitting-relationship) · [Python](/api/python/relationship-operations#make-pipe-fitting-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-pipe-fitting-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-pipe-fitting-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-pipe-fitting-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-pipe-fitting-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-pipe-fitting-relationship)
 
 
 ## Make Pipe Relationship Cut
@@ -2827,7 +2827,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-pipe-relationship-cut) · [.NET](/api/dotnet/relationship-operations#make-pipe-relationship-cut) · [Python](/api/python/relationship-operations#make-pipe-relationship-cut) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-pipe-relationship-cut)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-pipe-relationship-cut) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-pipe-relationship-cut) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-pipe-relationship-cut) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-pipe-relationship-cut)
 
 
 ## Pipe Relationship Force Cut to Frame
@@ -2892,7 +2892,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame) · [.NET](/api/dotnet/relationship-operations#pipe-relationship-force-cut-to-frame) · [Python](/api/python/relationship-operations#pipe-relationship-force-cut-to-frame) · [JavaScript and TypeScript](/api/javascript/relationship-operations#pipe-relationship-force-cut-to-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/pipe-relationship-force-cut-to-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/pipe-relationship-force-cut-to-frame) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/pipe-relationship-force-cut-to-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/pipe-relationship-force-cut-to-frame)
 
 
 ## Rejection (Scalar Type)
@@ -2965,7 +2965,7 @@ No complete useful exact-target SDK binding is available.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [Python](/api/python/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-measure-nominal-feature) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-measure-nominal-feature) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-measure-nominal-feature) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-measure-nominal-feature)
 
 
 ## Set Geom Relationship Auto Vectors Nominal (AVN)
@@ -3028,7 +3028,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [Python](/api/python/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-vectors-nominal-avn) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-vectors-nominal-avn) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-vectors-nominal-avn) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-auto-vectors-nominal-avn)
 
 
 ## Set Geom Relationship Cardinal Points
@@ -3091,7 +3091,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-cardinal-points) · [Python](/api/python/relationship-operations#set-geom-relationship-cardinal-points) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-cardinal-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-cardinal-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-cardinal-points) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-cardinal-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-cardinal-points)
 
 
 ## Set Geom Relationship Criteria
@@ -3158,7 +3158,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-criteria) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-criteria) · [Python](/api/python/relationship-operations#set-geom-relationship-criteria) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-criteria)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-criteria) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-criteria) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-criteria) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-criteria)
 
 
 ## Set Geom Relationship Measured Geometry
@@ -3217,7 +3217,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-measured-geometry) · [Python](/api/python/relationship-operations#set-geom-relationship-measured-geometry) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-measured-geometry)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-measured-geometry) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-measured-geometry) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-measured-geometry) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-measured-geometry)
 
 
 ## Set Geom Relationship Nominal Avg Point
@@ -3278,7 +3278,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-nominal-avg-point) · [Python](/api/python/relationship-operations#set-geom-relationship-nominal-avg-point) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-nominal-avg-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-avg-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-avg-point) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-avg-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-avg-point)
 
 
 ## Set Geom Relationship Nominal Geometry
@@ -3339,7 +3339,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-nominal-geometry) · [Python](/api/python/relationship-operations#set-geom-relationship-nominal-geometry) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-nominal-geometry)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-geometry) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-geometry) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-geometry) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-nominal-geometry)
 
 
 ## Set Geom Relationship Projection Plane
@@ -3400,7 +3400,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-geom-relationship-projection-plane) · [.NET](/api/dotnet/relationship-operations#set-geom-relationship-projection-plane) · [Python](/api/python/relationship-operations#set-geom-relationship-projection-plane) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-geom-relationship-projection-plane)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-projection-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-projection-plane) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-projection-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-geom-relationship-projection-plane)
 
 
 ## Set Object to Object Direction Relationship Fit Constraints
@@ -3461,7 +3461,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [.NET](/api/dotnet/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [Python](/api/python/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-fit-constraints) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-fit-constraints) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-fit-constraints) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-fit-constraints)
 
 
 ## Set Object to Object Direction Relationship Tolerances
@@ -3522,7 +3522,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected using the exact plural MP identity and complete scalar-tolerance SDK
 bindings. Briosa preserves the two independent tolerance values.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [.NET](/api/dotnet/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [Python](/api/python/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-object-to-object-direction-relationship-tolerances)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-tolerances) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-tolerances) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-tolerances) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-object-to-object-direction-relationship-tolerances)
 
 
 ## Set Pipe Relationship Segment Properties
@@ -3595,7 +3595,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties) · [.NET](/api/dotnet/relationship-operations#set-pipe-relationship-segment-properties) · [Python](/api/python/relationship-operations#set-pipe-relationship-segment-properties) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-pipe-relationship-segment-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-segment-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-segment-properties) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-segment-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-segment-properties)
 
 
 ## Set Pipe Relationship Weights
@@ -3668,7 +3668,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-pipe-relationship-weights) · [.NET](/api/dotnet/relationship-operations#set-pipe-relationship-weights) · [Python](/api/python/relationship-operations#set-pipe-relationship-weights) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-pipe-relationship-weights)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-weights) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-weights) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-weights) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-pipe-relationship-weights)
 
 
 ## Set Relationship Auto Vectors Fit (AVF)
@@ -3729,7 +3729,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf) · [.NET](/api/dotnet/relationship-operations#set-relationship-auto-vectors-fit-avf) · [Python](/api/python/relationship-operations#set-relationship-auto-vectors-fit-avf) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-auto-vectors-fit-avf)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-fit-avf) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-fit-avf) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-fit-avf) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-fit-avf)
 
 
 ## Set Relationship Auto Vectors Group Default Prefix
@@ -3764,7 +3764,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [.NET](/api/dotnet/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [Python](/api/python/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-group-default-prefix) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-group-default-prefix) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-group-default-prefix) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-auto-vectors-group-default-prefix)
 
 
 ## Set Relationship Desired Meas Count
@@ -3823,7 +3823,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-desired-meas-count) · [.NET](/api/dotnet/relationship-operations#set-relationship-desired-meas-count) · [Python](/api/python/relationship-operations#set-relationship-desired-meas-count) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-desired-meas-count)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-desired-meas-count) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-desired-meas-count) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-desired-meas-count) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-desired-meas-count)
 
 
 ## Set Relationship Dormant Status
@@ -3880,7 +3880,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-dormant-status) · [.NET](/api/dotnet/relationship-operations#set-relationship-dormant-status) · [Python](/api/python/relationship-operations#set-relationship-dormant-status) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-dormant-status)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-dormant-status) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-dormant-status) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-dormant-status) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-dormant-status)
 
 
 ## Set Relationship Fit Constraints (Scalar Type)
@@ -3939,7 +3939,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-fit-constraints-scalar-type) · [Python](/api/python/relationship-operations#set-relationship-fit-constraints-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-fit-constraints-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-fit-constraints-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-fit-constraints-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-fit-constraints-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-fit-constraints-scalar-type)
 
 
 ## Set Relationship Orientation Fit Constraints (Vector Type)
@@ -3998,7 +3998,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [Python](/api/python/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-orientation-fit-constraints-vector-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-orientation-fit-constraints-vector-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-orientation-fit-constraints-vector-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-orientation-fit-constraints-vector-type)
 
 
 ## Set Relationship Outlier Rejection (Scalar Type)
@@ -4059,7 +4059,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Executes without exposing the MP-only Outlier Rejection Options input, so callers cannot select the settings applied by SA. The resulting default behavior still requires licensed validation.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [Python](/api/python/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-outlier-rejection-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-outlier-rejection-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-outlier-rejection-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-outlier-rejection-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-outlier-rejection-scalar-type)
 
 
 ## Set Relationship Position Fit Constraints (Vector Type)
@@ -4118,7 +4118,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [Python](/api/python/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-position-fit-constraints-vector-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-position-fit-constraints-vector-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-position-fit-constraints-vector-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-position-fit-constraints-vector-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-position-fit-constraints-vector-type)
 
 
 ## Set Relationship Projection Options
@@ -4177,7 +4177,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-projection-options) · [.NET](/api/dotnet/relationship-operations#set-relationship-projection-options) · [Python](/api/python/relationship-operations#set-relationship-projection-options) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-projection-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-projection-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-projection-options) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-projection-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-projection-options)
 
 
 ## Set Relationship Reporting Frame
@@ -4236,7 +4236,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-reporting-frame) · [.NET](/api/dotnet/relationship-operations#set-relationship-reporting-frame) · [Python](/api/python/relationship-operations#set-relationship-reporting-frame) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-reporting-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-reporting-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-reporting-frame) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-reporting-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-reporting-frame)
 
 
 ## Set Relationship Sigmoidal Gap Fit Constraints
@@ -4270,7 +4270,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [.NET](/api/dotnet/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [Python](/api/python/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-sigmoidal-gap-fit-constraints) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-sigmoidal-gap-fit-constraints) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-sigmoidal-gap-fit-constraints) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-sigmoidal-gap-fit-constraints)
 
 
 ## Set Relationship Sub Sampling Options
@@ -4335,7 +4335,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-sub-sampling-options) · [.NET](/api/dotnet/relationship-operations#set-relationship-sub-sampling-options) · [Python](/api/python/relationship-operations#set-relationship-sub-sampling-options) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-sub-sampling-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-sub-sampling-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-sub-sampling-options) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-sub-sampling-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-sub-sampling-options)
 
 
 ## Set Relationship Tolerance (Scalar Type)
@@ -4394,7 +4394,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-tolerance-scalar-type) · [Python](/api/python/relationship-operations#set-relationship-tolerance-scalar-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-tolerance-scalar-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-scalar-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-scalar-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-scalar-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-scalar-type)
 
 
 ## Set Relationship Tolerance (Vector Type)
@@ -4453,7 +4453,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type) · [.NET](/api/dotnet/relationship-operations#set-relationship-tolerance-vector-type) · [Python](/api/python/relationship-operations#set-relationship-tolerance-vector-type) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-tolerance-vector-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-vector-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-vector-type) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-vector-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-tolerance-vector-type)
 
 
 ## Set Relationship Voxel Cloud Display
@@ -4524,7 +4524,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display) · [.NET](/api/dotnet/relationship-operations#set-relationship-voxel-cloud-display) · [Python](/api/python/relationship-operations#set-relationship-voxel-cloud-display) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-voxel-cloud-display)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-voxel-cloud-display) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-voxel-cloud-display) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-voxel-cloud-display) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-voxel-cloud-display)
 
 
 ## Set Relationship Weighting
@@ -4583,7 +4583,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-weighting) · [.NET](/api/dotnet/relationship-operations#set-relationship-weighting) · [Python](/api/python/relationship-operations#set-relationship-weighting) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-weighting)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-weighting) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-weighting) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-weighting) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-weighting)
 
 
 ## Set Relationship Weights Normalized
@@ -4640,7 +4640,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-weights-normalized) · [.NET](/api/dotnet/relationship-operations#set-relationship-weights-normalized) · [Python](/api/python/relationship-operations#set-relationship-weights-normalized) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-weights-normalized)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-weights-normalized) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-weights-normalized) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-weights-normalized) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-weights-normalized)
 
 ## Generate Geometry Relationship Summary
 
@@ -4684,7 +4684,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Builds an SA geometry-relationship summary table for the supplied Relationships.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#generate-geometry-relationship-summary) · [.NET](/api/dotnet/relationship-operations#generate-geometry-relationship-summary) · [Python](/api/python/relationship-operations#generate-geometry-relationship-summary) · [JavaScript and TypeScript](/api/javascript/relationship-operations#generate-geometry-relationship-summary)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/generate-geometry-relationship-summary) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/generate-geometry-relationship-summary) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/generate-geometry-relationship-summary) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/generate-geometry-relationship-summary)
 
 ## Edit Geometry Relationship Point List
 
@@ -4734,7 +4734,7 @@ operator to close it. The View SDK Code export repeats the same setter three
 times with unrelated choice comments; the installed documentation confirms
 that Briosa should expose one mode input.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#edit-geometry-relationship-point-list) · [.NET](/api/dotnet/relationship-operations#edit-geometry-relationship-point-list) · [Python](/api/python/relationship-operations#edit-geometry-relationship-point-list) · [JavaScript and TypeScript](/api/javascript/relationship-operations#edit-geometry-relationship-point-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/edit-geometry-relationship-point-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/edit-geometry-relationship-point-list) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/edit-geometry-relationship-point-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/edit-geometry-relationship-point-list)
 
 ## Filter Geometry Relationship Outlier Cloud Points
 
@@ -4797,7 +4797,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Returns all ten exact-target filter metrics. Briosa does not add a cloud-size
 or mutation preflight.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [.NET](/api/dotnet/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [Python](/api/python/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [JavaScript and TypeScript](/api/javascript/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/filter-geometry-relationship-outlier-cloud-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/filter-geometry-relationship-outlier-cloud-points) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/filter-geometry-relationship-outlier-cloud-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/filter-geometry-relationship-outlier-cloud-points)
 
 ## Get Number of Relationships in Relationship Ref List
 
@@ -5008,7 +5008,7 @@ background, red highlighting, all four deviation fields shown, and visible
 units on an opaque background. UDP transmission defaults to disabled,
 broadcast enabled, an empty IP address, and port `10000`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#relationship-watch-window-template) · [.NET](/api/dotnet/relationship-operations#relationship-watch-window-template) · [Python](/api/python/relationship-operations#relationship-watch-window-template) · [JavaScript and TypeScript](/api/javascript/relationship-operations#relationship-watch-window-template)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/relationship-watch-window-template) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/relationship-watch-window-template) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/relationship-watch-window-template) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/relationship-watch-window-template)
 
 ## Make Point to Point Relationship
 
@@ -5054,7 +5054,7 @@ Creates a Relationship between two SA Points. The tolerance defaults to every
 limit disabled at zero. The constraint defaults to the high and low X, Y, and Z
 limits enabled at zero, with both magnitude limits disabled.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-point-to-point-relationship) · [.NET](/api/dotnet/relationship-operations#make-point-to-point-relationship) · [Python](/api/python/relationship-operations#make-point-to-point-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-point-to-point-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-point-to-point-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-point-to-point-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-point-to-point-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-point-to-point-relationship)
 
 ## Make Frame to Frame Relationship
 
@@ -5099,7 +5099,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a Relationship between two SA Frames. The scalar orientation tolerance
 and vector position tolerance default to every limit disabled at zero.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-frame-to-frame-relationship) · [.NET](/api/dotnet/relationship-operations#make-frame-to-frame-relationship) · [Python](/api/python/relationship-operations#make-frame-to-frame-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-frame-to-frame-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-frame-to-frame-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-frame-to-frame-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-frame-to-frame-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-frame-to-frame-relationship)
 
 ## Make Points to Objects Relationship
 
@@ -5152,7 +5152,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a Relationship between selected Points and SA objects. Briosa does not
 retain the lists or preflight their compatibility.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-points-to-objects-relationship) · [.NET](/api/dotnet/relationship-operations#make-points-to-objects-relationship) · [Python](/api/python/relationship-operations#make-points-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-points-to-objects-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-points-to-objects-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-points-to-objects-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-points-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-points-to-objects-relationship)
 
 ## Make Points to Points Relationship
 
@@ -5200,7 +5200,7 @@ Vector Group auto-update, and the exact vector tolerance and constraint
 options. Tolerance defaults to all limits disabled at zero. Constraint defaults
 to X, Y, and Z limits enabled at zero and magnitude limits disabled.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-points-to-points-relationship) · [.NET](/api/dotnet/relationship-operations#make-points-to-points-relationship) · [Python](/api/python/relationship-operations#make-points-to-points-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-points-to-points-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-points-to-points-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-points-to-points-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-points-to-points-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-points-to-points-relationship)
 
 ## Make Groups to Objects Relationship
 
@@ -5246,7 +5246,7 @@ Creates a Relationship from Point Groups to objects. Projection defaults to
 `Object To Probe Vectors` with all projection options disabled, and Vector
 Group auto-update defaults to `false`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-groups-to-objects-relationship) · [.NET](/api/dotnet/relationship-operations#make-groups-to-objects-relationship) · [Python](/api/python/relationship-operations#make-groups-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-groups-to-objects-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-groups-to-objects-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-groups-to-objects-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-groups-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-groups-to-objects-relationship)
 
 ## Make Object to Object Direction Relationship
 
@@ -5290,7 +5290,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a directional Relationship between two SA objects. `Nominal Angle`
 defaults to `0`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-object-to-object-direction-relationship) · [.NET](/api/dotnet/relationship-operations#make-object-to-object-direction-relationship) · [Python](/api/python/relationship-operations#make-object-to-object-direction-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-object-to-object-direction-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-object-to-object-direction-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-object-to-object-direction-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-object-to-object-direction-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-object-to-object-direction-relationship)
 
 ## Make Point Clouds to Objects Relationship
 
@@ -5336,7 +5336,7 @@ Creates a Relationship from Point Clouds to objects. It uses the same exact
 projection and Vector Group auto-update defaults as the Points and Groups
 variants.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship) · [.NET](/api/dotnet/relationship-operations#make-point-clouds-to-objects-relationship) · [Python](/api/python/relationship-operations#make-point-clouds-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-point-clouds-to-objects-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-point-clouds-to-objects-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-point-clouds-to-objects-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-point-clouds-to-objects-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-point-clouds-to-objects-relationship)
 
 ## Make Group to Group Relationship
 
@@ -5382,7 +5382,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a Relationship between two Point Groups. It preserves the same exact
 auto-update, tolerance, and constraint defaults as the Points-to-Points form.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-group-to-group-relationship) · [.NET](/api/dotnet/relationship-operations#make-group-to-group-relationship) · [Python](/api/python/relationship-operations#make-group-to-group-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-group-to-group-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-group-to-group-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-group-to-group-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-group-to-group-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-group-to-group-relationship)
 
 ## Make Group to Nominal Group Relationship
 
@@ -5437,7 +5437,7 @@ and threshold rejection default to disabled; the proximity threshold is
 `0.01`, the fit weight is `1`, and the tolerance and constraint defaults match
 the paired-Point Relationship.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship) · [.NET](/api/dotnet/relationship-operations#make-group-to-nominal-group-relationship) · [Python](/api/python/relationship-operations#make-group-to-nominal-group-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-group-to-nominal-group-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-group-to-nominal-group-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-group-to-nominal-group-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-group-to-nominal-group-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-group-to-nominal-group-relationship)
 
 ## Make Average Point Relationship
 
@@ -5481,7 +5481,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates an average-Point Relationship from a Point list. The Average Point and
 Nominal Point identities are independently optional.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-average-point-relationship) · [.NET](/api/dotnet/relationship-operations#make-average-point-relationship) · [Python](/api/python/relationship-operations#make-average-point-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-average-point-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-average-point-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-average-point-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-average-point-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-average-point-relationship)
 
 ## Make Geometry Fit Only Relationship
 
@@ -5527,7 +5527,7 @@ Fits one or more Point Groups to a required geometry type. The resulting object
 identity and fit-profile name are optional. Briosa preserves an MP partial
 success when only some supplied Point Groups can be used.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-geometry-fit-only-relationship) · [.NET](/api/dotnet/relationship-operations#make-geometry-fit-only-relationship) · [Python](/api/python/relationship-operations#make-geometry-fit-only-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-geometry-fit-only-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-only-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-only-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-only-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-only-relationship)
 
 ## Make Geometry Fit and Compare to Nominal Relationship
 
@@ -5573,7 +5573,7 @@ Fits one or more Point Groups and compares the fit to required nominal
 geometry. The resulting object and fit-profile inputs are optional, and partial
 MP success remains distinct from complete success or failure.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [.NET](/api/dotnet/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [Python](/api/python/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-and-compare-to-nominal-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-and-compare-to-nominal-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-and-compare-to-nominal-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-geometry-fit-and-compare-to-nominal-relationship)
 
 ## Make Geometry Compare Only Relationship
 
@@ -5616,7 +5616,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a Relationship that compares required nominal and measured SA geometry
 without fitting either object.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-geometry-compare-only-relationship) · [.NET](/api/dotnet/relationship-operations#make-geometry-compare-only-relationship) · [Python](/api/python/relationship-operations#make-geometry-compare-only-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-geometry-compare-only-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-geometry-compare-only-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-geometry-compare-only-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-geometry-compare-only-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-geometry-compare-only-relationship)
 
 ## Make Dynamic Point Relationship
 
@@ -5663,7 +5663,7 @@ three-plane, or perpendicular-midpoint geometry. The construction mode defaults
 to line/plane intersection. The third reference is optional except when the
 selected construction mode needs three geometries.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-dynamic-point-relationship) · [.NET](/api/dotnet/relationship-operations#make-dynamic-point-relationship) · [Python](/api/python/relationship-operations#make-dynamic-point-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-dynamic-point-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-dynamic-point-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-dynamic-point-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-dynamic-point-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-dynamic-point-relationship)
 
 ## Make Dynamic Line Relationship
 
@@ -5708,7 +5708,7 @@ Constructs a dynamic Line from the selected cone-axis, cylinder-axis,
 two-plane intersection, line-bisector, or Slot-centerline mode. The default is
 two-plane intersection.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-dynamic-line-relationship) · [.NET](/api/dotnet/relationship-operations#make-dynamic-line-relationship) · [Python](/api/python/relationship-operations#make-dynamic-line-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-dynamic-line-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-dynamic-line-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-dynamic-line-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-dynamic-line-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-dynamic-line-relationship)
 
 ## Make Dynamic Plane Relationship
 
@@ -5755,7 +5755,7 @@ The default is bisecting two Planes and the offset defaults to `0`. One SA SDK
 choice literal misspells `Two` as `Twp`; Briosa uses a correctly named public
 enum value and maps it to the exact SDK literal internally.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-dynamic-plane-relationship) · [.NET](/api/dotnet/relationship-operations#make-dynamic-plane-relationship) · [Python](/api/python/relationship-operations#make-dynamic-plane-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-dynamic-plane-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-dynamic-plane-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-dynamic-plane-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-dynamic-plane-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-dynamic-plane-relationship)
 
 ## Make Dynamic Circle Relationship
 
@@ -5800,7 +5800,7 @@ Constructs a dynamic Circle using one of seven cylinder, cone, Plane, or Sphere
 intersection modes. The default holds the Plane normal for a cylinder/Plane
 intersection.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-dynamic-circle-relationship) · [.NET](/api/dotnet/relationship-operations#make-dynamic-circle-relationship) · [Python](/api/python/relationship-operations#make-dynamic-circle-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-dynamic-circle-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-dynamic-circle-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-dynamic-circle-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-dynamic-circle-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-dynamic-circle-relationship)
 
 ## Make Dynamic Ellipse Relationship
 
@@ -5844,7 +5844,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Constructs a dynamic Ellipse from either a cylinder/Plane or cone/Plane
 intersection. Cylinder/Plane is the default.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship) · [.NET](/api/dotnet/relationship-operations#make-dynamic-ellipse-relationship) · [Python](/api/python/relationship-operations#make-dynamic-ellipse-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-dynamic-ellipse-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-dynamic-ellipse-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-dynamic-ellipse-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-dynamic-ellipse-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-dynamic-ellipse-relationship)
 
 ## Make Vector Group To Vector Group Relationship
 
@@ -5888,7 +5888,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Creates a Vector Group comparison Relationship. Opposing Vector Group polarity
 defaults to `true`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship) · [.NET](/api/dotnet/relationship-operations#make-vector-group-to-vector-group-relationship) · [Python](/api/python/relationship-operations#make-vector-group-to-vector-group-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-vector-group-to-vector-group-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-vector-group-to-vector-group-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-vector-group-to-vector-group-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-vector-group-to-vector-group-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-vector-group-to-vector-group-relationship)
 
 ## Set Vector Group To Vector Group Cylindrical Zone
 
@@ -5932,7 +5932,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Sets radial, minimum axial, and maximum axial offsets. Exact defaults are `1`,
 `-10`, and `10`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [.NET](/api/dotnet/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [Python](/api/python/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-cylindrical-zone) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-cylindrical-zone) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-cylindrical-zone) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-cylindrical-zone)
 
 ## Set Vector Group To Vector Group Fit Weights
 
@@ -5979,7 +5979,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Sets minimum, maximum, and nominal gaps with their fit weights. Exact defaults
 are gaps `0`, minimum and maximum weights `10`, and nominal weight `1`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [.NET](/api/dotnet/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [Python](/api/python/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-weights) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-weights) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-weights) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-weights)
 
 ## Set Vector Group To Vector Group Fit Gradient Factor
 
@@ -6020,7 +6020,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Sets the fit-weight transition gradient factor, which defaults to `50`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [.NET](/api/dotnet/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [Python](/api/python/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-gradient-factor) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-gradient-factor) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-gradient-factor) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-fit-gradient-factor)
 
 ## Set Vector Group To Vector Group Relative Polarity
 
@@ -6062,7 +6062,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Sets an existing Vector Group Relationship to opposing polarity by default;
 passing `false` selects same-direction analysis.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [.NET](/api/dotnet/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [Python](/api/python/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-vector-group-to-vector-group-relative-polarity)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-relative-polarity) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-relative-polarity) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-relative-polarity) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-vector-group-to-vector-group-relative-polarity)
 
 ## Delete Relationship
 
@@ -6103,7 +6103,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Deletes the named SA Relationship. Briosa preserves the MP command's direct,
 destructive behavior and adds no confirmation or preflight safeguard.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#delete-relationship) · [.NET](/api/dotnet/relationship-operations#delete-relationship) · [Python](/api/python/relationship-operations#delete-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#delete-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/delete-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/delete-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/delete-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/delete-relationship)
 
 ## Set Optimization Search Options
 
@@ -6142,7 +6142,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Sets SA's maximum number of step-size reductions for Relationship optimization.
 The exact default is `5`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-optimization-search-options) · [.NET](/api/dotnet/relationship-operations#set-optimization-search-options) · [Python](/api/python/relationship-operations#set-optimization-search-options) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-optimization-search-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-optimization-search-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-optimization-search-options) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-optimization-search-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-optimization-search-options)
 
 ## Set Optimization Perturbation Parameters
 
@@ -6184,7 +6184,7 @@ Sets global length perturbation `0.0001`, angular perturbation `0.0001`, and
 damping `1` by default. These values alter SA-owned optimizer state; Briosa does
 not cache them.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-optimization-perturbation-parameters) · [.NET](/api/dotnet/relationship-operations#set-optimization-perturbation-parameters) · [Python](/api/python/relationship-operations#set-optimization-perturbation-parameters) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-optimization-perturbation-parameters)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-optimization-perturbation-parameters) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-optimization-perturbation-parameters) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-optimization-perturbation-parameters) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-optimization-perturbation-parameters)
 
 ## Do Relationship Fit
 
@@ -6235,7 +6235,7 @@ rotational motion is allowed about the centroid, randomized start is disabled,
 and no fit dialog is shown. The result preserves the reference Transform,
 working and world Transforms with scale, and objective value.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#do-relationship-fit) · [.NET](/api/dotnet/relationship-operations#do-relationship-fit) · [Python](/api/python/relationship-operations#do-relationship-fit) · [JavaScript and TypeScript](/api/javascript/relationship-operations#do-relationship-fit)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/do-relationship-fit) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/do-relationship-fit) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/do-relationship-fit) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/do-relationship-fit)
 
 ## Move Collections by Minimizing Relationships
 
@@ -6280,7 +6280,7 @@ Moves named Collections by minimizing the supplied Relationships. It uses the
 same solver and motion defaults as Relationship fitting, keeps the fit dialog
 off, and uses the exact SA 2026.1 convergence-threshold default of `0`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#move-collections-by-minimizing-relationships) · [.NET](/api/dotnet/relationship-operations#move-collections-by-minimizing-relationships) · [Python](/api/python/relationship-operations#move-collections-by-minimizing-relationships) · [JavaScript and TypeScript](/api/javascript/relationship-operations#move-collections-by-minimizing-relationships)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/move-collections-by-minimizing-relationships) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/move-collections-by-minimizing-relationships) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/move-collections-by-minimizing-relationships) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/move-collections-by-minimizing-relationships)
 
 ## Get General Relationship Statistics
 
@@ -6326,7 +6326,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Returns absolute maximum deviation, RMS, whether signed deviation applies, and
 the signed maximum and minimum deviations.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-general-relationship-statistics) · [.NET](/api/dotnet/relationship-operations#get-general-relationship-statistics) · [Python](/api/python/relationship-operations#get-general-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-general-relationship-statistics)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-general-relationship-statistics) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-general-relationship-statistics) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-general-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-general-relationship-statistics)
 
 ## Get Points to Objects Relationship Statistics
 
@@ -6378,7 +6378,7 @@ candidate, sampled, rejected, used, and out-of-tolerance Point counts. The
 average output is present in SA 2026.1 even though ObjectiveSA's older contract
 does not expose it.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-points-to-objects-relationship-statistics) · [.NET](/api/dotnet/relationship-operations#get-points-to-objects-relationship-statistics) · [Python](/api/python/relationship-operations#get-points-to-objects-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-points-to-objects-relationship-statistics)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-points-to-objects-relationship-statistics) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-points-to-objects-relationship-statistics) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-points-to-objects-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-points-to-objects-relationship-statistics)
 
 ## Start/Stop Relationship Trapping
 
@@ -6421,7 +6421,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Starts or stops trapping for a Relationship and instrument. The exact default
 is `false`, which stops trapping.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#startstop-relationship-trapping) · [.NET](/api/dotnet/relationship-operations#startstop-relationship-trapping) · [Python](/api/python/relationship-operations#startstop-relationship-trapping) · [JavaScript and TypeScript](/api/javascript/relationship-operations#startstop-relationship-trapping)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/startstop-relationship-trapping) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/startstop-relationship-trapping) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/startstop-relationship-trapping) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/startstop-relationship-trapping)
 
 ## Get Point to Point Relationship Statistics
 
@@ -6467,7 +6467,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Returns X, Y, Z, and magnitude deltas together with the reporting Reference
 Frame.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-point-to-point-relationship-statistics) · [.NET](/api/dotnet/relationship-operations#get-point-to-point-relationship-statistics) · [Python](/api/python/relationship-operations#get-point-to-point-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-point-to-point-relationship-statistics)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-point-to-point-relationship-statistics) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-point-to-point-relationship-statistics) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-point-to-point-relationship-statistics) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-point-to-point-relationship-statistics)
 
 ## Set Group To Nominal Group View Zooming
 
@@ -6522,7 +6522,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Updates the display and proximity behavior of an existing Group-to-Nominal-
 Group Relationship. Briosa does not retain these settings outside SA.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming) · [.NET](/api/dotnet/relationship-operations#set-group-to-nominal-group-view-zooming) · [Python](/api/python/relationship-operations#set-group-to-nominal-group-view-zooming) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-group-to-nominal-group-view-zooming)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-group-to-nominal-group-view-zooming) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-group-to-nominal-group-view-zooming) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-group-to-nominal-group-view-zooming) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-group-to-nominal-group-view-zooming)
 
 ## Set Relationship Associated Data
 
@@ -6578,7 +6578,7 @@ Sets the SA-owned objects associated with a Relationship. Each list is
 independently optional so a caller can omit categories that should not be
 changed. Briosa forwards the supplied lists and does not retain a copy.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-relationship-associated-data) · [.NET](/api/dotnet/relationship-operations#set-relationship-associated-data) · [Python](/api/python/relationship-operations#set-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-relationship-associated-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-relationship-associated-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-relationship-associated-data) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-relationship-associated-data)
 
 ## Get Relationship Associated Data
 
@@ -6624,7 +6624,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Returns the Relationship type plus its individual Points, Point Groups, Point
 Clouds, and other associated objects.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-associated-data) · [.NET](/api/dotnet/relationship-operations#get-relationship-associated-data) · [Python](/api/python/relationship-operations#get-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-associated-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-associated-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-associated-data) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-associated-data)
 
 ## Set Points to Points Relationship Associated Data
 
@@ -6669,7 +6669,7 @@ Sets the nominal and actual Point lists associated with a Points-to-Points
 Relationship. Each list is optional, `Ignore Empty Arguments?` defaults to
 `true`, and Briosa does not manage the pairing or subsequent SA state.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/relationship-operations#set-points-to-points-relationship-associated-data) · [Python](/api/python/relationship-operations#set-points-to-points-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/relationship-operations#set-points-to-points-relationship-associated-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/set-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/set-points-to-points-relationship-associated-data) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/set-points-to-points-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/set-points-to-points-relationship-associated-data)
 
 ## Get Points to Points Relationship Associated Data
 
@@ -6712,7 +6712,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Returns the nominal and actual Point lists currently associated with the named
 Points-to-Points Relationship.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/relationship-operations#get-points-to-points-relationship-associated-data) · [Python](/api/python/relationship-operations#get-points-to-points-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-points-to-points-relationship-associated-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-points-to-points-relationship-associated-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-points-to-points-relationship-associated-data) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-points-to-points-relationship-associated-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-points-to-points-relationship-associated-data)
 
 ## Make Auto Filter Proximity Settings
 
@@ -6804,7 +6804,7 @@ cloud-thinning and 3D proximity settings. Thinning defaults to every fifth
 Point, with a minimum of `100` and maximum of `20000`; feature-specific filter
 settings default to disabled.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [.NET](/api/dotnet/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [Python](/api/python/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [JavaScript and TypeScript](/api/javascript/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-3d) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-3d) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-3d) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-3d)
 
 ## Auto Filter Clouds to Nominal Geometry 2D
 
@@ -6849,7 +6849,7 @@ thinning and proximity defaults, a separate geometry-extraction tolerance of
 `0.01`, and the SA 2026.1 `Use Feature Specific Filter Settings?` input with a
 default of `false`.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [.NET](/api/dotnet/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [Python](/api/python/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [JavaScript and TypeScript](/api/javascript/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-2d) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-2d) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-2d) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/auto-filter-clouds-to-nominal-geometry-2d)
 
 ## Auto Filter Points to Nominal Geometry 3D
 
@@ -6890,7 +6890,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Filters supplied Points against target Relationships using the exact 3D
 proximity settings. Briosa adds no Relationship or Point preflight.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [.NET](/api/dotnet/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [Python](/api/python/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [JavaScript and TypeScript](/api/javascript/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/auto-filter-points-to-nominal-geometry-3d) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/auto-filter-points-to-nominal-geometry-3d) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/auto-filter-points-to-nominal-geometry-3d) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/auto-filter-points-to-nominal-geometry-3d)
 
 ## Auto Filter Points/Groups/Clouds to Surface Faces
 
@@ -6944,7 +6944,7 @@ default, the output Cloud base name is `InspAutoFilteredCloud`, and Face IDs
 are used as suffixes. Briosa preserves the MP command's direct behavior without
 additional safeguards.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [.NET](/api/dotnet/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [Python](/api/python/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [JavaScript and TypeScript](/api/javascript/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/auto-filter-pointsgroupsclouds-to-surface-faces) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/auto-filter-pointsgroupsclouds-to-surface-faces) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/auto-filter-pointsgroupsclouds-to-surface-faces) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/auto-filter-pointsgroupsclouds-to-surface-faces)
 
 ## Extract Geometry From Point Clouds
 
@@ -6973,7 +6973,7 @@ Extracts geometry from a Point Cloud using existing seed Points and optional
 boundary Points. This operation was added after ObjectiveSA's SA 2024.1 target;
 the contract follows the complete exact SA 2026.1 SDK binding.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#extract-geometry-from-point-clouds) · [.NET](/api/dotnet/relationship-operations#extract-geometry-from-point-clouds) · [Python](/api/python/relationship-operations#extract-geometry-from-point-clouds) · [JavaScript and TypeScript](/api/javascript/relationship-operations#extract-geometry-from-point-clouds)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/extract-geometry-from-point-clouds) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/extract-geometry-from-point-clouds) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/extract-geometry-from-point-clouds) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/extract-geometry-from-point-clouds)
 
 ## Create Points to Objects Map
 
@@ -7017,7 +7017,7 @@ Creates a named SA lookup map between supplied Points or Point Groups and
 candidate objects using a proximity tolerance that defaults to `0`. Briosa
 does not retain, recreate, or otherwise manage the named map.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#create-points-to-objects-map) · [.NET](/api/dotnet/relationship-operations#create-points-to-objects-map) · [Python](/api/python/relationship-operations#create-points-to-objects-map) · [JavaScript and TypeScript](/api/javascript/relationship-operations#create-points-to-objects-map)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/create-points-to-objects-map) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/create-points-to-objects-map) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/create-points-to-objects-map) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/create-points-to-objects-map)
 
 ## Get Objects From Points to Objects Map (Point List)
 
@@ -7059,7 +7059,7 @@ Returns the objects associated with a supplied Point list in a named map. The
 installed prose describes an older singular-Point form; Briosa follows the
 exact SA 2026.1 MP identity and Point Name Ref List SDK binding.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [.NET](/api/dotnet/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [Python](/api/python/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-objects-from-points-to-objects-map-point-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-objects-from-points-to-objects-map-point-list) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-objects-from-points-to-objects-map-point-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-objects-from-points-to-objects-map-point-list)
 
 ## Compute Geometry Relationship Uncertainties
 
@@ -7103,7 +7103,7 @@ defaults to `false`, so Briosa does not show the results dialog by default. SA
 may make the Relationship dormant after the computation; Briosa exposes that
 native behavior without trying to restore or manage the Relationship state.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties) · [.NET](/api/dotnet/relationship-operations#compute-geometry-relationship-uncertainties) · [Python](/api/python/relationship-operations#compute-geometry-relationship-uncertainties) · [JavaScript and TypeScript](/api/javascript/relationship-operations#compute-geometry-relationship-uncertainties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/compute-geometry-relationship-uncertainties) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/compute-geometry-relationship-uncertainties) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/compute-geometry-relationship-uncertainties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/compute-geometry-relationship-uncertainties)
 
 ## Make Cloud to Swatch Relationship
 
@@ -7122,7 +7122,7 @@ and cardinal Point Group. Maximum radial, minimum axial, and maximum axial
 offsets default to `0.125`, `-0.125`, and `0.125`. ObjectiveSA does not provide
 an implementation, so licensed validation requires a dedicated Swatch fixture.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship) · [.NET](/api/dotnet/relationship-operations#make-cloud-to-swatch-relationship) · [Python](/api/python/relationship-operations#make-cloud-to-swatch-relationship) · [JavaScript and TypeScript](/api/javascript/relationship-operations#make-cloud-to-swatch-relationship)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/make-cloud-to-swatch-relationship) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/make-cloud-to-swatch-relationship) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/make-cloud-to-swatch-relationship) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/make-cloud-to-swatch-relationship)
 
 ## Get Geom Relationship Criteria Name List
 
@@ -7166,7 +7166,7 @@ Returns the criteria names currently available for a geometry Relationship.
 `Include All Criteria?` defaults to `false`. The exact SDK binding returns the
 complete result as a String Ref List.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list) · [.NET](/api/dotnet/relationship-operations#get-geom-relationship-criteria-name-list) · [Python](/api/python/relationship-operations#get-geom-relationship-criteria-name-list) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-geom-relationship-criteria-name-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria-name-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria-name-list) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria-name-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-geom-relationship-criteria-name-list)
 
 ## Get Relationship Status
 
@@ -7213,4 +7213,4 @@ Returns SA's raw `Dormant`, `Success`, `Measured`, `Failed`, and `Unmeasured`
 flags. Briosa preserves the five independent values rather than inventing a
 single status or assuming that the flags are mutually exclusive.
 
-**API References:** [gRPC](/api/grpc/relationship-operations#get-relationship-status) · [.NET](/api/dotnet/relationship-operations#get-relationship-status) · [Python](/api/python/relationship-operations#get-relationship-status) · [JavaScript and TypeScript](/api/javascript/relationship-operations#get-relationship-status)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/relationship-operations/get-relationship-status) · [.NET](/api/dotnet/sa-2026.1.0529.7/relationship-operations/get-relationship-status) · [Python](/api/python/sa-2026.1.0529.7/relationship-operations/get-relationship-status) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/relationship-operations/get-relationship-status)

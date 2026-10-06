@@ -1,9 +1,9 @@
 import React, {useEffect, useId, useRef, useState} from 'react';
 
 type Option = {value: string; label: string; badge?: string};
-type Props = {label: string; value: string; options: Option[]; onChange: (value: string) => void};
+type Props = {label: string; value: string; options: Option[]; placeholder?: string; onChange: (value: string) => void};
 
-export default function VersionSelect({label, value, options, onChange}: Props): React.JSX.Element {
+export default function VersionSelect({label, value, options, placeholder = 'Choose a Target', onChange}: Props): React.JSX.Element {
   const id = useId();
   const root = useRef<HTMLDivElement>(null);
   const button = useRef<HTMLButtonElement>(null);
@@ -64,7 +64,7 @@ export default function VersionSelect({label, value, options, onChange}: Props):
       aria-labelledby={`${id}-label ${id}-value`} aria-controls={open ? `${id}-list` : undefined}
       aria-activedescendant={open ? `${id}-option-${active}` : undefined}
       className="api-version-trigger" onKeyDown={keyDown} onClick={() => open ? setOpen(false) : expand()}>
-      <span id={`${id}-value`}>{selected ? `${selected.badge ? selected.badge + ' — ' : ''}${selected.label}` : 'Choose a Target'}</span>
+      <span id={`${id}-value`}>{selected ? `${selected.badge ? selected.badge + ' — ' : ''}${selected.label}` : placeholder}</span>
       <svg className="api-version-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
     </button>
     {open && <ul className="api-version-options" id={`${id}-list`} role="listbox" aria-labelledby={`${id}-label`}>

@@ -1017,7 +1017,7 @@ user, or computer information selected by `SystemString`. Date and time values
 accept the MP's optional formatting string. Because several choices can reveal
 user or license information, Briosa does not log the returned value.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-system-string) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-system-string) · [Python](/api/python/construction-operations-other-mp-types#make-a-system-string) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-system-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-system-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-system-string) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-system-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-system-string)
 
 ## Concatenate Strings
 
@@ -1245,7 +1245,7 @@ Prompts the operator to select a live collection. The operation fails when the
 selection is cancelled. A cancelled or timed-out RPC does not prove that the
 SpatialAnalyzer interaction stopped.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-name---runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-name---runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-name---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-name---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-name---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-name---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-name---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-name---runtime-select)
 
 ## Make a Collection Item Name from Strings
 
@@ -1332,7 +1332,7 @@ Queries the live SA tree for any matching item, including non-object items such
 as reports, charts, and annotations. The returned order is undefined and the
 list may be empty.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-item-name-reference-list---wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-item-name-reference-list---wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-item-name-reference-list---wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-item-name-reference-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-item-name-reference-list---wildcard-selection)
 
 ## Make a Collection Object Name from Strings
 
@@ -1416,7 +1416,7 @@ The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain:
 Prompts the operator to select one live object, optionally constrained by
 object type. Cancellation does not prove that the interaction stopped.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---runtime-select)
 
 ## Make a Collection Object Name - Ensure Unique
 
@@ -1465,7 +1465,7 @@ its first argument instead of declaring a separate return argument. Briosa
 therefore returns the post-execution value; that exact getter path requires
 licensed validation against this target.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name---ensure-unique)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---ensure-unique) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---ensure-unique) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---ensure-unique) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name---ensure-unique)
 
 ## Make a Collection Object Name Reference List- Runtime Select
 
@@ -1507,7 +1507,7 @@ Inputs are an optional empty `User Prompt` and `Object Type` defaulting to
 `Any`. The operation returns the operator-selected collection-object identities
 and retains the usual interactive cancellation caveat.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--runtime-select)
 
 ## Make a Collection Object Name Reference List- WildCard Selection
 
@@ -1550,7 +1550,7 @@ The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain:
 `*`; `Object Type` defaults to `Any`. The command returns matching live object
 identities in an undefined order.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name-reference-list--wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-reference-list--wildcard-selection)
 
 ## Make a Collection Object Name Ref List - By Type
 
@@ -1591,7 +1591,7 @@ The 2024 type choices omit `Enhanced Cloud`. Preserve the earlier choice domain:
 Requires `Collection` and accepts `Object Type` defaulting to `Any`. It returns
 matching live objects, possibly an empty list, in an undefined order.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type)
 
 ## Make a Collection Object Name Ref List - By Type and Color
 
@@ -1634,7 +1634,7 @@ Requires `Collection`; `Object Type` defaults to `Any` and `Object Color`
 defaults to red `(255, 0, 0)`, matching the MP editor. Only objects matching
 both filters are returned.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name-ref-list---by-type-and-color)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type-and-color) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type-and-color) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type-and-color) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list---by-type-and-color)
 
 ## Make a Collection Object Name Ref List
 
@@ -1781,7 +1781,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Collection Name` and returns all point-group object identities in
 that live collection. The result may be empty and its order is undefined.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list-from-all-groups-in-a-collection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-object-name-ref-list-from-all-groups-in-a-collection)
 
 ## Make a Collection Instrument Reference List
 
@@ -1893,7 +1893,7 @@ Requires the MP variable `Name` and returns its collection-instrument list.
 This is retained because it participates in MP state shared with automation
 solutions; Briosa does not cache or independently track that state.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable) · [.NET](/api/dotnet/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable) · [Python](/api/python/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#get-collection-instrument-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/get-collection-instrument-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/get-collection-instrument-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/get-collection-instrument-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/get-collection-instrument-ref-list-variable)
 
 ## Set Collection Instrument Ref List Variable
 
@@ -1933,7 +1933,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires the MP variable `Name` and a collection-instrument `Value`. It creates
 or replaces the MP variable in SpatialAnalyzer. Briosa does not retain a copy.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable) · [.NET](/api/dotnet/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable) · [Python](/api/python/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#set-collection-instrument-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/set-collection-instrument-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/set-collection-instrument-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/set-collection-instrument-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/set-collection-instrument-ref-list-variable)
 
 ## Add a Collection Instrument to a Ref List
 
@@ -2011,7 +2011,7 @@ and instrument wildcard criteria each default to `*`. It returns the updated
 list after adding matching live instruments. Retrieving the MP's mutated input
 argument requires exact-target validation.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection)
 
 ## Make a Collection Instrument Reference List- Runtime Select
 
@@ -2051,7 +2051,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 instrument identities. Cancellation does not prove the interaction stopped.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-instrument-reference-list--runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-reference-list--runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-reference-list--runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-reference-list--runtime-select)
 
 ## Make a Relationship Reference List- WildCard Selection
 
@@ -2097,7 +2097,7 @@ does not expose the MP's `Relationship Type Filter`, so the released server cont
 that filter and returns matching relationships across the MP's default type
 scope. This limitation is part of the public contract.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-relationship-reference-list--wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--wildcard-selection)
 
 ## Make a Relationship Reference List- Runtime Select
 
@@ -2140,7 +2140,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Accepts an optional empty `User Prompt`. The unavailable `Relationship Type
 Filter` is omitted, so the operator selects from the MP's default type scope.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-relationship-reference-list--runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-relationship-reference-list--runtime-select)
 
 ## Make an Event Reference List- WildCard Selection
 
@@ -2181,7 +2181,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Collection and event wildcard criteria default to `*`. Matching live event
 identities are returned in an undefined order.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-an-event-reference-list--wildcard-selection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-an-event-reference-list--wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-an-event-reference-list--wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-an-event-reference-list--wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-an-event-reference-list--wildcard-selection)
 
 ## Append two Relationship Ref Lists
 
@@ -2293,7 +2293,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 instrument identity.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-collection-instrument-id---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-id---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-id---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-id---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-collection-instrument-id---runtime-select)
 
 ## Make a Collection Machine ID from a Collection and an Integer
 
@@ -2368,7 +2368,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 Requires `Collection Name` and returns the live SA reports in that collection.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection) · [Python](/api/python/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-report-ref-list-from-a-collection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list-from-a-collection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list-from-a-collection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list-from-a-collection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list-from-a-collection)
 
 ## Make a Report Ref List - Runtime Select
 
@@ -2408,7 +2408,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Accepts an optional empty `User Prompt` and returns the operator-selected SA
 reports.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-report-ref-list---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-report-ref-list---runtime-select)
 
 ## Make a Picture Name Ref List
 
@@ -2482,7 +2482,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Accepts an optional empty `User Prompt` and returns the operator-selected
 picture identities.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select) · [Python](/api/python/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-picture-name-ref-list---runtime-select)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-picture-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-picture-name-ref-list---runtime-select) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-picture-name-ref-list---runtime-select) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-picture-name-ref-list---runtime-select)
 
 ## Make a Report Items Ref List
 
@@ -2568,7 +2568,7 @@ Uses SpatialAnalyzer's Fixed XYZ transform convention. Briosa intentionally
 preserves all six MP defaults and does not substitute a client-side matrix
 calculation.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz) · [Python](/api/python/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-transform-from-doubles-fixed-xyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-fixed-xyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-fixed-xyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-fixed-xyz)
 
 ## Make a Transform from Doubles (Euler Parameters)
 
@@ -2620,7 +2620,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Uses SpatialAnalyzer's Euler-parameter convention and retains the exact MP
 defaults, including zero for all four Euler parameters.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters) · [.NET](/api/dotnet/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters) · [Python](/api/python/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#make-a-transform-from-doubles-euler-parameters)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-euler-parameters) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-euler-parameters) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-euler-parameters) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/make-a-transform-from-doubles-euler-parameters)
 
 ## Make a Transform from Doubles (Matrix Elements)
 
@@ -2750,7 +2750,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Requires `Object Name` in the MP's `Any` object domain and returns the object's
 live transform in working coordinates using Fixed XYZ semantics.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz) · [Python](/api/python/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#get-working-transform-of-object-fixed-xyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/get-working-transform-of-object-fixed-xyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/get-working-transform-of-object-fixed-xyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/get-working-transform-of-object-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/get-working-transform-of-object-fixed-xyz)
 
 ## Invert Transform
 
@@ -2790,7 +2790,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Transform` and returns `Inverse Transform` using SpatialAnalyzer's
 transform semantics.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#invert-transform) · [.NET](/api/dotnet/construction-operations-other-mp-types#invert-transform) · [Python](/api/python/construction-operations-other-mp-types#invert-transform) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#invert-transform)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/invert-transform) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/invert-transform) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/invert-transform) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/invert-transform)
 
 ## Decompose Transform into Doubles (Fixed XYZ)
 
@@ -2835,7 +2835,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Input Transform` and returns `X`, `Y`, `Z`, `Rx (Roll)`, `Ry
 (Pitch)`, and `Rz (Yaw)` as one typed result.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-doubles-fixed-xyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-fixed-xyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-fixed-xyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-fixed-xyz)
 
 ## Decompose Transform into Vectors (Fixed XYZ)
 
@@ -2876,7 +2876,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Input Transform` and returns `Position in Working` and `Orientation
 in Working` vectors.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-vectors-fixed-xyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-fixed-xyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-fixed-xyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-fixed-xyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-fixed-xyz)
 
 ## Decompose Transform into Vectors (Origin and Axes)
 
@@ -2919,7 +2919,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Transform` and returns its `Origin`, `X Axis`, `Y Axis`, and `Z Axis`
 vectors.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-vectors-origin-and-axes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-origin-and-axes) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-origin-and-axes) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-origin-and-axes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-vectors-origin-and-axes)
 
 ## Decompose Transform into Doubles (Matrix Elements)
 
@@ -3015,7 +3015,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Input World Transform Operator` and returns world-coordinate `X`,
 `Y`, `Z`, `Rx (Roll)`, `Ry (Pitch)`, `Rz (Yaw)`, and `Scale`.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [Python](/api/python/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-doubles-fixed-xyz-in-world) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-doubles-fixed-xyz-in-world)
 
 ## Decompose Transform into Doubles (Euler XYZ)
 
@@ -3060,7 +3060,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns `X`, `Y`, `Z`, `Euler Rx`, `Euler Ry`, and `Euler Rz` from the required
 input transform.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-xyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-xyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-xyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-xyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-xyz)
 
 ## Decompose Transform into Doubles (Euler ZYX)
 
@@ -3105,7 +3105,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns `X`, `Y`, `Z`, `Euler Rz`, `Euler Ry`, and `Euler Rx` from the required
 input transform.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyx)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyx) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyx) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyx) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyx)
 
 ## Decompose Transform into Doubles (Euler ZYZ)
 
@@ -3151,7 +3151,7 @@ Returns `X`, `Y`, `Z`, first `Euler Rz`, `Euler Ry`, and second `Euler Rz`.
 The API names the repeated outputs `first_rz` and `second_rz` without changing
 their MP order.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zyz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zyz)
 
 ## Decompose Transform into Doubles (Euler ZXZ)
 
@@ -3196,7 +3196,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns `X`, `Y`, `Z`, first `Euler Rz`, `Euler Rx`, and second `Euler Rz`.
 The repeated MP output names are disambiguated without changing their order.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz) · [Python](/api/python/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-transform-into-doubles-euler-zxz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zxz) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zxz) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zxz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-transform-into-doubles-euler-zxz)
 
 ## Decompose World Transform Operator into Vectors (Fixed XYZ in World)
 
@@ -3238,7 +3238,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Requires `Input World Transform Operator` and returns `Position in Working`,
 `Orientation in Working`, and `Scale`, preserving the MP's exact output labels.
 
-**API References:** [gRPC](/api/grpc/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [.NET](/api/dotnet/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [Python](/api/python/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-vectors-fixed-xyz-in-world) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/decompose-world-transform-operator-into-vectors-fixed-xyz-in-world)
 
 ## Split String into Two Strings
 
@@ -3437,8 +3437,8 @@ first release remains local-only.
 ## API References
 
 The 34 released server contracts are published together in the
-[gRPC](/api/grpc/construction-operations-other-mp-types),
-[.NET](/api/dotnet/construction-operations-other-mp-types),
-[Python](/api/python/construction-operations-other-mp-types), and
-[JavaScript/TypeScript](/api/javascript/construction-operations-other-mp-types)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types),
+[.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types),
+[Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types), and
+[JavaScript/TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types)
 references.

@@ -27,14 +27,14 @@ duplicating client usage guidance.
 
 ## Draft and Release API Contracts
 
-Current defaults are Server **0.9.0** and clients **0.4.0**. Servers 0.9.1 and 0.9.2 are schema-identical to 0.9.0 and have no separate API snapshot. Working `api/` content is not published until snapshotted. Within each product version, existing routes describe SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. Old 0.5.1 and 0.1.0 snapshots remain at explicit version paths with historical context.
+Current defaults are Server **0.9.0** and clients **0.4.0**. Servers 0.9.1 and 0.9.2 are schema-identical to 0.9.0 and have no separate API snapshot. Working `api/` content is not published until snapshotted. Within each product version, existing source describes SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. The published reference for each SA target, such as `/api/grpc/sa-2024.1.0508.5/`, shows the newest release that documents that target. Each method's history page, such as `/api/grpc/analysis-operations/angle-between-line-and-plane`, shows every distinct contract that earlier releases published. Earlier releases keep their guide and group pages at `/api/<family>/sa-<target>/<release>/`. Release-qualified method addresses redirect to the current page or to the matching history revision.
 
 ## Release Checklist
 
 1. Verify published GitHub releases and package registries for both exact targets.
 2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
 3. Update guides and every catalog representation without promoting validation claims.
-4. Cut each product snapshot with its Docusaurus version command; update defaults and preserve historical API links.
+4. Cut each product snapshot with its Docusaurus version command and update defaults. Do not add the new release to `compatibilityAddresses` in `plugins/api-reference/targets.json`; current references already have release-independent addresses.
 5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
 6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
 

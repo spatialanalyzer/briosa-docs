@@ -1654,7 +1654,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#angle-between-line-and-plane) · [.NET](/api/dotnet/analysis-operations#angle-between-line-and-plane) · [Python](/api/python/analysis-operations#angle-between-line-and-plane) · [JavaScript and TypeScript](/api/javascript/analysis-operations#angle-between-line-and-plane)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/angle-between-line-and-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/angle-between-line-and-plane) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/angle-between-line-and-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/angle-between-line-and-plane)
 
 
 ## Angle Between Two Lines
@@ -1719,7 +1719,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#angle-between-two-lines) · [.NET](/api/dotnet/analysis-operations#angle-between-two-lines) · [Python](/api/python/analysis-operations#angle-between-two-lines) · [JavaScript and TypeScript](/api/javascript/analysis-operations#angle-between-two-lines)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/angle-between-two-lines) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/angle-between-two-lines) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/angle-between-two-lines) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/angle-between-two-lines)
 
 
 ## Angle Between Two Planes' normals
@@ -1784,7 +1784,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#angle-between-two-planes-normals) · [.NET](/api/dotnet/analysis-operations#angle-between-two-planes-normals) · [Python](/api/python/analysis-operations#angle-between-two-planes-normals) · [JavaScript and TypeScript](/api/javascript/analysis-operations#angle-between-two-planes-normals)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/angle-between-two-planes-normals) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/angle-between-two-planes-normals) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/angle-between-two-planes-normals) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/angle-between-two-planes-normals)
 
 
 ## Append to String Ref List
@@ -1940,7 +1940,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#best-fit-transformation---group-to-group) · [.NET](/api/dotnet/analysis-operations#best-fit-transformation---group-to-group) · [Python](/api/python/analysis-operations#best-fit-transformation---group-to-group) · [JavaScript and TypeScript](/api/javascript/analysis-operations#best-fit-transformation---group-to-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/best-fit-transformation---group-to-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/best-fit-transformation---group-to-group) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/best-fit-transformation---group-to-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/best-fit-transformation---group-to-group)
 
 
 ## Compute Group to Group Orientation (Rx,Ry,Rz)
@@ -2005,7 +2005,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#compute-group-to-group-orientation-rxryrz) · [.NET](/api/dotnet/analysis-operations#compute-group-to-group-orientation-rxryrz) · [Python](/api/python/analysis-operations#compute-group-to-group-orientation-rxryrz) · [JavaScript and TypeScript](/api/javascript/analysis-operations#compute-group-to-group-orientation-rxryrz)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/compute-group-to-group-orientation-rxryrz) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/compute-group-to-group-orientation-rxryrz) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/compute-group-to-group-orientation-rxryrz) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/compute-group-to-group-orientation-rxryrz)
 
 
 ## Coordinate
@@ -2111,7 +2111,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#create-point-uncertainty-cloud-point-sets) · [.NET](/api/dotnet/analysis-operations#create-point-uncertainty-cloud-point-sets) · [Python](/api/python/analysis-operations#create-point-uncertainty-cloud-point-sets) · [JavaScript and TypeScript](/api/javascript/analysis-operations#create-point-uncertainty-cloud-point-sets)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-cloud-point-sets) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-cloud-point-sets) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-cloud-point-sets) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-cloud-point-sets)
 
 
 ## Create Point Uncertainty Fields
@@ -2168,7 +2168,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#create-point-uncertainty-fields) · [.NET](/api/dotnet/analysis-operations#create-point-uncertainty-fields) · [Python](/api/python/analysis-operations#create-point-uncertainty-fields) · [JavaScript and TypeScript](/api/javascript/analysis-operations#create-point-uncertainty-fields)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-fields) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-fields) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-fields) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/create-point-uncertainty-fields)
 
 
 ## Fit Geometry to Point Group
@@ -2239,7 +2239,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#fit-geometry-to-point-group) · [.NET](/api/dotnet/analysis-operations#fit-geometry-to-point-group) · [Python](/api/python/analysis-operations#fit-geometry-to-point-group) · [JavaScript and TypeScript](/api/javascript/analysis-operations#fit-geometry-to-point-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group)
 
 
 ## Fit Geometry to Point Group Projected to Plane
@@ -2312,7 +2312,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [.NET](/api/dotnet/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [Python](/api/python/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [JavaScript and TypeScript](/api/javascript/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group-projected-to-plane) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group-projected-to-plane) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group-projected-to-plane) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-point-group-projected-to-plane)
 
 
 ## Fit Geometry to Points
@@ -2383,7 +2383,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#fit-geometry-to-points) · [.NET](/api/dotnet/analysis-operations#fit-geometry-to-points) · [Python](/api/python/analysis-operations#fit-geometry-to-points) · [JavaScript and TypeScript](/api/javascript/analysis-operations#fit-geometry-to-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-points) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/fit-geometry-to-points)
 
 
 ## Get B-Spline Properties
@@ -2452,7 +2452,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-b-spline-properties) · [.NET](/api/dotnet/analysis-operations#get-b-spline-properties) · [Python](/api/python/analysis-operations#get-b-spline-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-b-spline-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-b-spline-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-b-spline-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-b-spline-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-b-spline-properties)
 
 
 ## Get Circle Properties
@@ -2517,7 +2517,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-circle-properties) · [.NET](/api/dotnet/analysis-operations#get-circle-properties) · [Python](/api/python/analysis-operations#get-circle-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-circle-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-circle-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-circle-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-circle-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-circle-properties)
 
 
 ## Get Cone Properties
@@ -2587,7 +2587,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-cone-properties) · [.NET](/api/dotnet/analysis-operations#get-cone-properties) · [Python](/api/python/analysis-operations#get-cone-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-cone-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-cone-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-cone-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-cone-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-cone-properties)
 
 
 ## Get Coordinate for i-th Point in Point Set
@@ -2650,7 +2650,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [.NET](/api/dotnet/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [Python](/api/python/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-coordinate-for-i-th-point-in-point-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-coordinate-for-i-th-point-in-point-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-coordinate-for-i-th-point-in-point-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-coordinate-for-i-th-point-in-point-set)
 
 
 ## Get Cylinder Properties
@@ -2729,7 +2729,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-cylinder-properties) · [.NET](/api/dotnet/analysis-operations#get-cylinder-properties) · [Python](/api/python/analysis-operations#get-cylinder-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-cylinder-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-cylinder-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-cylinder-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-cylinder-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-cylinder-properties)
 
 
 ## Get Double List Max/Min
@@ -2851,7 +2851,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-ellipse-properties) · [.NET](/api/dotnet/analysis-operations#get-ellipse-properties) · [Python](/api/python/analysis-operations#get-ellipse-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-ellipse-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-ellipse-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-ellipse-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-ellipse-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-ellipse-properties)
 
 
 ## Get Euler Parameters for Frame
@@ -2922,7 +2922,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-euler-parameters-for-frame) · [.NET](/api/dotnet/analysis-operations#get-euler-parameters-for-frame) · [Python](/api/python/analysis-operations#get-euler-parameters-for-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-euler-parameters-for-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-frame)
 
 
 ## Get Euler Parameters for i-th Frame in Frame Set
@@ -2995,7 +2995,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [Python](/api/python/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-i-th-frame-in-frame-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-euler-parameters-for-i-th-frame-in-frame-set)
 
 
 ## Get i-th Collection Name
@@ -3052,7 +3052,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Implemented and callable for this exact target.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-i-th-collection-name) · [.NET](/api/dotnet/analysis-operations#get-i-th-collection-name) · [Python](/api/python/analysis-operations#get-i-th-collection-name) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-i-th-collection-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name)
 
 
 ## Get i-th Instrument From Collection Instrument Ref List
@@ -3355,7 +3355,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-i-th-point-from-group) · [.NET](/api/dotnet/analysis-operations#get-i-th-point-from-group) · [Python](/api/python/analysis-operations#get-i-th-point-from-group) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-i-th-point-from-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-i-th-point-from-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-i-th-point-from-group) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-i-th-point-from-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-i-th-point-from-group)
 
 
 ## Get i-th Point Name From Point Name Ref List
@@ -3823,7 +3823,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-line-properties) · [.NET](/api/dotnet/analysis-operations#get-line-properties) · [Python](/api/python/analysis-operations#get-line-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-line-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-line-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-line-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-line-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-line-properties)
 
 
 ## Get Measurement Auxiliary Data
@@ -3884,7 +3884,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-measurement-auxiliary-data) · [.NET](/api/dotnet/analysis-operations#get-measurement-auxiliary-data) · [Python](/api/python/analysis-operations#get-measurement-auxiliary-data) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-measurement-auxiliary-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-measurement-auxiliary-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-measurement-auxiliary-data) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-measurement-auxiliary-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-measurement-auxiliary-data)
 
 
 ## Get Measurement Info Data
@@ -3941,7 +3941,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-measurement-info-data) · [.NET](/api/dotnet/analysis-operations#get-measurement-info-data) · [Python](/api/python/analysis-operations#get-measurement-info-data) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-measurement-info-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-measurement-info-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-measurement-info-data) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-measurement-info-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-measurement-info-data)
 
 
 ## Get Measurement Weather Data
@@ -4002,7 +4002,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-measurement-weather-data) · [.NET](/api/dotnet/analysis-operations#get-measurement-weather-data) · [Python](/api/python/analysis-operations#get-measurement-weather-data) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-measurement-weather-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-measurement-weather-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-measurement-weather-data) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-measurement-weather-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-measurement-weather-data)
 
 
 ## Get Number of characters in a string
@@ -4112,7 +4112,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Implemented and callable for this exact target.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-number-of-collections) · [.NET](/api/dotnet/analysis-operations#get-number-of-collections) · [Python](/api/python/analysis-operations#get-number-of-collections) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-number-of-collections)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-collections) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-number-of-collections) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-number-of-collections) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-number-of-collections)
 
 
 ## Get Number of Frames In Frame Set
@@ -4171,7 +4171,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-number-of-frames-in-frame-set) · [.NET](/api/dotnet/analysis-operations#get-number-of-frames-in-frame-set) · [Python](/api/python/analysis-operations#get-number-of-frames-in-frame-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-number-of-frames-in-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-frames-in-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-number-of-frames-in-frame-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-number-of-frames-in-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-number-of-frames-in-frame-set)
 
 
 ## Get Number of Instruments in Collection Instrument Ref List
@@ -4450,7 +4450,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-number-of-points-in-group) · [.NET](/api/dotnet/analysis-operations#get-number-of-points-in-group) · [Python](/api/python/analysis-operations#get-number-of-points-in-group) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-number-of-points-in-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-group) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-group)
 
 
 ## Get Number of Points In Point Set
@@ -4509,7 +4509,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-number-of-points-in-point-set) · [.NET](/api/dotnet/analysis-operations#get-number-of-points-in-point-set) · [Python](/api/python/analysis-operations#get-number-of-points-in-point-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-number-of-points-in-point-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-point-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-point-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-point-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-number-of-points-in-point-set)
 
 
 ## Get Number of Reports in Report Ref List
@@ -4678,7 +4678,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-object-reporting-frame) · [.NET](/api/dotnet/analysis-operations#get-object-reporting-frame) · [Python](/api/python/analysis-operations#get-object-reporting-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-object-reporting-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-object-reporting-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-object-reporting-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-object-reporting-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-object-reporting-frame)
 
 
 ## Get Plane Properties
@@ -4741,7 +4741,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-plane-properties) · [.NET](/api/dotnet/analysis-operations#get-plane-properties) · [Python](/api/python/analysis-operations#get-plane-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-plane-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-plane-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-plane-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-plane-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-plane-properties)
 
 
 ## Get Point Coordinate
@@ -4804,7 +4804,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-coordinate) · [.NET](/api/dotnet/analysis-operations#get-point-coordinate) · [Python](/api/python/analysis-operations#get-point-coordinate) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-coordinate)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-coordinate) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-coordinate) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-coordinate) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-coordinate)
 
 
 ## Get Point Coordinate (Cylindrical)
@@ -4865,7 +4865,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-coordinate-cylindrical) · [.NET](/api/dotnet/analysis-operations#get-point-coordinate-cylindrical) · [Python](/api/python/analysis-operations#get-point-coordinate-cylindrical) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-coordinate-cylindrical)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-cylindrical) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-cylindrical) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-cylindrical) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-cylindrical)
 
 
 ## Get Point Coordinate (Polar)
@@ -4926,7 +4926,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-coordinate-polar) · [.NET](/api/dotnet/analysis-operations#get-point-coordinate-polar) · [Python](/api/python/analysis-operations#get-point-coordinate-polar) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-coordinate-polar)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-polar) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-polar) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-polar) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-coordinate-polar)
 
 
 ## Get Point Properties
@@ -4997,7 +4997,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-properties) · [.NET](/api/dotnet/analysis-operations#get-point-properties) · [Python](/api/python/analysis-operations#get-point-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-properties)
 
 
 ## Get Point To Line Distance
@@ -5066,7 +5066,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-to-line-distance) · [.NET](/api/dotnet/analysis-operations#get-point-to-line-distance) · [Python](/api/python/analysis-operations#get-point-to-line-distance) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-to-line-distance)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-to-line-distance) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-to-line-distance) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-to-line-distance) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-to-line-distance)
 
 
 ## Get Point To Point Distance
@@ -5133,7 +5133,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-to-point-distance) · [.NET](/api/dotnet/analysis-operations#get-point-to-point-distance) · [Python](/api/python/analysis-operations#get-point-to-point-distance) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-to-point-distance)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-to-point-distance) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-to-point-distance) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-to-point-distance) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-to-point-distance)
 
 
 ## Get Point Tolerance
@@ -5222,7 +5222,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-point-tolerance) · [.NET](/api/dotnet/analysis-operations#get-point-tolerance) · [Python](/api/python/analysis-operations#get-point-tolerance) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-point-tolerance)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-point-tolerance) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-point-tolerance) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-point-tolerance) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-point-tolerance)
 
 
 ## Get Slot Properties
@@ -5295,7 +5295,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-slot-properties) · [.NET](/api/dotnet/analysis-operations#get-slot-properties) · [Python](/api/python/analysis-operations#get-slot-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-slot-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-slot-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-slot-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-slot-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-slot-properties)
 
 
 ## Get Sphere Properties
@@ -5358,7 +5358,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-sphere-properties) · [.NET](/api/dotnet/analysis-operations#get-sphere-properties) · [Python](/api/python/analysis-operations#get-sphere-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-sphere-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-sphere-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-sphere-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-sphere-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-sphere-properties)
 
 
 ## Get Surface Physical Stats
@@ -5419,7 +5419,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-surface-physical-stats) · [.NET](/api/dotnet/analysis-operations#get-surface-physical-stats) · [Python](/api/python/analysis-operations#get-surface-physical-stats) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-surface-physical-stats)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-surface-physical-stats) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-surface-physical-stats) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-surface-physical-stats) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-surface-physical-stats)
 
 
 ## Get Timestamp for i-th Frame in Frame Set
@@ -5480,7 +5480,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [Python](/api/python/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-frame-in-frame-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-frame-in-frame-set)
 
 
 ## Get Timestamp for i-th Point in Point Set
@@ -5541,7 +5541,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [.NET](/api/dotnet/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [Python](/api/python/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-point-in-point-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-point-in-point-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-point-in-point-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-timestamp-for-i-th-point-in-point-set)
 
 
 ## Get Torus Properties
@@ -5606,7 +5606,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-torus-properties) · [.NET](/api/dotnet/analysis-operations#get-torus-properties) · [Python](/api/python/analysis-operations#get-torus-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-torus-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-torus-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-torus-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-torus-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-torus-properties)
 
 
 ## Get Transform for i-th Frame in Frame Set
@@ -5667,7 +5667,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [Python](/api/python/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/get-transform-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/get-transform-for-i-th-frame-in-frame-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/get-transform-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/get-transform-for-i-th-frame-in-frame-set)
 
 
 ## Group To Surface Fit
@@ -5738,7 +5738,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#group-to-surface-fit) · [.NET](/api/dotnet/analysis-operations#group-to-surface-fit) · [Python](/api/python/analysis-operations#group-to-surface-fit) · [JavaScript and TypeScript](/api/javascript/analysis-operations#group-to-surface-fit)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/group-to-surface-fit) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/group-to-surface-fit) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/group-to-surface-fit) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/group-to-surface-fit)
 
 
 ## Import Geometry Fit Profiles
@@ -5795,7 +5795,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#import-geometry-fit-profiles) · [.NET](/api/dotnet/analysis-operations#import-geometry-fit-profiles) · [Python](/api/python/analysis-operations#import-geometry-fit-profiles) · [JavaScript and TypeScript](/api/javascript/analysis-operations#import-geometry-fit-profiles)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/import-geometry-fit-profiles) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/import-geometry-fit-profiles) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/import-geometry-fit-profiles) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/import-geometry-fit-profiles)
 
 
 ## Is Object of Type
@@ -5856,7 +5856,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#is-object-of-type) · [.NET](/api/dotnet/analysis-operations#is-object-of-type) · [Python](/api/python/analysis-operations#is-object-of-type) · [JavaScript and TypeScript](/api/javascript/analysis-operations#is-object-of-type)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/is-object-of-type) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/is-object-of-type) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/is-object-of-type) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/is-object-of-type)
 
 
 ## Make Circle Fit Profile
@@ -5933,7 +5933,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-circle-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-circle-fit-profile) · [Python](/api/python/analysis-operations#make-circle-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-circle-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-circle-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-circle-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-circle-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-circle-fit-profile)
 
 
 ## Make Cone Fit Profile
@@ -6004,7 +6004,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-cone-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-cone-fit-profile) · [Python](/api/python/analysis-operations#make-cone-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-cone-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-cone-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-cone-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-cone-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-cone-fit-profile)
 
 
 ## Make Cylinder Fit Profile
@@ -6084,7 +6084,7 @@ The 2024 signature omits `Constrain to Nominal Axis?`, `Constrain to Nominal Ori
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-cylinder-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-cylinder-fit-profile) · [Python](/api/python/analysis-operations#make-cylinder-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-cylinder-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-cylinder-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-cylinder-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-cylinder-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-cylinder-fit-profile)
 
 
 ## Make Ellipse Fit Profile
@@ -6161,7 +6161,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-ellipse-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-ellipse-fit-profile) · [Python](/api/python/analysis-operations#make-ellipse-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-ellipse-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-ellipse-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-ellipse-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-ellipse-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-ellipse-fit-profile)
 
 
 ## Make Line Fit Profile
@@ -6226,7 +6226,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-line-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-line-fit-profile) · [Python](/api/python/analysis-operations#make-line-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-line-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-line-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-line-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-line-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-line-fit-profile)
 
 
 ## Make Outlier Rejection Options
@@ -6358,7 +6358,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-paraboloid-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-paraboloid-fit-profile) · [Python](/api/python/analysis-operations#make-paraboloid-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-paraboloid-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-paraboloid-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-paraboloid-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-paraboloid-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-paraboloid-fit-profile)
 
 
 ## Make Plane Fit Profile
@@ -6427,7 +6427,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-plane-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-plane-fit-profile) · [Python](/api/python/analysis-operations#make-plane-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-plane-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-plane-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-plane-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-plane-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-plane-fit-profile)
 
 
 ## Make Relationship Sigmoidal Gap Fit Constraints
@@ -6670,7 +6670,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-slot-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-slot-fit-profile) · [Python](/api/python/analysis-operations#make-slot-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-slot-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-slot-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-slot-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-slot-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-slot-fit-profile)
 
 
 ## Make Sphere Fit Profile
@@ -6737,7 +6737,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#make-sphere-fit-profile) · [.NET](/api/dotnet/analysis-operations#make-sphere-fit-profile) · [Python](/api/python/analysis-operations#make-sphere-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#make-sphere-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/make-sphere-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/make-sphere-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/make-sphere-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/make-sphere-fit-profile)
 
 
 ## Make Symmetric Outlier Rejection Options
@@ -6918,7 +6918,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#mushroom-target-hole-inspection) · [.NET](/api/dotnet/analysis-operations#mushroom-target-hole-inspection) · [Python](/api/python/analysis-operations#mushroom-target-hole-inspection) · [JavaScript and TypeScript](/api/javascript/analysis-operations#mushroom-target-hole-inspection)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/mushroom-target-hole-inspection) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/mushroom-target-hole-inspection) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/mushroom-target-hole-inspection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/mushroom-target-hole-inspection)
 
 
 ## Patch Normal Shift - Hole / Pin
@@ -6981,7 +6981,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#patch-normal-shift---hole--pin) · [.NET](/api/dotnet/analysis-operations#patch-normal-shift---hole--pin) · [Python](/api/python/analysis-operations#patch-normal-shift---hole--pin) · [JavaScript and TypeScript](/api/javascript/analysis-operations#patch-normal-shift---hole--pin)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---hole--pin) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---hole--pin) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---hole--pin) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---hole--pin)
 
 
 ## Patch Normal Shift - Point
@@ -7044,7 +7044,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#patch-normal-shift---point) · [.NET](/api/dotnet/analysis-operations#patch-normal-shift---point) · [Python](/api/python/analysis-operations#patch-normal-shift---point) · [JavaScript and TypeScript](/api/javascript/analysis-operations#patch-normal-shift---point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---point) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---point) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/patch-normal-shift---point)
 
 
 ## Query Clouds to Objects
@@ -7119,7 +7119,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-clouds-to-objects) · [.NET](/api/dotnet/analysis-operations#query-clouds-to-objects) · [Python](/api/python/analysis-operations#query-clouds-to-objects) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-clouds-to-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-clouds-to-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-clouds-to-objects) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-clouds-to-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-clouds-to-objects)
 
 
 ## Query Clouds to Surface
@@ -7194,7 +7194,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-clouds-to-surface) · [.NET](/api/dotnet/analysis-operations#query-clouds-to-surface) · [Python](/api/python/analysis-operations#query-clouds-to-surface) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-clouds-to-surface)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-clouds-to-surface) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-clouds-to-surface) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-clouds-to-surface) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-clouds-to-surface)
 
 
 ## Query Frame to Frame
@@ -7265,7 +7265,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-frame-to-frame) · [.NET](/api/dotnet/analysis-operations#query-frame-to-frame) · [Python](/api/python/analysis-operations#query-frame-to-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-frame-to-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-frame-to-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-frame-to-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-frame-to-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-frame-to-frame)
 
 
 ## Query Groups to Objects
@@ -7342,7 +7342,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-groups-to-objects) · [.NET](/api/dotnet/analysis-operations#query-groups-to-objects) · [Python](/api/python/analysis-operations#query-groups-to-objects) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-groups-to-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-groups-to-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-groups-to-objects) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-groups-to-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-groups-to-objects)
 
 
 ## Query Point to Objects
@@ -7411,7 +7411,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-point-to-objects) · [.NET](/api/dotnet/analysis-operations#query-point-to-objects) · [Python](/api/python/analysis-operations#query-point-to-objects) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-point-to-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-point-to-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-point-to-objects) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-point-to-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-point-to-objects)
 
 
 ## Query Point to Point Along Curve
@@ -7474,7 +7474,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-point-to-point-along-curve) · [.NET](/api/dotnet/analysis-operations#query-point-to-point-along-curve) · [Python](/api/python/analysis-operations#query-point-to-point-along-curve) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-point-to-point-along-curve)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-point-to-point-along-curve) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-point-to-point-along-curve) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-point-to-point-along-curve) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-point-to-point-along-curve)
 
 
 ## Query Points to Circle
@@ -7543,7 +7543,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-points-to-circle) · [.NET](/api/dotnet/analysis-operations#query-points-to-circle) · [Python](/api/python/analysis-operations#query-points-to-circle) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-points-to-circle)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-points-to-circle) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-points-to-circle) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-points-to-circle) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-points-to-circle)
 
 
 ## Query Points to Objects
@@ -7620,7 +7620,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-points-to-objects) · [.NET](/api/dotnet/analysis-operations#query-points-to-objects) · [Python](/api/python/analysis-operations#query-points-to-objects) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-points-to-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-points-to-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-points-to-objects) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-points-to-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-points-to-objects)
 
 
 ## Query Points to Single Point
@@ -7679,7 +7679,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#query-points-to-single-point) · [.NET](/api/dotnet/analysis-operations#query-points-to-single-point) · [Python](/api/python/analysis-operations#query-points-to-single-point) · [JavaScript and TypeScript](/api/javascript/analysis-operations#query-points-to-single-point)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/query-points-to-single-point) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/query-points-to-single-point) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/query-points-to-single-point) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/query-points-to-single-point)
 
 
 ## Re-Compute Calculated Items
@@ -7739,7 +7739,7 @@ The 2024 signature has no `Refresh Filtered Cloud Data?` input. Retain the opera
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#re-compute-calculated-items) · [.NET](/api/dotnet/analysis-operations#re-compute-calculated-items) · [Python](/api/python/analysis-operations#re-compute-calculated-items) · [JavaScript and TypeScript](/api/javascript/analysis-operations#re-compute-calculated-items)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/re-compute-calculated-items) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/re-compute-calculated-items) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/re-compute-calculated-items) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/re-compute-calculated-items)
 
 
 ## Remove i-th Object From Collection Object Name Ref List
@@ -7967,7 +7967,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [.NET](/api/dotnet/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [Python](/api/python/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [JavaScript and TypeScript](/api/javascript/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-inter-point-distance-to-reference-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-inter-point-distance-to-reference-points) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-inter-point-distance-to-reference-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-inter-point-distance-to-reference-points)
 
 
 ## Rename points based on proximity to reference points
@@ -8032,7 +8032,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [.NET](/api/dotnet/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [Python](/api/python/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [JavaScript and TypeScript](/api/javascript/analysis-operations#rename-points-based-on-proximity-to-reference-points)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-proximity-to-reference-points) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-proximity-to-reference-points) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-proximity-to-reference-points) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/rename-points-based-on-proximity-to-reference-points)
 
 
 ## Reverse B-Splines
@@ -8087,7 +8087,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#reverse-b-splines) · [.NET](/api/dotnet/analysis-operations#reverse-b-splines) · [Python](/api/python/analysis-operations#reverse-b-splines) · [JavaScript and TypeScript](/api/javascript/analysis-operations#reverse-b-splines)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/reverse-b-splines) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/reverse-b-splines) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/reverse-b-splines) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/reverse-b-splines)
 
 
 ## Reverse Plane Normals
@@ -8142,7 +8142,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#reverse-plane-normals) · [.NET](/api/dotnet/analysis-operations#reverse-plane-normals) · [Python](/api/python/analysis-operations#reverse-plane-normals) · [JavaScript and TypeScript](/api/javascript/analysis-operations#reverse-plane-normals)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/reverse-plane-normals) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/reverse-plane-normals) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/reverse-plane-normals) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/reverse-plane-normals)
 
 
 ## Reverse Surface Normals
@@ -8197,7 +8197,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#reverse-surface-normals) · [.NET](/api/dotnet/analysis-operations#reverse-surface-normals) · [Python](/api/python/analysis-operations#reverse-surface-normals) · [JavaScript and TypeScript](/api/javascript/analysis-operations#reverse-surface-normals)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/reverse-surface-normals) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/reverse-surface-normals) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/reverse-surface-normals) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/reverse-surface-normals)
 
 
 ## Set Circle Properties
@@ -8260,7 +8260,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-circle-properties) · [.NET](/api/dotnet/analysis-operations#set-circle-properties) · [Python](/api/python/analysis-operations#set-circle-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-circle-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-circle-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-circle-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-circle-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-circle-properties)
 
 
 ## Set Cone Properties
@@ -8300,7 +8300,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-cone-properties) · [.NET](/api/dotnet/analysis-operations#set-cone-properties) · [Python](/api/python/analysis-operations#set-cone-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-cone-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-cone-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-cone-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-cone-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-cone-properties)
 
 
 ## Set Cylinder Properties
@@ -8375,7 +8375,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-cylinder-properties) · [.NET](/api/dotnet/analysis-operations#set-cylinder-properties) · [Python](/api/python/analysis-operations#set-cylinder-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-cylinder-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-cylinder-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-cylinder-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-cylinder-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-cylinder-properties)
 
 
 ## Set Default Colorization Options
@@ -8430,7 +8430,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-default-colorization-options) · [.NET](/api/dotnet/analysis-operations#set-default-colorization-options) · [Python](/api/python/analysis-operations#set-default-colorization-options) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-default-colorization-options)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-default-colorization-options) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-default-colorization-options) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-default-colorization-options) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-default-colorization-options)
 
 
 ## Set Ellipse Properties
@@ -8467,7 +8467,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-ellipse-properties) · [.NET](/api/dotnet/analysis-operations#set-ellipse-properties) · [Python](/api/python/analysis-operations#set-ellipse-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-ellipse-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-ellipse-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-ellipse-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-ellipse-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-ellipse-properties)
 
 
 ## Set Geometry Relationship Fit Profile
@@ -8528,7 +8528,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-geometry-relationship-fit-profile) · [.NET](/api/dotnet/analysis-operations#set-geometry-relationship-fit-profile) · [Python](/api/python/analysis-operations#set-geometry-relationship-fit-profile) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-geometry-relationship-fit-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-geometry-relationship-fit-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-geometry-relationship-fit-profile) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-geometry-relationship-fit-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-geometry-relationship-fit-profile)
 
 
 ## Set Line Properties
@@ -8564,7 +8564,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-line-properties) · [.NET](/api/dotnet/analysis-operations#set-line-properties) · [Python](/api/python/analysis-operations#set-line-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-line-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-line-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-line-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-line-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-line-properties)
 
 
 ## Set Measurement Auxiliary Data
@@ -8625,7 +8625,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-measurement-auxiliary-data) · [.NET](/api/dotnet/analysis-operations#set-measurement-auxiliary-data) · [Python](/api/python/analysis-operations#set-measurement-auxiliary-data) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-measurement-auxiliary-data)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-measurement-auxiliary-data) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-measurement-auxiliary-data) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-measurement-auxiliary-data) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-measurement-auxiliary-data)
 
 
 ## Set Object Reporting Frame
@@ -8684,7 +8684,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-object-reporting-frame) · [.NET](/api/dotnet/analysis-operations#set-object-reporting-frame) · [Python](/api/python/analysis-operations#set-object-reporting-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-object-reporting-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-object-reporting-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-object-reporting-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-object-reporting-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-object-reporting-frame)
 
 
 ## Set Point Properties
@@ -8747,7 +8747,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-point-properties) · [.NET](/api/dotnet/analysis-operations#set-point-properties) · [Python](/api/python/analysis-operations#set-point-properties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-point-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-point-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-point-properties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-point-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-point-properties)
 
 
 ## Set Point Weights From Uncertainties
@@ -8816,7 +8816,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-point-weights-from-uncertainties) · [.NET](/api/dotnet/analysis-operations#set-point-weights-from-uncertainties) · [Python](/api/python/analysis-operations#set-point-weights-from-uncertainties) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-point-weights-from-uncertainties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-point-weights-from-uncertainties) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-point-weights-from-uncertainties) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-point-weights-from-uncertainties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-point-weights-from-uncertainties)
 
 
 ## Set Transform for i-th Frame in Frame Set
@@ -8877,7 +8877,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [Python](/api/python/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/set-transform-for-i-th-frame-in-frame-set) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/set-transform-for-i-th-frame-in-frame-set) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/set-transform-for-i-th-frame-in-frame-set) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/set-transform-for-i-th-frame-in-frame-set)
 
 
 ## Sphere Axis Check
@@ -8954,7 +8954,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#sphere-axis-check) · [.NET](/api/dotnet/analysis-operations#sphere-axis-check) · [Python](/api/python/analysis-operations#sphere-axis-check) · [JavaScript and TypeScript](/api/javascript/analysis-operations#sphere-axis-check)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/sphere-axis-check) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/sphere-axis-check) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/sphere-axis-check) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/sphere-axis-check)
 
 
 ## Temperature Compensate a group
@@ -9021,7 +9021,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#temperature-compensate-a-group) · [.NET](/api/dotnet/analysis-operations#temperature-compensate-a-group) · [Python](/api/python/analysis-operations#temperature-compensate-a-group) · [JavaScript and TypeScript](/api/javascript/analysis-operations#temperature-compensate-a-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/temperature-compensate-a-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/temperature-compensate-a-group) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/temperature-compensate-a-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/temperature-compensate-a-group)
 
 
 ## Transform Objects - Frame To Frame
@@ -9084,7 +9084,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#transform-objects---frame-to-frame) · [.NET](/api/dotnet/analysis-operations#transform-objects---frame-to-frame) · [Python](/api/python/analysis-operations#transform-objects---frame-to-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#transform-objects---frame-to-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/transform-objects---frame-to-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/transform-objects---frame-to-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/transform-objects---frame-to-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/transform-objects---frame-to-frame)
 
 
 ## Transform Objects by Delta (About Working Frame)
@@ -9141,7 +9141,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#transform-objects-by-delta-about-working-frame) · [.NET](/api/dotnet/analysis-operations#transform-objects-by-delta-about-working-frame) · [Python](/api/python/analysis-operations#transform-objects-by-delta-about-working-frame) · [JavaScript and TypeScript](/api/javascript/analysis-operations#transform-objects-by-delta-about-working-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-about-working-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-about-working-frame) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-about-working-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-about-working-frame)
 
 
 ## Transform Objects by Delta (World Transform Operator)
@@ -9198,7 +9198,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#transform-objects-by-delta-world-transform-operator) · [.NET](/api/dotnet/analysis-operations#transform-objects-by-delta-world-transform-operator) · [Python](/api/python/analysis-operations#transform-objects-by-delta-world-transform-operator) · [JavaScript and TypeScript](/api/javascript/analysis-operations#transform-objects-by-delta-world-transform-operator)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-world-transform-operator) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-world-transform-operator) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-world-transform-operator) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/transform-objects-by-delta-world-transform-operator)
 
 
 ## Translate Objects by Delta
@@ -9255,4 +9255,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/analysis-operations#translate-objects-by-delta) · [.NET](/api/dotnet/analysis-operations#translate-objects-by-delta) · [Python](/api/python/analysis-operations#translate-objects-by-delta) · [JavaScript and TypeScript](/api/javascript/analysis-operations#translate-objects-by-delta)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/analysis-operations/translate-objects-by-delta) · [.NET](/api/dotnet/sa-2026.1.0529.7/analysis-operations/translate-objects-by-delta) · [Python](/api/python/sa-2026.1.0529.7/analysis-operations/translate-objects-by-delta) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/analysis-operations/translate-objects-by-delta)

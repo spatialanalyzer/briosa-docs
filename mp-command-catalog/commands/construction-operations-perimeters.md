@@ -83,4 +83,4 @@ duplicate requested name. Briosa passes missing points and lists with fewer
 than two points through to SpatialAnalyzer rather than adding a client-side
 validation rule.
 
-**API References:** [gRPC](/api/grpc/construction-operations-perimeters) · [.NET](/api/dotnet/construction-operations-perimeters) · [Python](/api/python/construction-operations-perimeters) · [JavaScript and TypeScript](/api/javascript/construction-operations-perimeters)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-perimeters) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-perimeters) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-perimeters) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-perimeters)

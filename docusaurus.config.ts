@@ -73,13 +73,13 @@ const config: Config = {
       {
         redirects: [
           {from: '/docs/operations/overview', to: '/api/grpc'},
-          {from: '/docs/operations/get-working-directory', to: '/api/grpc/get-working-directory'},
-          {from: '/docs/operations/get-number-of-collections', to: '/api/grpc/get-number-of-collections'},
-          {from: '/docs/operations/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
-          {from: '/api/get-working-directory', to: '/api/grpc/get-working-directory'},
-          {from: '/api/get-number-of-collections', to: '/api/grpc/get-number-of-collections'},
-          {from: '/api/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
-          {from: '/api/grpc/get-i-th-collection-name', to: '/api/grpc/get-ith-collection-name'},
+          {from: '/docs/operations/get-working-directory', to: '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory'},
+          {from: '/docs/operations/get-number-of-collections', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-collections'},
+          {from: '/docs/operations/get-i-th-collection-name', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name'},
+          {from: '/api/get-working-directory', to: '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory'},
+          {from: '/api/get-number-of-collections', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-collections'},
+          {from: '/api/get-i-th-collection-name', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name'},
+          {from: '/api/grpc/get-i-th-collection-name', to: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-i-th-collection-name'},
           {from: '/docs/mp-command-catalog/overview', to: '/mp-command-catalog'},
           {
             from: '/docs/mp-command-catalog/2026.1.0529.7/overview',

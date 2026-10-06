@@ -167,7 +167,7 @@ Briosa's preference not to introduce prompts by default.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/instrument-operations-advanced-instrument-operations)
-- [.NET](/api/dotnet/instrument-operations-advanced-instrument-operations)
-- [Python](/api/python/instrument-operations-advanced-instrument-operations)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-advanced-instrument-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-advanced-instrument-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-advanced-instrument-operations)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-advanced-instrument-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-advanced-instrument-operations)

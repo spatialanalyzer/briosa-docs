@@ -384,7 +384,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#add-a-vector-to-vector-name-ref-list) · [.NET](/api/dotnet/vector-operations#add-a-vector-to-vector-name-ref-list) · [Python](/api/python/vector-operations#add-a-vector-to-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/vector-operations#add-a-vector-to-vector-name-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/add-a-vector-to-vector-name-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/add-a-vector-to-vector-name-ref-list) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/add-a-vector-to-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/add-a-vector-to-vector-name-ref-list)
 
 
 ## Auto-Range and Set Vector Group Colorization (All)
@@ -441,7 +441,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-all) · [.NET](/api/dotnet/vector-operations#auto-range-and-set-vector-group-colorization-all) · [Python](/api/python/vector-operations#auto-range-and-set-vector-group-colorization-all) · [JavaScript and TypeScript](/api/javascript/vector-operations#auto-range-and-set-vector-group-colorization-all)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-all) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-all) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-all) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-all)
 
 
 ## Auto-Range and Set Vector Group Colorization (Selected)
@@ -500,7 +500,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [.NET](/api/dotnet/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [Python](/api/python/vector-operations#auto-range-and-set-vector-group-colorization-selected) · [JavaScript and TypeScript](/api/javascript/vector-operations#auto-range-and-set-vector-group-colorization-selected)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-selected) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-selected) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-selected) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/auto-range-and-set-vector-group-colorization-selected)
 
 
 ## Delete i-th Vector From Vector Group
@@ -559,7 +559,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#delete-i-th-vector-from-vector-group) · [.NET](/api/dotnet/vector-operations#delete-i-th-vector-from-vector-group) · [Python](/api/python/vector-operations#delete-i-th-vector-from-vector-group) · [JavaScript and TypeScript](/api/javascript/vector-operations#delete-i-th-vector-from-vector-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/delete-i-th-vector-from-vector-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/delete-i-th-vector-from-vector-group) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/delete-i-th-vector-from-vector-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/delete-i-th-vector-from-vector-group)
 
 
 ## Delete Vector by Name
@@ -618,7 +618,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#delete-vector-by-name) · [.NET](/api/dotnet/vector-operations#delete-vector-by-name) · [Python](/api/python/vector-operations#delete-vector-by-name) · [JavaScript and TypeScript](/api/javascript/vector-operations#delete-vector-by-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/delete-vector-by-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/delete-vector-by-name) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/delete-vector-by-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/delete-vector-by-name)
 
 
 ## Delete Vectors
@@ -673,7 +673,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#delete-vectors) · [.NET](/api/dotnet/vector-operations#delete-vectors) · [Python](/api/python/vector-operations#delete-vectors) · [JavaScript and TypeScript](/api/javascript/vector-operations#delete-vectors)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/delete-vectors) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/delete-vectors) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/delete-vectors) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/delete-vectors)
 
 
 ## Get i-th Vector From Vector Group
@@ -744,7 +744,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-i-th-vector-from-vector-group) · [.NET](/api/dotnet/vector-operations#get-i-th-vector-from-vector-group) · [Python](/api/python/vector-operations#get-i-th-vector-from-vector-group) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-i-th-vector-from-vector-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-group) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-group)
 
 
 ## Get i-th Vector From Vector Name Ref List
@@ -815,7 +815,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns the vector identity and geometry, but not its documented color.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [.NET](/api/dotnet/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [Python](/api/python/vector-operations#get-i-th-vector-from-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-i-th-vector-from-vector-name-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-name-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-name-ref-list) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-i-th-vector-from-vector-name-ref-list)
 
 
 ## Get Number of Vectors in Vector Group
@@ -874,7 +874,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-number-of-vectors-in-vector-group) · [.NET](/api/dotnet/vector-operations#get-number-of-vectors-in-vector-group) · [Python](/api/python/vector-operations#get-number-of-vectors-in-vector-group) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-number-of-vectors-in-vector-group)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-group) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-group) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-group) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-group)
 
 
 ## Get Number of Vectors in Vector Name Ref List
@@ -931,7 +931,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [.NET](/api/dotnet/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [Python](/api/python/vector-operations#get-number-of-vectors-in-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-number-of-vectors-in-vector-name-ref-list)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-name-ref-list) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-name-ref-list) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-name-ref-list) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-number-of-vectors-in-vector-name-ref-list)
 
 
 ## Get Vector From Vector Group By Name
@@ -1000,7 +1000,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-vector-from-vector-group-by-name) · [.NET](/api/dotnet/vector-operations#get-vector-from-vector-group-by-name) · [Python](/api/python/vector-operations#get-vector-from-vector-group-by-name) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-vector-from-vector-group-by-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-vector-from-vector-group-by-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-vector-from-vector-group-by-name) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-vector-from-vector-group-by-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-vector-from-vector-group-by-name)
 
 
 ## Get Vector Group Colorization Options
@@ -1243,7 +1243,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#get-vector-group-properties) · [.NET](/api/dotnet/vector-operations#get-vector-group-properties) · [Python](/api/python/vector-operations#get-vector-group-properties) · [JavaScript and TypeScript](/api/javascript/vector-operations#get-vector-group-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/get-vector-group-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/get-vector-group-properties) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/get-vector-group-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/get-vector-group-properties)
 
 
 ## Set Vector Group Colorization Options (All)
@@ -1298,7 +1298,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#set-vector-group-colorization-options-all) · [.NET](/api/dotnet/vector-operations#set-vector-group-colorization-options-all) · [Python](/api/python/vector-operations#set-vector-group-colorization-options-all) · [JavaScript and TypeScript](/api/javascript/vector-operations#set-vector-group-colorization-options-all)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-all) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-all) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-all) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-all)
 
 
 ## Set Vector Group Colorization Options (Selected)
@@ -1355,7 +1355,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#set-vector-group-colorization-options-selected) · [.NET](/api/dotnet/vector-operations#set-vector-group-colorization-options-selected) · [Python](/api/python/vector-operations#set-vector-group-colorization-options-selected) · [JavaScript and TypeScript](/api/javascript/vector-operations#set-vector-group-colorization-options-selected)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-selected) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-selected) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-selected) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/set-vector-group-colorization-options-selected)
 
 
 ## Set Vector Group Display Attributes
@@ -1537,7 +1537,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/vector-operations#sort-vectors) · [.NET](/api/dotnet/vector-operations#sort-vectors) · [Python](/api/python/vector-operations#sort-vectors) · [JavaScript and TypeScript](/api/javascript/vector-operations#sort-vectors)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/vector-operations/sort-vectors) · [.NET](/api/dotnet/sa-2026.1.0529.7/vector-operations/sort-vectors) · [Python](/api/python/sa-2026.1.0529.7/vector-operations/sort-vectors) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/vector-operations/sort-vectors)
 
 
 ## Vector Addition

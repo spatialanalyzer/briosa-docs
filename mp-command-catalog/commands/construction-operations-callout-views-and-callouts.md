@@ -223,7 +223,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Additional Notes (blank for none)` | Edit Text | Omitted |
 | Input | `Attach Callout to End Point?` / `Use default placement?` | Boolean | false / false |
 
-Selected with the exact MP display defaults. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-vector-callout) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts#create-vector-callout) · [Python](/api/python/construction-operations-callout-views-and-callouts#create-vector-callout) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts#create-vector-callout)
+Selected with the exact MP display defaults. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-vector-callout) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-vector-callout) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-vector-callout) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-vector-callout)
 
 ## Create Min/Max Vector Group Callout
 
@@ -292,7 +292,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Show Start Point?` / `Show End Point?` / `Show Units?` | Boolean | false / false / false |
 | Input | `Attach Callout to End Point?` / `Use default placement?` | Boolean | true / false |
 
-Selected with all MP display controls. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [Python](/api/python/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
+Selected with all MP display controls. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-minmax-vector-group-callout) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-minmax-vector-group-callout) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-minmax-vector-group-callout) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-minmax-vector-group-callout)
 
 ## Create Point Callout
 
@@ -358,7 +358,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Notes (blank for none)` | Edit Text | Omitted |
 | Input | `Use default placement?` | Boolean | false |
 
-Selected with Cartesian coordinates by default. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-point-callout) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts#create-point-callout) · [Python](/api/python/construction-operations-callout-views-and-callouts#create-point-callout) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts#create-point-callout)
+Selected with Cartesian coordinates by default. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-callout) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-callout) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-callout) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-callout)
 
 ## Create Point Comparison Callout
 
@@ -427,7 +427,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | Additional X / Y / Z comments and notes | String / Edit Text | Omitted |
 | Input | `Use default placement?` | Boolean | false |
 
-Selected with the exact MP comparison-display defaults. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [Python](/api/python/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
+Selected with the exact MP comparison-display defaults. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-comparison-callout) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-comparison-callout) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-comparison-callout) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-point-comparison-callout)
 
 ## Create Relationship Callout
 
@@ -470,7 +470,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are `Destination Callout View`, `Relationship Name`, X/Y positions
-(default 0), and optional edit-text notes. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-relationship-callout)
+(default 0), and optional edit-text notes. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-relationship-callout)
 
 ## Create Picture Callout
 
@@ -515,7 +515,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Inputs are the destination callout view, picture name, X/Y positions (defaults
 0.4/0.6), image scale percentage (default 100), and an optional anchor object.
-Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-picture-callout)
+Included in Briosa Server 0.7.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-picture-callout)
 
 ## Create Text Callout
 
@@ -559,7 +559,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Inputs are the destination callout view, required edit-text lines, X/Y
 positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.7.0.
-[API contracts](/api/grpc/construction-operations-callout-views-and-callouts#create-text-callout)
+[API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-text-callout)
 
 ## Make a Callout View Ref List
 
@@ -647,7 +647,7 @@ The exporter places `Resultant Callout View List` in its input position without 
 Unlike the local list helpers, this command queries live SA state. The exact
 export does not spell out the specialized output getter, so retrieving it
 through the SDK's collection-item-compatible ref-list representation requires
-exact-target validation. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
+exact-target validation. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection)
 
 ## Add a Callout View to Callout View Ref List
 
@@ -850,7 +850,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Inputs define the default name, view recall flags, leader and border thickness
 and colors, text-divider behavior, and font. Exact defaults include gray leader
 RGB `(128, 128, 128)`, blue border RGB `(0, 0, 255)`, and `MS Shell Dlg` at 8
-points. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
+points. Included in Briosa Server 0.7.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-default-callout-view-properties)
 
 ## Set Callout View Properties
 
@@ -900,7 +900,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Applies the same visual settings to a required callout-view list. ObjectiveSA
 uses the generic collection-object ref-list setter for the export's
 `NOT_SUPPORTED` input; exact-target binding and visual validation remain
-required. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#set-callout-view-properties)
+required. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-callout-view-properties)
 
 ## Delete Callout View
 
@@ -939,7 +939,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Deletes a required callout view. This destructive operation is never replayed
-automatically. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#delete-callout-view)
+automatically. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/delete-callout-view)
 
 ## Rename Callout View
 
@@ -979,7 +979,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-Renames one callout view. `Overwrite if exists?` defaults to false. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#rename-callout-view)
+Renames one callout view. `Overwrite if exists?` defaults to false. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/rename-callout-view)
 
 ## Auto Arrange Callout View
 
@@ -1018,7 +1018,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Asks SpatialAnalyzer to arrange the callouts in a required callout view.
-[API contracts](/api/grpc/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)
+[API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/auto-arrange-callout-view)
 
 ## Get Number of Callouts in Callout View
 
@@ -1057,7 +1057,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
-Returns the live `Callouts Count` for a required callout view. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
+Returns the live `Callouts Count` for a required callout view. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/get-number-of-callouts-in-callout-view)
 
 ## Get I-th Callout Position in Callout View
 
@@ -1104,7 +1104,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Accepts a callout view and zero-based index, then returns X/Y position, X/Y
 anchor position, width, and height as integers. This reads SA state rather than
-indexing a client list. [API contracts](/api/grpc/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)
+indexing a client list. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/get-i-th-callout-position-in-callout-view)
 
 ## Set I-th Callout Position in Callout View
 
@@ -1146,4 +1146,4 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Accepts a callout view, zero-based index, and required integer X/Y position.
-[API contracts](/api/grpc/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view)
+[API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-i-th-callout-position-in-callout-view)

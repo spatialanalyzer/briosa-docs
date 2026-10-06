@@ -613,4 +613,4 @@ SpatialAnalyzer. The SDK's direct cloud-thinning setter supports only part of
 the MP constructor's settings. Briosa exposes the supported values directly as
 `CloudThinningOptions`; no network operation is necessary.
 
-**API References:** [gRPC](/api/grpc/construction-operations-point-clouds) · [.NET](/api/dotnet/construction-operations-point-clouds) · [Python](/api/python/construction-operations-point-clouds) · [JavaScript and TypeScript](/api/javascript/construction-operations-point-clouds)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-point-clouds) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-point-clouds) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-point-clouds) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-point-clouds)

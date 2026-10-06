@@ -91,4 +91,4 @@ question mark on the latter two.
 Briosa adds no policy for contradictory tolerance settings. It preserves the MP
 outcome and never automatically replays the operation.
 
-**API References:** [gRPC](/api/grpc/construction-operations-scale-bars) · [.NET](/api/dotnet/construction-operations-scale-bars) · [Python](/api/python/construction-operations-scale-bars) · [JavaScript and TypeScript](/api/javascript/construction-operations-scale-bars)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-scale-bars) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-scale-bars) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-scale-bars) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-scale-bars)

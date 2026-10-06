@@ -37,37 +37,37 @@ const operations = [
     service: 'FileOperations',
     rpc: 'GetWorkingDirectory',
     detail: 'Read the current SpatialAnalyzer working directory.',
-    href: '/api/grpc/get-working-directory',
+    href: '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory',
   },
   {
     service: 'AnalysisOperations',
     rpc: 'GetNumberOfCollections',
     detail: 'Read the number of collections in the active SA job.',
-    href: '/api/grpc/get-number-of-collections',
+    href: '/api/grpc/sa-2026.1.0529.7/analysis-operations/get-number-of-collections',
   },
   {
     service: 'ConstructionOperations',
     rpc: 'ConstructCollection',
     detail: 'Create a named collection, with optional folder and default-collection settings.',
-    href: '/api/grpc/construction-operations-collections#construct-collection',
+    href: '/api/grpc/sa-2026.1.0529.7/construction-operations-collections/construct-collection',
   },
   {
     service: 'ConstructionOperations',
     rpc: 'GetActiveCollectionName',
     detail: 'Read the name of the currently active collection.',
-    href: '/api/grpc/construction-operations-collections#get-active-collection-name',
+    href: '/api/grpc/sa-2026.1.0529.7/construction-operations-collections/get-active-collection-name',
   },
   {
     service: 'UtilityOperations',
     rpc: 'SetActiveUnits',
     detail: 'Set length, angular, and temperature units, including inch-fraction display settings.',
-    href: '/api/grpc/utility-operations#set-active-units',
+    href: '/api/grpc/sa-2026.1.0529.7/utility-operations/set-active-units',
   },
   {
     service: 'UtilityOperations',
     rpc: 'GetWorkingFrameProperties',
     detail: 'Read the current frame name, collection, and typed working frame.',
-    href: '/api/grpc/utility-operations#get-working-frame-properties',
+    href: '/api/grpc/sa-2026.1.0529.7/utility-operations/get-working-frame-properties',
   },
 ];
 

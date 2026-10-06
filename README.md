@@ -228,22 +228,33 @@ these commands to Docusaurus's snapshot implementation and records the
 snapshot's default SA target in `plugins/api-reference/targets.json`.
 Set `workingDefault` there before cutting a release for a new target; never
 relabel an existing snapshot. Other exact targets remain in `sa-<target>/`
-source folders. This file describes publication layout, not protocol support.
+source folders. Its `compatibilityAddresses` list records the releases whose
+release-qualified and pre-redesign addresses were published; only those get
+redirect documents. Never add a release cut after release-independent
+addresses, so the redirect set does not grow. This file describes publication
+layout, not protocol support.
 
 ### API Routes And Authoring
 
-An exact reference has a permanent address such as
-`/api/grpc/sa-2024.1.0508.5/0.7.0/analysis-operations/angle-between-line-and-plane#request-parameters`.
-Target and release are independent; the SA target comes first in URLs and
-the context selectors. Every exact view contains its contract,
-metadata, and canonical link in static HTML. Short method URLs retain a
-cross-version history and resolve a remembered target when one exists. Old
-group URLs and command fragments retain HTML fallback links and migrate in
-the browser. Previous release/SA URLs also remain exact-target aliases; they
-are excluded from the sitemap and point to the new canonical SA/release URL.
-Unknown fragments display a recovery message.
+Each SpatialAnalyzer target has a stable reference address, such as
+`/api/grpc/sa-2024.1.0508.5/analysis-operations/angle-between-line-and-plane#request-parameters`,
+that shows the newest Briosa release documenting that target. Readers building
+for an earlier SpatialAnalyzer choose it at `/api/<family>`. Every method page
+opens with a SpatialAnalyzer Compatibility table. Each method also has an
+indexed history page, `/api/<family>/<group>/<method>`, that shows each
+distinct contract once, with the releases and targets that published it and
+an anchor per release/SA pair (for example `#release-0.7.0-sa-2024.1.0508.5`).
+Earlier releases keep their guides and group notes at
+`/api/<family>/sa-<target>/<release>/`.
 
-Version roots include directory-index fallbacks for static hosting. Use
+Release-qualified method addresses, pre-redesign group URLs, and command
+fragments are static redirect documents written after the build, not client
+routes. They are excluded from the sitemap, carry a canonical link and
+no-JavaScript fallback links, and honor fragments and a remembered SA target.
+Keeping them out of the route table is what keeps the build within a hosted
+runner's memory. Unknown fragments display a recovery message.
+
+Dotted SA-target and release roots include directory-index fallbacks for static hosting. Use
 `npm run serve` to preview the build; the wrapper handles dotted version
 directories that Docusaurus's default preview server mistakes for files.
 
@@ -289,7 +300,7 @@ switching, Back/Forward, mobile navigation, and keyboard access.
 1. Verify published GitHub releases and package registries for both exact targets.
 2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
 3. Update guides and every catalog representation without promoting validation claims.
-4. Cut each product snapshot with its Docusaurus version command; update defaults and preserve historical API links.
+4. Cut each product snapshot with its Docusaurus version command and update defaults. Do not add the new release to `compatibilityAddresses` in `plugins/api-reference/targets.json`; current references already have release-independent addresses.
 5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
 6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
 

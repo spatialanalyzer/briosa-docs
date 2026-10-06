@@ -82,4 +82,4 @@ The command depends on live view or working-frame state and suitable point-cloud
 density. Briosa adds no resolution or data-density safeguards and never
 automatically replays the operation.
 
-**API References:** [gRPC](/api/grpc/construction-operations-polygonized-surfaces) · [.NET](/api/dotnet/construction-operations-polygonized-surfaces) · [Python](/api/python/construction-operations-polygonized-surfaces) · [JavaScript and TypeScript](/api/javascript/construction-operations-polygonized-surfaces)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-polygonized-surfaces) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-polygonized-surfaces) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-polygonized-surfaces) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-polygonized-surfaces)

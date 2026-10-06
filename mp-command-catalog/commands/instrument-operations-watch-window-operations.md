@@ -424,7 +424,7 @@ coordinates update and close calls against the current SA state.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/instrument-operations-watch-window-operations)
-- [.NET](/api/dotnet/instrument-operations-watch-window-operations)
-- [Python](/api/python/instrument-operations-watch-window-operations)
-- [JavaScript and TypeScript](/api/javascript/instrument-operations-watch-window-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/instrument-operations-watch-window-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/instrument-operations-watch-window-operations)
+- [Python](/api/python/sa-2026.1.0529.7/instrument-operations-watch-window-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/instrument-operations-watch-window-operations)

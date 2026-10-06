@@ -56,4 +56,4 @@ SpatialAnalyzer determines the MP execution outcome. ObjectiveSA has no wrapper
 for this command in its SA 2024.1-targeted surface, so validation relies on the
 exact SA 2026.1.0529.7 SDK binding and a future licensed fixture scenario.
 
-[gRPC](/api/grpc/construction-operations-ellipses#construct-ellipse) · [.NET](/api/dotnet/construction-operations-ellipses#construct-ellipse) · [Python](/api/python/construction-operations-ellipses#construct-ellipse) · [JavaScript](/api/javascript/construction-operations-ellipses#construct-ellipse)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-ellipses/construct-ellipse) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-ellipses/construct-ellipse) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-ellipses/construct-ellipse) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-ellipses/construct-ellipse)

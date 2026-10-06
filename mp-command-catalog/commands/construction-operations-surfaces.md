@@ -740,4 +740,4 @@ line or circle extraction is required.
 Briosa adds no operation-specific geometry safeguards to these commands, and
 none is automatically replayed.
 
-**API References:** [gRPC](/api/grpc/construction-operations-surfaces) · [.NET](/api/dotnet/construction-operations-surfaces) · [Python](/api/python/construction-operations-surfaces) · [JavaScript and TypeScript](/api/javascript/construction-operations-surfaces)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-surfaces) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-surfaces) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-surfaces) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-surfaces)

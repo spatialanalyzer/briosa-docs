@@ -572,7 +572,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#add-double-to-named-double-list-variable) · [.NET](/api/dotnet/variables#add-double-to-named-double-list-variable) · [Python](/api/python/variables#add-double-to-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#add-double-to-named-double-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/add-double-to-named-double-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/add-double-to-named-double-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/add-double-to-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/add-double-to-named-double-list-variable)
 
 
 ## Clear Double List
@@ -680,7 +680,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#clear-named-double-list-variable) · [.NET](/api/dotnet/variables#clear-named-double-list-variable) · [Python](/api/python/variables#clear-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#clear-named-double-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/clear-named-double-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/clear-named-double-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/clear-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/clear-named-double-list-variable)
 
 
 ## Delete Variable
@@ -735,7 +735,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#delete-variable) · [.NET](/api/dotnet/variables#delete-variable) · [Python](/api/python/variables#delete-variable) · [JavaScript and TypeScript](/api/javascript/variables#delete-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/delete-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/delete-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/delete-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/delete-variable)
 
 
 ## Delete Variables -- Wildcard Match
@@ -790,7 +790,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#delete-variables----wildcard-match) · [.NET](/api/dotnet/variables#delete-variables----wildcard-match) · [Python](/api/python/variables#delete-variables----wildcard-match) · [JavaScript and TypeScript](/api/javascript/variables#delete-variables----wildcard-match)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/delete-variables----wildcard-match) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/delete-variables----wildcard-match) · [Python](/api/python/sa-2026.1.0529.7/variables/delete-variables----wildcard-match) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/delete-variables----wildcard-match)
 
 
 ## Get Boolean Variable
@@ -847,7 +847,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-boolean-variable) · [.NET](/api/dotnet/variables#get-boolean-variable) · [Python](/api/python/variables#get-boolean-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-boolean-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-boolean-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-boolean-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-boolean-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-boolean-variable)
 
 
 ## Get Collection Object Name Variable
@@ -904,7 +904,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-collection-object-name-variable) · [.NET](/api/dotnet/variables#get-collection-object-name-variable) · [Python](/api/python/variables#get-collection-object-name-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-collection-object-name-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-collection-object-name-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-collection-object-name-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-collection-object-name-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-collection-object-name-variable)
 
 
 ## Get Collection Object Ref List Variable
@@ -961,7 +961,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-collection-object-ref-list-variable) · [.NET](/api/dotnet/variables#get-collection-object-ref-list-variable) · [Python](/api/python/variables#get-collection-object-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-collection-object-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-collection-object-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-collection-object-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-collection-object-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-collection-object-ref-list-variable)
 
 
 ## Get Double Variable
@@ -1018,7 +1018,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-double-variable) · [.NET](/api/dotnet/variables#get-double-variable) · [Python](/api/python/variables#get-double-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-double-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-double-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-double-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-double-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-double-variable)
 
 
 ## Get Font Variable
@@ -1185,7 +1185,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-integer-variable) · [.NET](/api/dotnet/variables#get-integer-variable) · [Python](/api/python/variables#get-integer-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-integer-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-integer-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-integer-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-integer-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-integer-variable)
 
 
 ## Get Named Double List Variable
@@ -1242,7 +1242,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-named-double-list-variable) · [.NET](/api/dotnet/variables#get-named-double-list-variable) · [Python](/api/python/variables#get-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-named-double-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-named-double-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-named-double-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-named-double-list-variable)
 
 
 ## Get Named Double List Variable Min/Max
@@ -1301,7 +1301,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-named-double-list-variable-minmax) · [.NET](/api/dotnet/variables#get-named-double-list-variable-minmax) · [Python](/api/python/variables#get-named-double-list-variable-minmax) · [JavaScript and TypeScript](/api/javascript/variables#get-named-double-list-variable-minmax)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-named-double-list-variable-minmax) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-named-double-list-variable-minmax) · [Python](/api/python/sa-2026.1.0529.7/variables/get-named-double-list-variable-minmax) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-named-double-list-variable-minmax)
 
 
 ## Get number of doubles in list
@@ -1413,7 +1413,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-point-name-ref-list-variable) · [.NET](/api/dotnet/variables#get-point-name-ref-list-variable) · [Python](/api/python/variables#get-point-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-point-name-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-point-name-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-point-name-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-point-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-point-name-ref-list-variable)
 
 
 ## Get Point Name Variable
@@ -1470,7 +1470,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-point-name-variable) · [.NET](/api/dotnet/variables#get-point-name-variable) · [Python](/api/python/variables#get-point-name-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-point-name-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-point-name-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-point-name-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-point-name-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-point-name-variable)
 
 
 ## Get Relationship Ref List Variable
@@ -1527,7 +1527,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-relationship-ref-list-variable) · [.NET](/api/dotnet/variables#get-relationship-ref-list-variable) · [Python](/api/python/variables#get-relationship-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-relationship-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-relationship-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-relationship-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-relationship-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-relationship-ref-list-variable)
 
 
 ## Get Report Items Reference List Variable
@@ -1584,7 +1584,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-report-items-reference-list-variable) · [.NET](/api/dotnet/variables#get-report-items-reference-list-variable) · [Python](/api/python/variables#get-report-items-reference-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-report-items-reference-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-report-items-reference-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-report-items-reference-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-report-items-reference-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-report-items-reference-list-variable)
 
 
 ## Get String Ref List Variable
@@ -1641,7 +1641,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-string-ref-list-variable) · [.NET](/api/dotnet/variables#get-string-ref-list-variable) · [Python](/api/python/variables#get-string-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-string-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-string-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-string-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-string-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-string-ref-list-variable)
 
 
 ## Get String Variable
@@ -1698,7 +1698,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-string-variable) · [.NET](/api/dotnet/variables#get-string-variable) · [Python](/api/python/variables#get-string-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-string-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-string-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-string-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-string-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-string-variable)
 
 
 ## Get Transform Variable
@@ -1755,7 +1755,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-transform-variable) · [.NET](/api/dotnet/variables#get-transform-variable) · [Python](/api/python/variables#get-transform-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-transform-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-transform-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-transform-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-transform-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-transform-variable)
 
 
 ## Get Vector Name Ref List Variable
@@ -1812,7 +1812,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-vector-name-ref-list-variable) · [.NET](/api/dotnet/variables#get-vector-name-ref-list-variable) · [Python](/api/python/variables#get-vector-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-vector-name-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-vector-name-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-vector-name-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-vector-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-vector-name-ref-list-variable)
 
 
 ## Get Vector Variable
@@ -1869,7 +1869,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#get-vector-variable) · [.NET](/api/dotnet/variables#get-vector-variable) · [Python](/api/python/variables#get-vector-variable) · [JavaScript and TypeScript](/api/javascript/variables#get-vector-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/get-vector-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/get-vector-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/get-vector-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/get-vector-variable)
 
 
 ## Set Boolean Variable
@@ -1926,7 +1926,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-boolean-variable) · [.NET](/api/dotnet/variables#set-boolean-variable) · [Python](/api/python/variables#set-boolean-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-boolean-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-boolean-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-boolean-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-boolean-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-boolean-variable)
 
 
 ## Set Collection Object Name Variable
@@ -1985,7 +1985,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-collection-object-name-variable) · [.NET](/api/dotnet/variables#set-collection-object-name-variable) · [Python](/api/python/variables#set-collection-object-name-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-collection-object-name-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-collection-object-name-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-collection-object-name-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-collection-object-name-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-collection-object-name-variable)
 
 
 ## Set Collection Object Ref List Variable
@@ -2042,7 +2042,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-collection-object-ref-list-variable) · [.NET](/api/dotnet/variables#set-collection-object-ref-list-variable) · [Python](/api/python/variables#set-collection-object-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-collection-object-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-collection-object-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-collection-object-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-collection-object-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-collection-object-ref-list-variable)
 
 
 ## Set Double List Variable
@@ -2154,7 +2154,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-double-variable) · [.NET](/api/dotnet/variables#set-double-variable) · [Python](/api/python/variables#set-double-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-double-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-double-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-double-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-double-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-double-variable)
 
 
 ## Set Font Variable
@@ -2211,7 +2211,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-font-variable) · [.NET](/api/dotnet/variables#set-font-variable) · [Python](/api/python/variables#set-font-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-font-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-font-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-font-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-font-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-font-variable)
 
 
 ## Set Integer Variable
@@ -2268,7 +2268,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-integer-variable) · [.NET](/api/dotnet/variables#set-integer-variable) · [Python](/api/python/variables#set-integer-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-integer-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-integer-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-integer-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-integer-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-integer-variable)
 
 
 ## Set Named Double List Variable
@@ -2325,7 +2325,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-named-double-list-variable) · [.NET](/api/dotnet/variables#set-named-double-list-variable) · [Python](/api/python/variables#set-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-named-double-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-named-double-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-named-double-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-named-double-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-named-double-list-variable)
 
 
 ## Set Point Name Ref List Variable
@@ -2382,7 +2382,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-point-name-ref-list-variable) · [.NET](/api/dotnet/variables#set-point-name-ref-list-variable) · [Python](/api/python/variables#set-point-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-point-name-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-point-name-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-point-name-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-point-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-point-name-ref-list-variable)
 
 
 ## Set Point Name Variable
@@ -2439,7 +2439,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-point-name-variable) · [.NET](/api/dotnet/variables#set-point-name-variable) · [Python](/api/python/variables#set-point-name-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-point-name-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-point-name-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-point-name-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-point-name-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-point-name-variable)
 
 
 ## Set Relationship Ref List Variable
@@ -2496,7 +2496,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-relationship-ref-list-variable) · [.NET](/api/dotnet/variables#set-relationship-ref-list-variable) · [Python](/api/python/variables#set-relationship-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-relationship-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-relationship-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-relationship-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-relationship-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-relationship-ref-list-variable)
 
 
 ## Set Report Items Reference List Variable
@@ -2553,7 +2553,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-report-items-reference-list-variable) · [.NET](/api/dotnet/variables#set-report-items-reference-list-variable) · [Python](/api/python/variables#set-report-items-reference-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-report-items-reference-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-report-items-reference-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-report-items-reference-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-report-items-reference-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-report-items-reference-list-variable)
 
 
 ## Set String Ref List Variable
@@ -2610,7 +2610,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-string-ref-list-variable) · [.NET](/api/dotnet/variables#set-string-ref-list-variable) · [Python](/api/python/variables#set-string-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-string-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-string-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-string-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-string-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-string-ref-list-variable)
 
 
 ## Set String Variable
@@ -2667,7 +2667,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-string-variable) · [.NET](/api/dotnet/variables#set-string-variable) · [Python](/api/python/variables#set-string-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-string-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-string-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-string-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-string-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-string-variable)
 
 
 ## Set Transform Variable
@@ -2724,7 +2724,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-transform-variable) · [.NET](/api/dotnet/variables#set-transform-variable) · [Python](/api/python/variables#set-transform-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-transform-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-transform-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-transform-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-transform-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-transform-variable)
 
 
 ## Set Vector Name Ref List Variable
@@ -2781,7 +2781,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-vector-name-ref-list-variable) · [.NET](/api/dotnet/variables#set-vector-name-ref-list-variable) · [Python](/api/python/variables#set-vector-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-vector-name-ref-list-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-vector-name-ref-list-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-vector-name-ref-list-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-vector-name-ref-list-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-vector-name-ref-list-variable)
 
 
 ## Set Vector Variable
@@ -2838,4 +2838,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/variables#set-vector-variable) · [.NET](/api/dotnet/variables#set-vector-variable) · [Python](/api/python/variables#set-vector-variable) · [JavaScript and TypeScript](/api/javascript/variables#set-vector-variable)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/variables/set-vector-variable) · [.NET](/api/dotnet/sa-2026.1.0529.7/variables/set-vector-variable) · [Python](/api/python/sa-2026.1.0529.7/variables/set-vector-variable) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/variables/set-vector-variable)

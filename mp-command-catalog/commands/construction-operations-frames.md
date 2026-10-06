@@ -1003,4 +1003,4 @@ preserved even though the label does not begin with `Construct Frame`.
 
 ## API References
 
-All 18 contracts are published together in the [gRPC](/api/grpc/construction-operations-frames), [.NET](/api/dotnet/construction-operations-frames), [Python](/api/python/construction-operations-frames), and [JavaScript/TypeScript](/api/javascript/construction-operations-frames) references.
+All 18 contracts are published together in the [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-frames), [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-frames), [Python](/api/python/sa-2026.1.0529.7/construction-operations-frames), and [JavaScript/TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-frames) references.

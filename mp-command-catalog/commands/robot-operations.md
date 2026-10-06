@@ -1623,7 +1623,7 @@ partial real-values-only input.
 
 ## Client APIs
 
-- [gRPC](/api/grpc/robot-operations)
-- [.NET](/api/dotnet/robot-operations)
-- [Python](/api/python/robot-operations)
-- [JavaScript and TypeScript](/api/javascript/robot-operations)
+- [gRPC](/api/grpc/sa-2026.1.0529.7/robot-operations)
+- [.NET](/api/dotnet/sa-2026.1.0529.7/robot-operations)
+- [Python](/api/python/sa-2026.1.0529.7/robot-operations)
+- [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/robot-operations)

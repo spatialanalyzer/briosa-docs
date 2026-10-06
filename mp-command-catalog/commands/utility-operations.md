@@ -1012,7 +1012,7 @@ The captured command has no SDK argument calls.
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#close-all-watch-windows) · [.NET](/api/dotnet/utility-operations#close-all-watch-windows) · [Python](/api/python/utility-operations#close-all-watch-windows) · [JavaScript and TypeScript](/api/javascript/utility-operations#close-all-watch-windows)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/close-all-watch-windows) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/close-all-watch-windows) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/close-all-watch-windows) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/close-all-watch-windows)
 
 
 ## Connect to OPC UA Server
@@ -1165,7 +1165,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#delete-folder) · [.NET](/api/dotnet/utility-operations#delete-folder) · [Python](/api/python/utility-operations#delete-folder) · [JavaScript and TypeScript](/api/javascript/utility-operations#delete-folder)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/delete-folder) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/delete-folder) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/delete-folder) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/delete-folder)
 
 
 ## Delete Items
@@ -1220,7 +1220,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#delete-items) · [.NET](/api/dotnet/utility-operations#delete-items) · [Python](/api/python/utility-operations#delete-items) · [JavaScript and TypeScript](/api/javascript/utility-operations#delete-items)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/delete-items) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/delete-items) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/delete-items) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/delete-items)
 
 
 ## Delete Objects
@@ -1275,7 +1275,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#delete-objects) · [.NET](/api/dotnet/utility-operations#delete-objects) · [Python](/api/python/utility-operations#delete-objects) · [JavaScript and TypeScript](/api/javascript/utility-operations#delete-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/delete-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/delete-objects) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/delete-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/delete-objects)
 
 
 ## Disconnect from OPC UA Server
@@ -1420,7 +1420,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns the active language file and custom-language flag; the SDK cannot return the documented font.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-active-language) · [.NET](/api/dotnet/utility-operations#get-active-language) · [Python](/api/python/utility-operations#get-active-language) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-active-language)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-active-language) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-active-language) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-active-language) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-active-language)
 
 
 ## Get Active Units
@@ -1479,7 +1479,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Implemented and callable for this exact target.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-active-units) · [.NET](/api/dotnet/utility-operations#get-active-units) · [Python](/api/python/utility-operations#get-active-units) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-active-units)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-active-units) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-active-units) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-active-units) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-active-units)
 
 
 ## Get Angular Representation
@@ -1534,7 +1534,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-angular-representation) · [.NET](/api/dotnet/utility-operations#get-angular-representation) · [Python](/api/python/utility-operations#get-angular-representation) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-angular-representation)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-angular-representation) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-angular-representation) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-angular-representation) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-angular-representation)
 
 
 ## Get Collection Notes
@@ -1591,7 +1591,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-collection-notes) · [.NET](/api/dotnet/utility-operations#get-collection-notes) · [Python](/api/python/utility-operations#get-collection-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-collection-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-collection-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-collection-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-collection-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-collection-notes)
 
 
 ## Get Folder Collections
@@ -1648,7 +1648,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-folder-collections) · [.NET](/api/dotnet/utility-operations#get-folder-collections) · [Python](/api/python/utility-operations#get-folder-collections) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-folder-collections)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-folder-collections) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-folder-collections) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-folder-collections) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-folder-collections)
 
 
 ## Get Folder Notes
@@ -1705,7 +1705,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-folder-notes) · [.NET](/api/dotnet/utility-operations#get-folder-notes) · [Python](/api/python/utility-operations#get-folder-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-folder-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-folder-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-folder-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-folder-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-folder-notes)
 
 
 ## Get Folders by Wildcard
@@ -1764,7 +1764,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-folders-by-wildcard) · [.NET](/api/dotnet/utility-operations#get-folders-by-wildcard) · [Python](/api/python/utility-operations#get-folders-by-wildcard) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-folders-by-wildcard)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-folders-by-wildcard) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-folders-by-wildcard) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-folders-by-wildcard) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-folders-by-wildcard)
 
 
 ## Get Object Notes
@@ -1823,7 +1823,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-object-notes) · [.NET](/api/dotnet/utility-operations#get-object-notes) · [Python](/api/python/utility-operations#get-object-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-object-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-object-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-object-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-object-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-object-notes)
 
 
 ## Get OPC DA Tag Value Double
@@ -1880,7 +1880,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-opc-da-tag-value-double) · [.NET](/api/dotnet/utility-operations#get-opc-da-tag-value-double) · [Python](/api/python/utility-operations#get-opc-da-tag-value-double) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-opc-da-tag-value-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-double) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-double)
 
 
 ## Get OPC DA Tag Value Integer
@@ -1937,7 +1937,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-opc-da-tag-value-integer) · [.NET](/api/dotnet/utility-operations#get-opc-da-tag-value-integer) · [Python](/api/python/utility-operations#get-opc-da-tag-value-integer) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-opc-da-tag-value-integer)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-integer) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-integer) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-integer) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-integer)
 
 
 ## Get OPC DA Tag Value String
@@ -1994,7 +1994,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-opc-da-tag-value-string) · [.NET](/api/dotnet/utility-operations#get-opc-da-tag-value-string) · [Python](/api/python/utility-operations#get-opc-da-tag-value-string) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-opc-da-tag-value-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-string) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-opc-da-tag-value-string)
 
 
 ## Get OPC UA Node Named Coordinate Frame
@@ -2212,7 +2212,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-point-notes) · [.NET](/api/dotnet/utility-operations#get-point-notes) · [Python](/api/python/utility-operations#get-point-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-point-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-point-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-point-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-point-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-point-notes)
 
 
 ## Get Screen Resolution
@@ -2279,7 +2279,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Returns SA window and view dimensions; physical screen width and height are unavailable.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-screen-resolution) · [.NET](/api/dotnet/utility-operations#get-screen-resolution) · [Python](/api/python/utility-operations#get-screen-resolution) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-screen-resolution)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-screen-resolution) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-screen-resolution) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-screen-resolution) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-screen-resolution)
 
 
 ## Get Tick Count
@@ -2391,7 +2391,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Implemented and callable for this exact target.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#get-working-frame-properties) · [.NET](/api/dotnet/utility-operations#get-working-frame-properties) · [Python](/api/python/utility-operations#get-working-frame-properties) · [JavaScript and TypeScript](/api/javascript/utility-operations#get-working-frame-properties)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/get-working-frame-properties) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/get-working-frame-properties) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/get-working-frame-properties) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/get-working-frame-properties)
 
 
 ## HTTP GET Request
@@ -2590,7 +2590,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#increment-point-name) · [.NET](/api/dotnet/utility-operations#increment-point-name) · [Python](/api/python/utility-operations#increment-point-name) · [JavaScript and TypeScript](/api/javascript/utility-operations#increment-point-name)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/increment-point-name) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/increment-point-name) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/increment-point-name) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/increment-point-name)
 
 
 ## Lock Imported Items
@@ -2645,7 +2645,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#lock-imported-items) · [.NET](/api/dotnet/utility-operations#lock-imported-items) · [Python](/api/python/utility-operations#lock-imported-items) · [JavaScript and TypeScript](/api/javascript/utility-operations#lock-imported-items)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/lock-imported-items) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/lock-imported-items) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/lock-imported-items) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/lock-imported-items)
 
 
 ## Lock/Unlock Selected Items
@@ -2704,7 +2704,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#lockunlock-selected-items) · [.NET](/api/dotnet/utility-operations#lockunlock-selected-items) · [Python](/api/python/utility-operations#lockunlock-selected-items) · [JavaScript and TypeScript](/api/javascript/utility-operations#lockunlock-selected-items)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/lockunlock-selected-items) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/lockunlock-selected-items) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/lockunlock-selected-items) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/lockunlock-selected-items)
 
 
 ## Lock/Unlock Trapping Control
@@ -2765,7 +2765,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#lockunlock-trapping-control) · [.NET](/api/dotnet/utility-operations#lockunlock-trapping-control) · [Python](/api/python/utility-operations#lockunlock-trapping-control) · [JavaScript and TypeScript](/api/javascript/utility-operations#lockunlock-trapping-control)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/lockunlock-trapping-control) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/lockunlock-trapping-control) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/lockunlock-trapping-control) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/lockunlock-trapping-control)
 
 
 ## Move Collection to Folder
@@ -2822,7 +2822,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#move-collection-to-folder) · [.NET](/api/dotnet/utility-operations#move-collection-to-folder) · [Python](/api/python/utility-operations#move-collection-to-folder) · [JavaScript and TypeScript](/api/javascript/utility-operations#move-collection-to-folder)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/move-collection-to-folder) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/move-collection-to-folder) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/move-collection-to-folder) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/move-collection-to-folder)
 
 
 ## Move Folder to Folder
@@ -2879,7 +2879,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#move-folder-to-folder) · [.NET](/api/dotnet/utility-operations#move-folder-to-folder) · [Python](/api/python/utility-operations#move-folder-to-folder) · [JavaScript and TypeScript](/api/javascript/utility-operations#move-folder-to-folder)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/move-folder-to-folder) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/move-folder-to-folder) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/move-folder-to-folder) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/move-folder-to-folder)
 
 
 ## Move Instruments Drag Graphically
@@ -2934,7 +2934,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#move-instruments-drag-graphically) · [.NET](/api/dotnet/utility-operations#move-instruments-drag-graphically) · [Python](/api/python/utility-operations#move-instruments-drag-graphically) · [JavaScript and TypeScript](/api/javascript/utility-operations#move-instruments-drag-graphically)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/move-instruments-drag-graphically) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/move-instruments-drag-graphically) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/move-instruments-drag-graphically) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/move-instruments-drag-graphically)
 
 
 ## Move Objects Drag Graphically
@@ -2989,7 +2989,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#move-objects-drag-graphically) · [.NET](/api/dotnet/utility-operations#move-objects-drag-graphically) · [Python](/api/python/utility-operations#move-objects-drag-graphically) · [JavaScript and TypeScript](/api/javascript/utility-operations#move-objects-drag-graphically)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/move-objects-drag-graphically) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/move-objects-drag-graphically) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/move-objects-drag-graphically) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/move-objects-drag-graphically)
 
 
 ## OPC UA MP Configuration Auto Run Settings
@@ -3315,7 +3315,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#scale-objects) · [.NET](/api/dotnet/utility-operations#scale-objects) · [Python](/api/python/utility-operations#scale-objects) · [JavaScript and TypeScript](/api/javascript/utility-operations#scale-objects)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/scale-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/scale-objects) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/scale-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/scale-objects)
 
 
 ## Send MP Result to External Device
@@ -3488,7 +3488,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-active-custom-language) · [.NET](/api/dotnet/utility-operations#set-active-custom-language) · [Python](/api/python/utility-operations#set-active-custom-language) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-active-custom-language)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-active-custom-language) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-active-custom-language) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-active-custom-language) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-active-custom-language)
 
 
 ## Set Active Integrated Language
@@ -3608,7 +3608,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-active-units) · [.NET](/api/dotnet/utility-operations#set-active-units) · [Python](/api/python/utility-operations#set-active-units) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-active-units)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-active-units) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-active-units) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-active-units) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-active-units)
 
 
 ## Set Angular Representation
@@ -3663,7 +3663,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-angular-representation) · [.NET](/api/dotnet/utility-operations#set-angular-representation) · [Python](/api/python/utility-operations#set-angular-representation) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-angular-representation)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-angular-representation) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-angular-representation) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-angular-representation) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-angular-representation)
 
 
 ## Set Auto Event Creation
@@ -3718,7 +3718,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-auto-event-creation) · [.NET](/api/dotnet/utility-operations#set-auto-event-creation) · [Python](/api/python/utility-operations#set-auto-event-creation) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-auto-event-creation)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-auto-event-creation) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-auto-event-creation) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-auto-event-creation) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-auto-event-creation)
 
 
 ## Set Automatic Backup State
@@ -3775,7 +3775,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-automatic-backup-state) · [.NET](/api/dotnet/utility-operations#set-automatic-backup-state) · [Python](/api/python/utility-operations#set-automatic-backup-state) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-automatic-backup-state)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-automatic-backup-state) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-automatic-backup-state) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-automatic-backup-state) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-automatic-backup-state)
 
 
 ## Set Automatic Relationship Construction State
@@ -3830,7 +3830,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-automatic-relationship-construction-state) · [.NET](/api/dotnet/utility-operations#set-automatic-relationship-construction-state) · [Python](/api/python/utility-operations#set-automatic-relationship-construction-state) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-automatic-relationship-construction-state)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-automatic-relationship-construction-state) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-automatic-relationship-construction-state) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-automatic-relationship-construction-state) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-automatic-relationship-construction-state)
 
 
 ## Set Collection Notes
@@ -3889,7 +3889,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-collection-notes) · [.NET](/api/dotnet/utility-operations#set-collection-notes) · [Python](/api/python/utility-operations#set-collection-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-collection-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-collection-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-collection-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-collection-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-collection-notes)
 
 
 ## Set Decimal Digits for Display
@@ -3952,7 +3952,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-decimal-digits-for-display) · [.NET](/api/dotnet/utility-operations#set-decimal-digits-for-display) · [Python](/api/python/utility-operations#set-decimal-digits-for-display) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-decimal-digits-for-display)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-decimal-digits-for-display) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-decimal-digits-for-display) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-decimal-digits-for-display) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-decimal-digits-for-display)
 
 
 ## Set Folder Notes
@@ -4011,7 +4011,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-folder-notes) · [.NET](/api/dotnet/utility-operations#set-folder-notes) · [Python](/api/python/utility-operations#set-folder-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-folder-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-folder-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-folder-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-folder-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-folder-notes)
 
 
 ## Set Interaction Mode
@@ -4070,7 +4070,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-interaction-mode) · [.NET](/api/dotnet/utility-operations#set-interaction-mode) · [Python](/api/python/utility-operations#set-interaction-mode) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-interaction-mode)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-interaction-mode) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-interaction-mode) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-interaction-mode) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-interaction-mode)
 
 
 ## Set Logging State
@@ -4125,7 +4125,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-logging-state) · [.NET](/api/dotnet/utility-operations#set-logging-state) · [Python](/api/python/utility-operations#set-logging-state) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-logging-state)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-logging-state) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-logging-state) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-logging-state) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-logging-state)
 
 
 ## Set MP Step Mode
@@ -4235,7 +4235,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-notification-cancel-override) · [.NET](/api/dotnet/utility-operations#set-notification-cancel-override) · [Python](/api/python/utility-operations#set-notification-cancel-override) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-notification-cancel-override)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-notification-cancel-override) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-notification-cancel-override) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-notification-cancel-override) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-notification-cancel-override)
 
 
 ## Set Object Notes
@@ -4296,7 +4296,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-object-notes) · [.NET](/api/dotnet/utility-operations#set-object-notes) · [Python](/api/python/utility-operations#set-object-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-object-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-object-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-object-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-object-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-object-notes)
 
 
 ## Set OPC DA Tag Value Double
@@ -4353,7 +4353,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-opc-da-tag-value-double) · [.NET](/api/dotnet/utility-operations#set-opc-da-tag-value-double) · [Python](/api/python/utility-operations#set-opc-da-tag-value-double) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-opc-da-tag-value-double)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-double) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-double) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-double) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-double)
 
 
 ## Set OPC DA Tag Value Integer
@@ -4410,7 +4410,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-opc-da-tag-value-integer) · [.NET](/api/dotnet/utility-operations#set-opc-da-tag-value-integer) · [Python](/api/python/utility-operations#set-opc-da-tag-value-integer) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-opc-da-tag-value-integer)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-integer) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-integer) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-integer) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-integer)
 
 
 ## Set OPC DA Tag Value String
@@ -4467,7 +4467,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-opc-da-tag-value-string) · [.NET](/api/dotnet/utility-operations#set-opc-da-tag-value-string) · [Python](/api/python/utility-operations#set-opc-da-tag-value-string) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-opc-da-tag-value-string)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-string) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-string) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-string) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-opc-da-tag-value-string)
 
 
 ## Set OPC UA Node Named Coordinate Frame
@@ -4738,7 +4738,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-point-notes) · [.NET](/api/dotnet/utility-operations#set-point-notes) · [Python](/api/python/utility-operations#set-point-notes) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-point-notes)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-point-notes) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-point-notes) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-point-notes) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-point-notes)
 
 
 ## Set Special MP Mode
@@ -4850,7 +4850,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-user-interface-profile) · [.NET](/api/dotnet/utility-operations#set-user-interface-profile) · [Python](/api/python/utility-operations#set-user-interface-profile) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-user-interface-profile)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-user-interface-profile) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-user-interface-profile) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-user-interface-profile) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-user-interface-profile)
 
 
 ## Set View Idle Update Frequency
@@ -4905,7 +4905,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-view-idle-update-frequency) · [.NET](/api/dotnet/utility-operations#set-view-idle-update-frequency) · [Python](/api/python/utility-operations#set-view-idle-update-frequency) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-view-idle-update-frequency)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-view-idle-update-frequency) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-view-idle-update-frequency) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-view-idle-update-frequency) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-view-idle-update-frequency)
 
 
 ## Set WildCard Asterisk Mode
@@ -4960,7 +4960,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-wildcard-asterisk-mode) · [.NET](/api/dotnet/utility-operations#set-wildcard-asterisk-mode) · [Python](/api/python/utility-operations#set-wildcard-asterisk-mode) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-wildcard-asterisk-mode)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-wildcard-asterisk-mode) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-wildcard-asterisk-mode) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-wildcard-asterisk-mode) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-wildcard-asterisk-mode)
 
 
 ## Set Working Frame
@@ -5017,7 +5017,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#set-working-frame) · [.NET](/api/dotnet/utility-operations#set-working-frame) · [Python](/api/python/utility-operations#set-working-frame) · [JavaScript and TypeScript](/api/javascript/utility-operations#set-working-frame)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/set-working-frame) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/set-working-frame) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/set-working-frame) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/set-working-frame)
 
 
 ## Speak To User
@@ -5148,7 +5148,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#status-dialog) · [.NET](/api/dotnet/utility-operations#status-dialog) · [Python](/api/python/utility-operations#status-dialog) · [JavaScript and TypeScript](/api/javascript/utility-operations#status-dialog)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/status-dialog) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/status-dialog) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/status-dialog) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/status-dialog)
 
 
 ## Step Comment
@@ -5306,7 +5306,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#trim-log-file) · [.NET](/api/dotnet/utility-operations#trim-log-file) · [Python](/api/python/utility-operations#trim-log-file) · [JavaScript and TypeScript](/api/javascript/utility-operations#trim-log-file)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/trim-log-file) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/trim-log-file) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/trim-log-file) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/trim-log-file)
 
 
 ## UDP Receive String
@@ -5611,4 +5611,4 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Selected because it exposes SpatialAnalyzer-owned state or behavior through a reviewed SDK-observed command.
 
 
-**API References:** [gRPC](/api/grpc/utility-operations#write-to-log) · [.NET](/api/dotnet/utility-operations#write-to-log) · [Python](/api/python/utility-operations#write-to-log) · [JavaScript and TypeScript](/api/javascript/utility-operations#write-to-log)
+**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/utility-operations/write-to-log) · [.NET](/api/dotnet/sa-2026.1.0529.7/utility-operations/write-to-log) · [Python](/api/python/sa-2026.1.0529.7/utility-operations/write-to-log) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/utility-operations/write-to-log)

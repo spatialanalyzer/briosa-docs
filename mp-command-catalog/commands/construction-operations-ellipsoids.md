@@ -96,4 +96,4 @@ when its color argument is omitted; exact SA 2026.1.0529.7 evidence takes
 precedence for Briosa. Supplied values are passed through without additional
 geometry validation.
 
-[gRPC](/api/grpc/construction-operations-ellipsoids#construct-ellipsoid) · [.NET](/api/dotnet/construction-operations-ellipsoids#construct-ellipsoid) · [Python](/api/python/construction-operations-ellipsoids#construct-ellipsoid) · [JavaScript](/api/javascript/construction-operations-ellipsoids#construct-ellipsoid)
+[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-ellipsoids/construct-ellipsoid) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-ellipsoids/construct-ellipsoid) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-ellipsoids/construct-ellipsoid) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-ellipsoids/construct-ellipsoid)
