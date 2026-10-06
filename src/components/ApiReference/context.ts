@@ -10,14 +10,17 @@ export function rememberTarget(target: string, preference = false): void {
 // The release/SA pair being read across history pages in this tab.
 export const pairKey = 'briosa.api.history-pair';
 export type Pair = {release: string; target: string};
-export function readPair(): Pair | null {
+// Release numbers belong to one API family (Server 0.7.0 is not Client 0.7.0),
+// so the pair is stored with its family and read back only within it. The SA
+// target alone carries across families, through the browsing target.
+export function readPair(family: string): Pair | null {
   try {
-    const [release, target] = (sessionStorage.getItem(pairKey) ?? '').split('|');
-    return release && target ? {release, target} : null;
+    const [stored, release, target] = (sessionStorage.getItem(pairKey) ?? '').split('|');
+    return stored === family && release && target ? {release, target} : null;
   } catch { return null; }
 }
-export function rememberPair(pair: Pair | null): void {
-  try { if (pair) sessionStorage.setItem(pairKey, `${pair.release}|${pair.target}`); else sessionStorage.removeItem(pairKey); } catch { /* The URL still carries the pair. */ }
+export function rememberPair(family: string, pair: Pair | null): void {
+  try { if (pair) sessionStorage.setItem(pairKey, `${family}|${pair.release}|${pair.target}`); else sessionStorage.removeItem(pairKey); } catch { /* The URL still carries the pair. */ }
 }
 export const suffix = (id: string): string => id === 'overview' ? '' : `/${id}`;
 export function anchorOf(hash: string): string {

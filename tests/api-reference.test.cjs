@@ -223,6 +223,38 @@ test('section and history navigation keep the release/SA pair being read', async
   assert.equal($('.api-breadcrumbs a[href^="/api/grpc/sa-"]').length, 0);
 });
 
+test('remembered history pairs stay within their API family; only the SA target carries across', async () => {
+  const {rememberPair, readPair, rememberTarget, readTarget, selection} = await import('../src/components/ApiReference/context.ts');
+  const storage = () => { const values = new Map(); return {getItem: (k) => values.get(k) ?? null, setItem: (k, v) => values.set(k, v), removeItem: (k) => values.delete(k)}; };
+  const originalLocal = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
+  const originalSession = Object.getOwnPropertyDescriptor(globalThis, 'sessionStorage');
+  try {
+    Object.defineProperty(globalThis, 'localStorage', {configurable: true, value: storage()});
+    Object.defineProperty(globalThis, 'sessionStorage', {configurable: true, value: storage()});
+    const t26 = '2026.1.0529.7';
+    // Reading gRPC Direct CAD Access for Server 0.7.0 / SA 2026 in this tab.
+    rememberTarget(t26);
+    rememberPair('grpc', {release: '0.7.0', target: t26});
+    assert.deepEqual(readPair('grpc'), {release: '0.7.0', target: t26});
+    assert.equal(readPair('python'), null, 'a gRPC Server release is never read as a Python Client release');
+    // Then opening the Python history of the same method in the same tab.
+    const variant = (release, target, revision) => ({release, target, revision, href: `#release-${release}-sa-${target}`, available: true});
+    const python = {kind: 'history', path: '/api/python/file-operations/direct-cad-access', family: 'python', variants: [variant('0.4.0', t26, 2), variant('0.3.0', t26, 2), variant('0.1.0', t26, 1)], compatibility: {targets: []}};
+    assert.deepEqual(selection(python, '', '', readTarget(), readPair('python')), {target: t26, replace: null}, 'no release is added or reported missing; the SA target carries');
+    // Reading a Python pair replaces the tab's pair, and gRPC no longer reads it.
+    rememberPair('python', {release: '0.2.0', target: t26});
+    assert.equal(readPair('grpc'), null);
+    assert.deepEqual(readPair('python'), {release: '0.2.0', target: t26});
+    // A pair stored before families were recorded is ignored rather than misread.
+    sessionStorage.setItem('briosa.api.history-pair', `0.7.0|${t26}`);
+    assert.equal(readPair('grpc'), null);
+    assert.equal(readPair('python'), null);
+  } finally {
+    if (originalLocal) Object.defineProperty(globalThis, 'localStorage', originalLocal); else delete globalThis.localStorage;
+    if (originalSession) Object.defineProperty(globalThis, 'sessionStorage', originalSession); else delete globalThis.sessionStorage;
+  }
+});
+
 test('search prefers the release of the reference being read, including release-independent addresses', async () => {
   const {searchFilters} = await import('../src/components/ApiReference/context.ts');
   const current = {grpc: {'2024.1.0508.5': '0.9.0', '2026.1.0529.7': '0.9.0'}};

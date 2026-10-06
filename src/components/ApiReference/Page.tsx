@@ -39,12 +39,12 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   useEffect(() => {
     setNotice('');
     setMobileNavOpen(false);
-    if (!isHistory) { rememberTarget(page.target); rememberPair(null); }
+    if (!isHistory) { rememberTarget(page.target); rememberPair(page.family, null); }
     else {
-      const shown = selection(page, location.hash, location.search, readTarget(), readPair());
+      const shown = selection(page, location.hash, location.search, readTarget(), readPair(page.family));
       if (shown.target) rememberTarget(shown.target);
       // An unavailable request is still the pair being read; the next history page continues it.
-      if (shown.remember) rememberPair(shown.remember);
+      if (shown.remember) rememberPair(page.family, shown.remember);
       // The address always states the pair the selectors show.
       if (shown.replace) history.replace(shown.replace);
       setSelected(shown);
