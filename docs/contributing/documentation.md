@@ -35,6 +35,7 @@ Current defaults are Server **0.9.0** and clients **0.4.0**. Servers 0.9.1 and 0
 2. Compare tagged protobuf, runtime registration, capability policy, and handwritten client APIs; reconcile target-specific signatures, defaults, and values.
 3. Update guides and every catalog representation without promoting validation claims.
 4. Cut each product snapshot with its Docusaurus version command and update defaults. Do not add the new release to `compatibilityAddresses` in `plugins/api-reference/targets.json`; current references already have release-independent addresses.
+   A server release that keeps the newest snapshot's protobuf and public API schemas gets no snapshot of its own; list it under `sameContract` in `plugins/api-reference/targets.json` so the reference names every server that serves that contract.
 5. Run Node.js 24 `npm ci` and `npm run check`; verify the search-enabled build, current/historical routes, target navigation, and representative released-package examples.
 6. After merge and deployment, verify live routes and refresh the Algolia crawler/index. Local checks do not refresh deployed search.
 

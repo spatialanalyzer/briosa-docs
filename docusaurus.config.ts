@@ -241,7 +241,7 @@ const config: Config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      additionalLanguages: ['csharp', 'protobuf', 'python', 'typescript'],
+      additionalLanguages: ['csharp', 'powershell', 'protobuf', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
 };
