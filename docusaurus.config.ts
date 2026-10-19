@@ -22,7 +22,12 @@ if (Object.values(algolia).some(Boolean) && !searchEnabled) {
 const config: Config = {
   title: 'Briosa',
   tagline: 'SpatialAnalyzer integration, simplified.',
-  favicon: 'brand/icons/favicon.svg',
+  // The brand guide's icon set: the SVG favicon, the multisize ICO, and the home-screen icon.
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'icon', href: '/brand/icons/favicon.svg', type: 'image/svg+xml'}},
+    {tagName: 'link', attributes: {rel: 'icon', href: '/brand/icons/favicon.ico', sizes: 'any'}},
+    {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: '/brand/icons/apple-touch-icon.png'}},
+  ],
   future: {v4: true},
   url: 'https://briosa.dev',
   baseUrl: '/',
@@ -130,8 +135,8 @@ const config: Config = {
         alt: 'Briosa home',
         src: 'brand/suite/briosa-docs-color.svg',
         srcDark: 'brand/suite/briosa-docs-inverse.svg',
-        width: 180,
-        height: 58,
+        width: 179,
+        height: 32,
       },
       items: [
         {to: '/install', label: 'Install', position: 'left'},
@@ -180,10 +185,10 @@ const config: Config = {
       style: 'dark',
       logo: {
         alt: 'Briosa home',
-        src: 'brand/logos/briosa-horizontal-inverse.svg',
+        src: 'brand/logos/briosa-horizontal-compact-inverse.svg',
         href: '/',
         width: 180,
-        height: 51,
+        height: 48,
       },
       links: [
         {

@@ -1,7 +1,7 @@
 .hero {
   padding: 4.5rem 0;
   background: var(--briosa-feature-background);
-  color: var(--briosa-white);
+  color: var(--briosa-dark-ink);
 }
 
 .heroGrid {
@@ -18,7 +18,7 @@
   font-weight: 550;
   line-height: 1.1;
   letter-spacing: -0.045em;
-  color: var(--briosa-white);
+  color: var(--briosa-dark-ink);
 }
 
 .eyebrow,
@@ -31,7 +31,7 @@
 }
 
 .eyebrow {
-  color: var(--briosa-cyan);
+  color: var(--briosa-dark-jaw);
 }
 
 .kicker {
@@ -41,14 +41,14 @@
 .lead {
   max-width: 38rem;
   margin: 1.5rem 0 2rem;
-  color: var(--briosa-silver);
+  color: var(--briosa-dark-ink);
   font-size: 1.12rem;
   line-height: 1.75;
 }
 
 .tagline {
   margin: 1.5rem 0 0;
-  color: var(--briosa-cyan);
+  color: var(--briosa-dark-jaw);
   font-size: 1.12rem;
 }
 
@@ -59,35 +59,35 @@
 }
 
 .actions :global(.button--primary) {
-  border-color: var(--briosa-cyan);
-  background: var(--briosa-cyan);
-  color: var(--briosa-blue);
+  border-color: var(--briosa-dark-jaw);
+  background: var(--briosa-dark-jaw);
+  color: var(--briosa-void);
 }
 
 .actions :global(.button--primary:hover) {
-  border-color: var(--briosa-white);
-  background: var(--briosa-white);
+  border-color: var(--briosa-dark-ink);
+  background: var(--briosa-dark-ink);
 }
 
 .actions :global(.button--outline) {
-  border-color: #92b2d3;
-  color: var(--briosa-white);
+  border-color: var(--briosa-dark-ink-2);
+  color: var(--briosa-dark-ink);
 }
 
 .actions :global(.button--outline:hover) {
-  border-color: var(--briosa-white);
-  background: var(--briosa-white);
-  color: var(--briosa-blue);
+  border-color: var(--briosa-dark-ink);
+  background: var(--briosa-dark-ink);
+  color: var(--briosa-void);
 }
 
 .hero :focus-visible {
-  outline-color: var(--briosa-white);
+  outline-color: var(--briosa-dark-ink);
 }
 
 .heroNote {
   max-width: 34rem;
   margin: 1.25rem 0 0;
-  color: #c3d6e9;
+  color: var(--briosa-dark-ink-2);
   font-size: 0.8rem;
   line-height: 1.6;
 }
@@ -107,7 +107,7 @@
 
 .cardLabel {
   margin: 0;
-  color: #c3d6e9;
+  color: var(--briosa-dark-ink-2);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.09em;
@@ -119,7 +119,7 @@
   font-family: var(--ifm-font-family-monospace);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--briosa-white);
+  color: var(--briosa-dark-ink);
 }
 
 .heroLinks {
@@ -133,11 +133,11 @@
   gap: 0.3rem;
   padding: 0.85rem 0;
   border-top: 1px solid var(--briosa-feature-border);
-  color: var(--briosa-cyan);
+  color: var(--briosa-dark-jaw);
 }
 
 .heroLinks a:hover {
-  color: var(--briosa-white);
+  color: var(--briosa-dark-ink);
   text-decoration: none;
 }
 
@@ -150,7 +150,7 @@
 }
 
 .heroLinks span {
-  color: #c3d6e9;
+  color: var(--briosa-dark-ink-2);
   font-size: 0.8rem;
   line-height: 1.5;
 }
