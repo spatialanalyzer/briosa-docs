@@ -312,7 +312,9 @@
   transform: translateX(3px);
 }
 
-/* ---------- Exact-target breadcrumb: SA target, then the MP Editor path ---------- */
+/* ---------- Exact-target breadcrumb: SA target, then the MP Editor path ----------
+   Not uppercased: MP Editor labels keep their exact casing, which can differ
+   between targets (SA 2024 "Point of View", SA 2026 "Point Of View"). */
 .catalog-path {
   display: flex;
   flex-wrap: wrap;
@@ -323,7 +325,6 @@
   font: 500 11px/1.6 var(--sl-f-display);
   font-stretch: 125%;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
 .catalog-path > span[aria-hidden='true'] {
@@ -1202,8 +1203,10 @@
   font-size: 12px;
 }
 
+/* The selected count keeps its status hue, drawn toward ink so 12px digits
+   hold 4.5:1 on the tinted chip in both themes. */
 .catalog-chip[aria-pressed='true'] .catalog-chip__count {
-  color: var(--sc);
+  color: color-mix(in srgb, var(--sc) 80%, var(--sl-ink));
 }
 
 .catalog-filter__summary {
