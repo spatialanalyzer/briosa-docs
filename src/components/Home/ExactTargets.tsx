@@ -29,21 +29,35 @@ function Reticle(): ReactNode {
   );
 }
 
+/**
+ * A package name that wraps instead of truncating. An npm name breaks right
+ * after its scope's slash, and the rest stays whole unless even a line of its
+ * own is too narrow.
+ */
+function PackageName({name}: {readonly name: string}): ReactNode {
+  const scope = name.indexOf('/') + 1;
+  if (!scope) return <code>{name}</code>;
+  return (
+    <code>
+      {name.slice(0, scope)}
+      <wbr />
+      <span>{name.slice(scope)}</span>
+    </code>
+  );
+}
+
 function Packages({target}: {readonly target: string}): ReactNode {
   const pk = packagesFor(target);
   return (
     <ul className={styles.tgtPk}>
       <li>
-        <span>NuGet</span>{' '}
-        <code>{pk.nuget}</code>
+        <span>NuGet</span> <PackageName name={pk.nuget} />
       </li>
       <li>
-        <span>PyPI</span>{' '}
-        <code>{pk.pypi}</code>
+        <span>PyPI</span> <PackageName name={pk.pypi} />
       </li>
       <li>
-        <span>npm</span>{' '}
-        <code>{pk.npm}</code>
+        <span>npm</span> <PackageName name={pk.npm} />
       </li>
     </ul>
   );

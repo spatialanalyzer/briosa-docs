@@ -5,7 +5,7 @@ import {useColorMode} from '@docusaurus/theme-common';
 
 import styles from '@site/src/pages/index.module.css';
 import {createBladeScan, type BladeScan} from './bladeScan';
-import {CopyButton, useTabs} from './parts';
+import {CopyButton, MotionToggle, useTabs} from './parts';
 import {packagesFor, targets, versions} from './data';
 import Icon from './Icon';
 
@@ -87,7 +87,10 @@ function InstallTerminal(): ReactNode {
   );
 }
 
-/** The decorative scan stage. Every readout on it is sample data. */
+/**
+ * The scan stage. Everything on it is decorative sample data, hidden from
+ * assistive technology, except the motion toggle in the readout.
+ */
 function ScanStage(): ReactNode {
   const stage = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -119,10 +122,10 @@ function ScanStage(): ReactNode {
   }, [colorMode]);
 
   return (
-    <div className={styles.stage} ref={stage} aria-hidden="true">
-      <canvas className={styles.scan} ref={canvas} />
-      <div className={clsx('sl-brk', styles.frame)} />
-      <div className={clsx('sl-hud', styles.hud, styles.hudTop)}>
+    <div className={styles.stage} ref={stage}>
+      <canvas className={styles.scan} ref={canvas} aria-hidden="true" />
+      <div className={clsx('sl-brk', styles.frame)} aria-hidden="true" />
+      <div className={clsx('sl-hud', styles.hud, styles.hudTop)} aria-hidden="true">
         <span>SA {targets.sa2026}</span>
         <span className={styles.hudOn}>SDK Connected</span>
         <span>
@@ -130,8 +133,8 @@ function ScanStage(): ReactNode {
         </span>
       </div>
       <div className={clsx('sl-hud', styles.hud, styles.hudRead)}>
-        <span>SMR · mm</span>
-        <span className={clsx('sl-num', styles.dro)}>
+        <span aria-hidden="true">SMR · mm</span>
+        <span className={clsx('sl-num', styles.dro)} aria-hidden="true">
           <span>
             <i>X</i>
             <span ref={x}>331.512</span>
@@ -145,14 +148,15 @@ function ScanStage(): ReactNode {
             <span ref={z}>201.336</span>
           </span>
         </span>
-        <span className={styles.sweep}>
+        <span className={styles.sweep} aria-hidden="true">
           Sweep{' '}
           <span className="sl-num" ref={sweep}>
             100%
           </span>
         </span>
+        <MotionToggle className={styles.motion} />
       </div>
-      <div className={clsx('sl-hud', styles.hud, styles.hudLegend)}>
+      <div className={clsx('sl-hud', styles.hud, styles.hudLegend)} aria-hidden="true">
         <div className={styles.legendCap}>
           <span>Deviation</span>
           <span>
