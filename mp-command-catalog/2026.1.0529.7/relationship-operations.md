@@ -418,6 +418,6 @@ Editor placement.
 
 | MP Command | Documented MP Group Path | Briosa Status | Validation |
 | --- | --- | --- | --- |
-| [Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#rejection-scalar-type) | Relationship Operations / Relationship Attributes Scalar Types | **SDK Unavailable** | Not applicable |
+| [Rejection (Scalar Type)](/mp-command-catalog/commands/relationship-operations#rejection-scalar-type) | Relationship Operations / Relationship Attributes Scalar Types | <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span> | Not applicable |
 
 [Open the canonical Relationship Operations command reference →](/mp-command-catalog/commands/relationship-operations)

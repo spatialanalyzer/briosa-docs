@@ -6,7 +6,7 @@ description: Reviewed Construction Operations / Point Clouds commands and releas
 
 # Point Clouds
 
-**SA 2024.1.0508.5 · Construction Operations / Point Clouds**
+<p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Construction Operations <span aria-hidden="true">/</span> Point Clouds</p>
 
 This group contains 11 reviewed command entries. **Current** means implemented
 in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
@@ -14,16 +14,16 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Construct Boundary Points from Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#construct-boundary-points-from-cloud) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Cross Section Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Cross Section Cloud - User Select](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud---user-select) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Cloud from Existing Clouds](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Cloud from Visible Cloud Points](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Cloud Limiting Probing Directions](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Clouds from Existing Cloud Points - Runtime Select](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Clouds from Existing Clouds - Uniform Spacing](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing) | **Current** | At Risk — no 2024 runtime validation |
-| [Construct Point Clouds from Existing Point Group](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group) | **Current** | At Risk — no 2024 runtime validation |
-| [Create Cloud Thinning Settings](/mp-command-catalog/commands/construction-operations-point-clouds#create-cloud-thinning-settings) | **Excluded** | Evidence review |
-| [Extract Sphere Centers from Point Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud) | **Current** | At Risk — no 2024 runtime validation |
+| [Construct Boundary Points from Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#construct-boundary-points-from-cloud) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Cross Section Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Cross Section Cloud - User Select](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud---user-select) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Cloud from Existing Clouds](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Cloud from Visible Cloud Points](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Cloud Limiting Probing Directions](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Clouds from Existing Cloud Points - Runtime Select](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Clouds from Existing Clouds - Uniform Spacing](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Point Clouds from Existing Point Group](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Create Cloud Thinning Settings](/mp-command-catalog/commands/construction-operations-point-clouds#create-cloud-thinning-settings) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
+| [Extract Sphere Centers from Point Cloud](/mp-command-catalog/commands/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)

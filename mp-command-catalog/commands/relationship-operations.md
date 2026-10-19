@@ -13,7 +13,7 @@ The MP Editor group paths and canonical command identities are preserved.
 Current entries are included in Briosa Server 0.9.2; runtime policy and readiness
 still apply. Documentation-only identities retain their SDK limitations.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>115</strong></div>

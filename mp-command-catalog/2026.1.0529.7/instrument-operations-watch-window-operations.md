@@ -12,12 +12,12 @@ All seven commands are reviewed: six are **Current** and one is **Uncommitted**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Watch Point To Point](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) | **Current** |
-| [Watch Point To Objects](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) | **Current** |
-| [Watch Point To Edge](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) | **Current** |
-| [Watch Closest Point](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) | **Current** |
-| [Watch Instrument](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) | **Current** |
-| [Watch Window Template 3D](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-window-template-3d) | **Uncommitted** |
-| [Watch Point To Point With View Zooming](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) | **Current** |
+| [Watch Point To Point](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Watch Point To Objects](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-objects) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Watch Point To Edge](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-edge) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Watch Closest Point](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-closest-point) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Watch Instrument](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-instrument) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Watch Window Template 3D](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-window-template-3d) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> |
+| [Watch Point To Point With View Zooming](/mp-command-catalog/commands/instrument-operations-watch-window-operations#watch-point-to-point-with-view-zooming) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical Watch Window Operations command reference →](/mp-command-catalog/commands/instrument-operations-watch-window-operations)

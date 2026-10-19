@@ -60,14 +60,32 @@ command result even when the same signature appears in several SA releases.
 
 ## How to Read Status
 
-| Status | Meaning |
-| --- | --- |
-| **Current** | The operation is implemented in the released server for this exact target; runtime policy and readiness still apply. |
-| **Next** | Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API. |
-| **Undecided** | The command is still being evaluated and has no reviewed disposition. |
-| **Uncommitted** | The command may be useful, but the project has made no release commitment. |
-| **Excluded** | A reviewed product, policy, safety, or scope decision excludes it. |
-| **SDK Unavailable** | The reviewed exact-target SDK surface cannot implement it. |
+<dl className="catalog-status-defs">
+  <div>
+    <dt><span className="catalog-status catalog-status--current">Current</span></dt>
+    <dd>The operation is implemented in the released server for this exact target; runtime policy and readiness still apply.</dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--next">Next</span></dt>
+    <dd>Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API.</dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--undecided">Undecided</span></dt>
+    <dd>The command is still being evaluated and has no reviewed disposition.</dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></dt>
+    <dd>The command may be useful, but the project has made no release commitment.</dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--excluded">Excluded</span></dt>
+    <dd>A reviewed product, policy, safety, or scope decision excludes it.</dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></dt>
+    <dd>The reviewed exact-target SDK surface cannot implement it.</dd>
+  </div>
+</dl>
 
 An **At Risk** note qualifies validation evidence independently from support
 status. A missing fixture, hardware dependency, license, or unexecuted licensed

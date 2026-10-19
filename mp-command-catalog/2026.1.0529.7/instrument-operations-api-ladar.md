@@ -12,11 +12,11 @@ All six commands are **Current**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Set LADAR AutoMeas Point](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) | **Current** |
-| [Set LADAR AutoMeas Sphere](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) | **Current** |
-| [Set LADAR FeatureMeas Sphere](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) | **Current** |
-| [Set LADAR FeatureMeas Circle](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) | **Current** |
-| [Set LADAR FeatureMeas Slot](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) | **Current** |
-| [Set LADAR FeatureMeas Cylinder](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) | **Current** |
+| [Set LADAR AutoMeas Point](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set LADAR AutoMeas Sphere](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set LADAR FeatureMeas Sphere](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set LADAR FeatureMeas Circle](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set LADAR FeatureMeas Slot](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set LADAR FeatureMeas Cylinder](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical API - LADAR command reference →](/mp-command-catalog/commands/instrument-operations-api-ladar)

@@ -11,7 +11,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the five commands observed under **Google Sheets
 Operations → Google Sheets Read Operations** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>5</strong></div>

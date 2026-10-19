@@ -12,7 +12,7 @@ This page covers all five commands observed under **Instrument Operations →
 Nikon Metrology Laser Radars LR → LR Cloud Viewer Operations** in SA
 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>5</strong></div>

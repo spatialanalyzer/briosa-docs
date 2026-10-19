@@ -13,11 +13,11 @@ libraries.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Google Sheets Write Boolean](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-boolean) | **Excluded** |
-| [Google Sheets Write Integer](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-integer) | **Excluded** |
-| [Google Sheets Write Double](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-double) | **Excluded** |
-| [Google Sheets Write String](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-string) | **Excluded** |
-| [Google Sheets Write Image](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-image) | **Excluded** |
-| [Google Sheets Write Variables](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-variables) | **Excluded** |
+| [Google Sheets Write Boolean](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-boolean) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Write Integer](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-integer) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Write Double](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-double) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Write String](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-string) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Write Image](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-image) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Write Variables](/mp-command-catalog/commands/google-sheets-write-operations#google-sheets-write-variables) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
 
 [Open the canonical Google Sheets Write Operations command reference →](/mp-command-catalog/commands/google-sheets-write-operations)

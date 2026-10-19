@@ -6,7 +6,7 @@ description: Reviewed File Operations / File Export / QDAS File Export commands 
 
 # QDAS File Export
 
-**SA 2024.1.0508.5 · File Operations / File Export / QDAS File Export**
+<p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> File Operations <span aria-hidden="true">/</span> File Export <span aria-hidden="true">/</span> QDAS File Export</p>
 
 This group contains 4 reviewed command entries. **Current** means implemented
 in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
@@ -14,10 +14,10 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Add K-Field to QDAS Data List](/mp-command-catalog/commands/file-operations#add-k-field-to-qdas-data-list) | **SDK Unavailable** | Evidence review |
-| [Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) | **Current** | At Risk — no 2024 runtime validation |
-| [Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) | **Current** | At Risk — no 2024 runtime validation |
-| [Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) | **Current** | At Risk — no 2024 runtime validation |
+| [Add K-Field to QDAS Data List](/mp-command-catalog/commands/file-operations#add-k-field-to-qdas-data-list) | <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span> | Evidence review |
+| [Export QDAS Characteristics](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Export QDAS Data List](/mp-command-catalog/commands/file-operations#export-qdas-data-list) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Prepare QDAS Data List](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 
 ## Subgroups
 

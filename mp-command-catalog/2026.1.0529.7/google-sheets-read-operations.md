@@ -13,10 +13,10 @@ libraries.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Google Sheets Read Boolean](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-boolean) | **Excluded** |
-| [Google Sheets Read Integer](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-integer) | **Excluded** |
-| [Google Sheets Read Double](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-double) | **Excluded** |
-| [Google Sheets Read String](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-string) | **Excluded** |
-| [Google Sheets Read Variables](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-variables) | **Excluded** |
+| [Google Sheets Read Boolean](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-boolean) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Read Integer](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-integer) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Read Double](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-double) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Read String](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-string) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
+| [Google Sheets Read Variables](/mp-command-catalog/commands/google-sheets-read-operations#google-sheets-read-variables) | <span className="catalog-status catalog-status--excluded">Excluded</span> |
 
 [Open the canonical Google Sheets Read Operations command reference →](/mp-command-catalog/commands/google-sheets-read-operations)
