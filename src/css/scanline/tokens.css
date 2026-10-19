@@ -45,11 +45,11 @@
   --sl-term-bg: rgba(255, 255, 255, 0.9);
   --sl-term-solid: #FFFFFF;
   --sl-tok-kw: #2E47D9;
-  --sl-tok-type: #0B7F66;
+  --sl-tok-type: #076A55;
   --sl-tok-str: #9A5B00;
   --sl-tok-num: #C0244A;
   --sl-tok-fn: #006DB6;
-  --sl-tok-com: #5E7591;
+  --sl-tok-com: #536C8C;
   --sl-tok-punc: #46607E;
   --sl-exec: rgba(0, 109, 182, 0.09);
   --sl-exec-edge: #006DB6;
@@ -81,10 +81,12 @@
   /* Status follows the deviation map: in tolerance is green, coming next is cyan,
      open questions are amber, excluded is red, and what the SDK lacks is indigo.
      Light values are darkened so each passes as text on white. */
-  --sl-st-current: #0B7F66;
-  --sl-st-next: #006DB6;
-  --sl-st-undecided: #536C8C;
-  --sl-st-uncommitted: #8A5A00;
+  /* Light status colors are text-safe: at least 4.5:1 as 10.5px pill labels on an
+     11% tint of themselves, over every light surface. */
+  --sl-st-current: #076A55;
+  --sl-st-next: #0062A6;
+  --sl-st-undecided: #4A6280;
+  --sl-st-uncommitted: #805300;
   --sl-st-excluded: #B81E40;
   --sl-st-unavailable: #3B4BC8;
 
