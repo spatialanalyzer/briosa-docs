@@ -6,7 +6,7 @@
 
 /* ---------- Layout: sidebar beam, reading column, contents rail ---------- */
 .api-reference {
-  --api-side: 272px;
+  --api-side: var(--doc-sidebar-width, 288px);
   --api-toc: 224px;
   display: grid;
   grid-template-columns: var(--api-side) minmax(0, 1fr) var(--api-toc);
@@ -1086,7 +1086,7 @@ a.api-state:hover {
 
 /* Names keep a readable width and wrap only after an underscore. */
 .api-fields td:nth-child(2) {
-  min-width: 13rem;
+  min-width: 12rem;
 }
 
 .api-contract .api-fields td:is(:nth-child(2), :nth-child(3)) code {
@@ -1103,7 +1103,6 @@ a.api-state:hover {
 
 .api-contract .api-fields td:nth-child(3) code {
   color: var(--sl-tok-type);
-  white-space: nowrap;
 }
 
 .api-optional {
@@ -1581,7 +1580,7 @@ a.api-state:hover {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1240px) {
+@media (max-width: 1320px) {
   .api-reference {
     grid-template-columns: var(--api-side) minmax(0, 1fr);
   }

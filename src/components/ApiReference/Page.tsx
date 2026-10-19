@@ -20,10 +20,12 @@ import './styles.css';
 
 export const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
 
-// A heading whose inline code (`GetSpatialAnalyzerState`) renders as code.
+// A heading whose inline code (`GetSpatialAnalyzerState`) renders as code. A
+// long identifier may wrap between its words on a narrow screen.
+const identifier = (code: string) => code.split(/(?<=[a-z0-9])(?=[A-Z])|(?<=_)/).flatMap((part, i) => i ? [<wbr key={i} />, part] : [part]);
 export function InlineCode({text}: {text: string}): React.JSX.Element {
   return <>{text.split(/(`[^`]+`)/).filter(Boolean).map((part, i) => part.length > 2 && part.startsWith('`') && part.endsWith('`')
-    ? <code key={i}>{part.slice(1, -1)}</code>
+    ? <code key={i}>{identifier(part.slice(1, -1))}</code>
     : <React.Fragment key={i}>{part}</React.Fragment>)}</>;
 }
 
