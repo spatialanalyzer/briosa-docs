@@ -29,10 +29,14 @@ original type library, license material, or vendor documentation.
 
 ## Verify and Extract
 
+<Steps>
+
 1. Verify the ZIP against its adjacent `.sha256` file.
 2. Extract the complete top-level directory.
 3. Keep the server, worker, and approved interop assembly together.
 4. Run `./Briosa.Server.exe diagnostics` before startup.
+
+</Steps>
 
 Offline diagnostics report safe build coordinates and package-layout checks.
 They do not activate COM, connect to SpatialAnalyzer, or expose paths,

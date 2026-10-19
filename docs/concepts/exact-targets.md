@@ -36,12 +36,16 @@ environment.
 
 ## What You Need to Do
 
+<Steps>
+
 1. Confirm the exact SpatialAnalyzer release you intend to use
 2. Install that release and its matching SA SDK
 3. Use the Briosa distribution built for the same release
 4. Start Briosa's disconnected SDK generation
 5. Start the matching application yourself or ask Briosa to launch it
 6. Connect only after the intended application is the eligible SDK target
+
+</Steps>
 
 For the first-party client libraries, the client-managed startup flow is
 able to select and launch the correct local Briosa distribution for you. It
@@ -86,12 +90,16 @@ SDK or establish concurrent execution readiness.
 
 When you want to switch releases:
 
+<Steps>
+
 1. Stop the current SDK generation
 2. Confirm that Windows is using the SDK required by the target
 3. Stop the current exact-target Briosa server and start the matching distribution
 4. Start a new disconnected SDK generation
 5. Start the intended SpatialAnalyzer release or ask that Briosa server to launch it
 6. Connect the SDK and require exact-match readiness
+
+</Steps>
 
 If several SpatialAnalyzer instances or SDK clients have been open, follow the
 [clean startup guidance](../getting-started/prerequisites#use-a-clean-sdk-ownership-state)

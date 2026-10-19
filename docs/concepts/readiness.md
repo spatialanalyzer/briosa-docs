@@ -21,11 +21,15 @@ successful connections while a second client blocks indefinitely during
 `ExecuteStep`. Briosa therefore admits MP work only after all of these are
 true:
 
+<Steps>
+
 1. the worker process is control-ready;
 2. the SDK is connected to SpatialAnalyzer;
 3. activated-SDK and connected-SA evidence each exactly match the target; and
 4. a bounded, value-discarding execution-channel probe succeeds for the current
    SDK generation.
+
+</Steps>
 
 The probe uses the normal serialized SDK path, confirms MP success and expected
 output shape, and discards the working-directory value.
