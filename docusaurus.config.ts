@@ -44,6 +44,7 @@ const config: Config = {
   clientModules: [
     require.resolve('@fontsource-variable/saira/wdth.css'),
     require.resolve('@fontsource-variable/jetbrains-mono/index.css'),
+    './src/client/navbar.ts',
   ],
   presets: [
     [

@@ -1,4 +1,4 @@
-/* Theme the official DocSearch components with Briosa's light/dark tokens. */
+/* Theme the official DocSearch components with the Scanline tokens. */
 html .DocSearch {
   --docsearch-primary-color: var(--ifm-color-primary);
   --docsearch-soft-primary-color: var(--ifm-menu-color-background-active);
@@ -15,57 +15,56 @@ html .DocSearch {
   --docsearch-searchbox-focus-background: var(--briosa-surface);
   --docsearch-modal-background: var(--briosa-surface);
   --docsearch-modal-width: 760px;
-  --docsearch-modal-shadow: 0 24px 80px rgb(0 20 40 / 24%);
+  --docsearch-modal-shadow: var(--sl-shadow);
   --docsearch-footer-background: var(--briosa-surface);
   --docsearch-footer-shadow: 0 -1px 0 var(--briosa-border);
   --docsearch-hit-background: var(--briosa-soft);
   --docsearch-hit-color: var(--ifm-font-color-base);
   --docsearch-hit-highlight-color: var(--ifm-menu-color-background-active);
   --docsearch-highlight-color: var(--ifm-color-primary);
-  --docsearch-logo-color: #003dff;
+  --docsearch-logo-color: var(--sl-ink-3);
   --docsearch-key-background: var(--briosa-surface);
   --docsearch-key-color: var(--briosa-muted);
-  --docsearch-border-radius: 8px;
-  --docsearch-container-background: rgb(0 20 40 / 64%);
+  --docsearch-border-radius: 4px;
+  --docsearch-container-background: var(--sl-scrim);
 }
 
 [data-theme='dark'] .DocSearch {
-  --docsearch-key-background: var(--briosa-void);
-  --docsearch-logo-color: #fff;
-  --docsearch-modal-shadow: 0 24px 80px rgb(0 8 20 / 55%);
+  --docsearch-key-background: var(--sl-void);
 }
 
 .navbar .DocSearch-Button {
   box-sizing: border-box;
-  width: 240px;
-  height: 44px;
-  min-height: 44px;
-  border: 1px solid var(--briosa-border);
-  border-radius: 12px;
-  margin: 0;
-  padding: 0 12px;
-  box-shadow: 0 1px 2px rgb(0 20 40 / 4%);
+  width: clamp(180px, 17vw, 240px);
+  height: 38px;
+  min-height: 38px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
+  margin: 0 6px 0 0;
+  padding: 0 7px 0 11px;
+  background: var(--sl-field);
+  box-shadow: none;
   transition: background-color 150ms ease, border-color 150ms ease,
     box-shadow 150ms ease;
 }
 
 .navbar .DocSearch-Button:hover {
-  background: var(--ifm-menu-color-background-active);
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  background: var(--sl-hover);
+  border-color: var(--sl-line-3);
+  box-shadow: none;
 }
 
 .navbar .DocSearch-Button-Placeholder {
-  font-size: 0.875rem;
-  font-weight: 500;
+  color: var(--sl-ink-2);
+  font: 400 14px/1 var(--sl-f-body);
   padding-inline: 10px 12px;
 }
 
 .navbar .DocSearch-Search-Icon {
-  width: 19px;
-  height: 19px;
-  color: var(--ifm-color-primary);
-  stroke-width: 1.8;
+  width: 17px;
+  height: 17px;
+  color: var(--sl-ink-2);
+  stroke-width: 1.6;
 }
 
 .navbar .DocSearch-Button-Keys {
@@ -75,12 +74,14 @@ html .DocSearch {
 
 .navbar .DocSearch-Button-Key {
   box-sizing: border-box;
-  width: 23px;
-  height: 25px;
-  border: 1px solid var(--briosa-border);
-  border-radius: 5px;
-  font-size: 12px;
-  line-height: 1;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--sl-ink-2);
+  font: 500 11px/1 var(--sl-f-mono);
 }
 
 .navbar .DocSearch-Button-Key--ctrl {
@@ -92,13 +93,13 @@ html .DocSearch {
 }
 
 .DocSearch .DocSearch-Modal {
-  border: 1px solid var(--briosa-border);
-  border-radius: 16px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 4px;
 }
 
 .DocSearch .DocSearch-Form {
-  border: 1px solid var(--briosa-border);
-  border-radius: 10px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
 }
 
 .DocSearch .DocSearch-SearchBar {
@@ -106,8 +107,8 @@ html .DocSearch {
 }
 
 .DocSearch .DocSearch-Form:focus-within {
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 0 0 2px var(--ifm-color-primary);
+  border-color: var(--sl-laser);
+  box-shadow: 0 0 0 1px var(--sl-laser);
 }
 
 .DocSearch .DocSearch-Input {
@@ -125,11 +126,11 @@ html .DocSearch {
 }
 
 .DocSearch .DocSearch-Hit a {
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .DocSearch .DocSearch-Footer {
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 4px 4px;
 }
 
 /* The bundled logo paths use a fixed fill; honor DocSearch's theme token. */
@@ -139,7 +140,7 @@ html .DocSearch {
 
 .navbar .DocSearch-Button:focus-visible,
 .DocSearch :where(a, button, input):focus-visible {
-  outline: 3px solid var(--ifm-color-primary);
+  outline: 2px solid var(--sl-laser);
   outline-offset: 3px;
 }
 
@@ -147,9 +148,12 @@ html .DocSearch {
  * button retains its accessible label and keyboard shortcut. */
 @media (max-width: 1199px) {
   .navbar .DocSearch-Button {
-    width: 44px;
+    width: 38px;
+    margin-right: 0;
     padding: 0;
     justify-content: center;
+    border-color: transparent;
+    background: transparent;
   }
 
   .navbar .DocSearch-Button-Keys,
@@ -176,8 +180,12 @@ html .DocSearch {
 
 @media (max-width: 400px) {
   /* 28 px is the brand guide's minimum height for suite lockups. */
-  .navbar:has(.DocSearch-Button) .navbar__logo {
-    height: 1.75rem;
+  .navbar:has(.DocSearch-Button) .sl-brand__art {
+    width: 157px;
+    height: 28px;
+  }
+
+  .navbar:has(.DocSearch-Button) .sl-brand {
     margin-right: 0.25rem;
   }
 }
