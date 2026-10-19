@@ -19,6 +19,8 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Construction Operations',
+          // Labels that repeat across sections need unique translation keys.
+          key: 'sa-2026-construction-operations',
           link: {
             type: 'doc',
             id: '2026.1.0529.7/construction-operations',
@@ -50,6 +52,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'GDT Operations',
+          key: 'sa-2026-gdt-operations',
           items: [
             '2026.1.0529.7/gdt-analysis',
             '2026.1.0529.7/gdt-construction',
@@ -62,6 +65,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Google Sheets Operations',
+          key: 'sa-2026-google-sheets-operations',
           link: {
             type: 'doc',
             id: '2026.1.0529.7/google-sheets-operations',
@@ -74,6 +78,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Instrument Operations',
+          key: 'sa-2026-instrument-operations',
           link: {
             type: 'doc',
             id: '2026.1.0529.7/instrument-operations',
@@ -86,6 +91,7 @@ const sidebars: SidebarsConfig = {
             {
               type: 'category',
               label: 'Nikon Metrology Laser Radars LR',
+              key: 'sa-2026-nikon-metrology-laser-radars-lr',
               link: {
                 type: 'doc',
                 id: '2026.1.0529.7/instrument-operations-nikon-metrology-laser-radars-lr',
@@ -167,6 +173,7 @@ const sidebars: SidebarsConfig = {
         {
           "type": "category",
           "label": "Construction Operations",
+          "key": "sa-2024-construction-operations",
           "link": {
             "type": "doc",
             "id": "2024.1.0508.5/construction-operations"
@@ -247,6 +254,7 @@ const sidebars: SidebarsConfig = {
         {
           "type": "category",
           "label": "Instrument Operations",
+          "key": "sa-2024-instrument-operations",
           "link": {
             "type": "doc",
             "id": "2024.1.0508.5/instrument-operations"
@@ -322,6 +330,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Construction Operations',
+          key: 'commands-construction-operations',
           link: {
             type: 'doc',
             id: 'commands/construction-operations',
@@ -353,6 +362,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'GDT Operations',
+          key: 'commands-gdt-operations',
           items: ['commands/gdt-analysis', 'commands/gdt-construction'],
         },
         'commands/dimension-operations',
@@ -362,6 +372,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Google Sheets Operations',
+          key: 'commands-google-sheets-operations',
           link: {type: 'doc', id: 'commands/google-sheets-operations'},
           items: [
             'commands/google-sheets-read-operations',
@@ -371,6 +382,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Instrument Operations',
+          key: 'commands-instrument-operations',
           link: {type: 'doc', id: 'commands/instrument-operations'},
           items: [
             'commands/instrument-operations-advanced-instrument-operations',
@@ -380,6 +392,7 @@ const sidebars: SidebarsConfig = {
             {
               type: 'category',
               label: 'Nikon Metrology Laser Radars LR',
+              key: 'commands-nikon-metrology-laser-radars-lr',
               link: {
                 type: 'doc',
                 id: 'commands/instrument-operations-nikon-metrology-laser-radars-lr',

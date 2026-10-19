@@ -1,0 +1,26 @@
+{
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Search the Documentation",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Search Results for \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "On This Page",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.common.editThisPage": {
+    "message": "Edit This Page",
+    "description": "The link label to edit the current page"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Back to Main Menu",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Skip to Main Content",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  }
+}
