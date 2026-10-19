@@ -200,3 +200,23 @@ html .DocSearch {
     scroll-behavior: auto !important;
   }
 }
+
+/* Scanline result list: HUD group labels and a laser bar on the selected result. */
+.DocSearch .DocSearch-Hit-source {
+  background: var(--docsearch-modal-background);
+  color: var(--sl-ink-3);
+  font: 500 11px/1.4 var(--sl-f-display);
+  font-stretch: 125%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.DocSearch .DocSearch-Hit[aria-selected='true'] a {
+  background: var(--sl-hover);
+  box-shadow: inset 2px 0 0 var(--sl-laser);
+}
+
+.DocSearch .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-title,
+.DocSearch .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit-path {
+  color: var(--sl-ink);
+}
