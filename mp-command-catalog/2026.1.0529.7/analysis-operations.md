@@ -136,4 +136,16 @@ cross-version history live in the canonical grouped reference.
 | [Transform Objects by Delta (World Transform Operator)](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) | Analysis Operations | **Current** | Portable contract review |
 | [Translate Objects by Delta](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) | Analysis Operations | **Current** | Portable contract review |
 
+## Documentation-Only Commands
+
+SpatialAnalyzer's installed MP documentation for 2026.1.0529.7 lists these
+commands under Analysis Operations, but the exact-target SDK export did not
+observe them. The documented group path is kept as review evidence, not as an MP
+Editor placement.
+
+| MP Command | Documented MP Group Path | Briosa Status | Validation |
+| --- | --- | --- | --- |
+| [Coordinate](/mp-command-catalog/commands/analysis-operations#coordinate) | Analysis Operations | **SDK Unavailable** | Not applicable |
+| [Get i-th Report Ref List](/mp-command-catalog/commands/analysis-operations#get-i-th-report-ref-list) | Analysis Operations | **Excluded** | Not applicable |
+
 [Open the canonical Analysis Operations command reference →](/mp-command-catalog/commands/analysis-operations)

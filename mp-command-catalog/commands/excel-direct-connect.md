@@ -15,6 +15,7 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>17</strong></div>
   <div><span>Current Server Operations</span><strong>0</strong></div>
+  <div><span>Uncommitted or Next</span><strong>16</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 

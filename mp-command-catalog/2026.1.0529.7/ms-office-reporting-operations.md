@@ -27,4 +27,15 @@ cross-version history live in the canonical grouped reference.
 | [Save Office Report as RTF](/mp-command-catalog/commands/ms-office-reporting-operations#save-office-report-as-rtf) | MS Office Reporting Operations | **Uncommitted** | Not applicable |
 | [Set Page Orientation](/mp-command-catalog/commands/ms-office-reporting-operations#set-page-orientation) | MS Office Reporting Operations | **Uncommitted** | Not applicable |
 
+## Documentation-Only Commands
+
+SpatialAnalyzer's installed MP documentation for 2026.1.0529.7 lists this
+command under MS Office Reporting Operations, but the exact-target SDK export
+did not observe it. The documented group path is kept as review evidence, not as
+an MP Editor placement.
+
+| MP Command | Documented MP Group Path | Briosa Status | Validation |
+| --- | --- | --- | --- |
+| [Adds an image to an MS Office report.](/mp-command-catalog/commands/ms-office-reporting-operations#adds-an-image-to-an-ms-office-report) | MS Office Reporting Operations | **SDK Unavailable** | Not applicable |
+
 [Open the canonical MS Office Reporting Operations command reference →](/mp-command-catalog/commands/ms-office-reporting-operations)

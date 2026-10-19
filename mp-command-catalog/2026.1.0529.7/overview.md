@@ -43,5 +43,7 @@ current requirements before Server 1.0.
 The retained exact-target evidence contains 1,412 command identities. The public
 catalog consolidates repeated source routes into canonical command entries and
 preserves documentation-only identities where they explain SDK limitations.
+Group pages list the 1,360 SDK-observed commands at their MP Editor placement
+and the 11 documentation-only commands in a separate table.
 The command index is the user-facing list; retained evidence counts are not API
 support counts. No published entry currently has an Undecided disposition.

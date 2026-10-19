@@ -1,31 +1,32 @@
 ---
-title: Construction Operations / BSpines Commands
-description: Canonical SpatialAnalyzer MP command dispositions for the Construction Operations / BSpines subgroup.
+title: Construction Operations / BSplines Commands
+description: Canonical SpatialAnalyzer MP command dispositions for the Construction Operations / BSplines subgroup.
 toc_max_heading_level: 2
 ---
 
 import CatalogFilter from '@site/src/components/CatalogFilter';
 
-# Construction Operations / BSpines Commands
+# Construction Operations / BSplines Commands
 
 These entries cover the nine commands observed under **Construction Operations
-→ BSpines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+→ BSplines** in SA 2026.1.0529.7. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>9</strong></div>
   <div><span>Current Server Operations</span><strong>8</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
-<CatalogFilter showTargetFilter scopedGroup="Construction Operations / BSpines" />
+<CatalogFilter showTargetFilter scopedGroup="Construction Operations / BSplines" />
 
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>MP Group Path</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSpines" data-status="excluded" data-validation="portable-contract-review">
-  <td><a href="#construct-b-spline-fit-options">Construct B-Spline Fit Options</a></td><td>Construction Operations / BSpines</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSplines" data-status="excluded" data-validation="portable-contract-review">
+  <td><a href="#construct-b-spline-fit-options">Construct B-Spline Fit Options</a></td><td>Construction Operations / BSplines</td>
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td>
 </tr>
 <tr data-command="Construct B-Spline Fit Options" data-group="Construction Operations / BSplines" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
@@ -34,9 +35,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Points" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Points" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Spline From Points" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-spline-from-points">Construct B-Spline From Points</a></td>
@@ -44,9 +45,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Spline From Point Set" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-spline-from-point-set">Construct B-Spline From Point Set</a></td>
@@ -54,9 +55,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Spline From Several B-Splines" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-spline-from-several-b-splines">Construct B-Spline From Several B-Splines</a></td>
@@ -64,9 +65,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Spline From Intersection of Plane and Surface" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-spline-from-intersection-of-plane-and-surface">Construct B-Spline From Intersection of Plane and Surface</a></td>
@@ -74,9 +75,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Spline From Intersection of Surfaces" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-spline-from-intersection-of-surfaces">Construct B-Spline From Intersection of Surfaces</a></td>
@@ -84,9 +85,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Splines From Surfaces" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-splines-from-surfaces">Construct B-Splines From Surfaces</a></td>
@@ -94,9 +95,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Splines From Lines" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-splines-from-lines">Construct B-Splines From Lines</a></td>
@@ -104,9 +105,9 @@ These entries cover the nine commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSpines" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td><td>Construction Operations / BSpines</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-fixture-validation-required">
+  <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td><td>Construction Operations / BSplines</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct B-Splines From Intersection of Plane and Mesh" data-group="Construction Operations / BSplines" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-b-splines-from-intersection-of-plane-and-mesh">Construct B-Splines From Intersection of Plane and Mesh</a></td>
@@ -120,9 +121,9 @@ These entries cover the nine commands observed under **Construction Operations
 ## Construct B-Spline Fit Options
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / BSpines" data-validation="portable-contract-review">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / BSplines" data-validation="portable-contract-review">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
   <span className="catalog-target-validation">Portable contract review</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / BSplines" data-validation="evidence-review">
@@ -165,7 +166,7 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
-  <div><span>MP Group Path</span><strong>Construction Operations / BSpines</strong></div>
+  <div><span>MP Group Path</span><strong>Construction Operations / BSplines</strong></div>
   <div><span>Validation</span><strong>Portable contract review</strong></div>
   <div><span>Alternative</span><strong>Use the Briosa BSplineFitOptions value</strong></div>
 </div>
@@ -204,10 +205,10 @@ responsibility.
 ## Construct B-Spline From Points
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -249,7 +250,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0 with a strongly typed fit-options value and an
+Included in Briosa Server 0.9.2 with a strongly typed fit-options value and an
 ordered point-name list. At least three suitable points and licensed geometry
 validation are required before the implementation can be marked validated.
 
@@ -262,10 +263,10 @@ validation are required before the implementation can be marked validated.
 ## Construct B-Spline From Point Set
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -307,7 +308,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. The point-set container must identify an SA
+Included in Briosa Server 0.9.2. The point-set container must identify an SA
 Point Set, and licensed geometry validation remains outstanding.
 
 ### API References
@@ -319,10 +320,10 @@ Point Set, and licensed geometry validation remains outstanding.
 ## Construct B-Spline From Several B-Splines
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -364,7 +365,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. Briosa preserves the supplied B-spline order
+Included in Briosa Server 0.9.2. Briosa preserves the supplied B-spline order
 and does not close the result unless the caller requests it.
 
 ### API References
@@ -376,10 +377,10 @@ and does not close the result unless the caller requests it.
 ## Construct B-Spline From Intersection of Plane and Surface
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -423,7 +424,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0 with the exact MP tolerance default. Licensed
+Included in Briosa Server 0.9.2 with the exact MP tolerance default. Licensed
 plane-and-surface fixtures are still required.
 
 ### API References
@@ -435,10 +436,10 @@ plane-and-surface fixtures are still required.
 ## Construct B-Spline From Intersection of Surfaces
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -482,9 +483,9 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. Exact SDK and MP documentation agree on the
+Included in Briosa Server 0.9.2. Exact SDK and MP documentation agree on the
 signature, although the installed help places its page under Ellipsoids rather
-than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
+than the MP Editor's BSplines group. Briosa follows the exact MP Editor group.
 
 ### API References
 
@@ -495,10 +496,10 @@ than the MP Editor's BSpines group. Briosa follows the exact MP Editor group.
 ## Construct B-Splines From Surfaces
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -538,7 +539,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. Briosa returns every created B-spline identity
+Included in Briosa Server 0.9.2. Briosa returns every created B-spline identity
 and omits the optional prefix unless the caller supplies one.
 
 ### API References
@@ -550,10 +551,10 @@ and omits the optional prefix unless the caller supplies one.
 ## Construct B-Splines From Lines
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -593,7 +594,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. The SA 2026.1 exact argument uses `B-Spline`
+Included in Briosa Server 0.9.2. The SA 2026.1 exact argument uses `B-Spline`
 with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 
 ### API References
@@ -605,10 +606,10 @@ with a hyphen; Briosa does not copy ObjectiveSA's older `B_Spline` spelling.
 ## Construct B-Splines From Intersection of Plane and Mesh
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSpines" data-validation="at-risk-fixture-validation-required">
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
-  <span className="catalog-target-group">Construction Operations / BSpines</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-group">Construction Operations / BSplines</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / BSplines" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -658,7 +659,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 ### Briosa Disposition
 
-Included in Briosa Server 0.7.0. The result may contain several B-splines, so
+Included in Briosa Server 0.9.2. The result may contain several B-splines, so
 the API returns the complete MP output list rather than only echoing the
 requested base name.
 

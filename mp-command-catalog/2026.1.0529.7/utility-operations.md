@@ -103,4 +103,17 @@ cross-version history live in the canonical grouped reference.
 | [Unsubscribe From OPC UA Node](/mp-command-catalog/commands/utility-operations#unsubscribe-from-opc-ua-node) | Utility Operations / OPC UA Client | **Uncommitted** | Not applicable |
 | [Write to Log](/mp-command-catalog/commands/utility-operations#write-to-log) | Utility Operations | **Current** | Portable contract review |
 
+## Documentation-Only Commands
+
+SpatialAnalyzer's installed MP documentation for 2026.1.0529.7 lists these
+commands under Utility Operations, but the exact-target SDK export did not
+observe them. The documented group path is kept as review evidence, not as an MP
+Editor placement.
+
+| MP Command | Documented MP Group Path | Briosa Status | Validation |
+| --- | --- | --- | --- |
+| [HTTP GET Request](/mp-command-catalog/commands/utility-operations#http-get-request) | Utility Operations / Network | **SDK Unavailable** | Not applicable |
+| [Speak To User](/mp-command-catalog/commands/utility-operations#speak-to-user) | Utility Operations / Units | **SDK Unavailable** | Not applicable |
+| [Step Comment](/mp-command-catalog/commands/utility-operations#step-comment) | Utility Operations / Units | **SDK Unavailable** | Not applicable |
+
 [Open the canonical Utility Operations command reference →](/mp-command-catalog/commands/utility-operations)

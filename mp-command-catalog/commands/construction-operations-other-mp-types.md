@@ -19,6 +19,7 @@ languages instead of becoming network calls.
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>74</strong></div>
   <div><span>Current Server Operations</span><strong>34</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>40</strong></div>
 </div>
 
@@ -111,7 +112,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a System String" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-sensitive-output-validation-required"><td><a href="#make-a-system-string">Make a System String</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sensitive-output validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a System String" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-sensitive-output-validation-required"><td><a href="#make-a-system-string">Make a System String</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — sensitive-output validation required</td></tr>
 <tr data-command="Make a System String" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-system-string">Make a System String</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -147,7 +148,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-name---runtime-select">Make a Collection Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-name---runtime-select">Make a Collection Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-name---runtime-select">Make a Collection Name - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -159,7 +160,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Item Name Reference List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-item-name-reference-list---wildcard-selection">Make a Collection Item Name Reference List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Item Name Reference List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-item-name-reference-list---wildcard-selection">Make a Collection Item Name Reference List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Collection Item Name Reference List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-item-name-reference-list---wildcard-selection">Make a Collection Item Name Reference List - WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -171,37 +172,37 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name---runtime-select">Make a Collection Object Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name---runtime-select">Make a Collection Object Name - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Object Name - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name---runtime-select">Make a Collection Object Name - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name - Ensure Unique" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-collection-object-name---ensure-unique">Make a Collection Object Name - Ensure Unique</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - output-binding validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name - Ensure Unique" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-collection-object-name---ensure-unique">Make a Collection Object Name - Ensure Unique</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output-binding validation required</td></tr>
 <tr data-command="Make a Collection Object Name - Ensure Unique" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name---ensure-unique">Make a Collection Object Name - Ensure Unique</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name-reference-list--runtime-select">Make a Collection Object Name Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-object-name-reference-list--runtime-select">Make a Collection Object Name Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Object Name Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name-reference-list--runtime-select">Make a Collection Object Name Reference List- Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-reference-list--wildcard-selection">Make a Collection Object Name Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-reference-list--wildcard-selection">Make a Collection Object Name Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name-reference-list--wildcard-selection">Make a Collection Object Name Reference List- WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List - By Type" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type">Make a Collection Object Name Ref List - By Type</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List - By Type" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type">Make a Collection Object Name Ref List - By Type</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name Ref List - By Type" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name-ref-list---by-type">Make a Collection Object Name Ref List - By Type</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List - By Type and Color" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type-and-color">Make a Collection Object Name Ref List - By Type and Color</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List - By Type and Color" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list---by-type-and-color">Make a Collection Object Name Ref List - By Type and Color</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name Ref List - By Type and Color" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name-ref-list---by-type-and-color">Make a Collection Object Name Ref List - By Type and Color</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -225,7 +226,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List from all Groups in a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection">Make a Collection Object Name Ref List from all Groups in a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Object Name Ref List from all Groups in a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection">Make a Collection Object Name Ref List from all Groups in a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Collection Object Name Ref List from all Groups in a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-object-name-ref-list-from-all-groups-in-a-collection">Make a Collection Object Name Ref List from all Groups in a Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -243,13 +244,13 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#get-collection-instrument-ref-list-variable">Get Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - MP-variable validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#get-collection-instrument-ref-list-variable">Get Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — MP-variable validation required</td></tr>
 <tr data-command="Get Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-collection-instrument-ref-list-variable">Get Collection Instrument Ref List Variable</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#set-collection-instrument-ref-list-variable">Set Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - MP-variable validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-mp-variable-validation-required"><td><a href="#set-collection-instrument-ref-list-variable">Set Collection Instrument Ref List Variable</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — MP-variable validation required</td></tr>
 <tr data-command="Set Collection Instrument Ref List Variable" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-collection-instrument-ref-list-variable">Set Collection Instrument Ref List Variable</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -261,31 +262,31 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - output binding and fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output binding and fixture</td></tr>
 <tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Relationship Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--wildcard-selection">Make a Relationship Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - partial SDK binding</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Relationship Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--wildcard-selection">Make a Relationship Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — partial SDK binding</td></tr>
 <tr data-command="Make a Relationship Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-relationship-reference-list--wildcard-selection">Make a Relationship Reference List- WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Relationship Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--runtime-select">Make a Relationship Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive partial SDK binding</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Relationship Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-partial-sdk-binding-validation-required"><td><a href="#make-a-relationship-reference-list--runtime-select">Make a Relationship Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive partial SDK binding</td></tr>
 <tr data-command="Make a Relationship Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-relationship-reference-list--runtime-select">Make a Relationship Reference List- Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make an Event Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-an-event-reference-list--wildcard-selection">Make an Event Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make an Event Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-an-event-reference-list--wildcard-selection">Make an Event Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make an Event Reference List- WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-an-event-reference-list--wildcard-selection">Make an Event Reference List- WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -303,7 +304,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument ID - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-id---runtime-select">Make a Collection Instrument ID - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument ID - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-id---runtime-select">Make a Collection Instrument ID - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Instrument ID - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-instrument-id---runtime-select">Make a Collection Instrument ID - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -315,13 +316,13 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Report Ref List from a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-report-ref-list-from-a-collection">Make a Report Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Report Ref List from a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#make-a-report-ref-list-from-a-collection">Make a Report Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Make a Report Ref List from a Collection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-report-ref-list-from-a-collection">Make a Report Ref List from a Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Report Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-report-ref-list---runtime-select">Make a Report Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Report Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-report-ref-list---runtime-select">Make a Report Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Report Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-report-ref-list---runtime-select">Make a Report Ref List - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -333,7 +334,7 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Picture Name Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-picture-name-ref-list---runtime-select">Make a Picture Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Picture Name Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-picture-name-ref-list---runtime-select">Make a Picture Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Picture Name Ref List - Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-picture-name-ref-list---runtime-select">Make a Picture Name Ref List - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -345,13 +346,13 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Transform from Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-fixed-xyz">Make a Transform from Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Transform from Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-fixed-xyz">Make a Transform from Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Make a Transform from Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-transform-from-doubles-fixed-xyz">Make a Transform from Doubles (Fixed XYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Transform from Doubles (Euler Parameters)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-euler-parameters">Make a Transform from Doubles (Euler Parameters)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Transform from Doubles (Euler Parameters)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#make-a-transform-from-doubles-euler-parameters">Make a Transform from Doubles (Euler Parameters)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Make a Transform from Doubles (Euler Parameters)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-transform-from-doubles-euler-parameters">Make a Transform from Doubles (Euler Parameters)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -369,31 +370,31 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Working Transform of Object (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#get-working-transform-of-object-fixed-xyz">Get Working Transform of Object (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Working Transform of Object (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#get-working-transform-of-object-fixed-xyz">Get Working Transform of Object (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Get Working Transform of Object (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-working-transform-of-object-fixed-xyz">Get Working Transform of Object (Fixed XYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Invert Transform" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#invert-transform">Invert Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Invert Transform" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#invert-transform">Invert Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Invert Transform" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#invert-transform">Invert Transform</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-fixed-xyz">Decompose Transform into Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-fixed-xyz">Decompose Transform into Doubles (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-doubles-fixed-xyz">Decompose Transform into Doubles (Fixed XYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Vectors (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-fixed-xyz">Decompose Transform into Vectors (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Vectors (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-fixed-xyz">Decompose Transform into Vectors (Fixed XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Vectors (Fixed XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-vectors-fixed-xyz">Decompose Transform into Vectors (Fixed XYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Vectors (Origin and Axes)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-origin-and-axes">Decompose Transform into Vectors (Origin and Axes)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Vectors (Origin and Axes)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-vectors-origin-and-axes">Decompose Transform into Vectors (Origin and Axes)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Vectors (Origin and Axes)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-vectors-origin-and-axes">Decompose Transform into Vectors (Origin and Axes)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -405,37 +406,37 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose World Transform Operator into Doubles (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world">Decompose World Transform Operator into Doubles (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose World Transform Operator into Doubles (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world">Decompose World Transform Operator into Doubles (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose World Transform Operator into Doubles (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-world-transform-operator-into-doubles-fixed-xyz-in-world">Decompose World Transform Operator into Doubles (Fixed XYZ in World)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-xyz">Decompose Transform into Doubles (Euler XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-xyz">Decompose Transform into Doubles (Euler XYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Euler XYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-doubles-euler-xyz">Decompose Transform into Doubles (Euler XYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZYX)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyx">Decompose Transform into Doubles (Euler ZYX)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZYX)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyx">Decompose Transform into Doubles (Euler ZYX)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Euler ZYX)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-doubles-euler-zyx">Decompose Transform into Doubles (Euler ZYX)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyz">Decompose Transform into Doubles (Euler ZYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zyz">Decompose Transform into Doubles (Euler ZYZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Euler ZYZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-doubles-euler-zyz">Decompose Transform into Doubles (Euler ZYZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZXZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zxz">Decompose Transform into Doubles (Euler ZXZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose Transform into Doubles (Euler ZXZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-transform-into-doubles-euler-zxz">Decompose Transform into Doubles (Euler ZXZ)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose Transform into Doubles (Euler ZXZ)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-transform-into-doubles-euler-zxz">Decompose Transform into Doubles (Euler ZXZ)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Decompose World Transform Operator into Vectors (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world">Decompose World Transform Operator into Vectors (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Decompose World Transform Operator into Vectors (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-exact-target-validation-required"><td><a href="#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world">Decompose World Transform Operator into Vectors (Fixed XYZ in World)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target validation required</td></tr>
 <tr data-command="Decompose World Transform Operator into Vectors (Fixed XYZ in World)" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#decompose-world-transform-operator-into-vectors-fixed-xyz-in-world">Decompose World Transform Operator into Vectors (Fixed XYZ in World)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -976,7 +977,7 @@ state or guarantee uniqueness.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-sensitive-output-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk sensitive output validation required</span>
+  <span className="catalog-target-validation">At Risk — sensitive-output validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1207,7 +1208,7 @@ collection, object, and type components.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1290,7 +1291,7 @@ Construct the typed `CollectionItemName` value in the client language.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1377,7 +1378,7 @@ Construct `CollectionObjectName` locally.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1424,7 +1425,7 @@ object type. Cancellation does not prove that the interaction stopped.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-output-binding-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk output binding validation required</span>
+  <span className="catalog-target-validation">At Risk — output-binding validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1473,7 +1474,7 @@ licensed validation against this target.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1515,7 +1516,7 @@ and retains the usual interactive cancellation caveat.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1558,7 +1559,7 @@ identities in an undefined order.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1599,7 +1600,7 @@ matching live objects, possibly an empty list, in an undefined order.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1749,7 +1750,7 @@ Append the identity to the native client collection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1860,7 +1861,7 @@ Read the collection and index components already carried by the structured
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-mp-variable-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk mp variable validation required</span>
+  <span className="catalog-target-validation">At Risk — MP-variable validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1901,7 +1902,7 @@ solutions; Briosa does not cache or independently track that state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-mp-variable-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk mp variable validation required</span>
+  <span className="catalog-target-validation">At Risk — MP-variable validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1976,7 +1977,7 @@ Append a caller-supplied instrument identity in the client language.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-output-binding-and-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk output binding and fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — output binding and fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2019,7 +2020,7 @@ argument requires exact-target validation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2059,7 +2060,7 @@ instrument identities. Cancellation does not prove the interaction stopped.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-partial-sdk-binding-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk partial sdk binding validation required</span>
+  <span className="catalog-target-validation">At Risk — partial SDK binding</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2105,7 +2106,7 @@ scope. This limitation is part of the public contract.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-partial-sdk-binding-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive partial sdk binding validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive partial SDK binding</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2148,7 +2149,7 @@ Filter` is omitted, so the operator selects from the MP's default type scope.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2261,7 +2262,7 @@ Construct `CollectionInstrumentId` locally from its collection and index.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2337,7 +2338,7 @@ Construct the structured machine identity locally.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2376,7 +2377,7 @@ Requires `Collection Name` and returns the live SA reports in that collection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2450,7 +2451,7 @@ Use a native collection when the caller already has the picture identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2524,7 +2525,7 @@ Use the client language's native collection for caller-supplied report items.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2576,7 +2577,7 @@ calculation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2716,7 +2717,7 @@ client language.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2758,7 +2759,7 @@ live transform in working coordinates using Fixed XYZ semantics.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2798,7 +2799,7 @@ transform semantics.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2843,7 +2844,7 @@ Requires `Input Transform` and returns `X`, `Y`, `Z`, `Rx (Roll)`, `Ry
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2884,7 +2885,7 @@ in Working` vectors.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2977,7 +2978,7 @@ Read the 16 matrix elements from the shared `Transform` value locally.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3023,7 +3024,7 @@ Requires `Input World Transform Operator` and returns world-coordinate `X`,
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3068,7 +3069,7 @@ input transform.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3113,7 +3114,7 @@ input transform.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3159,7 +3160,7 @@ their MP order.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3204,7 +3205,7 @@ The repeated MP output names are disambiguated without changing their order.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-exact-target-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At risk exact target validation required</span>
+  <span className="catalog-target-validation">At Risk — exact-target validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3325,7 +3326,7 @@ Setter acceptance alone is therefore not treated as operation support.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="exact-target-sdk-binding-review">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">Exact target sdk binding review</span>
+  <span className="catalog-target-validation">Exact-target SDK binding review</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
@@ -3401,7 +3402,7 @@ Parse or construct the typed axis identifier in the client language.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="exact-target-sdk-binding-review">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">Exact target sdk binding review</span>
+  <span className="catalog-target-validation">Exact-target SDK binding review</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>

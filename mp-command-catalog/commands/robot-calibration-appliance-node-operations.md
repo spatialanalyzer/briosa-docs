@@ -14,8 +14,9 @@ Appliance Node Operations** in SA 2026.1.0529.7.
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
-  <div><span>Reviewed Commands</span><strong>25 of 25</strong></div>
+  <div><span>Reviewed Commands</span><strong>25</strong></div>
   <div><span>Current Server Operations</span><strong>25</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,151 +25,151 @@ Appliance Node Operations** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Add Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#add-calibration-appliance-node">Add Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#add-calibration-appliance-node">Add Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Add Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-calibration-appliance-node">Add Calibration Appliance Node</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#delete-calibration-appliance-node">Delete Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#delete-calibration-appliance-node">Delete Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Delete Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-calibration-appliance-node">Delete Calibration Appliance Node</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Connect/Disconnect Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#connectdisconnect-calibration-appliance-node">Connect/Disconnect Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Connect/Disconnect Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#connectdisconnect-calibration-appliance-node">Connect/Disconnect Calibration Appliance Node</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Connect/Disconnect Calibration Appliance Node" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#connectdisconnect-calibration-appliance-node">Connect/Disconnect Calibration Appliance Node</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Instrument" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-instrument">Set Calibration Appliance Node Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Instrument" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-instrument">Set Calibration Appliance Node Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Instrument" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-instrument">Set Calibration Appliance Node Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Profile" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-profile">Set Calibration Appliance Node Measurement Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Profile" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-profile">Set Calibration Appliance Node Measurement Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Measurement Profile" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-measurement-profile">Set Calibration Appliance Node Measurement Profile</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Target" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-target">Set Calibration Appliance Node Measurement Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Target" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-target">Set Calibration Appliance Node Measurement Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Measurement Target" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-measurement-target">Set Calibration Appliance Node Measurement Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Enable/Disable Calibration Appliance Node Instrument Auto Point" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#enabledisable-calibration-appliance-node-instrument-auto-point">Enable/Disable Calibration Appliance Node Instrument Auto Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Calibration Appliance Node Instrument Auto Point" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#enabledisable-calibration-appliance-node-instrument-auto-point">Enable/Disable Calibration Appliance Node Instrument Auto Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Enable/Disable Calibration Appliance Node Instrument Auto Point" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-calibration-appliance-node-instrument-auto-point">Enable/Disable Calibration Appliance Node Instrument Auto Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Instrument Dwell Time" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-instrument-dwell-time">Set Calibration Appliance Node Instrument Dwell Time</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Instrument Dwell Time" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-instrument-dwell-time">Set Calibration Appliance Node Instrument Dwell Time</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Instrument Dwell Time" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-instrument-dwell-time">Set Calibration Appliance Node Instrument Dwell Time</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Skip Calibration Appliance Node Measurement" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#skip-calibration-appliance-node-measurement">Skip Calibration Appliance Node Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Skip Calibration Appliance Node Measurement" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#skip-calibration-appliance-node-measurement">Skip Calibration Appliance Node Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Skip Calibration Appliance Node Measurement" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#skip-calibration-appliance-node-measurement">Skip Calibration Appliance Node Measurement</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Frame" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-frame">Set Calibration Appliance Node Measurement Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Frame" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-frame">Set Calibration Appliance Node Measurement Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Measurement Frame" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-measurement-frame">Set Calibration Appliance Node Measurement Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Offset Transform" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-offset-transform">Set Calibration Appliance Node Measurement Offset Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Offset Transform" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-offset-transform">Set Calibration Appliance Node Measurement Offset Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Measurement Offset Transform" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-measurement-offset-transform">Set Calibration Appliance Node Measurement Offset Transform</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Point Group" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-point-group">Set Calibration Appliance Node Measurement Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Measurement Point Group" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-measurement-point-group">Set Calibration Appliance Node Measurement Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Measurement Point Group" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-measurement-point-group">Set Calibration Appliance Node Measurement Point Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Calibration Appliance IP Address" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-calibration-appliance-ip-address">Set Calibration Appliance Node Calibration Appliance IP Address</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Calibration Appliance IP Address" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-calibration-appliance-ip-address">Set Calibration Appliance Node Calibration Appliance IP Address</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Calibration Appliance IP Address" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-calibration-appliance-ip-address">Set Calibration Appliance Node Calibration Appliance IP Address</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Trapping Node ID" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-trapping-node-id">Set Calibration Appliance Node Trapping Node ID</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Trapping Node ID" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-trapping-node-id">Set Calibration Appliance Node Trapping Node ID</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Trapping Node ID" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-trapping-node-id">Set Calibration Appliance Node Trapping Node ID</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Enable/Disable Calibration Appliance Node Trap Manager" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#enabledisable-calibration-appliance-node-trap-manager">Enable/Disable Calibration Appliance Node Trap Manager</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Calibration Appliance Node Trap Manager" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#enabledisable-calibration-appliance-node-trap-manager">Enable/Disable Calibration Appliance Node Trap Manager</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Enable/Disable Calibration Appliance Node Trap Manager" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-calibration-appliance-node-trap-manager">Enable/Disable Calibration Appliance Node Trap Manager</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Clear Calibration Appliance Node Trap Manager Requests" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#clear-calibration-appliance-node-trap-manager-requests">Clear Calibration Appliance Node Trap Manager Requests</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Clear Calibration Appliance Node Trap Manager Requests" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#clear-calibration-appliance-node-trap-manager-requests">Clear Calibration Appliance Node Trap Manager Requests</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Clear Calibration Appliance Node Trap Manager Requests" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#clear-calibration-appliance-node-trap-manager-requests">Clear Calibration Appliance Node Trap Manager Requests</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-integer-value">Set Calibration Appliance Node Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-integer-value">Set Calibration Appliance Node Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-integer-value">Set Calibration Appliance Node Integer Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-integer-value">Get Calibration Appliance Node Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-integer-value">Get Calibration Appliance Node Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Node Integer Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-node-integer-value">Get Calibration Appliance Node Integer Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-real-value">Set Calibration Appliance Node Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-real-value">Set Calibration Appliance Node Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-real-value">Set Calibration Appliance Node Real Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-real-value">Get Calibration Appliance Node Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-real-value">Get Calibration Appliance Node Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Node Real Value" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-node-real-value">Get Calibration Appliance Node Real Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-data">Set Calibration Appliance Node Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-data">Set Calibration Appliance Node Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-data">Set Calibration Appliance Node Data</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-data">Get Calibration Appliance Node Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-data">Get Calibration Appliance Node Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Node Data" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-node-data">Get Calibration Appliance Node Data</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Display Robot" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-display-robot">Set Calibration Appliance Node Display Robot</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Node Display Robot" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-node-display-robot">Set Calibration Appliance Node Display Robot</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Node Display Robot" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-node-display-robot">Set Calibration Appliance Node Display Robot</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Update Calibration Appliance Node Display Robot Joints" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#update-calibration-appliance-node-display-robot-joints">Update Calibration Appliance Node Display Robot Joints</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Update Calibration Appliance Node Display Robot Joints" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#update-calibration-appliance-node-display-robot-joints">Update Calibration Appliance Node Display Robot Joints</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Update Calibration Appliance Node Display Robot Joints" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#update-calibration-appliance-node-display-robot-joints">Update Calibration Appliance Node Display Robot Joints</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Status" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-status">Get Calibration Appliance Node Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Node Status" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-robot-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-node-status">Get Calibration Appliance Node Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Node Status" data-group="Robot Calibration Appliance Node Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-node-status">Get Calibration Appliance Node Status</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -183,7 +184,7 @@ Appliance Node Operations** in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -221,7 +222,7 @@ Adds a named Calibration Appliance Node to the live SA job.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -260,7 +261,7 @@ dependency or usage preflight beyond the MP command's behavior.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -299,7 +300,7 @@ Connects or disconnects the selected node. The exact MP default is to connect.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -340,7 +341,7 @@ state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -380,7 +381,7 @@ is an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -420,7 +421,7 @@ an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -460,7 +461,7 @@ default is enabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -500,7 +501,7 @@ without adding a range restriction; the exact MP default is `0.0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -539,7 +540,7 @@ or validate the node's workflow state before issuing the MP command.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -578,7 +579,7 @@ Assigns an existing SA Frame as the node's measurement reference frame.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -618,7 +619,7 @@ exact MP identity-transform default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -657,7 +658,7 @@ Assigns an existing SA Point Group to the node's measurement workflow.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -698,7 +699,7 @@ application; it does not enable remote Briosa execution.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -738,7 +739,7 @@ range restriction; the exact MP default is `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -778,7 +779,7 @@ enabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -817,7 +818,7 @@ preflighting the node's workflow state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -858,7 +859,7 @@ for both the offset and value are `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -899,7 +900,7 @@ offset default is `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -940,7 +941,7 @@ both the offset and value are `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -981,7 +982,7 @@ default is `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1026,7 +1027,7 @@ coverage.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1071,7 +1072,7 @@ SDK, so it is not part of this Briosa contract.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1110,7 +1111,7 @@ Assigns an existing SA Machine as the display robot for the selected node.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1150,7 +1151,7 @@ enabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-robot-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Calibration Appliance Node Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Calibration Appliance Node Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

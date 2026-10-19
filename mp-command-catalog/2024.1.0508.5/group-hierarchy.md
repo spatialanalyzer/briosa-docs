@@ -13,7 +13,7 @@ to its own command list; commands link to the shared canonical reference.
 <div className="catalog-tree">
 
 <details className="catalog-tree-branch">
-<summary><strong>Accumulator Math Operations</strong><span>8 commands · 1 group paths</span></summary>
+<summary><strong>Accumulator Math Operations</strong><span>8 commands · 1 group path</span></summary>
 
 - [Root Group — 8](./accumulator-math-operations.md)
 
@@ -38,7 +38,7 @@ to its own command list; commands link to the shared canonical reference.
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Cloud Viewer Operations</strong><span>9 commands · 1 group paths</span></summary>
+<summary><strong>Cloud Viewer Operations</strong><span>9 commands · 1 group path</span></summary>
 
 - [Root Group — 9](./cloud-viewer-operations.md)
 
@@ -109,28 +109,28 @@ to its own command list; commands link to the shared canonical reference.
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>MP Subroutines</strong><span>4 commands · 1 group paths</span></summary>
+<summary><strong>MP Subroutines</strong><span>4 commands · 1 group path</span></summary>
 
 - [Root Group — 4](./mp-subroutines.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>MP Task Overview</strong><span>11 commands · 1 group paths</span></summary>
+<summary><strong>MP Task Overview</strong><span>11 commands · 1 group path</span></summary>
 
 - [Root Group — 11](./mp-task-overview.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>MS Office Reporting Operations</strong><span>13 commands · 1 group paths</span></summary>
+<summary><strong>MS Office Reporting Operations</strong><span>13 commands · 1 group path</span></summary>
 
 - [Root Group — 13](./ms-office-reporting-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Process Flow Operations</strong><span>23 commands · 1 group paths</span></summary>
+<summary><strong>Process Flow Operations</strong><span>23 commands · 1 group path</span></summary>
 
 - [Root Group — 23](./process-flow-operations.md)
 
@@ -146,21 +146,21 @@ to its own command list; commands link to the shared canonical reference.
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Robot Calibration Appliance Node Operations</strong><span>25 commands · 1 group paths</span></summary>
+<summary><strong>Robot Calibration Appliance Node Operations</strong><span>25 commands · 1 group path</span></summary>
 
 - [Root Group — 25](./robot-calibration-appliance-node-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Robot Operations</strong><span>33 commands · 1 group paths</span></summary>
+<summary><strong>Robot Operations</strong><span>33 commands · 1 group path</span></summary>
 
 - [Root Group — 33](./robot-operations.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Scalar Math Operations</strong><span>21 commands · 1 group paths</span></summary>
+<summary><strong>Scalar Math Operations</strong><span>21 commands · 1 group path</span></summary>
 
 - [Root Group — 21](./scalar-math-operations.md)
 
@@ -180,14 +180,14 @@ to its own command list; commands link to the shared canonical reference.
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Variables</strong><span>41 commands · 1 group paths</span></summary>
+<summary><strong>Variables</strong><span>41 commands · 1 group path</span></summary>
 
 - [Root Group — 41](./variables.md)
 
 </details>
 
 <details className="catalog-tree-branch">
-<summary><strong>Vector Math Operations</strong><span>7 commands · 1 group paths</span></summary>
+<summary><strong>Vector Math Operations</strong><span>7 commands · 1 group path</span></summary>
 
 - [Root Group — 7](./vector-math-operations.md)
 

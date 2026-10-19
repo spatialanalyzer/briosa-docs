@@ -14,8 +14,9 @@ in SA 2026.1.0529.7.
 <p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
-  <div><span>Reviewed Commands</span><strong>33 of 33</strong></div>
+  <div><span>Reviewed Commands</span><strong>33</strong></div>
   <div><span>Current Server Operations</span><strong>33</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,199 +25,199 @@ in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-samachine">Add Robot/Machine (.SAMachine)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-samachine">Add Robot/Machine (.SAMachine)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Add Robot/Machine (.SAMachine)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-robotmachine-samachine">Add Robot/Machine (.SAMachine)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-manipkin">Add Robot/Machine (.ManipKin)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#add-robotmachine-manipkin">Add Robot/Machine (.ManipKin)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Add Robot/Machine (.ManipKin)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-robotmachine-manipkin">Add Robot/Machine (.ManipKin)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robotmachine">Delete Robot/Machine</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robotmachine">Delete Robot/Machine</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Delete Robot/Machine" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-robotmachine">Delete Robot/Machine</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-frame">Move Robot/Machine to Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-frame">Move Robot/Machine to Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Move Robot/Machine to Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-frame">Move Robot/Machine to Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-through-path">Move Robot/Machine through Path</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-through-path">Move Robot/Machine through Path</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Move Robot/Machine through Path" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-through-path">Move Robot/Machine through Path</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-named-destination">Move Robot/Machine to Named Destination</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-named-destination">Move Robot/Machine to Named Destination</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Move Robot/Machine to Named Destination" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-named-destination">Move Robot/Machine to Named Destination</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-parameter">Set Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-parameter">Set Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Set Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-parameter">Set Robot/Machine Parameter</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-parameter">Get Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-parameter">Get Robot/Machine Parameter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Get Robot/Machine Parameter" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robotmachine-parameter">Get Robot/Machine Parameter</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-model-link-parameters">Set Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-model-link-parameters">Set Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Set Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-model-link-parameters">Set Robot/Machine Model Link Parameters</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-model-link-parameters">Get Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robotmachine-model-link-parameters">Get Robot/Machine Model Link Parameters</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Get Robot/Machine Model Link Parameters" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robotmachine-model-link-parameters">Get Robot/Machine Model Link Parameters</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-base-transform">Set Robot/Machine Base Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#set-robotmachine-base-transform">Set Robot/Machine Base Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Set Robot/Machine Base Transform" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robotmachine-base-transform">Set Robot/Machine Base Transform</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#start-robotmachine-interface">Start Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#start-robotmachine-interface">Start Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Start Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-robotmachine-interface">Start Robot/Machine Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#stop-robotmachine-interface">Stop Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#stop-robotmachine-interface">Stop Robot/Machine Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Stop Robot/Machine Interface" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#stop-robotmachine-interface">Stop Robot/Machine Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#compute-robotmachine-adjusted-goal-frame">Compute Robot/Machine Adjusted Goal Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#compute-robotmachine-adjusted-goal-frame">Compute Robot/Machine Adjusted Goal Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Compute Robot/Machine Adjusted Goal Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#compute-robotmachine-adjusted-goal-frame">Compute Robot/Machine Adjusted Goal Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-joint-pose-6dof">Move Robot/Machine to Joint Pose (6DOF)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#move-robotmachine-to-joint-pose-6dof">Move Robot/Machine to Joint Pose (6DOF)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Move Robot/Machine to Joint Pose (6DOF)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-robotmachine-to-joint-pose-6dof">Move Robot/Machine to Joint Pose (6DOF)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#simulate-robotmachine-path-output-csv-file">Simulate Robot/Machine Path, Output CSV File</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#simulate-robotmachine-path-output-csv-file">Simulate Robot/Machine Path, Output CSV File</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Simulate Robot/Machine Path, Output CSV File" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#simulate-robotmachine-path-output-csv-file">Simulate Robot/Machine Path, Output CSV File</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Create Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#create-robot-calibration">Create Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Create Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#create-robot-calibration">Create Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Create Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-robot-calibration">Create Robot Calibration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robot-calibration">Delete Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#delete-robot-calibration">Delete Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Delete Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-robot-calibration">Delete Robot Calibration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-measurements">Import Poses Match to Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-measurements">Import Poses Match to Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Import Poses Match to Measurements" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#import-poses-match-to-measurements">Import Poses Match to Measurements</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-frames">Import Poses Match to Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#import-poses-match-to-frames">Import Poses Match to Frames</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Import Poses Match to Frames" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#import-poses-match-to-frames">Import Poses Match to Frames</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration">Perform Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration">Perform Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Perform Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#perform-robot-calibration">Perform Robot Calibration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration-alternate">Perform Robot Calibration (Alternate)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#perform-robot-calibration-alternate">Perform Robot Calibration (Alternate)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Perform Robot Calibration (Alternate)" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#perform-robot-calibration-alternate">Perform Robot Calibration (Alternate)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#startstop-robot-calibration-trapping">Start/Stop Robot Calibration Trapping</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#startstop-robot-calibration-trapping">Start/Stop Robot Calibration Trapping</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Start/Stop Robot Calibration Trapping" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#startstop-robot-calibration-trapping">Start/Stop Robot Calibration Trapping</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-active-robot-calibration">Set Active Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-active-robot-calibration">Set Active Robot Calibration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Set Active Robot Calibration" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-active-robot-calibration">Set Active Robot Calibration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-tool-frame">Set Robot Calibration Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-tool-frame">Set Robot Calibration Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Set Robot Calibration Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robot-calibration-tool-frame">Set Robot Calibration Tool Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-measurement-offset-in-tool-frame">Set Robot Calibration Measurement Offset In Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot calibration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-calibration-fixture"><td><a href="#set-robot-calibration-measurement-offset-in-tool-frame">Set Robot Calibration Measurement Offset In Tool Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot calibration fixture</td></tr>
 <tr data-command="Set Robot Calibration Measurement Offset In Tool Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-robot-calibration-measurement-offset-in-tool-frame">Set Robot Calibration Measurement Offset In Tool Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robot-pose-for-a-frame">Get Robot Pose for a Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Robot/machine fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-robot-machine-fixture"><td><a href="#get-robot-pose-for-a-frame">Get Robot Pose for a Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Robot/machine fixture</td></tr>
 <tr data-command="Get Robot Pose for a Frame" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-robot-pose-for-a-frame">Get Robot Pose for a Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-integer-value">Get Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-integer-value">Get Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-integer-value">Get Calibration Appliance Integer Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-integer-value">Set Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-integer-value">Set Calibration Appliance Integer Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Integer Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-integer-value">Set Calibration Appliance Integer Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-real-value">Get Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-real-value">Get Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-real-value">Get Calibration Appliance Real Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-real-value">Set Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-real-value">Set Calibration Appliance Real Value</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Real Value" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-real-value">Set Calibration Appliance Real Value</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-data">Get Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#get-calibration-appliance-data">Get Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Get Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-calibration-appliance-data">Get Calibration Appliance Data</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-data">Set Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Calibration-appliance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-calibration-appliance-fixture"><td><a href="#set-calibration-appliance-data">Set Calibration Appliance Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Calibration-appliance fixture</td></tr>
 <tr data-command="Set Calibration Appliance Data" data-group="Robot Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-calibration-appliance-data">Set Calibration Appliance Data</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -231,7 +232,7 @@ in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -268,7 +269,7 @@ file is resolved by the local SpatialAnalyzer application.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -305,7 +306,7 @@ file is resolved by the local SpatialAnalyzer application.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -342,7 +343,7 @@ adds no dependency preflight beyond the MP command's behavior.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -386,7 +387,7 @@ acknowledgement.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -428,7 +429,7 @@ arrival. Briosa does not retain or preflight motion state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -469,7 +470,7 @@ disabled by default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -508,7 +509,7 @@ value through without maintaining a machine-specific allowlist.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -548,7 +549,7 @@ compatible collection-instrument argument setter.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -613,7 +614,7 @@ The public 6DOF Z field maps internally to the exact SDK literal
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -678,7 +679,7 @@ The public 6DOF Z field maps internally from the exact SDK literal
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -721,7 +722,7 @@ defaults to `0`. Briosa adds no interpolation or kinematic preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -761,7 +762,7 @@ Simulation is disabled by default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -798,7 +799,7 @@ resulting interface state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -843,7 +844,7 @@ retains no intermediate state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -887,7 +888,7 @@ hardware-state preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -926,7 +927,7 @@ joint settings to a CSV file or embedded file resolved by local SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -964,7 +965,7 @@ default is an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1002,7 +1003,7 @@ preflight. The exact MP name default is an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1042,7 +1043,7 @@ for the selected calibration.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1082,7 +1083,7 @@ the selected calibration.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1138,7 +1139,7 @@ retaining every supported exact-target setting. `Show Interface` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1193,7 +1194,7 @@ operation when explicit DOF control is required. `Show Interface` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1233,7 +1234,7 @@ The exact MP default is to stop. Briosa retains no trapping state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1271,7 +1272,7 @@ added calibration-state preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1310,7 +1311,7 @@ transform uses the exact identity-transform default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-calibration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot calibration fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot calibration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1349,7 +1350,7 @@ transform uses the exact identity-transform default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-robot-machine-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk robot machine fixture</span>
+  <span className="catalog-target-validation">At Risk — Robot/machine fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1392,7 +1393,7 @@ because the SDK requires the output array dimension in advance.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1430,7 +1431,7 @@ exact default is `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1468,7 +1469,7 @@ defaults are `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1506,7 +1507,7 @@ default is `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1544,7 +1545,7 @@ and value both default to `0`; Briosa adds no bounds preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1586,7 +1587,7 @@ a partial real-values-only result.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Robot Operations" data-validation="at-risk-calibration-appliance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Robot Operations</span>
-  <span className="catalog-target-validation">At risk calibration appliance fixture</span>
+  <span className="catalog-target-validation">At Risk — Calibration-appliance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Robot Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

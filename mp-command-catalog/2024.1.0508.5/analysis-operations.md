@@ -42,7 +42,7 @@ command link for its exact-target signature, disposition, and version difference
 | [Get Ellipse Properties](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) | **Current** | Evidence review — no 2024 runtime validation |
 | [Get Euler Parameters for Frame](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) | **Current** | Evidence review — no 2024 runtime validation |
 | [Get Euler Parameters for i-th Frame in Frame Set](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) | **Current** | Evidence review — no 2024 runtime validation |
-| [Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get i-th Collection Name](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) | **Current** | Limited local licensed smoke test |
 | [Get i-th Instrument From Collection Instrument Ref List](/mp-command-catalog/commands/analysis-operations#get-i-th-instrument-from-collection-instrument-ref-list) | **Excluded** | Evidence review |
 | [Get i-th Object From Collection Object Name Ref List](/mp-command-catalog/commands/analysis-operations#get-i-th-object-from-collection-object-name-ref-list) | **Excluded** | Evidence review |
 | [Get i-th Object From Collection Object Name Ref List (Iterator)](/mp-command-catalog/commands/analysis-operations#get-i-th-object-from-collection-object-name-ref-list-iterator) | **SDK Unavailable** | Evidence review |
@@ -61,7 +61,7 @@ command link for its exact-target signature, disposition, and version difference
 | [Get Measurement Info Data](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) | **Current** | At Risk — no 2024 runtime validation |
 | [Get Measurement Weather Data](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) | **Current** | At Risk — no 2024 runtime validation |
 | [Get Number of characters in a string](/mp-command-catalog/commands/analysis-operations#get-number-of-characters-in-a-string) | **Excluded** | Evidence review |
-| [Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get Number of Collections](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) | **Current** | Limited local licensed smoke test |
 | [Get Number of Frames In Frame Set](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) | **Current** | Evidence review — no 2024 runtime validation |
 | [Get Number of Instruments in Collection Instrument Ref List](/mp-command-catalog/commands/analysis-operations#get-number-of-instruments-in-collection-instrument-ref-list) | **Excluded** | Evidence review |
 | [Get Number of Objects in Collection Object Name Ref List](/mp-command-catalog/commands/analysis-operations#get-number-of-objects-in-collection-object-name-ref-list) | **Excluded** | Evidence review |

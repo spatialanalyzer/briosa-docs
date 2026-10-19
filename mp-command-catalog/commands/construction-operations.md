@@ -17,6 +17,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>14</strong></div>
   <div><span>Current Server Operations</span><strong>14</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -37,7 +38,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-object">Copy Object</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Copy Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#copy-object">Copy Object</a></td>
@@ -47,7 +48,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-objects-to-a-collection">Copy Objects to a collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Copy Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#copy-objects-to-a-collection">Copy Objects to a collection</a></td>
@@ -57,7 +58,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#move-objects-to-a-collection">Move Objects to a collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Move Objects to a collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-objects-to-a-collection">Move Objects to a collection</a></td>
@@ -67,7 +68,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Copy Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#copy-objects---point-to-point-delta">Copy Objects - Point to Point Delta</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Copy Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#copy-objects---point-to-point-delta">Copy Objects - Point to Point Delta</a></td>
@@ -77,7 +78,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Move Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#move-objects---point-to-point-delta">Move Objects - Point to Point Delta</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Move Objects - Point to Point Delta" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-objects---point-to-point-delta">Move Objects - Point to Point Delta</a></td>
@@ -87,7 +88,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Point" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-point">Rename Point</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Rename Point" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-point">Rename Point</a></td>
@@ -97,7 +98,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Points with Name Pattern" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-points-with-name-pattern">Rename Points with Name Pattern</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Rename Points with Name Pattern" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-points-with-name-pattern">Rename Points with Name Pattern</a></td>
@@ -107,7 +108,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-collection">Rename Collection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Rename Collection" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-collection">Rename Collection</a></td>
@@ -117,7 +118,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-object">Rename Object</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Rename Object" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-object">Rename Object</a></td>
@@ -127,7 +128,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Rename Item" data-group="Construction Operations" data-status="current" data-validation="at-risk-fixture-validation-required">
   <td><a href="#rename-item">Rename Item</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Rename Item" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-item">Rename Item</a></td>
@@ -137,7 +138,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Points" data-group="Construction Operations" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-points">Delete Points</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive fixture validation required</td>
 </tr>
 <tr data-command="Delete Points" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-points">Delete Points</a></td>
@@ -147,7 +148,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Points WildCard Selection" data-group="Construction Operations" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
   <td><a href="#delete-points-wildcard-selection">Delete Points WildCard Selection</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive fixture validation required</td>
 </tr>
 <tr data-command="Delete Points WildCard Selection" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-points-wildcard-selection">Delete Points WildCard Selection</a></td>
@@ -157,7 +158,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Construct Objects From Surface Faces - Runtime Select" data-group="Construction Operations" data-status="current" data-validation="at-risk-interactive-fixture-validation-required">
   <td><a href="#construct-objects-from-surface-faces---runtime-select">Construct Objects From Surface Faces - Runtime Select</a></td><td>Construction Operations</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture validation required</td>
 </tr>
 <tr data-command="Construct Objects From Surface Faces - Runtime Select" data-group="Construction Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-objects-from-surface-faces---runtime-select">Construct Objects From Surface Faces - Runtime Select</a></td>
@@ -174,7 +175,7 @@ separately. Current entries are included in Briosa Server 0.9.2; runtime policy 
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="licensed-setter-probe-fixture-execution-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">Licensed setter probe fixture execution required</span>
+  <span className="catalog-target-validation">Licensed setter probe; fixture execution required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="evidence-review-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -242,7 +243,7 @@ fixture scenario.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -276,7 +277,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -299,7 +300,7 @@ Copies one collection object to a caller-supplied object name.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -330,7 +331,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -353,7 +354,7 @@ the destination collection when it does not already exist.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -384,7 +385,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -406,7 +407,7 @@ Moves selected objects into a destination collection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -439,7 +440,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -464,7 +465,7 @@ optionally placing the copies in another collection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -496,7 +497,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -519,7 +520,7 @@ Moves selected objects by the delta from the first point to the second point.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -551,7 +552,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -574,7 +575,7 @@ Renames one point and optionally permits replacement of an existing target.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -606,7 +607,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -629,7 +630,7 @@ Renames a list of points using a numbered `%d` name pattern.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -660,7 +661,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -682,7 +683,7 @@ Renames one collection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -716,7 +717,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -741,7 +742,7 @@ different type.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -775,7 +776,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -801,7 +802,7 @@ objects.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-destructive-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk destructive fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — destructive fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -831,7 +832,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - destructive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — destructive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -853,7 +854,7 @@ destructive operation after an unknown execution outcome.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-destructive-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk destructive fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — destructive fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -884,7 +885,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - destructive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
+  <div><span>Validation</span><strong>At Risk — destructive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
 ### MP Signature
@@ -908,7 +909,7 @@ operation after an unknown execution outcome.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations" data-validation="at-risk-interactive-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations</span>
-  <span className="catalog-target-validation">At risk interactive fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -944,7 +945,7 @@ This command has a distinct 2024 signature: seven Boolean inputs select planes, 
 
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div><div><span>MP Group Path</span><strong>Construction Operations</strong></div>
-  <div><span>Validation</span><strong>At Risk - interactive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present with one erroneous exported setter</strong></div>
+  <div><span>Validation</span><strong>At Risk — interactive fixture validation required</strong></div><div><span>SDK Observation</span><strong>Present with one erroneous exported setter</strong></div>
 </div>
 
 ### MP Signature
@@ -963,7 +964,7 @@ from `Any` through `Vertex Points`, followed by `Point Offset`. A second
 exported `Object Type` setter with `Entire Solid` and `Select Faces` choices is
 an SA View SDK Code export defect and is not part of the command signature.
 
-Included in Briosa Server 0.7.0 because callers may intentionally coordinate an
+Included in Briosa Server 0.9.2 because callers may intentionally coordinate an
 operator-driven CAD selection workflow. Briosa requires `Object Type` rather
 than defaulting it to `Any`; choosing a specific type avoids the additional
 type-selection dialog, while callers can still select `Any` when that dialog is

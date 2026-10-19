@@ -16,6 +16,7 @@ These entries cover the 14 commands observed under **Construction Operations
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>14</strong></div>
   <div><span>Current Server Operations</span><strong>10</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>4</strong></div>
 </div>
 
@@ -24,31 +25,31 @@ These entries cover the 14 commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-point-group-fixture"><td><a href="#construct-a-vector-group---group-to-group-compare">Construct a Vector Group - Group to Group Compare</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-point-group-fixture"><td><a href="#construct-a-vector-group---group-to-group-compare">Construct a Vector Group - Group to Group Compare</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-group fixture</td></tr>
 <tr data-command="Construct a Vector Group - Group to Group Compare" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group---group-to-group-compare">Construct a Vector Group - Group to Group Compare</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#construct-a-vector-group---area-profile-check">Construct a Vector Group - Area Profile Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#construct-a-vector-group---area-profile-check">Construct a Vector Group - Area Profile Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector-group fixture</td></tr>
 <tr data-command="Construct a Vector Group - Area Profile Check" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group---area-profile-check">Construct a Vector Group - Area Profile Check</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-group-from-vector-name-ref-list">Construct a Vector Group From Vector Name Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-group-from-vector-name-ref-list">Construct a Vector Group From Vector Name Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector fixture</td></tr>
 <tr data-command="Construct a Vector Group From Vector Name Ref List" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group-from-vector-name-ref-list">Construct a Vector Group From Vector Name Ref List</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindelta">Construct a Vector in Working Coordinates(Begin/Delta)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindelta">Construct a Vector in Working Coordinates(Begin/Delta)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector fixture</td></tr>
 <tr data-command="Construct a Vector in Working Coordinates(Begin/Delta)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-in-working-coordinatesbegindelta">Construct a Vector in Working Coordinates(Begin/Delta)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindirectionmag">Construct a Vector in Working Coordinates(Begin/Direction/Mag.)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-fixture"><td><a href="#construct-a-vector-in-working-coordinatesbegindirectionmag">Construct a Vector in Working Coordinates(Begin/Direction/Mag.)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector fixture</td></tr>
 <tr data-command="Construct a Vector in Working Coordinates(Begin/Direction/Mag.)" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-in-working-coordinatesbegindirectionmag">Construct a Vector in Working Coordinates(Begin/Direction/Mag.)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -60,31 +61,31 @@ These entries cover the 14 commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#construct-a-vector-group-from-a-relationship">Construct a Vector Group From a Relationship</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#construct-a-vector-group-from-a-relationship">Construct a Vector Group From a Relationship</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td></tr>
 <tr data-command="Construct a Vector Group From a Relationship" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-a-vector-group-from-a-relationship">Construct a Vector Group From a Relationship</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-a-vector-name-ref-list-from-a-vector-group">Make a Vector Name Ref List From a Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-a-vector-name-ref-list-from-a-vector-group">Make a Vector Name Ref List From a Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector-group fixture</td></tr>
 <tr data-command="Make a Vector Name Ref List From a Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-vector-name-ref-list-from-a-vector-group">Make a Vector Name Ref List From a Vector Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
 <tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
 <tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - vector-group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector-group fixture</td></tr>
 <tr data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -117,7 +118,7 @@ These entries cover the 14 commands observed under **Construction Operations
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-point-group-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk point group fixture</span>
+  <span className="catalog-target-validation">At Risk — point-group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -167,7 +168,7 @@ average deviation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-group-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector group fixture</span>
+  <span className="catalog-target-validation">At Risk — vector-group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -209,7 +210,7 @@ of `0.0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector fixture</span>
+  <span className="catalog-target-validation">At Risk — vector fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -247,7 +248,7 @@ reference list.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector fixture</span>
+  <span className="catalog-target-validation">At Risk — vector fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -291,7 +292,7 @@ values expressed in working coordinates. `Is Magnitude Negative` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector fixture</span>
+  <span className="catalog-target-validation">At Risk — vector fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -383,7 +384,7 @@ Vector Name Ref List` when that workflow is suitable.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -422,7 +423,7 @@ Constructs a named Vector Group from a selected Relationship.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-group-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector group fixture</span>
+  <span className="catalog-target-validation">At Risk — vector-group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -462,7 +463,7 @@ Vector Group.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-interactive-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk interactive fixture</span>
+  <span className="catalog-target-validation">At Risk — interactive fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -501,7 +502,7 @@ Vector Name reference list. The user prompt defaults to the exact MP text
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-interactive-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk interactive fixture</span>
+  <span className="catalog-target-validation">At Risk — interactive fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -539,7 +540,7 @@ collection and Vector Group identities. The prompt defaults to an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-vector-group-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At risk vector group fixture</span>
+  <span className="catalog-target-validation">At Risk — vector-group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

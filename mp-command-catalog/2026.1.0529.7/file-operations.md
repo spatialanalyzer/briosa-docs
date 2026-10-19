@@ -139,4 +139,16 @@ cross-version history live in the canonical grouped reference.
 | [Verify MP File Exists](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) | File Operations | **Current** | Portable contract review |
 | [Write ASCII Line](/mp-command-catalog/commands/file-operations#write-ascii-line) | File Operations / ASCII Data File Operations | **Excluded** | Not applicable |
 
+## Documentation-Only Commands
+
+SpatialAnalyzer's installed MP documentation for 2026.1.0529.7 lists these
+commands under File Operations, but the exact-target SDK export did not observe
+them. The documented group path is kept as review evidence, not as an MP Editor
+placement.
+
+| MP Command | Documented MP Group Path | Briosa Status | Validation |
+| --- | --- | --- | --- |
+| [Export ASCII Point Sets](/mp-command-catalog/commands/file-operations#export-ascii-point-sets) | File Operations / File Export | **SDK Unavailable** | Not applicable |
+| [Export ASII Points](/mp-command-catalog/commands/file-operations#export-asii-points) | File Operations / File Export | **SDK Unavailable** | Not applicable |
+
 [Open the canonical File Operations command reference →](/mp-command-catalog/commands/file-operations)

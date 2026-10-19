@@ -30,9 +30,9 @@ admitted by policy.
   <Link
     className="catalog-group-card"
     to="/mp-command-catalog/2026.1.0529.7/overview">
-    <span className="catalog-group-kicker">Current Catalog Target</span>
+    <span className="catalog-group-kicker">Released · 1,027 Current Operations</span>
     <strong>SpatialAnalyzer 2026.1.0529.7</strong>
-    <p>Browse the SA-native group hierarchy and currently published command entries.</p>
+    <p>Browse 1,371 reviewed commands in the SA-native group hierarchy and their released support.</p>
     <span className="catalog-group-link">Open target catalog →</span>
   </Link>
   <Link
@@ -75,7 +75,7 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.9.1** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
+Released availability reflects Briosa Server **0.9.2** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 

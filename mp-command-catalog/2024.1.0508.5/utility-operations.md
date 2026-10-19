@@ -21,7 +21,7 @@ command link for its exact-target signature, disposition, and version difference
 | [Generate Random Number](/mp-command-catalog/commands/utility-operations#generate-random-number) | **Excluded** | Evidence review |
 | [Get Screen Resolution](/mp-command-catalog/commands/utility-operations#get-screen-resolution) | **Current** | Evidence review — no 2024 runtime validation |
 | [Get Tick Count](/mp-command-catalog/commands/utility-operations#get-tick-count) | **Excluded** | Evidence review |
-| [Get Working Frame Properties](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get Working Frame Properties](/mp-command-catalog/commands/utility-operations#get-working-frame-properties) | **Current** | Limited local licensed smoke test |
 | [Increment Point Name](/mp-command-catalog/commands/utility-operations#increment-point-name) | **Current** | Evidence review — no 2024 runtime validation |
 | [Lock Imported Items](/mp-command-catalog/commands/utility-operations#lock-imported-items) | **Current** | Evidence review — no 2024 runtime validation |
 | [Lock/Unlock Selected Items](/mp-command-catalog/commands/utility-operations#lockunlock-selected-items) | **Current** | Evidence review — no 2024 runtime validation |

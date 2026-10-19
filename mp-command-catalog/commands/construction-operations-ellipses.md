@@ -16,6 +16,7 @@ Ellipses** in SA 2026.1.0529.7.
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>1</strong></div>
   <div><span>Current Server Operations</span><strong>1</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -25,7 +26,7 @@ Ellipses** in SA 2026.1.0529.7.
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Ellipse" data-group="Construction Operations / Ellipses" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-ellipse">Construct Ellipse</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><a href="#construct-ellipse">Construct Ellipse</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 </tbody>
 </table>
@@ -36,7 +37,7 @@ Ellipses** in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Ellipses" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Ellipses</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 </div>
 

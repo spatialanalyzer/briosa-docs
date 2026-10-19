@@ -14,7 +14,7 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Get Active Units](/mp-command-catalog/commands/utility-operations#get-active-units) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get Active Units](/mp-command-catalog/commands/utility-operations#get-active-units) | **Current** | Limited local licensed smoke test |
 | [Get Angular Representation](/mp-command-catalog/commands/utility-operations#get-angular-representation) | **Current** | Evidence review — no 2024 runtime validation |
 | [Set Active Units](/mp-command-catalog/commands/utility-operations#set-active-units) | **Current** | Evidence review — no 2024 runtime validation |
 | [Set Angular Representation](/mp-command-catalog/commands/utility-operations#set-angular-representation) | **Current** | Evidence review — no 2024 runtime validation |

@@ -26,7 +26,7 @@ command link for its exact-target signature, disposition, and version difference
 | [Find Files in Directory](/mp-command-catalog/commands/file-operations#find-files-in-directory) | **Current** | Evidence review — no 2024 runtime validation |
 | [Find Sub-Directories in Directory](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) | **Current** | Evidence review — no 2024 runtime validation |
 | [Get Directory and Filename from Path](/mp-command-catalog/commands/file-operations#get-directory-and-filename-from-path) | **Excluded** | Evidence review |
-| [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get Working Directory](/mp-command-catalog/commands/file-operations#get-working-directory) | **Current** | Limited local licensed smoke test |
 | [Make Directory](/mp-command-catalog/commands/file-operations#make-directory) | **SDK Unavailable** | Evidence review |
 | [Make Embedded File Name List](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) | **Current** | Evidence review — no 2024 runtime validation |
 | [New SA File](/mp-command-catalog/commands/file-operations#new-sa-file) | **Current** | Evidence review — no 2024 runtime validation |

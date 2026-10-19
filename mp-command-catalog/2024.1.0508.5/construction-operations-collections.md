@@ -17,7 +17,7 @@ command link for its exact-target signature, disposition, and version difference
 | [Construct Collection](/mp-command-catalog/commands/construction-operations-collections#construct-collection) | **Current** | At Risk — no 2024 runtime validation |
 | [Delete Collection](/mp-command-catalog/commands/construction-operations-collections#delete-collection) | **Current** | At Risk — no 2024 runtime validation |
 | [Delete Collections by Wildcard](/mp-command-catalog/commands/construction-operations-collections#delete-collections-by-wildcard) | **Current** | At Risk — no 2024 runtime validation |
-| [Get Active Collection Name](/mp-command-catalog/commands/construction-operations-collections#get-active-collection-name) | **Current** | Evidence review — no 2024 runtime validation |
+| [Get Active Collection Name](/mp-command-catalog/commands/construction-operations-collections#get-active-collection-name) | **Current** | Limited local licensed smoke test |
 | [Set (or construct) default collection](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection) | **Current** | At Risk — no 2024 runtime validation |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)

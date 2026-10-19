@@ -16,6 +16,7 @@ These entries cover the six commands observed under **Construction Operations
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>6</strong></div>
   <div><span>Current Server Operations</span><strong>6</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,37 +25,37 @@ These entries cover the six commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane">Construct Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane">Construct Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Construct Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-plane">Construct Plane</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Construct Plane, Normal to Object, Through Point" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-plane-normal-to-object-through-point">Construct Plane, Normal to Object, Through Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Construct Planes, Bounding Point Group" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-bounding-point-group">Construct Planes, Bounding Point Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Construct Planes, Bisect 2 Planes" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-bisect-2-planes">Construct Planes, Bisect 2 Planes</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#shift-plane">Shift Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-fixture-validation-required"><td><a href="#shift-plane">Shift Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td></tr>
 <tr data-command="Shift Plane" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#shift-plane">Shift Plane</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive validation required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Construct Planes From Surface Faces - Runtime Select" data-group="Construction Operations / Planes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-planes-from-surface-faces---runtime-select">Construct Planes From Surface Faces - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -69,7 +70,7 @@ These entries cover the six commands observed under **Construction Operations
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -120,7 +121,7 @@ the displayed bounds; the analytical plane remains infinite.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -171,7 +172,7 @@ live SpatialAnalyzer geometry decision.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -225,7 +226,7 @@ override is enabled. SpatialAnalyzer increments duplicate result names.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -272,7 +273,7 @@ validates the source identities and their geometry.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -320,7 +321,7 @@ the MP defaults and does not impose additional bounds checks.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Planes</span>
-  <span className="catalog-target-validation">At risk interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Planes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

@@ -16,6 +16,7 @@ These entries cover all three commands observed under **Instrument Operations
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>3</strong></div>
   <div><span>Current Server Operations</span><strong>3</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,19 +25,19 @@ These entries cover all three commands observed under **Instrument Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-active-instrument-interface-fixture"><td><a href="#issue-instrument-actuator-command">Issue Instrument Actuator Command</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - active instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-active-instrument-interface-fixture"><td><a href="#issue-instrument-actuator-command">Issue Instrument Actuator Command</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — active instrument interface fixture</td></tr>
 <tr data-command="Issue Instrument Actuator Command" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#issue-instrument-actuator-command">Issue Instrument Actuator Command</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-robot-instrument-fixture"><td><a href="#set-instrument-axes">Set Instrument Axes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - robot instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-robot-instrument-fixture"><td><a href="#set-instrument-axes">Set Instrument Axes</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — robot instrument fixture</td></tr>
 <tr data-command="Set Instrument Axes" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-axes">Set Instrument Axes</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-projector-instrument-fixture"><td><a href="#set-alignment-projector">Set Alignment Projector</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projector instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-projector-instrument-fixture"><td><a href="#set-alignment-projector">Set Alignment Projector</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — projector instrument fixture</td></tr>
 <tr data-command="Set Alignment Projector" data-group="Instrument Operations / Advanced Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-alignment-projector">Set Alignment Projector</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -51,7 +52,7 @@ These entries cover all three commands observed under **Instrument Operations
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-active-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
-  <span className="catalog-target-validation">At risk active instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — active instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -91,7 +92,7 @@ collection and its interface must be running.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-robot-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
-  <span className="catalog-target-validation">At risk robot instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — robot instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -131,7 +132,7 @@ animation steps default to `0`; Briosa adds no axis-count or motion validation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-projector-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Advanced Instrument Operations</span>
-  <span className="catalog-target-validation">At risk projector instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — projector instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations / Advanced Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

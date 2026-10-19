@@ -64,4 +64,16 @@ cross-version history live in the canonical grouped reference.
 | [Show/Hide Relationship Report](/mp-command-catalog/commands/view-control#showhide-relationship-report) | View Control / Hide Show Operations | **Current** | Portable contract review |
 | [Show/Hide Relationship Watch](/mp-command-catalog/commands/view-control#showhide-relationship-watch) | View Control / Hide Show Operations | **Current** | Portable contract review |
 
+## Documentation-Only Commands
+
+SpatialAnalyzer's installed MP documentation for 2026.1.0529.7 lists these
+commands under View Control, but the exact-target SDK export did not observe
+them. The documented group path is kept as review evidence, not as an MP Editor
+placement.
+
+| MP Command | Documented MP Group Path | Briosa Status | Validation |
+| --- | --- | --- | --- |
+| [Hide All Callout View](/mp-command-catalog/commands/view-control#hide-all-callout-view) | View Control / Hide Show Operations | **SDK Unavailable** | Not applicable |
+| [Show/Hide Dimensions](/mp-command-catalog/commands/view-control#showhide-dimensions) | View Control / Hide Show Operations | **SDK Unavailable** | Not applicable |
+
 [Open the canonical View Control command reference →](/mp-command-catalog/commands/view-control)
