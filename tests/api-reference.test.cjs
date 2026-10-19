@@ -359,9 +359,13 @@ test('method pages render their contract as an operation panel with highlighted,
   // Copy and expand controls need JavaScript and are added after hydration, so
   // the served page and its search records carry no button text.
   assert.equal($('.api-contract button').length, 0);
-  // The gRPC reference names the later servers that serve its contract unchanged.
-  assert.match($('.api-applies').text(), /Server0\.9\.0Same Contract0\.9\.1 · 0\.9\.2/);
-  assert.match($('#execution-notes').nextUntil('h2').text(), /Servers 0\.9\.1 and 0\.9\.2 serve this same contract/);
+  // The gRPC reference names the later servers that serve its contract unchanged:
+  // in a chip, and in a site note kept apart from the released text.
+  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
+  assert.equal($('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
+  assert.equal($('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
+  assert.doesNotMatch($('.api-contract').text(), /same contract/);
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.9\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
 });
 
 test('group readouts and history chips count only what was documented', () => {

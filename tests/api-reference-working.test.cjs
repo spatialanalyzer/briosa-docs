@@ -161,16 +161,46 @@ test('method contracts read as operation panels without changing their text', as
 });
 
 test('later releases that serve a snapshot contract unchanged are named with it', async () => {
-  const {pages, navigation, index} = await syntheticReference({sameContract: {grpc: {'1.0.0': ['1.0.1', '1.0.2']}}});
-  const note = 'Servers 1.0.1 and 1.0.2 serve this same contract; <a href="/docs/releases#documentation-versions">Release Status</a> lists their runtime corrections.';
-  assert.ok(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7').html.includes(`target <strong>2026.1.0529.7</strong>. ${note}`));
-  assert.ok(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/file-operations').html.includes(`Server <strong>1.0.0</strong>. ${note}`));
-  assert.ok(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory').html.includes(note));
-  assert.deepEqual(navigation['/api/grpc/sa-2026.1.0529.7'].sameContract, {'1.0.0': ['1.0.1', '1.0.2']});
-  assert.deepEqual(index.grpc.sameContract, {'1.0.0': ['1.0.1', '1.0.2']});
-  // Other families and releases are untouched.
-  assert.equal(navigation['/api/dotnet/sa-2026.1.0529.7'].sameContract, undefined);
-  assert.ok(!pages.some((p) => p.family !== 'grpc' && p.html.includes('same contract')));
+  const later = ['1.0.1', '1.0.2'];
+  const {pages, navigation, index} = await syntheticReference({sameContract: {grpc: {'1.0.0': later}}, earlier: true});
+  const at = (route) => pages.find((p) => p.path === route);
+  const base = '/api/grpc/sa-2026.1.0529.7';
+  // The release's overview, group, and method pages name them in a site note
+  // (`sameContract`), whatever their released text says: the Crib Sheet group
+  // states no release, and Run Crib Sheet has no released signature.
+  for (const id of ['', '/file-operations', '/file-operations/get-working-directory', '/file-operations/backup-now', '/instrument-operations-crib-sheet-operations', '/instrument-operations-crib-sheet-operations/run-crib-sheet']) {
+    assert.deepEqual(at(base + id).sameContract, later, base + id);
+    assert.doesNotMatch(at(base + id).html, /same contract|Release Status/, `${base + id} keeps the released text apart from the note`);
+  }
+  // The released sentences are unchanged.
+  assert.ok(at(base).html.includes('target <strong>2026.1.0529.7</strong>. It covers everything.'));
+  assert.ok(at(`${base}/file-operations`).html.includes('Server <strong>1.0.0</strong>. Choose the SpatialAnalyzer target above;'));
+  assert.ok(at(`${base}/file-operations/get-working-directory`).html.includes('Server <strong>1.0.0</strong>. Choose the SpatialAnalyzer target above;'));
+  // Other guides and method histories carry no note.
+  assert.equal(at(`${base}/get-state`).sameContract, undefined);
+  assert.ok(pages.filter((p) => p.kind === 'history').every((p) => !p.sameContract));
+  assert.deepEqual(navigation[base].sameContract, {'1.0.0': later});
+  assert.deepEqual(index.grpc.sameContract, {'1.0.0': later});
+});
+
+test('same-contract labels are absent on earlier gRPC releases and on client families', async () => {
+  const {sameContractNote} = await import('../src/components/ApiReference/context.ts');
+  const {pages, navigation, index} = await syntheticReference({sameContract: {grpc: {'1.0.0': ['1.0.1', '1.0.2']}}, earlier: true});
+  const earlier = pages.filter((p) => p.family === 'grpc' && p.release === '0.9.0');
+  assert.deepEqual([...new Set(earlier.map((p) => p.kind))].sort(), ['group', 'guide'], 'the earlier release keeps its overview, guides, and groups');
+  for (const page of earlier) {
+    assert.equal(page.sameContract, undefined, `${page.path} has no note`);
+    // The page's chip and selector note read its own release's entry.
+    assert.equal(sameContractNote(navigation[page.base].sameContract, page.release), '', `${page.path} has no label`);
+  }
+  // Tables on those pages still label the release that has later servers.
+  assert.equal(sameContractNote(navigation['/api/grpc/sa-2026.1.0529.7/0.9.0'].sameContract, '1.0.0'), 'Same contract in 1.0.1 and 1.0.2');
+  for (const family of ['dotnet', 'python', 'javascript']) {
+    assert.equal(navigation[`/api/${family}/sa-2026.1.0529.7`].sameContract, undefined, family);
+    assert.equal(index[family].sameContract, undefined, family);
+    assert.equal(sameContractNote(navigation[`/api/${family}/sa-2026.1.0529.7`].sameContract, '1.0.0'), '', family);
+  }
+  assert.ok(!pages.some((p) => p.family !== 'grpc' && (p.sameContract || /same contract/i.test(p.html))));
 });
 
 test('a group whose RPCs are listed only in tables has no Methods readout or index', async () => {

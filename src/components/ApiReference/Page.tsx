@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, releaseLabel, sameContractNote, contents, type Selection} from './context';
+import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, releaseLabel, sameContractNote, contents, listOf, type Selection} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
@@ -93,6 +93,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   const published = page.variants.filter((v) => v.href);
   const publishedReleases = new Set(published.map((v) => v.release)).size;
   const publishedTargets = new Set(published.map((v) => v.target)).size;
+  const sameAs = page.sameContract ?? [];
   return <Layout title={title} description={page.description} wrapperClassName="api-reference-layout">
     <Head>
       <link rel="canonical" href={`https://briosa.dev${page.path}`} />
@@ -151,6 +152,8 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
           {!page.current && !isHistory && <Admonition type="info" title={`Earlier ${release} Release`}><p>This page describes Briosa {release} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></Admonition>}
           {!page.available && !isHistory && <Admonition type="warning" title="Unavailable for This Target"><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></Admonition>}
           {isHistory && <p className="api-lead">This page shows which Briosa releases document this method for each SpatialAnalyzer version, and the exact contract each one published. Use it to confirm what works with the SpatialAnalyzer version you build for.</p>}
+          {/* The site's note, kept apart from the released text it describes. */}
+          {sameAs.length > 0 && <p className="api-same-contract">{`${release}${sameAs.length > 1 ? 's' : ''} ${listOf(sameAs)} ${sameAs.length > 1 ? 'serve' : 'serves'} this same contract; `}<Link to="/docs/releases#documentation-versions">Release Status</Link>{` lists ${sameAs.length > 1 ? 'their' : 'its'} runtime corrections.`}</p>}
           {page.compatibility && <Compatibility family={page.family} compatibility={page.compatibility} history={!isHistory} target={isHistory ? undefined : page.target} sameContract={sameContract} />}
           {isHistory && <Availability page={page} targets={targets} selected={selected} sameContract={sameContract} />}
           {page.kind === 'group' ? <>

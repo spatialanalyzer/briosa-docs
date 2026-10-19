@@ -60,21 +60,6 @@ function withoutAnchorComment(children) {
   return kept.filter((child) => child.type !== 'text' || child.value);
 }
 
-const list = (items) => items.length < 3 ? items.join(' and ') : `${items.slice(0, -1).join(', ')}, and ${items.at(-1)}`;
-// Later releases that serve a snapshot's contract unchanged (targets.json
-// `sameContract`) have no snapshot of their own. Where a reference names its
-// release, say so, so a reader on the newer release is not left guessing.
-function sameContractNote(markdown, ctx) {
-  const later = ctx.sameContract ?? [];
-  if (!later.length) return markdown;
-  const label = releaseLabel(ctx.family);
-  const release = ctx.release.replaceAll('.', '\\.');
-  const note = `${label}${later.length > 1 ? 's' : ''} ${list(later)} ${later.length > 1 ? 'serve' : 'serves'} this same contract; [Release Status](/docs/releases#documentation-versions) lists their runtime corrections.`;
-  return markdown
-    .replace(new RegExp(`(This reference covers \\*\\*SA [^*\\n]+\\*\\*, ${label} \\*\\*${release}\\*\\*\\.)`, 'gi'), `$1 ${note}`)
-    .replace(new RegExp(`(This reference documents \\*\\*Briosa ${label} ${release}\\*\\*\\s+for exact SpatialAnalyzer\\s+target \\*\\*[^*\\n]+\\*\\*\\.)`, 'gi'), `$1 ${note}`);
-}
-
 // Presentation structure around released contract HTML. Every text and code
 // character is kept; only classes, wrappers, and line-break hints are added.
 const isElement = (node, tagName) => node?.type === 'element' && (!tagName || node.tagName === tagName);
@@ -398,7 +383,7 @@ export async function compileReference(siteDir) {
   }
 
   async function html(markdown, ctx, id, {prefix = '', demote = 0, operation = false} = {}) {
-    markdown = sameContractNote(markdown, ctx).replace(/^\[SA \d[^\n]+\n/gm, '')
+    markdown = markdown.replace(/^\[SA \d[^\n]+\n/gm, '')
       .replaceAll('Choose the other exact target in the sidebar;', 'Choose the SpatialAnalyzer target above;')
       .replace(/^:::([a-z]+)(?:\[([^\]]+)\])?\s*$/gm, (_, type, title) => calloutOpen(type, title))
       .replace(/^:::\s*$/gm, '\n</div>\n</aside>\n').replaceAll('className=', 'class=');
@@ -553,6 +538,11 @@ export async function compileReference(siteDir) {
         html: '', toc: [], variants: variants(ctx, id), related: related(ctx, id),
         compatibility: fallback.kind === 'method' ? compatibility(ctx.family, id) : null,
       };
+      // Later releases that serve this release's contract unchanged (targets.json
+      // `sameContract`) have no snapshot of their own. Overview, group, and method
+      // pages that show this release's snapshot name them in a site note, apart
+      // from the released text and whatever it says.
+      if (original && ctx.sameContract.length && (original.kind !== 'guide' || id === 'overview')) page.sameContract = ctx.sameContract;
       if (fallback.kind === 'group') {
         const counts = fieldCounts(ctx, nav.groups.find((g) => g.id === id)?.methods ?? []);
         if (counts) page.fields = counts;

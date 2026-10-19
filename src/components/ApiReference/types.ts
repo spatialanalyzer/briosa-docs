@@ -8,13 +8,15 @@ export type Compatibility = {
 // `title` is plain text; `heading`, when present, is the H1 with its inline code in backticks.
 // `fields` counts a group's request and result fields from its parameter tables, and
 // `firstDocumented` is the first release, up to this one, that documented one of its
-// methods for this target.
+// methods for this target. `sameContract` lists later releases that serve this
+// page's released contract unchanged, for a site note on the overview, group, and
+// method pages that show a snapshot of that release.
 export type PageData = {
   id: string; title: string; heading?: string; description: string; family: string; release: string; target: string;
   base: string; path: string; kind: 'method' | 'group' | 'guide' | 'history'; group?: string; groupHref: string | null;
   current: boolean; available: boolean; noindex: boolean; source: string; html: string; toc: {id: string; title: string}[];
   variants: Variant[]; compatibility: Compatibility | null; related: {family: string; href: string}[];
-  fields?: {request: number; result: number; execution: number}; firstDocumented?: string;
+  fields?: {request: number; result: number; execution: number}; firstDocumented?: string; sameContract?: string[];
 };
 // `sameContract` maps a release to later releases that serve its contract unchanged.
 export type Navigation = {
