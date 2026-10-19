@@ -46,7 +46,7 @@ export function StartTiles(): ReactNode {
                 <span className={styles.tileIcon}>
                   <Icon name={tile.icon} />
                 </span>
-                <b>{tile.title}</b>
+                <b>{tile.title}</b>{' '}
                 <span>{tile.detail}</span>
                 <Icon name="arrow" className={styles.go} />
               </Link>

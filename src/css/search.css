@@ -29,6 +29,11 @@ html .DocSearch {
   --docsearch-container-background: var(--sl-scrim);
 }
 
+/* The search page's "Powered by" label sits outside the DocSearch modal. */
+html.search-page-wrapper {
+  --docsearch-muted-color: var(--sl-ink-3);
+}
+
 [data-theme='dark'] .DocSearch {
   --docsearch-key-background: var(--sl-void);
 }

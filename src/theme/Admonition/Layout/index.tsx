@@ -20,7 +20,7 @@ export default function AdmonitionLayout({type, title, children, className, id}:
       <p className="sl-callout__head">
         <span className="sl-gauge" data-level={levels[type] ?? 2} aria-hidden="true"><i /><i /><i /><i /><i /></span>
         <span className="sl-hud sl-callout__type">{labels[type] ?? type}</span>
-        {authored && <span className="sl-callout__title">{title}</span>}
+        {authored && <> <span className="sl-callout__title">{title}</span></>}
       </p>
       {children ? <div className="sl-callout__body">{children}</div> : null}
     </div>

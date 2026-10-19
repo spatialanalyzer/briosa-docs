@@ -372,18 +372,18 @@ export default function LiveSession(): ReactNode {
             </div>
             <div className={styles.console} role="group" aria-label="Session log">
               <p className={styles.prompt}>
-                <span className={styles.src}>&gt;</span>
+                <span className={styles.src}>&gt;</span>{' '}
                 <span>{sample.run}</span>
                 <span className={styles.cur} aria-hidden="true" />
               </p>
               <p className={seq('p1')}>
-                <span className={styles.src}>SA</span>Inspection::Points::P1 (0.000, 0.000, 0.000)
+                <span className={styles.src}>SA</span> Inspection::Points::P1 (0.000, 0.000, 0.000)
               </p>
               <p className={seq('p2')}>
-                <span className={styles.src}>SA</span>Inspection::Points::P2 (3.000, 4.000, 0.000)
+                <span className={styles.src}>SA</span> Inspection::Points::P2 (3.000, 4.000, 0.000)
               </p>
               <p className={seq('out')}>
-                <span className={styles.src}>stdout</span>
+                <span className={styles.src}>stdout</span>{' '}
                 <span className={styles.okText}>Distance: 5.000</span>
               </p>
             </div>

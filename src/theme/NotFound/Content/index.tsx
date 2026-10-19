@@ -20,7 +20,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
       <div className="container sl-notfound__in">
         <p className="sl-notfound__read">
           <span className="sl-gauge" data-level="5" aria-hidden="true"><i /><i /><i /><i /><i /></span>
-          <span className="sl-hud">Out of Tolerance</span>
+          <span className="sl-hud">Out of Tolerance</span>{' '}
           <span className="sl-num">404</span>
         </p>
         <Heading as="h1">Page Not Found</Heading>
@@ -31,7 +31,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
           {destinations.map((d) => (
             <li key={d.to}>
               <Link to={d.to}>
-                <b>{d.label}</b>
+                <b>{d.label}</b>{' '}
                 <span>{d.detail}</span>
               </Link>
             </li>
@@ -39,7 +39,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
         </ul>
         {search && (
           <p className="sl-notfound__search">
-            <Link className="sl-textlink" to="/search">Search the documentation</Link>
+            <Link className="sl-textlink" to="/search">Search the Documentation</Link>
           </p>
         )}
       </div>

@@ -120,7 +120,9 @@
   --sl-line-3: rgba(139, 231, 255, 0.5);
   --sl-ink: var(--briosa-dark-ink);
   --sl-ink-2: var(--briosa-dark-ink-2);
-  --sl-ink-3: var(--briosa-dark-ink-3);
+  /* The brand's dark ink-3 (#7690B0) reaches only 4.25:1 on raised panels, so small
+     labels there use a slightly lighter step that keeps 4.5:1 on panel-2. */
+  --sl-ink-3: #8199BA;
   --sl-ink-body: #C3D3E8;
   --sl-laser: var(--briosa-dark-jaw);
   --sl-laser-core: var(--briosa-dark-point-small);

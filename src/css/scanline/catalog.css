@@ -541,7 +541,7 @@
 }
 
 .catalog-path-sep {
-  color: var(--sl-line-3);
+  color: var(--sl-ink-3);
 }
 
 .catalog-command-table tr[data-validation] > td:last-child {

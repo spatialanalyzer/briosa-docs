@@ -110,13 +110,13 @@ function Spectrum(): ReactNode {
         <p className={styles.specRead}>
           {active ? (
             <>
-              {active.name}
+              {active.name}{' '}
               <b>{active.n}</b>
               <span> observed MP commands</span>
             </>
           ) : (
             <>
-              {mpGroups2026.length} root groups<b>{formatCount(mpObservations2026)}</b> <span>observations</span>
+              {mpGroups2026.length} root groups{' '}<b>{formatCount(mpObservations2026)}</b> <span>observations</span>
             </>
           )}
         </p>
@@ -179,7 +179,7 @@ function Spectrum(): ReactNode {
             onPointerEnter={() => setHot(i)}
             onPointerLeave={() => setHot(null)}>
             <i />
-            {group.name}
+            {group.name}{' '}
             <b>{group.n}</b>
           </li>
         ))}
@@ -214,7 +214,7 @@ export default function Catalog(): ReactNode {
         <Ticker items={tickerRpcs[0]} />
         <Ticker items={tickerRpcs[1]} reverse />
         <div className={clsx('sl-hud', styles.opsHead)}>
-          <span>Featured Operations</span>
+          <span>Featured Operations</span>{' '}
           <span>
             gRPC API {grpcVersions[0]} · SA {targets.sa2026}
           </span>
@@ -223,8 +223,8 @@ export default function Catalog(): ReactNode {
           {featuredOperations.map((operation) => (
             <li key={operation.rpc}>
               <Link to={operation.href}>
-                <span className={styles.svc}>{operation.service}</span>
-                <span className={styles.rpc}>{operation.rpc}</span>
+                <span className={styles.svc}>{operation.service}</span>{' '}
+                <span className={styles.rpc}>{operation.rpc}</span>{' '}
                 <span className={styles.dsc}>{operation.detail}</span>
                 <Icon name="arrow" />
               </Link>

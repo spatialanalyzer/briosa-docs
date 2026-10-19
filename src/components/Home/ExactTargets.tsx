@@ -34,15 +34,15 @@ function Packages({target}: {readonly target: string}): ReactNode {
   return (
     <ul className={styles.tgtPk}>
       <li>
-        <span>NuGet</span>
+        <span>NuGet</span>{' '}
         <code>{pk.nuget}</code>
       </li>
       <li>
-        <span>PyPI</span>
+        <span>PyPI</span>{' '}
         <code>{pk.pypi}</code>
       </li>
       <li>
-        <span>npm</span>
+        <span>npm</span>{' '}
         <code>{pk.npm}</code>
       </li>
     </ul>
@@ -73,7 +73,7 @@ export default function ExactTargets(): ReactNode {
                 {targets.sa2026}
               </h3>
               <p className={styles.stat}>
-                <span className={styles.big}>{formatCount(currentOperations2026)}</span>
+                <span className={styles.big}>{formatCount(currentOperations2026)}</span>{' '}
                 <span>MP operations in the server registry</span>
               </p>
               <div className={styles.ticks} aria-hidden="true">
@@ -82,7 +82,7 @@ export default function ExactTargets(): ReactNode {
                 ))}
               </div>
               <div className={clsx('sl-hud', styles.meterCap)}>
-                <span>{grpcServices} gRPC Services</span>
+                <span>{grpcServices} gRPC Services</span>{' '}
                 <span>Server Registry</span>
               </div>
               <Packages target={targets.sa2026} />
@@ -100,7 +100,7 @@ export default function ExactTargets(): ReactNode {
                 {targets.sa2024}
               </h3>
               <p className={styles.stat}>
-                <span className={styles.big}>{formatCount(currentOperations2024)}</span>
+                <span className={styles.big}>{formatCount(currentOperations2024)}</span>{' '}
                 <span>current operations of {formatCount(reviewedCommands2024)} reviewed commands</span>
               </p>
               <div className={styles.meter} aria-hidden="true">
@@ -109,7 +109,7 @@ export default function ExactTargets(): ReactNode {
                 </div>
               </div>
               <div className={clsx('sl-hud', styles.meterCap)}>
-                <span>{formatCount(currentOperations2024)} Current</span>
+                <span>{formatCount(currentOperations2024)} Current</span>{' '}
                 <span>{formatCount(reviewedCommands2024)} Reviewed</span>
               </div>
               <Packages target={targets.sa2024} />

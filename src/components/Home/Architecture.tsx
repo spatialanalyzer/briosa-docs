@@ -40,59 +40,59 @@ export default function Architecture(): ReactNode {
           <svg className={styles.archSvg} ref={lanes} aria-hidden="true" />
           <ol className={styles.archSteps}>
             <li className={styles.step}>
-              <div className={styles.stepNode}>
+              <div className={styles.stepNode} aria-hidden="true">
                 <div className={clsx(styles.node, styles.nodeClients)} data-node="client">
                   <span className={clsx(styles.mono, styles.monoCs)} data-src="0">
                     C#
-                  </span>
+                  </span>{' '}
                   <span className={clsx(styles.mono, styles.monoPy)} data-src="1">
                     Py
-                  </span>
+                  </span>{' '}
                   <span className={clsx(styles.mono, styles.monoTs)} data-src="2">
                     TS
                   </span>
                 </div>
               </div>
               <div>
-                <p className={clsx('sl-hud', styles.stepN)}>01</p>
-                <h3>Your Client</h3>
+                <p className={clsx('sl-hud', styles.stepN)}>01</p>{' '}
+                <h3>Your Client</h3>{' '}
                 <p className={styles.cap}>.NET, JavaScript, Python, or any gRPC stack</p>
               </div>
             </li>
             <li className={styles.step}>
-              <div className={styles.stepNode}>
+              <div className={styles.stepNode} aria-hidden="true">
                 <div className={styles.node} data-node="host">
                   <span className="sl-brk" aria-hidden="true" />
                   <CaliperMark />
                 </div>
               </div>
               <div>
-                <p className={clsx('sl-hud', styles.stepN)}>02</p>
-                <h3>Briosa Host</h3>
+                <p className={clsx('sl-hud', styles.stepN)}>02</p>{' '}
+                <h3>Briosa Host</h3>{' '}
                 <p className={styles.cap}>Typed contracts, policy, discovery, and diagnostics</p>
               </div>
             </li>
             <li className={styles.step}>
-              <div className={styles.stepNode}>
+              <div className={styles.stepNode} aria-hidden="true">
                 <div className={clsx(styles.node, styles.gate)} data-node="worker">
                   <Icon name="gate" />
                 </div>
               </div>
               <div>
-                <p className={clsx('sl-hud', styles.stepN)}>03</p>
-                <h3>Supervised Worker</h3>
+                <p className={clsx('sl-hud', styles.stepN)}>03</p>{' '}
+                <h3>Supervised Worker</h3>{' '}
                 <p className={styles.cap}>One serialized STA and one active SDK connection</p>
               </div>
             </li>
             <li className={styles.step}>
-              <div className={styles.stepNode}>
+              <div className={styles.stepNode} aria-hidden="true">
                 <div className={styles.node} data-node="sa">
                   <Icon name="reticle" />
                 </div>
               </div>
               <div>
-                <p className={clsx('sl-hud', styles.stepN)}>04</p>
-                <h3>SpatialAnalyzer</h3>
+                <p className={clsx('sl-hud', styles.stepN)}>04</p>{' '}
+                <h3>SpatialAnalyzer</h3>{' '}
                 <p className={styles.cap}>Separately installed, running, and licensed</p>
               </div>
             </li>

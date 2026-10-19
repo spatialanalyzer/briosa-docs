@@ -152,7 +152,7 @@ export default function Products(): ReactNode {
                 <span className={clsx(styles.mono, item.mono)} aria-hidden="true">
                   {item.short}
                 </span>
-                <b>{item.label}</b>
+                <b>{item.label}</b>{' '}
                 <code>{item.name}</code>
               </li>
             ))}
