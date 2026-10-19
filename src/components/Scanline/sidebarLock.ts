@@ -91,7 +91,11 @@ export function attachSidebarLock(container: HTMLElement | null): () => void {
   nav.addEventListener('focusout', onLeave);
   nav.addEventListener('transitionend', refresh);
   window.addEventListener('resize', refresh);
-  const observer = new MutationObserver(refresh);
+  // The lock and point restyle themselves on every placement; reacting to those
+  // changes would schedule a placement every frame.
+  const observer = new MutationObserver((records) => {
+    if (records.some((record) => record.target !== lock && record.target !== point)) refresh();
+  });
   observer.observe(nav, {subtree: true, attributes: true, attributeFilter: ['class', 'style', 'aria-expanded', 'aria-current', 'hidden']});
   const sizes = 'ResizeObserver' in window ? new ResizeObserver(refresh) : null;
   sizes?.observe(nav);
