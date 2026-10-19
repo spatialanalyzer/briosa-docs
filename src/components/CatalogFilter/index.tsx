@@ -1,5 +1,6 @@
 import React, {memo, useCallback, useEffect, useId, useMemo, useRef, useState} from 'react';
 import Link from '@docusaurus/Link';
+import useIsomorphicLayoutEffect from '@docusaurus/useIsomorphicLayoutEffect';
 
 import {enhanceCatalogPage} from './enhance';
 
@@ -53,6 +54,37 @@ function optionKey(label: string): string {
   return label.toLocaleLowerCase().replace(/[\s-]+/g, ' ').trim();
 }
 
+// The page's static summary grid: the nearest one before the filter in its section.
+function staticGridBefore(element: HTMLElement | null): HTMLElement | null {
+  let node = element?.previousElementSibling ?? null;
+  while (node && !node.classList.contains('catalog-context-grid') && !/^H[1-6]$/.test(node.tagName)) {
+    node = node.previousElementSibling;
+  }
+  return node?.classList.contains('catalog-context-grid') ? node as HTMLElement : null;
+}
+
+// A deep-linked element below the filter, while the reader is still at it:
+// nothing has scrolled yet, its heading is still about where fragment
+// navigation put it (fonts and images may have settled since), or the page is
+// at its end with the heading on screen. Otherwise the reader has scrolled
+// away, and the page is left alone.
+function settledHashTarget(filter: HTMLElement | null): HTMLElement | null {
+  let id = window.location.hash.slice(1);
+  try {
+    id = decodeURIComponent(id);
+  } catch {
+    // Keep the raw fragment.
+  }
+  const element = id ? document.getElementById(id) : null;
+  if (!filter || !element || filter.contains(element)) return null;
+  if (!(filter.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING)) return null;
+  if (window.scrollY === 0) return element;
+  const top = element.getBoundingClientRect().top;
+  const margin = Number.parseFloat(getComputedStyle(element).scrollMarginTop) || 0;
+  const atEnd = window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 2;
+  const settled = Math.abs(top - margin) <= window.innerHeight / 4 || (atEnd && top >= 0 && top < window.innerHeight);
+  return settled ? element : null;
+}
 
 function readRows(): CatalogRow[] {
   return Array.from(
@@ -155,6 +187,7 @@ export default function CatalogFilter({
   const id = useId();
   const root = useRef<HTMLDivElement>(null);
   const pendingScroll = useRef<CatalogRow | null>(null);
+  const hashTarget = useRef<HTMLElement | null>(null);
   const [rows, setRows] = useState<readonly CatalogRow[]>([]);
   const [query, setQuery] = useState('');
   const [target, setTarget] = useState(releasedTarget);
@@ -166,6 +199,8 @@ export default function CatalogFilter({
 
   // Read the page's own rows and the URL once.
   useEffect(() => {
+    // Note a deep-linked entry before anything on the page moves.
+    hashTarget.current = settledHashTarget(root.current);
     const pageRows = readRows();
     const parameters = new URLSearchParams(window.location.search);
     const targets = new Set(pageRows.map((row) => row.target));
@@ -177,19 +212,7 @@ export default function CatalogFilter({
     setStatus(parameters.get('status') ?? '');
     setValidation(parameters.get('validation') ?? '');
     setInitialized(true);
-    const cleanup = enhanceCatalogPage();
-
-    // The live summary replaces the page's static summary grid.
-    let grid: Element | null = root.current?.previousElementSibling ?? null;
-    while (grid && !grid.classList.contains('catalog-context-grid') && !/^H[1-6]$/.test(grid.tagName)) {
-      grid = grid.previousElementSibling;
-    }
-    const staticGrid = grid?.classList.contains('catalog-context-grid') ? grid as HTMLElement : null;
-    if (staticGrid) staticGrid.hidden = true;
-    return () => {
-      if (staticGrid) staticGrid.hidden = false;
-      cleanup();
-    };
+    return enhanceCatalogPage();
   }, [showGroupFilter]);
 
   const targets = useMemo(
@@ -242,8 +265,9 @@ export default function CatalogFilter({
     [targetRows],
   );
 
-  // Show matching rows only, then keep the URL shareable.
-  useEffect(() => {
+  // Show matching rows only, then keep the URL shareable. Rows change before
+  // paint, so a filtered page never flashes its unfiltered table.
+  useIsomorphicLayoutEffect(() => {
     if (!initialized) return;
     for (const row of rows) row.element.hidden = !visible.has(row);
 
@@ -276,6 +300,21 @@ export default function CatalogFilter({
       context.toggleAttribute('data-selected', context.dataset.target === target);
     }
   }, [initialized, target]);
+
+  // The live summary replaces the static summary grid in the same frame. It is
+  // taller, and not every browser anchors scrolling, so a deep link below it
+  // is then put back in view: once, instantly, unless the reader has scrolled.
+  // This runs after the row filter above, so the table has its final height.
+  useIsomorphicLayoutEffect(() => {
+    if (!initialized) return undefined;
+    const staticGrid = staticGridBefore(root.current);
+    if (staticGrid) staticGrid.hidden = true;
+    hashTarget.current?.scrollIntoView({block: 'start', behavior: 'instant'});
+    hashTarget.current = null;
+    return () => {
+      if (staticGrid) staticGrid.hidden = false;
+    };
+  }, [initialized]);
 
   const chooseTarget = (value: string): void => {
     setTarget(value);

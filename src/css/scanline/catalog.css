@@ -803,6 +803,22 @@
   margin: 1.6rem 0 0;
 }
 
+/* Until the filter runs, the live summary is hidden and the static grid
+   stands in for its readout. Hold roughly the rest of its height (all but the
+   point field) so the page below barely moves when it appears. Only where
+   scripts run: without them the static grid is the whole summary. */
+@media (scripting: enabled) {
+  .catalog-filter:has(> .catalog-summary[hidden]) {
+    padding-top: 150px;
+  }
+}
+
+@media (scripting: enabled) and (max-width: 580px) {
+  .catalog-filter:has(> .catalog-summary[hidden]) {
+    padding-top: 200px;
+  }
+}
+
 .catalog-summary {
   container-type: inline-size;
   border: 1px solid var(--sl-line-2);
