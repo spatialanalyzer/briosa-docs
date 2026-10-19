@@ -10,9 +10,9 @@ export default function Readout({page, methods}: {page: PageData; methods: Metho
   const other = methods.length - documented;
   const since = page.variants.filter((v) => v.target === page.target).at(-1)?.release;
   return <dl className="sl-readout api-readout">
-    <div><dt className="sl-hud">Methods</dt><dd><b>{documented}</b>{other > 0 && <small>+ {other} {page.current ? 'Other SA Target' : 'History Only'}</small>}</dd></div>
+    <div><dt className="sl-hud">Methods</dt><dd><b>{documented}</b>{other > 0 && <> <small>+ {other} {page.current ? 'Other SA Target' : 'History Only'}</small></>}</dd></div>
     {page.fields && <div><dt className="sl-hud">Request Fields</dt><dd><b>{page.fields.request}</b></dd></div>}
-    {page.fields && <div><dt className="sl-hud">Result Fields</dt><dd><b>{page.fields.result}</b>{page.fields.execution > 0 && <small>+ Execution</small>}</dd></div>}
-    {since && <div><dt className="sl-hud">First Documented</dt><dd><b>{since}</b><small>{releaseLabel(page.family)}</small></dd></div>}
+    {page.fields && <div><dt className="sl-hud">Result Fields</dt><dd><b>{page.fields.result}</b>{page.fields.execution > 0 && <> <small>+ Execution</small></>}</dd></div>}
+    {since && <div><dt className="sl-hud">First Documented</dt><dd><b>{since}</b> <small>{releaseLabel(page.family)}</small></dd></div>}
   </dl>;
 }

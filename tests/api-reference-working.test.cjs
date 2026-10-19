@@ -72,7 +72,7 @@ async function syntheticReference(sameContract) {
     await writeFile(path.join(fixture, `${family}_versions.json`), '["1.0.0"]');
     await writeFile(path.join(fixture, `${family}_versioned_sidebars`, 'version-1.0.0-sidebars.json'), JSON.stringify({sidebar: ['overview', {type: 'category', label: 'Lifecycle', items: ['get-state']}, {type: 'category', label: 'MP Commands', items: ['file-operations']}]}));
     await writeFile(path.join(docs, 'overview.md'), `---\ntitle: SpatialAnalyzer Test API\n---\n\n# Briosa Test API\n\nThis reference documents **Briosa ${label} 1.0.0** for exact SpatialAnalyzer\ntarget **${target}**. It covers everything.\n`);
-    await writeFile(path.join(docs, 'get-state.md'), '---\ntitle: GetState\n---\n\n# `GetState`\n\nReads the state.\n\n## `StateKind` Values\n\nOne value.\n');
+    await writeFile(path.join(docs, 'get-state.md'), '---\ntitle: GetState\n---\n\n# `GetState`\n\nReads the state.\n\n## `StateKind` Values\n\nOne value.\n\n:::warning[Local-Only API]\n\nKeep the endpoint on **loopback**.\n\n:::\n');
     await writeFile(path.join(docs, 'file-operations.md'), `---\ntitle: File Operations\n---\n\n# File Operations\n\nThis reference covers **SA ${target}**, ${label} **1.0.0**. Choose the other exact target in the sidebar; availability differs.\n\n${method}\n`);
     targets.snapshots[family] = {'1.0.0': target};
   }
@@ -100,6 +100,14 @@ test('titles render inline code as code and use plain text everywhere else', asy
   assert.equal(nav.label, 'Briosa Test API');
   assert.equal(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7').title, 'Briosa Test API');
   for (const page of pages) assert.doesNotMatch(page.title, /`/, page.path);
+});
+
+test('snapshot admonitions render as the site callouts', async () => {
+  const {pages} = await syntheticReference({});
+  const guide = pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/get-state');
+  // The same markup as src/theme/Admonition/Layout, still an <aside> that search extraction skips.
+  assert.match(guide.html, /<aside class="theme-admonition sl-callout" data-kind="warning">\s*<p class="sl-callout__head"><span class="sl-gauge" data-level="4" aria-hidden="true">(?:<i><\/i>){5}<\/span><span class="sl-hud sl-callout__type">Warning<\/span> <span class="sl-callout__title">Local-Only API<\/span><\/p>\s*<div class="sl-callout__body">\s*<p>Keep the endpoint on <strong>loopback<\/strong>\.<\/p>\s*<\/div>\s*<\/aside>/);
+  assert.doesNotMatch(guide.html, /:::|alert--/);
 });
 
 test('method contracts read as operation panels without changing their text', async () => {

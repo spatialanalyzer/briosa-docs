@@ -16,6 +16,7 @@ import Readout from './Readout';
 import FamilySwitch from './FamilySwitch';
 import {Availability, Differences} from './Versions';
 import TOC from '@theme/TOC';
+import Admonition from '@theme/Admonition';
 import './styles.css';
 
 export const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
@@ -132,21 +133,21 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
             <ul className="api-applies" aria-label="Applies To">
               {isHistory ? <>
                 <li className="api-state">Release History</li>
-                <li className="sl-chip"><i>Contracts</i>{page.compatibility?.revisions ?? 0}</li>
-                <li className="sl-chip"><i>Releases</i>{publishedReleases}</li>
-                <li className="sl-chip"><i>SA Targets</i>{documentedTargets}</li>
-                {reading && <li className="sl-chip api-chip-reading"><i>Reading</i>{release} {reading.release} · SA {reading.target}</li>}
+                <li className="sl-chip"><i>Contracts</i>{' '}{page.compatibility?.revisions ?? 0}</li>
+                <li className="sl-chip"><i>Releases</i>{' '}{publishedReleases}</li>
+                <li className="sl-chip"><i>SA Targets</i>{' '}{documentedTargets}</li>
+                {reading && <li className="sl-chip api-chip-reading"><i>Reading</i>{' '}{release} {reading.release} · SA {reading.target}</li>}
               </> : <>
                 <li className="api-state" data-state={page.current ? 'documented' : undefined}>{page.current ? 'Current Reference' : 'Earlier Release'}</li>
-                <li className="sl-chip"><i>SA</i>{page.target}</li>
-                <li className="sl-chip"><i>{release}</i>{page.release}</li>
-                {later.length > 0 && <li className="sl-chip"><i>Same Contract</i>{later.join(' · ')}</li>}
+                <li className="sl-chip"><i>SA</i>{' '}{page.target}</li>
+                <li className="sl-chip"><i>{release}</i>{' '}{page.release}</li>
+                {later.length > 0 && <li className="sl-chip"><i>Same Contract</i>{' '}{later.join(' · ')}</li>}
               </>}
             </ul>
             {!isHistory && <FamilySwitch family={page.family} links={Object.fromEntries(page.related.map((r) => [r.family, r.href]))} label="API Family" />}
           </header>
-          {!page.current && !isHistory && <div className="alert alert--info api-callout api-earlier"><strong>Earlier {release} Release</strong><p>This page describes Briosa {release} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></div>}
-          {!page.available && !isHistory && <div className="alert alert--warning api-callout"><strong>Unavailable for This Target</strong><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></div>}
+          {!page.current && !isHistory && <Admonition type="info" title={`Earlier ${release} Release`}><p>This page describes Briosa {release} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></Admonition>}
+          {!page.available && !isHistory && <Admonition type="warning" title="Unavailable for This Target"><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></Admonition>}
           {isHistory && <p className="api-lead">This page shows which Briosa releases document this method for each SpatialAnalyzer version, and the exact contract each one published. Use it to confirm what works with the SpatialAnalyzer version you build for.</p>}
           {page.compatibility && <Compatibility family={page.family} compatibility={page.compatibility} history={!isHistory} target={isHistory ? undefined : page.target} sameContract={sameContract} />}
           {isHistory && <Availability page={page} targets={targets} selected={selected} sameContract={sameContract} />}

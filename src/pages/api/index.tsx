@@ -74,9 +74,9 @@ export default function ApiReference(): ReactNode {
               <span className="sl-brk" aria-hidden="true" />
               <BrandImage product={reference.product} />
               <ul className="api-applies" aria-label={`${reference.title} Versions`}>
-                <li className="sl-chip"><i>{reference.release[0]}</i>{reference.release[1]}</li>
-                {reference.same.length > 0 && <li className="sl-chip"><i>Same Contract</i>{reference.same.join(' · ')}</li>}
-                <li className="sl-chip"><i>SA</i>2024 · 2026</li>
+                <li className="sl-chip"><i>{reference.release[0]}</i>{' '}{reference.release[1]}</li>
+                {reference.same.length > 0 && <li className="sl-chip"><i>Same Contract</i>{' '}{reference.same.join(' · ')}</li>}
+                <li className="sl-chip"><i>SA</i>{' '}2024 · 2026</li>
               </ul>
               <Heading as="h2" className="api-product-title">
                 <Link className="api-card-link" to={reference.to}>{reference.title}</Link>

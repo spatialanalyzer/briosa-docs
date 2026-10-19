@@ -299,6 +299,18 @@ const compareVersions = (a, b) => {
 const compact = (object) => Object.fromEntries(Object.entries(object).filter(([, value]) => value !== undefined && value !== null && value !== false && value !== ''));
 const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
+// Admonitions in released snapshots render as the site's Scanline callouts, with
+// the same markup as src/theme/Admonition/Layout. They stay <aside> elements,
+// which search extraction leaves out as before.
+const calloutLevels = {info: 1, important: 1, note: 2, tip: 3, warning: 4, caution: 4, danger: 5};
+const calloutOpen = (type, title) => {
+  const kind = Object.hasOwn(calloutLevels, type) ? type : 'note';
+  const gauge = `<span class="sl-gauge" data-level="${calloutLevels[kind]}" aria-hidden="true">${'<i></i>'.repeat(5)}</span>`;
+  const label = `<span class="sl-hud sl-callout__type">${kind[0].toUpperCase()}${kind.slice(1)}</span>`;
+  const heading = title ? ` <span class="sl-callout__title">${escape(title)}</span>` : '';
+  return `<aside class="theme-admonition sl-callout" data-kind="${kind}">\n<p class="sl-callout__head">${gauge}${label}${heading}</p>\n<div class="sl-callout__body">\n\n`;
+};
+
 // Each SA target is read at the newest Briosa release that documents it, at a
 // release-independent address. Earlier releases remain as method histories
 // (every distinct published contract) and as their release-specific guides.
@@ -388,8 +400,8 @@ export async function compileReference(siteDir) {
   async function html(markdown, ctx, id, {prefix = '', demote = 0, operation = false} = {}) {
     markdown = sameContractNote(markdown, ctx).replace(/^\[SA \d[^\n]+\n/gm, '')
       .replaceAll('Choose the other exact target in the sidebar;', 'Choose the SpatialAnalyzer target above;')
-      .replace(/^:::([a-z]+)(?:\[([^\]]+)\])?\s*$/gm, (_, type, title) => `<aside class="alert alert--${type === 'warning' ? 'warning' : 'info'}">\n\n${title ? `**${title}**\n` : ''}`)
-      .replace(/^:::\s*$/gm, '\n</aside>\n').replaceAll('className=', 'class=');
+      .replace(/^:::([a-z]+)(?:\[([^\]]+)\])?\s*$/gm, (_, type, title) => calloutOpen(type, title))
+      .replace(/^:::\s*$/gm, '\n</div>\n</aside>\n').replaceAll('className=', 'class=');
     const tree = parser.parse(markdown);
     const slugger = new Slugger();
     const toc = [];

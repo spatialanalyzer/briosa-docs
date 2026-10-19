@@ -33,10 +33,10 @@ export default function FamilyIndex({index}: {index: Data}): React.JSX.Element {
       </header>
       <ul className="api-target-grid">
         {index.targets.map((t, i) => <li className="api-target-card" key={t.target}>
-          <p className="api-target-kicker sl-hud">{i === 0 ? 'Latest SpatialAnalyzer' : 'Earlier SpatialAnalyzer'}{remembered === t.target && <span className="api-tag">Last Used</span>}</p>
-          <h2 className="api-target-title"><Link className="api-card-link" to={t.href}><span className="sl-hud">SA</span>{t.target}</Link></h2>
+          <p className="api-target-kicker sl-hud">{i === 0 ? 'Latest SpatialAnalyzer' : 'Earlier SpatialAnalyzer'}{remembered === t.target && <> <span className="api-tag">Last Used</span></>}</p>
+          <h2 className="api-target-title"><Link className="api-card-link" to={t.href}><span className="sl-hud">SA</span>{' '}{t.target}</Link></h2>
           <dl className="api-target-facts">
-            <div><dt className="sl-hud">Briosa {index.releaseLabel}</dt><dd>{t.release}{sameContractNote(index.sameContract, t.release) && <small>{sameContractNote(index.sameContract, t.release)}</small>}</dd></div>
+            <div><dt className="sl-hud">Briosa {index.releaseLabel}</dt><dd>{t.release}{sameContractNote(index.sameContract, t.release) && <> <small>{sameContractNote(index.sameContract, t.release)}</small></>}</dd></div>
             <div><dt className="sl-hud">Documented MP Methods</dt><dd>{t.methods.toLocaleString('en-US')}</dd></div>
           </dl>
           <span className="sl-textlink api-target-open" aria-hidden="true">Open the SA {t.target} Reference{arrow}</span>
