@@ -105,7 +105,7 @@ test('titles render inline code as code and use plain text everywhere else', asy
 test('method contracts read as operation panels without changing their text', async () => {
   const {pages} = await syntheticReference({});
   const page = pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory');
-  assert.match(page.html, /^<div class="api-op-head"><div class="api-rpc"><code class="api-rpc-path"><span class="api-rpc-service">\/briosa\.FileOperations\/<\/span><wbr>GetWorkingDirectory<\/code><span class="api-rpc-id"><span class="api-rpc-label">Operation ID<\/span> <code>file_<wbr>operations\.<wbr>get_<wbr>working_<wbr>directory<\/code><\/span><\/div><p class="api-op-links">/);
+  assert.match(page.html, /^<div class="api-op-head"><div class="api-rpc"><code class="api-rpc-path"><span class="api-rpc-service">\/briosa\.FileOperations\/<\/span><wbr>GetWorkingDirectory<\/code> <span class="api-rpc-id"><span class="api-rpc-label">Operation ID<\/span> <code>file_<wbr>operations\.<wbr>get_<wbr>working_<wbr>directory<\/code><\/span><\/div> <p class="api-op-links">/);
   assert.match(page.html, /<div class="api-op"><h2 id="request-parameters" data-count="1 Field">/);
   assert.match(page.html, /<table class="api-fields">/);
   assert.match(page.html, /<tr id="request-working-directory-name">/, 'row anchors are kept');

@@ -109,8 +109,10 @@ function rpcLine(node) {
   const cut = value.lastIndexOf('/') + 1;
   if (!value.startsWith('/') || cut < 2) return null;
   breakable(id, /(?<=[._])/);
+  // Spaces between the parts keep their text separate for search and copying.
   return element('div', 'api-rpc', [
     element('code', 'api-rpc-path', [element('span', 'api-rpc-service', [textNode(value.slice(0, cut))]), element('wbr'), textNode(value.slice(cut))]),
+    textNode(' '),
     element('span', 'api-rpc-id', [element('span', 'api-rpc-label', [textNode('Operation ID')]), textNode(' '), id]),
   ]);
 }
@@ -149,7 +151,8 @@ export function present(root, {fields = new Map(), operation = false} = {}) {
     else break;
   }
   const body = contract.slice(start);
-  children.unshift(...(address.length || links.length ? [element('div', 'api-op-head', [...address, ...links])] : []), ...(body.length ? [element('div', 'api-op', body)] : []));
+  const head = [...address, ...links].flatMap((node, i) => i ? [textNode(' '), node] : [node]);
+  children.unshift(...(head.length ? [element('div', 'api-op-head', head)] : []), ...(body.length ? [element('div', 'api-op', body)] : []));
   return root;
 }
 
