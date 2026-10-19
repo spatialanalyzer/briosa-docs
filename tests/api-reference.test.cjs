@@ -366,6 +366,10 @@ test('method pages render their contract as an operation panel with highlighted,
   assert.equal($('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
   assert.doesNotMatch($('.api-contract').text(), /same contract/);
   assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.9\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The first-call walkthrough's grpcurl example is highlighted in the served page.
+  const walkthrough = read('/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory')('.api-code[data-language="powershell"]');
+  assert.equal(walkthrough.length, 1);
+  assert.ok(walkthrough.find('.sl-tk-s').length > 0, 'the server render highlights PowerShell');
 });
 
 test('group readouts and history chips count only what was documented', () => {

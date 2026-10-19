@@ -67,6 +67,8 @@ async function syntheticReference({sameContract = {}, earlier = false} = {}) {
     '| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |', '',
     '```proto', 'rpc BackupNow(BackupNowRequest) returns (BackupNowResult);', '```',
   ].join('\n');
+  // The gRPC first-call walkthrough, with the grpcurl example the snapshots publish.
+  const walkthrough = '---\ntitle: Get Working Directory\n---\n\n# Get Working Directory\n\nCall it with grpcurl.\n\n```powershell\ngrpcurl -plaintext -d \'{}\' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory\n```\n';
   const ellipses = (release) => release === '0.9.0' ? [
     '## Construct Ellipse', '',
     '| Contract Item | Value |', '| --- | --- |', '| RPC | `ConstructEllipse` |', '| Operation ID | `construction_operations.construct_ellipse` |', '',
@@ -98,6 +100,7 @@ async function syntheticReference({sameContract = {}, earlier = false} = {}) {
       await writeFile(path.join(docs, 'overview.md'), `---\ntitle: SpatialAnalyzer Test API\n---\n\n# Briosa Test API\n\nThis reference documents **Briosa ${label} ${release}** for exact SpatialAnalyzer\ntarget **${target}**. It covers everything.\n`);
       await writeFile(path.join(docs, 'get-state.md'), '---\ntitle: GetState\n---\n\n# `GetState`\n\nReads the state.\n\n## `StateKind` Values\n\nOne value.\n\n:::warning[Local-Only API]\n\nKeep the endpoint on **loopback**.\n\n:::\n');
       await writeFile(path.join(docs, 'file-operations.md'), `---\ntitle: File Operations\n---\n\n# File Operations\n\nThis reference covers **SA ${target}**, ${label} **${release}**. Choose the other exact target in the sidebar; availability differs.\n\n${method}\n`);
+      if (family === 'grpc') await writeFile(path.join(docs, 'get-working-directory.md'), walkthrough);
       if (groups.includes('construction-operations-ellipses')) {
         await writeFile(path.join(docs, 'construction-operations-ellipses.md'), group('Construction Operations / Ellipses', ellipses(release)));
         await writeFile(path.join(docs, 'instrument-operations-crib-sheet-operations.md'), group('Instrument Operations / Crib Sheet Operations', cribSheet(release)));
@@ -201,6 +204,41 @@ test('same-contract labels are absent on earlier gRPC releases and on client fam
     assert.equal(sameContractNote(navigation[`/api/${family}/sa-2026.1.0529.7`].sameContract, '1.0.0'), '', family);
   }
   assert.ok(!pages.some((p) => p.family !== 'grpc' && (p.sameContract || /same contract/i.test(p.html))));
+});
+
+// Docusaurus loads themeConfig.prism.additionalLanguages into prism-react-renderer's
+// Prism from a client module (theme-classic's prism-include-languages), which runs
+// before any page renders, on the server and in the browser alike. Load the same
+// grammars, named by the site config, so code.ts sees what both renders see.
+async function siteHighlighter() {
+  const {Prism} = require('prism-react-renderer');
+  const config = await readFile(path.join(root, 'docusaurus.config.ts'), 'utf8');
+  const languages = [...(config.match(/additionalLanguages:\s*\[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([\w-]+)'/g)].map((m) => m[1]);
+  const before = globalThis.Prism;
+  globalThis.Prism = Prism;
+  try {
+    for (const language of languages) require(`prismjs/components/prism-${language}`);
+  } finally {
+    if (before) globalThis.Prism = before; else delete globalThis.Prism;
+  }
+  const {decorateCode} = await import('../src/components/ApiReference/code.ts');
+  return {languages, decorateCode};
+}
+
+test('PowerShell examples are highlighted with unchanged text', async () => {
+  const {languages, decorateCode} = await siteHighlighter();
+  assert.ok(languages.includes('powershell'), 'the site loads the PowerShell grammar');
+  const {pages} = await syntheticReference();
+  const page = pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory');
+  const block = decorateCode(page.html).match(/<div class="api-code" data-language="powershell"[\s\S]*?<\/pre><\/div>/)?.[0];
+  assert.ok(block, 'the folded first-call walkthrough keeps its PowerShell example');
+  assert.match(block, /<span class="api-code-label sl-hud">PowerShell<\/span>/);
+  assert.ok((block.match(/<span class="sl-tk-[a-z]">/g) ?? []).length >= 3, 'the example has syntax tokens');
+  assert.match(block, /<span class="sl-tk-s">'\{\}'<\/span>/, 'the request body reads as a string');
+  const text = block.match(/<code[^>]*>([\s\S]*)<\/code>/)[1].replace(/<[^>]+>/g, '').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&amp;', '&');
+  assert.equal(text, "grpcurl -plaintext -d '{}' 127.0.0.1:50051 briosa.FileOperations/GetWorkingDirectory\n");
+  // A named entity in code decodes to its own character: &nbsp; is U+00A0.
+  assert.match(decorateCode('<pre><code>a&nbsp;b</code></pre>'), /a b/);
 });
 
 test('a group whose RPCs are listed only in tables has no Methods readout or index', async () => {

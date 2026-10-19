@@ -15,7 +15,7 @@ const languages: Record<string, {grammar?: string; label?: string}> = {
   ts: {grammar: 'typescript', label: 'TypeScript'},
   typescript: {grammar: 'typescript', label: 'TypeScript'},
   json: {grammar: 'json', label: 'JSON'},
-  powershell: {label: 'PowerShell'},
+  powershell: {grammar: 'powershell', label: 'PowerShell'},
   text: {},
 };
 
@@ -33,7 +33,7 @@ const tokenClasses: Record<string, string> = {
 // Long blocks scroll inside a fixed height until the reader expands them.
 export const longBlock = 24;
 
-const named: Record<string, string> = {amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' '};
+const named: Record<string, string> = {amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: '\u00A0'};
 const decode = (html: string) => html.replace(/&(#x[\da-f]+|#\d+|[a-z]+);/gi, (entity, ref: string) => {
   if (ref[0] !== '#') return named[ref.toLowerCase()] ?? entity;
   return String.fromCodePoint(ref[1] === 'x' || ref[1] === 'X' ? parseInt(ref.slice(2), 16) : parseInt(ref.slice(1), 10));
