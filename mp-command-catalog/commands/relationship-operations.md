@@ -895,35 +895,35 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Vector Group To Vector Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Vector Group To Vector Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group Relationship fixture</td></tr>
 <tr data-command="Make Vector Group To Vector Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group Relationship fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Weights" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Weights" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group Relationship fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Fit Weights" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group Relationship fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group Relationship fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td>
   <td>Analysis Operations / Relationship Operations</td>
@@ -5853,7 +5853,7 @@ intersection. Cylinder/Plane is the default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5897,7 +5897,7 @@ defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5941,7 +5941,7 @@ Sets radial, minimum axial, and maximum axial offsets. Exact defaults are `1`,
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5988,7 +5988,7 @@ are gaps `0`, minimum and maximum weights `10`, and nominal weight `1`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6029,7 +6029,7 @@ Sets the fit-weight transition gradient factor, which defaults to `50`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

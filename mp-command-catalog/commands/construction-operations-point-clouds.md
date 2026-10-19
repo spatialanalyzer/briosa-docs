@@ -31,7 +31,7 @@ These entries cover the 11 commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-interactive-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-interactive-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive point-cloud fixture required</td></tr>
 <tr data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -148,7 +148,7 @@ name.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-interactive-point-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At Risk — interactive cloud fixture</span>
+  <span className="catalog-target-validation">At Risk — interactive point-cloud fixture required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
