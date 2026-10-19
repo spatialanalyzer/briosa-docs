@@ -545,8 +545,11 @@
   vertical-align: baseline;
 }
 
+/* A name with one long token, such as "Coordinates(Begin/Direction/Mag.)",
+   may break inside it rather than widen the column. */
 .catalog-command-table td:first-child {
   min-width: 12rem;
+  overflow-wrap: anywhere;
 }
 
 /* The group path cell (four-column tables only) recedes behind the name. */
@@ -1304,6 +1307,31 @@
 
   .catalog-seg {
     max-width: none;
+  }
+
+  /* Phones: a command and its status share the first screen of the table;
+     the validation column scrolls with the table, and headers may wrap. */
+  .markdown .catalog-command-table :is(td, th) {
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .markdown .catalog-command-table th {
+    white-space: normal;
+  }
+
+  .catalog-command-table td:first-child {
+    min-width: 8rem;
+  }
+
+  .catalog-command-table td:nth-child(2):not(:has(.catalog-status)) {
+    min-width: 0;
+    font-size: 0.8rem;
+  }
+
+  .catalog-command-table tr[data-validation] > td:last-child {
+    min-width: 10rem;
+    padding-left: calc(0.6rem + 25px);
   }
 }
 
