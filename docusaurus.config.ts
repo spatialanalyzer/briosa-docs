@@ -39,6 +39,12 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  // Scanline type: Saira (display, with its width axis), Inter (body, vendored from the
+  // brand pack in custom.css), and JetBrains Mono (code), all self-hosted.
+  clientModules: [
+    require.resolve('@fontsource-variable/saira/wdth.css'),
+    require.resolve('@fontsource-variable/jetbrains-mono/index.css'),
+  ],
   presets: [
     [
       'classic',
@@ -126,8 +132,9 @@ const config: Config = {
           'Documentation for Briosa, the open-source gRPC bridge for Hexagon SpatialAnalyzer.',
       },
     ],
+    // Scanline is dark-first; a reader's system preference still wins.
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: 'dark',
       respectPrefersColorScheme: true,
     },
     navbar: {

@@ -1,0 +1,517 @@
+/*
+ * Scanline shared components. Every page may use these; area styles
+ * (homepage, API reference, MP catalog, docs chrome) live in their own files.
+ * See src/css/scanline/README.md for the contract.
+ */
+
+/* ---------- Type utilities ---------- */
+.sl-hud {
+  font-family: var(--sl-f-display);
+  font-stretch: 125%;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sl-num {
+  font-family: var(--sl-f-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.sl-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--sl-laser);
+}
+
+.sl-kicker::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* ---------- Icons: 1.5px line icons with one accent stroke (--ac) ---------- */
+.sl-ico {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --ac: var(--sl-laser);
+}
+
+/* ---------- Corner brackets: the instrument's lock-on frame ---------- */
+.sl-brk {
+  --bk: var(--sl-laser);
+  --bl: 10px;
+  --bw: 1.5px;
+  background:
+    linear-gradient(var(--bk), var(--bk)) left top / var(--bl) var(--bw) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) left top / var(--bw) var(--bl) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) right top / var(--bl) var(--bw) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) right top / var(--bw) var(--bl) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) left bottom / var(--bl) var(--bw) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) left bottom / var(--bw) var(--bl) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) right bottom / var(--bl) var(--bw) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) right bottom / var(--bw) var(--bl) no-repeat;
+}
+
+/* ---------- Spectral bar: the deviation map with a passing glint ---------- */
+.sl-spectral {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--sl-dev-n2), var(--sl-dev-n1) 25%, var(--sl-dev-0) 50%, var(--sl-dev-p1) 75%, var(--sl-dev-p2));
+}
+
+.sl-spectral::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 22%;
+  background: linear-gradient(90deg, transparent, var(--sl-laser-core), transparent);
+  mix-blend-mode: plus-lighter;
+  opacity: 0.9;
+  transform: translateX(-110%);
+  animation: sl-glint 7s var(--sl-ease) infinite;
+}
+
+@keyframes sl-glint {
+  0% { transform: translateX(-110%); }
+  55%, 100% { transform: translateX(560%); }
+}
+
+/* ---------- Ruler band across the top of a section ---------- */
+.sl-rule {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 9px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--sl-line-2), var(--sl-line-2)) top / 100% 1px no-repeat,
+    repeating-linear-gradient(90deg, var(--sl-line-2) 0 1px, transparent 1px 120px) top / 100% 9px no-repeat,
+    repeating-linear-gradient(90deg, var(--sl-line) 0 1px, transparent 1px 24px) top / 100% 5px no-repeat;
+}
+
+/* ---------- Buttons ---------- */
+.sl-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  font: 600 15.5px/1 var(--sl-f-display);
+  font-stretch: 110%;
+  letter-spacing: 0.02em;
+  transition: transform 0.35s var(--sl-ease), box-shadow 0.35s var(--sl-ease), background-color 0.35s var(--sl-ease), color 0.35s var(--sl-ease);
+}
+
+.sl-btn:hover {
+  text-decoration: none;
+}
+
+.sl-btn .sl-ico {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.35s var(--sl-ease);
+}
+
+.sl-btn:hover .sl-ico {
+  transform: translateX(3px);
+}
+
+.sl-btn--solid {
+  overflow: hidden;
+  background: var(--sl-btn-bg);
+  color: var(--sl-on-laser);
+  box-shadow: inset 0 0 0 1px var(--sl-btn-edge), 0 14px 34px -16px var(--sl-btn-glow);
+  --ac: var(--sl-on-laser);
+}
+
+.sl-btn--solid:hover {
+  color: var(--sl-on-laser);
+  transform: translateY(-1px);
+  box-shadow: inset 0 0 0 1px var(--sl-btn-edge), 0 18px 40px -14px var(--sl-btn-glow);
+}
+
+.sl-btn--solid .sl-ico {
+  --ac: var(--sl-on-laser);
+}
+
+.sl-btn--solid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, var(--sl-sheen) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.8s var(--sl-ease);
+}
+
+.sl-btn--solid:hover::after,
+.sl-btn--solid:focus-visible::after {
+  transform: translateX(130%);
+}
+
+.sl-btn--ghost {
+  background: var(--sl-field);
+  color: var(--sl-ink);
+  box-shadow: inset 0 0 0 1px var(--sl-line-2);
+}
+
+.sl-btn--ghost:hover {
+  background: var(--sl-hover);
+  color: var(--sl-ink);
+}
+
+/* A ghost button may carry a .sl-brk child that opens outward on hover. */
+.sl-btn--ghost > .sl-brk {
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  transition: inset 0.45s var(--sl-ease);
+}
+
+.sl-btn--ghost:hover > .sl-brk,
+.sl-btn--ghost:focus-visible > .sl-brk {
+  inset: -6px;
+}
+
+.sl-btn--sm {
+  height: 38px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.sl-textlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sl-laser);
+  font: 600 15px/1 var(--sl-f-display);
+  font-stretch: 108%;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.sl-textlink .sl-ico {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.35s var(--sl-ease);
+}
+
+.sl-textlink:hover {
+  color: var(--sl-laser);
+  text-decoration: underline;
+}
+
+.sl-textlink:hover .sl-ico {
+  transform: translateX(4px);
+}
+
+/* ---------- Chips and readouts ---------- */
+.sl-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  padding: 0 11px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
+  background: var(--sl-field);
+  color: var(--sl-ink);
+  font: 500 12.5px/1 var(--sl-f-mono);
+  white-space: nowrap;
+}
+
+.sl-chip > i {
+  color: var(--sl-ink-3);
+  font: 500 10px/1 var(--sl-f-display);
+  font-stretch: 125%;
+  font-style: normal;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.sl-panel {
+  border: 1px solid var(--sl-line-2);
+  border-radius: 4px;
+  background: var(--sl-panel);
+}
+
+/* A digital-readout grid: label over a large tabular number. */
+.sl-readout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  border: 1px solid var(--sl-line-2);
+  border-radius: 4px;
+  background: var(--sl-panel);
+}
+
+.sl-readout > div {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px 18px 15px;
+  box-shadow: -1px 0 0 var(--sl-line);
+}
+
+.sl-readout .sl-hud {
+  color: var(--sl-ink-3);
+  font-size: 10.5px;
+}
+
+.sl-readout b,
+.sl-readout strong {
+  color: var(--sl-ink);
+  font: 500 clamp(1.6rem, 1.2rem + 1vw, 2.2rem)/1 var(--sl-f-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Status pills (MP catalog dispositions) ---------- */
+.sl-status {
+  --sc: var(--sl-st-undecided);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 24px;
+  padding: 0 9px;
+  border: 1px solid color-mix(in srgb, var(--sc) 42%, transparent);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--sc) 11%, transparent);
+  color: var(--sc);
+  font: 600 10.5px/1 var(--sl-f-display);
+  font-stretch: 118%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sl-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.sl-status[data-status='current'] { --sc: var(--sl-st-current); }
+.sl-status[data-status='next'] { --sc: var(--sl-st-next); }
+.sl-status[data-status='undecided'] { --sc: var(--sl-st-undecided); }
+.sl-status[data-status='uncommitted'] { --sc: var(--sl-st-uncommitted); }
+.sl-status[data-status='excluded'] { --sc: var(--sl-st-excluded); }
+.sl-status[data-status='sdk-unavailable'] { --sc: var(--sl-st-unavailable); }
+
+/* ---------- Validation meter: how much evidence stands behind a status ---------- */
+.sl-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--sl-ink-2);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+.sl-meter > .sl-meter__bars {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 2px;
+  flex: none;
+}
+
+.sl-meter__bars > i {
+  width: 4px;
+  height: 12px;
+  border-radius: 1px;
+  background: var(--sl-line-2);
+}
+
+.sl-meter[data-level='3'] .sl-meter__bars > i { background: var(--sl-st-current); }
+.sl-meter[data-level='2'] .sl-meter__bars > i:nth-child(-n + 2) { background: var(--sl-st-next); }
+.sl-meter[data-level='1'] .sl-meter__bars > i:first-child { background: var(--sl-st-uncommitted); }
+.sl-meter[data-level='0'] { color: var(--sl-ink-3); }
+
+/* ---------- Severity gauge: five segments of the deviation map, one lit ---------- */
+.sl-gauge {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 2px;
+  flex: none;
+}
+
+.sl-gauge > i {
+  width: 6px;
+  height: 11px;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0.18;
+}
+
+.sl-gauge > i:nth-child(1) { color: var(--sl-dev-n2); }
+.sl-gauge > i:nth-child(2) { color: var(--sl-dev-n1); }
+.sl-gauge > i:nth-child(3) { color: var(--sl-dev-0); }
+.sl-gauge > i:nth-child(4) { color: var(--sl-dev-p1); }
+.sl-gauge > i:nth-child(5) { color: var(--sl-dev-p2); }
+
+.sl-gauge[data-level='1'] > i:nth-child(1),
+.sl-gauge[data-level='2'] > i:nth-child(2),
+.sl-gauge[data-level='3'] > i:nth-child(3),
+.sl-gauge[data-level='4'] > i:nth-child(4),
+.sl-gauge[data-level='5'] > i:nth-child(5) {
+  opacity: 1;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* ---------- Terminal panel: tabbed code with a copy control ---------- */
+.sl-term {
+  border: 1px solid var(--sl-line-2);
+  border-radius: 4px;
+  background: var(--sl-term-bg);
+  box-shadow: var(--sl-shadow);
+}
+
+.sl-term__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 43px;
+  padding: 6px 6px 6px 8px;
+  border-bottom: 1px solid var(--sl-line);
+}
+
+.sl-term__label {
+  padding-left: 6px;
+  color: var(--sl-ink-3);
+}
+
+.sl-term__target {
+  margin-left: auto;
+  color: var(--sl-ink-3);
+  white-space: nowrap;
+}
+
+.sl-tabs {
+  display: flex;
+  gap: 2px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 7px;
+  margin-bottom: -7px;
+}
+
+.sl-tab {
+  position: relative;
+  flex: none;
+  height: 30px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--sl-ink-2);
+  cursor: pointer;
+  font: 500 13px/1 var(--sl-f-mono);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.sl-tab:hover,
+.sl-tab[aria-selected='true'] {
+  color: var(--sl-ink);
+  background: var(--sl-hover);
+}
+
+.sl-tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -7px;
+  height: 2px;
+  background: var(--sl-laser);
+}
+
+.sl-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  margin-left: auto;
+  padding: 0 10px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--sl-ink-2);
+  cursor: pointer;
+  font: 500 12.5px/1 var(--sl-f-body);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.sl-copy:hover {
+  color: var(--sl-ink);
+  border-color: var(--sl-line-3);
+}
+
+.sl-copy[data-copied] {
+  color: var(--sl-ok);
+  border-color: var(--sl-ok);
+}
+
+.sl-term__panel {
+  overflow-x: auto;
+  padding: 15px 16px 16px;
+  scrollbar-width: thin;
+}
+
+.sl-term__panel code {
+  display: block;
+  width: max-content;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--sl-ink);
+  font-size: 13.5px;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+/* Syntax colors for hand-tokenized snippets; Prism blocks use src/theme/prism.ts. */
+.sl-tk-k { color: var(--sl-tok-kw); }
+.sl-tk-t { color: var(--sl-tok-type); }
+.sl-tk-s { color: var(--sl-tok-str); }
+.sl-tk-n { color: var(--sl-tok-num); }
+.sl-tk-f { color: var(--sl-tok-fn); }
+.sl-tk-c { color: var(--sl-tok-com); font-style: italic; }
+.sl-tk-p { color: var(--sl-tok-punc); }
+
+@media (max-width: 640px) {
+  .sl-btn {
+    height: 48px;
+    padding: 0 17px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sl-spectral::after {
+    display: none;
+  }
+}
