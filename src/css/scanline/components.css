@@ -470,6 +470,10 @@
   border-color: var(--sl-line-3);
 }
 
+.sl-term__target + .sl-copy {
+  margin-left: 0;
+}
+
 .sl-copy[data-copied] {
   color: var(--sl-ok);
   border-color: var(--sl-ok);
