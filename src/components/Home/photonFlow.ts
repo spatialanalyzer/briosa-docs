@@ -6,8 +6,10 @@
  *
  * The lanes and photons are drawn into an empty <svg> that React never
  * renders children for, measured from the step nodes on every resize.
+ * Under reduced motion the lanes show a still; a visitor's pause freezes the
+ * photons where they are, and play continues from there.
  */
-import {clamp, onMotionChange, reducedMotionQuery} from './runtime';
+import {clamp, getMotion, latestEntry, subscribeMotion} from './runtime';
 
 export type PhotonClasses = {
   readonly lane: string;
@@ -29,7 +31,7 @@ type Axis = {a0: number; a1: number; c: number};
 const NS = 'http://www.w3.org/2000/svg';
 
 export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: PhotonClasses): {destroy(): void} {
-  const RM = reducedMotionQuery();
+  let motion = getMotion();
   const verticalQuery = window.matchMedia('(max-width: 900px)');
   const hostEl = arch.querySelector<HTMLElement>('[data-node="host"]');
   const workerEl = arch.querySelector<HTMLElement>('[data-node="worker"]');
@@ -64,6 +66,13 @@ export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: Pho
     if (!hostEl) return;
     hostEl.classList.add(cls.hit);
     hitT = 0.09;
+  }
+  /** Ends any caliper tap or gate flash in progress. */
+  function settleFlashes() {
+    hostEl?.classList.remove(cls.hit);
+    workerEl?.classList.remove(cls.tick);
+    hitT = 0;
+    tickT = 0;
   }
 
   function layout() {
@@ -112,7 +121,7 @@ export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: Pho
     pending = [];
     speed = clamp((vert ? b.height : b.width) / 7.5, 70, 175);
     measureQueue();
-    if (RM.matches || !visible) still();
+    if (!running()) still();
   }
   function grab(res: boolean): Slot | null {
     const s = pool.find((slot) => !slot.busy);
@@ -148,16 +157,25 @@ export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: Pho
     gateW = w.a1 - w.a0;
     minQ = h.a1 - hm + 10;
   }
-  /** The reduced-motion still: requests waiting at the gate, outcomes on the way back. */
-  function still() {
-    if (hostEl) hostEl.classList.remove(cls.hit);
-    hitT = 0;
-    if (!paths) return;
-    measureQueue();
+  /** Hides every photon and frees its slot. */
+  function resetPool() {
     for (const s of pool) {
       s.busy = false;
       s.g.setAttribute('opacity', '0');
     }
+  }
+  /**
+   * The still: requests waiting at the gate, outcomes on the way back. It takes
+   * over every slot, so the photons in flight are dropped first.
+   */
+  function still() {
+    ph = [];
+    queue = [];
+    pending = [];
+    settleFlashes();
+    if (!paths) return;
+    measureQueue();
+    resetPool();
     const frames: [LanePath, number, boolean, boolean][] = [
       [paths.ins[0], 0.72, false, false],
       [paths.ins[2], 0.82, false, false],
@@ -274,18 +292,21 @@ export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: Pho
     if (paths) step(dt);
     if (running()) raf = requestAnimationFrame(tick);
   }
-  const running = () => visible && !document.hidden && !RM.matches && !destroyed;
+  const running = () => visible && !document.hidden && !motion.reduced && !motion.paused && !destroyed;
   function kick() {
     if (!raf && running()) {
+      // Nothing in flight means the still is showing (or nothing is): start from empty lanes, with a burst soon.
       if (!ph.length) {
-        for (const s of pool) {
-          s.busy = false;
-          s.g.setAttribute('opacity', '0');
-        }
+        resetPool();
+        burstT = Math.min(burstT, 0.4);
       }
       last = performance.now();
       raf = requestAnimationFrame(tick);
     }
+  }
+  function halt() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0;
   }
 
   layout();
@@ -293,29 +314,34 @@ export function createPhotonFlow(arch: HTMLElement, svg: SVGSVGElement, cls: Pho
   resize.observe(arch);
   const intersection = new IntersectionObserver(
     (entries) => {
-      visible = entries[0]?.isIntersecting ?? false;
+      visible = latestEntry(entries)?.isIntersecting ?? false;
       if (visible) kick();
     },
     {rootMargin: '80px'},
   );
   intersection.observe(arch);
   document.addEventListener('visibilitychange', kick);
-  const stopMotion = onMotionChange(RM, () => {
-    if (RM.matches) still();
-    else kick();
+  const stopMotion = subscribeMotion((next) => {
+    const entering = next.reduced && !motion.reduced;
+    motion = next;
+    // Cancel the pending frame first, so no further step() moves photons or taps the caliper.
+    halt();
+    settleFlashes();
+    // Reduced motion drops the flow for the still; a pause leaves the photons where they are.
+    if (entering) still();
+    // Resuming from the still starts from an empty pool (see kick); resuming a pause continues the flow.
+    kick();
   });
 
   return {
     destroy() {
       destroyed = true;
-      if (raf) cancelAnimationFrame(raf);
-      raf = 0;
+      halt();
       resize.disconnect();
       intersection.disconnect();
       document.removeEventListener('visibilitychange', kick);
       stopMotion();
-      hostEl?.classList.remove(cls.hit);
-      workerEl?.classList.remove(cls.tick);
+      settleFlashes();
       svg.textContent = '';
     },
   };

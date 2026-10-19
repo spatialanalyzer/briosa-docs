@@ -1,9 +1,40 @@
-// Small pieces the homepage sections share: tabs, the copy button, the Caliper b mark, and section heads.
-import {useEffect, useRef, useState, type KeyboardEvent, type ReactNode} from 'react';
+// Small pieces the homepage sections share: motion, tabs, the copy button, the Caliper b mark, and section heads.
+import {useEffect, useRef, useState, useSyncExternalStore, type KeyboardEvent, type ReactNode} from 'react';
 import clsx from 'clsx';
 
 import styles from '@site/src/pages/index.module.css';
 import Icon from './Icon';
+import {getMotion, serverMotion, setMotionPaused, subscribeMotion, type Motion} from './runtime';
+
+/** The page motion state; the server and hydration render it as playing. */
+export function useMotion(): Motion {
+  return useSyncExternalStore(subscribeMotion, getMotion, serverMotion);
+}
+
+/** The homepage <main>. While the visitor pauses motion, CSS pauses its animations and the navbar and footer loops. */
+export function MotionRoot({className, children}: {readonly className?: string; readonly children: ReactNode}): ReactNode {
+  const {paused} = useMotion();
+  return (
+    <main className={className} data-motion={paused ? 'paused' : undefined}>
+      {children}
+    </main>
+  );
+}
+
+/**
+ * Pauses and plays every animation on the homepage (WCAG 2.2.2). The label
+ * names the action, so the button does not also carry aria-pressed. CSS hides
+ * it under reduced motion, where everything is already still.
+ */
+export function MotionToggle({className}: {readonly className?: string}): ReactNode {
+  const {paused} = useMotion();
+  return (
+    <button type="button" className={className} onClick={() => setMotionPaused(!getMotion().paused)}>
+      <Icon name={paused ? 'play' : 'pause'} />
+      {paused ? 'Play Motion' : 'Pause Motion'}
+    </button>
+  );
+}
 
 /**
  * Roving-tabindex tabs: arrow keys, Home, and End move the selection and

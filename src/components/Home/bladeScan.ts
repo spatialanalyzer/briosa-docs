@@ -5,9 +5,22 @@
  *
  * createBladeScan runs in an effect. It pauses when the stage leaves the
  * viewport or the tab is hidden, draws one finished still under reduced
- * motion, and destroy() removes every listener, observer, and frame callback.
+ * motion, holds its current frame while the visitor pauses motion, and
+ * destroy() removes every listener, observer, and frame callback.
  */
-import {clamp, isDarkTheme, lerp, mix, parseColor, reducedMotionQuery, onMotionChange, rgba, token, type RGBA} from './runtime';
+import {
+  clamp,
+  getMotion,
+  isDarkTheme,
+  latestEntry,
+  lerp,
+  mix,
+  parseColor,
+  rgba,
+  subscribeMotion,
+  token,
+  type RGBA,
+} from './runtime';
 
 export type ScanHud = {
   readonly x: HTMLElement | null;
@@ -57,7 +70,6 @@ export function createBladeScan(
   const context = canvas.getContext('2d');
   if (!context) return null;
   const ctx: CanvasRenderingContext2D = context;
-  const RM = reducedMotionQuery();
 
   // Geometry in chord units: a NACA-4-style airfoil lofted along the span with taper and twist.
   const SPAN = 2.1, PT = 0.12, DL = 0.46, SXL = 0.6, AX = 0.78, AZ = 0.47, SKEW = 0.4, PP = 0.4;
@@ -369,17 +381,21 @@ export function createBladeScan(
   // View and animation state.
   let W = 0, H = 0, CW = 0, CH = 0, OX = 0, OY = 0, dpr = 1, CX = 0, CY = 0, F = 1, BASE = 1.8, density = -1;
   const D = 10, TRK = {x: 0, y: 0, k: 1};
-  let still = RM.matches, visible = true, destroyed = false, raf = 0, last = 0, hudTick = 0, costEMA = 0, warm = 0;
+  // `still` draws the finished reduced-motion still; `paused` holds whatever frame is showing.
+  let still = getMotion().reduced, paused = getMotion().paused;
+  let visible = true, destroyed = false, raf = 0, last = 0, hudTick = 0, costEMA = 0, warm = 0;
   const P0 = 0.44, AUTO = 0.11;
-  const S = {yaw: -0.7, pitch: P0, vyaw: 0, drag: false, t: 0, cyc: 4.6, lx: 0, ly: 0, lt: 0, smr: null as Point3 | null};
+  const S = {yaw: -0.7, pitch: P0, vyaw: 0, drag: false, pointer: -1, t: 0, cyc: 4.6, lx: 0, ly: 0, lt: 0, smr: null as Point3 | null};
   const T_SWEEP = 6.6, T_HOLD = 2.4, T_FADE = 1.5, T_GAP = 0.5, CYCLE = T_SWEEP + T_HOLD + T_FADE + T_GAP, FADE = 0.42, FLASH = 0.08;
 
+  /** Measures the stage. Resizing the backing store clears the canvas, so callers redraw afterwards. */
   function layout() {
     const sr = stage.getBoundingClientRect(), cr = canvas.getBoundingClientRect();
     W = sr.width; H = sr.height; CW = cr.width; CH = cr.height; OX = sr.left - cr.left; OY = sr.top - cr.top;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.max(1, Math.round(CW * dpr));
-    canvas.height = Math.max(1, Math.round(CH * dpr));
+    const bw = Math.max(1, Math.round(CW * dpr)), bh = Math.max(1, Math.round(CH * dpr));
+    if (canvas.width !== bw) canvas.width = bw;
+    if (canvas.height !== bh) canvas.height = bh;
     const narrow = W < 560;
     F = ((narrow ? 0.56 : 0.68) * H * D) / (YMAX - YMIN);
     CX = OX + W * 0.6;
@@ -845,7 +861,7 @@ export function createBladeScan(
     }
     if (running()) raf = requestAnimationFrame(frame);
   }
-  const running = () => visible && !document.hidden && !still && !destroyed;
+  const running = () => visible && !document.hidden && !still && !paused && !destroyed;
   function kick() {
     if (!raf && running()) {
       last = performance.now();
@@ -862,9 +878,11 @@ export function createBladeScan(
     if (!running() && !destroyed) draw(0);
   };
 
-  // Drag to rotate; a flick keeps spinning and decays.
+  // Drag to rotate with the primary pointer's main button; a flick keeps spinning and decays.
   function onPointerDown(e: PointerEvent) {
+    if (S.drag || !e.isPrimary || e.button !== 0) return;
     S.drag = true;
+    S.pointer = e.pointerId;
     S.lx = e.clientX;
     S.ly = e.clientY;
     S.lt = performance.now();
@@ -877,7 +895,7 @@ export function createBladeScan(
     canvas.classList.add(className.dragging);
   }
   function onPointerMove(e: PointerEvent) {
-    if (!S.drag) return;
+    if (!S.drag || e.pointerId !== S.pointer) return;
     const now = performance.now(), dx = e.clientX - S.lx, dy = e.clientY - S.ly, dtt = Math.max(8, now - S.lt) / 1000;
     S.yaw += dx * 0.0062;
     S.pitch = clamp(S.pitch + dy * 0.004, -0.15, 0.9);
@@ -887,9 +905,10 @@ export function createBladeScan(
     S.lt = now;
     redrawIfIdle();
   }
-  function release() {
-    if (!S.drag) return;
+  function release(e: PointerEvent) {
+    if (!S.drag || e.pointerId !== S.pointer) return;
     S.drag = false;
+    S.pointer = -1;
     canvas.classList.remove(className.dragging);
     if (performance.now() - S.lt > 90) S.vyaw = 0;
   }
@@ -910,13 +929,28 @@ export function createBladeScan(
   layout();
   draw(0);
 
-  const resize = new ResizeObserver(() => {
+  // Redraw right after every layout, running or not: a resized canvas stays blank until drawn.
+  function relayout() {
+    if (destroyed) return;
     layout();
-    redrawIfIdle();
-  });
+    draw(0);
+  }
+  const resize = new ResizeObserver(relayout);
   resize.observe(stage);
+  // A new devicePixelRatio (another monitor, or zoom) need not resize the stage, so watch the resolution too.
+  let resolution: MediaQueryList | null = null;
+  function watchResolution() {
+    resolution?.removeEventListener('change', onResolution);
+    resolution = window.matchMedia(`(resolution: ${window.devicePixelRatio || 1}dppx)`);
+    resolution.addEventListener('change', onResolution);
+  }
+  function onResolution() {
+    watchResolution();
+    relayout();
+  }
+  watchResolution();
   const intersection = new IntersectionObserver((entries) => {
-    visible = entries[0]?.isIntersecting ?? true;
+    visible = latestEntry(entries)?.isIntersecting ?? true;
     if (visible) kick();
     else halt();
   });
@@ -926,14 +960,17 @@ export function createBladeScan(
     else kick();
   };
   document.addEventListener('visibilitychange', onVisibility);
-  const stopMotion = onMotionChange(RM, () => {
-    still = RM.matches;
-    if (still) {
-      halt();
-      draw(0);
-    } else {
+  const stopMotion = subscribeMotion((motion) => {
+    const wasStill = still;
+    still = motion.reduced;
+    paused = motion.paused;
+    if (running()) {
       kick();
+      return;
     }
+    halt();
+    // Reduced motion swaps in the finished still, and back; a pause leaves the current frame showing.
+    if (still !== wasStill && !destroyed) draw(0);
   });
   // Web fonts change the triad labels; redraw the still once they load.
   void document.fonts?.ready.then(redrawIfIdle);
@@ -949,6 +986,7 @@ export function createBladeScan(
       destroyed = true;
       halt();
       resize.disconnect();
+      resolution?.removeEventListener('change', onResolution);
       intersection.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
       stopMotion();

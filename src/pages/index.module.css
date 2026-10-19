@@ -322,6 +322,35 @@
   letter-spacing: 0;
 }
 
+/* Pause Motion: the readout's transport control, the one live control on the stage. */
+.motion {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 28px;
+  padding: 0 10px 0 8px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 3px;
+  background: var(--sl-field);
+  color: var(--sl-ink-2);
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  pointer-events: auto;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.motion:hover {
+  border-color: var(--sl-line-3);
+  color: var(--sl-ink);
+}
+
+.motion :global(.sl-ico) {
+  width: 14px;
+  height: 14px;
+}
+
 .hudLegend {
   right: 18px;
   bottom: 16px;
@@ -2418,8 +2447,42 @@
   }
 }
 
+/*
+ * ---------- Paused motion: the hero's Pause Motion toggle ----------
+ * Every looping animation holds its current frame. The rules are !important
+ * because a visitor's pause outranks any animation shorthand on the page.
+ */
+.home[data-motion='paused'] *,
+.home[data-motion='paused'] *::before,
+.home[data-motion='paused'] *::after {
+  animation-play-state: paused !important;
+}
+
+/*
+ * The site chrome's loops (the navbar glint, the footer scan) pause with the
+ * page. Only the navbar and footer: a search dialog opened meanwhile must still
+ * fade in. Browsers without :has() keep these two running.
+ */
+:global(body):has(.home[data-motion='paused']) :is(:global(.navbar), :global(.footer))::before,
+:global(body):has(.home[data-motion='paused']) :is(:global(.navbar), :global(.footer))::after,
+:global(body):has(.home[data-motion='paused']) :is(:global(.navbar), :global(.footer)) *,
+:global(body):has(.home[data-motion='paused']) :is(:global(.navbar), :global(.footer)) *::before,
+:global(body):has(.home[data-motion='paused']) :is(:global(.navbar), :global(.footer)) *::after {
+  animation-play-state: paused !important;
+}
+
+/* The HUD's one-time entrance (under two seconds) finishes, so a paused load never hides the readouts. */
+.home[data-motion='paused'] :is(.hudTop > span, .hudTop b, .hudRead, .hudLegend) {
+  animation-play-state: running !important;
+}
+
 /* ---------- Reduced motion: finished stills, no autoplay ---------- */
 @media (prefers-reduced-motion: reduce) {
+  /* Everything is already still, so the Pause Motion toggle has nothing to do. */
+  .motion {
+    display: none;
+  }
+
   .pulse::after,
   .cur,
   .track,

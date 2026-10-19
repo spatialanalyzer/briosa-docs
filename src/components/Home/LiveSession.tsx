@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import styles from '@site/src/pages/index.module.css';
 import {ChannelHead, CopyButton, useTabs} from './parts';
 import Icon from './Icon';
-import {clamp, onMotionChange, reducedMotionQuery} from './runtime';
+import {clamp, getMotion, isStill, latestEntry, subscribeMotion} from './runtime';
 import {languages, samples, steps, type Lang} from './sessionCode';
 
 type SeqKey = 'c1' | 'c2' | 'c3' | 'c4' | 'col' | 'grp' | 'p1' | 'p2' | 'dim' | 'out';
@@ -39,21 +39,29 @@ export default function LiveSession(): ReactNode {
   const codeRefs = useRef<Partial<Record<Lang, HTMLElement | null>>>({});
   const engine = useRef<{play(): void; finish(): void} | null>(null);
 
+  // A new language plays at once, wherever the section is scrolled, unless motion is still.
   const {selected, tabProps} = useTabs(languages.length, (index) => {
     langRef.current = languages[index];
-    if (reducedMotionQuery().matches) engine.current?.finish();
+    if (isStill(getMotion())) engine.current?.finish();
     else engine.current?.play();
   });
   const lang = languages[selected];
   const sample = samples[lang];
 
-  // The session plays once it scrolls into view, then replays every few seconds while visible.
+  /*
+   * The session autoplays once it scrolls into view, then replays every few
+   * seconds while visible. Only autoplay waits for visibility: a run the
+   * visitor starts (a tab or Replay) plays through regardless. While motion is
+   * still, nothing autoplays and the session shows its finished state.
+   */
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return undefined;
-    const RM = reducedMotionQuery();
     let events: {t: number; f: () => void}[] = [];
     let clock = 0, playing = false, raf = 0, last = 0, visible = false, started = false, countFrom = -1, waitUntil = -1;
+    // The current run was started by the visitor, so it plays even out of view.
+    let manual = false;
+    let still = isStill(getMotion());
     const setDim = (value: string) => {
       if (dimRef.current) dimRef.current.textContent = value;
     };
@@ -108,12 +116,14 @@ export default function LiveSession(): ReactNode {
         f: () => {
           setView((v) => ({run: false, on: new Set(allKeys), lines: settle(v.lines)}));
           playing = false;
-          waitUntil = clock + 6;
+          manual = false;
+          // The next autoplay waits six visible seconds; none is scheduled while motion is still.
+          waitUntil = still ? -1 : clock + 6;
         },
       });
       events.sort((a, b) => a.t - b.t);
     }
-    function play() {
+    function play(user: boolean) {
       setView({run: true, on: new Set(), lines: new Map()});
       setDim('0.000');
       countFrom = -1;
@@ -122,20 +132,27 @@ export default function LiveSession(): ReactNode {
       clock = 0;
       playing = true;
       started = true;
+      manual = user;
       kick();
     }
     function finish() {
       setView(complete);
       setDim('5.000');
       playing = false;
+      manual = false;
       countFrom = -1;
       waitUntil = -1;
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
     }
+    // Autoplay advances only while the section is in view; a visitor's run advances whenever the page is shown.
+    const advancing = () => !document.hidden && (visible || manual);
+    const pending = () => playing || countFrom >= 0 || waitUntil >= 0;
     function tick(now: number) {
       raf = 0;
       const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
       last = now;
-      if (visible && !document.hidden) {
+      if (advancing()) {
         clock += dt;
         while (playing && events.length && events[0].t <= clock) events.shift()!.f();
         if (countFrom >= 0) {
@@ -145,31 +162,41 @@ export default function LiveSession(): ReactNode {
         }
         if (!playing && waitUntil >= 0 && clock >= waitUntil) {
           waitUntil = -1;
-          if (!RM.matches) play();
+          if (!still) play(false);
         }
       }
-      if (!raf && visible && !document.hidden && (playing || countFrom >= 0 || waitUntil >= 0)) raf = requestAnimationFrame(tick);
+      if (!raf && advancing() && pending()) raf = requestAnimationFrame(tick);
     }
     function kick() {
-      if (!raf && visible && !document.hidden) {
+      if (!raf && advancing() && pending()) {
         last = performance.now();
         raf = requestAnimationFrame(tick);
       }
     }
 
-    engine.current = {play, finish};
+    engine.current = {play: () => play(true), finish};
     const intersection = new IntersectionObserver(
       (entries) => {
-        visible = entries[0]?.isIntersecting ?? false;
-        if (visible && !started && !RM.matches) play();
+        visible = latestEntry(entries)?.isIntersecting ?? false;
+        if (visible && !started && !still) play(false);
         else kick();
       },
       {threshold: 0.3},
     );
     intersection.observe(root);
     document.addEventListener('visibilitychange', kick);
-    const stopMotion = onMotionChange(RM, () => {
-      if (RM.matches) finish();
+    const stopMotion = subscribeMotion((motion) => {
+      const next = isStill(motion);
+      if (next === still) return;
+      still = next;
+      if (still) {
+        finish();
+      } else if (!playing) {
+        // Resume as on arrival: play now if the session is in view, otherwise once it scrolls in.
+        // A visitor's run already in progress schedules the next autoplay when it ends.
+        started = false;
+        if (visible) play(false);
+      }
     });
     return () => {
       engine.current = null;

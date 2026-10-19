@@ -8,6 +8,7 @@ import {Independence, StartTiles} from '@site/src/components/Home/Closing';
 import ExactTargets from '@site/src/components/Home/ExactTargets';
 import Hero from '@site/src/components/Home/Hero';
 import LiveSession from '@site/src/components/Home/LiveSession';
+import {MotionRoot} from '@site/src/components/Home/parts';
 import Products from '@site/src/components/Home/Products';
 
 import styles from './index.module.css';
@@ -27,7 +28,8 @@ export default function Home(): ReactNode {
           })}
         </script>
       </Head>
-      <main className={styles.home}>
+      {/* Renders <main>, marked while the hero's Pause Motion toggle is on. */}
+      <MotionRoot className={styles.home}>
         <Hero />
         <LiveSession />
         <Architecture />
@@ -36,7 +38,7 @@ export default function Home(): ReactNode {
         <Catalog />
         <StartTiles />
         <Independence />
-      </main>
+      </MotionRoot>
     </Layout>
   );
 }

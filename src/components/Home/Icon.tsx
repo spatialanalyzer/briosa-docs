@@ -31,6 +31,13 @@ const icons = {
       <path style={accent} d="M4.5 3.8v4.1h4.1" />
     </>
   ),
+  pause: (
+    <>
+      <path d="M8.5 5.5v13" />
+      <path style={accent} d="M15.5 5.5v13" />
+    </>
+  ),
+  play: <path style={accent} d="M7.5 5.2v13.6L18.8 12Z" />,
   gate: (
     <>
       <rect x="4.5" y="2.5" width="15" height="4" rx="1" />
