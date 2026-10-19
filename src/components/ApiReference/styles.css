@@ -772,10 +772,12 @@ nav.api-sidebar .api-show-all {
   white-space: nowrap;
 }
 
+/* Ink-2 keeps at least 5.8:1 on plain, hover, and this-page rows in both themes;
+   ink-3 reaches only 4.49:1 on the dark this-page row. */
 .api-note {
   display: block;
   margin-top: 3px;
-  color: var(--sl-ink-3);
+  color: var(--sl-ink-2);
   font: 400 12.5px/1.35 var(--sl-f-body);
   white-space: normal;
 }
