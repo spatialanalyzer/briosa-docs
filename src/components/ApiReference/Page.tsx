@@ -161,7 +161,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
                 A group whose RPCs are listed only in tables has no method index. */}
             {groupIntro && <Contract html={groupIntro} />}
             <Readout page={page} methods={methods} />
-            {methods.length > 0 && <MethodIndex methods={methods} current={page.current} release={page.release} />}
+            {methods.length > 0 && <MethodIndex methods={methods} current={page.current} release={page.release} family={page.family} />}
             {groupNotes && <Contract html={groupNotes} />}
           </> : <Contract html={page.html} />}
           {!isHistory && <Differences page={page} sameContract={sameContract} />}

@@ -276,6 +276,18 @@ test('First Documented skips releases that documented no method of the group for
   assert.equal(at(`${base}/0.9.0/instrument-operations-crib-sheet-operations`).firstDocumented, undefined);
 });
 
+test('method filters match a name or each family\'s API spelling', async () => {
+  const {methodFilter} = await import('../src/components/ApiReference/context.ts');
+  const method = {id: 'file-operations/get-working-directory', title: 'Get Working Directory'};
+  for (const [family, spelling] of [['grpc', 'GetWorkingDirectory'], ['dotnet', 'GetWorkingDirectoryAsync'], ['python', 'get_working_directory'], ['javascript', 'getWorkingDirectory']]) {
+    assert.ok(methodFilter(spelling, family)(method), `${family}: ${spelling}`);
+  }
+  assert.ok(methodFilter('WorkingDirectoryAs', 'dotnet')(method), 'a partly typed .NET spelling matches');
+  assert.ok(!methodFilter('GetWorkingDirectoryAsync', 'python')(method), 'only .NET spells methods with Async');
+  assert.ok(!methodFilter('BackupNowAsync', 'dotnet')(method));
+  assert.ok(methodFilter('', 'dotnet')(method));
+});
+
 test('a new release adds no compatibility redirect documents', async () => {
   const {compileReference, families} = await import('../plugins/api-reference/content.mjs');
   const fixture = await mkdtemp(path.join(os.tmpdir(), 'briosa-next-release-'));

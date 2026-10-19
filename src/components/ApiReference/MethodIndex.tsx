@@ -1,22 +1,22 @@
 import React, {useId, useState} from 'react';
 import Link from '@docusaurus/Link';
 import type {Method} from './types';
+import {methodFilter} from './context';
 
 type Entry = Method & {href: string};
 type Scope = 'all' | 'documented' | 'other';
-const clean = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 // A group page's methods as a filterable index. Every method is rendered, so the
 // index and each method's old in-page anchor work without JavaScript; the
 // filter only hides entries.
-export default function MethodIndex({methods, current, release}: {methods: Entry[]; current: boolean; release: string}): React.JSX.Element {
+export default function MethodIndex({methods, current, release, family}: {methods: Entry[]; current: boolean; release: string; family: string}): React.JSX.Element {
   const id = useId();
   const [query, setQuery] = useState('');
   const [scope, setScope] = useState<Scope>('all');
   const other = methods.filter((m) => !m.available).length;
   const otherLabel = current ? 'Other SA Target' : 'History Only';
-  const matches = (m: Entry) => (!query || clean(m.title).includes(clean(query)) || clean(m.id.split('/').at(-1) ?? '').includes(clean(query)))
-    && (scope === 'all' || (scope === 'documented') === m.available);
+  const named = methodFilter(query, family);
+  const matches = (m: Entry) => named(m) && (scope === 'all' || (scope === 'documented') === m.available);
   const shown = methods.filter(matches).length;
   const scopes: [Scope, string, number][] = [['all', 'All', methods.length], ['documented', 'Documented', methods.length - other], ['other', otherLabel, other]];
   return <section className="api-index" aria-labelledby="method-index">

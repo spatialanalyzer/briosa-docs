@@ -62,6 +62,14 @@ export function readout(page: PageData, methods: {available: boolean}[]): Readin
   if (page.firstDocumented) readings.push({label: 'First Documented', value: page.firstDocumented, note: releaseLabel(page.family)});
   return readings;
 }
+// Method filters match a name or an API spelling, ignoring case and separators.
+// .NET spells every method with an `Async` suffix (`GetWorkingDirectoryAsync`).
+const squash = (text: string): string => text.toLowerCase().replace(/[^a-z0-9]/g, '');
+export function methodFilter(query: string, family: string): (method: {id: string; title: string}) => boolean {
+  const wanted = squash(query);
+  const suffix = family === 'dotnet' ? 'async' : '';
+  return (method) => !wanted || [method.title, method.id.split('/').at(-1) ?? ''].some((name) => (squash(name) + suffix).includes(wanted));
+}
 export function anchorOf(hash: string): string {
   try { return decodeURIComponent(hash.slice(1)); } catch { return hash.slice(1); }
 }
