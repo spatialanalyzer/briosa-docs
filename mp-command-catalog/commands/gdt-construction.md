@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the 11 commands observed under **GDT Operations → GDT
 Construction** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>11</strong></div>
   <div><span>Current Server Operations</span><strong>11</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,67 +25,67 @@ Construction** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Make Surface Face List - Runtime Select" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-interactive-surface-fixture"><td><a href="#make-surface-face-list---runtime-select">Make Surface Face List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Surface Face List - Runtime Select" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-interactive-surface-fixture"><td><a href="#make-surface-face-list---runtime-select">Make Surface Face List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive surface fixture</td></tr>
 <tr data-command="Make Surface Face List - Runtime Select" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-surface-face-list---runtime-select">Make Surface Face List - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Surface Face List From Surface" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-surface-fixture"><td><a href="#make-surface-face-list-from-surface">Make Surface Face List From Surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Surface Face List From Surface" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-surface-fixture"><td><a href="#make-surface-face-list-from-surface">Make Surface Face List From Surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — surface fixture</td></tr>
 <tr data-command="Make Surface Face List From Surface" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-surface-face-list-from-surface">Make Surface Face List From Surface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Feature Check Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-feature-check-annotation">Make GD&amp;T Feature Check Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T Annotation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Feature Check Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-feature-check-annotation">Make GD&amp;T Feature Check Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T Annotation fixture</td></tr>
 <tr data-command="Make GD&amp;T Feature Check Annotation" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-gdt-feature-check-annotation">Make GD&amp;T Feature Check Annotation</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Datum Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-datum-annotation">Make GD&amp;T Datum Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T Annotation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make GD&amp;T Datum Annotation" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-annotation-fixture"><td><a href="#make-gdt-datum-annotation">Make GD&amp;T Datum Annotation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T Annotation fixture</td></tr>
 <tr data-command="Make GD&amp;T Datum Annotation" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-gdt-datum-annotation">Make GD&amp;T Datum Annotation</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-feature-checks">Make Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-feature-checks">Make Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T fixture</td></tr>
 <tr data-command="Make Feature Checks" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-feature-checks">Make Feature Checks</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Feature Check Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-feature-check-ref-list-from-a-collection">Make a Feature Check Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Feature Check Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-feature-check-ref-list-from-a-collection">Make a Feature Check Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T fixture</td></tr>
 <tr data-command="Make a Feature Check Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-feature-check-ref-list-from-a-collection">Make a Feature Check Ref List from a Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Feature Check Reference List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-a-feature-check-reference-list--wildcard-selection">Make a Feature Check Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Feature Check Reference List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-a-feature-check-reference-list--wildcard-selection">Make a Feature Check Reference List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — live-state GD&T fixture</td></tr>
 <tr data-command="Make a Feature Check Reference List- WildCard Selection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-feature-check-reference-list--wildcard-selection">Make a Feature Check Reference List- WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-annotation-ref-list-from-a-collection">Make Annotation Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-annotation-ref-list-from-a-collection">Make Annotation Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T fixture</td></tr>
 <tr data-command="Make Annotation Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-annotation-ref-list-from-a-collection">Make Annotation Ref List from a Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-annotation-ref-list--wildcard-selection">Make Annotation Ref List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - live-state GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Annotation Ref List- WildCard Selection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-live-state-gdt-fixture"><td><a href="#make-annotation-ref-list--wildcard-selection">Make Annotation Ref List- WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — live-state GD&T fixture</td></tr>
 <tr data-command="Make Annotation Ref List- WildCard Selection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-annotation-ref-list--wildcard-selection">Make Annotation Ref List- WildCard Selection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-destructive-gdt-fixture"><td><a href="#delete-feature-checks">Delete Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Feature Checks" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-destructive-gdt-fixture"><td><a href="#delete-feature-checks">Delete Feature Checks</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive GD&T fixture</td></tr>
 <tr data-command="Delete Feature Checks" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-feature-checks">Delete Feature Checks</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Datum Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-datum-ref-list-from-a-collection">Make a Datum Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make a Datum Ref List from a Collection" data-group="GDT Operations / GDT Construction" data-status="current" data-validation="at-risk-gdt-fixture"><td><a href="#make-a-datum-ref-list-from-a-collection">Make a Datum Ref List from a Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T fixture</td></tr>
 <tr data-command="Make a Datum Ref List from a Collection" data-group="Construction Operations / GDT" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-datum-ref-list-from-a-collection">Make a Datum Ref List from a Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -99,7 +100,7 @@ Construction** in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-interactive-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk interactive surface fixture</span>
+  <span className="catalog-target-validation">At Risk — interactive surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -137,7 +138,7 @@ when the caller invokes it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk surface fixture</span>
+  <span className="catalog-target-validation">At Risk — surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -177,7 +178,7 @@ provides a non-interactive source for the Annotation-construction operations.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-annotation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt annotation fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T Annotation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -252,7 +253,7 @@ zone.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-annotation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt annotation fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T Annotation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -299,7 +300,7 @@ default to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -336,7 +337,7 @@ SpatialAnalyzer owns the live construction state and resulting objects.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -374,7 +375,7 @@ structured identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-live-state-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk live state gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — live-state GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -413,7 +414,7 @@ Both criteria default to `*`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -451,7 +452,7 @@ structured identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-live-state-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk live state gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — live-state GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -490,7 +491,7 @@ criteria default to `*`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-destructive-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk destructive gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -528,7 +529,7 @@ partial success, or failure through the normal execution outcome.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="GDT Operations / GDT Construction" data-validation="at-risk-gdt-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">GDT Operations / GDT Construction</span>
-  <span className="catalog-target-validation">At risk gdt fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / GDT" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

@@ -12,8 +12,8 @@ All three commands are **Current**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Issue Instrument Actuator Command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) | **Current** |
-| [Set Instrument Axes](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) | **Current** |
-| [Set Alignment Projector](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) | **Current** |
+| [Issue Instrument Actuator Command](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#issue-instrument-actuator-command) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set Instrument Axes](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-instrument-axes) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set Alignment Projector](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations#set-alignment-projector) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical Advanced Instrument Operations command reference →](/mp-command-catalog/commands/instrument-operations-advanced-instrument-operations)

@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the 15 commands observed under **Construction Operations
 → Surfaces** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>15</strong></div>
   <div><span>Current Server Operations</span><strong>15</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,91 +25,91 @@ These entries cover the 15 commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-object-surface-fixture"><td><a href="#construct-surfaces-from-objects">Construct Surfaces From Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - object and surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-object-surface-fixture"><td><a href="#construct-surfaces-from-objects">Construct Surfaces From Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — object and surface fixture</td></tr>
 <tr data-command="Construct Surfaces From Objects" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-from-objects">Construct Surfaces From Objects</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-b-spline-surface-fixture"><td><a href="#construct-surface-from-bsplines">Construct Surface From BSplines</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - B-Spline surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-b-spline-surface-fixture"><td><a href="#construct-surface-from-bsplines">Construct Surface From BSplines</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — B-Spline surface fixture</td></tr>
 <tr data-command="Construct Surface From BSplines" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-bsplines">Construct Surface From BSplines</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cylinder-surface-fixture"><td><a href="#construct-surface-from-cylinder">Construct Surface From Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cylinder surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cylinder-surface-fixture"><td><a href="#construct-surface-from-cylinder">Construct Surface From Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cylinder surface fixture</td></tr>
 <tr data-command="Construct Surface From Cylinder" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-cylinder">Construct Surface From Cylinder</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-plane-surface-fixture"><td><a href="#construct-surface-from-plane">Construct Surface From Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - plane surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-plane-surface-fixture"><td><a href="#construct-surface-from-plane">Construct Surface From Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — plane surface fixture</td></tr>
 <tr data-command="Construct Surface From Plane" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-plane">Construct Surface From Plane</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-sphere-surface-fixture"><td><a href="#construct-surface-from-sphere">Construct Surface From Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - sphere surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-sphere-surface-fixture"><td><a href="#construct-surface-from-sphere">Construct Surface From Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — sphere surface fixture</td></tr>
 <tr data-command="Construct Surface From Sphere" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-sphere">Construct Surface From Sphere</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cone-surface-fixture"><td><a href="#construct-surface-from-cone">Construct Surface From Cone</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cone surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-cone-surface-fixture"><td><a href="#construct-surface-from-cone">Construct Surface From Cone</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cone surface fixture</td></tr>
 <tr data-command="Construct Surface From Cone" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-cone">Construct Surface From Cone</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-sewing-fixture"><td><a href="#construct-surface-from-a-collection-of-surfaces">Construct Surface From a Collection of Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface sewing fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-sewing-fixture"><td><a href="#construct-surface-from-a-collection-of-surfaces">Construct Surface From a Collection of Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — surface sewing fixture</td></tr>
 <tr data-command="Construct Surface From a Collection of Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-a-collection-of-surfaces">Construct Surface From a Collection of Surfaces</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-nominal-surface-and-point-fixture"><td><a href="#construct-surface-fit-from-nominal-surfaces-and-actual-data">Construct Surface Fit From Nominal Surfaces and Actual Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal surface and point fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-nominal-surface-and-point-fixture"><td><a href="#construct-surface-fit-from-nominal-surfaces-and-actual-data">Construct Surface Fit From Nominal Surfaces and Actual Data</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — nominal surface and point fixture</td></tr>
 <tr data-command="Construct Surface Fit From Nominal Surfaces and Actual Data" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-fit-from-nominal-surfaces-and-actual-data">Construct Surface Fit From Nominal Surfaces and Actual Data</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-interactive-cad-fixture"><td><a href="#construct-surface-by-dissecting-surfaces">Construct Surface by Dissecting Surface(s)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive CAD fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-interactive-cad-fixture"><td><a href="#construct-surface-by-dissecting-surfaces">Construct Surface by Dissecting Surface(s)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive CAD fixture</td></tr>
 <tr data-command="Construct Surface by Dissecting Surface(s)" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-by-dissecting-surfaces">Construct Surface by Dissecting Surface(s)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-dissection-fixture"><td><a href="#construct-surfaces-by-dissecting-surfaces-from-ref-list">Construct Surfaces by Dissecting Surfaces from Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - surface dissection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-surface-dissection-fixture"><td><a href="#construct-surfaces-by-dissecting-surfaces-from-ref-list">Construct Surfaces by Dissecting Surfaces from Ref List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — surface dissection fixture</td></tr>
 <tr data-command="Construct Surfaces by Dissecting Surfaces from Ref List" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-by-dissecting-surfaces-from-ref-list">Construct Surfaces by Dissecting Surfaces from Ref List</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-point-group-surface-fixture"><td><a href="#construct-surface-from-point-groups">Construct Surface From Point Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-point-group-surface-fixture"><td><a href="#construct-surface-from-point-groups">Construct Surface From Point Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-group surface fixture</td></tr>
 <tr data-command="Construct Surface From Point Groups" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-point-groups">Construct Surface From Point Groups</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-surfaces-by-projecting-points">Construct Surfaces By Projecting Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - projection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-projection-fixture"><td><a href="#construct-surfaces-by-projecting-points">Construct Surfaces By Projecting Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — projection fixture</td></tr>
 <tr data-command="Construct Surfaces By Projecting Points" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surfaces-by-projecting-points">Construct Surfaces By Projecting Points</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-offset-surface-fixture"><td><a href="#construct-surface-by-offsetting-a-surface">Construct surface by offsetting a surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - offset surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-offset-surface-fixture"><td><a href="#construct-surface-by-offsetting-a-surface">Construct surface by offsetting a surface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — offset surface fixture</td></tr>
 <tr data-command="Construct surface by offsetting a surface" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-by-offsetting-a-surface">Construct surface by offsetting a surface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-annotation-link-fixture"><td><a href="#construct-surface-from-annotation-links">Construct Surface From Annotation Links</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - annotation-link fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-annotation-link-fixture"><td><a href="#construct-surface-from-annotation-links">Construct Surface From Annotation Links</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — annotation-link fixture</td></tr>
 <tr data-command="Construct Surface From Annotation Links" data-group="Construction Operations / Surfaces" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-surface-from-annotation-links">Construct Surface From Annotation Links</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="licensed-partial-cylinder-probe"><td><a href="#construct-geometry-from-surfaces">Construct Geometry From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed probe - cylinder-only contract confirmed</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="licensed-partial-cylinder-probe"><td><a href="#construct-geometry-from-surfaces">Construct Geometry From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>Licensed probe — cylinder-only contract confirmed</td></tr>
 <tr data-command="Construct Geometry From Surfaces" data-group="Construction Operations / Surfaces" data-status="current" data-validation="evidence-review-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-geometry-from-surfaces">Construct Geometry From Surfaces</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -123,7 +124,7 @@ These entries cover the 15 commands observed under **Construction Operations
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-object-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk object surface fixture</span>
+  <span className="catalog-target-validation">At Risk — object and surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -160,7 +161,7 @@ objects and determines the resulting names and outcome.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-b-spline-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk b spline surface fixture</span>
+  <span className="catalog-target-validation">At Risk — B-Spline surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -200,7 +201,7 @@ Requires a resulting Surface identity and a B-Spline list. The exact SA
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-cylinder-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk cylinder surface fixture</span>
+  <span className="catalog-target-validation">At Risk — cylinder surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -242,7 +243,7 @@ defaults to `true`; `Use Theta Extent Mode?` defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-plane-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk plane surface fixture</span>
+  <span className="catalog-target-validation">At Risk — plane surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -281,7 +282,7 @@ Requires resulting Surface and source Plane identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-sphere-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk sphere surface fixture</span>
+  <span className="catalog-target-validation">At Risk — sphere surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -320,7 +321,7 @@ Requires resulting Surface and source Sphere identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-cone-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk cone surface fixture</span>
+  <span className="catalog-target-validation">At Risk — cone surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -359,7 +360,7 @@ Requires resulting Surface and source Cone identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-surface-sewing-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk surface sewing fixture</span>
+  <span className="catalog-target-validation">At Risk — surface sewing fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -404,7 +405,7 @@ tolerance `-1.0`. Briosa does not add topology or tolerance safeguards.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-nominal-surface-and-point-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk nominal surface and point fixture</span>
+  <span className="catalog-target-validation">At Risk — nominal surface and point fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -446,7 +447,7 @@ singular `Nominal Surface`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-interactive-cad-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk interactive cad fixture</span>
+  <span className="catalog-target-validation">At Risk — interactive CAD fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -486,7 +487,7 @@ prove that the interaction stopped.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-surface-dissection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk surface dissection fixture</span>
+  <span className="catalog-target-validation">At Risk — surface dissection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -524,7 +525,7 @@ list through without adding volume or topology validation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-point-group-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk point group surface fixture</span>
+  <span className="catalog-target-validation">At Risk — point-group surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -566,7 +567,7 @@ enough points to form the surface; Briosa does not prevalidate that state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-projection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk projection fixture</span>
+  <span className="catalog-target-validation">At Risk — projection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -607,7 +608,7 @@ Surface identity.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-offset-surface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk offset surface fixture</span>
+  <span className="catalog-target-validation">At Risk — offset surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -647,7 +648,7 @@ argument capitalization are preserved.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-annotation-link-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">At risk annotation link fixture</span>
+  <span className="catalog-target-validation">At Risk — annotation-link fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -686,7 +687,7 @@ Requires an Annotation list and a resulting Surface identity.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Surfaces" data-validation="licensed-partial-cylinder-probe">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Surfaces</span>
-  <span className="catalog-target-validation">Licensed partial cylinder probe</span>
+  <span className="catalog-target-validation">Licensed probe — cylinder-only contract confirmed</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Surfaces" data-validation="evidence-review-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

@@ -12,10 +12,10 @@ All five commands are reviewed and all five are **Current**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Clear Cloud Viewer](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) | **Current** |
-| [Send Cloud To SA](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) | **Current** |
-| [Set Filter](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) | **Current** |
-| [Save Point Cloud File](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) | **Current** |
-| [Load Point Cloud File](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) | **Current** |
+| [Clear Cloud Viewer](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#clear-cloud-viewer) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Send Cloud To SA](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#send-cloud-to-sa) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Set Filter](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#set-filter) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Save Point Cloud File](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#save-point-cloud-file) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Load Point Cloud File](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations#load-point-cloud-file) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical LR Cloud Viewer Operations command reference →](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr-cloud-viewer-operations)

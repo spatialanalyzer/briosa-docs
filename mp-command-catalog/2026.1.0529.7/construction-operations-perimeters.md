@@ -12,6 +12,6 @@ The subgroup's single command is a **Current** operation.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Construct Perimeter From Points](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) | **Current** |
+| [Construct Perimeter From Points](/mp-command-catalog/commands/construction-operations-perimeters#construct-perimeter-from-points) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical Perimeters command reference →](/mp-command-catalog/commands/construction-operations-perimeters)

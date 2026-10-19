@@ -12,7 +12,7 @@ Both commands in this subgroup are **Current** operations.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Construct Sphere](/mp-command-catalog/commands/construction-operations-spheres#construct-sphere) | **Current** |
-| [Construct Spheres From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select) | **Current** |
+| [Construct Sphere](/mp-command-catalog/commands/construction-operations-spheres#construct-sphere) | <span className="catalog-status catalog-status--current">Current</span> |
+| [Construct Spheres From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-spheres#construct-spheres-from-surface-faces---runtime-select) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical Spheres command reference →](/mp-command-catalog/commands/construction-operations-spheres)

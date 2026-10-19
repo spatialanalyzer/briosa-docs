@@ -8,10 +8,14 @@ description: Find SpatialAnalyzer 2026.1.0529.7 MP commands and their availabili
 This catalog preserves the SpatialAnalyzer MP Editor group hierarchy and
 explains each reviewed command's availability in **Briosa Server 0.9.2**.
 
+<div className="catalog-quicklinks">
+
 - [Browse the SpatialAnalyzer group tree](./group-hierarchy.md)
 - [Search and filter the command index](../commands/index.md)
 - [Read the released server API](/api/grpc)
 - [Understand command statuses](../overview.md#how-to-read-status)
+
+</div>
 
 ## Availability
 
@@ -43,5 +47,7 @@ current requirements before Server 1.0.
 The retained exact-target evidence contains 1,412 command identities. The public
 catalog consolidates repeated source routes into canonical command entries and
 preserves documentation-only identities where they explain SDK limitations.
+Group pages list the 1,360 SDK-observed commands at their MP Editor placement
+and the 11 documentation-only commands in a separate table.
 The command index is the user-facing list; retained evidence counts are not API
 support counts. No published entry currently has an Undecided disposition.

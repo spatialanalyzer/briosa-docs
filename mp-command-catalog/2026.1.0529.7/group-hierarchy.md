@@ -267,3 +267,7 @@ with installed-document evidence. Some documentation-only paths and some
 installed-document labels differ from this SDK-observed tree. Those differences
 are evidence to review during catalog authoring, not permission to rename or
 relocate a command automatically.
+
+The catalog publishes 11 documentation-only commands that the SDK export did not
+observe. They are not counted above. Each appears in a separate
+Documentation-Only Commands table on the group page for its documented path.

@@ -12,7 +12,7 @@ Both commands are **Next**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Project Objects](/mp-command-catalog/commands/instrument-operations-laser-projection#project-objects) | **Next** |
-| [Stop Projection](/mp-command-catalog/commands/instrument-operations-laser-projection#stop-projection) | **Next** |
+| [Project Objects](/mp-command-catalog/commands/instrument-operations-laser-projection#project-objects) | <span className="catalog-status catalog-status--next">Next</span> |
+| [Stop Projection](/mp-command-catalog/commands/instrument-operations-laser-projection#stop-projection) | <span className="catalog-status catalog-status--next">Next</span> |
 
 [Open the canonical Laser Projection command reference →](/mp-command-catalog/commands/instrument-operations-laser-projection)

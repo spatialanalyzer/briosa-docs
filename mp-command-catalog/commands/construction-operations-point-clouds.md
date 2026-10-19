@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the 11 commands observed under **Construction Operations
 → Point Clouds** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>11</strong></div>
   <div><span>Current Server Operations</span><strong>10</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>1</strong></div>
 </div>
 
@@ -24,61 +25,61 @@ These entries cover the 11 commands observed under **Construction Operations
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Point Group" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-point-group">Construct Point Clouds from Existing Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-cloud fixture required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Point Group" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-point-group">Construct Point Clouds from Existing Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-cloud fixture required</td></tr>
 <tr data-command="Construct Point Clouds from Existing Point Group" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-clouds-from-existing-point-group">Construct Point Clouds from Existing Point Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-interactive-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - interactive cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-interactive-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive cloud fixture</td></tr>
 <tr data-command="Construct Point Clouds from Existing Cloud Points - Runtime Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-clouds-from-existing-cloud-points---runtime-select">Construct Point Clouds from Existing Cloud Points - Runtime Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Clouds - Uniform Spacing" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-clouds---uniform-spacing">Construct Point Clouds from Existing Clouds - Uniform Spacing</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-cloud fixture required</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Clouds from Existing Clouds - Uniform Spacing" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-point-cloud-fixture-required"><td><a href="#construct-point-clouds-from-existing-clouds---uniform-spacing">Construct Point Clouds from Existing Clouds - Uniform Spacing</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-cloud fixture required</td></tr>
 <tr data-command="Construct Point Clouds from Existing Clouds - Uniform Spacing" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-clouds-from-existing-clouds---uniform-spacing">Construct Point Clouds from Existing Clouds - Uniform Spacing</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud from Existing Clouds" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-sa-2026-1-rgb-and-cloud-fixture-required"><td><a href="#construct-point-cloud-from-existing-clouds">Construct Point Cloud from Existing Clouds</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - SA 2026.1 RGB and cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud from Existing Clouds" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-sa-2026-1-rgb-and-cloud-fixture-required"><td><a href="#construct-point-cloud-from-existing-clouds">Construct Point Cloud from Existing Clouds</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — SA 2026.1 RGB and cloud fixture</td></tr>
 <tr data-command="Construct Point Cloud from Existing Clouds" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-cloud-from-existing-clouds">Construct Point Cloud from Existing Clouds</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud from Visible Cloud Points" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-clipping-and-cloud-fixture-required"><td><a href="#construct-point-cloud-from-visible-cloud-points">Construct Point Cloud from Visible Cloud Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - clipping and cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud from Visible Cloud Points" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-clipping-and-cloud-fixture-required"><td><a href="#construct-point-cloud-from-visible-cloud-points">Construct Point Cloud from Visible Cloud Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — clipping and cloud fixture</td></tr>
 <tr data-command="Construct Point Cloud from Visible Cloud Points" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-cloud-from-visible-cloud-points">Construct Point Cloud from Visible Cloud Points</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Boundary Points from Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-scan-stripe-cloud-fixture-required"><td><a href="#construct-boundary-points-from-cloud">Construct Boundary Points from Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-stripe cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Boundary Points from Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-scan-stripe-cloud-fixture-required"><td><a href="#construct-boundary-points-from-cloud">Construct Boundary Points from Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-stripe cloud fixture</td></tr>
 <tr data-command="Construct Boundary Points from Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-boundary-points-from-cloud">Construct Boundary Points from Cloud</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud Limiting Probing Directions" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-probing-direction-fixture-required"><td><a href="#construct-point-cloud-limiting-probing-directions">Construct Point Cloud Limiting Probing Directions</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - probing-direction fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Point Cloud Limiting Probing Directions" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-probing-direction-fixture-required"><td><a href="#construct-point-cloud-limiting-probing-directions">Construct Point Cloud Limiting Probing Directions</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — probing-direction fixture</td></tr>
 <tr data-command="Construct Point Cloud Limiting Probing Directions" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-point-cloud-limiting-probing-directions">Construct Point Cloud Limiting Probing Directions</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Cross Section Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-cross-section-cloud-fixture-required"><td><a href="#construct-cross-section-cloud">Construct Cross Section Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cross-section cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Cross Section Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-cross-section-cloud-fixture-required"><td><a href="#construct-cross-section-cloud">Construct Cross Section Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cross-section cloud fixture</td></tr>
 <tr data-command="Construct Cross Section Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-cross-section-cloud">Construct Cross Section Cloud</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Cross Section Cloud - User Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-exact-target-binding-and-cloud-fixture-required"><td><a href="#construct-cross-section-cloud---user-select">Construct Cross Section Cloud - User Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - exact-target binding and cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Cross Section Cloud - User Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-exact-target-binding-and-cloud-fixture-required"><td><a href="#construct-cross-section-cloud---user-select">Construct Cross Section Cloud - User Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — exact-target binding and cloud fixture</td></tr>
 <tr data-command="Construct Cross Section Cloud - User Select" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-cross-section-cloud---user-select">Construct Cross Section Cloud - User Select</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Extract Sphere Centers from Point Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-raster-cloud-fixture-required"><td><a href="#extract-sphere-centers-from-point-cloud">Extract Sphere Centers from Point Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - raster-cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Extract Sphere Centers from Point Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-raster-cloud-fixture-required"><td><a href="#extract-sphere-centers-from-point-cloud">Extract Sphere Centers from Point Cloud</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — raster-cloud fixture</td></tr>
 <tr data-command="Extract Sphere Centers from Point Cloud" data-group="Construction Operations / Point Clouds" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#extract-sphere-centers-from-point-cloud">Extract Sphere Centers from Point Cloud</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -106,7 +107,7 @@ are `Nth Point`, point increment `5`, minimum points `100`, and maximum points
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-point-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk point cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — point-cloud fixture required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -147,7 +148,7 @@ name.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-interactive-point-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk interactive point cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — interactive cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -187,7 +188,7 @@ runtime interaction stopped.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-point-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk point cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — point-cloud fixture required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -238,7 +239,7 @@ differs from ObjectiveSA's older `0.2` default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-sa-2026-1-rgb-and-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk sa 2026 1 rgb and cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — SA 2026.1 RGB and cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -288,7 +289,7 @@ from ObjectiveSA's SA 2024.1 wrapper.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-clipping-and-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk clipping and cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — clipping and cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -329,7 +330,7 @@ planes and ignores the job's Cloud Thinning Control for this operation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-scan-stripe-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk scan stripe cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — scan-stripe cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -369,7 +370,7 @@ cloud. Validation requires suitable scan-stripe cloud data.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-probing-direction-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk probing direction fixture required</span>
+  <span className="catalog-target-validation">At Risk — probing-direction fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -414,7 +415,7 @@ with the reference object's normal.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-cross-section-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk cross section cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — cross-section cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -469,7 +470,7 @@ thinning uses the shared defaults.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-exact-target-binding-and-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk exact target binding and cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — exact-target binding and cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -520,7 +521,7 @@ that argument for this exact target. The implementation must use the exact
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-raster-cloud-fixture-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">At risk raster cloud fixture required</span>
+  <span className="catalog-target-validation">At Risk — raster-cloud fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Point Clouds" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -577,7 +578,7 @@ the exact extracted-point count reported by SpatialAnalyzer.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Point Clouds" data-validation="exact-target-sdk-binding-review">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Point Clouds</span>
-  <span className="catalog-target-validation">Exact target sdk binding review</span>
+  <span className="catalog-target-validation">Exact-target SDK binding review</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Point Clouds" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>

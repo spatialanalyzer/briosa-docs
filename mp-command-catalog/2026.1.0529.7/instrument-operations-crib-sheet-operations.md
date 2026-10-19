@@ -12,6 +12,6 @@ The subgroup's only command is **Next**.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Run Crib Sheet](/mp-command-catalog/commands/instrument-operations-crib-sheet-operations#run-crib-sheet) | **Next** |
+| [Run Crib Sheet](/mp-command-catalog/commands/instrument-operations-crib-sheet-operations#run-crib-sheet) | <span className="catalog-status catalog-status--next">Next</span> |
 
 [Open the canonical Crib Sheet Operations command reference →](/mp-command-catalog/commands/instrument-operations-crib-sheet-operations)

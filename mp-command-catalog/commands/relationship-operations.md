@@ -13,11 +13,12 @@ The MP Editor group paths and canonical command identities are preserved.
 Current entries are included in Briosa Server 0.9.2; runtime policy and readiness
 still apply. Documentation-only identities retain their SDK limitations.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>115</strong></div>
   <div><span>Current Server Operations</span><strong>109</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>6</strong></div>
 </div>
 
@@ -258,7 +259,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><a href="#get-relationship-sigmoidal-gap-fit-constraints">Get Relationship Sigmoidal Gap Fit Constraints</a></td>
   <td>Relationship Operations / Relationship Attributes Scalar Types</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk - Relationship fixture</td>
+  <td>At Risk — Relationship fixture</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Get Relationship Sub Sampling Options" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="portable-contract-review">
   <td><a href="#get-relationship-sub-sampling-options">Get Relationship Sub Sampling Options</a></td>
@@ -468,7 +469,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><a href="#set-object-to-object-direction-relationship-tolerances">Set Object to Object Direction Relationship Tolerances</a></td>
   <td>Relationship Operations / Relationship Attributes Scalar Types</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk - object-direction Relationship fixture</td>
+  <td>At Risk — object-direction Relationship fixture</td>
 </tr>
 <tr data-command="Set Object to Object Direction Relationship Tolerances" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-object-to-object-direction-relationship-tolerances">Set Object to Object Direction Relationship Tolerances</a></td>
@@ -693,7 +694,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate Geometry Relationship Summary" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
-  <td><a href="#generate-geometry-relationship-summary">Generate Geometry Relationship Summary</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
+  <td><a href="#generate-geometry-relationship-summary">Generate Geometry Relationship Summary</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td>
 </tr>
 <tr data-command="Generate Geometry Relationship Summary" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#generate-geometry-relationship-summary">Generate Geometry Relationship Summary</a></td>
@@ -702,7 +703,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Edit Geometry Relationship Point List" data-group="Relationship Operations" data-status="current" data-validation="at-risk-interactive-relationship-fixture">
-  <td><a href="#edit-geometry-relationship-point-list">Edit Geometry Relationship Point List</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Interactive relationship fixture</td>
+  <td><a href="#edit-geometry-relationship-point-list">Edit Geometry Relationship Point List</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Interactive relationship fixture</td>
 </tr>
 <tr data-command="Edit Geometry Relationship Point List" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#edit-geometry-relationship-point-list">Edit Geometry Relationship Point List</a></td>
@@ -711,7 +712,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Filter Geometry Relationship Outlier Cloud Points" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture">
-  <td><a href="#filter-geometry-relationship-outlier-cloud-points">Filter Geometry Relationship Outlier Cloud Points</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud relationship fixture</td>
+  <td><a href="#filter-geometry-relationship-outlier-cloud-points">Filter Geometry Relationship Outlier Cloud Points</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cloud and Relationship fixture</td>
 </tr>
 <tr data-command="Filter Geometry Relationship Outlier Cloud Points" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#filter-geometry-relationship-outlier-cloud-points">Filter Geometry Relationship Outlier Cloud Points</a></td>
@@ -756,7 +757,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>Evidence review</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Relationship Watch Window Template" data-group="Relationship Operations" data-status="current" data-validation="at-risk-watch-window-relationship-fixture">
-  <td><a href="#relationship-watch-window-template">Relationship Watch Window Template</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Watch-window relationship fixture</td>
+  <td><a href="#relationship-watch-window-template">Relationship Watch Window Template</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Watch-window relationship fixture</td>
 </tr>
 <tr data-command="Relationship Watch Window Template" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#relationship-watch-window-template">Relationship Watch Window Template</a></td>
@@ -765,7 +766,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Point to Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
-  <td><a href="#make-point-to-point-relationship">Make Point to Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
+  <td><a href="#make-point-to-point-relationship">Make Point to Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td>
 </tr>
 <tr data-command="Make Point to Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-point-to-point-relationship">Make Point to Point Relationship</a></td>
@@ -774,7 +775,7 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Frame to Frame Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture">
-  <td><a href="#make-frame-to-frame-relationship">Make Frame to Frame Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td>
+  <td><a href="#make-frame-to-frame-relationship">Make Frame to Frame Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td>
 </tr>
 <tr data-command="Make Frame to Frame Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-frame-to-frame-relationship">Make Frame to Frame Relationship</a></td>
@@ -782,245 +783,245 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Points to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#make-points-to-objects-relationship">Make Points to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - points and objects fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Points to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#make-points-to-objects-relationship">Make Points to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — points and objects fixture</td></tr>
 <tr data-command="Make Points to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-points-to-objects-relationship">Make Points to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Points to Points Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#make-points-to-points-relationship">Make Points to Points Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-points fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Points to Points Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#make-points-to-points-relationship">Make Points to Points Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — paired-Points Relationship fixture</td></tr>
 <tr data-command="Make Points to Points Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-points-to-points-relationship">Make Points to Points Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Groups to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-groups-objects-relationship-fixture"><td><a href="#make-groups-to-objects-relationship">Make Groups to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - groups and objects fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Groups to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-groups-objects-relationship-fixture"><td><a href="#make-groups-to-objects-relationship">Make Groups to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — groups and objects fixture</td></tr>
 <tr data-command="Make Groups to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-groups-to-objects-relationship">Make Groups to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Object to Object Direction Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-object-to-object-direction-relationship">Make Object to Object Direction Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Object to Object Direction Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-object-to-object-direction-relationship">Make Object to Object Direction Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — geometry fixture</td></tr>
 <tr data-command="Make Object to Object Direction Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-object-to-object-direction-relationship">Make Object to Object Direction Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Point Clouds to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#make-point-clouds-to-objects-relationship">Make Point Clouds to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Point Clouds to Objects Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#make-point-clouds-to-objects-relationship">Make Point Clouds to Objects Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cloud and Relationship fixture</td></tr>
 <tr data-command="Make Point Clouds to Objects Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-point-clouds-to-objects-relationship">Make Point Clouds to Objects Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Group to Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-groups-relationship-fixture"><td><a href="#make-group-to-group-relationship">Make Group to Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-groups fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Group to Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-groups-relationship-fixture"><td><a href="#make-group-to-group-relationship">Make Group to Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — paired-groups fixture</td></tr>
 <tr data-command="Make Group to Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-group-to-group-relationship">Make Group to Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Group to Nominal Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#make-group-to-nominal-group-relationship">Make Group to Nominal Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal-group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Group to Nominal Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#make-group-to-nominal-group-relationship">Make Group to Nominal Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — nominal-group Relationship fixture</td></tr>
 <tr data-command="Make Group to Nominal Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-group-to-nominal-group-relationship">Make Group to Nominal Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Average Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-average-point-relationship-fixture"><td><a href="#make-average-point-relationship">Make Average Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - average-point fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Average Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-average-point-relationship-fixture"><td><a href="#make-average-point-relationship">Make Average Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — average-point fixture</td></tr>
 <tr data-command="Make Average Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-average-point-relationship">Make Average Point Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Geometry Fit Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-only-relationship">Make Geometry Fit Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry-fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Geometry Fit Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-only-relationship">Make Geometry Fit Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — geometry-fit fixture</td></tr>
 <tr data-command="Make Geometry Fit Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-fit-only-relationship">Make Geometry Fit Only Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-and-compare-to-nominal-relationship">Make Geometry Fit and Compare to Nominal Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry-fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-fit-relationship-fixture"><td><a href="#make-geometry-fit-and-compare-to-nominal-relationship">Make Geometry Fit and Compare to Nominal Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — geometry-fit fixture</td></tr>
 <tr data-command="Make Geometry Fit and Compare to Nominal Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-fit-and-compare-to-nominal-relationship">Make Geometry Fit and Compare to Nominal Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Geometry Compare Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-geometry-compare-only-relationship">Make Geometry Compare Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Geometry Compare Only Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#make-geometry-compare-only-relationship">Make Geometry Compare Only Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — geometry fixture</td></tr>
 <tr data-command="Make Geometry Compare Only Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-geometry-compare-only-relationship">Make Geometry Compare Only Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Dynamic Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-point-relationship">Make Dynamic Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Dynamic Point Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-point-relationship">Make Dynamic Point Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dynamic-geometry fixture</td></tr>
 <tr data-command="Make Dynamic Point Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-point-relationship">Make Dynamic Point Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Dynamic Line Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-line-relationship">Make Dynamic Line Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Dynamic Line Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-line-relationship">Make Dynamic Line Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dynamic-geometry fixture</td></tr>
 <tr data-command="Make Dynamic Line Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-line-relationship">Make Dynamic Line Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Dynamic Plane Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-plane-relationship">Make Dynamic Plane Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Dynamic Plane Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-plane-relationship">Make Dynamic Plane Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dynamic-geometry fixture</td></tr>
 <tr data-command="Make Dynamic Plane Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-plane-relationship">Make Dynamic Plane Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Dynamic Circle Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-circle-relationship">Make Dynamic Circle Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Dynamic Circle Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-circle-relationship">Make Dynamic Circle Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dynamic-geometry fixture</td></tr>
 <tr data-command="Make Dynamic Circle Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-circle-relationship">Make Dynamic Circle Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Dynamic Ellipse Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-ellipse-relationship">Make Dynamic Ellipse Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dynamic-geometry fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Dynamic Ellipse Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-dynamic-geometry-fixture"><td><a href="#make-dynamic-ellipse-relationship">Make Dynamic Ellipse Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dynamic-geometry fixture</td></tr>
 <tr data-command="Make Dynamic Ellipse Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-dynamic-ellipse-relationship">Make Dynamic Ellipse Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Vector Group To Vector Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Vector Group To Vector Group Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
 <tr data-command="Make Vector Group To Vector Group Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-vector-group-to-vector-group-relationship">Make Vector Group To Vector Group Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Cylindrical Zone" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-cylindrical-zone">Set Vector Group To Vector Group Cylindrical Zone</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Weights" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Weights" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Fit Weights" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-weights">Set Vector Group To Vector Group Fit Weights</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Fit Gradient Factor" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-fit-gradient-factor">Set Vector Group To Vector Group Fit Gradient Factor</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Vector Group fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Relationship Operations" data-status="current" data-validation="at-risk-vector-group-relationship-fixture"><td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Vector Group fixture</td></tr>
 <tr data-command="Set Vector Group To Vector Group Relative Polarity" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-vector-group-to-vector-group-relative-polarity">Set Vector Group To Vector Group Relative Polarity</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-destructive-relationship-fixture"><td><a href="#delete-relationship">Delete Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-destructive-relationship-fixture"><td><a href="#delete-relationship">Delete Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive Relationship fixture</td></tr>
 <tr data-command="Delete Relationship" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-relationship">Delete Relationship</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Optimization Search Options" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-search-options">Set Optimization Search Options</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Optimization Search Options" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-search-options">Set Optimization Search Options</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fit fixture</td></tr>
 <tr data-command="Set Optimization Search Options" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-optimization-search-options">Set Optimization Search Options</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Optimization Perturbation Parameters" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-perturbation-parameters">Set Optimization Perturbation Parameters</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Optimization Perturbation Parameters" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#set-optimization-perturbation-parameters">Set Optimization Perturbation Parameters</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fit fixture</td></tr>
 <tr data-command="Set Optimization Perturbation Parameters" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-optimization-perturbation-parameters">Set Optimization Perturbation Parameters</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Do Relationship Fit" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#do-relationship-fit">Do Relationship Fit</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Do Relationship Fit" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#do-relationship-fit">Do Relationship Fit</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fit fixture</td></tr>
 <tr data-command="Do Relationship Fit" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#do-relationship-fit">Do Relationship Fit</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Collections by Minimizing Relationships" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#move-collections-by-minimizing-relationships">Move Collections by Minimizing Relationships</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Collections by Minimizing Relationships" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fit-fixture"><td><a href="#move-collections-by-minimizing-relationships">Move Collections by Minimizing Relationships</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fit fixture</td></tr>
 <tr data-command="Move Collections by Minimizing Relationships" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-collections-by-minimizing-relationships">Move Collections by Minimizing Relationships</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get General Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-general-relationship-statistics">Get General Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get General Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-general-relationship-statistics">Get General Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td></tr>
 <tr data-command="Get General Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-general-relationship-statistics">Get General Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Points to Objects Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#get-points-to-objects-relationship-statistics">Get Points to Objects Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - points and objects fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Points to Objects Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-relationship-fixture"><td><a href="#get-points-to-objects-relationship-statistics">Get Points to Objects Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — points and objects fixture</td></tr>
 <tr data-command="Get Points to Objects Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-points-to-objects-relationship-statistics">Get Points to Objects Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start/Stop Relationship Trapping" data-group="Relationship Operations" data-status="current" data-validation="at-risk-instrument-relationship-fixture"><td><a href="#startstop-relationship-trapping">Start/Stop Relationship Trapping</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument and Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start/Stop Relationship Trapping" data-group="Relationship Operations" data-status="current" data-validation="at-risk-instrument-relationship-fixture"><td><a href="#startstop-relationship-trapping">Start/Stop Relationship Trapping</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument and Relationship fixture</td></tr>
 <tr data-command="Start/Stop Relationship Trapping" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#startstop-relationship-trapping">Start/Stop Relationship Trapping</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Point to Point Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#get-point-to-point-relationship-statistics">Get Point to Point Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Point to Point Relationship Statistics" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#get-point-to-point-relationship-statistics">Get Point to Point Relationship Statistics</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Point Relationship fixture</td></tr>
 <tr data-command="Get Point to Point Relationship Statistics" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-point-to-point-relationship-statistics">Get Point to Point Relationship Statistics</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Group To Nominal Group View Zooming" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#set-group-to-nominal-group-view-zooming">Set Group To Nominal Group View Zooming</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - nominal-group Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Group To Nominal Group View Zooming" data-group="Relationship Operations" data-status="current" data-validation="at-risk-nominal-group-relationship-fixture"><td><a href="#set-group-to-nominal-group-view-zooming">Set Group To Nominal Group View Zooming</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — nominal-group Relationship fixture</td></tr>
 <tr data-command="Set Group To Nominal Group View Zooming" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-group-to-nominal-group-view-zooming">Set Group To Nominal Group View Zooming</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#set-relationship-associated-data">Set Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#set-relationship-associated-data">Set Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td></tr>
 <tr data-command="Set Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-relationship-associated-data">Set Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-associated-data">Get Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-associated-data">Get Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td></tr>
 <tr data-command="Get Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-associated-data">Get Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#set-points-to-points-relationship-associated-data">Set Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-Points Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#set-points-to-points-relationship-associated-data">Set Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — paired-Points Relationship fixture</td></tr>
 <tr data-command="Set Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-points-to-points-relationship-associated-data">Set Points to Points Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#get-points-to-points-relationship-associated-data">Get Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - paired-Points Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Points to Points Relationship Associated Data" data-group="Relationship Operations" data-status="current" data-validation="at-risk-paired-points-relationship-fixture"><td><a href="#get-points-to-points-relationship-associated-data">Get Points to Points Relationship Associated Data</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — paired-Points Relationship fixture</td></tr>
 <tr data-command="Get Points to Points Relationship Associated Data" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-points-to-points-relationship-associated-data">Get Points to Points Relationship Associated Data</a></td>
   <td>Analysis Operations / Relationship Operations</td>
@@ -1034,65 +1035,65 @@ still apply. Documentation-only identities retain their SDK limitations.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-3d">Auto Filter Clouds to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud and Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-3d">Auto Filter Clouds to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cloud and Relationship fixture</td></tr>
 <tr data-command="Auto Filter Clouds to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-clouds-to-nominal-geometry-3d">Auto Filter Clouds to Nominal Geometry 3D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-2d">Auto Filter Clouds to Nominal Geometry 2D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud and Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-relationship-fixture"><td><a href="#auto-filter-clouds-to-nominal-geometry-2d">Auto Filter Clouds to Nominal Geometry 2D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cloud and Relationship fixture</td></tr>
 <tr data-command="Auto Filter Clouds to Nominal Geometry 2D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-clouds-to-nominal-geometry-2d">Auto Filter Clouds to Nominal Geometry 2D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#auto-filter-points-to-nominal-geometry-3d">Auto Filter Points to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point and Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Relationship Operations" data-status="current" data-validation="at-risk-point-relationship-fixture"><td><a href="#auto-filter-points-to-nominal-geometry-3d">Auto Filter Points to Nominal Geometry 3D</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Point Relationship fixture</td></tr>
 <tr data-command="Auto Filter Points to Nominal Geometry 3D" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-points-to-nominal-geometry-3d">Auto Filter Points to Nominal Geometry 3D</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Relationship Operations" data-status="current" data-validation="at-risk-surface-filter-fixture"><td><a href="#auto-filter-pointsgroupsclouds-to-surface-faces">Auto Filter Points/Groups/Clouds to Surface Faces</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Point, Group, Cloud, and Surface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Relationship Operations" data-status="current" data-validation="at-risk-surface-filter-fixture"><td><a href="#auto-filter-pointsgroupsclouds-to-surface-faces">Auto Filter Points/Groups/Clouds to Surface Faces</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Point, Group, Cloud, and Surface fixture</td></tr>
 <tr data-command="Auto Filter Points/Groups/Clouds to Surface Faces" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-filter-pointsgroupsclouds-to-surface-faces">Auto Filter Points/Groups/Clouds to Surface Faces</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Extract Geometry From Point Clouds" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-geometry-extraction-fixture"><td><a href="#extract-geometry-from-point-clouds">Extract Geometry From Point Clouds</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud and geometry-extraction fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Create Points to Objects Map" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#create-points-to-objects-map">Create Points to Objects Map</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Points-to-objects map fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Extract Geometry From Point Clouds" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-geometry-extraction-fixture"><td><a href="#extract-geometry-from-point-clouds">Extract Geometry From Point Clouds</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Cloud and geometry-extraction fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Create Points to Objects Map" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#create-points-to-objects-map">Create Points to Objects Map</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Points-to-objects map fixture</td></tr>
 <tr data-command="Create Points to Objects Map" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-points-to-objects-map">Create Points to Objects Map</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Objects From Points to Objects Map (Point List)" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#get-objects-from-points-to-objects-map-point-list">Get Objects From Points to Objects Map (Point List)</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Points-to-objects map fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Objects From Points to Objects Map (Point List)" data-group="Relationship Operations" data-status="current" data-validation="at-risk-points-objects-map-fixture"><td><a href="#get-objects-from-points-to-objects-map-point-list">Get Objects From Points to Objects Map (Point List)</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Points-to-objects map fixture</td></tr>
 <tr data-command="Get Objects From Points to Objects Map (Point List)" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-objects-from-points-to-objects-map-point-list">Get Objects From Points to Objects Map (Point List)</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Compute Geometry Relationship Uncertainties" data-group="Relationship Operations" data-status="current" data-validation="at-risk-uncertainty-relationship-fixture"><td><a href="#compute-geometry-relationship-uncertainties">Compute Geometry Relationship Uncertainties</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - uncertainty Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Compute Geometry Relationship Uncertainties" data-group="Relationship Operations" data-status="current" data-validation="at-risk-uncertainty-relationship-fixture"><td><a href="#compute-geometry-relationship-uncertainties">Compute Geometry Relationship Uncertainties</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — uncertainty Relationship fixture</td></tr>
 <tr data-command="Compute Geometry Relationship Uncertainties" data-group="Analysis Operations / Relationship Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#compute-geometry-relationship-uncertainties">Compute Geometry Relationship Uncertainties</a></td>
   <td>Analysis Operations / Relationship Operations</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Cloud to Swatch Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-swatch-relationship-fixture"><td><a href="#make-cloud-to-swatch-relationship">Make Cloud to Swatch Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Cloud and Swatch Relationship fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Criteria Name List" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#get-geom-relationship-criteria-name-list">Get Geom Relationship Criteria Name List</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - geometry Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Cloud to Swatch Relationship" data-group="Relationship Operations" data-status="current" data-validation="at-risk-cloud-swatch-relationship-fixture"><td><a href="#make-cloud-to-swatch-relationship">Make Cloud to Swatch Relationship</a></td><td>Relationship Operations</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Cloud and Swatch Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Geom Relationship Criteria Name List" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-geometry-relationship-fixture"><td><a href="#get-geom-relationship-criteria-name-list">Get Geom Relationship Criteria Name List</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — geometry fixture</td></tr>
 <tr data-command="Get Geom Relationship Criteria Name List" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-geom-relationship-criteria-name-list">Get Geom Relationship Criteria Name List</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Relationship Status" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-status">Get Relationship Status</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Relationship fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Relationship Status" data-group="Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-relationship-fixture"><td><a href="#get-relationship-status">Get Relationship Status</a></td><td>Relationship Operations / Relationship Attributes</td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Relationship fixture</td></tr>
 <tr data-command="Get Relationship Status" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-relationship-status">Get Relationship Status</a></td>
   <td>Analysis Operations / Relationship Operations / Relationship Attributes</td>
@@ -1165,7 +1166,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2128,7 +2129,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2323,7 +2324,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 </div>
 
@@ -2332,7 +2333,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Relationship Operations / Relationship Attributes Scalar Types</strong></div>
-  <div><span>Validation</span><strong>At Risk - Relationship fixture</strong></div>
+  <div><span>Validation</span><strong>At Risk — Relationship fixture</strong></div>
   <div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
@@ -3470,7 +3471,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-validation="at-risk-object-direction-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
-  <span className="catalog-target-validation">At risk object direction relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — object-direction Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3505,7 +3506,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Relationship Operations / Relationship Attributes Scalar Types</strong></div>
-  <div><span>Validation</span><strong>At Risk - object-direction Relationship fixture</strong></div>
+  <div><span>Validation</span><strong>At Risk — object-direction Relationship fixture</strong></div>
   <div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
@@ -4007,7 +4008,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes Scalar Types" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes Scalar Types</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes / Relationship Attributes (Scalar Types)" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4648,7 +4649,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4692,7 +4693,7 @@ Builds an SA geometry-relationship summary table for the supplied Relationships.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-interactive-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk interactive relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Interactive relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4742,7 +4743,7 @@ that Briosa should expose one mode input.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — cloud and Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4959,7 +4960,7 @@ Use the client language's collection sorting tools instead.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-watch-window-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk watch window relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Watch-window relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5016,7 +5017,7 @@ broadcast enabled, an empty IP address, and port `10000`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5062,7 +5063,7 @@ limits enabled at zero, with both magnitude limits disabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5107,7 +5108,7 @@ and vector position tolerance default to every limit disabled at zero.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-points-objects-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk points objects relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — points and objects fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5160,7 +5161,7 @@ retain the lists or preflight their compatibility.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-paired-points-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk paired points relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — paired-Points Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5208,7 +5209,7 @@ to X, Y, and Z limits enabled at zero and magnitude limits disabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-groups-objects-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk groups objects relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — groups and objects fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5254,7 +5255,7 @@ Group auto-update defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-geometry-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk geometry relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5298,7 +5299,7 @@ defaults to `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — cloud and Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5344,7 +5345,7 @@ variants.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-paired-groups-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk paired groups relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — paired-groups fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5390,7 +5391,7 @@ auto-update, tolerance, and constraint defaults as the Points-to-Points form.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-nominal-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk nominal group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — nominal-group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5445,7 +5446,7 @@ the paired-Point Relationship.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-average-point-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk average point relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — average-point fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5489,7 +5490,7 @@ Nominal Point identities are independently optional.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-geometry-fit-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk geometry fit relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — geometry-fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5535,7 +5536,7 @@ success when only some supplied Point Groups can be used.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-geometry-fit-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk geometry fit relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — geometry-fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5581,7 +5582,7 @@ MP success remains distinct from complete success or failure.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-geometry-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk geometry relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5624,7 +5625,7 @@ without fitting either object.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-dynamic-geometry-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
+  <span className="catalog-target-validation">At Risk — dynamic-geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5671,7 +5672,7 @@ selected construction mode needs three geometries.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-dynamic-geometry-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
+  <span className="catalog-target-validation">At Risk — dynamic-geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5716,7 +5717,7 @@ two-plane intersection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-dynamic-geometry-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
+  <span className="catalog-target-validation">At Risk — dynamic-geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5763,7 +5764,7 @@ enum value and maps it to the exact SDK literal internally.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-dynamic-geometry-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
+  <span className="catalog-target-validation">At Risk — dynamic-geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5808,7 +5809,7 @@ intersection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-dynamic-geometry-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk dynamic geometry fixture</span>
+  <span className="catalog-target-validation">At Risk — dynamic-geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5852,7 +5853,7 @@ intersection. Cylinder/Plane is the default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk vector group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5896,7 +5897,7 @@ defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk vector group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5940,7 +5941,7 @@ Sets radial, minimum axial, and maximum axial offsets. Exact defaults are `1`,
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk vector group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5987,7 +5988,7 @@ are gaps `0`, minimum and maximum weights `10`, and nominal weight `1`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk vector group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6028,7 +6029,7 @@ Sets the fit-weight transition gradient factor, which defaults to `50`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-vector-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk vector group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Vector Group fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6070,7 +6071,7 @@ passing `false` selects same-direction analysis.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-destructive-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk destructive relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6111,7 +6112,7 @@ destructive behavior and adds no confirmation or preflight safeguard.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fit fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6150,7 +6151,7 @@ The exact default is `5`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fit fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6192,7 +6193,7 @@ not cache them.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fit fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6243,7 +6244,7 @@ working and world Transforms with scale, and objective value.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fit fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6288,7 +6289,7 @@ off, and uses the exact SA 2026.1 convergence-threshold default of `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6334,7 +6335,7 @@ the signed maximum and minimum deviations.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-points-objects-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk points objects relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — points and objects fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6386,7 +6387,7 @@ does not expose it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-instrument-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk instrument relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument and Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6429,7 +6430,7 @@ is `false`, which stops trapping.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-point-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk point relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Point Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6475,7 +6476,7 @@ Frame.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-nominal-group-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk nominal group relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — nominal-group Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6530,7 +6531,7 @@ Group Relationship. Briosa does not retain these settings outside SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6586,7 +6587,7 @@ changed. Briosa forwards the supplied lists and does not retain a copy.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6632,7 +6633,7 @@ Clouds, and other associated objects.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-paired-points-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk paired points relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — paired-Points Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6677,7 +6678,7 @@ Relationship. Each list is optional, `Ignore Empty Arguments?` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-paired-points-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk paired points relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — paired-Points Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6768,7 +6769,7 @@ same fields and defaults for use with the selected auto-filter operations.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — cloud and Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6812,7 +6813,7 @@ settings default to disabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — cloud and Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6857,7 +6858,7 @@ default of `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-point-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk point relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Point Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6898,7 +6899,7 @@ proximity settings. Briosa adds no Relationship or Point preflight.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-surface-filter-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk surface filter fixture</span>
+  <span className="catalog-target-validation">At Risk — Point, Group, Cloud, and Surface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6952,7 +6953,7 @@ additional safeguards.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-geometry-extraction-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud geometry extraction fixture</span>
+  <span className="catalog-target-validation">At Risk — Cloud and geometry-extraction fixture</span>
 </div>
 </div>
 
@@ -6981,7 +6982,7 @@ the contract follows the complete exact SA 2026.1 SDK binding.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-points-objects-map-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk points objects map fixture</span>
+  <span className="catalog-target-validation">At Risk — Points-to-objects map fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7025,7 +7026,7 @@ does not retain, recreate, or otherwise manage the named map.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-points-objects-map-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk points objects map fixture</span>
+  <span className="catalog-target-validation">At Risk — Points-to-objects map fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7067,7 +7068,7 @@ exact SA 2026.1 MP identity and Point Name Ref List SDK binding.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-uncertainty-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk uncertainty relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — uncertainty Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7111,7 +7112,7 @@ native behavior without trying to restore or manage the Relationship state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations" data-validation="at-risk-cloud-swatch-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations</span>
-  <span className="catalog-target-validation">At risk cloud swatch relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Cloud and Swatch Relationship fixture</span>
 </div>
 </div>
 
@@ -7130,7 +7131,7 @@ an implementation, so licensed validation requires a dedicated Swatch fixture.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes" data-validation="at-risk-geometry-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
-  <span className="catalog-target-validation">At risk geometry relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — geometry fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7174,7 +7175,7 @@ complete result as a String Ref List.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Relationship Operations / Relationship Attributes" data-validation="at-risk-relationship-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Relationship Operations / Relationship Attributes</span>
-  <span className="catalog-target-validation">At risk relationship fixture</span>
+  <span className="catalog-target-validation">At Risk — Relationship fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Relationship Operations / Relationship Attributes" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

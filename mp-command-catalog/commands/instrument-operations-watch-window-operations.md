@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 This page covers all seven commands observed under **Instrument Operations →
 Watch Window Operations** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
-  <div><span>Reviewed Commands</span><strong>7 of 7</strong></div>
+  <div><span>Reviewed Commands</span><strong>7</strong></div>
   <div><span>Current Server Operations</span><strong>6</strong></div>
+  <div><span>Uncommitted or Next</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,31 +25,31 @@ Watch Window Operations** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Watch Point To Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point">Watch Point To Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Point To Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point">Watch Point To Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Point To Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-point">Watch Point To Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Watch Point To Objects" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-objects">Watch Point To Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Point To Objects" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-objects">Watch Point To Objects</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Point To Objects" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-objects">Watch Point To Objects</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Watch Point To Edge" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-edge">Watch Point To Edge</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Point To Edge" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-edge">Watch Point To Edge</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Point To Edge" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-edge">Watch Point To Edge</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Watch Closest Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-closest-point">Watch Closest Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Closest Point" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-closest-point">Watch Closest Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Closest Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-closest-point">Watch Closest Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Watch Instrument" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-instrument">Watch Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Instrument" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-instrument">Watch Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-instrument">Watch Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -60,7 +61,7 @@ Watch Window Operations** in SA 2026.1.0529.7.
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point-with-view-zooming">Watch Point To Point With View Zooming</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Instrument watch-window fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations / Watch Window Operations" data-status="current" data-validation="at-risk-instrument-watch-window-fixture"><td><a href="#watch-point-to-point-with-view-zooming">Watch Point To Point With View Zooming</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Instrument watch-window fixture</td></tr>
 <tr data-command="Watch Point To Point With View Zooming" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#watch-point-to-point-with-view-zooming">Watch Point To Point With View Zooming</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -75,7 +76,7 @@ Watch Window Operations** in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -132,7 +133,7 @@ follows the exact-target SDK binding.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -182,7 +183,7 @@ the requested objects.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -233,7 +234,7 @@ Objects ` even though the public field name omits it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -281,7 +282,7 @@ SA state used by the sequence.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -388,7 +389,7 @@ MP Editor review establishes the exact SA 2026.1.0529.7 signature.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / Watch Window Operations" data-validation="at-risk-instrument-watch-window-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / Watch Window Operations</span>
-  <span className="catalog-target-validation">At risk instrument watch window fixture</span>
+  <span className="catalog-target-validation">At Risk — Instrument watch-window fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

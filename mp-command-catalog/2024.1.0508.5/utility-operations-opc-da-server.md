@@ -6,7 +6,7 @@ description: Reviewed Utility Operations / OPC DA Server commands and released B
 
 # OPC DA Server
 
-**SA 2024.1.0508.5 · Utility Operations / OPC DA Server**
+<p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Utility Operations <span aria-hidden="true">/</span> OPC DA Server</p>
 
 This group contains 6 reviewed command entries. **Current** means implemented
 in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
@@ -14,11 +14,11 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Get OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) | **Current** | At Risk — no 2024 runtime validation |
-| [Get OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) | **Current** | At Risk — no 2024 runtime validation |
-| [Get OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) | **Current** | At Risk — no 2024 runtime validation |
-| [Set OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) | **Current** | At Risk — no 2024 runtime validation |
-| [Set OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) | **Current** | At Risk — no 2024 runtime validation |
-| [Set OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) | **Current** | At Risk — no 2024 runtime validation |
+| [Get OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-double) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Get OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-integer) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Get OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#get-opc-da-tag-value-string) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Set OPC DA Tag Value Double](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-double) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Set OPC DA Tag Value Integer](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-integer) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Set OPC DA Tag Value String](/mp-command-catalog/commands/utility-operations#set-opc-da-tag-value-string) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)
