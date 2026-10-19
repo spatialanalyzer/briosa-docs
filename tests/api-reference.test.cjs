@@ -348,6 +348,35 @@ test('current method pages split requests/results and retain first-call walkthro
   assert.doesNotMatch($('.api-sidebar').first().text(), /SA 2024\.1\.0508\.5/);
 });
 
+test('method pages render their contract as an operation panel with highlighted, unchanged code', () => {
+  const $ = read('/api/grpc/sa-2026.1.0529.7/file-operations/direct-cad-access');
+  assert.equal($('.api-contract > .api-op-head .api-rpc-path').text(), '/briosa.FileOperations/DirectCadAccess');
+  assert.equal($('.api-op .api-fields tr#request-cad-file-name .api-required').text(), 'Required');
+  const signature = $('.api-op .api-code[data-language="proto"]');
+  assert.equal(signature.length, 1);
+  assert.ok(signature.find('.sl-tk-k').length > 0, 'the server render highlights the signature');
+  assert.match(signature.find('pre code').text(), /^rpc DirectCadAccess\(DirectCadAccessRequest\) returns \(DirectCadAccessResult\);\n/);
+  // Copy and expand controls need JavaScript and are added after hydration, so
+  // the served page and its search records carry no button text.
+  assert.equal($('.api-contract button').length, 0);
+  // The gRPC reference names the later servers that serve its contract unchanged.
+  assert.match($('.api-applies').text(), /Server0\.9\.0Same Contract0\.9\.1 · 0\.9\.2/);
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Servers 0\.9\.1 and 0\.9\.2 serve this same contract/);
+});
+
+test('titles never show literal backticks, and overview links read as the overview heading', () => {
+  const $ = read('/api/grpc/sa-2026.1.0529.7/get-spatial-analyzer-state');
+  assert.equal($('h1 code').text(), 'GetSpatialAnalyzerState');
+  assert.doesNotMatch($('title').text(), /`/);
+  assert.doesNotMatch($('meta[name="description"]').attr('content'), /`/);
+  assert.doesNotMatch($('.api-sidebar').text(), /`/);
+  for (const [family, label] of Object.entries({grpc: 'Briosa gRPC API', dotnet: 'Briosa for .NET API', python: 'Briosa for Python API', javascript: 'Briosa for JavaScript and TypeScript API'})) {
+    const overview = read(`/api/${family}/sa-2026.1.0529.7`);
+    assert.equal(overview('h1').text(), label);
+    assert.equal(overview(`.api-sidebar a[href="/api/${family}/sa-2026.1.0529.7"]`).first().text(), label);
+  }
+});
+
 test('release-qualified addresses redirect statically to current references or history without indexing', () => {
   const map = sitemap();
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {

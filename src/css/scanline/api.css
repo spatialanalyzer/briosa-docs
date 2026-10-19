@@ -1,20 +1,270 @@
-/* API reference landing pages (src/pages/api). Method pages style themselves in
-   src/components/ApiReference/styles.css. */
+/*
+ * API reference landing pages: /api and each family's /api/<family> index.
+ * Reference pages style themselves in src/components/ApiReference/styles.css,
+ * which the landing pages also load for shared chips, tags, and tables.
+ */
 
-.catalog-group-grid.briosa-reference-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.api-landing {
+  width: 100%;
+  max-width: var(--sl-maxw);
+  margin-inline: auto;
+  padding: 52px var(--sl-gut) 96px;
 }
 
+.api-landing-head {
+  max-width: 48rem;
+}
+
+.api-landing-head .sl-kicker {
+  margin-bottom: 18px;
+}
+
+.api-landing-head h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 1.5rem + 2.6vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.014em;
+}
+
+.api-landing-lead {
+  margin: 18px 0 0;
+  color: var(--sl-ink-body);
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+/* Suite lockups: color on light, inverse on dark (ThemedImage). */
 .briosa-product-logo {
   display: block;
   align-self: flex-start;
   width: auto;
-  height: 2.5rem;
-  margin: 0.5rem 0 2rem;
+  max-width: 100%;
+  height: 2.2rem;
+  margin: 0 0 22px;
 }
 
-@media (max-width: 700px) {
-  .catalog-group-grid.briosa-reference-grid {
-    grid-template-columns: 1fr;
+/* ---------- Product cards on /api ---------- */
+.api-product-grid,
+.api-target-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.api-product-card,
+.api-target-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 22px 22px 20px;
+  border: 1px solid var(--sl-line-2);
+  border-radius: 4px;
+  background: var(--sl-panel);
+  transition: border-color 0.3s var(--sl-ease);
+}
+
+.api-product-card:hover,
+.api-target-card:hover,
+.api-product-card:focus-within,
+.api-target-card:focus-within {
+  border-color: var(--sl-line-3);
+}
+
+.api-product-card > .sl-brk {
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  opacity: 0;
+  transition: inset 0.45s var(--sl-ease), opacity 0.3s;
+}
+
+.api-product-card:hover > .sl-brk,
+.api-product-card:focus-within > .sl-brk {
+  inset: -6px;
+  opacity: 1;
+}
+
+.api-product-card .api-applies {
+  margin: 0;
+}
+
+.api-product-title {
+  margin: 18px 0 0;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+/* The title link covers the card; other links in a card sit above it. */
+.api-card-link,
+.api-card-link:hover {
+  color: var(--sl-ink);
+  text-decoration: none;
+}
+
+.api-card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.api-card-link:focus-visible {
+  outline: none;
+}
+
+.api-product-card:has(.api-card-link:focus-visible),
+.api-target-card:has(.api-card-link:focus-visible) {
+  outline: 2px solid var(--sl-laser);
+  outline-offset: 3px;
+}
+
+.api-product-card p {
+  margin: 8px 0 20px;
+  color: var(--sl-ink-2);
+  line-height: 1.6;
+}
+
+.api-product-card .sl-textlink,
+.api-target-card .sl-textlink {
+  margin-top: auto;
+}
+
+.api-product-card:hover .sl-textlink,
+.api-target-card:hover .sl-textlink {
+  text-decoration: underline;
+}
+
+.api-product-card:hover .sl-textlink .sl-ico,
+.api-target-card:hover .sl-textlink .sl-ico {
+  transform: translateX(4px);
+}
+
+/* ---------- Family index: SA target cards ---------- */
+.api-family-index .api-family-switch {
+  margin: 0 0 30px;
+}
+
+.api-target-card {
+  gap: 14px;
+}
+
+.api-target-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin: 0;
+  color: var(--sl-ink-3);
+}
+
+.api-target-kicker .api-tag {
+  margin-left: 0;
+  border-color: var(--sl-line-3);
+  color: var(--sl-ink);
+}
+
+.api-target-title {
+  margin: 0;
+  font: 500 clamp(1.5rem, 1.1rem + 1.2vw, 2rem)/1.15 var(--sl-f-mono);
+  font-variant-ligatures: none;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.api-target-title .sl-hud {
+  margin-right: 10px;
+  color: var(--sl-ink-3);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  vertical-align: 0.4em;
+}
+
+.api-target-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--sl-line);
+}
+
+.api-target-facts dt {
+  margin: 0;
+  color: var(--sl-ink-3);
+}
+
+.api-target-facts dd {
+  margin: 6px 0 0;
+  color: var(--sl-ink);
+  font: 500 1.15rem/1.2 var(--sl-f-mono);
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.api-target-facts dd small {
+  display: block;
+  margin-top: 4px;
+  color: var(--sl-ink-3);
+  font: 400 12.5px/1.35 var(--sl-f-body);
+}
+
+.api-target-catalog {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  color: var(--sl-laser);
+  font-size: 14px;
+}
+
+/* ---------- Notes and the earlier-releases table ---------- */
+.api-landing-notes {
+  max-width: 52rem;
+}
+
+.api-landing-section {
+  margin-top: 8px;
+}
+
+.api-release-targets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.markdown .api-release-targets li {
+  margin: 0;
+}
+
+.api-release-targets .api-tag {
+  margin-left: 8px;
+}
+
+@media (max-width: 760px) {
+  .api-product-grid,
+  .api-target-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .api-landing {
+    padding-top: 36px;
+  }
+
+  .api-product-card,
+  .api-target-card {
+    padding: 18px 16px 16px;
+  }
+
+  .api-target-facts {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

@@ -17,6 +17,17 @@ const walk = (node, visit) => { visit(node); for (const child of node.children ?
 export const exactBase = (family, release, target) => `/api/${family}/sa-${target}/${release}`;
 export const suffix = (id) => id === 'overview' ? '' : `/${id}`;
 
+// A page is named by its Markdown H1. Titles, navigation labels, and metadata use
+// its plain text; `heading` keeps inline code (`GetSpatialAnalyzerState`) so the
+// visible H1 can render it as code instead of showing literal backticks.
+export function headingOf(markdown) {
+  const node = parser.parse(markdown).children[0];
+  const parts = node?.children ?? [];
+  const text = parts.map(textOf).join('').trim();
+  if (!parts.some((part) => part.type === 'inlineCode')) return {text};
+  return {text, heading: parts.map((part) => part.type === 'inlineCode' ? `\`${part.value}\`` : textOf(part)).join('').trim(), code: parts.length === 1};
+}
+
 function document(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   const meta = {};
@@ -25,8 +36,9 @@ function document(raw) {
     if (pair) meta[pair[1]] = pair[2].trim().replace(/^['"]|['"]$/g, '');
   }
   const body = raw.slice(match?.[0].length ?? 0).replaceAll('\r\n', '\n');
-  const title = body.match(/^# (.+)$/m)?.[1] ?? meta.title;
-  return {meta, body, title};
+  const h1 = body.match(/^# .+$/m)?.[0];
+  const {text, heading, code} = h1 ? headingOf(h1) : {text: meta.title};
+  return {meta, body, title: text, heading, code};
 }
 
 export function sections(body) {
@@ -38,6 +50,110 @@ export function sections(body) {
     return {title: label.replace(/\s*\{\/\*.*?\*\/\}/g, ''), anchor: explicit?.[1] ?? slugger.slug(label), start: node.position.start.offset, end: node.position.end.offset};
   });
   return headings.map((h, i) => ({...h, body: body.slice(h.end, headings[i + 1]?.start ?? body.length).trim()}));
+}
+
+// Heading children without the trailing `{/* #anchor */}` comment.
+function withoutAnchorComment(children) {
+  const kept = children.map((child) => child.type === 'text' ? {...child, value: child.value.replace(/\s*\{\/\*.*?\*\/\}/g, '')} : child);
+  const last = kept.at(-1);
+  if (last?.type === 'text') last.value = last.value.trimEnd();
+  return kept.filter((child) => child.type !== 'text' || child.value);
+}
+
+const list = (items) => items.length < 3 ? items.join(' and ') : `${items.slice(0, -1).join(', ')}, and ${items.at(-1)}`;
+// Later releases that serve a snapshot's contract unchanged (targets.json
+// `sameContract`) have no snapshot of their own. Where a reference names its
+// release, say so, so a reader on the newer release is not left guessing.
+function sameContractNote(markdown, ctx) {
+  const later = ctx.sameContract ?? [];
+  if (!later.length) return markdown;
+  const label = releaseLabel(ctx.family);
+  const release = ctx.release.replaceAll('.', '\\.');
+  const note = `${label}${later.length > 1 ? 's' : ''} ${list(later)} ${later.length > 1 ? 'serve' : 'serves'} this same contract; [Release Status](/docs/releases#documentation-versions) lists their runtime corrections.`;
+  return markdown
+    .replace(new RegExp(`(This reference covers \\*\\*SA [^*\\n]+\\*\\*, ${label} \\*\\*${release}\\*\\*\\.)`, 'gi'), `$1 ${note}`)
+    .replace(new RegExp(`(This reference documents \\*\\*Briosa ${label} ${release}\\*\\*\\s+for exact SpatialAnalyzer\\s+target \\*\\*[^*\\n]+\\*\\*\\.)`, 'gi'), `$1 ${note}`);
+}
+
+// Presentation structure around released contract HTML. Every text and code
+// character is kept; only classes, wrappers, and line-break hints are added.
+const isElement = (node, tagName) => node?.type === 'element' && (!tagName || node.tagName === tagName);
+const element = (tagName, className, children = []) => ({type: 'element', tagName, properties: className ? {className: [className]} : {}, children});
+const textNode = (value) => ({type: 'text', value});
+const addClass = (node, name) => { node.properties = {...node.properties, className: [...(node.properties?.className ?? []), name]}; };
+const blank = (node) => node.type === 'text' && !node.value.trim();
+
+// Long identifiers may wrap after `_` (or `.`) instead of mid-word.
+const breakable = (code, after = /(?<=_)/) => {
+  code.children = code.children.flatMap((child) => child.type !== 'text' ? [child] : child.value.split(after).flatMap((part, i) => i ? [element('wbr'), textNode(part)] : [textNode(part)]));
+};
+
+// A parameter row: Field, Name, Type, MP Argument, Briosa Default.
+function decorateField(row) {
+  const [number, name, type, , fallback] = row.children.filter((n) => isElement(n, 'td'));
+  if (textOf(number ?? {}) === '1000' && textOf(name ?? {}) === 'execution') addClass(row, 'api-field-standard');
+  for (const code of name?.children.filter((n) => isElement(n, 'code')) ?? []) breakable(code);
+  for (const code of type?.children.filter((n) => isElement(n, 'code')) ?? []) {
+    const first = code.children[0];
+    if (first?.type === 'text' && first.value.startsWith('optional ')) code.children.splice(0, 1, element('span', 'api-optional', [textNode('optional')]), textNode(first.value.slice('optional'.length)));
+  }
+  if (fallback && textOf(fallback).trim() === 'Required') fallback.children = [element('span', 'api-required', [textNode('Required')])];
+}
+
+// `/briosa.Service/Method · Operation ID: service.method` as an address line.
+function rpcLine(node) {
+  if (!isElement(node, 'p') || node.children.length !== 3) return null;
+  const [path, separator, id] = node.children;
+  if (!isElement(path, 'code') || !isElement(id, 'code') || separator.type !== 'text' || separator.value.trim() !== '· Operation ID:') return null;
+  const value = textOf(path);
+  const cut = value.lastIndexOf('/') + 1;
+  if (!value.startsWith('/') || cut < 2) return null;
+  breakable(id, /(?<=[._])/);
+  // Spaces between the parts keep their text separate for search and copying.
+  return element('div', 'api-rpc', [
+    element('code', 'api-rpc-path', [element('span', 'api-rpc-service', [textNode(value.slice(0, cut))]), element('wbr'), textNode(value.slice(cut))]),
+    textNode(' '),
+    element('span', 'api-rpc-id', [element('span', 'api-rpc-label', [textNode('Operation ID')]), textNode(' '), id]),
+  ]);
+}
+
+// The MP Catalog link, and on client references the gRPC Contract link.
+const isOperationLinks = (node) => isElement(node, 'p') && node.children.filter((n) => isElement(n)).every((n) => isElement(n, 'a'))
+  && String(node.children.find((n) => isElement(n, 'a'))?.properties?.href ?? '').startsWith('/mp-command-catalog/');
+
+export function present(root, {fields = new Map(), operation = false} = {}) {
+  const children = root.children;
+  for (const [index, table] of children.entries()) {
+    if (!fields.has(table)) continue;
+    addClass(table, 'api-fields');
+    const rows = table.children.find((n) => isElement(n, 'tbody'))?.children.filter((n) => isElement(n, 'tr')) ?? [];
+    rows.forEach(decorateField);
+    let at = index - 1;
+    while (at >= 0 && blank(children[at])) at--;
+    const heading = /^h[2-6]$/.test(children[at]?.tagName ?? '') ? children[at] : null;
+    if (heading && rows.length) heading.properties.dataCount = `${rows.length} ${rows.length === 1 ? 'Field' : 'Fields'}`;
+    if (!rows.length) children[index] = element('p', 'api-fields-empty', [textNode(/response$/.test(heading?.properties?.id ?? '') ? 'The response has no fields.' : 'The request has no fields.')]);
+  }
+  if (!operation) return root;
+  // A method's contract reads as one operation panel: its address and links,
+  // then request, response, and signature. Execution notes and guides follow it.
+  const end = children.findIndex((n) => isElement(n) && /^h[2-6]$/.test(n.tagName) && n.properties?.id === 'execution-notes');
+  const contract = children.splice(0, end < 0 ? children.length : end);
+  const address = [];
+  const links = [];
+  let start = 0;
+  for (; start < contract.length; start++) {
+    const node = contract[start];
+    if (blank(node)) continue;
+    const rpc = rpcLine(node);
+    if (rpc) address.push(rpc);
+    else if (isOperationLinks(node)) { addClass(node, 'api-op-links'); links.push(node); }
+    else break;
+  }
+  const body = contract.slice(start);
+  const head = [...address, ...links].flatMap((node, i) => i ? [textNode(' '), node] : [node]);
+  children.unshift(...(head.length ? [element('div', 'api-op-head', head)] : []), ...(body.length ? [element('div', 'api-op', body)] : []));
+  return root;
 }
 
 function flattenGroups(items, result = [], parents = []) {
@@ -111,7 +227,8 @@ export async function loadReference(siteDir) {
         const targetSidebar = folder ? normalizeSidebar(sidebar.find((s) => s.label === `SA ${target}`)?.items ?? []) : sidebar;
         const groups = flattenGroups(targetSidebar.find((item) => item.label === 'MP Commands')?.items ?? []);
         if (!groups.length) throw new Error(`Missing reviewed MP group navigation for ${family}/${release}/${target}`);
-        const ctx = {family, release, target, defaultTarget, base: exactBase(family, release, target), sidebar: targetSidebar, groups, pages: {}, sourceRoot: path.relative(siteDir, path.join(root, folder)).replaceAll('\\', '/')};
+        const sameContract = targets.sameContract?.[family]?.[release] ?? [];
+        const ctx = {family, release, target, defaultTarget, sameContract, base: exactBase(family, release, target), sidebar: targetSidebar, groups, pages: {}, sourceRoot: path.relative(siteDir, path.join(root, folder)).replaceAll('\\', '/')};
         for (const name of (await readdir(path.join(root, folder))).filter((n) => n.endsWith('.md'))) {
           const id = name.slice(0, -3);
           const doc = document(await readFile(path.join(root, folder, name), 'utf8'));
@@ -158,13 +275,13 @@ export async function loadReference(siteDir) {
             const retained = [...parser.parse(ctx.pages[id].body).children.filter((n) => n.type === 'code').map((n) => n.value), ...methods.flatMap((m) => ctx.pages[m.id].codes)];
             const combined = retained.join('\n\n').replace(/\s+/g, ' ');
             for (const original of ctx.pages[id].codes) if (!retained.includes(original) && !combined.includes(original.replace(/\s+/g, ' ').trim())) throw new Error(`API extraction lost a code block in ${source}`);
-          } else ctx.pages[id] = {id, title: doc.title, label: doc.meta.sidebar_label, kind: 'guide', body: doc.body.replace(/^# .*\n/m, ''), source};
+          } else ctx.pages[id] = {id, title: doc.title, ...(doc.heading && {heading: doc.heading, code: doc.code}), label: doc.meta.sidebar_label, kind: 'guide', body: doc.body.replace(/^# .*\n/m, ''), source};
         }
         contexts.push(ctx);
       }
     }
   }
-  return {contexts, releases, compatibility: targets.compatibilityAddresses ?? {}};
+  return {contexts, releases, compatibility: targets.compatibilityAddresses ?? {}, sameContract: targets.sameContract ?? {}};
 }
 
 const firstCalls = {'get-working-directory': 'file-operations/get-working-directory', 'get-number-of-collections': 'analysis-operations/get-number-of-collections', 'get-ith-collection-name': 'analysis-operations/get-i-th-collection-name'};
@@ -186,7 +303,7 @@ const escape = (text) => String(text).replaceAll('&', '&amp;').replaceAll('<', '
 // release-independent address. Earlier releases remain as method histories
 // (every distinct published contract) and as their release-specific guides.
 export async function compileReference(siteDir) {
-  const {contexts, releases, compatibility: published} = await loadReference(siteDir);
+  const {contexts, releases, compatibility: published, sameContract} = await loadReference(siteDir);
   const contextMap = new Map(contexts.map((ctx) => [`${ctx.family}/${ctx.release}/${ctx.target}`, ctx]));
   const lookup = (family, release, target) => contextMap.get(`${family}/${release}/${target}`);
   const rank = (ctx) => releases[ctx.family].indexOf(ctx.release);
@@ -268,8 +385,8 @@ export async function compileReference(siteDir) {
     return fragment && !to.includes('#') ? `${to}#${fragment}` : to;
   }
 
-  async function html(markdown, ctx, id, {prefix = '', demote = 0} = {}) {
-    markdown = markdown.replace(/^\[SA \d[^\n]+\n/gm, '')
+  async function html(markdown, ctx, id, {prefix = '', demote = 0, operation = false} = {}) {
+    markdown = sameContractNote(markdown, ctx).replace(/^\[SA \d[^\n]+\n/gm, '')
       .replaceAll('Choose the other exact target in the sidebar;', 'Choose the SpatialAnalyzer target above;')
       .replace(/^:::([a-z]+)(?:\[([^\]]+)\])?\s*$/gm, (_, type, title) => `<aside class="alert alert--${type === 'warning' ? 'warning' : 'info'}">\n\n${title ? `**${title}**\n` : ''}`)
       .replace(/^:::\s*$/gm, '\n</aside>\n').replaceAll('className=', 'class=');
@@ -282,7 +399,10 @@ export async function compileReference(siteDir) {
         const title = textOf(node).replace(/\s*\{\/\*.*?\*\/\}/g, '');
         const explicit = textOf(node).match(/\{\/\*\s*#([^ ]+)\s*\*\/\}/)?.[1];
         const anchor = explicit ?? slugger.slug(title);
-        node.children = [{type: 'text', value: title}];
+        // Headings keep inline code (rendered as code, never as backticks);
+        // only the explicit-anchor comment is removed. Anything richer is flattened.
+        const plain = node.children.every((child) => child.type === 'text' || child.type === 'inlineCode');
+        node.children = plain ? withoutAnchorComment(node.children) : [{type: 'text', value: title}];
         node.data = {hProperties: {id: anchor}};
         node.depth = Math.min(6, node.depth + demote);
         toc.push({id: prefix + anchor, title});
@@ -313,6 +433,7 @@ export async function compileReference(siteDir) {
         if (first >= 0) node.children.splice(first, 1);
       }
     });
+    present(rendered, {fields: parameterTables, operation});
     // Several revisions share one history page, so their anchors are namespaced.
     if (prefix) walk(rendered, (node) => {
       if (node.type !== 'element') return;
@@ -375,11 +496,24 @@ export async function compileReference(siteDir) {
     }).filter(Boolean);
   }
 
+  // Request and result fields of a group's methods documented for this target,
+  // counted from their released parameter tables. The shared `execution` result
+  // (field 1000) is counted separately.
+  function fieldCounts(ctx, methods) {
+    const counts = {request: 0, result: 0, execution: 0};
+    for (const m of methods) if (documentedIn(ctx, m.id)) for (const [key, field] of fields(ctx.pages[m.id].body)) {
+      counts[key.startsWith('Request:') ? 'request' : key === 'Result:1000' && field.name === 'execution' ? 'execution' : 'result']++;
+    }
+    return counts.request + counts.result + counts.execution ? counts : undefined;
+  }
+
   for (const ctx of contexts) {
     const discovery = ctx.family === 'grpc' ? 'discovery' : 'installation-selection';
-    const nav = {base: ctx.url, family: ctx.family, release: ctx.release, target: ctx.target, current: ctx.current, targets: targets[ctx.family], releases: releases[ctx.family], label: `Briosa ${families[ctx.family]}`, discovery: ctx.pages[discovery] ? discovery : null, valueTypes: Boolean(ctx.pages['value-types']), groups: [], lifecycle: [], firstCalls: []};
+    // The overview link reads as the overview's own H1 ("Briosa for .NET API").
+    const label = ctx.pages.overview?.title ?? ctx.pool.map((s) => s.pages.overview?.title).find(Boolean) ?? `Briosa ${families[ctx.family]}`;
+    const nav = {base: ctx.url, family: ctx.family, release: ctx.release, target: ctx.target, current: ctx.current, targets: targets[ctx.family], releases: releases[ctx.family], label, discovery: ctx.pages[discovery] ? discovery : null, valueTypes: Boolean(ctx.pages['value-types']), groups: [], lifecycle: [], firstCalls: [], ...(Object.keys(sameContract[ctx.family] ?? {}).length && {sameContract: sameContract[ctx.family]})};
     const lifecycle = ctx.sidebar.find((s) => s.label === 'Lifecycle');
-    for (const {id} of flattenGroups(lifecycle?.items ?? [])) if (ctx.pages[id]) nav.lifecycle.push({id, title: ctx.pages[id].title});
+    for (const {id} of flattenGroups(lifecycle?.items ?? [])) if (ctx.pages[id]) nav.lifecycle.push({id, title: ctx.pages[id].title, ...(ctx.pages[id].code && {code: true})});
     for (const id of Object.values(firstCalls)) if (ctx.pages[id]) nav.firstCalls.push({id, title: ctx.pages[id].title, available: documentedIn(ctx, id)});
     for (const group of ctx.groups) {
       const original = ctx.pages[group.id] ?? ctx.pool.map((s) => s.pages[group.id]).find(Boolean);
@@ -393,14 +527,18 @@ export async function compileReference(siteDir) {
       const fallback = original ?? ctx.pool.map((s) => s.pages[id]).find(Boolean);
       const available = Boolean(original) && original.available !== false;
       const page = {
-        id, title: fallback.title, family: ctx.family, release: ctx.release, target: ctx.target, base: ctx.url, path: ctx.url + suffix(id),
+        id, title: fallback.title, ...(fallback.heading && {heading: fallback.heading}), family: ctx.family, release: ctx.release, target: ctx.target, base: ctx.url, path: ctx.url + suffix(id),
         kind: fallback.kind, group: fallback.group, groupHref: fallback.group ? locate(ctx, fallback.group) : null, anchor: fallback.anchor, current: ctx.current, available, noindex: !available || !ctx.current,
         source: fallback.source, description: `${fallback.title} — ${families[ctx.family]} ${ctx.release}, SpatialAnalyzer ${ctx.target}.`,
         html: '', toc: [], variants: variants(ctx, id), related: related(ctx, id),
         compatibility: fallback.kind === 'method' ? compatibility(ctx.family, id) : null,
       };
+      if (fallback.kind === 'group') {
+        const counts = fieldCounts(ctx, nav.groups.find((g) => g.id === id)?.methods ?? []);
+        if (counts) page.fields = counts;
+      }
       if (original) {
-        const rendered = await html(original.kind === 'method' ? methodMarkdown(ctx, original, id) : original.body, ctx, id);
+        const rendered = await html(original.kind === 'method' ? methodMarkdown(ctx, original, id) : original.body, ctx, id, {operation: original.kind === 'method'});
         Object.assign(page, {html: rendered.html, toc: rendered.toc});
       }
       pages.push(page);
@@ -419,7 +557,7 @@ export async function compileReference(siteDir) {
     for (const revision of [...list].reverse()) {
       const original = revision.ctx.pages[id];
       const prefix = `revision-${revision.n}-`;
-      const rendered = await html(methodMarkdown(revision.ctx, original, id, {notes: false}), revision.ctx, id, {prefix, demote: 1});
+      const rendered = await html(methodMarkdown(revision.ctx, original, id, {notes: false}), revision.ctx, id, {prefix, demote: 1, operation: true});
       revision.anchors = rendered.anchors.map((a) => a.slice(prefix.length));
       const releasesIn = [...new Set(revision.pairs.map((c) => c.release))].sort((a, b) => compareVersions(b, a));
       const heading = `Revision ${revision.n}: ${releaseLabel(family)} ${releasesIn.join(', ')}`;
@@ -497,7 +635,7 @@ export async function compileReference(siteDir) {
   for (const from of Object.keys(redirects)) if (routes.has(from)) delete redirects[from];
 
   const index = Object.fromEntries(Object.keys(families).map((family) => [family, {
-    family, label: families[family], releaseLabel: releaseLabel(family),
+    family, label: families[family], releaseLabel: releaseLabel(family), ...(Object.keys(sameContract[family] ?? {}).length && {sameContract: sameContract[family]}),
     targets: targets[family].map((target) => {
       const ctx = current[family][target];
       return {target, release: ctx.release, href: ctx.url, methods: [...currentIds[family]].filter((id) => ctx.pages[id]?.kind === 'method' && documentedIn(ctx, id)).length};
