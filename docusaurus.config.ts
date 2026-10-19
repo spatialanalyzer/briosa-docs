@@ -1,4 +1,4 @@
-import {lightCodeTheme, darkCodeTheme} from './src/theme/prism';
+import {codeTheme} from './src/theme/prism';
 import {flattenRoutes} from '@docusaurus/utils';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -133,9 +133,8 @@ const config: Config = {
           'Documentation for Briosa, the open-source gRPC bridge for Hexagon SpatialAnalyzer.',
       },
     ],
-    // Scanline is dark-first; a reader's system preference still wins.
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       respectPrefersColorScheme: true,
     },
     navbar: {
@@ -239,8 +238,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Briosa contributors. Apache-2.0.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      theme: codeTheme,
+      darkTheme: codeTheme,
       additionalLanguages: ['csharp', 'powershell', 'protobuf', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
