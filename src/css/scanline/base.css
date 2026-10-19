@@ -106,7 +106,8 @@ hr {
   color: inherit;
 }
 
-:is(.markdown, .mdx-page article) strong {
+/* :where keeps this at element weight, so component rules for strong still apply. */
+:where(.markdown, .mdx-page article) strong {
   color: var(--sl-ink);
   font-weight: 600;
 }
@@ -137,6 +138,11 @@ hr {
   overflow-wrap: anywhere;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* Linked code keeps the link color. */
+a code {
+  color: inherit;
 }
 
 /* ---------- Tables: hairline grid, HUD headers ---------- */
@@ -184,7 +190,8 @@ hr {
   transition: background-color 0.15s;
 }
 
-:is(.markdown, .mdx-page article) table tbody tr:first-child td {
+/* The first row a filter leaves visible sits directly under the header rule. */
+:is(.markdown, .mdx-page article) table tbody tr:not([hidden]):not(tr:not([hidden]) ~ tr) td {
   border-top: 0;
 }
 

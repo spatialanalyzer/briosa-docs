@@ -2,13 +2,10 @@ import React, {useEffect, useRef, type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {ThemeClassNames, useThemeConfig} from '@docusaurus/theme-common';
+import {ThemeClassNames, isMultiColumnFooterLinks, useThemeConfig, type FooterColumnItem} from '@docusaurus/theme-common';
 import FooterLinkItem from '@theme/Footer/LinkItem';
 import CompactInverse from '@site/static/brand/logos/briosa-horizontal-compact-inverse.svg';
 import {takeReading} from '@site/src/components/Scanline/caliper';
-
-type LinkItem = {label?: string; to?: string; href?: string; html?: string; className?: string};
-type Column = {title: string | null; items: LinkItem[]};
 
 // The always-dark footer band: a measurement grid with a slow scan, the Caliper b
 // lockup over a vernier rule, and the link columns from themeConfig.footer.
@@ -36,7 +33,9 @@ export default function Footer(): ReactNode {
   }, []);
 
   if (!footer) return null;
-  const columns = (footer.links ?? []) as Column[];
+  // A flat list of links renders as one untitled column.
+  const links = footer.links ?? [];
+  const columns: FooterColumnItem[] = isMultiColumnFooterLinks(links) ? links : [{title: null, items: links}];
   return (
     <footer className={clsx(ThemeClassNames.layout.footer.container, 'footer footer--dark sl-foot')}>
       <div className="sl-spectral" aria-hidden="true" />
@@ -60,11 +59,16 @@ export default function Footer(): ReactNode {
               <div key={column.title ?? 'links'} className="sl-foot__col">
                 {column.title && <h2 className="sl-hud sl-foot__title">{column.title}</h2>}
                 <ul>
-                  {column.items.map((item) => (
-                    <li key={item.href ?? item.to ?? item.label}>
-                      <FooterLinkItem item={item as never} />
-                    </li>
-                  ))}
+                  {column.items.map((item, i) =>
+                    item.html ? (
+                      // Site config provides this HTML, as with the upstream footer.
+                      <li key={i} className={item.className} dangerouslySetInnerHTML={{__html: item.html}} />
+                    ) : (
+                      <li key={item.href ?? item.to ?? i}>
+                        <FooterLinkItem item={item} />
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             ))}

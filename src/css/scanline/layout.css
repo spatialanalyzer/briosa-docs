@@ -94,7 +94,8 @@
 }
 
 [data-theme='dark'] .sl-brand__art--light,
-[data-theme='light'] .sl-brand__art--dark {
+[data-theme='light'] .sl-brand__art--dark,
+html:not([data-theme]) .sl-brand__art--dark {
   display: none;
 }
 
@@ -530,7 +531,14 @@ nav.menu {
   background: var(--sl-line-3);
 }
 
-.menu__list-item-collapsible:hover {
+/* A category that is the current page reads like a current link, hovered or not.
+   Deeper categories keep the hover fill; top-level labels stay unfilled. */
+.menu__list-item-collapsible--active,
+.menu__list-item-collapsible--active:hover {
+  background: linear-gradient(90deg, var(--sl-hover), transparent 85%);
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible:not(.menu__list-item-collapsible--active):hover {
   background: transparent;
 }
 
@@ -1045,9 +1053,13 @@ a.breadcrumbs__link:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .navbar::after,
-  .footer.sl-foot::after {
+  .navbar::after {
     animation: none;
+  }
+
+  /* A stopped scan would leave a bright line across the footer. */
+  .footer.sl-foot::after {
+    display: none;
   }
 
   .sl-sidebar__lock,

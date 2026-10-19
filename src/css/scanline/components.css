@@ -439,6 +439,11 @@
   background: var(--sl-hover);
 }
 
+/* The tab strip scrolls sideways and would clip an outer ring. */
+.sl-tab:focus-visible {
+  outline-offset: -2px;
+}
+
 .sl-tab[aria-selected='true']::after {
   content: '';
   position: absolute;

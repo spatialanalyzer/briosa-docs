@@ -10,7 +10,9 @@ type Props = WrapperProps<typeof ContentType>;
 // display: contents, so the sidebar's own flex layout is unchanged.
 export default function DocSidebarDesktopContent(props: Props): ReactNode {
   const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => attachSidebarLock(ref.current), [props.path]);
+  // Attach once: the lock follows aria-current as pages change, instead of
+  // re-entering from the top of the beam on every navigation.
+  useEffect(() => attachSidebarLock(ref.current), []);
   return (
     <div ref={ref} className="sl-sidebar">
       <Content {...props} />

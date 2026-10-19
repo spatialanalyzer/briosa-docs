@@ -19,6 +19,7 @@ export function attachSidebarLock(container: HTMLElement | null): () => void {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let target: HTMLElement | null = null;
   let frame = 0;
+  let intro = 0;
 
   const current = () => nav.querySelector<HTMLElement>('a.menu__link[aria-current="page"]');
   const visible = (el: HTMLElement | null) => !!el && el.offsetParent !== null && el.getClientRects().length > 0;
@@ -76,11 +77,13 @@ export function attachSidebarLock(container: HTMLElement | null): () => void {
     lock.style.transition = 'none';
     point.style.transition = 'none';
     lock.style.transform = 'translate(0px, 0px)';
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      lock.style.transition = '';
-      point.style.transition = '';
-      refresh();
-    }));
+    intro = requestAnimationFrame(() => {
+      intro = requestAnimationFrame(() => {
+        lock.style.transition = '';
+        point.style.transition = '';
+        refresh();
+      });
+    });
   } else {
     refresh();
   }
@@ -110,6 +113,7 @@ export function attachSidebarLock(container: HTMLElement | null): () => void {
 
   return () => {
     cancelAnimationFrame(frame);
+    cancelAnimationFrame(intro);
     observer.disconnect();
     sizes?.disconnect();
     nav.removeEventListener('pointerover', onOver);
