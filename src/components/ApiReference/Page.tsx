@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, releaseLabel, sameContractNote, type Selection} from './context';
+import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, releaseLabel, sameContractNote, contents, type Selection} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
@@ -43,8 +43,8 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   // On a history page, the release/SA pair being read (from its anchor), else the reader's SA target.
   const [selected, setSelected] = useState<Selection | null>(null);
   const switcher = choices(page, navigation, isHistory ? selected : null);
-  const fixedAnchors = [page.compatibility ? 'sa-compatibility' : '', 'version-differences', page.kind === 'group' ? 'method-index' : ''].filter(Boolean);
-  for (const anchor of [...references.anchors, ...Object.keys(aliases), ...fixedAnchors]) brokenLinks.collectAnchor(anchor);
+  const sections = contents(page, methods.length);
+  for (const anchor of [...references.anchors, ...Object.keys(aliases), ...sections.map((s) => s.id)]) brokenLinks.collectAnchor(anchor);
   for (const href of references.links) brokenLinks.collectLink(href);
   const [notice, setNotice] = useState('');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -81,16 +81,18 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     if (target) rememberTarget(target, true);
     history.push(to.includes('#') || isHistory ? to : to + location.hash);
   }
-  const toc = [...(page.compatibility ? [{id: 'sa-compatibility', title: 'SpatialAnalyzer Compatibility'}] : []), ...(isHistory ? [{id: 'version-differences', title: 'Availability by Release'}] : []), ...(page.kind === 'group' ? [{id: 'method-index', title: 'Methods'}] : []), ...page.toc, ...(isHistory ? [] : [{id: 'version-differences', title: 'Version Differences'}])]
-    .map(({id, title}) => ({id, level: 2, value: title.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')}));
+  const toc = sections.map(({id, title}) => ({id, level: 2, value: title.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')}));
   const targets = navigation.targets;
   const historyGroup = isHistory ? historyGroupHref(page, selected) : null;
   const reading = isHistory && selected?.release && !selected.missing ? selected : null;
-  const documentedTargets = page.compatibility?.targets.filter((t) => t.available).length ?? 0;
   const notesAt = page.kind === 'group' ? page.html.indexOf('<h2') : -1;
   const groupIntro = notesAt < 0 ? page.html : page.html.slice(0, notesAt);
   const groupNotes = notesAt < 0 ? '' : page.html.slice(notesAt);
-  const publishedReleases = new Set(page.variants.filter((v) => v.href).map((v) => v.release)).size;
+  // A history page counts what its revisions published: a variant links to its
+  // revision only where that release documented the method for that SA target.
+  const published = page.variants.filter((v) => v.href);
+  const publishedReleases = new Set(published.map((v) => v.release)).size;
+  const publishedTargets = new Set(published.map((v) => v.target)).size;
   return <Layout title={title} description={page.description} wrapperClassName="api-reference-layout">
     <Head>
       <link rel="canonical" href={`https://briosa.dev${page.path}`} />
@@ -135,7 +137,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
                 <li className="api-state">Release History</li>
                 <li className="sl-chip"><i>Contracts</i>{' '}{page.compatibility?.revisions ?? 0}</li>
                 <li className="sl-chip"><i>Releases</i>{' '}{publishedReleases}</li>
-                <li className="sl-chip"><i>SA Targets</i>{' '}{documentedTargets}</li>
+                <li className="sl-chip"><i>SA Targets</i>{' '}{publishedTargets}</li>
                 {reading && <li className="sl-chip api-chip-reading"><i>Reading</i>{' '}{release} {reading.release} · SA {reading.target}</li>}
               </> : <>
                 <li className="api-state" data-state={page.current ? 'documented' : undefined}>{page.current ? 'Current Reference' : 'Earlier Release'}</li>
@@ -152,10 +154,11 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
           {page.compatibility && <Compatibility family={page.family} compatibility={page.compatibility} history={!isHistory} target={isHistory ? undefined : page.target} sameContract={sameContract} />}
           {isHistory && <Availability page={page} targets={targets} selected={selected} sameContract={sameContract} />}
           {page.kind === 'group' ? <>
-            {/* A group's introduction leads; its shared notes follow the method index. */}
+            {/* A group's introduction leads; its shared notes follow the method index.
+                A group whose RPCs are listed only in tables has no method index. */}
             {groupIntro && <Contract html={groupIntro} />}
             <Readout page={page} methods={methods} />
-            <MethodIndex methods={methods} current={page.current} release={page.release} />
+            {methods.length > 0 && <MethodIndex methods={methods} current={page.current} release={page.release} />}
             {groupNotes && <Contract html={groupNotes} />}
           </> : <Contract html={page.html} />}
           {!isHistory && <Differences page={page} sameContract={sameContract} />}

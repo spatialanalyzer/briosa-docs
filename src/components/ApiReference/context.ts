@@ -31,6 +31,37 @@ export function sameContractNote(sameContract: Record<string, string[]> | undefi
   const later = sameContract?.[release] ?? [];
   return later.length ? `Same contract in ${listOf(later)}` : '';
 }
+// A page's sections in page order: the site's own sections around the headings of
+// its released HTML. The table of contents and the anchors collected for the link
+// checker both come from this list, so neither names a section that is not
+// rendered: a group whose RPCs are listed only in tables has no method index.
+export function contents(page: PageData, methods: number): {id: string; title: string}[] {
+  const history = page.kind === 'history';
+  return [
+    ...(page.compatibility ? [{id: 'sa-compatibility', title: 'SpatialAnalyzer Compatibility'}] : []),
+    ...(history ? [{id: 'version-differences', title: 'Availability by Release'}] : []),
+    ...(page.kind === 'group' && methods > 0 ? [{id: 'method-index', title: 'Methods'}] : []),
+    ...page.toc,
+    ...(history ? [] : [{id: 'version-differences', title: 'Version Differences'}]),
+  ];
+}
+// A group's readout from its page data: the methods documented for this target,
+// the fields counted from their released parameter tables, and the first release
+// that documented one of its methods for this target. Nothing is estimated, and a
+// reading without data is left out, so a group with no methods has no readout.
+export type Reading = {label: string; value: string; note?: string};
+export function readout(page: PageData, methods: {available: boolean}[]): Reading[] {
+  const documented = methods.filter((m) => m.available).length;
+  const other = methods.length - documented;
+  const readings: Reading[] = [];
+  if (methods.length) readings.push({label: 'Methods', value: String(documented), ...(other > 0 ? {note: `+ ${other} ${page.current ? 'Other SA Target' : 'History Only'}`} : {})});
+  if (page.fields) {
+    readings.push({label: 'Request Fields', value: String(page.fields.request)});
+    readings.push({label: 'Result Fields', value: String(page.fields.result), ...(page.fields.execution > 0 ? {note: '+ Execution'} : {})});
+  }
+  if (page.firstDocumented) readings.push({label: 'First Documented', value: page.firstDocumented, note: releaseLabel(page.family)});
+  return readings;
+}
 export function anchorOf(hash: string): string {
   try { return decodeURIComponent(hash.slice(1)); } catch { return hash.slice(1); }
 }

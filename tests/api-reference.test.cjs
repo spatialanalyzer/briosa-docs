@@ -364,6 +364,24 @@ test('method pages render their contract as an operation panel with highlighted,
   assert.match($('#execution-notes').nextUntil('h2').text(), /Servers 0\.9\.1 and 0\.9\.2 serve this same contract/);
 });
 
+test('group readouts and history chips count only what was documented', () => {
+  // A method history counts the SA targets its revisions published for, not the
+  // targets the current release documents it for.
+  const history = read('/api/dotnet/construction-operations-point-clouds/point-cloud-construction');
+  assert.deepEqual(history('.api-applies .sl-chip').toArray().map((n) => history(n).text()), ['Contracts 1', 'Releases 1', 'SA Targets 1']);
+  // Server 0.5.1 listed these RPCs in tables, not as methods: no count, index, or entry.
+  const listed = read('/api/grpc/sa-2026.1.0529.7/0.5.1/construction-operations-ellipses');
+  assert.equal(listed('.api-readout').length, 0);
+  assert.equal(listed('#method-index').length, 0);
+  assert.equal(listed('.api-toc a[href="#method-index"]').length, 0);
+  assert.equal(listed('#construct-ellipse').length, 1, 'the released RPC section remains');
+  // First Documented names a release that documented one of the group's methods for the target.
+  const readings = ($) => Object.fromEntries($('.api-readout > div').toArray().map((n) => [$(n).find('dt').text(), $(n).find('dd > b').text()]));
+  assert.equal(readings(read('/api/grpc/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations'))['First Documented'], undefined, 'SA 2026 never documented Run Crib Sheet');
+  assert.equal(readings(read('/api/grpc/sa-2024.1.0508.5/construction-operations-ellipses'))['First Documented'], undefined, 'every SA 2024 snapshot says Construct Ellipse is absent');
+  assert.equal(readings(read('/api/grpc/sa-2026.1.0529.7/construction-operations-ellipses'))['First Documented'], '0.7.0', 'Server 0.5.1 listed it only in a table');
+});
+
 test('titles never show literal backticks, and overview links read as the overview heading', () => {
   const $ = read('/api/grpc/sa-2026.1.0529.7/get-spatial-analyzer-state');
   assert.equal($('h1 code').text(), 'GetSpatialAnalyzerState');

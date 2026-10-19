@@ -519,6 +519,14 @@ export async function compileReference(siteDir) {
     return counts.request + counts.result + counts.execution ? counts : undefined;
   }
 
+  // The first release, up to this one, that documented one of a group's methods
+  // for this target. A release whose group page existed but documented none of
+  // them (no released signature, or RPCs listed only in tables) does not count.
+  function firstDocumented(ctx, group) {
+    return contexts.filter((c) => c.family === ctx.family && c.target === ctx.target && rank(c) >= rank(ctx)).sort(newestFirst)
+      .findLast((c) => c.pages[group]?.methods?.some((m) => documentedIn(c, m.id)))?.release;
+  }
+
   for (const ctx of contexts) {
     const discovery = ctx.family === 'grpc' ? 'discovery' : 'installation-selection';
     // The overview link reads as the overview's own H1 ("Briosa for .NET API").
@@ -548,6 +556,8 @@ export async function compileReference(siteDir) {
       if (fallback.kind === 'group') {
         const counts = fieldCounts(ctx, nav.groups.find((g) => g.id === id)?.methods ?? []);
         if (counts) page.fields = counts;
+        const since = firstDocumented(ctx, id);
+        if (since) page.firstDocumented = since;
       }
       if (original) {
         const rendered = await html(original.kind === 'method' ? methodMarkdown(ctx, original, id) : original.body, ctx, id, {operation: original.kind === 'method'});

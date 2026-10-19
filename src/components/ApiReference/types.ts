@@ -6,13 +6,15 @@ export type Compatibility = {
   targets: {target: string; release: string; available: boolean; href: string | null; since: string | null}[];
 };
 // `title` is plain text; `heading`, when present, is the H1 with its inline code in backticks.
-// `fields` counts a group's request and result fields from its parameter tables.
+// `fields` counts a group's request and result fields from its parameter tables, and
+// `firstDocumented` is the first release, up to this one, that documented one of its
+// methods for this target.
 export type PageData = {
   id: string; title: string; heading?: string; description: string; family: string; release: string; target: string;
   base: string; path: string; kind: 'method' | 'group' | 'guide' | 'history'; group?: string; groupHref: string | null;
   current: boolean; available: boolean; noindex: boolean; source: string; html: string; toc: {id: string; title: string}[];
   variants: Variant[]; compatibility: Compatibility | null; related: {family: string; href: string}[];
-  fields?: {request: number; result: number; execution: number};
+  fields?: {request: number; result: number; execution: number}; firstDocumented?: string;
 };
 // `sameContract` maps a release to later releases that serve its contract unchanged.
 export type Navigation = {

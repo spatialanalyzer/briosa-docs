@@ -42,8 +42,11 @@ test('working references render clean MP names and preserve qualifier meaning', 
 });
 
 // A minimal released snapshot for every family, so presentation rules are
-// checked in milliseconds without the full reference.
-async function syntheticReference(sameContract) {
+// checked in milliseconds without the full reference. `earlier` adds an earlier
+// gRPC release, 0.9.0, and two groups that document less than their pages show:
+// Ellipses lists its RPC only in a table in 0.9.0, as Server 0.5.1 did, and
+// documents it in 1.0.0; Crib Sheet Operations never has a released signature.
+async function syntheticReference({sameContract = {}, earlier = false} = {}) {
   const {compileReference, families} = await import('../plugins/api-reference/content.mjs');
   const fixture = await mkdtemp(path.join(os.tmpdir(), 'briosa-synthetic-reference-'));
   const target = '2026.1.0529.7';
@@ -64,17 +67,43 @@ async function syntheticReference(sameContract) {
     '| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |', '',
     '```proto', 'rpc BackupNow(BackupNowRequest) returns (BackupNowResult);', '```',
   ].join('\n');
+  const ellipses = (release) => release === '0.9.0' ? [
+    '## Construct Ellipse', '',
+    '| Contract Item | Value |', '| --- | --- |', '| RPC | `ConstructEllipse` |', '| Operation ID | `construction_operations.construct_ellipse` |', '',
+    '```proto', 'message ConstructEllipseRequest {', '  optional string ellipse_name = 1;', '}', '```',
+  ] : [
+    '## Construct Ellipse {/* #construct-ellipse */}', '',
+    '[MP Catalog](/mp-command-catalog/commands/construction-operations-ellipses#construct-ellipse)', '',
+    '`/briosa.ConstructionOperations/ConstructEllipse` · Operation ID: `construction_operations.construct_ellipse`', '',
+    '```proto', 'rpc ConstructEllipse(ConstructEllipseRequest) returns (ConstructEllipseResult);', '```',
+  ];
+  const cribSheet = (release) => [
+    `:::note[Not Available in Server ${release}]`, '', 'These commands have no callable RPC in the released server.', '', ':::', '',
+    '## Run Crib Sheet', '',
+    'See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-crib-sheet-operations#run-crib-sheet)',
+    'for the proposed command. No released signature', 'is available.',
+  ];
+  const group = (title, lines) => `---\ntitle: ${title}\n---\n\n# ${title}\n\n${lines.join('\n')}\n`;
   for (const family of Object.keys(families)) {
     const label = family === 'grpc' ? 'Server' : 'client';
-    const docs = path.join(fixture, `${family}_versioned_docs`, 'version-1.0.0');
-    await mkdir(docs, {recursive: true});
+    const releases = family === 'grpc' && earlier ? ['1.0.0', '0.9.0'] : ['1.0.0'];
+    const groups = ['file-operations', ...(family === 'grpc' && earlier ? ['construction-operations-ellipses', 'instrument-operations-crib-sheet-operations'] : [])];
     await mkdir(path.join(fixture, `${family}_versioned_sidebars`), {recursive: true});
-    await writeFile(path.join(fixture, `${family}_versions.json`), '["1.0.0"]');
-    await writeFile(path.join(fixture, `${family}_versioned_sidebars`, 'version-1.0.0-sidebars.json'), JSON.stringify({sidebar: ['overview', {type: 'category', label: 'Lifecycle', items: ['get-state']}, {type: 'category', label: 'MP Commands', items: ['file-operations']}]}));
-    await writeFile(path.join(docs, 'overview.md'), `---\ntitle: SpatialAnalyzer Test API\n---\n\n# Briosa Test API\n\nThis reference documents **Briosa ${label} 1.0.0** for exact SpatialAnalyzer\ntarget **${target}**. It covers everything.\n`);
-    await writeFile(path.join(docs, 'get-state.md'), '---\ntitle: GetState\n---\n\n# `GetState`\n\nReads the state.\n\n## `StateKind` Values\n\nOne value.\n\n:::warning[Local-Only API]\n\nKeep the endpoint on **loopback**.\n\n:::\n');
-    await writeFile(path.join(docs, 'file-operations.md'), `---\ntitle: File Operations\n---\n\n# File Operations\n\nThis reference covers **SA ${target}**, ${label} **1.0.0**. Choose the other exact target in the sidebar; availability differs.\n\n${method}\n`);
-    targets.snapshots[family] = {'1.0.0': target};
+    await writeFile(path.join(fixture, `${family}_versions.json`), JSON.stringify(releases));
+    targets.snapshots[family] = {};
+    for (const release of releases) {
+      const docs = path.join(fixture, `${family}_versioned_docs`, `version-${release}`);
+      await mkdir(docs, {recursive: true});
+      await writeFile(path.join(fixture, `${family}_versioned_sidebars`, `version-${release}-sidebars.json`), JSON.stringify({sidebar: ['overview', {type: 'category', label: 'Lifecycle', items: ['get-state']}, {type: 'category', label: 'MP Commands', items: groups}]}));
+      await writeFile(path.join(docs, 'overview.md'), `---\ntitle: SpatialAnalyzer Test API\n---\n\n# Briosa Test API\n\nThis reference documents **Briosa ${label} ${release}** for exact SpatialAnalyzer\ntarget **${target}**. It covers everything.\n`);
+      await writeFile(path.join(docs, 'get-state.md'), '---\ntitle: GetState\n---\n\n# `GetState`\n\nReads the state.\n\n## `StateKind` Values\n\nOne value.\n\n:::warning[Local-Only API]\n\nKeep the endpoint on **loopback**.\n\n:::\n');
+      await writeFile(path.join(docs, 'file-operations.md'), `---\ntitle: File Operations\n---\n\n# File Operations\n\nThis reference covers **SA ${target}**, ${label} **${release}**. Choose the other exact target in the sidebar; availability differs.\n\n${method}\n`);
+      if (groups.includes('construction-operations-ellipses')) {
+        await writeFile(path.join(docs, 'construction-operations-ellipses.md'), group('Construction Operations / Ellipses', ellipses(release)));
+        await writeFile(path.join(docs, 'instrument-operations-crib-sheet-operations.md'), group('Instrument Operations / Crib Sheet Operations', cribSheet(release)));
+      }
+      targets.snapshots[family][release] = target;
+    }
   }
   await mkdir(path.join(fixture, 'plugins/api-reference'), {recursive: true});
   await writeFile(path.join(fixture, 'plugins/api-reference/targets.json'), JSON.stringify(targets));
@@ -132,7 +161,7 @@ test('method contracts read as operation panels without changing their text', as
 });
 
 test('later releases that serve a snapshot contract unchanged are named with it', async () => {
-  const {pages, navigation, index} = await syntheticReference({grpc: {'1.0.0': ['1.0.1', '1.0.2']}});
+  const {pages, navigation, index} = await syntheticReference({sameContract: {grpc: {'1.0.0': ['1.0.1', '1.0.2']}}});
   const note = 'Servers 1.0.1 and 1.0.2 serve this same contract; <a href="/docs/releases#documentation-versions">Release Status</a> lists their runtime corrections.';
   assert.ok(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7').html.includes(`target <strong>2026.1.0529.7</strong>. ${note}`));
   assert.ok(pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/file-operations').html.includes(`Server <strong>1.0.0</strong>. ${note}`));
@@ -142,6 +171,41 @@ test('later releases that serve a snapshot contract unchanged are named with it'
   // Other families and releases are untouched.
   assert.equal(navigation['/api/dotnet/sa-2026.1.0529.7'].sameContract, undefined);
   assert.ok(!pages.some((p) => p.family !== 'grpc' && p.html.includes('same contract')));
+});
+
+test('a group whose RPCs are listed only in tables has no Methods readout or index', async () => {
+  const {readout, contents} = await import('../src/components/ApiReference/context.ts');
+  const {pages, navigation} = await syntheticReference({earlier: true});
+  const methodsOf = (page) => navigation[page.base].groups.find((g) => g.id === page.id).methods;
+  // Server 0.9.0 lists Construct Ellipse in a contract table, not as a method.
+  const listed = pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/0.9.0/construction-operations-ellipses');
+  assert.deepEqual(methodsOf(listed), []);
+  assert.deepEqual(readout(listed, methodsOf(listed)), [], 'no Methods, field, or First Documented reading');
+  assert.deepEqual(contents(listed, 0).map((s) => s.id), ['construct-ellipse', 'version-differences'], 'no Methods entry or anchor');
+  assert.match(listed.html, /<h2 id="construct-ellipse">Construct Ellipse/, 'the released RPC section remains');
+  // Once a release documents the method, the group has both.
+  const documented = pages.find((p) => p.path === '/api/grpc/sa-2026.1.0529.7/construction-operations-ellipses');
+  assert.deepEqual(readout(documented, methodsOf(documented)).map((r) => [r.label, r.value]), [['Methods', '1'], ['First Documented', '1.0.0']]);
+  assert.deepEqual(contents(documented, methodsOf(documented).length).map((s) => s.id), ['method-index', 'version-differences']);
+});
+
+test('First Documented skips releases that documented no method of the group for the target', async () => {
+  const {readout} = await import('../src/components/ApiReference/context.ts');
+  const {pages, navigation} = await syntheticReference({earlier: true});
+  const at = (route) => pages.find((p) => p.path === route);
+  const base = '/api/grpc/sa-2026.1.0529.7';
+  assert.equal(at(`${base}/file-operations`).firstDocumented, '0.9.0');
+  // 0.9.0 has the Ellipses page but lists its RPC only in a table.
+  assert.equal(at(`${base}/construction-operations-ellipses`).firstDocumented, '1.0.0');
+  // No release documented Run Crib Sheet, so the reading is left out.
+  const crib = at(`${base}/instrument-operations-crib-sheet-operations`);
+  assert.equal(crib.firstDocumented, undefined);
+  const cribMethods = navigation[base].groups.find((g) => g.id === crib.id).methods;
+  assert.deepEqual(readout(crib, cribMethods).map((r) => r.label), ['Methods']);
+  // An earlier release never names a later one.
+  assert.equal(at(`${base}/0.9.0/file-operations`).firstDocumented, '0.9.0');
+  assert.equal(at(`${base}/0.9.0/construction-operations-ellipses`).firstDocumented, undefined);
+  assert.equal(at(`${base}/0.9.0/instrument-operations-crib-sheet-operations`).firstDocumented, undefined);
 });
 
 test('a new release adds no compatibility redirect documents', async () => {
