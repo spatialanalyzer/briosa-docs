@@ -770,7 +770,7 @@ a.breadcrumbs__link:hover {
   box-shadow: none;
 }
 
-.sl-callout[data-kind='info'] { --c: var(--sl-co-info); --ct: var(--sl-co-info-t); }
+.sl-callout:is([data-kind='info'], [data-kind='important']) { --c: var(--sl-co-info); --ct: var(--sl-co-info-t); }
 .sl-callout[data-kind='tip'] { --c: var(--sl-co-tip); --ct: var(--sl-co-tip-t); }
 .sl-callout[data-kind='warning'],
 .sl-callout[data-kind='caution'] { --c: var(--sl-co-caution); --ct: var(--sl-co-caution-t); }
