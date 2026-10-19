@@ -6,7 +6,9 @@
  * Status follows the deviation map (current green, next cyan, undecided slate,
  * uncommitted amber, excluded red, SDK unavailable indigo). Validation is a
  * three-bar meter derived from each row's data-validation slug:
- * 3 licensed or released, 2 reviewed or limited, 1 at risk, 0 not applicable.
+ * 3 licensed or released full validation; 2 reviewed, limited, partial, probe,
+ * or smoke; 1 at risk, failed, unverified, or clarification required;
+ * 0 not applicable.
  */
 
 /* ---------- Status color: any catalog element with a status ---------- */
@@ -57,39 +59,57 @@
   background: currentColor;
 }
 
-/* ---------- Validation meter levels, from the slug ---------- */
-:is(.catalog-command-table tr, .catalog-target-context)[data-validation] {
+/* ---------- Validation meter levels, from the slug ----------
+   Each slug is named in exactly one level (the at-risk family by its prefix),
+   so no two rules match the same slug and their order does not matter. A slug
+   missing from every list draws an empty meter: add it to the level its label
+   states. */
+
+/* 3: licensed or released full validation. */
+:is(.catalog-command-table tr, .catalog-target-context):is(
+  [data-validation='licensed-exact-target-validation-complete'],
+  [data-validation='licensed-validation-completed'],
+  [data-validation='released-implementation']) {
+  --m1: var(--sl-st-current);
+  --m2: var(--sl-st-current);
+  --m3: var(--sl-st-current);
+  --mt: var(--sl-ink-2);
+}
+
+/* 2: reviewed, limited, partial, probe, or smoke. */
+:is(.catalog-command-table tr, .catalog-target-context):is(
+  [data-validation='evidence-review'],
+  [data-validation='evidence-review-no-2024-runtime-validation'],
+  [data-validation='exact-target-sdk-binding-review'],
+  [data-validation='portable-contract-review'],
+  [data-validation='portable-list-construction'],
+  [data-validation='portable-list-operation'],
+  [data-validation='portable-value-construction'],
+  [data-validation='limited-local-licensed-smoke'],
+  [data-validation='licensed-execution-probe'],
+  [data-validation='licensed-partial-cylinder-probe'],
+  [data-validation='licensed-read-probe'],
+  [data-validation='licensed-sa-2026-1-0529-7-probe'],
+  [data-validation='licensed-setter-probe-fixture-execution-required']) {
   --m1: var(--sl-st-next);
   --m2: var(--sl-st-next);
   --m3: var(--sl-line-2);
   --mt: var(--sl-ink-2);
 }
 
+/* 1: at risk, failed, unverified, or clarification required. */
 :is(.catalog-command-table tr, .catalog-target-context):is(
-  [data-validation*='licensed'],
-  [data-validation='released-implementation']) {
-  --m1: var(--sl-st-current);
-  --m2: var(--sl-st-current);
-  --m3: var(--sl-st-current);
-}
-
-:is(.catalog-command-table tr, .catalog-target-context)[data-validation*='limited'] {
-  --m1: var(--sl-st-next);
-  --m2: var(--sl-st-next);
-  --m3: var(--sl-line-2);
-}
-
-:is(.catalog-command-table tr, .catalog-target-context):is(
-  [data-validation*='risk'],
-  [data-validation*='failed'],
-  [data-validation*='unverified'],
-  [data-validation*='clarification'],
-  [data-validation*='fixture-execution-required']) {
+  [data-validation^='at-risk-'],
+  [data-validation='licensed-execution-probe-failed'],
+  [data-validation='unverified-sdk-usmn-template-list-binding'],
+  [data-validation='contract-clarification-required']) {
   --m1: var(--sl-st-uncommitted);
   --m2: var(--sl-line-2);
   --m3: var(--sl-line-2);
+  --mt: var(--sl-ink-2);
 }
 
+/* 0: not applicable. */
 :is(.catalog-command-table tr, .catalog-target-context)[data-validation='not-applicable'] {
   --m1: var(--sl-line-2);
   --m2: var(--sl-line-2);
@@ -100,7 +120,7 @@
 /* The meter hangs in front of the label; wrapped lines align with the text. */
 .catalog-command-table tr[data-validation] > td:last-child,
 .catalog-target-context[data-validation] .catalog-target-validation {
-  color: var(--mt);
+  color: var(--mt, var(--sl-ink-2));
   text-indent: -25px;
 }
 
@@ -114,9 +134,9 @@
   text-indent: 0;
   vertical-align: -1px;
   background:
-    linear-gradient(var(--m1), var(--m1)) 0 0 / 4px 100% no-repeat,
-    linear-gradient(var(--m2), var(--m2)) 6px 0 / 4px 100% no-repeat,
-    linear-gradient(var(--m3), var(--m3)) 12px 0 / 4px 100% no-repeat;
+    linear-gradient(var(--m1, var(--sl-line-2)), var(--m1, var(--sl-line-2))) 0 0 / 4px 100% no-repeat,
+    linear-gradient(var(--m2, var(--sl-line-2)), var(--m2, var(--sl-line-2))) 6px 0 / 4px 100% no-repeat,
+    linear-gradient(var(--m3, var(--sl-line-2)), var(--m3, var(--sl-line-2))) 12px 0 / 4px 100% no-repeat;
 }
 
 /* ---------- Overview: exact-target cards ---------- */
