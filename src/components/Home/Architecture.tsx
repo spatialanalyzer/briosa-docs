@@ -1,5 +1,6 @@
 import {useEffect, useRef, type ReactNode} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 
 import styles from '@site/src/pages/index.module.css';
 import {CaliperMark, ChannelHead, CopyButton} from './parts';
@@ -115,6 +116,13 @@ export default function Architecture(): ReactNode {
             <p>
               Any gRPC language can call <code>briosa.FileOperations/<wbr />GetWorkingDirectory</code> directly. The
               first-party clients add typed helpers on top.
+            </p>
+            <p>
+              This grpcurl call needs a server with gRPC reflection enabled and works only after you{' '}
+              <Link to="/docs/getting-started/first-request#call-briosa-through-grpc-directly">
+                start and connect the SDK
+              </Link>
+              .
             </p>
           </div>
           <div className={clsx('sl-term', styles.term)}>

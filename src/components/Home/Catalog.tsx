@@ -7,6 +7,7 @@ import styles from '@site/src/pages/index.module.css';
 import {ChannelHead} from './parts';
 import {featuredOperations, formatCount, mpGroups2026, mpObservations2026, targets, tickerRpcs} from './data';
 import Icon from './Icon';
+import {latestEntry} from './runtime';
 
 /*
  * The spectrum: one dot per observed MP command, grouped by SA root group and
@@ -64,22 +65,40 @@ function Spectrum(): ReactNode {
   const figure = useRef<HTMLElement>(null);
   const svg = useRef<SVGSVGElement>(null);
   const groups = useRef<(SVGGElement | null)[]>([]);
-  // Dots render after hydration; until then the SVG only reserves the wide layout's height.
+  // The 1,360 dots mount as the figure nears the viewport. Until then the SVG is hidden and
+  // only reserves its layout's height, which is measured from hydration on.
   const [mounted, setMounted] = useState(false);
   const [narrowWidth, setNarrowWidth] = useState<number | null>(null);
   const [hot, setHot] = useState<number | null>(null);
   const [focusIndex, setFocusIndex] = useState(0);
 
   useEffect(() => {
-    setMounted(true);
+    const element = figure.current;
     const measure = () => {
       const W = Math.round(svg.current?.getBoundingClientRect().width ?? 0);
       if (W) setNarrowWidth(W >= WIDE_MIN ? null : W);
     };
     measure();
     const resize = new ResizeObserver(measure);
-    if (figure.current) resize.observe(figure.current);
-    return () => resize.disconnect();
+    if (element) resize.observe(element);
+    let near: IntersectionObserver | null = null;
+    if (element && typeof IntersectionObserver === 'function') {
+      near = new IntersectionObserver(
+        (entries) => {
+          if (!latestEntry(entries)?.isIntersecting) return;
+          setMounted(true);
+          near?.disconnect();
+        },
+        {rootMargin: '1000px 0px'},
+      );
+      near.observe(element);
+    } else {
+      setMounted(true);
+    }
+    return () => {
+      resize.disconnect();
+      near?.disconnect();
+    };
   }, []);
 
   const layout = narrowWidth === null ? wideLayout : computeLayout(narrowWidth, false);

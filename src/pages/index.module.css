@@ -455,6 +455,11 @@
     display: none;
   }
 
+  /* The hidden readout still matches `.sl-term__target + .sl-copy`, which would pull copy left. */
+  .home .term :global(.sl-copy) {
+    margin-left: auto;
+  }
+
   .ctas {
     gap: 10px;
   }
@@ -592,6 +597,11 @@
   overflow: auto;
   padding-block: 14px 18px;
   scrollbar-width: thin;
+}
+
+/* The pane clips overflow, so the code panel's focus ring sits inside its edge. */
+.codeWrap:focus-visible {
+  outline-offset: -2px;
 }
 
 .code {
@@ -1355,6 +1365,15 @@
   vertical-align: baseline;
 }
 
+.grpc p a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sl-laser) 45%, transparent);
+}
+
+.grpc p a:hover {
+  text-decoration-color: currentColor;
+}
+
 .grpc .term {
   max-width: none;
   margin: 0;
@@ -1931,16 +1950,31 @@
   color: var(--sl-ink-3);
 }
 
+/* Full package names wrap, never truncate; anywhere, as a last resort. */
 .tgtPk code {
-  overflow: hidden;
+  min-width: 0;
   padding: 0;
   border: 0;
   background: none;
   color: var(--sl-ink-2);
   font-size: inherit;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
   vertical-align: baseline;
-  white-space: nowrap;
+}
+
+/*
+ * An npm name breaks after its scope's slash (a <wbr>). Wherever a line can
+ * hold the rest of the name (20 mono characters past the label), the rest stays
+ * whole, so its own hyphens are not taken first.
+ */
+.tgtPk li {
+  container-type: inline-size;
+}
+
+@container (min-width: 17em) {
+  .tgtPk code > span {
+    white-space: nowrap;
+  }
 }
 
 .sep {
@@ -2000,11 +2034,6 @@
 
   .sep .sepLink {
     margin-left: 0;
-  }
-
-  .tgtPk code {
-    overflow-wrap: anywhere;
-    white-space: normal;
   }
 }
 
