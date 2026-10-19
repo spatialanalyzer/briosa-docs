@@ -48,6 +48,12 @@ function displayValue(value: string): string {
     .replace('Sdk ', 'SDK ');
 }
 
+// Two validation labels that differ only in case or hyphens read as one option.
+function optionKey(label: string): string {
+  return label.toLocaleLowerCase().replace(/[\s-]+/g, ' ').trim();
+}
+
+
 function readRows(): CatalogRow[] {
   return Array.from(
     document.querySelectorAll<HTMLTableRowElement>('.catalog-command-table tbody tr'),
@@ -205,6 +211,8 @@ export default function CatalogFilter({
     [targetRows],
   );
 
+  // One option per validation slug. Slugs whose labels read the same fall back
+  // to names derived from the slugs, so no two options look alike.
   const validations = useMemo(() => {
     const labels = new Map<string, string>();
     for (const row of targetRows) {
@@ -212,7 +220,11 @@ export default function CatalogFilter({
         labels.set(row.validation, row.validationLabel || displayValue(row.validation));
       }
     }
-    return [...labels].sort((left, right) => left[1].localeCompare(right[1]));
+    const uses = new Map<string, number>();
+    for (const label of labels.values()) uses.set(optionKey(label), (uses.get(optionKey(label)) ?? 0) + 1);
+    return [...labels]
+      .map(([value, label]): [string, string] => [value, (uses.get(optionKey(label)) ?? 0) > 1 ? displayValue(value) : label])
+      .sort((left, right) => left[1].localeCompare(right[1]));
   }, [targetRows]);
 
   const visible = useMemo(() => {
