@@ -28,7 +28,10 @@ const config: Config = {
     {tagName: 'link', attributes: {rel: 'icon', href: '/brand/icons/favicon.ico', sizes: 'any'}},
     {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: '/brand/icons/apple-touch-icon.png'}},
   ],
-  future: {v4: true},
+  // Rspack's persistent cache speeds up only a build that finds node_modules/.cache
+  // from an earlier one, which the workflows never keep. Writing it costs a fresh
+  // build about 2.7 GB of memory against the 10 GB budget in #94.
+  future: {v4: true, faster: {rspackPersistentCache: false}},
   url: 'https://briosa.dev',
   baseUrl: '/',
   organizationName: 'spatialanalyzer',
