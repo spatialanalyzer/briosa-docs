@@ -1,5 +1,5 @@
 ---
-title: SpatialAnalyzer Python API
+title: Briosa for Python API
 sidebar_label: Briosa for Python API
 description: Use the asynchronous Briosa Python client to automate SpatialAnalyzer. Reference client lifecycle, MP commands, typed results, and error handling.
 slug: /

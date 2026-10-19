@@ -23,6 +23,14 @@ export function rememberPair(family: string, pair: Pair | null): void {
   try { if (pair) sessionStorage.setItem(pairKey, `${family}|${pair.release}|${pair.target}`); else sessionStorage.removeItem(pairKey); } catch { /* The URL still carries the pair. */ }
 }
 export const suffix = (id: string): string => id === 'overview' ? '' : `/${id}`;
+export const releaseLabel = (family: string): string => family === 'grpc' ? 'Server' : 'Client';
+export const listOf = (items: string[]): string => items.length < 3 ? items.join(' and ') : `${items.slice(0, -1).join(', ')}, and ${items.at(-1)}`;
+// Later releases with no snapshot of their own that serve a release's contract
+// unchanged (plugins/api-reference/targets.json `sameContract`).
+export function sameContractNote(sameContract: Record<string, string[]> | undefined, release: string): string {
+  const later = sameContract?.[release] ?? [];
+  return later.length ? `Same contract in ${listOf(later)}` : '';
+}
 export function anchorOf(hash: string): string {
   try { return decodeURIComponent(hash.slice(1)); } catch { return hash.slice(1); }
 }

@@ -1,5 +1,5 @@
 ---
-title: SpatialAnalyzer gRPC API
+title: Briosa gRPC API
 sidebar_label: Briosa gRPC API
 description: Released Briosa gRPC services, protobuf contracts, and supported SpatialAnalyzer MP commands for SA 2026.1.0529.7.
 slug: /

@@ -5,16 +5,27 @@ import Link from '@docusaurus/Link';
 import {useHistory, useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBrokenLinks from '@docusaurus/useBrokenLinks';
-import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, type Selection} from './context';
+import {rememberTarget, readTarget, rememberPair, readPair, anchorOf, selection, historyGroupHref, methodHref, choices, htmlReferences, releaseLabel, sameContractNote, type Selection} from './context';
 import type {Choice, Navigation, PageData} from './types';
 import VersionSelect from './VersionSelect';
 import Sidebar from './Sidebar';
 import Compatibility from './Compatibility';
+import Contract from './Contract';
+import MethodIndex from './MethodIndex';
+import Readout from './Readout';
+import FamilySwitch from './FamilySwitch';
+import {Availability, Differences} from './Versions';
 import TOC from '@theme/TOC';
 import './styles.css';
 
 export const labels: Record<string, string> = {grpc: 'gRPC API', dotnet: '.NET API', python: 'Python API', javascript: 'JavaScript and TypeScript API'};
-const releaseLabel = (family: string) => family === 'grpc' ? 'Server' : 'Client';
+
+// A heading whose inline code (`GetSpatialAnalyzerState`) renders as code.
+export function InlineCode({text}: {text: string}): React.JSX.Element {
+  return <>{text.split(/(`[^`]+`)/).filter(Boolean).map((part, i) => part.length > 2 && part.startsWith('`') && part.endsWith('`')
+    ? <code key={i}>{part.slice(1, -1)}</code>
+    : <React.Fragment key={i}>{part}</React.Fragment>)}</>;
+}
 
 export default function ApiPage({pages, navigation}: {pages: Record<string, PageData>; navigation: Navigation}): React.JSX.Element {
   const history = useHistory();
@@ -29,11 +40,14 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
   // On a history page, the release/SA pair being read (from its anchor), else the reader's SA target.
   const [selected, setSelected] = useState<Selection | null>(null);
   const switcher = choices(page, navigation, isHistory ? selected : null);
-  const fixedAnchors = [page.compatibility ? 'sa-compatibility' : '', 'version-differences'].filter(Boolean);
+  const fixedAnchors = [page.compatibility ? 'sa-compatibility' : '', 'version-differences', page.kind === 'group' ? 'method-index' : ''].filter(Boolean);
   for (const anchor of [...references.anchors, ...Object.keys(aliases), ...fixedAnchors]) brokenLinks.collectAnchor(anchor);
   for (const href of references.links) brokenLinks.collectLink(href);
   const [notice, setNotice] = useState('');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const release = releaseLabel(page.family);
+  const sameContract = navigation.sameContract;
+  const later = sameContract?.[page.release] ?? [];
   const groupTitle = page.group ? navigation.groups.find((g) => g.id === page.group)?.title : undefined;
   const title = isHistory ? `${page.title} — ${groupTitle ?? page.group} · ${labels[page.family]} Version History` : `${page.title} — ${groupTitle ? groupTitle + ' · ' : ''}${labels[page.family]} ${page.release} · SA ${page.target}`;
   useEffect(() => {
@@ -49,7 +63,7 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
       if (shown.replace) history.replace(shown.replace);
       setSelected(shown);
       if (shown.missing) {
-        setNotice(`${releaseLabel(page.family)} ${shown.release} does not document this method for SA ${shown.target}. Availability by Release lists every documented release and SpatialAnalyzer version.`);
+        setNotice(`${release} ${shown.release} does not document this method for SA ${shown.target}. Availability by Release lists every documented release and SpatialAnalyzer version.`);
         return;
       }
     }
@@ -64,22 +78,16 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     if (target) rememberTarget(target, true);
     history.push(to.includes('#') || isHistory ? to : to + location.hash);
   }
-  const toc = [...(page.compatibility ? [{id: 'sa-compatibility', title: 'SpatialAnalyzer Compatibility'}] : []), ...(isHistory ? [{id: 'version-differences', title: 'Availability by Release'}] : []), ...page.toc, ...(isHistory ? [] : [{id: 'version-differences', title: 'Version Differences'}])]
+  const toc = [...(page.compatibility ? [{id: 'sa-compatibility', title: 'SpatialAnalyzer Compatibility'}] : []), ...(isHistory ? [{id: 'version-differences', title: 'Availability by Release'}] : []), ...(page.kind === 'group' ? [{id: 'method-index', title: 'Methods'}] : []), ...page.toc, ...(isHistory ? [] : [{id: 'version-differences', title: 'Version Differences'}])]
     .map(({id, title}) => ({id, level: 2, value: title.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')}));
-  const releases = [...new Set(page.variants.map((v) => v.release))];
   const targets = navigation.targets;
-  const versions = isHistory
-    ? <section className="api-versions api-availability" aria-labelledby="version-differences"><h2 id="version-differences">Availability by Release<a className="hash-link" href="#version-differences" aria-label="Link to Availability by Release">#</a></h2>
-        <p>Each cell links to the contract published for that Briosa release and SpatialAnalyzer version. Releases that published the same contract share a revision.</p>
-        <table><thead><tr><th>Briosa {releaseLabel(page.family)}</th>{targets.map((t) => <th key={t}>SA {t}</th>)}</tr></thead><tbody>{releases.map((release) => <tr key={release}><td>{release}</td>{targets.map((target) => {
-          const v = page.variants.find((x) => x.release === release && x.target === target);
-          return <td key={target}>{!v ? 'Not Published' : v.href ? <a href={v.href}>Revision {v.revision}</a> : 'Not Documented'}</td>;
-        })}</tr>)}</tbody></table>
-      </section>
-    : <section className="api-versions" aria-labelledby="version-differences"><h2 id="version-differences">Version Differences<a className="hash-link" href="#version-differences" aria-label="Link to Version Differences">#</a></h2>
-        <p>These references preserve the contract documented for each exact target. Runtime readiness and catalog qualifications still apply.</p>
-        <table><thead><tr><th>Briosa Release</th><th>SpatialAnalyzer</th><th>Reference</th></tr></thead><tbody>{page.variants.map((v) => <tr key={`${v.release}/${v.target}`}><td>{v.release}{v.current ? ' (Current)' : ''}</td><td>{v.target}</td><td>{v.href ? <Link to={v.href}>{!v.available ? 'Unavailable — See Notes' : v.href === page.path ? 'Current View' : v.same ? 'Same Documented Contract' : v.revision ? `View Revision ${v.revision}` : 'View Reference'}</Link> : 'Not Documented'}{v.summary && <p className="api-difference">{v.summary}</p>}</td></tr>)}</tbody></table>
-      </section>;
+  const historyGroup = isHistory ? historyGroupHref(page, selected) : null;
+  const reading = isHistory && selected?.release && !selected.missing ? selected : null;
+  const documentedTargets = page.compatibility?.targets.filter((t) => t.available).length ?? 0;
+  const notesAt = page.kind === 'group' ? page.html.indexOf('<h2') : -1;
+  const groupIntro = notesAt < 0 ? page.html : page.html.slice(0, notesAt);
+  const groupNotes = notesAt < 0 ? '' : page.html.slice(notesAt);
+  const publishedReleases = new Set(page.variants.filter((v) => v.href).map((v) => v.release)).size;
   return <Layout title={title} description={page.description} wrapperClassName="api-reference-layout">
     <Head>
       <link rel="canonical" href={`https://briosa.dev${page.path}`} />
@@ -92,29 +100,68 @@ export default function ApiPage({pages, navigation}: {pages: Record<string, Page
     </Head>
     <div className="api-reference">
       <aside className={`api-navigation${mobileNavOpen ? ' api-navigation-open' : ''}`}>
-        <button className="api-navigation-toggle clean-btn menu__link menu__link--sublist-caret" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>API Navigation</button>
+        <button className="api-navigation-toggle" type="button" aria-controls="api-navigation-content" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+          <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5" /><path d="M9.5 4.5v15" /><path className="api-ico-accent" d="M5.5 8.5h2M5.5 11.5h2" /></svg>
+          <span>API Navigation</span>
+          <svg className="api-navigation-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        </button>
         <div id="api-navigation-content"><Sidebar key={page.path} navigation={navigation} page={page} history={isHistory} /></div>
       </aside>
       <main id="api-main" className="api-main">
-        <div className="api-toolbar" aria-label="API Context">
-          <VersionSelect label="SpatialAnalyzer" value={isHistory ? selected?.target ?? '' : page.target} placeholder="Choose a Target" onChange={(target) => go(switcher.targets, target, isHistory && selected?.release ? `${releaseLabel(page.family)} ${selected.release} does not document this method for SA ${target}. Availability by Release lists every documented pair.` : `This reference is not published for SA ${target}. The SpatialAnalyzer Compatibility table lists where it is documented.`, target)} options={targets.map((target, i) => ({value: target, label: `SA ${target}`, badge: i === 0 ? 'Latest' : undefined}))} />
-          <VersionSelect label={`${releaseLabel(page.family)} Release`} value={isHistory ? selected?.release ?? '' : page.release} placeholder="Choose a Release" onChange={(release) => go(switcher.releases, release, `No reference is published for this page in release ${release} with SA ${isHistory ? selected?.target ?? 'any target' : page.target}. ${isHistory ? 'Availability by Release' : 'Version Differences'} lists every documented version.`)} options={switcher.releases.map((r) => ({value: r.value, label: r.value, badge: r.current ? 'Current' : undefined}))} />
-          {Boolean(siteConfig.themeConfig.algolia) && <Link to="/search" className="api-search-all">Search All Versions</Link>}
+        <div className="api-toolbar" role="group" aria-label="API Context">
+          <div className="api-selects">
+            <VersionSelect label="SpatialAnalyzer" value={isHistory ? selected?.target ?? '' : page.target} placeholder="Choose a Target" onChange={(target) => go(switcher.targets, target, isHistory && selected?.release ? `${release} ${selected.release} does not document this method for SA ${target}. Availability by Release lists every documented pair.` : `This reference is not published for SA ${target}. The SpatialAnalyzer Compatibility table lists where it is documented.`, target)} options={targets.map((target, i) => ({value: target, label: `SA ${target}`, badge: i === 0 ? 'Latest' : undefined}))} />
+            <VersionSelect label={`${release} Release`} value={isHistory ? selected?.release ?? '' : page.release} placeholder="Choose a Release" onChange={(value) => go(switcher.releases, value, `No reference is published for this page in release ${value} with SA ${isHistory ? selected?.target ?? 'any target' : page.target}. ${isHistory ? 'Availability by Release' : 'Version Differences'} lists every documented version.`)} options={switcher.releases.map((r) => ({value: r.value, label: r.value, badge: r.current ? 'Current' : undefined, note: sameContractNote(sameContract, r.value) || undefined}))} />
+            {Boolean(siteConfig.themeConfig.algolia) && <Link to="/search" className="api-search-all">Search All Versions</Link>}
+          </div>
         </div>
         <p className="api-notice" role="status">{notice}</p>
-        <nav className="api-breadcrumbs" aria-label="Breadcrumbs"><Link to="/api">API Reference</Link><span> / </span><Link to={`/api/${page.family}`}>{labels[page.family]}</Link>{!isHistory && <><span> / </span><Link to={page.base}>SA {page.target}{page.current ? '' : ` · ${page.release}`}</Link></>}{isHistory ? groupTitle && <><span> / </span>{historyGroupHref(page, selected) ? <Link to={historyGroupHref(page, selected)!}>{groupTitle} · {releaseLabel(page.family)} {selected?.release} · SA {selected?.target}</Link> : <span>{groupTitle}</span>}</> : page.groupHref && <><span> / </span><Link to={page.groupHref}>{groupTitle}</Link></>}</nav>
-        <article className="markdown" data-api-kind={page.kind}>
-          <header><p className="api-eyebrow">{isHistory ? `SpatialAnalyzer and Release History${selected?.release && !selected.missing ? ` · ${releaseLabel(page.family)} ${selected.release} · SA ${selected.target}` : ''}` : `${page.current ? 'Current Reference' : 'Earlier Release'} · ${releaseLabel(page.family)} ${page.release} · SA ${page.target}`}</p><h1>{page.title}</h1></header>
-          {!page.current && !isHistory && <div className="alert alert--info api-earlier"><strong>Earlier {releaseLabel(page.family)} Release</strong><p>This page describes Briosa {releaseLabel(page.family)} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></div>}
-          {!page.available && !isHistory && <div className="alert alert--warning"><strong>Unavailable for This Target</strong><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></div>}
-          {isHistory && <p>This page shows which Briosa releases document this method for each SpatialAnalyzer version, and the exact contract each one published. Use it to confirm what works with the SpatialAnalyzer version you build for.</p>}
-          {page.compatibility && <Compatibility family={page.family} compatibility={page.compatibility} history={!isHistory} />}
-          {isHistory && versions}
-          {page.kind === 'group' && <><p>Select a method to read its signature, parameters, and target-specific contract.</p><ul className="api-method-index">{methods.map((m) => <li id={m.anchor} key={m.id}><Link to={m.href}>{m.title}</Link>{!m.available && <span> · {page.current ? 'Other SA Target' : 'History Only'}</span>}</li>)}</ul></>}
-          <div className="api-contract" dangerouslySetInnerHTML={{__html: page.html}} />
-          {!isHistory && versions}
-          <nav className="api-related" aria-label="Related API References">{page.related.map(({family, href}) => <Link key={family} to={href}>{labels[family]}</Link>)}</nav>
-          <p className="api-edit"><a href={`https://github.com/spatialanalyzer/briosa-docs/edit/main/${page.source}`}>Edit This Reference</a></p>
+        <article className="markdown api-article" data-api-kind={page.kind}>
+          <header className="api-header">
+            <nav className="api-breadcrumbs" aria-label="Breadcrumbs">
+              <ol>
+                <li><Link to="/api">API Reference</Link></li>
+                <li><Link to={`/api/${page.family}`}>{labels[page.family]}</Link></li>
+                {!isHistory && <li><Link to={page.base}>SA {page.target}{page.current ? '' : ` · ${page.release}`}</Link></li>}
+                {isHistory ? groupTitle && <li>{historyGroup ? <Link to={historyGroup}>{groupTitle} · {release} {selected?.release} · SA {selected?.target}</Link> : <span>{groupTitle}</span>}</li> : page.groupHref && <li><Link to={page.groupHref}>{groupTitle}</Link></li>}
+              </ol>
+            </nav>
+            <h1>{page.heading ? <InlineCode text={page.heading} /> : page.title}</h1>
+            <ul className="api-applies" aria-label="Applies To">
+              {isHistory ? <>
+                <li className="api-state">Release History</li>
+                <li className="sl-chip"><i>Contracts</i>{page.compatibility?.revisions ?? 0}</li>
+                <li className="sl-chip"><i>Releases</i>{publishedReleases}</li>
+                <li className="sl-chip"><i>SA Targets</i>{documentedTargets}</li>
+                {reading && <li className="sl-chip api-chip-reading"><i>Reading</i>{release} {reading.release} · SA {reading.target}</li>}
+              </> : <>
+                <li className="api-state" data-state={page.current ? 'documented' : undefined}>{page.current ? 'Current Reference' : 'Earlier Release'}</li>
+                <li className="sl-chip"><i>SA</i>{page.target}</li>
+                <li className="sl-chip"><i>{release}</i>{page.release}</li>
+                {later.length > 0 && <li className="sl-chip"><i>Same Contract</i>{later.join(' · ')}</li>}
+              </>}
+            </ul>
+            {!isHistory && <FamilySwitch family={page.family} links={Object.fromEntries(page.related.map((r) => [r.family, r.href]))} label="API Family" />}
+          </header>
+          {!page.current && !isHistory && <div className="alert alert--info api-callout api-earlier"><strong>Earlier {release} Release</strong><p>This page describes Briosa {release} {page.release} for SA {page.target}. Choose the release marked Current above for the newest reference. Each method below opens its history page at the contract this release published.</p></div>}
+          {!page.available && !isHistory && <div className="alert alert--warning api-callout"><strong>Unavailable for This Target</strong><p>This method is not documented as available in Briosa {page.release} for SA {page.target}. This does not establish that SpatialAnalyzer itself removed the command. See the documented references below.</p></div>}
+          {isHistory && <p className="api-lead">This page shows which Briosa releases document this method for each SpatialAnalyzer version, and the exact contract each one published. Use it to confirm what works with the SpatialAnalyzer version you build for.</p>}
+          {page.compatibility && <Compatibility family={page.family} compatibility={page.compatibility} history={!isHistory} target={isHistory ? undefined : page.target} sameContract={sameContract} />}
+          {isHistory && <Availability page={page} targets={targets} selected={selected} sameContract={sameContract} />}
+          {page.kind === 'group' ? <>
+            {/* A group's introduction leads; its shared notes follow the method index. */}
+            {groupIntro && <Contract html={groupIntro} />}
+            <Readout page={page} methods={methods} />
+            <MethodIndex methods={methods} current={page.current} release={page.release} />
+            {groupNotes && <Contract html={groupNotes} />}
+          </> : <Contract html={page.html} />}
+          {!isHistory && <Differences page={page} sameContract={sameContract} />}
+          <footer className="api-footer">
+            <a className="api-edit" href={`https://github.com/spatialanalyzer/briosa-docs/edit/main/${page.source}`}>
+              <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5h4l10-10a2.1 2.1 0 0 0-3-3l-10 10z" /><path d="m14 8 2 2" /></svg>
+              Edit This Reference
+            </a>
+          </footer>
         </article>
       </main>
       <aside className="api-toc"><TOC toc={toc} /></aside>
