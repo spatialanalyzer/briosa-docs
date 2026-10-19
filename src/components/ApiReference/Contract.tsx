@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useId, useMemo, useRef, useState} from 'react';
 import {decorateCode} from './code';
 
 const copyIcon = '<svg class="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="1.5"/><path d="M15.5 8.5V6A1.5 1.5 0 0 0 14 4.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></svg>';
@@ -19,14 +19,16 @@ function control(action: 'copy' | 'expand', text: string, label: string, icon: s
   return button;
 }
 
-function enhance(root: HTMLElement) {
+// A page can hold more than one contract (a group's introduction and its notes),
+// so block ids carry the component's own prefix.
+function enhance(root: HTMLElement, prefix: string) {
   root.querySelectorAll<HTMLElement>('.api-code').forEach((block, index) => {
     const bar = block.querySelector('.api-code-bar');
     const pre = block.querySelector('pre');
     if (!bar || !pre || bar.querySelector('[data-api-action]')) return;
     const language = block.querySelector('.api-code-label')?.textContent;
     if (block.hasAttribute('data-long')) {
-      pre.id ||= `api-code-${index + 1}`;
+      pre.id ||= `api-code-${prefix}-${index + 1}`;
       const expand = control('expand', `Show All ${block.dataset.lines} Lines`, `Show All ${block.dataset.lines} Lines`, expandIcon);
       expand.setAttribute('aria-expanded', 'false');
       expand.setAttribute('aria-controls', pre.id);
@@ -58,14 +60,17 @@ async function copy(text: string): Promise<boolean> {
 
 export default function Contract({html}: {html: string}): React.JSX.Element {
   const root = useRef<HTMLDivElement>(null);
+  const prefix = useId();
   // One object per page: React 19 rewrites innerHTML whenever this prop's
   // identity changes, which would drop the controls added after hydration.
   const inner = useMemo(() => ({__html: decorateCode(html)}), [html]);
   const [status, setStatus] = useState('');
+  const announcement = useRef(0);
   useEffect(() => {
-    if (root.current) enhance(root.current);
+    if (root.current) enhance(root.current, prefix);
     setStatus('');
-  }, [inner]);
+    return () => window.clearTimeout(announcement.current);
+  }, [inner, prefix]);
 
   async function onClick(event: React.MouseEvent<HTMLDivElement>) {
     const button = (event.target as Element).closest<HTMLButtonElement>('button[data-api-action]');
@@ -84,7 +89,11 @@ export default function Contract({html}: {html: string}): React.JSX.Element {
     const source = block ? block.querySelector('pre code')?.textContent?.replace(/\n$/, '') : button.previousElementSibling?.textContent;
     if (!source || !text) return;
     const copied = await copy(source);
-    setStatus(copied ? 'Copied to the clipboard.' : 'Copying is not available in this browser.');
+    // A live region announces a change, so the status is cleared before it is
+    // set again: a second copy is announced like the first.
+    setStatus('');
+    window.clearTimeout(announcement.current);
+    announcement.current = window.setTimeout(() => setStatus(copied ? 'Copied to the clipboard.' : 'Copying is not available in this browser.'), 100);
     if (!copied) return;
     button.dataset.copied = '';
     text.textContent = 'Copied';

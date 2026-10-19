@@ -654,6 +654,19 @@ nav.api-sidebar .api-show-all {
   color: var(--sl-ink-body);
 }
 
+/* A site-authored note about the release, set apart from the released text. */
+.markdown .api-same-contract {
+  margin: 22px 0 24px;
+  padding: 9px 14px;
+  border: 1px solid var(--sl-line-2);
+  border-left: 2px solid var(--sl-line-3);
+  border-radius: 3px;
+  background: var(--sl-panel);
+  color: var(--sl-ink-2);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 /* ---------- Callouts: the site's Scanline callouts, spaced below the head ---------- */
 .api-header + .sl-callout,
 .api-article > .sl-callout + .sl-callout {
@@ -759,10 +772,12 @@ nav.api-sidebar .api-show-all {
   white-space: nowrap;
 }
 
+/* Ink-2 keeps at least 5.8:1 on plain, hover, and this-page rows in both themes;
+   ink-3 reaches only 4.49:1 on the dark this-page row. */
 .api-note {
   display: block;
   margin-top: 3px;
-  color: var(--sl-ink-3);
+  color: var(--sl-ink-2);
   font: 400 12.5px/1.35 var(--sl-f-body);
   white-space: normal;
 }

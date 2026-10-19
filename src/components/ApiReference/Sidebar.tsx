@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import type {PropSidebarItem, PropSidebarItemCategory} from '@docusaurus/plugin-content-docs';
 import type {Navigation, PageData} from './types';
-import {suffix, methodHref} from './context';
+import {suffix, methodHref, methodFilter} from './context';
 import {SidebarControls} from './SidebarControls';
 
 // On a history page, navigation stays among method histories, which keep the
@@ -38,10 +38,10 @@ export default function Sidebar({navigation: nav, page, history = false}: {navig
       children = branch.children;
     }
   }
-  const clean = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const matches = (branch: Branch): boolean => !query || Boolean(branch.group?.methods.some((m) => clean(m.title).includes(clean(query)))) || branch.children.some(matches);
+  const named = methodFilter(query, nav.family);
+  const matches = (branch: Branch): boolean => !query || Boolean(branch.group?.methods.some(named)) || branch.children.some(matches);
   function groupItem(branch: Branch): PropSidebarItem {
-    const methods = branch.group?.methods.filter((m) => !query || clean(m.title).includes(clean(query))) ?? [];
+    const methods = branch.group?.methods.filter(named) ?? [];
     const currentIndex = Math.max(0, methods.findIndex((m) => m.id === page.id));
     const start = Math.max(0, Math.min(currentIndex - 5, methods.length - 11));
     const visible = query || showAll[branch.key] ? methods : methods.slice(start, start + 11);
