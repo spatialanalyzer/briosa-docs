@@ -1,27 +1,22 @@
 import type {PrismTheme} from 'prism-react-renderer';
 
-// Use opaque colors with readable contrast on each code surface, including
-// comments and namespaces. Cyan is reserved for syntax on dark backgrounds.
-export const lightCodeTheme: PrismTheme = {
-  plain: {color: '#061A33', backgroundColor: '#FFFFFF'},
-  styles: [
-    {types: ['comment', 'prolog', 'doctype', 'cdata'], style: {color: '#46607E'}},
-    {types: ['keyword', 'atrule', 'attr-name', 'selector', 'tag'], style: {color: '#006DB6'}},
-    {types: ['string', 'char', 'attr-value', 'regex', 'inserted'], style: {color: '#126b5d'}},
-    {types: ['number', 'boolean', 'constant', 'symbol', 'property', 'builtin'], style: {color: '#594184'}},
-    {types: ['function', 'function-variable', 'class-name'], style: {color: '#006DB6'}},
-    {types: ['deleted'], style: {color: '#7a3030'}},
-  ],
-};
+// Scanline syntax colors are the --sl-tok-* tokens, so one theme serves both color
+// modes. Code rendered on the server for one mode is already right in the other,
+// with no flash of the wrong palette before React re-renders it.
+const tok = (name: string) => `var(--sl-tok-${name})`;
 
-export const darkCodeTheme: PrismTheme = {
-  plain: {color: '#EAF3FF', backgroundColor: '#0b2546'},
+export const codeTheme: PrismTheme = {
+  plain: {color: 'var(--sl-ink)', backgroundColor: 'var(--sl-term-solid)'},
   styles: [
-    {types: ['comment', 'prolog', 'doctype', 'cdata'], style: {color: '#9DB3CF'}},
-    {types: ['keyword', 'atrule', 'attr-name', 'selector', 'tag'], style: {color: '#00BAF1'}},
-    {types: ['string', 'char', 'attr-value', 'regex', 'inserted'], style: {color: '#8cebd5'}},
-    {types: ['number', 'boolean', 'constant', 'symbol', 'property', 'builtin'], style: {color: '#d0bff5'}},
-    {types: ['function', 'function-variable', 'class-name'], style: {color: '#FFFFFF'}},
-    {types: ['deleted'], style: {color: '#efb2bb'}},
+    {types: ['comment', 'prolog', 'doctype', 'cdata'], style: {color: tok('com'), fontStyle: 'italic'}},
+    {types: ['keyword', 'atrule', 'attr-name', 'selector', 'tag', 'important'], style: {color: tok('kw')}},
+    {types: ['string', 'char', 'attr-value', 'regex', 'url'], style: {color: tok('str')}},
+    {types: ['number', 'boolean', 'constant', 'symbol'], style: {color: tok('num')}},
+    {types: ['function', 'function-variable'], style: {color: tok('fn')}},
+    {types: ['class-name', 'builtin', 'namespace', 'type-definition'], style: {color: tok('type')}},
+    {types: ['punctuation', 'operator'], style: {color: tok('punc')}},
+    {types: ['property', 'variable', 'parameter'], style: {color: 'var(--sl-ink)'}},
+    {types: ['inserted'], style: {color: tok('type')}},
+    {types: ['deleted'], style: {color: 'var(--sl-st-excluded)'}},
   ],
 };

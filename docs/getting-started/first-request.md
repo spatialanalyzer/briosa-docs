@@ -48,11 +48,17 @@ string workingDirectory = await briosa.GetWorkingDirectoryAsync();
   <TabItem value="python" label="Python">
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-async with BriosaClient() as briosa:
-    working_directory = await briosa.get_working_directory()
+async def main():
+    async with BriosaClient() as briosa:
+        working_directory = await briosa.get_working_directory()
+
+
+asyncio.run(main())
 ```
 
   </TabItem>
@@ -112,10 +118,14 @@ briosa.FileOperations/GetWorkingDirectory
 
 Before making that call, a direct gRPC application must:
 
+<Steps>
+
 1. Start a compatible local Briosa server.
 2. Call `StartSpatialAnalyzerSdk`.
 3. Optionally call `LaunchSpatialAnalyzer` when it needs a fresh application.
 4. Call `ConnectToSpatialAnalyzer` and require `ready_for_mp = true`.
+
+</Steps>
 
 Starting the server or SDK alone is not enough. See the
 [gRPC lifecycle API](/api/grpc/sa-2026.1.0529.7/lifecycle) and
@@ -141,7 +151,11 @@ walk through creating two points, reading their coordinates, and measuring their
 distance in your open SA job. Start with an empty job, choose a language, and run
 the short program; Briosa creates the demo points for you:
 
+<LinkCards>
+
 - [.NET](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/dotnet)
 - [TypeScript](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/typescript)
 - [Python](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/python)
 - [Direct gRPC](https://github.com/spatialanalyzer/briosa-examples/tree/main/point-inspection/grpc)
+
+</LinkCards>

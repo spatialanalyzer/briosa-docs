@@ -1,0 +1,278 @@
+/*
+ * Scanline design tokens.
+ *
+ * Scanline is dark-first: an instrument bench with a void ground, hairline
+ * rules, a laser accent, and the deviation color map (#3E5BFF → #FF4D6D) as
+ * the signature palette. Brand values come from static/brand/colors.css
+ * (briosa-brand v2.1.0); everything else here is the site's own.
+ *
+ * Docusaurus always sets data-theme on <html>, so :root carries the light
+ * values and [data-theme='dark'] the dark ones. Components read only --sl-*
+ * tokens (or the Infima variables mapped to them below), never literals.
+ */
+:root {
+  --sl-void: var(--briosa-clean-room);
+  --sl-deep: #E7EFF7;
+  --sl-panel: #FFFFFF;
+  --sl-panel-2: #F7FAFD;
+  --sl-field: rgba(255, 255, 255, 0.85);
+  --sl-hover: rgba(0, 56, 117, 0.06);
+  --sl-line: rgba(0, 56, 117, 0.14);
+  --sl-line-2: rgba(0, 56, 117, 0.24);
+  --sl-line-3: rgba(0, 109, 182, 0.5);
+  --sl-ink: var(--briosa-light-ink);
+  --sl-ink-2: var(--briosa-light-ink-2);
+  --sl-ink-3: var(--briosa-light-ink-3);
+  --sl-ink-body: #22395A;
+  --sl-laser: var(--briosa-light-link);
+  --sl-laser-core: var(--briosa-dark-jaw);
+  --sl-brand: #003875;
+  --sl-dev-n2: var(--briosa-light-dev-n2);
+  --sl-dev-n1: var(--briosa-light-dev-n1);
+  --sl-dev-0: var(--briosa-light-dev-0);
+  --sl-dev-p1: var(--briosa-light-dev-p1);
+  --sl-dev-p2: var(--briosa-light-dev-p2);
+  --sl-btn-bg: var(--briosa-dark-jaw);
+  --sl-btn-edge: rgba(0, 56, 117, 0.22);
+  --sl-btn-glow: rgba(0, 150, 214, 0.35);
+  --sl-on-laser: #02142B;
+  --sl-sheen: rgba(255, 255, 255, 0.7);
+  --sl-glint: #FFFFFF;
+  --sl-nav-bg: rgba(243, 247, 251, 0.82);
+  --sl-hero-glow: rgba(0, 186, 241, 0.16);
+  --sl-hero-glow-2: rgba(0, 56, 117, 0.06);
+  --sl-grid: rgba(0, 56, 117, 0.06);
+  --sl-term-bg: rgba(255, 255, 255, 0.9);
+  --sl-term-solid: #FFFFFF;
+  --sl-tok-kw: #2E47D9;
+  --sl-tok-type: #076A55;
+  --sl-tok-str: #9A5B00;
+  --sl-tok-num: #C0244A;
+  --sl-tok-fn: #006DB6;
+  --sl-tok-com: #536C8C;
+  --sl-tok-punc: #46607E;
+  --sl-exec: rgba(0, 109, 182, 0.09);
+  --sl-exec-edge: #006DB6;
+  --sl-ok: #0B7F66;
+  --sl-ax-x: #B81E40;
+  --sl-ax-y: #0A735C;
+  --sl-ax-z: #2438B8;
+  --sl-shadow: 0 1px 2px rgba(6, 26, 51, 0.06), 0 24px 50px -30px rgba(6, 26, 51, 0.28);
+  --sl-scrim: rgba(6, 26, 51, 0.38);
+
+  /* The footer is always the dark band, in both themes. */
+  --sl-foot-bg: #061A33;
+  --sl-foot-line: rgba(160, 205, 255, 0.16);
+  --sl-foot-grid: rgba(160, 205, 255, 0.06);
+  --sl-foot-scan: rgba(0, 186, 241, 0.06);
+  --sl-foot-scan-hi: rgba(139, 231, 255, 0.32);
+  --sl-foot-ink: var(--briosa-dark-ink);
+  --sl-foot-ink-2: var(--briosa-dark-ink-2);
+  --sl-foot-ink-3: #7F98B8;
+
+  /* Caliper b mark colors (inline marks only; vendored brand SVGs carry their own). */
+  --sl-mark-jaw: var(--briosa-light-jaw);
+  --sl-mark-tick: var(--briosa-light-ink-3);
+  --sl-mark-pt: var(--briosa-light-jaw);
+  --sl-inv-jaw: var(--briosa-dark-jaw);
+  --sl-inv-tick: var(--briosa-dark-ink-2);
+  --sl-inv-pt: var(--briosa-dark-point-small);
+
+  /* Status follows the deviation map: in tolerance is green, coming next is cyan,
+     open questions are amber, excluded is red, and what the SDK lacks is indigo.
+     Light values are darkened so each passes as text on white. */
+  /* Light status colors are text-safe: at least 4.5:1 as 10.5px pill labels on an
+     11% tint of themselves, over every light surface. */
+  --sl-st-current: #076A55;
+  --sl-st-next: #0062A6;
+  --sl-st-undecided: #4A6280;
+  --sl-st-uncommitted: #805300;
+  --sl-st-excluded: #B81E40;
+  --sl-st-unavailable: #3B4BC8;
+
+  /* Callout severity: the gauge lights one segment of the deviation map. */
+  --sl-co-info: var(--sl-dev-n2);
+  --sl-co-note: var(--sl-dev-n1);
+  --sl-co-tip: var(--sl-dev-0);
+  --sl-co-caution: var(--sl-dev-p1);
+  --sl-co-danger: var(--sl-dev-p2);
+  --sl-co-info-t: #2E47D9;
+  --sl-co-note-t: #006DB6;
+  --sl-co-tip-t: #0B7F66;
+  --sl-co-caution-t: #8A5A00;
+  --sl-co-danger-t: #B81E40;
+
+  --sl-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --sl-f-display: 'Saira Variable', 'Saira', 'Segoe UI', system-ui, sans-serif;
+  --sl-f-body: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --sl-f-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --sl-gut: clamp(16px, 3.4vw, 40px);
+  --sl-maxw: 1312px;
+}
+
+:root[data-theme='dark'] {
+  --sl-void: var(--briosa-void);
+  --sl-deep: #071A33;
+  --sl-panel: #0B2546;
+  --sl-panel-2: #0E2C53;
+  --sl-field: rgba(7, 26, 51, 0.72);
+  --sl-hover: rgba(120, 190, 255, 0.08);
+  --sl-line: rgba(120, 190, 255, 0.14);
+  --sl-line-2: rgba(120, 190, 255, 0.26);
+  --sl-line-3: rgba(139, 231, 255, 0.5);
+  --sl-ink: var(--briosa-dark-ink);
+  --sl-ink-2: var(--briosa-dark-ink-2);
+  /* The brand's dark ink-3 (#7690B0) reaches only 4.25:1 on raised panels, so small
+     labels there use a slightly lighter step that keeps 4.5:1 on panel-2. */
+  --sl-ink-3: #8199BA;
+  --sl-ink-body: #C3D3E8;
+  --sl-laser: var(--briosa-dark-jaw);
+  --sl-laser-core: var(--briosa-dark-point-small);
+  --sl-dev-n2: var(--briosa-dark-dev-n2);
+  --sl-dev-n1: var(--briosa-dark-dev-n1);
+  --sl-dev-0: var(--briosa-dark-dev-0);
+  --sl-dev-p1: var(--briosa-dark-dev-p1);
+  --sl-dev-p2: var(--briosa-dark-dev-p2);
+  --sl-btn-edge: rgba(139, 231, 255, 0.6);
+  --sl-btn-glow: rgba(0, 186, 241, 0.55);
+  --sl-sheen: rgba(255, 255, 255, 0.6);
+  --sl-nav-bg: rgba(4, 11, 23, 0.76);
+  --sl-hero-glow: rgba(0, 56, 117, 0.62);
+  --sl-hero-glow-2: rgba(0, 186, 241, 0.1);
+  --sl-grid: rgba(120, 190, 255, 0.06);
+  --sl-term-bg: rgba(4, 14, 30, 0.78);
+  --sl-term-solid: #060F1F;
+  --sl-tok-kw: #7FA8FF;
+  --sl-tok-type: #34F5C5;
+  --sl-tok-str: #FFD23F;
+  --sl-tok-num: #FF8FA3;
+  --sl-tok-fn: #8BE7FF;
+  --sl-tok-com: #7E97B6;
+  --sl-tok-punc: #9DB3CF;
+  --sl-exec: rgba(0, 186, 241, 0.13);
+  --sl-exec-edge: #00BAF1;
+  --sl-ok: #34F5C5;
+  --sl-ax-x: #FF4D6D;
+  --sl-ax-y: #34F5C5;
+  --sl-ax-z: #7F93FF;
+  --sl-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.85);
+  --sl-scrim: rgba(2, 8, 18, 0.6);
+  --sl-foot-bg: #030914;
+  --sl-foot-line: rgba(120, 190, 255, 0.14);
+  --sl-foot-grid: rgba(120, 190, 255, 0.05);
+  --sl-foot-scan: rgba(0, 186, 241, 0.05);
+  --sl-foot-scan-hi: rgba(139, 231, 255, 0.3);
+  --sl-mark-jaw: var(--briosa-dark-jaw);
+  --sl-mark-tick: var(--briosa-dark-ink-2);
+  --sl-mark-pt: var(--briosa-dark-point-small);
+  --sl-st-current: #34F5C5;
+  --sl-st-next: #00BAF1;
+  --sl-st-undecided: #9DB3CF;
+  --sl-st-uncommitted: #FFD23F;
+  --sl-st-excluded: #FF7E95;
+  --sl-st-unavailable: #9CAEFF;
+  --sl-co-info-t: #9CAEFF;
+  --sl-co-note-t: #8BE7FF;
+  --sl-co-tip-t: #34F5C5;
+  --sl-co-caution-t: #FFD23F;
+  --sl-co-danger-t: #FF7E95;
+}
+
+/* Infima, the Docusaurus base theme, reads these. :root[data-theme] outranks
+   Infima's own html[data-theme='dark'] block. */
+:root,
+:root[data-theme] {
+  --ifm-color-primary: var(--sl-laser);
+  --ifm-color-primary-dark: color-mix(in srgb, var(--sl-laser) 90%, #000);
+  --ifm-color-primary-darker: color-mix(in srgb, var(--sl-laser) 84%, #000);
+  --ifm-color-primary-darkest: color-mix(in srgb, var(--sl-laser) 72%, #000);
+  --ifm-color-primary-light: color-mix(in srgb, var(--sl-laser) 88%, #fff);
+  --ifm-color-primary-lighter: color-mix(in srgb, var(--sl-laser) 80%, #fff);
+  --ifm-color-primary-lightest: color-mix(in srgb, var(--sl-laser) 66%, #fff);
+  --ifm-background-color: var(--sl-void);
+  --ifm-background-surface-color: var(--sl-panel);
+  --ifm-font-color-base: var(--sl-ink-body);
+  --ifm-font-color-secondary: var(--sl-ink-2);
+  --ifm-heading-color: var(--sl-ink);
+  --ifm-color-content: var(--sl-ink-body);
+  --ifm-color-content-secondary: var(--sl-ink-2);
+  --ifm-link-color: var(--sl-laser);
+  --ifm-link-hover-color: var(--sl-laser);
+  --ifm-color-emphasis-100: var(--sl-hover);
+  --ifm-color-emphasis-200: var(--sl-line);
+  --ifm-color-emphasis-300: var(--sl-line-2);
+  --ifm-color-emphasis-400: var(--sl-line-3);
+  --ifm-color-emphasis-500: var(--sl-ink-3);
+  --ifm-color-emphasis-600: var(--sl-ink-3);
+  --ifm-color-emphasis-700: var(--sl-ink-2);
+  --ifm-color-emphasis-800: var(--sl-ink);
+  --ifm-color-emphasis-900: var(--sl-ink);
+  --ifm-font-family-base: var(--sl-f-body);
+  --ifm-heading-font-family: var(--sl-f-display);
+  --ifm-font-family-monospace: var(--sl-f-mono);
+  --ifm-heading-font-weight: 600;
+  --ifm-font-weight-semibold: 600;
+  --ifm-line-height-base: 1.7;
+  --ifm-global-radius: 4px;
+  --ifm-button-border-radius: 3px;
+  --ifm-card-border-radius: 4px;
+  --ifm-alert-border-radius: 4px;
+  --ifm-pagination-nav-border-radius: 4px;
+  --ifm-code-background: var(--sl-hover);
+  --ifm-code-font-size: 86%;
+  --ifm-code-border-radius: 3px;
+  --ifm-code-padding-horizontal: 0.38em;
+  --ifm-code-padding-vertical: 0.08em;
+  --ifm-pre-background: var(--sl-term-solid);
+  --ifm-toc-border-color: var(--sl-line);
+  --ifm-hr-border-color: var(--sl-line);
+  --ifm-table-border-color: var(--sl-line);
+  --ifm-table-stripe-background: transparent;
+  --ifm-table-head-background: var(--sl-panel-2);
+  --ifm-table-head-color: var(--sl-ink-3);
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-background-color: var(--sl-void);
+  --ifm-navbar-link-color: var(--sl-ink-2);
+  --ifm-navbar-link-hover-color: var(--sl-ink);
+  --ifm-navbar-link-active-color: var(--sl-ink);
+  --ifm-dropdown-background-color: var(--sl-panel);
+  --ifm-dropdown-link-color: var(--sl-ink-2);
+  --ifm-dropdown-hover-background-color: var(--sl-hover);
+  --ifm-menu-color: var(--sl-ink-2);
+  --ifm-menu-color-active: var(--sl-ink);
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: var(--sl-hover);
+  --ifm-tabs-color: var(--sl-ink-2);
+  --ifm-tabs-color-active: var(--sl-ink);
+  --ifm-tabs-color-active-border: var(--sl-laser);
+  --ifm-color-secondary-contrast-background: var(--sl-panel);
+  --ifm-color-secondary-contrast-foreground: var(--sl-ink);
+  --ifm-color-info-contrast-background: var(--sl-panel);
+  --ifm-color-info-contrast-foreground: var(--sl-ink);
+  --ifm-footer-background-color: var(--sl-foot-bg);
+  --docusaurus-highlighted-code-line-bg: var(--sl-exec);
+  --doc-sidebar-width: 288px;
+
+  /* Earlier site variables, kept so unconverted components follow the palette. */
+  --briosa-surface: var(--sl-panel);
+  --briosa-soft: var(--sl-deep);
+  --briosa-border: var(--sl-line-2);
+  --briosa-muted: var(--sl-ink-2);
+  --briosa-feature-background: var(--sl-foot-bg);
+  --briosa-feature-border: var(--sl-foot-line);
+  --briosa-current-text: var(--sl-st-current);
+  --briosa-current-border: color-mix(in srgb, var(--sl-st-current) 42%, transparent);
+  --briosa-current-background: color-mix(in srgb, var(--sl-st-current) 11%, transparent);
+  --briosa-next-text: var(--sl-st-next);
+  --briosa-next-border: color-mix(in srgb, var(--sl-st-next) 42%, transparent);
+  --briosa-next-background: color-mix(in srgb, var(--sl-st-next) 11%, transparent);
+  --briosa-uncommitted-text: var(--sl-st-uncommitted);
+  --briosa-uncommitted-border: color-mix(in srgb, var(--sl-st-uncommitted) 42%, transparent);
+  --briosa-uncommitted-background: color-mix(in srgb, var(--sl-st-uncommitted) 11%, transparent);
+  --briosa-excluded-text: var(--sl-st-excluded);
+  --briosa-excluded-border: color-mix(in srgb, var(--sl-st-excluded) 42%, transparent);
+  --briosa-excluded-background: color-mix(in srgb, var(--sl-st-excluded) 11%, transparent);
+  --briosa-unavailable-text: var(--sl-st-unavailable);
+  --briosa-unavailable-border: color-mix(in srgb, var(--sl-st-unavailable) 42%, transparent);
+  --briosa-unavailable-background: color-mix(in srgb, var(--sl-st-unavailable) 11%, transparent);
+}

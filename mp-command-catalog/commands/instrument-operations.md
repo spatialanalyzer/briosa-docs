@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 This page covers all 139 commands under the **Instrument Operations** root
 group in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
-  <div><span>Reviewed Commands</span><strong>139 of 139</strong></div>
+  <div><span>Reviewed Commands</span><strong>139</strong></div>
   <div><span>Current Server Operations</span><strong>136</strong></div>
+  <div><span>Uncommitted or Next</span><strong>1</strong></div>
   <div><span>Excluded or Unavailable</span><strong>2</strong></div>
 </div>
 
@@ -24,265 +25,265 @@ group in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Get Last Instrument Index" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-last-instrument-index">Get Last Instrument Index</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Last Instrument Index" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-last-instrument-index">Get Last Instrument Index</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument fixture</td></tr>
 <tr data-command="Get Last Instrument Index" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-last-instrument-index">Get Last Instrument Index</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Rename Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#rename-instrument">Rename Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Rename Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#rename-instrument">Rename Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument fixture</td></tr>
 <tr data-command="Rename Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#rename-instrument">Rename Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument ID from Name" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-instrument-id-from-name">Get Instrument ID from Name</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument ID from Name" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-instrument-id-from-name">Get Instrument ID from Name</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument fixture</td></tr>
 <tr data-command="Get Instrument ID from Name" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-id-from-name">Get Instrument ID from Name</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Model" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-instrument-model">Get Instrument Model</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Model" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#get-instrument-model">Get Instrument Model</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument fixture</td></tr>
 <tr data-command="Get Instrument Model" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-model">Get Instrument Model</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Instrument to Another Collection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#move-instrument-to-another-collection">Move Instrument to Another Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Instrument to Another Collection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-fixture"><td><a href="#move-instrument-to-another-collection">Move Instrument to Another Collection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument fixture</td></tr>
 <tr data-command="Move Instrument to Another Collection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-instrument-to-another-collection">Move Instrument to Another Collection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Save Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-configuration-file-fixture"><td><a href="#save-instrument-configuration">Save Instrument Configuration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument configuration file fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Save Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-configuration-file-fixture"><td><a href="#save-instrument-configuration">Save Instrument Configuration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument configuration file fixture</td></tr>
 <tr data-command="Save Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#save-instrument-configuration">Save Instrument Configuration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Load Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-configuration-file-fixture"><td><a href="#load-instrument-configuration">Load Instrument Configuration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument configuration file fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Load Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-configuration-file-fixture"><td><a href="#load-instrument-configuration">Load Instrument Configuration</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument configuration file fixture</td></tr>
 <tr data-command="Load Instrument Configuration" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#load-instrument-configuration">Load Instrument Configuration</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Export Instrument History to XML File" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-history-file-fixture"><td><a href="#export-instrument-history-to-xml-file">Export Instrument History to XML File</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument history file fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Export Instrument History to XML File" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-history-file-fixture"><td><a href="#export-instrument-history-to-xml-file">Export Instrument History to XML File</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument history file fixture</td></tr>
 <tr data-command="Export Instrument History to XML File" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#export-instrument-history-to-xml-file">Export Instrument History to XML File</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Point At Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pointing-instrument-fixture"><td><a href="#point-at-target">Point At Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - pointing instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Point At Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pointing-instrument-fixture"><td><a href="#point-at-target">Point At Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — pointing instrument fixture</td></tr>
 <tr data-command="Point At Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#point-at-target">Point At Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure Single Point Here" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-single-point-here">Measure Single Point Here</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure Single Point Here" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-single-point-here">Measure Single Point Here</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Measure Single Point Here" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure-single-point-here">Measure Single Point Here</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Current Instrument Position Update" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-position-fixture"><td><a href="#get-current-instrument-position-update">Get Current Instrument Position Update</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument position fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Current Instrument Position Update" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-position-fixture"><td><a href="#get-current-instrument-position-update">Get Current Instrument Position Update</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument position fixture</td></tr>
 <tr data-command="Get Current Instrument Position Update" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-current-instrument-position-update">Get Current Instrument Position Update</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="'Build' Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#build-target">'Build' Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="'Build' Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#build-target">'Build' Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="&#x27;Build&#x27; Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#build-target">&#x27;Build&#x27; Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point">Measure Existing Single Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point">Measure Existing Single Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Measure Existing Single Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure-existing-single-point">Measure Existing Single Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point (Manual Guide)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point-manual-guide">Measure Existing Single Point (Manual Guide)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point (Manual Guide)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point-manual-guide">Measure Existing Single Point (Manual Guide)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Measure Existing Single Point (Manual Guide)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure-existing-single-point-manual-guide">Measure Existing Single Point (Manual Guide)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point and Compare" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point-and-compare">Measure Existing Single Point and Compare</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure Existing Single Point and Compare" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure-existing-single-point-and-compare">Measure Existing Single Point and Compare</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Measure Existing Single Point and Compare" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure-existing-single-point-and-compare">Measure Existing Single Point and Compare</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Probe Offset Frame Online (Measure Raw Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-probe-frame-fixture"><td><a href="#set-probe-offset-frame-online-measure-raw-frame">Set Probe Offset Frame Online (Measure Raw Frame)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - 6D probe and frame fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Probe Offset Frame Online (Measure Raw Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-probe-frame-fixture"><td><a href="#set-probe-offset-frame-online-measure-raw-frame">Set Probe Offset Frame Online (Measure Raw Frame)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — 6D probe and frame fixture</td></tr>
 <tr data-command="Set Probe Offset Frame Online (Measure Raw Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-probe-offset-frame-online-measure-raw-frame">Set Probe Offset Frame Online (Measure Raw Frame)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Probe Offset Frame Offline (Select Previously Measured Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-probe-frame-fixture"><td><a href="#set-probe-offset-frame-offline-select-previously-measured-frame">Set Probe Offset Frame Offline (Select Previously Measured Frame)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - 6D probe and frame fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Probe Offset Frame Offline (Select Previously Measured Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-probe-frame-fixture"><td><a href="#set-probe-offset-frame-offline-select-previously-measured-frame">Set Probe Offset Frame Offline (Select Previously Measured Frame)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — 6D probe and frame fixture</td></tr>
 <tr data-command="Set Probe Offset Frame Offline (Select Previously Measured Frame)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-probe-offset-frame-offline-select-previously-measured-frame">Set Probe Offset Frame Offline (Select Previously Measured Frame)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Stop Active Measurement Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-active-measurement-fixture"><td><a href="#stop-active-measurement-mode">Stop Active Measurement Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - active measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Stop Active Measurement Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-active-measurement-fixture"><td><a href="#stop-active-measurement-mode">Stop Active Measurement Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — active measurement fixture</td></tr>
 <tr data-command="Stop Active Measurement Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#stop-active-measurement-mode">Stop Active Measurement Mode</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Enable/Disable Frame Set Scan Mode (All Instruments)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-frame-set-scan-mode-all-instruments">Enable/Disable Frame Set Scan Mode (All Instruments)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-capable instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Frame Set Scan Mode (All Instruments)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-frame-set-scan-mode-all-instruments">Enable/Disable Frame Set Scan Mode (All Instruments)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-capable instrument fixture</td></tr>
 <tr data-command="Enable/Disable Frame Set Scan Mode (All Instruments)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-frame-set-scan-mode-all-instruments">Enable/Disable Frame Set Scan Mode (All Instruments)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Enable/Disable Frame Set Scan Mode (By Instrument)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-frame-set-scan-mode-by-instrument">Enable/Disable Frame Set Scan Mode (By Instrument)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-capable instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Frame Set Scan Mode (By Instrument)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-frame-set-scan-mode-by-instrument">Enable/Disable Frame Set Scan Mode (By Instrument)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-capable instrument fixture</td></tr>
 <tr data-command="Enable/Disable Frame Set Scan Mode (By Instrument)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-frame-set-scan-mode-by-instrument">Enable/Disable Frame Set Scan Mode (By Instrument)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Enable/Disable Point Set Scan Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-point-set-scan-mode">Enable/Disable Point Set Scan Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-capable instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Enable/Disable Point Set Scan Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-capable-instrument-fixture"><td><a href="#enabledisable-point-set-scan-mode">Enable/Disable Point Set Scan Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-capable instrument fixture</td></tr>
 <tr data-command="Enable/Disable Point Set Scan Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#enabledisable-point-set-scan-mode">Enable/Disable Point Set Scan Mode</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add New Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-type-fixture"><td><a href="#add-new-instrument">Add New Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument-type fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add New Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-type-fixture"><td><a href="#add-new-instrument">Add New Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument-type fixture</td></tr>
 <tr data-command="Add New Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-new-instrument">Add New Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-instrument-fixture"><td><a href="#delete-instrument">Delete Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-instrument-fixture"><td><a href="#delete-instrument">Delete Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive instrument fixture</td></tr>
 <tr data-command="Delete Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-instrument">Delete Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#delete-measurements">Delete Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#delete-measurements">Delete Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive measurement fixture</td></tr>
 <tr data-command="Delete Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-measurements">Delete Measurements</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#delete-measurement-observation">Delete Measurement Observation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Delete Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#delete-measurement-observation">Delete Measurement Observation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive measurement fixture</td></tr>
 <tr data-command="Delete Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-measurement-observation">Delete Measurement Observation</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#move-measurement-observation">Move Measurement Observation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-destructive-measurement-fixture"><td><a href="#move-measurement-observation">Move Measurement Observation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive measurement fixture</td></tr>
 <tr data-command="Move Measurement Observation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-measurement-observation">Move Measurement Observation</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Initiate Servo-Guide" data-group="Instrument Operations" data-status="current" data-validation="at-risk-servo-instrument-fixture"><td><a href="#initiate-servo-guide">Initiate Servo-Guide</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - servo instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Initiate Servo-Guide" data-group="Instrument Operations" data-status="current" data-validation="at-risk-servo-instrument-fixture"><td><a href="#initiate-servo-guide">Initiate Servo-Guide</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — servo instrument fixture</td></tr>
 <tr data-command="Initiate Servo-Guide" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#initiate-servo-guide">Initiate Servo-Guide</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start Theodolite Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-theodolite-interface-fixture"><td><a href="#start-theodolite-interface">Start Theodolite Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - theodolite interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start Theodolite Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-theodolite-interface-fixture"><td><a href="#start-theodolite-interface">Start Theodolite Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — theodolite interface fixture</td></tr>
 <tr data-command="Start Theodolite Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-theodolite-interface">Start Theodolite Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#start-instrument-interface">Start Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#start-instrument-interface">Start Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Start Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-instrument-interface">Start Instrument Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Stop Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#stop-instrument-interface">Stop Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Stop Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#stop-instrument-interface">Stop Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Stop Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#stop-instrument-interface">Stop Instrument Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Activate/Deactivate Instrument Toolbar" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#activatedeactivate-instrument-toolbar">Activate/Deactivate Instrument Toolbar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Activate/Deactivate Instrument Toolbar" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#activatedeactivate-instrument-toolbar">Activate/Deactivate Instrument Toolbar</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Activate/Deactivate Instrument Toolbar" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#activatedeactivate-instrument-toolbar">Activate/Deactivate Instrument Toolbar</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Verify Instrument Connection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-connected-instrument-fixture"><td><a href="#verify-instrument-connection">Verify Instrument Connection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - connected instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Verify Instrument Connection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-connected-instrument-fixture"><td><a href="#verify-instrument-connection">Verify Instrument Connection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — connected instrument fixture</td></tr>
 <tr data-command="Verify Instrument Connection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#verify-instrument-connection">Verify Instrument Connection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Configure and Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#configure-and-measure">Configure and Measure</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Configure and Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#configure-and-measure">Configure and Measure</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Configure and Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#configure-and-measure">Configure and Measure</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure">Measure</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-fixture"><td><a href="#measure">Measure</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement fixture</td></tr>
 <tr data-command="Measure" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure">Measure</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set XYZ Reference Frame Instrument Base Anchor Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-reference-frame-instrument-fixture"><td><a href="#set-xyz-reference-frame-instrument-base-anchor-frame">Set XYZ Reference Frame Instrument Base Anchor Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - XYZ reference-frame instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set XYZ Reference Frame Instrument Base Anchor Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-reference-frame-instrument-fixture"><td><a href="#set-xyz-reference-frame-instrument-base-anchor-frame">Set XYZ Reference Frame Instrument Base Anchor Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — XYZ reference-frame instrument fixture</td></tr>
 <tr data-command="Set XYZ Reference Frame Instrument Base Anchor Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-xyz-reference-frame-instrument-base-anchor-frame">Set XYZ Reference Frame Instrument Base Anchor Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Dock Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#dock-instrument-interface">Dock Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Dock Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#dock-instrument-interface">Dock Instrument Interface</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Dock Instrument Interface" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#dock-instrument-interface">Dock Instrument Interface</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Ref. Tie-In)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-location-fixture"><td><a href="#locate-instrument-ref-tie-in">Locate Instrument (Ref. Tie-In)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument location fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Ref. Tie-In)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-location-fixture"><td><a href="#locate-instrument-ref-tie-in">Locate Instrument (Ref. Tie-In)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument location fixture</td></tr>
 <tr data-command="Locate Instrument (Ref. Tie-In)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-instrument-ref-tie-in">Locate Instrument (Ref. Tie-In)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Group to Surface Quick Fit)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-surface-fit-fixture"><td><a href="#locate-instrument-group-to-surface-quick-fit">Locate Instrument (Group to Surface Quick Fit)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument and surface-fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Group to Surface Quick Fit)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-surface-fit-fixture"><td><a href="#locate-instrument-group-to-surface-quick-fit">Locate Instrument (Group to Surface Quick Fit)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument and surface-fit fixture</td></tr>
 <tr data-command="Locate Instrument (Group to Surface Quick Fit)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-instrument-group-to-surface-quick-fit">Locate Instrument (Group to Surface Quick Fit)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Multi Measurement Initiate" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-measurement-fixture"><td><a href="#multi-measurement-initiate">Multi Measurement Initiate</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - multi-instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Multi Measurement Initiate" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-measurement-fixture"><td><a href="#multi-measurement-initiate">Multi Measurement Initiate</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — multi-instrument measurement fixture</td></tr>
 <tr data-command="Multi Measurement Initiate" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#multi-measurement-initiate">Multi Measurement Initiate</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Multi Measurement Stop" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-measurement-fixture"><td><a href="#multi-measurement-stop">Multi Measurement Stop</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - multi-instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Multi Measurement Stop" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-measurement-fixture"><td><a href="#multi-measurement-stop">Multi Measurement Stop</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — multi-instrument measurement fixture</td></tr>
 <tr data-command="Multi Measurement Stop" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#multi-measurement-stop">Multi Measurement Stop</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Align Laser Projector" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-projector-fixture"><td><a href="#align-laser-projector">Align Laser Projector</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-projector fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Align Laser Projector" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-projector-fixture"><td><a href="#align-laser-projector">Align Laser Projector</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-projector fixture</td></tr>
 <tr data-command="Align Laser Projector" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#align-laser-projector">Align Laser Projector</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Instruments (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-usmn-instrument-network-fixture"><td><a href="#locate-instruments-usmn">Locate Instruments (USMN)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - USMN instrument-network fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Instruments (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-usmn-instrument-network-fixture"><td><a href="#locate-instruments-usmn">Locate Instruments (USMN)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — USMN instrument-network fixture</td></tr>
 <tr data-command="Locate Instruments (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-instruments-usmn">Locate Instruments (USMN)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Templated Instruments (USMN)" data-group="Instrument Operations" data-status="uncommitted" data-validation="unverified-sdk-usmn-template-list-binding"><td><a href="#locate-templated-instruments-usmn">Locate Templated Instruments (USMN)</a></td><td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td><td>Unverified SDK binding - USMN template list</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Templated Instruments (USMN)" data-group="Instrument Operations" data-status="uncommitted" data-validation="unverified-sdk-usmn-template-list-binding"><td><a href="#locate-templated-instruments-usmn">Locate Templated Instruments (USMN)</a></td><td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td><td>Unverified SDK binding — USMN template list</td></tr>
 <tr data-command="Locate Templated Instruments (USMN)" data-group="Instrument Operations" data-status="uncommitted" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-templated-instruments-usmn">Locate Templated Instruments (USMN)</a></td>
   <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Create Templated Instrument (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-usmn-template-fixture"><td><a href="#create-templated-instrument-usmn">Create Templated Instrument (USMN)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - USMN template fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Create Templated Instrument (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-usmn-template-fixture"><td><a href="#create-templated-instrument-usmn">Create Templated Instrument (USMN)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — USMN template fixture</td></tr>
 <tr data-command="Create Templated Instrument (USMN)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-templated-instrument-usmn">Create Templated Instrument (USMN)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -300,79 +301,79 @@ group in SA 2026.1.0529.7.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Best Fit - Group to Group)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-best-fit-fixture"><td><a href="#locate-instrument-best-fit---group-to-group">Locate Instrument (Best Fit - Group to Group)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument best-fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Best Fit - Group to Group)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-best-fit-fixture"><td><a href="#locate-instrument-best-fit---group-to-group">Locate Instrument (Best Fit - Group to Group)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument best-fit fixture</td></tr>
 <tr data-command="Locate Instrument (Best Fit - Group to Group)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-instrument-best-fit---group-to-group">Locate Instrument (Best Fit - Group to Group)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Best Fit - Nominal Geometry)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-best-fit-fixture"><td><a href="#locate-instrument-best-fit---nominal-geometry">Locate Instrument (Best Fit - Nominal Geometry)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument best-fit fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Locate Instrument (Best Fit - Nominal Geometry)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-best-fit-fixture"><td><a href="#locate-instrument-best-fit---nominal-geometry">Locate Instrument (Best Fit - Nominal Geometry)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument best-fit fixture</td></tr>
 <tr data-command="Locate Instrument (Best Fit - Nominal Geometry)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#locate-instrument-best-fit---nominal-geometry">Locate Instrument (Best Fit - Nominal Geometry)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#get-instrument-transform">Get Instrument Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument transform fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#get-instrument-transform">Get Instrument Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument transform fixture</td></tr>
 <tr data-command="Get Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-transform">Get Instrument Transform</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#set-instrument-transform">Set Instrument Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument transform fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#set-instrument-transform">Set Instrument Transform</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument transform fixture</td></tr>
 <tr data-command="Set Instrument Transform" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-transform">Set Instrument Transform</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tracker-edm-uncertainty-fixture"><td><a href="#get-trackeredm-theodolite-uncertainties">Get Tracker/EDM Theodolite Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Tracker/EDM uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tracker-edm-uncertainty-fixture"><td><a href="#get-trackeredm-theodolite-uncertainties">Get Tracker/EDM Theodolite Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Tracker/EDM uncertainty fixture</td></tr>
 <tr data-command="Get Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-trackeredm-theodolite-uncertainties">Get Tracker/EDM Theodolite Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tracker-edm-uncertainty-fixture"><td><a href="#set-trackeredm-theodolite-uncertainties">Set Tracker/EDM Theodolite Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - Tracker/EDM uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tracker-edm-uncertainty-fixture"><td><a href="#set-trackeredm-theodolite-uncertainties">Set Tracker/EDM Theodolite Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — Tracker/EDM uncertainty fixture</td></tr>
 <tr data-command="Set Tracker/EDM Theodolite Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-trackeredm-theodolite-uncertainties">Set Tracker/EDM Theodolite Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pcmm-uncertainty-fixture"><td><a href="#get-pcmm-instrument-xyz-uncertainties">Get PCMM Instrument XYZ Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - PCMM uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pcmm-uncertainty-fixture"><td><a href="#get-pcmm-instrument-xyz-uncertainties">Get PCMM Instrument XYZ Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — PCMM uncertainty fixture</td></tr>
 <tr data-command="Get PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-pcmm-instrument-xyz-uncertainties">Get PCMM Instrument XYZ Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pcmm-uncertainty-fixture"><td><a href="#set-pcmm-instrument-xyz-uncertainties">Set PCMM Instrument XYZ Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - PCMM uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-pcmm-uncertainty-fixture"><td><a href="#set-pcmm-instrument-xyz-uncertainties">Set PCMM Instrument XYZ Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — PCMM uncertainty fixture</td></tr>
 <tr data-command="Set PCMM Instrument XYZ Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-pcmm-instrument-xyz-uncertainties">Set PCMM Instrument XYZ Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-instrument-uncertainty-fixture"><td><a href="#get-xyz-instrument-uncertainties">Get XYZ Instrument Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - XYZ instrument uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-instrument-uncertainty-fixture"><td><a href="#get-xyz-instrument-uncertainties">Get XYZ Instrument Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — XYZ instrument uncertainty fixture</td></tr>
 <tr data-command="Get XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-xyz-instrument-uncertainties">Get XYZ Instrument Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-instrument-uncertainty-fixture"><td><a href="#set-xyz-instrument-uncertainties">Set XYZ Instrument Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - XYZ instrument uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-xyz-instrument-uncertainty-fixture"><td><a href="#set-xyz-instrument-uncertainties">Set XYZ Instrument Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — XYZ instrument uncertainty fixture</td></tr>
 <tr data-command="Set XYZ Instrument Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-xyz-instrument-uncertainties">Set XYZ Instrument Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-weather-fixture"><td><a href="#get-instrument-weather-setting">Get Instrument Weather Setting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument weather fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-weather-fixture"><td><a href="#get-instrument-weather-setting">Get Instrument Weather Setting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument weather fixture</td></tr>
 <tr data-command="Get Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-weather-setting">Get Instrument Weather Setting</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-weather-fixture"><td><a href="#set-instrument-weather-setting">Set Instrument Weather Setting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument weather fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-weather-fixture"><td><a href="#set-instrument-weather-setting">Set Instrument Weather Setting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument weather fixture</td></tr>
 <tr data-command="Set Instrument Weather Setting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-weather-setting">Set Instrument Weather Setting</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Part Temperature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-temperature-fixture"><td><a href="#get-instrument-part-temperature">Get Instrument Part Temperature</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument temperature fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Part Temperature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-temperature-fixture"><td><a href="#get-instrument-part-temperature">Get Instrument Part Temperature</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument temperature fixture</td></tr>
 <tr data-command="Get Instrument Part Temperature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-part-temperature">Get Instrument Part Temperature</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -384,450 +385,450 @@ group in SA 2026.1.0529.7.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>Evidence review — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set (multiply) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#set-multiply-instrument-scale-factor-caution">Set (multiply) Instrument Scale Factor (CAUTION!)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument scale fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set (multiply) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#set-multiply-instrument-scale-factor-caution">Set (multiply) Instrument Scale Factor (CAUTION!)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument scale fixture</td></tr>
 <tr data-command="Set (multiply) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-multiply-instrument-scale-factor-caution">Set (multiply) Instrument Scale Factor (CAUTION!)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set (absolute) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#set-absolute-instrument-scale-factor-caution">Set (absolute) Instrument Scale Factor (CAUTION!)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument scale fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set (absolute) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#set-absolute-instrument-scale-factor-caution">Set (absolute) Instrument Scale Factor (CAUTION!)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument scale fixture</td></tr>
 <tr data-command="Set (absolute) Instrument Scale Factor (CAUTION!)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-absolute-instrument-scale-factor-caution">Set (absolute) Instrument Scale Factor (CAUTION!)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Scale Factor" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#get-instrument-scale-factor">Get Instrument Scale Factor</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument scale fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Scale Factor" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-scale-fixture"><td><a href="#get-instrument-scale-factor">Get Instrument Scale Factor</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument scale fixture</td></tr>
 <tr data-command="Get Instrument Scale Factor" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-scale-factor">Get Instrument Scale Factor</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Transform Instrument - Frame To Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-instrument---frame-to-frame">Transform Instrument - Frame To Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument transform fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Transform Instrument - Frame To Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-instrument---frame-to-frame">Transform Instrument - Frame To Frame</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument transform fixture</td></tr>
 <tr data-command="Transform Instrument - Frame To Frame" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#transform-instrument---frame-to-frame">Transform Instrument - Frame To Frame</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Transform Instrument by Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-instrument-by-delta">Transform Instrument by Delta</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument transform fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Transform Instrument by Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-instrument-by-delta">Transform Instrument by Delta</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument transform fixture</td></tr>
 <tr data-command="Transform Instrument by Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#transform-instrument-by-delta">Transform Instrument by Delta</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Transform Multiple Instruments By Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-multiple-instruments-by-delta">Transform Multiple Instruments By Delta</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument transform fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Transform Multiple Instruments By Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-transform-fixture"><td><a href="#transform-multiple-instruments-by-delta">Transform Multiple Instruments By Delta</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument transform fixture</td></tr>
 <tr data-command="Transform Multiple Instruments By Delta" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#transform-multiple-instruments-by-delta">Transform Multiple Instruments By Delta</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Instrument Operational Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-operational-check-fixture"><td><a href="#instrument-operational-check">Instrument Operational Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument operational-check fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Instrument Operational Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-operational-check-fixture"><td><a href="#instrument-operational-check">Instrument Operational Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument operational-check fixture</td></tr>
 <tr data-command="Instrument Operational Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#instrument-operational-check">Instrument Operational Check</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Number of Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-number-of-observations-on-target">Get Number of Observations on Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Number of Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-number-of-observations-on-target">Get Number of Observations on Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Get Number of Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-number-of-observations-on-target">Get Number of Observations on Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instruments with Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-instruments-with-observations-on-target">Get Instruments with Observations on Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instruments with Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-instruments-with-observations-on-target">Get Instruments with Observations on Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Get Instruments with Observations on Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instruments-with-observations-on-target">Get Instruments with Observations on Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Targets Measured by Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-targets-measured-by-instrument">Get Targets Measured by Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Targets Measured by Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-targets-measured-by-instrument">Get Targets Measured by Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Get Targets Measured by Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-targets-measured-by-instrument">Get Targets Measured by Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Observation Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-status">Set Observation Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Observation Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-status">Set Observation Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Set Observation Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-observation-status">Set Observation Status</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Observation Info" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-observation-info">Get Observation Info</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Observation Info" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#get-observation-info">Get Observation Info</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Get Observation Info" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-observation-info">Get Observation Info</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Fabricate Observations" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#fabricate-observations">Fabricate Observations</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Fabricate Observations" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#fabricate-observations">Fabricate Observations</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Fabricate Observations" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#fabricate-observations">Fabricate Observations</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Obscured Points from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-visibility-fixture"><td><a href="#get-obscured-points-from-instrument">Get Obscured Points from Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument visibility fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Obscured Points from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-visibility-fixture"><td><a href="#get-obscured-points-from-instrument">Get Obscured Points from Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument visibility fixture</td></tr>
 <tr data-command="Get Obscured Points from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-obscured-points-from-instrument">Get Obscured Points from Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Targets and Mode/Profiles" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-mode-profile-fixture"><td><a href="#get-instrument-targets-and-modeprofiles">Get Instrument Targets and Mode/Profiles</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument mode/profile fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Targets and Mode/Profiles" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-mode-profile-fixture"><td><a href="#get-instrument-targets-and-modeprofiles">Get Instrument Targets and Mode/Profiles</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument mode/profile fixture</td></tr>
 <tr data-command="Get Instrument Targets and Mode/Profiles" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-targets-and-modeprofiles">Get Instrument Targets and Mode/Profiles</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Measurement Mode/Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-mode-profile-fixture"><td><a href="#set-instrument-measurement-modeprofile">Set Instrument Measurement Mode/Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument mode/profile fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Measurement Mode/Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-mode-profile-fixture"><td><a href="#set-instrument-measurement-modeprofile">Set Instrument Measurement Mode/Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument mode/profile fixture</td></tr>
 <tr data-command="Set Instrument Measurement Mode/Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-measurement-modeprofile">Set Instrument Measurement Mode/Profile</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Group and Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#set-instrument-group-and-target">Set Instrument Group and Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement-configuration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Group and Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#set-instrument-group-and-target">Set Instrument Group and Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement-configuration fixture</td></tr>
 <tr data-command="Set Instrument Group and Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-group-and-target">Set Instrument Group and Target</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Targeting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#set-instrument-targeting">Set Instrument Targeting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement-configuration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Targeting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#set-instrument-targeting">Set Instrument Targeting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement-configuration fixture</td></tr>
 <tr data-command="Set Instrument Targeting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-targeting">Set Instrument Targeting</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Measurement Mode/Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-measurement-modeprofile">Get Instrument Measurement Mode/Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement-configuration fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Group and Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-group-and-target">Get Instrument Group and Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement-configuration fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Targeting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-targeting">Get Instrument Targeting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument measurement-configuration fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set Target Computation Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-target-computation-fixture"><td><a href="#set-target-computation-options">Set Target Computation Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - target-computation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Measurement Mode/Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-measurement-modeprofile">Get Instrument Measurement Mode/Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement-configuration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Group and Target" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-group-and-target">Get Instrument Group and Target</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement-configuration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Targeting" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-measurement-configuration-fixture"><td><a href="#get-instrument-targeting">Get Instrument Targeting</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument measurement-configuration fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Target Computation Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-target-computation-fixture"><td><a href="#set-target-computation-options">Set Target Computation Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — target-computation fixture</td></tr>
 <tr data-command="Set Target Computation Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-target-computation-options">Set Target Computation Options</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Observation Mirror Cube Shot Face" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-mirror-cube-shot-face">Set Observation Mirror Cube Shot Face</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Observation Mirror Cube Shot Face" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-mirror-cube-shot-face">Set Observation Mirror Cube Shot Face</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Set Observation Mirror Cube Shot Face" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-observation-mirror-cube-shot-face">Set Observation Mirror Cube Shot Face</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Observation Collimation Shot Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-collimation-shot-options">Set Observation Collimation Shot Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument observation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Observation Collimation Shot Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-observation-fixture"><td><a href="#set-observation-collimation-shot-options">Set Observation Collimation Shot Options</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument observation fixture</td></tr>
 <tr data-command="Set Observation Collimation Shot Options" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-observation-collimation-shot-options">Set Observation Collimation Shot Options</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Collimation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-collimation-fixture"><td><a href="#collimation">Collimation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - multi-instrument collimation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Collimation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-multi-instrument-collimation-fixture"><td><a href="#collimation">Collimation</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — multi-instrument collimation fixture</td></tr>
 <tr data-command="Collimation" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#collimation">Collimation</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Target Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-tracker-target-fixture"><td><a href="#get-instrument-target-status">Get Instrument Target Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-tracker target fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Target Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-tracker-target-fixture"><td><a href="#get-instrument-target-status">Get Instrument Target Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-tracker target fixture</td></tr>
 <tr data-command="Get Instrument Target Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-target-status">Get Instrument Target Status</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Surface Face List from Point Proximity" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cad-surface-perimeter-fixture"><td><a href="#make-surface-face-list-from-point-proximity">Make Surface Face List from Point Proximity</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - CAD surface and perimeter fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Surface Face List from Point Proximity" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cad-surface-perimeter-fixture"><td><a href="#make-surface-face-list-from-point-proximity">Make Surface Face List from Point Proximity</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — CAD surface and perimeter fixture</td></tr>
 <tr data-command="Make Surface Face List from Point Proximity" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-surface-face-list-from-point-proximity">Make Surface Face List from Point Proximity</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Scan within perimeter" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#scan-within-perimeter">Scan within perimeter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-perimeter instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Scan within perimeter" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#scan-within-perimeter">Scan within perimeter</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-perimeter instrument fixture</td></tr>
 <tr data-command="Scan within perimeter" data-group="Instrument Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
   <td><a href="#scan-within-perimeter">Scan within perimeter</a></td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Edit Scan Perimeter Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#edit-scan-perimeter-profile">Edit Scan Perimeter Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-perimeter instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Edit Scan Perimeter Profile" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#edit-scan-perimeter-profile">Edit Scan Perimeter Profile</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-perimeter instrument fixture</td></tr>
 <tr data-command="Edit Scan Perimeter Profile" data-group="Instrument Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
   <td><a href="#edit-scan-perimeter-profile">Edit Scan Perimeter Profile</a></td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Estimated Scan Time" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#get-estimated-scan-time">Get Estimated Scan Time</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-perimeter instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Estimated Scan Time" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#get-estimated-scan-time">Get Estimated Scan Time</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-perimeter instrument fixture</td></tr>
 <tr data-command="Get Estimated Scan Time" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-estimated-scan-time">Get Estimated Scan Time</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Perimeters from Surface Face List" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cad-surface-perimeter-fixture"><td><a href="#construct-perimeters-from-surface-face-list">Construct Perimeters from Surface Face List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - CAD surface and perimeter fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Perimeters from Surface Face List" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cad-surface-perimeter-fixture"><td><a href="#construct-perimeters-from-surface-face-list">Construct Perimeters from Surface Face List</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — CAD surface and perimeter fixture</td></tr>
 <tr data-command="Construct Perimeters from Surface Face List" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-perimeters-from-surface-face-list">Construct Perimeters from Surface Face List</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Scan CAD Faces" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#scan-cad-faces">Scan CAD Faces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - scan-perimeter instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Scan CAD Faces" data-group="Instrument Operations" data-status="current" data-validation="at-risk-scan-perimeter-instrument-fixture"><td><a href="#scan-cad-faces">Scan CAD Faces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — scan-perimeter instrument fixture</td></tr>
 <tr data-command="Scan CAD Faces" data-group="Instrument Operations" data-status="sdk-unavailable" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
   <td><a href="#scan-cad-faces">Scan CAD Faces</a></td>
   <td><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Edge Scan Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-scan-fixture"><td><a href="#edge-scan-measurement">Edge Scan Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-radar scan fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Edge Scan Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-scan-fixture"><td><a href="#edge-scan-measurement">Edge Scan Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-radar scan fixture</td></tr>
 <tr data-command="Edge Scan Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#edge-scan-measurement">Edge Scan Measurement</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Track Tape Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-scan-fixture"><td><a href="#track-tape-measurement">Track Tape Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-radar scan fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Track Tape Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-scan-fixture"><td><a href="#track-tape-measurement">Track Tape Measurement</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-radar scan fixture</td></tr>
 <tr data-command="Track Tape Measurement" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#track-tape-measurement">Track Tape Measurement</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto Measure Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-points">Auto Measure Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - automatic-measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto Measure Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-points">Auto Measure Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — automatic-measurement fixture</td></tr>
 <tr data-command="Auto Measure Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-measure-points">Auto Measure Points</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Measure Vectors" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-vectors">Auto-Measure Vectors</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - automatic-measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Measure Vectors" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-vectors">Auto-Measure Vectors</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — automatic-measurement fixture</td></tr>
 <tr data-command="Auto-Measure Vectors" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-measure-vectors">Auto-Measure Vectors</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Measure Surface Vector Intersections" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-surface-vector-intersections">Auto-Measure Surface Vector Intersections</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - automatic-measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Measure Surface Vector Intersections" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-surface-vector-intersections">Auto-Measure Surface Vector Intersections</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — automatic-measurement fixture</td></tr>
 <tr data-command="Auto-Measure Surface Vector Intersections" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-measure-surface-vector-intersections">Auto-Measure Surface Vector Intersections</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Measure Specified Geometry" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-specified-geometry">Auto-Measure Specified Geometry</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - automatic-measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Measure Specified Geometry" data-group="Instrument Operations" data-status="current" data-validation="at-risk-automatic-measurement-fixture"><td><a href="#auto-measure-specified-geometry">Auto-Measure Specified Geometry</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — automatic-measurement fixture</td></tr>
 <tr data-command="Auto-Measure Specified Geometry" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-measure-specified-geometry">Auto-Measure Specified Geometry</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Measure Batch of Features" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gr-feature-measurement-fixture"><td><a href="#auto-measure-batch-of-features">Auto-Measure Batch of Features</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GR-feature measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Measure Batch of Features" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gr-feature-measurement-fixture"><td><a href="#auto-measure-batch-of-features">Auto-Measure Batch of Features</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GR-feature measurement fixture</td></tr>
 <tr data-command="Auto-Measure Batch of Features" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-measure-batch-of-features">Auto-Measure Batch of Features</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Correspond Closest Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#auto-correspond-closest-point">Auto-Correspond Closest Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - auto-correspond fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Correspond Closest Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#auto-correspond-closest-point">Auto-Correspond Closest Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — auto-correspond fixture</td></tr>
 <tr data-command="Auto-Correspond Closest Point" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-correspond-closest-point">Auto-Correspond Closest Point</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Close Auto-Correspond Closest Point Dialog" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#close-auto-correspond-closest-point-dialog">Close Auto-Correspond Closest Point Dialog</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - auto-correspond fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Close Auto-Correspond Closest Point Dialog" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#close-auto-correspond-closest-point-dialog">Close Auto-Correspond Closest Point Dialog</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — auto-correspond fixture</td></tr>
 <tr data-command="Close Auto-Correspond Closest Point Dialog" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#close-auto-correspond-closest-point-dialog">Close Auto-Correspond Closest Point Dialog</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Auto-Correspond with Proximity Trigger" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#auto-correspond-with-proximity-trigger">Auto-Correspond with Proximity Trigger</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - auto-correspond fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Auto-Correspond with Proximity Trigger" data-group="Instrument Operations" data-status="current" data-validation="at-risk-auto-correspond-fixture"><td><a href="#auto-correspond-with-proximity-trigger">Auto-Correspond with Proximity Trigger</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — auto-correspond fixture</td></tr>
 <tr data-command="Auto-Correspond with Proximity Trigger" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#auto-correspond-with-proximity-trigger">Auto-Correspond with Proximity Trigger</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Mirror from Plane" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-mirror-fixture"><td><a href="#construct-mirror-from-plane">Construct Mirror from Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-radar mirror fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Mirror from Plane" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-mirror-fixture"><td><a href="#construct-mirror-from-plane">Construct Mirror from Plane</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-radar mirror fixture</td></tr>
 <tr data-command="Construct Mirror from Plane" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-mirror-from-plane">Construct Mirror from Plane</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Mirror from Two Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-mirror-fixture"><td><a href="#construct-mirror-from-two-points">Construct Mirror from Two Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-radar mirror fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Mirror from Two Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-mirror-fixture"><td><a href="#construct-mirror-from-two-points">Construct Mirror from Two Points</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-radar mirror fixture</td></tr>
 <tr data-command="Construct Mirror from Two Points" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-mirror-from-two-points">Construct Mirror from Two Points</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Drift Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-drift-check-fixture"><td><a href="#drift-check">Drift Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument drift-check fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Drift Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-drift-check-fixture"><td><a href="#drift-check">Drift Check</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument drift-check fixture</td></tr>
 <tr data-command="Drift Check" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#drift-check">Drift Check</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Measure Nominal Feature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-feature-measurement-fixture"><td><a href="#measure-nominal-feature">Measure Nominal Feature</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - laser-radar feature-measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Measure Nominal Feature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-laser-radar-feature-measurement-fixture"><td><a href="#measure-nominal-feature">Measure Nominal Feature</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — laser-radar feature-measurement fixture</td></tr>
 <tr data-command="Measure Nominal Feature" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#measure-nominal-feature">Measure Nominal Feature</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Guide Objects in 6D based on Point Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-guidance-fixture"><td><a href="#guide-objects-in-6d-based-on-point-measurements">Guide Objects in 6D based on Point Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - 6D guidance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Guide Objects in 6D based on Point Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-guidance-fixture"><td><a href="#guide-objects-in-6d-based-on-point-measurements">Guide Objects in 6D based on Point Measurements</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — 6D guidance fixture</td></tr>
 <tr data-command="Guide Objects in 6D based on Point Measurements" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#guide-objects-in-6d-based-on-point-measurements">Guide Objects in 6D based on Point Measurements</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Move Objects in 6D using Instrument Updates" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-guidance-fixture"><td><a href="#move-objects-in-6d-using-instrument-updates">Move Objects in 6D using Instrument Updates</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - 6D guidance fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Move Objects in 6D using Instrument Updates" data-group="Instrument Operations" data-status="current" data-validation="at-risk-6d-guidance-fixture"><td><a href="#move-objects-in-6d-using-instrument-updates">Move Objects in 6D using Instrument Updates</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — 6D guidance fixture</td></tr>
 <tr data-command="Move Objects in 6D using Instrument Updates" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#move-objects-in-6d-using-instrument-updates">Move Objects in 6D using Instrument Updates</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Align Two Targets with Axis (WCF - X)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-axis-alignment-fixture"><td><a href="#align-two-targets-with-axis-wcf---x">Align Two Targets with Axis (WCF - X)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument axis-alignment fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Align Two Targets with Axis (WCF - X)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-axis-alignment-fixture"><td><a href="#align-two-targets-with-axis-wcf---x">Align Two Targets with Axis (WCF - X)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument axis-alignment fixture</td></tr>
 <tr data-command="Align Two Targets with Axis (WCF - X)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#align-two-targets-with-axis-wcf---x">Align Two Targets with Axis (WCF - X)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#get-instrument-interface-response-timeout">Get Instrument Interface Response Timeout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#get-instrument-interface-response-timeout">Get Instrument Interface Response Timeout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Get Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-interface-response-timeout">Get Instrument Interface Response Timeout</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#set-instrument-interface-response-timeout">Set Instrument Interface Response Timeout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument interface fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-interface-fixture"><td><a href="#set-instrument-interface-response-timeout">Set Instrument Interface Response Timeout</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument interface fixture</td></tr>
 <tr data-command="Set Instrument Interface Response Timeout" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-interface-response-timeout">Set Instrument Interface Response Timeout</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Current Trapping Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-trapping-fixture"><td><a href="#get-current-trapping-status">Get Current Trapping Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - trapping fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Current Trapping Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-trapping-fixture"><td><a href="#get-current-trapping-status">Get Current Trapping Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — trapping fixture</td></tr>
 <tr data-command="Get Current Trapping Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-current-trapping-status">Get Current Trapping Status</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Wait For Trapping To Complete" data-group="Instrument Operations" data-status="current" data-validation="at-risk-trapping-fixture"><td><a href="#wait-for-trapping-to-complete">Wait For Trapping To Complete</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - trapping fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Wait For Trapping To Complete" data-group="Instrument Operations" data-status="current" data-validation="at-risk-trapping-fixture"><td><a href="#wait-for-trapping-to-complete">Wait For Trapping To Complete</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — trapping fixture</td></tr>
 <tr data-command="Wait For Trapping To Complete" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#wait-for-trapping-to-complete">Wait For Trapping To Complete</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Jump Instrument To New Location" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-relocation-fixture"><td><a href="#jump-instrument-to-new-location">Jump Instrument To New Location</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument relocation fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Jump Instrument To New Location" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-relocation-fixture"><td><a href="#jump-instrument-to-new-location">Jump Instrument To New Location</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument relocation fixture</td></tr>
 <tr data-command="Jump Instrument To New Location" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#jump-instrument-to-new-location">Jump Instrument To New Location</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Quick Align" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-cad-alignment-fixture"><td><a href="#quick-align">Quick Align</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument/CAD alignment fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Quick Align" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-cad-alignment-fixture"><td><a href="#quick-align">Quick Align</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument/CAD alignment fixture</td></tr>
 <tr data-command="Quick Align" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#quick-align">Quick Align</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Align Cloud to CAD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cloud-cad-alignment-fixture"><td><a href="#align-cloud-to-cad">Align Cloud to CAD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - cloud/CAD alignment fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Align Cloud to CAD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-cloud-cad-alignment-fixture"><td><a href="#align-cloud-to-cad">Align Cloud to CAD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — cloud/CAD alignment fixture</td></tr>
 <tr data-command="Align Cloud to CAD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#align-cloud-to-cad">Align Cloud to CAD</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection Design" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection-design">Start GD&amp;T Inspection Design</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection Design" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection-design">Start GD&amp;T Inspection Design</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
 <tr data-command="Start GD&amp;T Inspection Design" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-gdt-inspection-design">Start GD&amp;T Inspection Design</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection Rehearse" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection-rehearse">Start GD&amp;T Inspection Rehearse</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection Rehearse" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection-rehearse">Start GD&amp;T Inspection Rehearse</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
 <tr data-command="Start GD&amp;T Inspection Rehearse" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-gdt-inspection-rehearse">Start GD&amp;T Inspection Rehearse</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection">Start GD&amp;T Inspection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Start GD&amp;T Inspection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#start-gdt-inspection">Start GD&amp;T Inspection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
 <tr data-command="Start GD&amp;T Inspection" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#start-gdt-inspection">Start GD&amp;T Inspection</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Inspection Verification Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#get-inspection-verification-mode">Get Inspection Verification Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set Inspection Verification Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#set-inspection-verification-mode">Set Inspection Verification Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set Remeasure Failed Checks Only" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#set-remeasure-failed-checks-only">Set Remeasure Failed Checks Only</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - GD&amp;T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Inspection Verification Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#get-inspection-verification-mode">Get Inspection Verification Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Inspection Verification Mode" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#set-inspection-verification-mode">Set Inspection Verification Mode</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Remeasure Failed Checks Only" data-group="Instrument Operations" data-status="current" data-validation="at-risk-gdt-inspection-fixture"><td><a href="#set-remeasure-failed-checks-only">Set Remeasure Failed Checks Only</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — GD&T inspection fixture</td></tr>
 <tr data-command="Set Remeasure Failed Checks Only" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-remeasure-failed-checks-only">Set Remeasure Failed Checks Only</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Associate Objects with Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#associate-objects-with-instrument">Associate Objects with Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument/object association fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Associate Objects with Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#associate-objects-with-instrument">Associate Objects with Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument/object association fixture</td></tr>
 <tr data-command="Associate Objects with Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#associate-objects-with-instrument">Associate Objects with Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Disassociate Objects from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#disassociate-objects-from-instrument">Disassociate Objects from Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument/object association fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Disassociate Objects from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#disassociate-objects-from-instrument">Disassociate Objects from Instrument</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument/object association fixture</td></tr>
 <tr data-command="Disassociate Objects from Instrument" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#disassociate-objects-from-instrument">Disassociate Objects from Instrument</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make Collection Object Name Ref List from Objects associated with Instruments" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#make-collection-object-name-ref-list-from-objects-associated-with-instruments">Make Collection Object Name Ref List from Objects associated with Instruments</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument/object association fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Make Collection Object Name Ref List from Objects associated with Instruments" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-object-association-fixture"><td><a href="#make-collection-object-name-ref-list-from-objects-associated-with-instruments">Make Collection Object Name Ref List from Objects associated with Instruments</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument/object association fixture</td></tr>
 <tr data-command="Make Collection Object Name Ref List from Objects associated with Instruments" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-collection-object-name-ref-list-from-objects-associated-with-instruments">Make Collection Object Name Ref List from Objects associated with Instruments</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Combine Point Groups" data-group="Instrument Operations" data-status="current" data-validation="at-risk-point-group-combination-fixture"><td><a href="#combine-point-groups">Combine Point Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group combination fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Combine Point Groups" data-group="Instrument Operations" data-status="current" data-validation="at-risk-point-group-combination-fixture"><td><a href="#combine-point-groups">Combine Point Groups</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-group combination fixture</td></tr>
 <tr data-command="Combine Point Groups" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#combine-point-groups">Combine Point Groups</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Dissect Point Group" data-group="Instrument Operations" data-status="current" data-validation="at-risk-point-group-dissect-fixture"><td><a href="#dissect-point-group">Dissect Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - point-group dissect fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Dissect Point Group" data-group="Instrument Operations" data-status="current" data-validation="at-risk-point-group-dissect-fixture"><td><a href="#dissect-point-group">Dissect Point Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — point-group dissect fixture</td></tr>
 <tr data-command="Dissect Point Group" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#dissect-point-group">Dissect Point Group</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Synchronized Measurement (Master/Slave)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-dual-instrument-measurement-fixture"><td><a href="#synchronized-measurement-masterslave">Synchronized Measurement (Master/Slave)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - dual-instrument measurement fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Synchronized Measurement (Master/Slave)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-dual-instrument-measurement-fixture"><td><a href="#synchronized-measurement-masterslave">Synchronized Measurement (Master/Slave)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — dual-instrument measurement fixture</td></tr>
 <tr data-command="Synchronized Measurement (Master/Slave)" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#synchronized-measurement-masterslave">Synchronized Measurement (Master/Slave)</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Create New Dynamic Reference" data-group="Instrument Operations" data-status="current" data-validation="at-risk-aicon-moveinspect-fixture"><td><a href="#create-new-dynamic-reference">Create New Dynamic Reference</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - AICON MoveInspect fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Create New Dynamic Reference" data-group="Instrument Operations" data-status="current" data-validation="at-risk-aicon-moveinspect-fixture"><td><a href="#create-new-dynamic-reference">Create New Dynamic Reference</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — AICON MoveInspect fixture</td></tr>
 <tr data-command="Create New Dynamic Reference" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#create-new-dynamic-reference">Create New Dynamic Reference</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Calculate TCP Fixture Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture-uncertainty-fixture"><td><a href="#calculate-tcp-fixture-uncertainties">Calculate TCP Fixture Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - TCP Fixture uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Calculate TCP Fixture Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture-uncertainty-fixture"><td><a href="#calculate-tcp-fixture-uncertainties">Calculate TCP Fixture Uncertainties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — TCP Fixture uncertainty fixture</td></tr>
 <tr data-command="Calculate TCP Fixture Uncertainties" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#calculate-tcp-fixture-uncertainties">Calculate TCP Fixture Uncertainties</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture"><td><a href="#construct-tcp-fixture">Construct TCP Fixture</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - TCP Fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture"><td><a href="#construct-tcp-fixture">Construct TCP Fixture</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — TCP Fixture</td></tr>
 <tr data-command="Construct TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-tcp-fixture">Construct TCP Fixture</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add Nominal Point to TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture"><td><a href="#add-nominal-point-to-tcp-fixture">Add Nominal Point to TCP Fixture</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - TCP Fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Add Nominal Point to TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture"><td><a href="#add-nominal-point-to-tcp-fixture">Add Nominal Point to TCP Fixture</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — TCP Fixture</td></tr>
 <tr data-command="Add Nominal Point to TCP Fixture" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-nominal-point-to-tcp-fixture">Add Nominal Point to TCP Fixture</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Last Solved TCP Fixture Uncertainty Covariance Matrix" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture-uncertainty-fixture"><td><a href="#get-last-solved-tcp-fixture-uncertainty-covariance-matrix">Get Last Solved TCP Fixture Uncertainty Covariance Matrix</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - TCP Fixture uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Last Solved TCP Fixture Uncertainty Covariance Matrix" data-group="Instrument Operations" data-status="current" data-validation="at-risk-tcp-fixture-uncertainty-fixture"><td><a href="#get-last-solved-tcp-fixture-uncertainty-covariance-matrix">Get Last Solved TCP Fixture Uncertainty Covariance Matrix</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — TCP Fixture uncertainty fixture</td></tr>
 <tr data-command="Get Last Solved TCP Fixture Uncertainty Covariance Matrix" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-last-solved-tcp-fixture-uncertainty-covariance-matrix">Get Last Solved TCP Fixture Uncertainty Covariance Matrix</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Base Uncertainty Covariance Matrix WRT Base" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-base">Set Instrument Base Uncertainty Covariance Matrix WRT Base</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Base Uncertainty Covariance Matrix WRT Base" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-base">Set Instrument Base Uncertainty Covariance Matrix WRT Base</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument uncertainty fixture</td></tr>
 <tr data-command="Set Instrument Base Uncertainty Covariance Matrix WRT Base" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-base">Set Instrument Base Uncertainty Covariance Matrix WRT Base</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-world">Set Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-world">Set Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument uncertainty fixture</td></tr>
 <tr data-command="Set Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-instrument-base-uncertainty-covariance-matrix-wrt-world">Set Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#get-instrument-base-uncertainty-covariance-matrix-wrt-world">Get Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - instrument uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-instrument-uncertainty-fixture"><td><a href="#get-instrument-base-uncertainty-covariance-matrix-wrt-world">Get Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — instrument uncertainty fixture</td></tr>
 <tr data-command="Get Instrument Base Uncertainty Covariance Matrix WRT WORLD" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-instrument-base-uncertainty-covariance-matrix-wrt-world">Get Instrument Base Uncertainty Covariance Matrix WRT WORLD</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Measured Point Uncertainty Ellipsoids" data-group="Instrument Operations" data-status="current" data-validation="at-risk-measured-point-uncertainty-fixture"><td><a href="#construct-measured-point-uncertainty-ellipsoids">Construct Measured Point Uncertainty Ellipsoids</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - measured-point uncertainty fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Construct Measured Point Uncertainty Ellipsoids" data-group="Instrument Operations" data-status="current" data-validation="at-risk-measured-point-uncertainty-fixture"><td><a href="#construct-measured-point-uncertainty-ellipsoids">Construct Measured Point Uncertainty Ellipsoids</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — measured-point uncertainty fixture</td></tr>
 <tr data-command="Construct Measured Point Uncertainty Ellipsoids" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-measured-point-uncertainty-ellipsoids">Construct Measured Point Uncertainty Ellipsoids</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Get WRTL Channel and Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-wrtl-instrument-fixture"><td><a href="#get-wrtl-channel-and-status">Get WRTL Channel and Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - WRTL instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Get WRTL Channel and Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-wrtl-instrument-fixture"><td><a href="#get-wrtl-channel-and-status">Get WRTL Channel and Status</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — WRTL instrument fixture</td></tr>
 <tr data-command="Get WRTL Channel and Status" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#get-wrtl-channel-and-status">Get WRTL Channel and Status</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set WRTL Channel" data-group="Instrument Operations" data-status="current" data-validation="at-risk-wrtl-instrument-fixture"><td><a href="#set-wrtl-channel">Set WRTL Channel</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - WRTL instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set WRTL Channel" data-group="Instrument Operations" data-status="current" data-validation="at-risk-wrtl-instrument-fixture"><td><a href="#set-wrtl-channel">Set WRTL Channel</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — WRTL instrument fixture</td></tr>
 <tr data-command="Set WRTL Channel" data-group="Instrument Operations" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-wrtl-channel">Set WRTL Channel</a></td>
   <td><span className="catalog-status catalog-status--current">Current</span></td>
@@ -842,7 +843,7 @@ group in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -881,7 +882,7 @@ value from the other.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -919,7 +920,7 @@ name validation, uniqueness, and the resulting live model state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -957,7 +958,7 @@ structured Collection/Instrument identity.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -996,7 +997,7 @@ the selected instrument.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1034,7 +1035,7 @@ or preflight collection membership; each call operates on current SA state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-configuration-file-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument configuration file fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument configuration file fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1072,7 +1073,7 @@ The reference identifies a path accessible to the local Briosa server.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-configuration-file-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument configuration file fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument configuration file fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1111,7 +1112,7 @@ Briosa server.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-history-file-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument history file fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument history file fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1149,7 +1150,7 @@ Exports the selected instrument's history to an XML file at the supplied
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-pointing-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk pointing instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — pointing instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1189,7 +1190,7 @@ that the caller did not request.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1230,7 +1231,7 @@ absent by default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-position-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument position fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument position fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1275,7 +1276,7 @@ Cartesian output is used unless the caller requests polar coordinates.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1317,7 +1318,7 @@ MP command. The optional HTML prompt is absent by default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1362,7 +1363,7 @@ HTML prompt is optional.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1407,7 +1408,7 @@ standard form.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1458,7 +1459,7 @@ values, and the resulting point identity. A tolerance of zero means none.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-6d-probe-frame-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk 6d probe frame fixture</span>
+  <span className="catalog-target-validation">At Risk — 6D probe and frame fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1503,7 +1504,7 @@ defaults to 15 seconds.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-6d-probe-frame-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk 6d probe frame fixture</span>
+  <span className="catalog-target-validation">At Risk — 6D probe and frame fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1546,7 +1547,7 @@ a new measurement. Face ID defaults to `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-active-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk active measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — active measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1583,7 +1584,7 @@ is exposed as an ordinary coordination operation, not only as error recovery.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-capable-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan capable instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-capable instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1620,7 +1621,7 @@ Frame Sets rather than as individual frames. Enablement defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-capable-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan capable instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-capable instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1658,7 +1659,7 @@ defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-capable-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan capable instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-capable instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1696,7 +1697,7 @@ rather than as individual points. Enablement defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-type-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument type fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument-type fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1735,7 +1736,7 @@ so Briosa preserves them as a typed string value instead of a fixed enum.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-destructive-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk destructive instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1775,7 +1776,7 @@ points retains the MP default of `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-destructive-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk destructive measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1814,7 +1815,7 @@ the point when no measurements remain defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-destructive-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk destructive measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1853,7 +1854,7 @@ Deletes one indexed observation from a point. Observation index defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-destructive-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk destructive measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — destructive measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1898,7 +1899,7 @@ existence check, or other safeguard beyond normal SpatialAnalyzer results.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-servo-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk servo instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — servo instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1939,7 +1940,7 @@ target suffixes default to empty, and tolerance defaults to `0.0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-theodolite-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk theodolite interface fixture</span>
+  <span className="catalog-target-validation">At Risk — theodolite interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -1981,7 +1982,7 @@ simulation defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2028,7 +2029,7 @@ Briosa access.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2064,7 +2065,7 @@ Stops the interface owned by the selected instrument.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2102,7 +2103,7 @@ Controls the selected instrument toolbar. `Deactivate Toolbar?` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-connected-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk connected instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — connected instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2140,7 +2141,7 @@ reports instrument-interface state, not Briosa's SDK connection state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2183,7 +2184,7 @@ defaults to `true`, and a timeout of `0.0` preserves the MP's no-timeout value.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2220,7 +2221,7 @@ Briosa does not keep a parallel measurement-configuration model.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-xyz-reference-frame-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk xyz reference frame instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — XYZ reference-frame instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2260,7 +2261,7 @@ Frame instrument base.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2298,7 +2299,7 @@ defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-location-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument location fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument location fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2342,7 +2343,7 @@ automatic surveying defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-surface-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument surface fit fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument and surface-fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2391,7 +2392,7 @@ RMS and maximum absolute errors reported by SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-multi-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk multi instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — multi-instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2430,7 +2431,7 @@ Waiting for all measurements to complete defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-multi-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk multi instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — multi-instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2467,7 +2468,7 @@ not require that the activity was initiated through the same client or call.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-projector-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser projector fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-projector fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2506,7 +2507,7 @@ Aligns the selected laser projector from an existing SA Point Group.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-usmn-instrument-network-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk usmn instrument network fixture</span>
+  <span className="catalog-target-validation">At Risk — USMN instrument-network fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2561,7 +2562,7 @@ and numeric defaults follow the MP command. `Show USMN Dialog` defaults to
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="uncommitted" data-group="Instrument Operations" data-validation="unverified-sdk-usmn-template-list-binding">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">Unverified sdk usmn template list binding</span>
+  <span className="catalog-target-validation">Unverified SDK binding — USMN template list</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="uncommitted" data-group="Instrument Operations" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
@@ -2616,7 +2617,7 @@ publish a reliable contract; this is not an intentional exclusion.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-usmn-template-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk usmn template fixture</span>
+  <span className="catalog-target-validation">At Risk — USMN template fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2754,7 +2755,7 @@ list or iterable.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-best-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument best fit fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument best-fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2816,7 +2817,7 @@ scale, locking, and event generation, and omits the optional CSV report.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-best-fit-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument best fit fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument best-fit fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2875,7 +2876,7 @@ noninteractive defaults as the group-to-group command.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-transform-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument transform fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument transform fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2915,7 +2916,7 @@ Returns the selected instrument's transform expressed in a required SA Frame.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-transform-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument transform fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument transform fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -2957,7 +2958,7 @@ SA Frame. Animation steps default to `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tracker-edm-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tracker edm uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — Tracker/EDM uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3001,7 +3002,7 @@ MP outputs differ from the installed command-listing documentation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tracker-edm-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tracker edm uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — Tracker/EDM uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3046,7 +3047,7 @@ labels, which ObjectiveSA independently uses.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-pcmm-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk pcmm uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — PCMM uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3086,7 +3087,7 @@ instrument.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-pcmm-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk pcmm uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — PCMM uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3127,7 +3128,7 @@ normally spelled public field.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-xyz-instrument-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk xyz instrument uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — XYZ instrument uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3167,7 +3168,7 @@ frame.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-xyz-instrument-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk xyz instrument uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — XYZ instrument uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3208,7 +3209,7 @@ public API uses the normal spelling.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-weather-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument weather fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument weather fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3250,7 +3251,7 @@ automatically by the instrument or an external sensor.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-weather-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument weather fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument weather fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3292,7 +3293,7 @@ ignores the supplied numeric values.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-temperature-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument temperature fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument temperature fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3371,7 +3372,7 @@ the familiar instrument-temperature and scale workflow.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-scale-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument scale fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument scale fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3410,7 +3411,7 @@ but does not add a confirmation, range check, or other safeguard.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-scale-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument scale fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument scale fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3449,7 +3450,7 @@ are preserved.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-scale-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument scale fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument scale fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3486,7 +3487,7 @@ Returns the selected instrument's current scale factor.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-transform-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument transform fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument transform fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3528,7 +3529,7 @@ two existing SA Frames. Animation steps default to `0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-transform-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument transform fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument transform fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3567,7 +3568,7 @@ the transform's scale component to the instrument defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-transform-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument transform fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument transform fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3607,7 +3608,7 @@ rollback around the multi-instrument mutation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-operational-check-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument operational check fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument operational-check fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3646,7 +3647,7 @@ or retaining it; valid commands depend on the active instrument interface.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3683,7 +3684,7 @@ Returns the number of observations recorded for an existing SA point.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3721,7 +3722,7 @@ selected point.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3758,7 +3759,7 @@ Returns the SA point identities measured by the selected instrument.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3797,7 +3798,7 @@ and both the index and active flag preserve the MP defaults of `0` and `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3849,7 +3850,7 @@ and info strings.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3896,7 +3897,7 @@ adds no preflight or transaction.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-visibility-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument visibility fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument visibility fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3936,7 +3937,7 @@ instrument. Showing obscured shot lines defaults to `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-mode-profile-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument mode profile fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument mode/profile fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3977,7 +3978,7 @@ to get`; Briosa follows that evidence rather than ObjectiveSA's older
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-mode-profile-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument mode profile fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument mode/profile fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4016,7 +4017,7 @@ Briosa does not cache the selection.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-configuration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement configuration fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement-configuration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4056,7 +4057,7 @@ reconcile this live SA state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-configuration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement configuration fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement-configuration fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4094,7 +4095,7 @@ instrument. Supported names depend on the active instrument interface.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-configuration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement configuration fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement-configuration fixture</span>
 </div>
 </div>
 
@@ -4109,7 +4110,7 @@ from `Get Instrument Targets and Mode/Profiles`, which returns available lists.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-configuration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement configuration fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement-configuration fixture</span>
 </div>
 </div>
 
@@ -4124,7 +4125,7 @@ the selected instrument interface.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-measurement-configuration-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument measurement configuration fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument measurement-configuration fixture</span>
 </div>
 </div>
 
@@ -4138,7 +4139,7 @@ Returns the current instrument-specific targeting name.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-target-computation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk target computation fixture</span>
+  <span className="catalog-target-validation">At Risk — target-computation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4178,7 +4179,7 @@ does not cache, restore, or otherwise manage this SA option.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4219,7 +4220,7 @@ SA documents faces 1 through 6; Briosa adds no range check.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-observation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument observation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument observation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4262,7 +4263,7 @@ normal shot. Internally the server preserves the exact exported argument label
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-multi-instrument-collimation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk multi instrument collimation fixture</span>
+  <span className="catalog-target-validation">At Risk — multi-instrument collimation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4312,7 +4313,7 @@ empty MP values and leaves workflow validation to SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-tracker-target-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser tracker target fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-tracker target fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4354,7 +4355,7 @@ laser-tracker-only.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-cad-surface-perimeter-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk cad surface perimeter fixture</span>
+  <span className="catalog-target-validation">At Risk — CAD surface and perimeter fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4394,7 +4395,7 @@ serialized representation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-perimeter-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan perimeter instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-perimeter instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Instrument Operations" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
@@ -4441,7 +4442,7 @@ table omits it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-perimeter-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan perimeter instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-perimeter instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Instrument Operations" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
@@ -4487,7 +4488,7 @@ the ATS600.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-perimeter-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan perimeter instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-perimeter instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4527,7 +4528,7 @@ not label, convert, or otherwise guess it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-cad-surface-perimeter-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk cad surface perimeter fixture</span>
+  <span className="catalog-target-validation">At Risk — CAD surface and perimeter fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4568,7 +4569,7 @@ behavior that appears to replace that value with an empty string.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-scan-perimeter-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk scan perimeter instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — scan-perimeter instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="sdk-unavailable" data-group="Instrument Operations" data-validation="evidence-review">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span>
@@ -4611,7 +4612,7 @@ ObjectiveSA wrapper marked the operation unsupported.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-radar-scan-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser radar scan fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-radar scan fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4657,7 +4658,7 @@ tracking or prevalidating the workflow state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-radar-scan-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser radar scan fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-radar scan fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4705,7 +4706,7 @@ required.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-automatic-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk automatic measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — automatic-measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4755,7 +4756,7 @@ application-global interactivity for this call.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-automatic-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk automatic measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — automatic-measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4802,7 +4803,7 @@ decisions to SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-automatic-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk automatic measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — automatic-measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4846,7 +4847,7 @@ completion defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-automatic-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk automatic measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — automatic-measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4889,7 +4890,7 @@ radar geometry. Waiting for completion preserves the MP default of `false`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gr-feature-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gr feature measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — GR-feature measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4930,7 +4931,7 @@ argument's documented relationship semantics. Waiting defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-auto-correspond-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk auto correspond fixture</span>
+  <span className="catalog-target-validation">At Risk — auto-correspond fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4973,7 +4974,7 @@ the operation may return while the SA measurement interface continues running.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-auto-correspond-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk auto correspond fixture</span>
+  <span className="catalog-target-validation">At Risk — auto-correspond fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5012,7 +5013,7 @@ ownership for it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-auto-correspond-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk auto correspond fixture</span>
+  <span className="catalog-target-validation">At Risk — auto-correspond fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5064,7 +5065,7 @@ limiting each point to one measurement all default off.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-radar-mirror-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser radar mirror fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-radar mirror fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5105,7 +5106,7 @@ SA Plane.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-radar-mirror-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser radar mirror fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-radar mirror fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5148,7 +5149,7 @@ to the instrument defaults to `true`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-drift-check-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument drift check fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument drift-check fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5200,7 +5201,7 @@ particular dialog, so Briosa does not promise headless execution.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-laser-radar-feature-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk laser radar feature measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — laser-radar feature-measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5242,7 +5243,7 @@ feature's geometry type.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-6d-guidance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk 6d guidance fixture</span>
+  <span className="catalog-target-validation">At Risk — 6D guidance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5289,7 +5290,7 @@ Zero or omitted tolerances mean that SA applies no tolerance.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-6d-guidance-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk 6d guidance fixture</span>
+  <span className="catalog-target-validation">At Risk — 6D guidance fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5329,7 +5330,7 @@ reconstruct the live guidance state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-axis-alignment-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument axis alignment fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument axis-alignment fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5374,7 +5375,7 @@ inside SA.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5411,7 +5412,7 @@ Returns the selected instrument interface's current response timeout in seconds.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-interface-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument interface fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument interface fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5449,7 +5450,7 @@ no range check or interpretation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-trapping-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk trapping fixture</span>
+  <span className="catalog-target-validation">At Risk — trapping fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5490,7 +5491,7 @@ relationship and feature-check identities.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-trapping-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk trapping fixture</span>
+  <span className="catalog-target-validation">At Risk — trapping fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5527,7 +5528,7 @@ underlying SA wait stopped; Briosa never automatically replays this call.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-relocation-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument relocation fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument relocation fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5566,7 +5567,7 @@ defaults to `false`, and Briosa adds no confirmation or transaction.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-cad-alignment-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument cad alignment fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument/CAD alignment fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5609,7 +5610,7 @@ to `false`; SA remains responsible for validating list correspondence.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-cloud-cad-alignment-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk cloud cad alignment fixture</span>
+  <span className="catalog-target-validation">At Risk — cloud/CAD alignment fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5659,7 +5660,7 @@ application is disabled, callers can use the returned analytical transform.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5698,7 +5699,7 @@ those choices as a typed value.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5736,7 +5737,7 @@ filter and `ALL` default.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5775,7 +5776,7 @@ and inspection filter. Briosa does not retain the inspection workflow state.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 </div>
 
@@ -5790,7 +5791,7 @@ command was added after ObjectiveSA's SA 2024.1 target.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 </div>
 
@@ -5805,7 +5806,7 @@ does not cache or restore the prior setting.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-gdt-inspection-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk gdt inspection fixture</span>
+  <span className="catalog-target-validation">At Risk — GD&T inspection fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5843,7 +5844,7 @@ confirmation, rollback, or inspection-state management.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-object-association-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument object association fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument/object association fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5881,7 +5882,7 @@ partial success when only some objects are found.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-object-association-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument object association fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument/object association fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5920,7 +5921,7 @@ agree on the object-only shape.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-object-association-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument object association fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument/object association fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -5959,7 +5960,7 @@ retrieves information that the client cannot reconstruct locally.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-point-group-combination-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk point group combination fixture</span>
+  <span className="catalog-target-validation">At Risk — point-group combination fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6000,7 +6001,7 @@ existence and combination behavior.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-point-group-dissect-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk point group dissect fixture</span>
+  <span className="catalog-target-validation">At Risk — point-group dissect fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6041,7 +6042,7 @@ internal argument name, while exposing correctly spelled public fields.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-dual-instrument-measurement-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk dual instrument measurement fixture</span>
+  <span className="catalog-target-validation">At Risk — dual-instrument measurement fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6086,7 +6087,7 @@ prove that an in-progress SA measurement stopped.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-aicon-moveinspect-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk aicon moveinspect fixture</span>
+  <span className="catalog-target-validation">At Risk — AICON MoveInspect fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6126,7 +6127,7 @@ MoveInspect systems, so licensed validation requires that specialized fixture.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tcp-fixture-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tcp fixture uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — TCP Fixture uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6178,7 +6179,7 @@ and maximum errors, goodness of fit, robustness, and SA's result notes.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tcp-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tcp fixture</span>
+  <span className="catalog-target-validation">At Risk — TCP Fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6224,7 +6225,7 @@ contract.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tcp-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tcp fixture</span>
+  <span className="catalog-target-validation">At Risk — TCP Fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6272,7 +6273,7 @@ and `CoVar YZ` each default to `0.0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-tcp-fixture-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk tcp fixture uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — TCP Fixture uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6318,7 +6319,7 @@ changing coordinate systems.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6363,7 +6364,7 @@ values.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6406,7 +6407,7 @@ shape-only contract.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-instrument-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk instrument uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — instrument uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6449,7 +6450,7 @@ matrix with respect to the WORLD frame.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-measured-point-uncertainty-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk measured point uncertainty fixture</span>
+  <span className="catalog-target-validation">At Risk — measured-point uncertainty fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6488,7 +6489,7 @@ when points are missing or do not contain uncertainty data.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-wrtl-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk wrtl instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — WRTL instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -6528,7 +6529,7 @@ SA command listing does not provide a dedicated page for this operation.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations" data-validation="at-risk-wrtl-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations</span>
-  <span className="catalog-target-validation">At risk wrtl instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — WRTL instrument fixture</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Instrument Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

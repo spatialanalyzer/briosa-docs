@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import type {PropSidebarItem, PropSidebarItemCategory} from '@docusaurus/plugin-content-docs';
 import type {Navigation, PageData} from './types';
-import {suffix, methodHref} from './context';
+import {suffix, methodHref, methodFilter} from './context';
 import {SidebarControls} from './SidebarControls';
 
 // On a history page, navigation stays among method histories, which keep the
@@ -10,11 +10,18 @@ import {SidebarControls} from './SidebarControls';
 export default function Sidebar({navigation: nav, page, history = false}: {navigation: Navigation; page: PageData; history?: boolean}): React.JSX.Element {
   const [query, setQuery] = useState('');
   const [showAll, setShowAll] = useState<Record<string, boolean>>({});
-  const link = (id: string, label: string, href = nav.base + suffix(id)): PropSidebarItem => ({type: 'link', label, href});
+  // A label that is one API identifier (`StartAsync`) reads as code.
+  const link = (id: string, label: string, href = nav.base + suffix(id), code = false): PropSidebarItem => ({type: 'link', label, href, ...(code && {className: 'api-sidebar-code'})});
   const category = (label: string, items: PropSidebarItem[], extra: Partial<PropSidebarItemCategory> = {}): PropSidebarItemCategory => ({type: 'category', label, items, collapsible: true, collapsed: true, ...extra});
   const control = (key: string): PropSidebarItem => ({type: 'html', value: '', customProps: {apiControl: key}});
   const controls: Record<string, React.ReactNode> = {
-    filter: <label className="api-filter">Find a Command<input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name or API spelling" /></label>,
+    filter: <label className="api-filter">
+      <span className="sl-hud">Find a Command</span>
+      <span className="api-field">
+        <svg className="sl-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" /><path d="m15 15 5 5" /></svg>
+        <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Name or API spelling" />
+      </span>
+    </label>,
   };
 
   type Branch = {key: string; title: string; group?: Navigation['groups'][number]; children: Branch[]};
@@ -31,10 +38,10 @@ export default function Sidebar({navigation: nav, page, history = false}: {navig
       children = branch.children;
     }
   }
-  const clean = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const matches = (branch: Branch): boolean => !query || Boolean(branch.group?.methods.some((m) => clean(m.title).includes(clean(query)))) || branch.children.some(matches);
+  const named = methodFilter(query, nav.family);
+  const matches = (branch: Branch): boolean => !query || Boolean(branch.group?.methods.some(named)) || branch.children.some(matches);
   function groupItem(branch: Branch): PropSidebarItem {
-    const methods = branch.group?.methods.filter((m) => !query || clean(m.title).includes(clean(query))) ?? [];
+    const methods = branch.group?.methods.filter(named) ?? [];
     const currentIndex = Math.max(0, methods.findIndex((m) => m.id === page.id));
     const start = Math.max(0, Math.min(currentIndex - 5, methods.length - 11));
     const visible = query || showAll[branch.key] ? methods : methods.slice(start, start + 11);
@@ -57,7 +64,7 @@ export default function Sidebar({navigation: nav, page, history = false}: {navig
   else {
     items.push(link('overview', nav.current ? nav.label : `${nav.label} ${nav.release}`));
     if (nav.discovery) items.push(link(nav.discovery, 'Server Discovery'));
-    items.push(category('Lifecycle Methods', nav.lifecycle.map((l) => link(l.id, l.title))));
+    items.push(category('Lifecycle Methods', nav.lifecycle.map((l) => link(l.id, l.title, undefined, l.code))));
     items.push(category('First Calls', nav.firstCalls.map((l) => link(l.id, l.title, methodHref(nav, l)))));
     if (nav.valueTypes) items.push(link('value-types', 'MP Value Types'));
     items.push(category('MP Commands', commands, {collapsed: false}));
@@ -65,7 +72,7 @@ export default function Sidebar({navigation: nav, page, history = false}: {navig
 
   return <SidebarControls.Provider value={controls}>
     <nav className="api-sidebar menu thin-scrollbar" aria-label="API Documentation">
-      <ul className="theme-doc-sidebar-menu menu__list"><DocSidebarItems items={items} activePath={history ? page.path : nav.base + suffix(page.id)} level={1} /></ul>
+      <ul className="api-sidebar-menu menu__list"><DocSidebarItems items={items} activePath={history ? page.path : nav.base + suffix(page.id)} level={1} /></ul>
     </nav>
   </SidebarControls.Provider>;
 }

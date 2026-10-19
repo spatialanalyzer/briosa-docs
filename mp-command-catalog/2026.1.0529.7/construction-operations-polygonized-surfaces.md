@@ -12,6 +12,6 @@ The subgroup contains one command, a **Current** operation.
 
 | MP Command | Briosa Status |
 | --- | --- |
-| [Construct Polygonized Surface from Point Clouds](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds) | **Current** |
+| [Construct Polygonized Surface from Point Clouds](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds) | <span className="catalog-status catalog-status--current">Current</span> |
 
 [Open the canonical Polygonized Surfaces command reference →](/mp-command-catalog/commands/construction-operations-polygonized-surfaces)

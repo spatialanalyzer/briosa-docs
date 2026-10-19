@@ -1,4 +1,4 @@
-import {lightCodeTheme, darkCodeTheme} from './src/theme/prism';
+import {codeTheme} from './src/theme/prism';
 import {flattenRoutes} from '@docusaurus/utils';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -39,6 +39,13 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  // Scanline type: Saira (display, with its width axis), Inter (body, vendored from the
+  // brand pack in custom.css), and JetBrains Mono (code), all self-hosted.
+  clientModules: [
+    require.resolve('@fontsource-variable/saira/wdth.css'),
+    require.resolve('@fontsource-variable/jetbrains-mono/index.css'),
+    './src/client/navbar.ts',
+  ],
   presets: [
     [
       'classic',
@@ -231,9 +238,9 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Briosa contributors. Apache-2.0.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-      additionalLanguages: ['csharp', 'protobuf', 'python', 'typescript'],
+      theme: codeTheme,
+      darkTheme: codeTheme,
+      additionalLanguages: ['csharp', 'powershell', 'protobuf', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
 };

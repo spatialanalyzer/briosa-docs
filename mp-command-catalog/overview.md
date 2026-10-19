@@ -30,9 +30,9 @@ admitted by policy.
   <Link
     className="catalog-group-card"
     to="/mp-command-catalog/2026.1.0529.7/overview">
-    <span className="catalog-group-kicker">Current Catalog Target</span>
+    <span className="catalog-group-kicker">Released · 1,027 Current Operations</span>
     <strong>SpatialAnalyzer 2026.1.0529.7</strong>
-    <p>Browse the SA-native group hierarchy and currently published command entries.</p>
+    <p>Browse 1,371 reviewed commands and their released support: 1,360 in the SA-native group hierarchy plus 11 documentation-only commands.</p>
     <span className="catalog-group-link">Open target catalog →</span>
   </Link>
   <Link
@@ -60,14 +60,32 @@ command result even when the same signature appears in several SA releases.
 
 ## How to Read Status
 
-| Status | Meaning |
-| --- | --- |
-| **Current** | The operation is implemented in the released server for this exact target; runtime policy and readiness still apply. |
-| **Next** | Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API. |
-| **Undecided** | The command is still being evaluated and has no reviewed disposition. |
-| **Uncommitted** | The command may be useful, but the project has made no release commitment. |
-| **Excluded** | A reviewed product, policy, safety, or scope decision excludes it. |
-| **SDK Unavailable** | The reviewed exact-target SDK surface cannot implement it. |
+<dl className="catalog-status-defs">
+  <div>
+    <dt><span className="catalog-status catalog-status--current">Current</span></dt>
+    <dd><p>The operation is implemented in the released server for this exact target; runtime policy and readiness still apply.</p></dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--next">Next</span></dt>
+    <dd><p>Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API.</p></dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--undecided">Undecided</span></dt>
+    <dd><p>The command is still being evaluated and has no reviewed disposition.</p></dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></dt>
+    <dd><p>The command may be useful, but the project has made no release commitment.</p></dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--excluded">Excluded</span></dt>
+    <dd><p>A reviewed product, policy, safety, or scope decision excludes it.</p></dd>
+  </div>
+  <div>
+    <dt><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></dt>
+    <dd><p>The reviewed exact-target SDK surface cannot implement it.</p></dd>
+  </div>
+</dl>
 
 An **At Risk** note qualifies validation evidence independently from support
 status. A missing fixture, hardware dependency, license, or unexecuted licensed
@@ -75,7 +93,7 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.9.1** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
+Released availability reflects Briosa Server **0.9.2** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 

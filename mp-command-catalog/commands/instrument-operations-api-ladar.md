@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover all six commands observed under **Instrument Operations →
 API - LADAR** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>6</strong></div>
   <div><span>Current Server Operations</span><strong>6</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -24,12 +25,12 @@ API - LADAR** in SA 2026.1.0529.7.
 <table className="catalog-command-table">
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR AutoMeas Point" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-automeas-point">Set LADAR AutoMeas Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR AutoMeas Sphere" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-automeas-sphere">Set LADAR AutoMeas Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Sphere" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-sphere">Set LADAR FeatureMeas Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Circle" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-circle">Set LADAR FeatureMeas Circle</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Slot" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-slot">Set LADAR FeatureMeas Slot</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
-<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Cylinder" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-cylinder">Set LADAR FeatureMeas Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR AutoMeas Point" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-automeas-point">Set LADAR AutoMeas Point</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR AutoMeas Sphere" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-automeas-sphere">Set LADAR AutoMeas Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Sphere" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-sphere">Set LADAR FeatureMeas Sphere</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Circle" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-circle">Set LADAR FeatureMeas Circle</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Slot" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-slot">Set LADAR FeatureMeas Slot</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
+<tr data-target="2026.1.0529.7" data-command="Set LADAR FeatureMeas Cylinder" data-group="Instrument Operations / API - LADAR" data-status="current" data-validation="at-risk-ladar-instrument-fixture"><td><a href="#set-ladar-featuremeas-cylinder">Set LADAR FeatureMeas Cylinder</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — LADAR instrument fixture</td></tr>
 </tbody>
 </table>
 
@@ -39,7 +40,7 @@ API - LADAR** in SA 2026.1.0529.7.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 
@@ -56,7 +57,7 @@ value and lets SA accept or reject it.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 
@@ -73,7 +74,7 @@ disabled.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 
@@ -88,7 +89,7 @@ defaults to `0.05`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 
@@ -103,7 +104,7 @@ and extra scan-area width defaults to `0.0`.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 
@@ -118,7 +119,7 @@ defaults.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Instrument Operations / API - LADAR" data-validation="at-risk-ladar-instrument-fixture">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Instrument Operations / API - LADAR</span>
-  <span className="catalog-target-validation">At risk ladar instrument fixture</span>
+  <span className="catalog-target-validation">At Risk — LADAR instrument fixture</span>
 </div>
 </div>
 

@@ -11,11 +11,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 These entries cover the two commands observed under **Construction Operations
 → Folders** in SA 2026.1.0529.7.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>2</strong></div>
   <div><span>Current Server Operations</span><strong>2</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>0</strong></div>
 </div>
 
@@ -25,7 +26,7 @@ These entries cover the two commands observed under **Construction Operations
 <thead><tr><th>MP Command</th><th>Status</th><th>Validation</th></tr></thead>
 <tbody>
 <tr data-target="2026.1.0529.7" data-command="Construct Folder(s)" data-group="Construction Operations / Folders" data-status="current" data-validation="at-risk-fixture-validation-required">
-  <td><a href="#construct-folders">Construct Folder(s)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - fixture validation required</td>
+  <td><a href="#construct-folders">Construct Folder(s)</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — fixture validation required</td>
 </tr>
 <tr data-command="Construct Folder(s)" data-group="Construction Operations / Folders" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-folders">Construct Folder(s)</a></td>
@@ -33,7 +34,7 @@ These entries cover the two commands observed under **Construction Operations
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Folders by Wildcard" data-group="Construction Operations / Folders" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
-  <td><a href="#delete-folders-by-wildcard">Delete Folders by Wildcard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk - destructive fixture validation required</td>
+  <td><a href="#delete-folders-by-wildcard">Delete Folders by Wildcard</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive fixture validation required</td>
 </tr>
 <tr data-command="Delete Folders by Wildcard" data-group="Construction Operations / Folders" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-folders-by-wildcard">Delete Folders by Wildcard</a></td>
@@ -49,7 +50,7 @@ These entries cover the two commands observed under **Construction Operations
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Folders" data-validation="at-risk-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Folders</span>
-  <span className="catalog-target-validation">At risk fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Folders" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -94,7 +95,7 @@ value through unchanged. Existing folders are left in place by the MP command.
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Folders" data-validation="at-risk-destructive-fixture-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Construction Operations / Folders</span>
-  <span className="catalog-target-validation">At risk destructive fixture validation required</span>
+  <span className="catalog-target-validation">At Risk — destructive fixture validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Folders" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

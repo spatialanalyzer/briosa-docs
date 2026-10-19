@@ -10,11 +10,12 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
 
-<p>Choose an SA target to filter command availability. Summary counts describe the 2026 baseline; each command below records its target-specific status.</p>
+<p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
 <div className="catalog-context-grid">
   <div><span>Reviewed Commands</span><strong>124</strong></div>
   <div><span>Current Server Operations</span><strong>92</strong></div>
+  <div><span>Uncommitted or Next</span><strong>0</strong></div>
   <div><span>Excluded or Unavailable</span><strong>32</strong></div>
 </div>
 
@@ -3009,7 +3010,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="limited-local-licensed-smoke">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Limited local licensed smoke test</span>
 </div>
 </div>
 
@@ -3832,7 +3833,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3893,7 +3894,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -3950,7 +3951,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -4071,7 +4072,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="limited-local-licensed-smoke">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">Evidence review — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Limited local licensed smoke test</span>
 </div>
 </div>
 
@@ -5747,7 +5748,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7053,7 +7054,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7128,7 +7129,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -7913,7 +7914,7 @@ A reviewed product decision favors a client-side operation, typed value, lifecyc
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
@@ -8573,7 +8574,7 @@ Selected because it exposes SpatialAnalyzer-owned state or behavior through a re
 <div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Analysis Operations" data-validation="at-risk-fixture-or-interactive-validation-required">
   <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
   <span className="catalog-target-group">Analysis Operations</span>
-  <span className="catalog-target-validation">At risk fixture or interactive validation required</span>
+  <span className="catalog-target-validation">At Risk — fixture or interactive validation required</span>
 </div>
 <div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations" data-validation="at-risk-no-2024-runtime-validation">
   <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>

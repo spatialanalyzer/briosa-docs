@@ -6,7 +6,7 @@ description: Reviewed Excel Direct Connect commands and released Briosa support 
 
 # Excel Direct Connect
 
-**SA 2024.1.0508.5 · Excel Direct Connect**
+<p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Excel Direct Connect</p>
 
 This group contains 7 reviewed command entries. **Current** means implemented
 in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
@@ -14,13 +14,13 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Close](/mp-command-catalog/commands/excel-direct-connect#close) | **Uncommitted** | Evidence review |
-| [Get Workbook Address](/mp-command-catalog/commands/excel-direct-connect#get-workbook-address) | **SDK Unavailable** | Evidence review |
-| [Open Workbook File](/mp-command-catalog/commands/excel-direct-connect#open-workbook-file) | **Uncommitted** | Evidence review |
-| [Run Macro](/mp-command-catalog/commands/excel-direct-connect#run-macro) | **Uncommitted** | Evidence review |
-| [Save](/mp-command-catalog/commands/excel-direct-connect#save) | **Uncommitted** | Evidence review |
-| [Set Clear After Insert](/mp-command-catalog/commands/excel-direct-connect#set-clear-after-insert) | **Uncommitted** | Evidence review |
-| [Set Workbook Address](/mp-command-catalog/commands/excel-direct-connect#set-workbook-address) | **Uncommitted** | Evidence review |
+| [Close](/mp-command-catalog/commands/excel-direct-connect#close) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
+| [Get Workbook Address](/mp-command-catalog/commands/excel-direct-connect#get-workbook-address) | <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span> | Evidence review |
+| [Open Workbook File](/mp-command-catalog/commands/excel-direct-connect#open-workbook-file) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
+| [Run Macro](/mp-command-catalog/commands/excel-direct-connect#run-macro) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
+| [Save](/mp-command-catalog/commands/excel-direct-connect#save) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
+| [Set Clear After Insert](/mp-command-catalog/commands/excel-direct-connect#set-clear-after-insert) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
+| [Set Workbook Address](/mp-command-catalog/commands/excel-direct-connect#set-workbook-address) | <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | Evidence review |
 
 ## Subgroups
 

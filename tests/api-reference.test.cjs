@@ -348,6 +348,61 @@ test('current method pages split requests/results and retain first-call walkthro
   assert.doesNotMatch($('.api-sidebar').first().text(), /SA 2024\.1\.0508\.5/);
 });
 
+test('method pages render their contract as an operation panel with highlighted, unchanged code', () => {
+  const $ = read('/api/grpc/sa-2026.1.0529.7/file-operations/direct-cad-access');
+  assert.equal($('.api-contract > .api-op-head .api-rpc-path').text(), '/briosa.FileOperations/DirectCadAccess');
+  assert.equal($('.api-op .api-fields tr#request-cad-file-name .api-required').text(), 'Required');
+  const signature = $('.api-op .api-code[data-language="proto"]');
+  assert.equal(signature.length, 1);
+  assert.ok(signature.find('.sl-tk-k').length > 0, 'the server render highlights the signature');
+  assert.match(signature.find('pre code').text(), /^rpc DirectCadAccess\(DirectCadAccessRequest\) returns \(DirectCadAccessResult\);\n/);
+  // Copy and expand controls need JavaScript and are added after hydration, so
+  // the served page and its search records carry no button text.
+  assert.equal($('.api-contract button').length, 0);
+  // The gRPC reference names the later servers that serve its contract unchanged:
+  // in a chip, and in a site note kept apart from the released text.
+  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
+  assert.equal($('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
+  assert.equal($('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
+  assert.doesNotMatch($('.api-contract').text(), /same contract/);
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.9\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The first-call walkthrough's grpcurl example is highlighted in the served page.
+  const walkthrough = read('/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory')('.api-code[data-language="powershell"]');
+  assert.equal(walkthrough.length, 1);
+  assert.ok(walkthrough.find('.sl-tk-s').length > 0, 'the server render highlights PowerShell');
+});
+
+test('group readouts and history chips count only what was documented', () => {
+  // A method history counts the SA targets its revisions published for, not the
+  // targets the current release documents it for.
+  const history = read('/api/dotnet/construction-operations-point-clouds/point-cloud-construction');
+  assert.deepEqual(history('.api-applies .sl-chip').toArray().map((n) => history(n).text()), ['Contracts 1', 'Releases 1', 'SA Targets 1']);
+  // Server 0.5.1 listed these RPCs in tables, not as methods: no count, index, or entry.
+  const listed = read('/api/grpc/sa-2026.1.0529.7/0.5.1/construction-operations-ellipses');
+  assert.equal(listed('.api-readout').length, 0);
+  assert.equal(listed('#method-index').length, 0);
+  assert.equal(listed('.api-toc a[href="#method-index"]').length, 0);
+  assert.equal(listed('#construct-ellipse').length, 1, 'the released RPC section remains');
+  // First Documented names a release that documented one of the group's methods for the target.
+  const readings = ($) => Object.fromEntries($('.api-readout > div').toArray().map((n) => [$(n).find('dt').text(), $(n).find('dd > b').text()]));
+  assert.equal(readings(read('/api/grpc/sa-2026.1.0529.7/instrument-operations-crib-sheet-operations'))['First Documented'], undefined, 'SA 2026 never documented Run Crib Sheet');
+  assert.equal(readings(read('/api/grpc/sa-2024.1.0508.5/construction-operations-ellipses'))['First Documented'], undefined, 'every SA 2024 snapshot says Construct Ellipse is absent');
+  assert.equal(readings(read('/api/grpc/sa-2026.1.0529.7/construction-operations-ellipses'))['First Documented'], '0.7.0', 'Server 0.5.1 listed it only in a table');
+});
+
+test('titles never show literal backticks, and overview links read as the overview heading', () => {
+  const $ = read('/api/grpc/sa-2026.1.0529.7/get-spatial-analyzer-state');
+  assert.equal($('h1 code').text(), 'GetSpatialAnalyzerState');
+  assert.doesNotMatch($('title').text(), /`/);
+  assert.doesNotMatch($('meta[name="description"]').attr('content'), /`/);
+  assert.doesNotMatch($('.api-sidebar').text(), /`/);
+  for (const [family, label] of Object.entries({grpc: 'Briosa gRPC API', dotnet: 'Briosa for .NET API', python: 'Briosa for Python API', javascript: 'Briosa for JavaScript and TypeScript API'})) {
+    const overview = read(`/api/${family}/sa-2026.1.0529.7`);
+    assert.equal(overview('h1').text(), label);
+    assert.equal(overview(`.api-sidebar a[href="/api/${family}/sa-2026.1.0529.7"]`).first().text(), label);
+  }
+});
+
 test('release-qualified addresses redirect statically to current references or history without indexing', () => {
   const map = sitemap();
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {

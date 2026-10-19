@@ -1,6 +1,8 @@
 import React, {useEffect, useId, useRef, useState} from 'react';
 
-type Option = {value: string; label: string; badge?: string};
+// `badge` marks the latest target or current release as a chip; `note` adds a
+// short qualifier to the option, such as later releases serving the same contract.
+type Option = {value: string; label: string; badge?: string; note?: string};
 type Props = {label: string; value: string; options: Option[]; placeholder?: string; onChange: (value: string) => void};
 
 export default function VersionSelect({label, value, options, placeholder = 'Choose a Target', onChange}: Props): React.JSX.Element {
@@ -64,15 +66,18 @@ export default function VersionSelect({label, value, options, placeholder = 'Cho
       aria-labelledby={`${id}-label ${id}-value`} aria-controls={open ? `${id}-list` : undefined}
       aria-activedescendant={open ? `${id}-option-${active}` : undefined}
       className="api-version-trigger" onKeyDown={keyDown} onClick={() => open ? setOpen(false) : expand()}>
-      <span id={`${id}-value`}>{selected ? `${selected.badge ? selected.badge + ' — ' : ''}${selected.label}` : placeholder}</span>
+      <span className="api-version-value" id={`${id}-value`}>
+        {selected ? <><span className="api-version-text">{selected.label}</span>{selected.badge && <span className="api-version-badge">{selected.badge}</span>}</> : <span className="api-version-placeholder">{placeholder}</span>}
+      </span>
       <svg className="api-version-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
     </button>
     {open && <ul className="api-version-options" id={`${id}-list`} role="listbox" aria-labelledby={`${id}-label`}>
       {options.map((option, index) => <li key={option.value} id={`${id}-option-${index}`} role="option"
         aria-selected={option.value === value} className={index === active ? 'api-version-option-active' : ''}
         onPointerMove={() => setActive(index)} onMouseDown={(event) => event.preventDefault()} onClick={() => choose(index)}>
-        <span className="api-version-check" aria-hidden="true">{option.value === value ? '✓' : ''}</span>
-        <span>{option.label}</span>{option.badge && <span className="api-version-badge">{option.badge}</span>}
+        <span className="api-version-check" aria-hidden="true">{option.value === value ? <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="m3.5 8.5 3 3 6-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg> : null}</span>
+        <span className="api-version-option-text">{option.label}{option.note && <small>{option.note}</small>}</span>
+        {option.badge && <span className="api-version-badge">{option.badge}</span>}
       </li>)}
     </ul>}
   </div>;

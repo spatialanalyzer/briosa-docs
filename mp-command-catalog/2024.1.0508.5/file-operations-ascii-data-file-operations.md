@@ -6,7 +6,7 @@ description: Reviewed File Operations / ASCII Data File Operations commands and 
 
 # ASCII Data File Operations
 
-**SA 2024.1.0508.5 · File Operations / ASCII Data File Operations**
+<p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> File Operations <span aria-hidden="true">/</span> ASCII Data File Operations</p>
 
 This group contains 5 reviewed command entries. **Current** means implemented
 in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
@@ -14,10 +14,10 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Clear All ASCII Files](/mp-command-catalog/commands/file-operations#clear-all-ascii-files) | **Excluded** | Evidence review |
-| [Close ASCII File](/mp-command-catalog/commands/file-operations#close-ascii-file) | **Excluded** | Evidence review |
-| [Open ASCII File](/mp-command-catalog/commands/file-operations#open-ascii-file) | **Excluded** | Evidence review |
-| [Read ASCII Line (Iterator)](/mp-command-catalog/commands/file-operations#read-ascii-line-iterator) | **Excluded** | Evidence review |
-| [Write ASCII Line](/mp-command-catalog/commands/file-operations#write-ascii-line) | **Excluded** | Evidence review |
+| [Clear All ASCII Files](/mp-command-catalog/commands/file-operations#clear-all-ascii-files) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
+| [Close ASCII File](/mp-command-catalog/commands/file-operations#close-ascii-file) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
+| [Open ASCII File](/mp-command-catalog/commands/file-operations#open-ascii-file) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
+| [Read ASCII Line (Iterator)](/mp-command-catalog/commands/file-operations#read-ascii-line-iterator) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
+| [Write ASCII Line](/mp-command-catalog/commands/file-operations#write-ascii-line) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Evidence review |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)

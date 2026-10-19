@@ -13,19 +13,23 @@ entry with its exact-target group, disposition, signature, and reviewed differen
 
 [Browse the exact-target gRPC reference](/api/grpc/sa-2024.1.0508.5), [.NET reference](/api/dotnet/sa-2024.1.0508.5), [Python reference](/api/python/sa-2024.1.0508.5), or [JavaScript/TypeScript reference](/api/javascript/sa-2024.1.0508.5).
 
+<div className="catalog-quicklinks">
+
 - [Browse the SpatialAnalyzer group hierarchy](./group-hierarchy.md)
 - [Search the 2024 command index](/mp-command-catalog/commands?target=2024.1.0508.5)
 - [Read the version differences and review notes](./review-notes.md)
 - [Understand command statuses](../overview.md#how-to-read-status)
 
+</div>
+
 ## Reviewed Dispositions
 
 | Status | Commands | Meaning for This Target |
 | --- | ---: | --- |
-| Current | 996 | Implemented in Server 0.9.2; runtime policy and readiness apply. |
-| Excluded | 171 | Existing product or workflow rationale also applies to 2024. |
-| SDK Unavailable | 75 | No complete reviewed useful SDK mapping is available. |
-| Uncommitted | 41 | Retained for reference, with no release commitment. |
+| <span className="catalog-status catalog-status--current">Current</span> | 996 | Implemented in Server 0.9.2; runtime policy and readiness apply. |
+| <span className="catalog-status catalog-status--excluded">Excluded</span> | 171 | Existing product or workflow rationale also applies to 2024. |
+| <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span> | 75 | No complete reviewed useful SDK mapping is available. |
+| <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | 41 | Retained for reference, with no release commitment. |
 
 The review matched every captured command to an existing canonical entry and
 carried forward applicable 2026 decisions. Version differences were reviewed

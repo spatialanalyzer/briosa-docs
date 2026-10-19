@@ -46,11 +46,15 @@ remote Briosa connections are
 The first-party clients provide a default startup procedure for the most common
 case. Calling `StartAsync()` in .NET or `start()` in Python and JavaScript:
 
+<Steps>
+
 1. Launches the matching local Briosa server.
 2. Starts a new disconnected SA SDK instance.
 3. Launches a fresh exact-target SpatialAnalyzer application.
 4. Connects the SDK to local SpatialAnalyzer.
 5. Verifies runtime identity and MP execution readiness.
+
+</Steps>
 
 The call returns only when MP commands are ready. Startup options can disable
 any of the SDK-start, application-launch, or connection phases. This supports
@@ -71,6 +75,8 @@ for the new selection options and their release status.
 
 Direct gRPC users control the same resources through separate RPCs:
 
+<Steps>
+
 1. Call `StartSpatialAnalyzerSdk` to create Briosa's SDK instance. It starts in
    `RUNNING` and `DISCONNECTED` state.
 2. Optionally call `LaunchSpatialAnalyzer` to start a fresh exact-target SA
@@ -80,6 +86,8 @@ Direct gRPC users control the same resources through separate RPCs:
 3. Call `ConnectToSpatialAnalyzer`. The SDK calls
    `ConnectEx("localhost", ...)`, verifies the connected runtime, proves the MP
    execution channel, and opens MP admission.
+
+</Steps>
 
 Starting the SDK never launches or connects to SpatialAnalyzer. Launching
 SpatialAnalyzer never connects the SDK. A separate connect call is always

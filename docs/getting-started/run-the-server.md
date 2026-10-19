@@ -128,12 +128,16 @@ await briosa.start();
 
 The parameterless startup call performs the default sequence:
 
+<Steps>
+
 1. Select and launch the exact-target Briosa server on an owned loopback
    endpoint.
 2. Start a new disconnected SA SDK instance.
 3. Launch a fresh exact-target SpatialAnalyzer application.
 4. Connect the SDK to local SpatialAnalyzer.
 5. Verify exact runtime identity and MP execution readiness.
+
+</Steps>
 
 The call returns only when supported MP commands are ready. Startup options can
 disable individual phases. For example, attach to an eligible SpatialAnalyzer
@@ -191,6 +195,8 @@ SDK, launch SpatialAnalyzer, or call `ConnectEx`.
 
 A direct gRPC application uses this explicit sequence:
 
+<Steps>
+
 1. Call [`StartSpatialAnalyzerSdk`](/api/grpc/sa-2026.1.0529.7/start-spatial-analyzer-sdk). The
    new SDK is running but disconnected.
 2. Optionally call [`LaunchSpatialAnalyzer`](/api/grpc/sa-2026.1.0529.7/launch-spatial-analyzer)
@@ -201,6 +207,8 @@ A direct gRPC application uses this explicit sequence:
    [`ConnectToSpatialAnalyzer`](/api/grpc/sa-2026.1.0529.7/connect-to-spatial-analyzer). This is
    the only step that calls `ConnectEx("localhost", ...)` and establishes MP
    readiness.
+
+</Steps>
 
 The same explicit RPCs let operators keep the server running while stopping or
 replacing its SDK.
