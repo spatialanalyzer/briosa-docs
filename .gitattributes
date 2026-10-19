@@ -4,3 +4,7 @@
 *.jpg binary
 *.jpeg binary
 *.png binary
+
+# Keep vendored brand files byte-for-byte, including the license's CRLF line endings.
+static/brand/** -text -whitespace
+static/brand/README.md text eol=lf whitespace

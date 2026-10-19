@@ -107,8 +107,8 @@ function HomepageHeader() {
               className={styles.heroLogo}
               src={useBaseUrl('/brand/logos/briosa-stacked-inverse.svg')}
               alt="Briosa"
-              width={704}
-              height={568}
+              width={375}
+              height={411}
             />
             <p className={styles.cardLabel}>Supported SpatialAnalyzer</p>
             <p className={styles.targetVersion}>SA 2024.1.0508.5<br />SA 2026.1.0529.7</p>

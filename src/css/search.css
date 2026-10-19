@@ -9,8 +9,8 @@ html .DocSearch {
   --docsearch-subtle-color: var(--briosa-border);
   --docsearch-icon-color: var(--briosa-muted);
   --docsearch-background-color: var(--briosa-soft);
-  --docsearch-search-button-background: #f1f5fa;
-  --docsearch-search-button-text-color: #52657a;
+  --docsearch-search-button-background: var(--briosa-surface);
+  --docsearch-search-button-text-color: var(--briosa-muted);
   --docsearch-searchbox-background: var(--briosa-soft);
   --docsearch-searchbox-focus-background: var(--briosa-surface);
   --docsearch-modal-background: var(--briosa-surface);
@@ -30,9 +30,7 @@ html .DocSearch {
 }
 
 [data-theme='dark'] .DocSearch {
-  --docsearch-search-button-background: #102f50;
-  --docsearch-search-button-text-color: #c6d5e4;
-  --docsearch-key-background: #081f36;
+  --docsearch-key-background: var(--briosa-void);
   --docsearch-logo-color: #fff;
   --docsearch-modal-shadow: 0 24px 80px rgb(0 8 20 / 55%);
 }
@@ -177,11 +175,9 @@ html .DocSearch {
 }
 
 @media (max-width: 400px) {
-  .navbar:has(.DocSearch-Button) .navbar__logo img {
-    width: 120px;
-  }
-
+  /* 28 px is the brand guide's minimum height for suite lockups. */
   .navbar:has(.DocSearch-Button) .navbar__logo {
+    height: 1.75rem;
     margin-right: 0.25rem;
   }
 }
