@@ -32,7 +32,7 @@ admitted by policy.
     to="/mp-command-catalog/2026.1.0529.7/overview">
     <span className="catalog-group-kicker">Released · 1,027 Current Operations</span>
     <strong>SpatialAnalyzer 2026.1.0529.7</strong>
-    <p>Browse 1,371 reviewed commands in the SA-native group hierarchy and their released support.</p>
+    <p>Browse 1,371 reviewed commands and their released support: 1,360 in the SA-native group hierarchy plus 11 documentation-only commands.</p>
     <span className="catalog-group-link">Open target catalog →</span>
   </Link>
   <Link
@@ -63,27 +63,27 @@ command result even when the same signature appears in several SA releases.
 <dl className="catalog-status-defs">
   <div>
     <dt><span className="catalog-status catalog-status--current">Current</span></dt>
-    <dd>The operation is implemented in the released server for this exact target; runtime policy and readiness still apply.</dd>
+    <dd><p>The operation is implemented in the released server for this exact target; runtime policy and readiness still apply.</p></dd>
   </div>
   <div>
     <dt><span className="catalog-status catalog-status--next">Next</span></dt>
-    <dd>Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API.</dd>
+    <dd><p>Selected for the next planned implementation of this exact target; not callable until released. A reviewed catalog signature does not itself define a released API.</p></dd>
   </div>
   <div>
     <dt><span className="catalog-status catalog-status--undecided">Undecided</span></dt>
-    <dd>The command is still being evaluated and has no reviewed disposition.</dd>
+    <dd><p>The command is still being evaluated and has no reviewed disposition.</p></dd>
   </div>
   <div>
     <dt><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></dt>
-    <dd>The command may be useful, but the project has made no release commitment.</dd>
+    <dd><p>The command may be useful, but the project has made no release commitment.</p></dd>
   </div>
   <div>
     <dt><span className="catalog-status catalog-status--excluded">Excluded</span></dt>
-    <dd>A reviewed product, policy, safety, or scope decision excludes it.</dd>
+    <dd><p>A reviewed product, policy, safety, or scope decision excludes it.</p></dd>
   </div>
   <div>
     <dt><span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span></dt>
-    <dd>The reviewed exact-target SDK surface cannot implement it.</dd>
+    <dd><p>The reviewed exact-target SDK surface cannot implement it.</p></dd>
   </div>
 </dl>
 

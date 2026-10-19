@@ -237,6 +237,11 @@
   line-height: 1.6;
 }
 
+/* Each definition is a paragraph so site search indexes it. */
+.catalog-status-defs dd > p {
+  margin: 0;
+}
+
 /* ---------- Exact-target overviews: quick links ---------- */
 .catalog-quicklinks ul {
   display: grid;
