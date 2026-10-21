@@ -14,7 +14,7 @@ not mean that every documented API is only a proposal.
 | Product | Released Version | Availability |
 | --- | --- | --- |
 | Briosa Server and Control Center | [0.9.2](https://github.com/spatialanalyzer/briosa/releases/tag/v0.9.2) | Independent Windows distributions and protocols for SA 2024.1.0508.5 and SA 2026.1.0529.7; behavioral compatibility contract 2.0 |
-| Briosa Installer | [0.3.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0) | Signed Windows setup and portable distribution; side-by-side installation registration |
+| Briosa Installer | [0.4.0](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.0) | Signed Windows setup and portable distribution; patched .NET runtime 10.0.13 and the brand v2 design |
 | .NET client | 0.4.0 | NuGet: [SA 2024](https://www.nuget.org/packages/Briosa.2024.1.0508.5/0.4.0), [SA 2026](https://www.nuget.org/packages/Briosa.2026.1.0529.7/0.4.0) |
 | Python client | 0.4.0 | PyPI: [SA 2024](https://pypi.org/project/briosa-2024-1-0508-5/0.4.0/), [SA 2026](https://pypi.org/project/briosa-2026-1-0529-7/0.4.0/) |
 | JavaScript/TypeScript client | 0.4.0 | npm: [SA 2024](https://www.npmjs.com/package/@spatialanalyzer/briosa-2024.1.0508.5/v/0.4.0), [SA 2026](https://www.npmjs.com/package/@spatialanalyzer/briosa-2026.1.0529.7/v/0.4.0) |

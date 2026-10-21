@@ -13,15 +13,15 @@ individual installations.
 Run the installer on each Windows host where you need Briosa. Its inventory and
 SDK Setup describe that machine; it does not manage other hosts remotely.
 
-<div className="margin-bottom--md"><a className="button button--primary button--lg" href="https://github.com/spatialanalyzer/briosa-installer/releases/download/v0.3.0/briosa-installer-0.3.0-win-x64-setup.exe" download>Download Briosa Installer</a></div>
+<div className="margin-bottom--md"><a className="button button--primary button--lg" href="https://github.com/spatialanalyzer/briosa-installer/releases/download/v0.4.0/briosa-installer-0.4.0-win-x64-setup.exe" download>Download Briosa Installer</a></div>
 
-**Version 0.3.0 · Windows x64 · Complete offline setup**
+**Version 0.4.0 · Windows x64 · Complete offline setup**
 
-[SHA-256 checksum](https://github.com/spatialanalyzer/briosa-installer/releases/download/v0.3.0/briosa-installer-0.3.0-win-x64-setup.exe.sha256)
-· [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.3.0)
+[SHA-256 checksum](https://github.com/spatialanalyzer/briosa-installer/releases/download/v0.4.0/briosa-installer-0.4.0-win-x64-setup.exe.sha256)
+· [Release notes](https://github.com/spatialanalyzer/briosa-installer/releases/tag/v0.4.0)
 · [All downloads](https://briosa.dev/downloads)
 
-Installer 0.3.0 and Server 0.9.2 are self-contained distributions. Update
+Installer 0.4.0 and Server 0.9.2 are self-contained distributions. Update
 both the Installer and installed server packages to receive their bundled
 runtime fixes; installing a newer system-wide .NET runtime does not update
 these packages.
@@ -47,7 +47,7 @@ SDK ownership requirements.
 
 1. Select **Download Briosa Installer** above, or obtain the same setup package
    from your organization's approved software portal.
-2. Open the downloaded `briosa-installer-0.3.0-win-x64-setup.exe` file.
+2. Open the downloaded `briosa-installer-0.4.0-win-x64-setup.exe` file.
 3. Follow the setup wizard. It installs for your Windows account; the default
    location is `%LOCALAPPDATA%\Programs\Briosa Installer`.
 4. Select **Launch Briosa Installer** when setup finishes. For later starts,
