@@ -32,11 +32,18 @@ generation, and a safe diagnostic code. SDK state is returned separately by
 ## Example
 
 ```python
+from briosa import SpatialAnalyzerApplicationState
+
+
 application = await briosa.get_spatial_analyzer_state()
 
 if application.application_state is SpatialAnalyzerApplicationState.RUNNING:
     sdk = await briosa.get_spatial_analyzer_sdk_state()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## Raises
 

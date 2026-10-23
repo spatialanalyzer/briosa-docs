@@ -515,6 +515,10 @@ result = await briosa.construction_operations.average_set_of_groups(
 print(result.rms_deviation)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Callers own state across calls. Cancellation of an interactive coroutine does
 not prove the SpatialAnalyzer interaction stopped.
 

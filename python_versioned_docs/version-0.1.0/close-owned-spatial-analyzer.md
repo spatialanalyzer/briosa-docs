@@ -37,6 +37,10 @@ await briosa.stop_spatial_analyzer_sdk()
 application = await briosa.close_owned_spatial_analyzer()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Preconditions
 
 - The application is still owned by this Briosa server.

@@ -27,6 +27,10 @@ await briosa.construction_operations.construct_sphere(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_spheres_from_surface_faces_runtime_select
 
 ```python

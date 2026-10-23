@@ -41,6 +41,10 @@ async def cloud_display_control(
 await briosa.cloud_display_control()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Adjusts SpatialAnalyzer cloud drawing density and point size.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -105,6 +109,10 @@ async def reset_cloud_bounding_box(
 await briosa.reset_cloud_bounding_box(cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Recomputes one cloud bounding box and returns its dimensions, axes, centroid, transforms, and sample count.
 
 Returns all 10 MP outputs in the frozen, slotted `ResetCloudBoundingBoxResult` value. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -148,6 +156,10 @@ async def get_cloud_point_count(
 await briosa.get_cloud_point_count(cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the selected cloud point count and current clipping-related values.
 
 Returns all 4 MP outputs in the frozen, slotted `GetCloudPointCountResult` value. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -183,6 +195,10 @@ async def set_cloud_default_clipping_plane(
 ```python
 await briosa.set_cloud_default_clipping_plane()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Controls the default clipping plane for newly measured clouds. The exact SDK cannot set the MP Clipping Options value, so enabling uses SpatialAnalyzer current default clipping components. Briosa defaults to disabled to avoid an interactive object selector; reference_object is required only when enabling.
 
@@ -229,6 +245,10 @@ async def raster_scan_edge_inspection(
 ```python
 await briosa.raster_scan_edge_inspection(cloud_names=..., edge_surface_name=..., b_spline_edge_list=..., prefix_for_output_groups=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Runs the legacy raster-scan edge inspection workflow and returns the SA summary result.
 
@@ -284,6 +304,10 @@ async def new_raster_scan_edge_inspection(
 await briosa.new_raster_scan_edge_inspection(edge_cloud_names=..., edge_surface_name=..., edge_b_spline_name=..., output_prefix=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Runs the newer raster-scan edge inspection workflow and optionally writes intermediate calculations.
 
 Returns the MP output `Summary Result` directly as `str`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -317,6 +341,10 @@ async def clear_cloud_point_deviations(
 await briosa.clear_cloud_point_deviations(cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Clears point-deviation data stored on the selected cloud.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -349,6 +377,10 @@ async def enable_all_cloud_cross_sections(
 ```python
 await briosa.enable_all_cloud_cross_sections(cross_section_cloud_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Enables every cross section in one cross-section cloud.
 
@@ -388,6 +420,10 @@ async def enable_disable_cloud_cross_sections(
 await briosa.enable_disable_cloud_cross_sections(cross_section_cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Enables or disables one identified cross section.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -424,6 +460,10 @@ async def enable_single_cloud_cross_section(
 await briosa.enable_single_cloud_cross_section(cross_section_cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Enables one cross section and leaves it as the single enabled section.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -456,6 +496,10 @@ async def get_number_of_cross_sections_in_cross_section_cloud(
 ```python
 await briosa.get_number_of_cross_sections_in_cross_section_cloud(cross_section_cloud_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the number of cross sections in the selected cross-section cloud.
 
@@ -501,6 +545,10 @@ async def filter_clouds_to_plane(
 await briosa.filter_clouds_to_plane(cloud_names=..., filter_plane_name=..., output_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Filters cloud points by proximity to a plane. Briosa supplies non-interactive Both and Points defaults where the MP Editor export is blank.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -544,6 +592,10 @@ async def filter_clouds_to_group(
 ```python
 await briosa.filter_clouds_to_group(cloud_names=..., filter_group_name=..., output_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Filters clouds by proximity to a point group.
 
@@ -591,6 +643,10 @@ async def filter_clouds_to_surface(
 await briosa.filter_clouds_to_surface(cloud_names=..., filter_surface_name=..., output_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Filters clouds to a surface using low and high proximity limits.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -634,6 +690,10 @@ async def filter_clouds_to_bsplines(
 ```python
 await briosa.filter_clouds_to_bsplines(cloud_names=..., filter_b_spline_names=..., output_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Filters clouds by proximity to one or more BSplines.
 
@@ -680,6 +740,10 @@ async def filter_clouds_to_line_segment(
 ```python
 await briosa.filter_clouds_to_line_segment(cloud_names=..., first_line_end_point=..., second_line_end_point=..., output_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Filters clouds by proximity to a line segment defined by two SA points.
 
@@ -731,6 +795,10 @@ async def filter_clouds_to_vector_groups_resolve_points(
 await briosa.filter_clouds_to_vector_groups_resolve_points(cloud_names=..., vector_group_names=..., output_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Resolves cloud points against vector groups. The exact 2026.1 target includes the Include Proximity Points input absent from ObjectiveSA 2024.1.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -774,6 +842,10 @@ async def filter_clouds_to_vector_groups_resolve_clouds(
 ```python
 await briosa.filter_clouds_to_vector_groups_resolve_clouds(cloud_names=..., vector_group_names=..., output_collection_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Creates filtered clouds from vector-group cutoffs and returns the resulting cloud references.
 
@@ -853,6 +925,10 @@ async def rgb_cloud_point_filter(
 await briosa.rgb_cloud_point_filter(clouds_to_be_filtered=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Applies the selected RGB, intensity, and grayscale thresholds to one or more clouds.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -898,6 +974,10 @@ async def get_cloud_rgb_values(
 ```python
 await briosa.get_cloud_rgb_values(source_cloud_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns channel statistics for a cloud.
 
@@ -949,6 +1029,10 @@ async def get_cloud_rgb_values_near_point(
 await briosa.get_cloud_rgb_values_near_point(source_cloud_name=..., single_point=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns channel statistics for cloud points within a diameter around an SA point.
 
 Returns all 4 MP outputs in the frozen, slotted `GetCloudRGBValuesNearPointResult` value. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -991,6 +1075,10 @@ async def subdivide_cloud_by_point_spacing(
 await briosa.subdivide_cloud_by_point_spacing(source_cloud_name=..., new_cloud_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Subdivides an enhanced cloud by point spacing into a new enhanced cloud.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -1030,6 +1118,10 @@ async def delete_cloud_points_by_radial_distance_from_points(
 ```python
 await briosa.delete_cloud_points_by_radial_distance_from_points(cloud_names=..., points=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Deletes cloud points inside or outside the radial neighborhoods of selected SA points.
 
@@ -1079,6 +1171,10 @@ async def delete_cloud_points_by_x_y_z_range(
 await briosa.delete_cloud_points_by_x_y_z_range(cloud_names=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Deletes cloud points inside or outside supplied axis bounds. A licensed 2026.1.0529.7 probe confirmed that each exported NOT_SUPPORTED optional bound is accepted through SetDoubleArg; omitting a bound preserves MP Ignore. Destructive fixture semantics still require validation.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -1125,6 +1221,10 @@ async def generate_general_mesh(
 await briosa.generate_general_mesh(output_mesh_name=..., clouds_to_mesh=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Generates a scan-stripe mesh from one or more clouds and can optionally write a JSON file.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -1157,6 +1257,10 @@ async def consolidate_mesh(
 ```python
 await briosa.consolidate_mesh(mesh=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Consolidates the selected scan-stripe mesh.
 
@@ -1199,6 +1303,10 @@ async def mesh_volume(
 await briosa.mesh_volume(mesh=..., plane=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the mesh volume above and below the selected plane.
 
 Returns all 2 MP outputs in the frozen, slotted `MeshVolumeResult` value. Normal asyncio cancellation and timeout tools remain caller controls; the client does not replay uncertain work.
@@ -1240,6 +1348,10 @@ async def mesh_fill_holes(
 ```python
 await briosa.mesh_fill_holes(mesh=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Fills holes in the selected mesh. Briosa keeps Fill All Holes true by default so the command does not open an interactive hole-selection dialog.
 
