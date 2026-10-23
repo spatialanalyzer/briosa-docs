@@ -16,6 +16,9 @@ Reconnect calls `ConnectEx("localhost", ...)` again on the current live SDK
 generation, repeats verification, and never replays an MP command.
 
 ```python
+from briosa import SpatialAnalyzerConnectionState
+
+
 sdk = await briosa.get_spatial_analyzer_sdk_state()
 
 if sdk.connection_state is not SpatialAnalyzerConnectionState.CONNECTED:

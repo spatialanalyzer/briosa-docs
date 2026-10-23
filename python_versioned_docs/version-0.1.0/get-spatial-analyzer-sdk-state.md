@@ -31,6 +31,13 @@ unexpected SDK-generation loss and remains available after recovery.
 ## Diagnostic Example
 
 ```python
+from briosa import (
+    ExecutionDisposition,
+    SpatialAnalyzerSdkRecoveryMode,
+    SpatialAnalyzerSdkRecoveryState,
+)
+
+
 sdk = await briosa.get_spatial_analyzer_sdk_state()
 
 if (

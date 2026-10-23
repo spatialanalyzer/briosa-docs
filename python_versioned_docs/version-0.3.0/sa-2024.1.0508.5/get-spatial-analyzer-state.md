@@ -34,6 +34,9 @@ generation, and a safe diagnostic code. SDK state is returned separately by
 ## Example
 
 ```python
+from briosa import SpatialAnalyzerApplicationState
+
+
 application = await briosa.get_spatial_analyzer_state()
 
 if application.application_state is SpatialAnalyzerApplicationState.RUNNING:

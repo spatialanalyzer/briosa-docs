@@ -17,6 +17,9 @@ async def recover_spatial_analyzer_sdk(
 `RUNNING` and `DISCONNECTED`; the previous failure remains in `last_incident`.
 
 ```python
+from briosa import SpatialAnalyzerSdkRecoveryMode
+
+
 sdk = await briosa.recover_spatial_analyzer_sdk(
     SpatialAnalyzerSdkRecoveryMode.REPLACE_WITHOUT_REPLAY,
 )
