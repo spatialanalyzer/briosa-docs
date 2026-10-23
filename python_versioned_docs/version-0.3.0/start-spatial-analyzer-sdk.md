@@ -25,6 +25,10 @@ sdk = await briosa.start_spatial_analyzer_sdk()
 sdk = await briosa.connect_to_spatial_analyzer()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The default [`start`](./start.md) procedure invokes this behavior automatically.
 Use the method directly after deliberately stopping the SDK or when a future
 reviewed startup option delays SDK orchestration.

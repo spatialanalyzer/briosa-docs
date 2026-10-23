@@ -229,13 +229,23 @@ to use the operation error hierarchy; the SDK incident is also visible through
 ## Complete Example
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-async with BriosaClient() as briosa:
-    working_directory = await briosa.get_working_directory()
+async def main():
+    async with BriosaClient() as briosa:
+        working_directory = await briosa.get_working_directory()
+
+
+asyncio.run(main())
 ```
 
 This is the default fresh-application procedure. Pass `BriosaStartOptions` to
 select a different startup sequence or controlled application launch inputs.
 Ordinary client stop or context exit never closes SpatialAnalyzer.
+
+Client methods are coroutines. Call them inside an `async` function, and run
+that function with `asyncio.run()` as shown here. Shorter examples elsewhere
+in this reference show only the statements inside such a function.

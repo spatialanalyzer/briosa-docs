@@ -117,6 +117,10 @@ string workingDirectory = await briosa.GetWorkingDirectoryAsync();
 working_directory = await briosa.get_working_directory()
 ```
 
+This line runs inside an `async` function. See
+[Run Your First MP Command](/docs/getting-started/first-request?client-language=python)
+for the complete program, including its `asyncio` setup.
+
   </TabItem>
   <TabItem value="typescript" label="JavaScript / TypeScript">
 

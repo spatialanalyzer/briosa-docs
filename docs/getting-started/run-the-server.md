@@ -106,12 +106,26 @@ await briosa.StartAsync();
   <TabItem value="python" label="Python">
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-briosa = BriosaClient()
-await briosa.start()
+async def main():
+    briosa = BriosaClient()
+    try:
+        await briosa.start()
+        # Call Briosa methods here.
+    finally:
+        await briosa.aclose()
+
+
+asyncio.run(main())
 ```
+
+Python client methods are coroutines, so call them inside an `async` function
+and run that function with `asyncio.run()`. `aclose()` cleans up the client's
+local Briosa resources when the program ends; SpatialAnalyzer stays open.
 
   </TabItem>
   <TabItem value="typescript" label="JavaScript / TypeScript">
@@ -157,12 +171,23 @@ await briosa.StartAsync(new BriosaStartOptions
   <TabItem value="python" label="Python">
 
 ```python
-from briosa import BriosaStartOptions
+import asyncio
+
+from briosa import BriosaClient, BriosaStartOptions
 
 
-await briosa.start(
-    BriosaStartOptions(launch_spatial_analyzer=False),
-)
+async def main():
+    briosa = BriosaClient()
+    try:
+        await briosa.start(
+            BriosaStartOptions(launch_spatial_analyzer=False),
+        )
+        # Call Briosa methods here.
+    finally:
+        await briosa.aclose()
+
+
+asyncio.run(main())
 ```
 
   </TabItem>
@@ -249,6 +274,10 @@ if sdk.recovery_state is SpatialAnalyzerSdkRecoveryState.RECOVERY_AVAILABLE:
     )
     sdk = await briosa.connect_to_spatial_analyzer()
 ```
+
+Run this code inside an `async` function, such as `main()` in
+[Start from a First-Party Client](#start-from-a-first-party-client), where
+`briosa` is the started client.
 
   </TabItem>
   <TabItem value="typescript" label="JavaScript / TypeScript">

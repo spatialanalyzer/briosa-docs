@@ -40,12 +40,21 @@ Passing `None` uses `BriosaStartOptions()`.
 ## Example
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-briosa = BriosaClient()
-await briosa.start()
-working_directory = await briosa.get_working_directory()
+async def main():
+    briosa = BriosaClient()
+    try:
+        await briosa.start()
+        working_directory = await briosa.get_working_directory()
+    finally:
+        await briosa.aclose()
+
+
+asyncio.run(main())
 ```
 
 To attach to an eligible SpatialAnalyzer application that is already running:
@@ -59,6 +68,8 @@ await briosa.start(
 )
 ```
 
+Make this call in place of `start()` in the [example](#example) above.
+
 To start only the Briosa control plane:
 
 ```python
@@ -70,6 +81,8 @@ await briosa.start(
     ),
 )
 ```
+
+Make this call in place of `start()` in the [example](#example) above.
 
 ## Server Logging
 
@@ -89,6 +102,8 @@ await briosa.start(
     ),
 )
 ```
+
+Make this call in place of `start()` in the [example](#example) above.
 
 Additional fields are `category_levels`, `file_enabled`, `file_directory`,
 `max_age_days`, and `max_total_size_mib`. Levels use `BriosaLogLevel`.
