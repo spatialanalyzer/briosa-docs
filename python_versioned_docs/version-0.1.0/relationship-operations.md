@@ -204,6 +204,10 @@ async def enable_disable_relationships_for_optimization(
 await briosa.enable_disable_relationships_for_optimization(relationships=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1141,6 +1145,10 @@ async def geom_relationship_ignore_input_points(
 await briosa.geom_relationship_ignore_input_points(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1166,6 +1174,10 @@ async def geom_relationship_reuse_ignored_input_points(
 ```python
 await briosa.geom_relationship_reuse_ignored_input_points(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1205,6 +1217,10 @@ async def get_geom_relationship_auto_vectors(
 await briosa.get_geom_relationship_auto_vectors(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 5 MP outputs in the named `GetGeomRelationshipAutoVectorsResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1231,6 +1247,10 @@ async def get_geom_relationship_cardinal_points(
 ```python
 await briosa.get_geom_relationship_cardinal_points(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Cardinal Point Name List` directly as `list[PointName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1283,6 +1303,10 @@ async def get_geom_relationship_criteria(
 await briosa.get_geom_relationship_criteria(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 10 MP outputs in the named `GetGeomRelationshipCriteriaResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1310,6 +1334,10 @@ async def get_geom_relationship_measured_avg_point(
 await briosa.get_geom_relationship_measured_avg_point(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Measured Average Point` directly as `PointName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1335,6 +1363,10 @@ async def get_geom_relationship_measured_geometry(
 ```python
 await briosa.get_geom_relationship_measured_geometry(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Measured Geometry` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1362,6 +1394,10 @@ async def get_geom_relationship_nominal_avg_point(
 await briosa.get_geom_relationship_nominal_avg_point(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Nominal Average Point` directly as `PointName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1387,6 +1423,10 @@ async def get_geom_relationship_nominal_geometry(
 ```python
 await briosa.get_geom_relationship_nominal_geometry(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Nominal Geometry` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1422,6 +1462,10 @@ async def get_geom_relationship_point_list(
 await briosa.get_geom_relationship_point_list(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 3 MP outputs in the named `GetGeomRelationshipPointListResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1448,6 +1492,10 @@ async def get_geom_relationship_projection_plane(
 ```python
 await briosa.get_geom_relationship_projection_plane(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Projection Plane Name` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1484,6 +1532,10 @@ async def get_pipe_relationship_cut_status(
 ```python
 await briosa.get_pipe_relationship_cut_status(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 4 MP outputs in the named `GetPipeRelationshipCutStatusResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -1534,6 +1586,10 @@ async def get_pipe_relationship_properties(
 await briosa.get_pipe_relationship_properties(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 10 MP outputs in the named `GetPipeRelationshipPropertiesResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1579,6 +1635,10 @@ async def get_pipe_relationship_weights(
 await briosa.get_pipe_relationship_weights(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 8 MP outputs in the named `GetPipeRelationshipWeightsResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1618,6 +1678,10 @@ async def get_relationship_fit_constraints_scalar_type(
 await briosa.get_relationship_fit_constraints_scalar_type(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 5 MP outputs in the named `GetRelationshipFitConstraintsScalarTypeResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1654,6 +1718,10 @@ async def get_relationship_outlier_rejection_scalar_type(
 ```python
 await briosa.get_relationship_outlier_rejection_scalar_type(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 4 MP outputs in the named `GetRelationshipOutlierRejectionScalarTypeResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -1694,6 +1762,10 @@ async def get_relationship_projection_options(
 await briosa.get_relationship_projection_options(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 5 MP outputs in the named `GetRelationshipProjectionOptionsResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1720,6 +1792,10 @@ async def get_relationship_reporting_frame(
 ```python
 await briosa.get_relationship_reporting_frame(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Reporting Frame` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1756,6 +1832,10 @@ async def get_relationship_sub_sampling_options(
 ```python
 await briosa.get_relationship_sub_sampling_options(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 4 MP outputs in the named `GetRelationshipSubSamplingOptionsResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -1795,6 +1875,10 @@ async def get_relationship_tolerance_scalar_type(
 ```python
 await briosa.get_relationship_tolerance_scalar_type(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 5 MP outputs in the named `GetRelationshipToleranceScalarTypeResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -1859,6 +1943,10 @@ async def get_relationship_tolerance_vector_type(
 await briosa.get_relationship_tolerance_vector_type(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 17 MP outputs in the named `GetRelationshipToleranceVectorTypeResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1886,6 +1974,10 @@ async def get_relationship_type(
 await briosa.get_relationship_type(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Relationship Type` directly as `str`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1911,6 +2003,10 @@ async def get_relationship_weighting(
 ```python
 await briosa.get_relationship_weighting(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Weight` directly as `float`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1941,6 +2037,10 @@ async def make_pipe_fitting_relationship(
 ```python
 await briosa.make_pipe_fitting_relationship(relationship_name=..., pipe_1_object_name=..., pipe_2_object_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1981,6 +2081,10 @@ async def make_pipe_relationship_cut(
 await briosa.make_pipe_relationship_cut(relationship_name=..., pipe_1_frame_name=..., pipe_2_frame_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2016,6 +2120,10 @@ async def pipe_relationship_force_cut_to_frame(
 await briosa.pipe_relationship_force_cut_to_frame(relationship_name=..., pipe_1_frame_name=..., pipe_2_frame_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2048,6 +2156,10 @@ async def set_geom_relationship_auto_measure_nominal_feature(
 ```python
 await briosa.set_geom_relationship_auto_measure_nominal_feature(relationship_name=..., instrument_id=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2084,6 +2196,10 @@ async def set_geom_relationship_auto_vectors_nominal_avn(
 await briosa.set_geom_relationship_auto_vectors_nominal_avn(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2116,6 +2232,10 @@ async def set_geom_relationship_cardinal_points(
 ```python
 await briosa.set_geom_relationship_cardinal_points(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2154,6 +2274,10 @@ async def set_geom_relationship_criteria(
 await briosa.set_geom_relationship_criteria(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2181,6 +2305,10 @@ async def set_geom_relationship_measured_geometry(
 ```python
 await briosa.set_geom_relationship_measured_geometry(relationship_name=..., measured_geometry=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2213,6 +2341,10 @@ async def set_geom_relationship_nominal_avg_point(
 await briosa.set_geom_relationship_nominal_avg_point(relationship_name=..., nominal_average_point=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2243,6 +2375,10 @@ async def set_geom_relationship_nominal_geometry(
 ```python
 await briosa.set_geom_relationship_nominal_geometry(relationship_name=..., nominal_geometry=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2275,6 +2411,10 @@ async def set_geom_relationship_projection_plane(
 await briosa.set_geom_relationship_projection_plane(relationship_name=..., projection_plane_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2305,6 +2445,10 @@ async def set_object_to_object_direction_relationship_fit_constraints(
 ```python
 await briosa.set_object_to_object_direction_relationship_fit_constraints(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2349,6 +2493,10 @@ async def set_pipe_relationship_segment_properties(
 await briosa.set_pipe_relationship_segment_properties(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2392,6 +2540,10 @@ async def set_pipe_relationship_weights(
 await briosa.set_pipe_relationship_weights(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2425,6 +2577,10 @@ async def set_relationship_auto_vectors_fit_avf(
 await briosa.set_relationship_auto_vectors_fit_avf(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2456,6 +2612,10 @@ async def set_relationship_auto_vectors_group_default_prefix(
 await briosa.set_relationship_auto_vectors_group_default_prefix()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2484,6 +2644,10 @@ async def set_relationship_desired_meas_count(
 ```python
 await briosa.set_relationship_desired_meas_count(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2514,6 +2678,10 @@ async def set_relationship_dormant_status(
 await briosa.set_relationship_dormant_status(relationships=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2543,6 +2711,10 @@ async def set_relationship_fit_constraints_scalar_type(
 await briosa.set_relationship_fit_constraints_scalar_type(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2571,6 +2743,10 @@ async def set_relationship_orientation_fit_constraints_vector_type(
 await briosa.set_relationship_orientation_fit_constraints_vector_type(relationship_name=..., orientation_vector_constraint=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2596,6 +2772,10 @@ async def set_relationship_outlier_rejection_scalar_type(
 ```python
 await briosa.set_relationship_outlier_rejection_scalar_type(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2624,6 +2804,10 @@ async def set_relationship_position_fit_constraints_vector_type(
 ```python
 await briosa.set_relationship_position_fit_constraints_vector_type(relationship_name=..., position_vector_constraint=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2654,6 +2838,10 @@ async def set_relationship_projection_options(
 await briosa.set_relationship_projection_options(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2681,6 +2869,10 @@ async def set_relationship_reporting_frame(
 ```python
 await briosa.set_relationship_reporting_frame(relationship_name=..., reporting_frame=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2710,6 +2902,10 @@ async def set_relationship_sigmoidal_gap_fit_constraints(
 ```python
 await briosa.set_relationship_sigmoidal_gap_fit_constraints(relationship_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2746,6 +2942,10 @@ async def set_relationship_sub_sampling_options(
 await briosa.set_relationship_sub_sampling_options(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2775,6 +2975,10 @@ async def set_relationship_tolerance_scalar_type(
 await briosa.set_relationship_tolerance_scalar_type(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2802,6 +3006,10 @@ async def set_relationship_tolerance_vector_type(
 ```python
 await briosa.set_relationship_tolerance_vector_type(relationship_name=..., vector_tolerance=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2844,6 +3052,10 @@ async def set_relationship_voxel_cloud_display(
 await briosa.set_relationship_voxel_cloud_display(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2873,6 +3085,10 @@ async def set_relationship_weighting(
 await briosa.set_relationship_weighting(relationship_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2901,6 +3117,10 @@ async def set_relationship_weights_normalized(
 ```python
 await briosa.set_relationship_weights_normalized(collection_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.

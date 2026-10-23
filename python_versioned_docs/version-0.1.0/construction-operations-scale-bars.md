@@ -43,4 +43,8 @@ await briosa.construction_operations.construct_scale_bar(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 [Catalog](/mp-command-catalog/commands/construction-operations-scale-bars) · [gRPC](/api/grpc/0.5.1/construction-operations-scale-bars)

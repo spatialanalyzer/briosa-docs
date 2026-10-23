@@ -29,6 +29,10 @@ async def backup_now(self) -> None: ...
 await briosa.backup_now()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -60,6 +64,10 @@ async def copy_general_file(
 await briosa.copy_general_file(source_file_name=..., destination_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -85,6 +93,10 @@ async def delete_general_file(
 ```python
 await briosa.delete_general_file(file_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -181,6 +193,10 @@ async def direct_cad_access(
 await briosa.direct_cad_access(cad_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 4 MP outputs in the named `DirectCadAccessResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -221,6 +237,10 @@ async def export_ascii_frame_set(
 await briosa.export_ascii_frame_set(ascii_file_path=..., frame_set_container=..., data_delimiter=..., file_format=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -253,6 +273,10 @@ async def export_ascii_frames(
 ```python
 await briosa.export_ascii_frames(ascii_file_path=..., object_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -292,6 +316,10 @@ async def export_ascii_point_clouds(
 ```python
 await briosa.export_ascii_point_clouds(ascii_file_path=..., point_cloud_list=..., data_delimiter=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -343,6 +371,10 @@ async def export_ascii_point_set(
 ```python
 await briosa.export_ascii_point_set(ascii_file_path=..., point_set_container=..., data_delimiter=..., target_name_format=..., desired_coordinate_system=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -405,6 +437,10 @@ async def export_ascii_points(
 await briosa.export_ascii_points(ascii_file_path=..., group_names_to_export=..., data_delimiter=..., target_name_format=..., desired_coordinate_system=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -437,6 +473,10 @@ async def export_dxf(
 ```python
 await briosa.export_dxf(dxf_file_path=..., point_names=..., cloud_names=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -471,6 +511,10 @@ async def export_embedded_file(
 await briosa.export_embedded_file(embedded_file_collection_name=..., external_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -497,6 +541,10 @@ async def export_hidden_point_bar_xml_file(
 await briosa.export_hidden_point_bar_xml_file(xml_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -522,6 +570,10 @@ async def export_iges_file_entire_model(
 ```python
 await briosa.export_iges_file_entire_model(iges_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -550,6 +602,10 @@ async def export_iges_file_partial_model(
 ```python
 await briosa.export_iges_file_partial_model(iges_file_path=..., object_name_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -583,6 +639,10 @@ async def export_ptx_point_clouds(
 ```python
 await briosa.export_ptx_point_clouds(ptx_file_path=..., point_cloud_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -645,6 +705,10 @@ async def export_qdas_characteristics(
 await briosa.export_qdas_characteristics(qdas_export_file_path=..., relationship_list=..., feature_check_list=..., vector_group_list=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -670,6 +734,10 @@ async def export_qdas_data_list(
 ```python
 await briosa.export_qdas_data_list(qdas_export_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -699,6 +767,10 @@ async def export_scan_stripe_mesh_to_stl_file(
 await briosa.export_scan_stripe_mesh_to_stl_file(stl_file_path=..., mesh=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -724,6 +796,10 @@ async def export_step_file_entire_model(
 ```python
 await briosa.export_step_file_entire_model(step_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -753,6 +829,10 @@ async def export_step_file_partial_model(
 await briosa.export_step_file_partial_model(step_file_path=..., object_name_list=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -778,6 +858,10 @@ async def export_vda_fs_file_entire_model(
 ```python
 await briosa.export_vda_fs_file_entire_model(vda_fs_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -806,6 +890,10 @@ async def export_vda_fs_file_partial_model(
 ```python
 await briosa.export_vda_fs_file_partial_model(vda_fs_file_path=..., object_name_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -844,6 +932,10 @@ async def export_vector_container_to_ascii_file(
 await briosa.export_vector_container_to_ascii_file(ascii_file_path=..., vector_groups_to_export=..., vector_name_format=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -875,6 +967,10 @@ async def find_files_in_directory(
 await briosa.find_files_in_directory()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Files` directly as `list[str]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -903,6 +999,10 @@ async def find_sub_directories_in_directory(
 ```python
 await briosa.find_sub_directories_in_directory()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Sub-Directories` directly as `list[str]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -933,6 +1033,10 @@ async def get_boolean_from_data_share_file(
 await briosa.get_boolean_from_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Boolean Value` directly as `bool`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -961,6 +1065,10 @@ async def get_double_from_data_share_file(
 ```python
 await briosa.get_double_from_data_share_file(data_share_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Double Value` directly as `float`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -991,6 +1099,10 @@ async def get_integer_from_data_share_file(
 await briosa.get_integer_from_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Integer Value` directly as `int`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1017,6 +1129,10 @@ async def get_qdas_catalog_entries(
 ```python
 await briosa.get_qdas_catalog_entries()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Catalog Entries` directly as `list[str]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1047,6 +1163,10 @@ async def get_string_from_data_share_file(
 await briosa.get_string_from_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `String Value` directly as `str`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1075,6 +1195,10 @@ async def get_transform_from_data_share_file(
 ```python
 await briosa.get_transform_from_data_share_file(data_share_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Transform Value` directly as `Transform`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1105,6 +1229,10 @@ async def get_vector_from_data_share_file(
 await briosa.get_vector_from_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Vector Value` directly as `Vector`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1127,6 +1255,10 @@ async def get_working_directory(self) -> str: ...
 ```python
 await briosa.get_working_directory()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Directory` directly as `str`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1169,6 +1301,10 @@ async def import_ascii_predefined_formats(
 await briosa.import_ascii_predefined_formats(ascii_file_path=..., file_format=..., group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1205,6 +1341,10 @@ async def import_ascii_predefined_frame_set_formats(
 ```python
 await briosa.import_ascii_predefined_frame_set_formats(ascii_file_path=..., file_format=..., frame_set_container_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1245,6 +1385,10 @@ async def import_e57_file(
 await briosa.import_e57_file(e57_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1273,6 +1417,10 @@ async def import_file_as_embedded_file(
 ```python
 await briosa.import_file_as_embedded_file(external_file_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1303,6 +1451,10 @@ async def import_file_as_picture(
 await briosa.import_file_as_picture(external_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1332,6 +1484,10 @@ async def import_hidden_point_bar_xml_file(
 await briosa.import_hidden_point_bar_xml_file(xml_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1357,6 +1513,10 @@ async def import_iges_file(
 ```python
 await briosa.import_iges_file(iges_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1388,6 +1548,10 @@ async def import_leica_gsi_file(
 await briosa.import_leica_gsi_file(instrument_id=..., group_name=..., file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1418,6 +1582,10 @@ async def import_leica_sdb_file(
 await briosa.import_leica_sdb_file(instrument_id=..., scan_cloud_name=..., file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1447,6 +1615,10 @@ async def import_mp_file_as_embedded_mp(
 await briosa.import_mp_file_as_embedded_mp(external_mp_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1472,6 +1644,10 @@ async def import_nominals_from_xml_file(
 ```python
 await briosa.import_nominals_from_xml_file(file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1501,6 +1677,10 @@ async def import_polyworks_file(
 await briosa.import_polyworks_file(cloud_name=..., file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1526,6 +1706,10 @@ async def import_qdas_catalog_file(
 ```python
 await briosa.import_qdas_catalog_file(qdas_dfd_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1558,6 +1742,10 @@ async def import_sa_file(
 await briosa.import_sa_file(sa_file_name=..., selected_collections_optional=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1584,6 +1772,10 @@ async def import_sa_windows_placement(
 await briosa.import_sa_windows_placement(file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1609,6 +1801,10 @@ async def import_sat_file(
 ```python
 await briosa.import_sat_file(sat_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1640,6 +1836,10 @@ async def import_step_file(
 ```python
 await briosa.import_step_file(step_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1674,6 +1874,10 @@ async def import_stl_file(
 await briosa.import_stl_file(stl_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1699,6 +1903,10 @@ async def import_vda_fs_file(
 ```python
 await briosa.import_vda_fs_file(vda_fs_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1726,6 +1934,10 @@ async def import_vstars_xyz_file(
 await briosa.import_vstars_xyz_file(file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1751,6 +1963,10 @@ async def import_vstars_cameras(
 ```python
 await briosa.import_vstars_cameras(file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1795,6 +2011,10 @@ async def load_html_form(
 await briosa.load_html_form(input_html_form_path=..., input_data_share_file_path=..., output_data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1832,6 +2052,10 @@ async def load_html_form_in_edge_browser(
 await briosa.load_html_form_in_edge_browser(input_html_form_path=..., input_data_share_file_path=..., output_data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1861,6 +2085,10 @@ async def make_embedded_file_name_list(
 await briosa.make_embedded_file_name_list()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Embedded Files` directly as `list[str]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1889,6 +2117,10 @@ async def merge_measurements_into_xml_file(
 await briosa.merge_measurements_into_xml_file(file_path=..., group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1911,6 +2143,10 @@ async def new_sa_file(self) -> None: ...
 ```python
 await briosa.new_sa_file()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1938,6 +2174,10 @@ async def open_sa_file(
 await briosa.open_sa_file(sa_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1963,6 +2203,10 @@ async def open_template_file(
 ```python
 await briosa.open_template_file(template_file_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -1992,6 +2236,10 @@ async def pop_poly_bay_analysis_window(
 ```python
 await briosa.pop_poly_bay_analysis_window()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2052,6 +2300,10 @@ async def prepare_qdas_data_list(
 await briosa.prepare_qdas_data_list(relationship_list=..., feature_check_list=..., vector_group_list=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2083,6 +2335,10 @@ async def rename_general_file(
 await briosa.rename_general_file(source_file_name=..., destination_file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2105,6 +2361,10 @@ async def save(self) -> None: ...
 ```python
 await briosa.save()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2131,6 +2391,10 @@ async def save_as_read_only_template(
 ```python
 await briosa.save_as_read_only_template(template_file_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2163,6 +2427,10 @@ async def save_as(
 await briosa.save_as(file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2193,6 +2461,10 @@ async def set_boolean_in_data_share_file(
 ```python
 await briosa.set_boolean_in_data_share_file(data_share_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2225,6 +2497,10 @@ async def set_double_in_data_share_file(
 await briosa.set_double_in_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2255,6 +2531,10 @@ async def set_integer_in_data_share_file(
 ```python
 await briosa.set_integer_in_data_share_file(data_share_file_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2287,6 +2567,10 @@ async def set_string_in_data_share_file(
 await briosa.set_string_in_data_share_file(data_share_file_path=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2317,6 +2601,10 @@ async def set_transform_in_data_share_file(
 ```python
 await briosa.set_transform_in_data_share_file(data_share_file_path=..., transform_value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2349,6 +2637,10 @@ async def set_vector_in_data_share_file(
 await briosa.set_vector_in_data_share_file(data_share_file_path=..., vector_value=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2371,6 +2663,10 @@ async def terminate_all_running_mps(self) -> None: ...
 ```python
 await briosa.terminate_all_running_mps()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -2399,6 +2695,10 @@ async def use_nrkxml_library(
 await briosa.use_nrkxml_library()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2425,6 +2725,10 @@ async def verify_general_file_exists(
 await briosa.verify_general_file_exists(file_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -2450,6 +2754,10 @@ async def verify_mp_file_exists(
 ```python
 await briosa.verify_mp_file_exists(mp_file_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.

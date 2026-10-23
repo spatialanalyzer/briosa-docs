@@ -180,6 +180,10 @@ await briosa.gdt_operations.set_feature_check_cylinder_eval_options(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Filtering and Evaluation
 
 ```python
@@ -239,6 +243,10 @@ totals = await briosa.gdt_operations.evaluate_feature_checks(feature_checks)
 await briosa.gdt_operations.generate_feature_check_summary(feature_checks)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Trapping and Datum Alignment
 
 ```python
@@ -283,6 +291,10 @@ await briosa.gdt_operations.datum_alignment(
     instruments_to_move,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Briosa does not retain a parallel model of trapping or alignment state and does
 not add movement safeguards.
@@ -331,6 +343,10 @@ await briosa.gdt_operations.set_gdt_extended_options()
 extended_options_enabled = await briosa.gdt_operations.get_gdt_extended_options()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The exact getter returns seven `GdtOptions` properties;
 `distance_between_mode` and `evaluation_method` are `None`. The extended getter
 returns only `Use Extended Options`; each setter geometry accepts only its
@@ -378,6 +394,10 @@ frame = await briosa.gdt_operations.get_feature_check_reporting_frame(feature_ch
 await briosa.gdt_operations.set_feature_check_reporting_options(feature_check)
 reporting = await briosa.gdt_operations.get_feature_check_reporting_options(feature_check)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 :::warning[Partial Reporting-Options Contract]
 

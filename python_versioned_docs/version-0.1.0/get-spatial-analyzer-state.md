@@ -38,6 +38,10 @@ if application.application_state is SpatialAnalyzerApplicationState.RUNNING:
     sdk = await briosa.get_spatial_analyzer_sdk_state()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Raises
 
 | Exception | Meaning |

@@ -37,6 +37,10 @@ async def add_task_overview_item(
 await briosa.add_task_overview_item()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -66,6 +70,10 @@ async def create_clear_task_overview_list(
 await briosa.create_clear_task_overview_list()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -93,6 +101,10 @@ async def set_current_task(
 await briosa.set_current_task()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -118,6 +130,10 @@ async def set_overview_image(
 ```python
 await briosa.set_overview_image(image_path=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -145,6 +161,10 @@ async def set_overview_title(
 ```python
 await briosa.set_overview_title()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -174,6 +194,10 @@ async def set_task_item_comment(
 ```python
 await briosa.set_task_item_comment()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -206,6 +230,10 @@ async def set_task_item_completion_values(
 await briosa.set_task_item_completion_values()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -234,6 +262,10 @@ async def set_task_item_name(
 ```python
 await briosa.set_task_item_name()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -264,6 +296,10 @@ async def show_progress_for_task_item(
 await briosa.show_progress_for_task_item()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -290,6 +326,10 @@ async def show_task_overview_list(
 ```python
 await briosa.show_task_overview_list()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.

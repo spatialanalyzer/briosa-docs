@@ -48,6 +48,10 @@ if sdk.recovery_state is SpatialAnalyzerSdkRecoveryState.RECOVERY_AVAILABLE:
     sdk = await briosa.connect_to_spatial_analyzer()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Raises
 
 | Exception | Meaning |

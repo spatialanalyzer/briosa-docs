@@ -21,11 +21,17 @@ Calls SpatialAnalyzer's `Get Working Directory` MP command and returns its
 ## Example
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-async with BriosaClient() as briosa:
-    working_directory = await briosa.get_working_directory()
+async def main():
+    async with BriosaClient() as briosa:
+        working_directory = await briosa.get_working_directory()
+
+
+asyncio.run(main())
 ```
 
 Entering the asynchronous context starts a compatible Briosa session and

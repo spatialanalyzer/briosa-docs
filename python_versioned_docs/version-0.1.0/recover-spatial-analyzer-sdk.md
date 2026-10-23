@@ -23,6 +23,10 @@ sdk = await briosa.recover_spatial_analyzer_sdk(
 sdk = await briosa.connect_to_spatial_analyzer()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Recovery does not call `ConnectEx` or replay or resolve an earlier command.
 Failures use `ValueError`, the lifecycle and SDK error boundaries,
 `TimeoutError`, or normal task cancellation.

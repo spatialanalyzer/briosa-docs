@@ -47,6 +47,10 @@ async def mirror_objects(
 await briosa.mirror_objects(objects, frame, MirrorFramePlane.XY)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Mirrors selected objects across one of a frame's orthogonal planes.
 
 ## Copy Object
@@ -79,6 +83,10 @@ async def copy_object(
 await briosa.copy_object(source_object, new_object_name)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Copies one collection object to a caller-supplied object name.
 
 ## Copy Objects to a collection
@@ -108,6 +116,10 @@ async def copy_objects_to_a_collection(
 await briosa.copy_objects_to_a_collection(source_objects, destination_collection_name)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Copies selected objects into a destination collection.
 
 ## Move Objects to a collection
@@ -136,6 +148,10 @@ async def move_objects_to_a_collection(
 ```python
 await briosa.move_objects_to_a_collection(source_objects, destination_collection_name)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Moves selected objects into a destination collection.
 
@@ -171,6 +187,10 @@ async def copy_objects_point_to_point_delta(
 await briosa.copy_objects_point_to_point_delta(objects_to_copy, first_point, second_point)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Copies objects by the delta between two points.
 
 ## Move Objects - Point to Point Delta
@@ -201,6 +221,10 @@ async def move_objects_point_to_point_delta(
 ```python
 await briosa.move_objects_point_to_point_delta(objects_to_move, first_point, second_point)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Moves objects by the delta between two points.
 
@@ -234,6 +258,10 @@ async def rename_point(
 await briosa.rename_point(original_point_name, new_point_name)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Renames one point.
 
 ## Rename Points with Name Pattern
@@ -266,6 +294,10 @@ async def rename_points_with_name_pattern(
 await briosa.rename_points_with_name_pattern(point_names)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Renames points using a numbered `%d` name pattern.
 
 ## Rename Collection
@@ -294,6 +326,10 @@ async def rename_collection(
 ```python
 await briosa.rename_collection(original_collection_name, new_collection_name)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Renames one collection.
 
@@ -327,6 +363,10 @@ async def rename_object(
 await briosa.rename_object(original_object_name, new_object_name)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Renames one collection object.
 
 ## Rename Item
@@ -359,6 +399,10 @@ async def rename_item(
 await briosa.rename_item(original_item_name, new_item_name)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Renames one collection item from SpatialAnalyzer's broader item domain.
 
 ## Delete Points
@@ -385,6 +429,10 @@ async def delete_points(
 ```python
 await briosa.delete_points(point_names)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Deletes the selected points.
 
@@ -414,6 +462,10 @@ async def delete_points_wildcard_selection(
 ```python
 await briosa.delete_points_wildcard_selection(groups, wildcard_point_name)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Deletes matching points within the supplied groups.
 
@@ -460,6 +512,10 @@ await briosa.construct_objects_from_surface_faces_runtime_select(
     ConstructObjectType.PLANES,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The operator selects surface faces in SpatialAnalyzer while this call is in
 progress. Pass a specific type to avoid an extra type-selection dialog, or pass

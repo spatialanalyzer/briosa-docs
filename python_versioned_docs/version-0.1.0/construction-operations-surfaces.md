@@ -25,6 +25,10 @@ async def construct_surfaces_from_objects(
 await briosa.construction_operations.construct_surfaces_from_objects(objects)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_from_b_splines
 
 ```python
@@ -41,6 +45,10 @@ await briosa.construction_operations.construct_surface_from_b_splines(
     b_splines,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `b_spline_list` maps to exact MP argument `BSpline List`.
 
@@ -64,6 +72,10 @@ await briosa.construction_operations.construct_surface_from_cylinder(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_from_plane
 
 ```python
@@ -80,6 +92,10 @@ await briosa.construction_operations.construct_surface_from_plane(
     plane,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## construct_surface_from_sphere
 
@@ -98,6 +114,10 @@ await briosa.construction_operations.construct_surface_from_sphere(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_from_cone
 
 ```python
@@ -114,6 +134,10 @@ await briosa.construction_operations.construct_surface_from_cone(
     cone,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## construct_surface_from_collection_of_surfaces
 
@@ -137,6 +161,10 @@ await briosa.construction_operations.construct_surface_from_collection_of_surfac
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_fit_from_nominal_surfaces_and_actual_data
 
 ```python
@@ -156,6 +184,10 @@ await briosa.construction_operations.construct_surface_fit_from_nominal_surfaces
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_by_dissecting_surfaces
 
 ```python
@@ -170,6 +202,10 @@ created_surfaces = await briosa.construction_operations.construct_surface_by_dis
     SurfaceDissectionMode.SELECT_FACES,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Face selection is operator-interactive. Task cancellation does not prove the SA
 interaction stopped.
@@ -189,6 +225,10 @@ created_surfaces = await briosa.construction_operations.construct_surfaces_by_di
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_from_point_groups
 
 ```python
@@ -207,6 +247,10 @@ await briosa.construction_operations.construct_surface_from_point_groups(
     resulting_surface,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `None` applies the shared
 [`BSplineFitOptions` defaults](./construction-operations-bsplines#b-spline-fit-options-value).
@@ -230,6 +274,10 @@ await briosa.construction_operations.construct_surfaces_by_projecting_points(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_by_offsetting_surface
 
 ```python
@@ -249,6 +297,10 @@ await briosa.construction_operations.construct_surface_by_offsetting_surface(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_surface_from_annotation_links
 
 ```python
@@ -265,6 +317,10 @@ await briosa.construction_operations.construct_surface_from_annotation_links(
     resulting_surface,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## construct_geometry_from_surfaces
 
@@ -289,6 +345,10 @@ cylinders = await briosa.construction_operations.construct_geometry_from_surface
     destination_collection_name=destination,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 :::warning[SA 2026.1 Partial Contract]
 

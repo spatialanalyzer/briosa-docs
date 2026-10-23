@@ -32,6 +32,10 @@ async def delete_scale_bar(
 await briosa.delete_scale_bar(scale_bar_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -65,6 +69,10 @@ async def get_scale_bar_stats(
 ```python
 await briosa.get_scale_bar_stats(scale_bar_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 3 MP outputs in the named `GetScaleBarStatsResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -104,6 +112,10 @@ async def scale_bar_check(
 await briosa.scale_bar_check(scale_bar_point_a=..., scale_bar_point_b=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Deviation at 68F` directly as `float`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -132,6 +144,10 @@ async def set_inward_positive_normal(
 ```python
 await briosa.set_inward_positive_normal(object_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.

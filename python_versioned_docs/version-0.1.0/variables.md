@@ -35,6 +35,10 @@ async def add_double_to_named_double_list_variable(
 await briosa.add_double_to_named_double_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -61,6 +65,10 @@ async def clear_named_double_list_variable(
 ```python
 await briosa.clear_named_double_list_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -89,6 +97,10 @@ async def delete_variable(
 await briosa.delete_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -115,6 +127,10 @@ async def delete_variables_wildcard_match(
 ```python
 await briosa.delete_variables_wildcard_match()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -143,6 +159,10 @@ async def get_boolean_variable(
 await briosa.get_boolean_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `bool`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -169,6 +189,10 @@ async def get_collection_object_name_variable(
 ```python
 await briosa.get_collection_object_name_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `CollectionObjectName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -197,6 +221,10 @@ async def get_collection_object_ref_list_variable(
 await briosa.get_collection_object_ref_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `list[CollectionObjectName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -223,6 +251,10 @@ async def get_double_variable(
 ```python
 await briosa.get_double_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `float`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -251,6 +283,10 @@ async def get_integer_variable(
 await briosa.get_integer_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `int`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -277,6 +313,10 @@ async def get_named_double_list_variable(
 ```python
 await briosa.get_named_double_list_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Double List Variable` directly as `list[float]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -311,6 +351,10 @@ async def get_named_double_list_variable_min_max(
 await briosa.get_named_double_list_variable_min_max()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 2 MP outputs in the named `GetNamedDoubleListVariableMinMaxResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -339,6 +383,10 @@ async def get_point_name_ref_list_variable(
 await briosa.get_point_name_ref_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `list[PointName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -365,6 +413,10 @@ async def get_point_name_variable(
 ```python
 await briosa.get_point_name_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `PointName`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -393,6 +445,10 @@ async def get_relationship_ref_list_variable(
 await briosa.get_relationship_ref_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `list[CollectionObjectName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -419,6 +475,10 @@ async def get_report_items_reference_list_variable(
 ```python
 await briosa.get_report_items_reference_list_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `list[CollectionObjectName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -447,6 +507,10 @@ async def get_string_ref_list_variable(
 await briosa.get_string_ref_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `list[str]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -473,6 +537,10 @@ async def get_string_variable(
 ```python
 await briosa.get_string_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `str`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -501,6 +569,10 @@ async def get_transform_variable(
 await briosa.get_transform_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `Transform`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -528,6 +600,10 @@ async def get_vector_name_ref_list_variable(
 await briosa.get_vector_name_ref_list_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Value` directly as `list[VectorName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -554,6 +630,10 @@ async def get_vector_variable(
 ```python
 await briosa.get_vector_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Value` directly as `Vector`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -584,6 +664,10 @@ async def set_boolean_variable(
 await briosa.set_boolean_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -612,6 +696,10 @@ async def set_collection_object_name_variable(
 ```python
 await briosa.set_collection_object_name_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -642,6 +730,10 @@ async def set_collection_object_ref_list_variable(
 await briosa.set_collection_object_ref_list_variable(value=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -670,6 +762,10 @@ async def set_double_variable(
 ```python
 await briosa.set_double_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -700,6 +796,10 @@ async def set_font_variable(
 await briosa.set_font_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -728,6 +828,10 @@ async def set_integer_variable(
 ```python
 await briosa.set_integer_variable()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -758,6 +862,10 @@ async def set_named_double_list_variable(
 await briosa.set_named_double_list_variable(double_list_variable=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -786,6 +894,10 @@ async def set_point_name_ref_list_variable(
 ```python
 await briosa.set_point_name_ref_list_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -816,6 +928,10 @@ async def set_point_name_variable(
 await briosa.set_point_name_variable(value=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -844,6 +960,10 @@ async def set_relationship_ref_list_variable(
 ```python
 await briosa.set_relationship_ref_list_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -874,6 +994,10 @@ async def set_report_items_reference_list_variable(
 await briosa.set_report_items_reference_list_variable(value=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -902,6 +1026,10 @@ async def set_string_ref_list_variable(
 ```python
 await briosa.set_string_ref_list_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -932,6 +1060,10 @@ async def set_string_variable(
 await briosa.set_string_variable()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -960,6 +1092,10 @@ async def set_transform_variable(
 ```python
 await briosa.set_transform_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -990,6 +1126,10 @@ async def set_vector_name_ref_list_variable(
 await briosa.set_vector_name_ref_list_variable(value=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -1018,6 +1158,10 @@ async def set_vector_variable(
 ```python
 await briosa.set_vector_variable(value=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
