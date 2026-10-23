@@ -107,6 +107,10 @@ async def make_surface_face_list_runtime_select() -> SurfaceFaceList: ...
 faces = await briosa.gdt_operations.make_surface_face_list_runtime_select()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 This coroutine displays SpatialAnalyzer's runtime Surface-face selector.
 
 ## make_surface_face_list_from_surface
@@ -118,6 +122,10 @@ async def make_surface_face_list_from_surface(
 
 faces = await briosa.gdt_operations.make_surface_face_list_from_surface(surface)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## make_gdt_feature_check_annotation
 
@@ -134,6 +142,10 @@ await briosa.gdt_operations.make_gdt_feature_check_annotation(
     )
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The options object exposes all 30 MP inputs and preserves every exact MP
 default. SpatialAnalyzer validates the supplied combination of Objects,
@@ -154,6 +166,10 @@ await briosa.gdt_operations.make_gdt_datum_annotation(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `is_slot` and `force_surface_feature` both default to `False`.
 
 ## make_feature_checks
@@ -163,6 +179,10 @@ async def make_feature_checks(collection: CollectionName) -> None: ...
 
 await briosa.gdt_operations.make_feature_checks(collection)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## make_feature_check_ref_list_from_collection
 
@@ -175,6 +195,10 @@ checks = await briosa.gdt_operations.make_feature_check_ref_list_from_collection
     collection
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## make_feature_check_reference_list_wildcard_selection
 
@@ -189,6 +213,10 @@ checks = await briosa.gdt_operations.make_feature_check_reference_list_wildcard_
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## make_annotation_ref_list_from_collection
 
 ```python
@@ -200,6 +228,10 @@ annotations = await briosa.gdt_operations.make_annotation_ref_list_from_collecti
     collection
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## make_annotation_ref_list_wildcard_selection
 
@@ -214,6 +246,10 @@ annotations = await briosa.gdt_operations.make_annotation_ref_list_wildcard_sele
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## delete_feature_checks
 
 ```python
@@ -223,6 +259,10 @@ async def delete_feature_checks(
 
 await briosa.gdt_operations.delete_feature_checks(checks_to_delete)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The client adds no confirmation or existence preflight.
 
@@ -235,6 +275,10 @@ async def make_datum_ref_list_from_collection(
 
 datums = await briosa.gdt_operations.make_datum_ref_list_from_collection(collection)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 All returned lists are detached snapshots of live SA state. The client does not
 cache them or automatically replay any operation.

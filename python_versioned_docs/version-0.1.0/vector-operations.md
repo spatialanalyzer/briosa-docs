@@ -37,6 +37,10 @@ async def add_a_vector_to_vector_name_ref_list(
 await briosa.add_a_vector_to_vector_name_ref_list(vector_group_name=..., vector_name_list=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -65,6 +69,10 @@ async def auto_range_and_set_vector_group_colorization_all(
 ```python
 await briosa.auto_range_and_set_vector_group_colorization_all()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -97,6 +105,10 @@ async def auto_range_and_set_vector_group_colorization_selected(
 await briosa.auto_range_and_set_vector_group_colorization_selected(vector_groups_to_be_set=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -125,6 +137,10 @@ async def delete_ith_vector_from_vector_group(
 ```python
 await briosa.delete_ith_vector_from_vector_group(vector_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -155,6 +171,10 @@ async def delete_vector_by_name(
 await briosa.delete_vector_by_name(vector_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -180,6 +200,10 @@ async def delete_vectors(
 ```python
 await briosa.delete_vectors(vector_name_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -223,6 +247,10 @@ async def get_ith_vector_from_vector_group(
 ```python
 await briosa.get_ith_vector_from_vector_group(vector_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 6 MP outputs in the named `GetIthVectorFromVectorGroupResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -270,6 +298,10 @@ async def get_ith_vector_from_vector_name_ref_list(
 await briosa.get_ith_vector_from_vector_name_ref_list(vector_name_list=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 7 MP outputs in the named `GetIthVectorFromVectorNameRefListResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -297,6 +329,10 @@ async def get_number_of_vectors_in_vector_group(
 await briosa.get_number_of_vectors_in_vector_group(vector_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the MP output `Total Count` directly as `int`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
 
@@ -322,6 +358,10 @@ async def get_number_of_vectors_in_vector_name_ref_list(
 ```python
 await briosa.get_number_of_vectors_in_vector_name_ref_list(vector_name_list=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Total Count` directly as `int`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -363,6 +403,10 @@ async def get_vector_from_vector_group_by_name(
 ```python
 await briosa.get_vector_from_vector_group_by_name(vector_group_name=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the 5 MP outputs in the named `GetVectorFromVectorGroupByNameResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
@@ -427,6 +471,10 @@ async def get_vector_group_properties(
 await briosa.get_vector_group_properties(vector_group_name=...)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Returns the 17 MP outputs in the named `GetVectorGroupPropertiesResult` value. Multiple outputs use a frozen, slotted,
 keyword-only dataclass. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -454,6 +502,10 @@ async def set_vector_group_colorization_options_all(
 ```python
 await briosa.set_vector_group_colorization_options_all()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -483,6 +535,10 @@ async def set_vector_group_colorization_options_selected(
 ```python
 await briosa.set_vector_group_colorization_options_selected(vector_groups_to_be_set=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns `None`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.
@@ -528,6 +584,10 @@ async def sort_vectors(
 ```python
 await briosa.sort_vectors(source_vectors=...)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP output `Sorted Vectors` directly as `list[VectorName]`. Normal asyncio cancellation and timeout tools remain
 caller controls; the client does not replay uncertain work.

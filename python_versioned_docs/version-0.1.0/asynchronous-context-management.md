@@ -37,11 +37,17 @@ async def __aexit__(
 ## Recommended Usage
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-async with BriosaClient() as briosa:
-    working_directory = await briosa.get_working_directory()
+async def main():
+    async with BriosaClient() as briosa:
+        working_directory = await briosa.get_working_directory()
+
+
+asyncio.run(main())
 ```
 
 ## Close the Launched Application Explicitly
@@ -54,6 +60,9 @@ async with BriosaClient() as briosa:
         await briosa.stop_spatial_analyzer_sdk()
         await briosa.close_owned_spatial_analyzer()
 ```
+
+Run this example inside an `async` function, as in
+[Recommended Usage](#recommended-usage).
 
 The `finally` block is needed only because this example explicitly chooses to
 close SpatialAnalyzer. It is not required for ordinary client resource cleanup.

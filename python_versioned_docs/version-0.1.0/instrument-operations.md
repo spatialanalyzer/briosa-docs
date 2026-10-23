@@ -203,6 +203,10 @@ async def get_last_instrument_index(self) -> LastInstrumentIndexResult: ...
 last = await briosa.instrument_operations.get_last_instrument_index()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The result preserves both MP outputs: the integer `instrument_index` and the
 structured `instrument` identity.
 
@@ -225,6 +229,10 @@ async def rename_instrument(
 await briosa.instrument_operations.rename_instrument(instrument, "Tracker 1")
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## get_instrument_id_from_name
 
 [MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-id-from-name)
@@ -238,6 +246,10 @@ async def get_instrument_id_from_name(
 instrument = await briosa.instrument_operations.get_instrument_id_from_name("Tracker 1")
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## get_instrument_model
 
 [MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-model)
@@ -250,6 +262,10 @@ async def get_instrument_model(
 
 details = await briosa.instrument_operations.get_instrument_model(instrument)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Returns the MP `Name` and `Model` strings.
 
@@ -270,6 +286,10 @@ await briosa.instrument_operations.move_instrument_to_another_collection(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## save_instrument_configuration
 
 [MP command](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#save-instrument-configuration)
@@ -286,6 +306,10 @@ await briosa.instrument_operations.save_instrument_configuration(
     configuration_file,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## load_instrument_configuration
 
@@ -304,6 +328,10 @@ await briosa.instrument_operations.load_instrument_configuration(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## export_instrument_history_to_xml_file
 
 [MP command](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#export-instrument-history-to-xml-file)
@@ -320,6 +348,10 @@ await briosa.instrument_operations.export_instrument_history_to_xml_file(
     file_path,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Each `FileReference` identifies a path accessible to the local Briosa server.
 Mutation coroutines return `None`. Normal asyncio cancellation and timeout
@@ -341,6 +373,10 @@ async def point_at_target(
 await briosa.instrument_operations.point_at_target(instrument, target)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## measure_single_point_here
 
 [MP command](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-single-point-here)
@@ -357,6 +393,10 @@ async def measure_single_point_here(
 
 await briosa.instrument_operations.measure_single_point_here(instrument, target)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## get_current_instrument_position_update
 
@@ -376,6 +416,10 @@ position = await briosa.instrument_operations.get_current_instrument_position_up
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The client returns the selected coordinate representation without converting
 it.
@@ -402,6 +446,10 @@ await briosa.instrument_operations.build_target(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 An omitted tolerance uses the MP default with every component and magnitude
 check disabled at zero.
 
@@ -427,6 +475,10 @@ point = await briosa.instrument_operations.measure_existing_single_point(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## measure_existing_single_point_manual_guide
 
 [MP command](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#measure-existing-single-point-manual-guide)
@@ -448,6 +500,10 @@ point = await briosa.instrument_operations.measure_existing_single_point_manual_
     destination_point_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## measure_existing_single_point_and_compare
 
@@ -471,6 +527,10 @@ comparison = await briosa.instrument_operations.measure_existing_single_point_an
     destination_point_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The result preserves the vector, separate X, Y, Z, and magnitude outputs, and
 the resulting point identity.
@@ -498,6 +558,10 @@ await briosa.instrument_operations.set_probe_offset_frame_online(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## set_probe_offset_frame_offline
 
 [MP command](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
@@ -521,6 +585,10 @@ await briosa.instrument_operations.set_probe_offset_frame_offline(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## stop_active_measurement_mode
 
 [MP command](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#stop-active-measurement-mode)
@@ -533,6 +601,10 @@ async def stop_active_measurement_mode(
 
 await briosa.instrument_operations.stop_active_measurement_mode(instrument)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The client does not track a parallel measurement-state model or limit this
 operation to recovery. Normal asyncio cancellation does not prove that
@@ -552,6 +624,10 @@ async def enable_disable_frame_set_scan_mode_all_instruments(
 await briosa.instrument_operations.enable_disable_frame_set_scan_mode_all_instruments()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## enable_disable_frame_set_scan_mode_by_instrument
 
 [MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
@@ -569,6 +645,10 @@ await briosa.instrument_operations.enable_disable_frame_set_scan_mode_by_instrum
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## enable_disable_point_set_scan_mode
 
 [MP command](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#enabledisable-point-set-scan-mode)
@@ -584,6 +664,10 @@ async def enable_disable_point_set_scan_mode(
 await briosa.instrument_operations.enable_disable_point_set_scan_mode(instrument)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## add_new_instrument
 
 [MP command](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#add-new-instrument)
@@ -598,6 +682,10 @@ instrument = await briosa.instrument_operations.add_new_instrument(
     InstrumentTypeName("Leica AT960/930")
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The exact name must be accepted by the connected SA target. No substitution is
 performed.
@@ -618,6 +706,10 @@ async def delete_instrument(
 await briosa.instrument_operations.delete_instrument(instrument)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The no-prompt default intentionally differs from the MP Editor default.
 
 ## delete_measurements
@@ -636,6 +728,10 @@ async def delete_measurements(
 await briosa.instrument_operations.delete_measurements(instrument, point)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## delete_measurement_observation
 
 [MP command](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#delete-measurement-observation)
@@ -651,6 +747,10 @@ async def delete_measurement_observation(
 
 await briosa.instrument_operations.delete_measurement_observation(point)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## move_measurement_observation
 
@@ -672,6 +772,10 @@ await briosa.instrument_operations.move_measurement_observation(
     destination_point,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Required identities precede keyword-only defaults in Python. Briosa adds no
 preflight or transaction, and asyncio cancellation never causes an uncertain
@@ -698,6 +802,10 @@ await briosa.instrument_operations.initiate_servo_guide(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The nominal-point sequence must contain at least one point. SA interprets the
 suffixes and tolerance for the selected servo instrument.
 
@@ -722,6 +830,10 @@ await briosa.instrument_operations.start_theodolite_interface(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The type is passed to Theodolite Manager exactly as supplied. The device IP
 configures communication from local SA to the instrument; it is not a remote
 Briosa server address.
@@ -745,6 +857,10 @@ async def start_instrument_interface(
 await briosa.instrument_operations.start_instrument_interface(instrument)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Interface type `0` selects the instrument's default interface. The three
 Boolean options all default to `False`, preserving the reviewed MP defaults.
 
@@ -760,6 +876,10 @@ async def stop_instrument_interface(
 
 await briosa.instrument_operations.stop_instrument_interface(instrument)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## activate_deactivate_instrument_toolbar
 
@@ -778,6 +898,10 @@ await briosa.instrument_operations.activate_deactivate_instrument_toolbar(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The default call activates the toolbar. Set `deactivate_toolbar=True` to
 deactivate it.
 
@@ -795,6 +919,10 @@ connected = await briosa.instrument_operations.verify_instrument_connection(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The result describes the selected instrument interface. It is separate from
 Briosa's SA SDK connection state.
@@ -822,6 +950,10 @@ await briosa.instrument_operations.configure_and_measure(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 SA interprets `measurement_mode` for the selected instrument. A
 `timeout_seconds` value of `0.0` preserves the MP command's no-timeout setting;
 it does not remove the call deadline or Briosa worker watchdog.
@@ -838,6 +970,10 @@ async def measure(
 
 await briosa.instrument_operations.measure(instrument)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 SA uses its current instrument configuration. The client does not track or
 validate a parallel measurement-state model.
@@ -859,6 +995,10 @@ await briosa.instrument_operations.set_xyz_reference_frame_instrument_base_ancho
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `anchor_frame` must identify an existing SA Frame.
 
 ## dock_instrument_interface
@@ -878,6 +1018,10 @@ await briosa.instrument_operations.dock_instrument_interface(
     dock_interface=True,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The MP default is `False`. These methods use live SA and instrument state,
 perform no additional preflight, and never automatically replay an operation
@@ -904,6 +1048,10 @@ await briosa.instrument_operations.locate_instrument_ref_tie_in(
     actuals_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Both object identities must refer to Point Groups. SA owns the guided or
 automatic measurement workflow and its intermediate state.
@@ -933,6 +1081,10 @@ errors = await briosa.instrument_operations.locate_instrument_group_to_surface_q
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The first two objects must be Point Groups and `surface_to_fit` must be a
 Surface.
 
@@ -955,6 +1107,10 @@ await briosa.instrument_operations.multi_measurement_initiate(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `instruments` must be non-empty. SA interprets the measurement-mode value.
 
 ## multi_measurement_stop
@@ -969,6 +1125,10 @@ async def multi_measurement_stop(
 
 await briosa.instrument_operations.multi_measurement_stop(instruments)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The sequence must be non-empty. The client does not require or track a matching
 initiation call.
@@ -986,6 +1146,10 @@ async def align_laser_projector(
 
 await briosa.instrument_operations.align_laser_projector(instrument, group)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `group` must identify an existing Point Group.
 
@@ -1017,6 +1181,10 @@ errors = await briosa.instrument_operations.locate_instruments_usmn(
     output_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The instrument sequence must be non-empty. A `None` nominal group means none,
 and the excluded-group sequence defaults empty. Briosa defaults the USMN dialog
@@ -1052,6 +1220,10 @@ await briosa.instrument_operations.create_templated_instrument_usmn(
     instrument,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The public `overall_instrument_weight` spelling corrects the MP argument's
 `Overal Instrument Weight` typo. The server preserves that exact label in the
@@ -1089,6 +1261,10 @@ fit = await briosa.instrument_operations.locate_instrument_best_fit_group_to_gro
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Both identities must be Point Groups. The interface is hidden and the CSV
 report omitted by default.
 
@@ -1123,6 +1299,10 @@ fit = await briosa.instrument_operations.locate_instrument_best_fit_nominal_geom
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The relationship sequence must be non-empty. All other defaults and result
 fields match the group-to-group operation.
 
@@ -1142,6 +1322,10 @@ transform = await briosa.instrument_operations.get_instrument_transform(
     reference_frame,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `reference_frame` must identify an existing SA Frame.
 
@@ -1166,6 +1350,10 @@ await briosa.instrument_operations.set_instrument_transform(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Animation steps default to `0`.
 
 ## get_tracker_edm_theodolite_uncertainties
@@ -1182,6 +1370,10 @@ uncertainties = await briosa.instrument_operations.get_tracker_edm_theodolite_un
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The exact-target result differs from the installed command-listing page. The
 linear thresholds use current SA job units.
@@ -1208,6 +1400,10 @@ await briosa.instrument_operations.set_tracker_edm_theodolite_uncertainties(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The server preserves the spacing differences in the exact exported phi labels.
 
 ## get_pcmm_instrument_xyz_uncertainties
@@ -1224,6 +1420,10 @@ uncertainties = await briosa.instrument_operations.get_pcmm_instrument_xyz_uncer
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## set_pcmm_instrument_xyz_uncertainties
 
@@ -1244,6 +1444,10 @@ await briosa.instrument_operations.set_pcmm_instrument_xyz_uncertainties(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The server binds `y_uncertainty` to the exported `Y Uncertainty)` label.
 
 ## get_xyz_instrument_uncertainties
@@ -1261,6 +1465,10 @@ uncertainties = await briosa.instrument_operations.get_xyz_instrument_uncertaint
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## set_xyz_instrument_uncertainties
 
 [MP command](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#set-xyz-instrument-uncertainties)
@@ -1277,6 +1485,10 @@ async def set_xyz_instrument_uncertainties(
 
 await briosa.instrument_operations.set_xyz_instrument_uncertainties(instrument)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The server binds `z_uncertainty` to the exported `Z Uncertainty)` label. These
 operations add no preflight and are never automatically replayed after an
@@ -1296,6 +1508,10 @@ weather = await briosa.instrument_operations.get_instrument_weather_setting(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The result uses degrees Fahrenheit, mmHg, and relative-humidity percentage and
 reports whether the values were set automatically.
@@ -1323,6 +1539,10 @@ await briosa.instrument_operations.set_instrument_weather_setting(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 When `set_automatically` is true, SA ignores all three numeric values.
 
 ## get_instrument_part_temperature
@@ -1339,6 +1559,10 @@ part_temperature_fahrenheit = (
     await briosa.instrument_operations.get_instrument_part_temperature(instrument)
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The returned temperature is in degrees Fahrenheit.
 
@@ -1362,6 +1586,10 @@ scale_factor = await briosa.instrument_operations.compute_cte_scale_factor(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 This coroutine intentionally retains SA's familiar Fahrenheit-based MP
 operation.
 
@@ -1382,6 +1610,10 @@ await briosa.instrument_operations.set_multiply_instrument_scale_factor(
     scale_factor=scale_factor,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 :::warning
 
@@ -1408,6 +1640,10 @@ await briosa.instrument_operations.set_absolute_instrument_scale_factor(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 :::warning
 
 This replaces the current scale; it does not multiply it. The MP default is
@@ -1430,6 +1666,10 @@ scale_factor = await briosa.instrument_operations.get_instrument_scale_factor(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## transform_instrument_frame_to_frame
 
 [MP command](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-instrument---frame-to-frame)
@@ -1450,6 +1690,10 @@ await briosa.instrument_operations.transform_instrument_frame_to_frame(
     destination_frame,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Both object identities must be existing SA Frames.
 
@@ -1472,6 +1716,10 @@ await briosa.instrument_operations.transform_instrument_by_delta(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## transform_multiple_instruments_by_delta
 
 [MP command](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#transform-multiple-instruments-by-delta)
@@ -1490,6 +1738,10 @@ await briosa.instrument_operations.transform_multiple_instruments_by_delta(
     delta_transform,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The instrument sequence must be non-empty. Both delta methods default to not
 applying the transform's scale. Briosa adds no transaction or rollback and
@@ -1512,6 +1764,10 @@ await briosa.instrument_operations.instrument_operational_check(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `check_type` is required and passed to SA as an opaque,
 instrument-interface-specific command string.
 
@@ -1530,6 +1786,10 @@ observation_count = (
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## get_instruments_with_observations_on_target
 
 [MP command](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instruments-with-observations-on-target)
@@ -1544,6 +1804,10 @@ instruments = await briosa.instrument_operations.get_instruments_with_observatio
     point
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The result preserves SA's order.
 
@@ -1561,6 +1825,10 @@ targets = await briosa.instrument_operations.get_targets_measured_by_instrument(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## set_observation_status
 
@@ -1582,6 +1850,10 @@ await briosa.instrument_operations.set_observation_status(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 Observation indexes are zero-based. The defaults match the MP command.
 
 ## get_observation_info
@@ -1601,6 +1873,10 @@ observation = await briosa.instrument_operations.get_observation_info(
     observation_index=observation_index,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `spherical_values` contains the raw MP vector in distance, azimuth, elevation
 order. Briosa does not normalize instrument-specific angular direction or
@@ -1629,6 +1905,10 @@ await briosa.instrument_operations.fabricate_observations(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 SA ignores the distance values unless `limit_distance` is true. Simulated
 instrument error is available only for applicable polar instruments. Briosa
 adds no preflight, transaction, or rollback.
@@ -1652,6 +1932,10 @@ obscured_points = await briosa.instrument_operations.get_obscured_points_from_in
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The result preserves SA's order. Shot-line display defaults to disabled.
 
 ## get_instrument_targets_and_mode_profiles
@@ -1668,6 +1952,10 @@ available = await briosa.instrument_operations.get_instrument_targets_and_mode_p
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `mode_profiles` and `target_names` are independent ordered lists. The server
 uses the exact SA 2026.1 `Instrument to get` binding and does not zip them.
@@ -1688,6 +1976,10 @@ await briosa.instrument_operations.set_instrument_measurement_mode_profile(
     mode_profile,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `mode_profile` is required and passed directly to SA. These coroutines do not
 create Briosa-owned workflow state and are never automatically replayed after
@@ -1710,6 +2002,10 @@ await briosa.instrument_operations.set_instrument_group_and_target(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 This changes live instrument-interface naming state. Point-cloud instruments
 may ignore the target portion; Briosa does not retain the setting.
 
@@ -1730,6 +2026,10 @@ await briosa.instrument_operations.set_instrument_targeting(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## get_instrument_measurement_mode_profile
 
 [MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-measurement-modeprofile)
@@ -1744,6 +2044,10 @@ mode_profile = await briosa.instrument_operations.get_instrument_measurement_mod
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 This returns the active value, not the available lists returned by
 `get_instrument_targets_and_mode_profiles`.
@@ -1763,6 +2067,10 @@ point = await briosa.instrument_operations.get_instrument_group_and_target(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## get_instrument_targeting
 
 [MP command](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC contract](/api/grpc/0.5.1/instrument-operations#get-instrument-targeting)
@@ -1777,6 +2085,10 @@ targeting_name = await briosa.instrument_operations.get_instrument_targeting(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## set_target_computation_options
 
@@ -1793,6 +2105,10 @@ async def set_target_computation_options(
 
 await briosa.instrument_operations.set_target_computation_options()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 This changes application-global SA state. Briosa does not cache, restore,
 lease, or otherwise manage the option.
@@ -1819,6 +2135,10 @@ await briosa.instrument_operations.set_observation_mirror_cube_shot_face(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 SA documents faces 1 through 6; Briosa adds no range check.
 
 ## set_observation_collimation_shot_options
@@ -1842,6 +2162,10 @@ await briosa.instrument_operations.set_observation_collimation_shot_options(
     targeted_instrument=targeted_instrument,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The target instrument may be omitted for a normal shot. The server preserves
 the exact malformed SDK argument label internally.
@@ -1875,6 +2199,10 @@ await briosa.instrument_operations.collimation(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The optional points apply according to `baseline_method`. Briosa passes omitted
 values to SA as empty MP identities and adds no preflight workflow validation.
 
@@ -1892,6 +2220,10 @@ status = await briosa.instrument_operations.get_instrument_target_status(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 SA documents this coroutine as laser-tracker-only. These coroutines remain
 stateless from Briosa's perspective and are never automatically replayed after
@@ -1911,6 +2243,10 @@ faces = await briosa.instrument_operations.make_surface_face_list_from_point_pro
     measured_points
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The returned value is opaque and can be passed directly to other surface-face
 operations.
@@ -1939,6 +2275,10 @@ await briosa.instrument_operations.scan_within_perimeter(
     point_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The exclusion list is part of the exact SA 2026.1 contract.
 
@@ -1977,6 +2317,10 @@ estimate = await briosa.instrument_operations.get_estimated_scan_time(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 This is SA's raw value; the available documentation does not identify its unit.
 
 ## construct_perimeters_from_surface_face_list
@@ -1993,6 +2337,10 @@ perimeters = await briosa.instrument_operations.construct_perimeters_from_surfac
     faces
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The client passes `surface_faces.value` and returns the scan and exclusion
 lists separately.
@@ -2018,6 +2366,10 @@ await briosa.instrument_operations.scan_cad_faces(
     parameter_set_name,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## edge_scan_measurement
 
@@ -2077,6 +2429,10 @@ await briosa.instrument_operations.auto_measure_points(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `show_complete_dialog=False` selects SA's abbreviated interface, not guaranteed
 headless execution. Callers can separately configure SA's global interactivity
 level to suppress it.
@@ -2104,6 +2460,10 @@ await briosa.instrument_operations.auto_measure_vectors(
     actuals_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 These coroutines add no Briosa-owned workflow state, replay, or preflight
 behavior.
@@ -2175,6 +2535,10 @@ await briosa.instrument_operations.auto_correspond_closest_point(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 When waiting is false, SA may continue measuring after the coroutine returns.
 
 ## close_auto_correspond_closest_point_dialog
@@ -2191,6 +2555,10 @@ await briosa.instrument_operations.close_auto_correspond_closest_point_dialog(
     instrument
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The caller does not need to have started the running workflow.
 
@@ -2269,6 +2637,10 @@ result = await briosa.instrument_operations.drift_check(
     actuals_group,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 `new_instrument` is present only when `instrument_added` is true. SA can report
 partial success for tolerance violations or a new station. Silent mode does not
@@ -2372,6 +2744,10 @@ async def get_current_trapping_status(self) -> CurrentTrappingStatus: ...
 status = await briosa.instrument_operations.get_current_trapping_status()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 `focused_item` and `instrument` may be `None` when trapping is inactive.
 
 ## wait_for_trapping_to_complete
@@ -2383,6 +2759,10 @@ async def wait_for_trapping_to_complete(self) -> None: ...
 
 await briosa.instrument_operations.wait_for_trapping_to_complete()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 The coroutine may block indefinitely. Cancellation does not prove SA's wait
 stopped.

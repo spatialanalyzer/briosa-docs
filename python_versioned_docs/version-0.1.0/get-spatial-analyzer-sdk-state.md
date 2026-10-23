@@ -31,6 +31,13 @@ unexpected SDK-generation loss and remains available after recovery.
 ## Diagnostic Example
 
 ```python
+from briosa import (
+    ExecutionDisposition,
+    SpatialAnalyzerSdkRecoveryMode,
+    SpatialAnalyzerSdkRecoveryState,
+)
+
+
 sdk = await briosa.get_spatial_analyzer_sdk_state()
 
 if (
@@ -47,6 +54,10 @@ if sdk.recovery_state is SpatialAnalyzerSdkRecoveryState.RECOVERY_AVAILABLE:
     )
     sdk = await briosa.connect_to_spatial_analyzer()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## Raises
 

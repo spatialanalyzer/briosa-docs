@@ -41,4 +41,8 @@ await briosa.construction_operations.construct_polygonized_surface_from_point_cl
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 [Catalog](/mp-command-catalog/commands/construction-operations-polygonized-surfaces) · [gRPC](/api/grpc/0.5.1/construction-operations-polygonized-surfaces)

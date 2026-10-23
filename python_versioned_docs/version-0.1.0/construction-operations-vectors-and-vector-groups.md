@@ -36,6 +36,10 @@ comparison = await briosa.construction_operations.construct_vector_group_group_t
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_vector_group_area_profile_check
 
 ```python
@@ -58,6 +62,10 @@ await briosa.construction_operations.construct_vector_group_area_profile_check(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_vector_group_from_vector_name_ref_list
 
 ```python
@@ -74,6 +82,10 @@ await briosa.construction_operations.construct_vector_group_from_vector_name_ref
     resultant_vector_group_name,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## construct_vector_in_working_coordinates_begin_delta
 
@@ -97,6 +109,10 @@ await briosa.construction_operations.construct_vector_in_working_coordinates_beg
     delta,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## construct_vector_in_working_coordinates_begin_direction_magnitude
 
@@ -122,6 +138,10 @@ await briosa.construction_operations.construct_vector_in_working_coordinates_beg
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## construct_vector_group_from_relationship
 
 ```python
@@ -139,6 +159,10 @@ await briosa.construction_operations.construct_vector_group_from_relationship(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## make_vector_name_ref_list_from_vector_group
 
 ```python
@@ -154,6 +178,10 @@ vector_names = await briosa.construction_operations.make_vector_name_ref_list_fr
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## make_vector_name_ref_list_runtime_select
 
 ```python
@@ -167,6 +195,10 @@ async def make_vector_name_ref_list_runtime_select(
 ```python
 selected_vectors = await briosa.construction_operations.make_vector_name_ref_list_runtime_select()
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## make_collection_vector_group_name_ref_list_runtime_select
 
@@ -183,6 +215,10 @@ selected_groups = await briosa.construction_operations.make_collection_vector_gr
     user_prompt="Select vector groups",
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Both runtime-selection coroutines are operator-interactive. Task cancellation
 does not prove that the SA interaction stopped.
@@ -201,6 +237,10 @@ await briosa.construction_operations.make_vector_names_unique_in_vector_group(
     vector_group_name,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 SpatialAnalyzer owns the mutation and resulting names. None of these calls is
 automatically replayed after an unknown execution outcome.

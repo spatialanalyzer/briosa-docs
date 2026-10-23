@@ -40,12 +40,21 @@ Passing `None` uses `BriosaStartOptions()`.
 ## Example
 
 ```python
+import asyncio
+
 from briosa import BriosaClient
 
 
-briosa = BriosaClient()
-await briosa.start()
-working_directory = await briosa.get_working_directory()
+async def main():
+    briosa = BriosaClient()
+    try:
+        await briosa.start()
+        working_directory = await briosa.get_working_directory()
+    finally:
+        await briosa.aclose()
+
+
+asyncio.run(main())
 ```
 
 To attach to an eligible SpatialAnalyzer application that is already running:
@@ -59,17 +68,38 @@ await briosa.start(
 )
 ```
 
+Make this call in place of `start()` in the [example](#example) above.
+
 To start only the Briosa control plane:
 
 ```python
-await briosa.start(
-    BriosaStartOptions(
-        start_spatial_analyzer_sdk=False,
-        launch_spatial_analyzer=False,
-        connect_to_spatial_analyzer=False,
-    ),
-)
+import asyncio
+
+from briosa import BriosaClient, BriosaStartOptions
+
+
+async def main():
+    briosa = BriosaClient()
+    try:
+        await briosa.start(
+            BriosaStartOptions(
+                start_spatial_analyzer_sdk=False,
+                launch_spatial_analyzer=False,
+                connect_to_spatial_analyzer=False,
+            ),
+        )
+        sdk = await briosa.get_spatial_analyzer_sdk_state()
+        application = await briosa.get_spatial_analyzer_state()
+    finally:
+        await briosa.aclose()
+
+
+asyncio.run(main())
 ```
+
+This session has no SDK, so it admits no MP commands. The example reads SDK
+and application state instead; the [lifecycle methods](./lifecycle.md#methods)
+start the remaining phases when you need them.
 
 ## Server Logging
 
@@ -89,6 +119,8 @@ await briosa.start(
     ),
 )
 ```
+
+Make this call in place of `start()` in the [example](#example) above.
 
 Additional fields are `category_levels`, `file_enabled`, `file_directory`,
 `max_age_days`, and `max_total_size_mib`. Levels use `BriosaLogLevel`.

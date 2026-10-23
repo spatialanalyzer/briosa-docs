@@ -96,16 +96,29 @@ try {
 For Python in an environment containing one exact-target distribution:
 
 ```python
+import asyncio
+
 from briosa import BriosaClient, BriosaServerSelection, BriosaStartOptions
 
-async def run():
+
+async def main():
     selection = BriosaServerSelection(version="0.9.2")
-    async with BriosaClient() as client:
+    client = BriosaClient()
+    try:
         await client.start(BriosaStartOptions(
             server_selection=selection,
             launch_spatial_analyzer=False,
         ))
+        # Use required capabilities only after readiness succeeds.
+    finally:
+        await client.aclose()
+
+
+asyncio.run(main())
 ```
+
+Pass custom startup options to `start()` rather than entering `async with`,
+which starts the client with default options.
 
 These examples attach to an already-running eligible SA application. A separate
 application targeting SA 2024 uses its SA 2024 package and its own selector.

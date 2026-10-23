@@ -22,6 +22,10 @@ The client supplies the current SDK generation guard automatically.
 sdk = await briosa.connect_to_spatial_analyzer()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 On success, SDK state is `READY`, connection state is `CONNECTED`, and
 `ready_for_mp` is `True`. The method does not launch SpatialAnalyzer, select a
 window, replace the SDK, or accept a remote host.

@@ -32,6 +32,10 @@ await briosa.stop()
 await briosa.start()
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Cleanup Behavior
 
 Stop closes command admission, stops the server launched by this client and its

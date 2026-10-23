@@ -72,6 +72,10 @@ await briosa.construct_b_spline_from_points(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 The input order is preserved. `None` applies the documented fit-option
 defaults.
 
@@ -108,6 +112,10 @@ await briosa.construct_b_spline_from_point_set(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Construct B-Spline From Several B-Splines
 
 :::note[Validation]
@@ -140,6 +148,10 @@ await briosa.construct_b_spline_from_several_b_splines(
     b_spline_list,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## Construct B-Spline From Intersection of Plane and Surface
 
@@ -177,6 +189,10 @@ await briosa.construct_b_spline_from_intersection_of_plane_and_surface(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Construct B-Spline From Intersection of Surfaces
 
 :::note[Validation]
@@ -213,6 +229,10 @@ await briosa.construct_b_spline_from_intersection_of_surfaces(
 )
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 SpatialAnalyzer may derive additional result names when the intersection
 creates more than one curve.
 
@@ -245,6 +265,10 @@ async def construct_b_splines_from_surfaces(
 b_splines = await briosa.construct_b_splines_from_surfaces(surface_list)
 ```
 
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
+
 ## Construct B-Splines From Lines
 
 :::note[Validation]
@@ -273,6 +297,10 @@ async def construct_b_splines_from_lines(
 ```python
 b_splines = await briosa.construct_b_splines_from_lines(line_list)
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 ## Construct B-Splines From Intersection of Plane and Mesh
 
@@ -314,5 +342,9 @@ b_splines = await briosa.construct_b_splines_from_intersection_of_plane_and_mesh
     mesh_name,
 )
 ```
+
+Run this example inside an `async` function with a started `BriosaClient`
+named `briosa`. The [complete example](./lifecycle.md#complete-example) shows
+the `asyncio` setup.
 
 Negative segment limits are rejected before the request is sent.
