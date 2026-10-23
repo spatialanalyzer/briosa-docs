@@ -18,7 +18,7 @@
 export const versions = {
   server: '0.9.2',
   clients: '0.4.0',
-  installer: '0.3.0',
+  installer: '0.4.0',
 } as const;
 
 export const targets = {

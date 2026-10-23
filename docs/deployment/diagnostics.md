@@ -40,7 +40,7 @@ Client 0.4.0 checks installation evidence before starting SA. Use its inert disc
 
 | Code | Action |
 | --- | --- |
-| `server-distribution-not-found` | Install the exact-target distribution with Installer 0.3.0, rescan its registered store, or provide an explicit validated path. |
+| `server-distribution-not-found` | Install the exact-target distribution with Installer 0.3.0 or later, rescan its registered store, or provide an explicit validated path. |
 | `server-installation-invalid` | Verify or repair the selected package, manifest, receipt, and executable path. |
 | `server-installation-incompatible` | Check the package target, behavioral contract, version constraints, exclusions, and allowed scopes. |
 | `server-installation-ambiguous` | Resolve conflicting installation identities or constrain the application to one valid installation. |
