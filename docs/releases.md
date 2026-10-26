@@ -93,8 +93,8 @@ requires no client or generated-binding change.
 - **Delete Cloud Points by X Y Z Range.** 0.9.0 sent the wrong MP step and sent
   omitted bounds as `0`. 0.9.1 restores the 0.8.0 behavior: it sends the exact
   `Delete Cloud Points by X Y Z Range` step and sets each bound only when the
-  caller supplies it. The operation still fails on both targets; see the
-  October 25, 2026 correction below.
+  caller supplies it. Later licensed probes found that requests with bounds
+  still fail on both targets; see the October 25, 2026 correction below.
 - **Vector-group reference lists.** `MakeCollectionVectorGroupNameRefListRuntimeSelect`
   now returns its result instead of a `DataLoss` error after the MP step succeeds.
 - **Vector percentages.** `GetVectorGroupProperties` now reads tolerance
@@ -113,15 +113,15 @@ requires no client or generated-binding change.
   working directory; explicit content-root overrides still apply. The worker
   pipe now verifies the operating-system-reported client process.
 
-:::warning[Correction (October 25, 2026): Delete Cloud Points by X Y Z Range Does Not Work]
+:::warning[Correction (October 25, 2026): Delete Cloud Points by X Y Z Range Fails When Bounds Are Set]
 
 The original 0.9.1 note below said that
 `cloud_and_mesh_operations.delete_cloud_points_by_xyz_range` can delete cloud
-points again. That was wrong. Licensed probes on October 7, 2026 called the
-operation through the public API on both exact targets, using a server build
-whose operation code is identical to 0.9.1 and 0.9.2. Each call ran against a
-disposable 8-point cloud, once with all six bounds and once with only the X
-bounds. Every call returned MP code -1 (`FAILED_PRECONDITION`) and deleted
+points again. The tested requests did not. Licensed probes on October 7, 2026
+called the operation through the public API on both exact targets, using a
+server build whose operation code is identical to 0.9.1 and 0.9.2. Each call ran
+against a disposable 8-point cloud, once with all six bounds and once with only
+the X bounds. Every call returned MP code -1 (`FAILED_PRECONDITION`) and deleted
 nothing: each cloud still held 8 points afterwards.
 
 The bounds cause the failure. SA documents them as optional doubles, and the
@@ -130,8 +130,14 @@ on both targets. SA rejects the `SetDoubleArg` call that Briosa sends instead.
 The cloud list is not the cause: on October 25, 2026, the radial delete sent
 the same list and deleted the expected point on both targets.
 
-In 0.9.1 and 0.9.2 the operation fails without deleting anything. Contract
-major 3 removes it ([briosa#320](https://github.com/spatialanalyzer/briosa/pull/320)).
+Only those two requests were tested. A request that omits all six bounds sends
+no bound setter, and its effect has not been observed. If SA treats unset
+bounds as unlimited, such a request with `delete_inside = true` deletes every
+point in each named cloud. In 0.9.1 and 0.9.2 the operation remains destructive
+and admitted by the default allowlist. Add it to
+`Briosa:Security:Operations:Deny` if your application does not need it; see the
+[command policy guide](https://github.com/spatialanalyzer/briosa/blob/v0.9.1/targets/2026.1.0529.7/docs/operations/command-policy-and-auditing.md).
+Contract major 3 removes it ([briosa#320](https://github.com/spatialanalyzer/briosa/pull/320)).
 The evidence is recorded in [briosa#307](https://github.com/spatialanalyzer/briosa/issues/307)
 and [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
 
