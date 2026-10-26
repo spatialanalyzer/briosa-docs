@@ -8,7 +8,10 @@ updates:
       docusaurus:
         patterns:
           - "@docusaurus/*"
+  # The cooldown waits a week after an action release before proposing it.
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
