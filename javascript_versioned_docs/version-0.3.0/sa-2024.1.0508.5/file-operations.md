@@ -552,7 +552,7 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 | Member | Meaning |
 | --- | --- |
-| `overwriteExistingFile` | False fails if the file already exists; it does not append. |
+| `overwriteExistingFile` | False appends to the existing file. |
 | `useFullPrecision` | MP qualifier: Scientific Notation. |
 
 ## Find Files in Directory {/* #find-files-in-directory */}
