@@ -8,6 +8,12 @@ updates:
       docusaurus:
         patterns:
           - "@docusaurus/*"
+      # React requires react and react-dom at the same version.
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
   # The cooldown waits a week after an action release before proposing it.
   - package-ecosystem: github-actions
     directory: /

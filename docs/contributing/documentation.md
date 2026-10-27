@@ -29,6 +29,34 @@ duplicating client usage guidance.
 
 Current defaults are Server **0.9.0** and clients **0.4.0**. Servers 0.9.1 and 0.9.2 are schema-identical to 0.9.0 and have no separate API snapshot. Working `api/` content is not published until snapshotted. Within each product version, existing source describes SA 2026; `sa-2024.1.0508.5/` contains SA 2024. Product versions and exact targets are independent. The published reference for each SA target, such as `/api/grpc/sa-2024.1.0508.5/`, shows the newest release that documents that target. Each method's history page, such as `/api/grpc/analysis-operations/angle-between-line-and-plane`, shows every distinct contract that earlier releases published. Earlier releases keep their guide and group pages at `/api/<family>/sa-<target>/<release>/`. Release-qualified method addresses redirect to the current page or to the matching history revision.
 
+## Keep the Build Within the Hosted Runner
+
+Pull-request CI and the Pages deploy build the site on a standard
+`ubuntu-latest` runner with 16 GB of memory. Each build job's summary reports
+the peak resident memory of the build's Node processes against a 10 GiB
+budget, plus the runner's total in use, and warns when the build exceeds the
+budget. Check that figure on any change that adds pages, page data, or build
+plugins.
+
+The build stays within the budget because:
+
+- API references render each SA target's current release in full, plus one
+  history page per method. Earlier releases appear as history revisions, not as
+  separate pages for every release and target.
+- Former API addresses are static redirect documents written after the build,
+  not client routes. Only releases listed in `compatibilityAddresses` in
+  `plugins/api-reference/targets.json` get them, so new releases add none.
+- Rspack's persistent cache is off (`future.faster.rspackPersistentCache:
+  false`), because no workflow restores it.
+- `scripts/build.mjs` runs at most two static-rendering workers and replaces a
+  worker once its heap reaches 500 MB.
+
+If the build approaches the budget, measure before changing settings. Lowering
+the worker count alone did not reduce the peak when this was measured, because
+the main process holds the route registry. Prefer reducing routes or per-page
+data. A larger runner is a paid, organization-level change for the maintainers
+to decide.
+
 ## Release Checklist
 
 1. Verify published GitHub releases and package registries for both exact targets.

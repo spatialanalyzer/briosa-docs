@@ -1823,7 +1823,17 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 ### Briosa Disposition
 
-Deletes cloud points inside or outside supplied axis bounds. A licensed 2026.1.0529.7 probe confirmed that each exported NOT_SUPPORTED optional bound is accepted through SetDoubleArg; omitting a bound preserves MP Ignore. Destructive fixture semantics still require validation.
+Deletes cloud points inside or outside supplied axis bounds. A licensed SA
+2026.1.0529.7 setter-only probe found that the exact SDK accepts each optional
+bound through `SetDoubleArg`, although the MP Editor export marks these
+arguments `NOT_SUPPORTED`. The step fails through Briosa when bounds are set:
+licensed probes on October 7, 2026 sent it on both exact targets, with all six
+bounds and with only the X bounds. Every call returned MP code -1 and deleted no
+points. SA rejects the substituted bound setters; the same `Cloud Names` list
+works with Delete Cloud Points by Radial Distance from Points. A request that
+omits all six bounds sends no bound setter and has not been tested. If SA treats
+unset bounds as unlimited, that request with `Delete Inside` true deletes every
+point in the named clouds. Contract major 3 removes this operation.
 
 Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
 mesh behavior through a reviewed exact-target SDK command.
