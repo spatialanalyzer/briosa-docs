@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {ThemeClassNames, isMultiColumnFooterLinks, useThemeConfig, type FooterColumnItem} from '@docusaurus/theme-common';
 import FooterLinkItem from '@theme/Footer/LinkItem';
 import CompactInverse from '@site/static/brand/logos/briosa-horizontal-compact-inverse.svg';
+import BrandArt from '@site/src/components/Scanline/BrandArt';
 import {takeReading} from '@site/src/components/Scanline/caliper';
 
 // The always-dark footer band: a measurement grid with a slow scan, the Caliper b
@@ -48,7 +49,7 @@ export default function Footer(): ReactNode {
               className="sl-foot__logo"
               aria-label="Briosa home"
               onPointerEnter={() => takeReading(brand.current)}>
-              <CompactInverse className="sl-foot__art" title="" aria-hidden="true" focusable="false" />
+              <BrandArt svg={CompactInverse} src="/brand/logos/briosa-horizontal-compact-inverse.svg" className="sl-foot__art" />
               <span className="sl-foot__rule" aria-hidden="true" />
             </Link>
             <p className="sl-foot__slogan">{siteConfig.tagline}</p>
