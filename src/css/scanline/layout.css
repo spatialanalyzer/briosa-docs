@@ -192,6 +192,8 @@ html:not([data-theme]) .sl-brand__art--dark {
   }
 }
 
+/* Docusaurus sizes the color mode toggle's wrapper at 2rem; match its 38px button. */
+.navbar [class*='colorModeToggle'],
 .navbar [class*='colorModeToggle'] button,
 .navbar__toggle {
   width: 38px;
