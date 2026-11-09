@@ -25,5 +25,18 @@ if (sdk.connectionState !== 'connected') {
 ```
 
 If the SDK process or worker is unhealthy, recover it first and explicitly
-connect the replacement. Failures use the normal lifecycle, SpatialAnalyzer,
-SDK, compatibility, and abort error boundaries.
+connect the replacement. As after a connection, MP admission needs a server
+snapshot that reports readiness; call
+[`getServerSnapshot()`](./lifecycle.md#server-snapshot-and-capabilities) when
+this session's startup did not connect.
+
+Failures use the normal lifecycle, SpatialAnalyzer, SDK, compatibility, and abort
+error boundaries.
+
+Aborting the `signal` rejects with `BriosaCallAbortedError` and stops only your
+wait. The server finishes a reconnection it has accepted under its own bounds, so
+refresh with `getSpatialAnalyzerSdkState()` before deciding what to do. A second
+lifecycle call while an accepted transition is in progress fails with
+`sdk-lifecycle-transition-in-progress` (`stateConflict`, `refreshState`): refresh
+state and retry later. See
+[After an Aborted Lifecycle Call](./lifecycle.md#after-an-aborted-lifecycle-call).

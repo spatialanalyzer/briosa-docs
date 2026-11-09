@@ -72,8 +72,13 @@ when the owned application is closed.
 | `BriosaLifecycleError` | The client is not started or another transition is active. |
 | `BriosaSpatialAnalyzerError` | Launch failed, timed out, or application selection is ambiguous. |
 | `ValueError` | Launch options are invalid, conflicting, or malformed. |
-| `TimeoutError` | The caller timeout expired; inspect application state. |
+| `BriosaTransportError` | The caller timeout expired (`transport-deadline-exceeded`); inspect application state. |
 | `asyncio.CancelledError` | The task was cancelled; inspect application state. |
 
 The method accepts no executable path, arbitrary argument list, launch-time MP,
 or option to close existing applications.
+
+After a launch timeout, the server may still bring SpatialAnalyzer to
+`RUNNING`. Refresh application state with `get_spatial_analyzer_state()` before
+launching again, and treat `application-lifecycle-transition-in-progress` as
+"refresh and retry later".

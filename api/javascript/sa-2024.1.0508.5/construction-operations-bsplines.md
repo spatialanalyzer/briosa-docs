@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / BSplines
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-bsplines) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-bsplines)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct B-Spline From Points {/* #construct-b-spline-from-points */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-spline-from-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructBSplineFromPointsInput {
@@ -38,6 +40,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-spline-from-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBSplineFromPointSetInput {
   readonly resultingBSplineName: CollectionObjectName;
@@ -60,6 +64,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-several-b-splines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-spline-from-several-b-splines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBSplineFromSeveralBSplinesInput {
   readonly resultingBSplineName: CollectionObjectName;
@@ -81,6 +87,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct B-Spline From Intersection of Plane and Surface {/* #construct-b-spline-from-intersection-of-plane-and-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-spline-from-intersection-of-plane-and-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructBSplineFromIntersectionOfPlaneAndSurfaceInput {
@@ -105,6 +113,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-spline-from-intersection-of-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBSplineFromIntersectionOfSurfacesInput {
   readonly resultingBSplineName: CollectionObjectName;
@@ -128,6 +138,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-surfaces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-splines-from-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBSplinesFromSurfacesInput {
   readonly surfaceList: Iterable<CollectionObjectName>;
@@ -149,6 +161,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-lines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-splines-from-lines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBSplinesFromLinesInput {
   readonly lineList: Iterable<CollectionObjectName>;
@@ -169,6 +183,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct B-Splines From Intersection of Plane and Mesh {/* #construct-b-splines-from-intersection-of-plane-and-mesh */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-bsplines#construct-b-splines-from-intersection-of-plane-and-mesh)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructBSplinesFromIntersectionOfPlaneAndMeshInput {
@@ -195,4 +211,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

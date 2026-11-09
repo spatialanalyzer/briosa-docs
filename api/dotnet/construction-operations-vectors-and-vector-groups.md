@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Vectors and Vector Groups
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/construction-operations-vectors-and-vector-groups) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Construct a Vector Group - Group to Group Compare {/* #construct-a-vector-group---group-to-group-compare */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-group---group-to-group-compare)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task<ConstructVectorGroupGroupToGroupCompareResult> ConstructVectorGroupGroupToGroupCompareAsync(
@@ -24,6 +26,7 @@ public Task<ConstructVectorGroupGroupToGroupCompareResult> ConstructVectorGroupG
         double rmsDeviationTolerance = 0.0,
         double maxAbsoluteDeviationTolerance = 0.0,
         double averageDeviationTolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -33,6 +36,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-group---area-profile-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructVectorGroupAreaProfileCheckAsync(
         IEnumerable<VectorName> referenceVectors,
@@ -40,6 +45,7 @@ public Task ConstructVectorGroupAreaProfileCheckAsync(
         CollectionVectorGroupName resultantVectorGroupName,
         double areaRadius = 0.0,
         double areaTolerance = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -49,10 +55,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-vector-name-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructVectorGroupFromVectorNameRefListAsync(
         IEnumerable<VectorName> vectorNameList,
         CollectionVectorGroupName resultantVectorGroupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -62,6 +71,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindelta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructVectorInWorkingCoordinatesBeginDeltaAsync(
         CollectionObjectName vectorGroupName,
@@ -69,6 +80,7 @@ public Task ConstructVectorInWorkingCoordinatesBeginDeltaAsync(
         Vector beginInWorkingCoordinates,
         Vector deltaInWorkingCoordinates,
         bool isMagnitudeNegative = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -78,6 +90,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-in-working-coordinatesbegindirectionmag)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructVectorInWorkingCoordinatesBeginDirectionMagnitudeAsync(
         CollectionObjectName vectorGroupName,
@@ -85,6 +99,7 @@ public Task ConstructVectorInWorkingCoordinatesBeginDirectionMagnitudeAsync(
         Vector beginInWorkingCoordinates,
         Vector directionInWorkingCoordinates,
         double signedMagnitude = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -94,10 +109,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#construct-a-vector-group-from-a-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructVectorGroupFromRelationshipAsync(
         CollectionObjectName relationshipName,
         CollectionVectorGroupName vectorGroupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -107,9 +125,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list-from-a-vector-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<VectorName>> MakeVectorNameRefListFromVectorGroupAsync(
         CollectionObjectName vectorGroupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -119,33 +140,26 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select)
 
-```csharp
-public Task<IReadOnlyList<VectorName>> MakeVectorNameRefListRuntimeSelectAsync(
-        string userPrompt = " Select Vectors (ENTER when done) ",
-        CancellationToken cancellationToken = default);
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later 3.x revision once a licensed session verifies it. Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Make a Collection Vector Group Name Ref List - Runtime Select {/* #make-a-collection-vector-group-name-ref-list---runtime-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select)
 
-```csharp
-public Task<IReadOnlyList<CollectionVectorGroupName>> MakeCollectionVectorGroupNameRefListRuntimeSelectAsync(
-        string userPrompt = "",
-        CancellationToken cancellationToken = default);
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. No replacement selects vector groups at run time on these exact targets. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Make Vector Names Unique in Vector Group {/* #make-vector-names-unique-in-vector-group */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group) · [gRPC Contract](/api/grpc/construction-operations-vectors-and-vector-groups#make-vector-names-unique-in-vector-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task MakeVectorNamesUniqueInVectorGroupAsync(
         CollectionObjectName vectorGroupName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -191,4 +205,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Frames
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,17 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-frames) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-frames)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Frame with Wizard {/* #construct-frame-with-wizard */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-with-wizard) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface ConstructFrameWithWizardInput {
@@ -37,10 +41,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameInput {
   readonly newFrameName: CollectionObjectName;
-  readonly transformInWorkingCoordinates?: Transform;
+  readonly transformInWorkingCoordinates: Transform;
 }
 
 // Member of BriosaClient
@@ -58,10 +64,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-from-transform-in-world) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameFromTransformInWorldInput {
   readonly newFrameName: CollectionObjectName;
-  readonly transformInWorldCoordinates?: Transform;
+  readonly transformInWorldCoordinates: Transform;
 }
 
 // Member of BriosaClient
@@ -78,6 +86,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame on Instrument Base {/* #construct-frame-on-instrument-base */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-on-instrument-base) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructFrameOnInstrumentBaseInput {
@@ -100,6 +110,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-on-object) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameOnObjectInput {
   readonly referenceObject: CollectionObjectName;
@@ -120,6 +132,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame, 3 Points {/* #construct-frame-3-points */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-3-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructFrameThreePointsInput {
@@ -145,6 +159,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameAtPointWithWorkingZAndClockedAxisInput {
   readonly originPoint: PointName;
@@ -168,6 +184,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface ConstructFramePickOriginAndPointOnXAxisClockZAlongWorkingZInput {
   readonly originPoint: PointName;
@@ -189,6 +207,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame, Known Origin, Object Direction, Object Direction {/* #construct-frame-known-origin-object-direction-object-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructFrameKnownOriginObjectDirectionObjectDirectionInput {
@@ -216,6 +236,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-3-planes) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameThreePlanesInput {
   readonly xPlane: CollectionObjectName;
@@ -242,6 +264,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame---copy-and-make-left-handed) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameCopyAndMakeLeftHandedInput {
   readonly referenceFrame: CollectionObjectName;
@@ -264,6 +288,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame---average-of-other-object-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameAverageOfOtherObjectFramesInput {
   readonly objects: Iterable<CollectionObjectName>;
@@ -284,6 +310,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame at Robot Link {/* #construct-frame-at-robot-link */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-at-robot-link) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructFrameAtRobotLinkInput {
@@ -307,6 +335,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-from-point-measurement-probing-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFrameFromPointMeasurementProbingFramesInput {
   readonly pointList: Iterable<PointName>;
@@ -327,6 +357,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Mirror Cube Frame {/* #construct-mirror-cube-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-mirror-cube-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructMirrorCubeFrameInput {
@@ -351,6 +383,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructFramesByProjectingFramesOnMeshAlongFrameDirectionInput {
   readonly referenceFrameNames: Iterable<CollectionObjectName>;
@@ -373,6 +407,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frames By Projecting Frames On Mesh Along Reference Direction {/* #construct-frames-by-projecting-frames-on-mesh-along-reference-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructFramesByProjectingFramesOnMeshAlongReferenceDirectionInput {
@@ -397,6 +433,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Surface To Mesh Offset Along Reference Direction {/* #add-surface-to-mesh-offset-along-reference-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddSurfaceToMeshOffsetAlongReferenceDirectionInput {
@@ -428,4 +466,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Cloud and Mesh Operations
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/cloud-and-mesh-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/cloud-and-mesh-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Cloud Display Control {/* #cloud-display-control */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#cloud-display-control) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#cloud-display-control)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def cloud_display_control(
@@ -22,12 +24,13 @@ async def cloud_display_control(
         *,
         thin: int = 1,
         point_size: int = 1,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -36,6 +39,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Reset Cloud Bounding Box {/* #reset-cloud-bounding-box */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#reset-cloud-bounding-box) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#reset-cloud-bounding-box)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def reset_cloud_bounding_box(
@@ -46,6 +51,7 @@ async def reset_cloud_bounding_box(
         show_bounding_box: bool = True,
         use_all_points: bool = False,
         desired_point_count: int = 1000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> ResetCloudBoundingBoxResult: ...
 ```
 
@@ -55,10 +61,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-cloud-point-count) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#get-cloud-point-count)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_cloud_point_count(
         self,
         cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetCloudPointCountResult: ...
 ```
 
@@ -68,12 +78,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#set-cloud-default-clipping-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#set-cloud-default-clipping-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_cloud_default_clipping_plane(
         self,
         *,
         enable_cloud_clipping: bool = False,
         reference_object: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -82,6 +95,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Raster Scan Edge Inspection {/* #raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def raster_scan_edge_inspection(
@@ -94,6 +109,7 @@ async def raster_scan_edge_inspection(
         tolerance: float = 0.0,
         minimum_good_points_per_unit_length: int = 0,
         maximum_bad_points_percentage: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -102,6 +118,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## New Raster Scan Edge Inspection {/* #new-raster-scan-edge-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#new-raster-scan-edge-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#new-raster-scan-edge-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```python
 async def new_raster_scan_edge_inspection(
@@ -118,6 +136,7 @@ async def new_raster_scan_edge_inspection(
         use_cosine_projection_method: bool = False,
         minimum_edge_points_per_segment: int = 0,
         intermediate_calculation_results_file: FileReference | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -127,10 +146,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-all-cloud-cross-sections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enable-all-cloud-cross-sections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def enable_all_cloud_cross_sections(
         self,
         cross_section_cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -140,6 +163,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enabledisable-cloud-cross-sections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enabledisable-cloud-cross-sections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def enable_disable_cloud_cross_sections(
         self,
@@ -147,6 +172,7 @@ async def enable_disable_cloud_cross_sections(
         *,
         cross_section_id: int = 0,
         enable: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -156,12 +182,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#enable-single-cloud-cross-section) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#enable-single-cloud-cross-section)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def enable_single_cloud_cross_section(
         self,
         cross_section_cloud_name: CollectionObjectName,
         *,
         cross_section_id: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -171,10 +200,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#get-number-of-cross-sections-in-cross-section-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_number_of_cross_sections_in_cross_section_cloud(
         self,
         cross_section_cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -183,6 +216,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Plane {/* #filter-clouds-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_plane(
@@ -194,6 +229,7 @@ async def filter_clouds_to_plane(
         proximity: float = 0.0,
         allowable_offset_direction: OffsetDirectionType = OffsetDirectionType.BOTH,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -202,6 +238,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Group {/* #filter-clouds-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_group(
@@ -213,6 +251,7 @@ async def filter_clouds_to_group(
         proximity: float = 0.0,
         maximum_number_of_points: int = 0,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -221,6 +260,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Surface {/* #filter-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_surface(
@@ -233,6 +274,7 @@ async def filter_clouds_to_surface(
         high_proximity: float = 0.0,
         skip_factor: int = 0,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -241,6 +283,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to BSplines {/* #filter-clouds-to-bsplines */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-bsplines)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_bsplines(
@@ -252,6 +296,7 @@ async def filter_clouds_to_bsplines(
         minimum_proximity: float = 0.0,
         maximum_proximity: float = 0.0,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -260,6 +305,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Line Segment {/* #filter-clouds-to-line-segment */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-line-segment)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_line_segment(
@@ -272,6 +319,7 @@ async def filter_clouds_to_line_segment(
         minimum_proximity: float = 0.0,
         maximum_proximity: float = 0.0,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -280,6 +328,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Clouds to Vector Groups - Resolve points {/* #filter-clouds-to-vector-groups---resolve-points */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#filter-clouds-to-vector-groups---resolve-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def filter_clouds_to_vector_groups_resolve_points(
@@ -293,6 +343,7 @@ async def filter_clouds_to_vector_groups_resolve_points(
         maximum_distance_from_vector_begin: float = 0.0,
         minimum_number_of_required_points: int = 0,
         output_type: PointOutputType = PointOutputType.POINTS,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -301,6 +352,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## RGB Cloud Point Filter {/* #rgb-cloud-point-filter */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#rgb-cloud-point-filter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#rgb-cloud-point-filter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def rgb_cloud_point_filter(
@@ -329,6 +382,7 @@ async def rgb_cloud_point_filter(
         gray_scale_low_enabled: bool = False,
         gray_scale_low_threshold: int = 0,
         rgb_filter_operation: RGBFilterOperation = RGBFilterOperation.RESET_AND_APPLY_FILTER,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -338,6 +392,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_cloud_points_by_radial_distance_from_points(
         self,
@@ -346,6 +402,7 @@ async def delete_cloud_points_by_radial_distance_from_points(
         *,
         radius: float = 0.0,
         delete_inside: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -355,26 +412,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)
 
-```python
-async def delete_cloud_points_by_x_y_z_range(
-        self,
-        cloud_names: Iterable[CollectionObjectName],
-        *,
-        x_min: float | None = None,
-        x_max: float | None = None,
-        y_min: float | None = None,
-        y_max: float | None = None,
-        z_min: float | None = None,
-        z_max: float | None = None,
-        delete_inside: bool = False,
-    ) -> None: ...
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Generate General Mesh {/* #generate-general-mesh */}
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#generate-general-mesh) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#generate-general-mesh)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 ```python
 async def generate_general_mesh(
@@ -387,6 +432,7 @@ async def generate_general_mesh(
         finalize: bool = True,
         use_scan_direction_for_point_normal: bool = True,
         json_file: FileReference | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -396,11 +442,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/cloud-and-mesh-operations#mesh-volume) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#mesh-volume)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def mesh_volume(
         self,
         mesh: CollectionObjectName,
         plane: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> MeshVolumeResult: ...
 ```
 
@@ -434,4 +484,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

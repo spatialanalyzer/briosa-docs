@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/instrument-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/instrument-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Get Last Instrument Index {/* #get-last-instrument-index */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-instrument-index) · [gRPC Contract](/api/grpc/instrument-operations#get-last-instrument-index)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 // Member of BriosaClient
@@ -30,6 +32,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Rename Instrument {/* #rename-instrument */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#rename-instrument) · [gRPC Contract](/api/grpc/instrument-operations#rename-instrument)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface RenameInstrumentInput {
@@ -52,6 +56,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-id-from-name) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-id-from-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentIdFromNameInput {
   readonly name: string;
@@ -72,6 +78,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-model) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentModelInput {
   readonly instrument: CollectionInstrumentId;
@@ -91,6 +99,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Move Instrument to Another Collection {/* #move-instrument-to-another-collection */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-instrument-to-another-collection) · [gRPC Contract](/api/grpc/instrument-operations#move-instrument-to-another-collection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MoveInstrumentToAnotherCollectionInput {
@@ -113,6 +123,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#save-instrument-configuration) · [gRPC Contract](/api/grpc/instrument-operations#save-instrument-configuration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_write`, `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SaveInstrumentConfigurationInput {
   readonly instrument: CollectionInstrumentId;
@@ -133,6 +145,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Load Instrument Configuration {/* #load-instrument-configuration */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#load-instrument-configuration) · [gRPC Contract](/api/grpc/instrument-operations#load-instrument-configuration)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface LoadInstrumentConfigurationInput {
@@ -155,6 +169,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#export-instrument-history-to-xml-file) · [gRPC Contract](/api/grpc/instrument-operations#export-instrument-history-to-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportInstrumentHistoryToXmlFileInput {
   readonly instrument: CollectionInstrumentId;
@@ -175,6 +191,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Point At Target {/* #point-at-target */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#point-at-target) · [gRPC Contract](/api/grpc/instrument-operations#point-at-target)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface PointAtTargetInput {
@@ -198,6 +218,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-single-point-here) · [gRPC Contract](/api/grpc/instrument-operations#measure-single-point-here)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface MeasureSinglePointHereInput {
   readonly instrument: CollectionInstrumentId;
@@ -217,9 +243,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Get Current Instrument Position Update {/* #get-current-instrument-position-update */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-instrument-position-update) · [gRPC Contract](/api/grpc/instrument-operations#get-current-instrument-position-update)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface GetCurrentInstrumentPositionUpdateInput {
@@ -239,7 +273,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -252,12 +286,14 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#build-target) · [gRPC Contract](/api/grpc/instrument-operations#build-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface BuildTargetInput {
   readonly instrument: CollectionInstrumentId;
   readonly outputTargetName: PointName;
   readonly nominalPoint: PointName;
-  readonly tolerance?: ToleranceVectorOptions;
+  readonly tolerance: ToleranceVectorOptions;
   readonly htmlPromptFile?: FileReference;
 }
 
@@ -275,6 +311,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Measure Existing Single Point {/* #measure-existing-single-point */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface MeasureExistingSinglePointInput {
@@ -296,9 +338,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Measure Existing Single Point (Manual Guide) {/* #measure-existing-single-point-manual-guide */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-manual-guide) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-manual-guide)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 // Member of BriosaClient
@@ -312,9 +362,21 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Measure Existing Single Point and Compare {/* #measure-existing-single-point-and-compare */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-existing-single-point-and-compare) · [gRPC Contract](/api/grpc/instrument-operations#measure-existing-single-point-and-compare)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `htmlPromptFile` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 // Member of BriosaClient
@@ -328,9 +390,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Set Probe Offset Frame Online (Measure Raw Frame) {/* #set-probe-offset-frame-online-measure-raw-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-online-measure-raw-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-probe-offset-frame-online-measure-raw-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
 
 ```ts
 export interface SetProbeOffsetFrameOnlineInput {
@@ -357,6 +427,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-probe-offset-frame-offline-select-previously-measured-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetProbeOffsetFrameOfflineInput {
   readonly instrument: CollectionInstrumentId;
@@ -381,6 +453,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#stop-active-measurement-mode) · [gRPC Contract](/api/grpc/instrument-operations#stop-active-measurement-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StopActiveMeasurementModeInput {
   readonly instrument: CollectionInstrumentId;
@@ -401,6 +475,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-all-instruments)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface EnableDisableFrameSetScanModeAllInstrumentsInput {
   readonly enableFrameSetScanMode?: boolean;
@@ -420,6 +496,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Enable/Disable Frame Set Scan Mode (By Instrument) {/* #enabledisable-frame-set-scan-mode-by-instrument */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-frame-set-scan-mode-by-instrument)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface EnableDisableFrameSetScanModeByInstrumentInput {
@@ -442,6 +520,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#enabledisable-point-set-scan-mode) · [gRPC Contract](/api/grpc/instrument-operations#enabledisable-point-set-scan-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface EnableDisablePointSetScanModeInput {
   readonly instrument: CollectionInstrumentId;
@@ -463,6 +543,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#add-new-instrument) · [gRPC Contract](/api/grpc/instrument-operations#add-new-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AddNewInstrumentInput {
   readonly instrumentType: InstrumentTypeName;
@@ -482,6 +564,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Delete Instrument {/* #delete-instrument */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-instrument) · [gRPC Contract](/api/grpc/instrument-operations#delete-instrument)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
+A request that sets `promptUserToConfirm` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface DeleteInstrumentInput {
@@ -505,6 +591,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-measurements) · [gRPC Contract](/api/grpc/instrument-operations#delete-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteMeasurementsInput {
   readonly instrument: CollectionInstrumentId;
@@ -527,10 +615,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#delete-measurement-observation) · [gRPC Contract](/api/grpc/instrument-operations#delete-measurement-observation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteMeasurementObservationInput {
   readonly pointName: PointName;
-  readonly observationIndex?: number;
+  readonly observationIndex: number;
   readonly deletePointIfNoMeasurementsRemain?: boolean;
 }
 
@@ -545,14 +635,22 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Move Measurement Observation {/* #move-measurement-observation */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-measurement-observation) · [gRPC Contract](/api/grpc/instrument-operations#move-measurement-observation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface MoveMeasurementObservationInput {
   readonly sourcePointName: PointName;
-  readonly observationIndex?: number;
+  readonly observationIndex: number;
   readonly deletePointIfNoMeasurementsRemain?: boolean;
   readonly destinationPointName: PointName;
   readonly forceObservationActive?: boolean;
@@ -569,9 +667,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `observationIndex` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Initiate Servo-Guide {/* #initiate-servo-guide */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#initiate-servo-guide) · [gRPC Contract](/api/grpc/instrument-operations#initiate-servo-guide)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface InitiateServoGuideInput {
@@ -597,6 +703,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-theodolite-interface) · [gRPC Contract](/api/grpc/instrument-operations#start-theodolite-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StartTheodoliteInterfaceInput {
   readonly instrument: CollectionInstrumentId;
@@ -620,6 +728,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Start Instrument Interface {/* #start-instrument-interface */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#start-instrument-interface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
 
 ```ts
 export interface StartInstrumentInterfaceInput {
@@ -646,6 +756,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#stop-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#stop-instrument-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StopInstrumentInterfaceInput {
   readonly instrument: CollectionInstrumentId;
@@ -665,6 +777,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Activate/Deactivate Instrument Toolbar {/* #activatedeactivate-instrument-toolbar */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#activatedeactivate-instrument-toolbar) · [gRPC Contract](/api/grpc/instrument-operations#activatedeactivate-instrument-toolbar)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface ActivateDeactivateInstrumentToolbarInput {
@@ -687,6 +801,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#verify-instrument-connection) · [gRPC Contract](/api/grpc/instrument-operations#verify-instrument-connection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface VerifyInstrumentConnectionInput {
   readonly instrument: CollectionInstrumentId;
@@ -706,6 +822,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Configure and Measure {/* #configure-and-measure */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#configure-and-measure) · [gRPC Contract](/api/grpc/instrument-operations#configure-and-measure)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets `measureImmediately` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface ConfigureAndMeasureInput {
@@ -728,9 +850,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `measureImmediately` | Defaults to true (major 3), as for the other measure operations. |
+
 ## Measure {/* #measure */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure) · [gRPC Contract](/api/grpc/instrument-operations#measure)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface MeasureInput {
@@ -748,6 +878,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set XYZ Reference Frame Instrument Base Anchor Frame {/* #set-xyz-reference-frame-instrument-base-anchor-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame) · [gRPC Contract](/api/grpc/instrument-operations#set-xyz-reference-frame-instrument-base-anchor-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetXyzReferenceFrameInstrumentBaseAnchorFrameInput {
@@ -770,6 +902,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#dock-instrument-interface) · [gRPC Contract](/api/grpc/instrument-operations#dock-instrument-interface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface DockInstrumentInterfaceInput {
   readonly instrument: CollectionInstrumentId;
@@ -790,6 +924,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Locate Instrument (Ref. Tie-In) {/* #locate-instrument-ref-tie-in */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-ref-tie-in) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-ref-tie-in)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface LocateInstrumentRefTieInInput {
@@ -815,13 +951,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-group-to-surface-quick-fit) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-group-to-surface-quick-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface LocateInstrumentGroupToSurfaceQuickFitInput {
   readonly instrument: CollectionInstrumentId;
   readonly measuredGroup: CollectionObjectName;
   readonly surfacePointsGroup: CollectionObjectName;
   readonly surfaceToFit: CollectionObjectName;
-  readonly otherObjectsToTransform?: Iterable<CollectionObjectName>;
+  readonly otherObjectsToTransform: Iterable<CollectionObjectName>;
   readonly rmsTolerance?: number;
   readonly maximumAbsoluteTolerance?: number;
 }
@@ -840,6 +978,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Multi Measurement Initiate {/* #multi-measurement-initiate */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#multi-measurement-initiate) · [gRPC Contract](/api/grpc/instrument-operations#multi-measurement-initiate)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface MultiMeasurementInitiateInput {
@@ -863,6 +1003,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#multi-measurement-stop) · [gRPC Contract](/api/grpc/instrument-operations#multi-measurement-stop)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface MultiMeasurementStopInput {
   readonly instruments: Iterable<CollectionInstrumentId>;
@@ -882,6 +1024,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Align Laser Projector {/* #align-laser-projector */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-laser-projector) · [gRPC Contract](/api/grpc/instrument-operations#align-laser-projector)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface AlignLaserProjectorInput {
@@ -904,6 +1048,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instruments-usmn) · [gRPC Contract](/api/grpc/instrument-operations#locate-instruments-usmn)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `showUsmnDialog` to Yes or On Tolerance Violation also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface LocateInstrumentsUsmnInput {
   readonly instruments: Iterable<CollectionInstrumentId>;
@@ -911,7 +1059,7 @@ export interface LocateInstrumentsUsmnInput {
   readonly nominalsGroup?: CollectionObjectName;
   readonly moveInWorkingFrame?: boolean;
   readonly autoRejectOutliersAndResolve?: boolean;
-  readonly showUsmnDialog?: ShowUsmnDialog;
+  readonly showUsmnDialog: ShowUsmnDialog;
   readonly maximumAcceptableRmsError?: number;
   readonly maximumAcceptableError?: number;
   readonly excludedGroups?: Iterable<CollectionObjectName>;
@@ -932,15 +1080,18 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
+| `nominalsGroup` | Optional (major 3): omitted when absent. An empty object name is sent blank, which SpatialAnalyzer documents as no nominals group. |
 | `analysisTimeLimit` | Time in minutes; 0 disables the time limit. |
 
 ## Create Templated Instrument (USMN) {/* #create-templated-instrument-usmn */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#create-templated-instrument-usmn) · [gRPC Contract](/api/grpc/instrument-operations#create-templated-instrument-usmn)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreateTemplatedInstrumentUsmnInput {
@@ -972,7 +1123,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -983,6 +1134,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Locate Instrument (Best Fit - Group to Group) {/* #locate-instrument-best-fit---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---group-to-group) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-best-fit---group-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface LocateInstrumentBestFitGroupToGroupInput {
@@ -1018,6 +1173,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#locate-instrument-best-fit---nominal-geometry) · [gRPC Contract](/api/grpc/instrument-operations#locate-instrument-best-fit---nominal-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface LocateInstrumentBestFitNominalGeometryInput {
   readonly instrument: CollectionInstrumentId;
@@ -1052,6 +1211,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-transform) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentTransformInput {
   readonly instrument: CollectionInstrumentId;
@@ -1072,6 +1233,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Instrument Transform {/* #set-instrument-transform */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-transform) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-transform)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetInstrumentTransformInput {
@@ -1096,6 +1259,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-trackeredm-theodolite-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetTrackerEdmTheodoliteUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
@@ -1112,7 +1277,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1123,6 +1288,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Tracker/EDM Theodolite Uncertainties {/* #set-trackeredm-theodolite-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-trackeredm-theodolite-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-trackeredm-theodolite-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetTrackerEdmTheodoliteUncertaintiesInput {
@@ -1146,7 +1313,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1157,6 +1324,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get PCMM Instrument XYZ Uncertainties {/* #get-pcmm-instrument-xyz-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-pcmm-instrument-xyz-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-pcmm-instrument-xyz-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPcmmInstrumentXyzUncertaintiesInput {
@@ -1177,6 +1346,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set PCMM Instrument XYZ Uncertainties {/* #set-pcmm-instrument-xyz-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-pcmm-instrument-xyz-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-pcmm-instrument-xyz-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPcmmInstrumentXyzUncertaintiesInput {
@@ -1201,6 +1372,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-xyz-instrument-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#get-xyz-instrument-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetXyzInstrumentUncertaintiesInput {
   readonly instrument: CollectionInstrumentId;
@@ -1220,6 +1393,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set XYZ Instrument Uncertainties {/* #set-xyz-instrument-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-xyz-instrument-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#set-xyz-instrument-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetXyzInstrumentUncertaintiesInput {
@@ -1244,6 +1419,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-weather-setting) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-weather-setting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentWeatherSettingInput {
   readonly instrument: CollectionInstrumentId;
@@ -1260,7 +1437,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1272,13 +1449,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-weather-setting) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-weather-setting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetInstrumentWeatherSettingInput {
   readonly instrument: CollectionInstrumentId;
   readonly temperature?: number;
   readonly pressure?: number;
   readonly relativeHumidity?: number;
-  readonly setAutomatically?: boolean;
+  readonly setAutomatically: boolean;
 }
 
 // Member of BriosaClient
@@ -1292,17 +1471,20 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
-| `temperature` | Temperature in degrees Fahrenheit. |
-| `pressure` | Pressure in millimeters of mercury. |
-| `relativeHumidity` | Relative humidity in percent. |
+| `temperature` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Temperature in degrees Fahrenheit. |
+| `pressure` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Pressure in millimeters of mercury. |
+| `relativeHumidity` | Required (major 3) when `setAutomatically` is false. When it is true SpatialAnalyzer ignores it, and an omitted value is sent as 0. Relative humidity in percent. |
+| `setAutomatically` | Required (major 3). |
 
 ## Get Instrument Part Temperature {/* #get-instrument-part-temperature */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-part-temperature) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-part-temperature)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface GetInstrumentPartTemperatureInput {
@@ -1320,7 +1502,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1329,6 +1511,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Compute CTE Scale Factor {/* #compute-cte-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#compute-cte-scale-factor) · [gRPC Contract](/api/grpc/instrument-operations#compute-cte-scale-factor)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ComputeCteScaleFactorInput {
@@ -1348,7 +1532,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1360,10 +1544,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-multiply-instrument-scale-factor-caution) · [gRPC Contract](/api/grpc/instrument-operations#set-multiply-instrument-scale-factor-caution)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetMultiplyInstrumentScaleFactorInput {
   readonly instrument: CollectionInstrumentId;
-  readonly scaleFactor?: number;
+  readonly scaleFactor: number;
 }
 
 // Member of BriosaClient
@@ -1377,14 +1563,22 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Set (absolute) Instrument Scale Factor (CAUTION!) {/* #set-absolute-instrument-scale-factor-caution */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-absolute-instrument-scale-factor-caution) · [gRPC Contract](/api/grpc/instrument-operations#set-absolute-instrument-scale-factor-caution)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetAbsoluteInstrumentScaleFactorInput {
   readonly instrument: CollectionInstrumentId;
-  readonly scaleFactor?: number;
+  readonly scaleFactor: number;
 }
 
 // Member of BriosaClient
@@ -1398,9 +1592,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `scaleFactor` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Instrument Scale Factor {/* #get-instrument-scale-factor */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-scale-factor) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-scale-factor)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetInstrumentScaleFactorInput {
@@ -1421,6 +1623,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Transform Instrument - Frame To Frame {/* #transform-instrument---frame-to-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-instrument---frame-to-frame) · [gRPC Contract](/api/grpc/instrument-operations#transform-instrument---frame-to-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface TransformInstrumentFrameToFrameInput {
@@ -1445,6 +1649,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-instrument-by-delta) · [gRPC Contract](/api/grpc/instrument-operations#transform-instrument-by-delta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface TransformInstrumentByDeltaInput {
   readonly instrument: CollectionInstrumentId;
@@ -1466,6 +1672,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Transform Multiple Instruments By Delta {/* #transform-multiple-instruments-by-delta */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#transform-multiple-instruments-by-delta) · [gRPC Contract](/api/grpc/instrument-operations#transform-multiple-instruments-by-delta)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface TransformMultipleInstrumentsByDeltaInput {
@@ -1489,6 +1697,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#instrument-operational-check) · [gRPC Contract](/api/grpc/instrument-operations#instrument-operational-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `physical_motion`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
+A request that sets a non-empty `checkType` also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface InstrumentOperationalCheckInput {
   readonly instrument: CollectionInstrumentId;
@@ -1510,6 +1722,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-number-of-observations-on-target) · [gRPC Contract](/api/grpc/instrument-operations#get-number-of-observations-on-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNumberOfObservationsOnTargetInput {
   readonly point: PointName;
@@ -1529,6 +1743,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Instruments with Observations on Target {/* #get-instruments-with-observations-on-target */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instruments-with-observations-on-target) · [gRPC Contract](/api/grpc/instrument-operations#get-instruments-with-observations-on-target)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetInstrumentsWithObservationsOnTargetInput {
@@ -1550,6 +1766,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-targets-measured-by-instrument) · [gRPC Contract](/api/grpc/instrument-operations#get-targets-measured-by-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetTargetsMeasuredByInstrumentInput {
   readonly instrument: CollectionInstrumentId;
@@ -1569,6 +1787,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Observation Status {/* #set-observation-status */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-status) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetObservationStatusInput {
@@ -1592,6 +1812,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-observation-info) · [gRPC Contract](/api/grpc/instrument-operations#get-observation-info)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetObservationInfoInput {
   readonly point: PointName;
@@ -1609,7 +1831,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1620,6 +1842,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Fabricate Observations {/* #fabricate-observations */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#fabricate-observations) · [gRPC Contract](/api/grpc/instrument-operations#fabricate-observations)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface FabricateObservationsInput {
@@ -1646,6 +1870,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-obscured-points-from-instrument) · [gRPC Contract](/api/grpc/instrument-operations#get-obscured-points-from-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetObscuredPointsFromInstrumentInput {
   readonly instrument: CollectionInstrumentId;
@@ -1668,6 +1894,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-targets-and-modeprofiles) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-targets-and-modeprofiles)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentTargetsAndModeProfilesInput {
   readonly instrument: CollectionInstrumentId;
@@ -1687,6 +1915,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Instrument Measurement Mode/Profile {/* #set-instrument-measurement-modeprofile */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-measurement-modeprofile) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-measurement-modeprofile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetInstrumentMeasurementModeProfileInput {
@@ -1709,6 +1939,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-group-and-target) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-group-and-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetInstrumentGroupAndTargetInput {
   readonly instrument: CollectionInstrumentId;
@@ -1729,6 +1961,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Instrument Targeting {/* #set-instrument-targeting */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-targeting) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-targeting)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetInstrumentTargetingInput {
@@ -1751,6 +1985,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-measurement-modeprofile) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-measurement-modeprofile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentMeasurementModeProfileInput {
   readonly instrument: CollectionInstrumentId;
@@ -1770,6 +2006,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Instrument Group and Target {/* #get-instrument-group-and-target */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-group-and-target) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-group-and-target)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface GetInstrumentGroupAndTargetInput {
@@ -1791,6 +2029,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-targeting) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-targeting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetInstrumentTargetingInput {
   readonly instrument: CollectionInstrumentId;
@@ -1811,16 +2051,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-target-computation-options) · [gRPC Contract](/api/grpc/instrument-operations#set-target-computation-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetTargetComputationOptionsInput {
-  readonly computationMethod?: TargetComputationMethod;
+  readonly computationMethod: TargetComputationMethod;
   readonly ignoreDistanceMeasurements?: boolean;
 }
 
 // Member of BriosaClient
 interface BriosaClient {
   setTargetComputationOptions(
-    input?: SetTargetComputationOptionsInput,
+    input: SetTargetComputationOptionsInput,
     callOptions?: BriosaCallOptions,
   ): Promise<void>;
 }
@@ -1831,6 +2073,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Observation Mirror Cube Shot Face {/* #set-observation-mirror-cube-shot-face */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-mirror-cube-shot-face) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-mirror-cube-shot-face)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetObservationMirrorCubeShotFaceInput {
@@ -1855,12 +2099,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-observation-collimation-shot-options) · [gRPC Contract](/api/grpc/instrument-operations#set-observation-collimation-shot-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObservationCollimationShotOptionsInput {
   readonly point: PointName;
   readonly observationIndex?: number;
   readonly isCollimationShot?: boolean;
-  readonly targetedInstrument?: CollectionInstrumentId;
+  readonly targetedInstrument: CollectionInstrumentId;
 }
 
 // Member of BriosaClient
@@ -1878,19 +2124,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#collimation) · [gRPC Contract](/api/grpc/instrument-operations#collimation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface CollimationInput {
   readonly stationaryInstrument: CollectionInstrumentId;
   readonly movingInstrument: CollectionInstrumentId;
   readonly collimationPoint: PointName;
   readonly zeroMovingInstrument?: boolean;
-  readonly tiltMode?: CollimationTiltMode;
-  readonly baselineMethod?: CollimationBaselineMethod;
+  readonly tiltMode: CollimationTiltMode;
+  readonly baselineMethod: CollimationBaselineMethod;
   readonly baselineDistance?: number;
-  readonly scalePoint1?: PointName;
-  readonly scalePoint2?: PointName;
-  readonly notMeasuredByMovingInstrument?: PointName;
-  readonly asMeasuredByMovingInstrument?: PointName;
+  readonly scalePoint1: PointName;
+  readonly scalePoint2: PointName;
+  readonly notMeasuredByMovingInstrument: PointName;
+  readonly asMeasuredByMovingInstrument: PointName;
 }
 
 // Member of BriosaClient
@@ -1907,6 +2155,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Instrument Target Status {/* #get-instrument-target-status */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-target-status) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-target-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface GetInstrumentTargetStatusInput {
@@ -1928,6 +2178,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-surface-face-list-from-point-proximity) · [gRPC Contract](/api/grpc/instrument-operations#make-surface-face-list-from-point-proximity)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -1943,6 +2195,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Scan within perimeter {/* #scan-within-perimeter */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#scan-within-perimeter) · [gRPC Contract](/api/grpc/instrument-operations#scan-within-perimeter)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface ScanWithinPerimeterInput {
@@ -1968,6 +2224,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Edit Scan Perimeter Profile {/* #edit-scan-perimeter-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#edit-scan-perimeter-profile) · [gRPC Contract](/api/grpc/instrument-operations#edit-scan-perimeter-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `destructive`, `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface EditScanPerimeterProfileInput {
@@ -1995,6 +2253,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-estimated-scan-time) · [gRPC Contract](/api/grpc/instrument-operations#get-estimated-scan-time)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2012,6 +2272,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-perimeters-from-surface-face-list) · [gRPC Contract](/api/grpc/instrument-operations#construct-perimeters-from-surface-face-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2027,6 +2289,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Scan CAD Faces {/* #scan-cad-faces */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#scan-cad-faces) · [gRPC Contract](/api/grpc/instrument-operations#scan-cad-faces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface ScanCadFacesInput {
@@ -2052,6 +2318,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#edge-scan-measurement) · [gRPC Contract](/api/grpc/instrument-operations#edge-scan-measurement)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface EdgeScanMeasurementInput {
   readonly instrument: CollectionInstrumentId;
@@ -2076,6 +2344,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Track Tape Measurement {/* #track-tape-measurement */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#track-tape-measurement) · [gRPC Contract](/api/grpc/instrument-operations#track-tape-measurement)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface TrackTapeMeasurementInput {
@@ -2104,6 +2374,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-points) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `physical_motion`, `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `autoStart` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```ts
 export interface AutoMeasurePointsInput {
   readonly instrument: CollectionInstrumentId;
@@ -2126,9 +2402,17 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `autoStart` | Defaults to true (major 3). |
+
 ## Auto-Measure Vectors {/* #auto-measure-vectors */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-vectors) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-vectors)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface AutoMeasureVectorsInput {
@@ -2156,6 +2440,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-surface-vector-intersections) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-surface-vector-intersections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```ts
 export interface AutoMeasureSurfaceVectorIntersectionsInput {
   readonly instrument: CollectionInstrumentId;
@@ -2179,6 +2467,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-specified-geometry) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-specified-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 ```ts
 export interface AutoMeasureSpecifiedGeometryInput {
   readonly instrument: CollectionInstrumentId;
@@ -2198,9 +2490,19 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `waitForComplete` | Defaults to true (major 3). |
+
 ## Auto-Measure Batch of Features {/* #auto-measure-batch-of-features */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-measure-batch-of-features) · [gRPC Contract](/api/grpc/instrument-operations#auto-measure-batch-of-features)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `waitForComplete` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface AutoMeasureBatchOfFeaturesInput {
@@ -2223,6 +2525,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Auto-Correspond Closest Point {/* #auto-correspond-closest-point */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-closest-point) · [gRPC Contract](/api/grpc/instrument-operations#auto-correspond-closest-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface AutoCorrespondClosestPointInput {
@@ -2247,6 +2551,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#close-auto-correspond-closest-point-dialog) · [gRPC Contract](/api/grpc/instrument-operations#close-auto-correspond-closest-point-dialog)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2263,6 +2569,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#auto-correspond-with-proximity-trigger) · [gRPC Contract](/api/grpc/instrument-operations#auto-correspond-with-proximity-trigger)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
+A request that sets `showWatchWindow` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface AutoCorrespondWithProximityTriggerInput {
   readonly instrument: CollectionInstrumentId;
@@ -2273,7 +2583,7 @@ export interface AutoCorrespondWithProximityTriggerInput {
   readonly projectResultsToNominalVector?: boolean;
   readonly warblerRampStartDistance?: number;
   readonly showWatchWindow?: boolean;
-  readonly deviationVectorGroupName?: string;
+  readonly deviationVectorGroupName: string;
   readonly makeUnmeasuredGroup?: boolean;
   readonly measureEachPointOnlyOnce?: boolean;
 }
@@ -2292,6 +2602,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Mirror from Plane {/* #construct-mirror-from-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-plane) · [gRPC Contract](/api/grpc/instrument-operations#construct-mirror-from-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
 
 ```ts
 export interface ConstructMirrorFromPlaneInput {
@@ -2314,6 +2626,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Mirror from Two Points {/* #construct-mirror-from-two-points */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-mirror-from-two-points) · [gRPC Contract](/api/grpc/instrument-operations#construct-mirror-from-two-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
 
 ```ts
 export interface ConstructMirrorFromTwoPointsInput {
@@ -2338,6 +2652,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Drift Check {/* #drift-check */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#drift-check) · [gRPC Contract](/api/grpc/instrument-operations#drift-check)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface DriftCheckInput {
@@ -2364,6 +2680,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#measure-nominal-feature) · [gRPC Contract](/api/grpc/instrument-operations#measure-nominal-feature)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface MeasureNominalFeatureInput {
   readonly instrument: CollectionInstrumentId;
@@ -2385,6 +2703,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Guide Objects in 6D based on Point Measurements {/* #guide-objects-in-6d-based-on-point-measurements */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#guide-objects-in-6d-based-on-point-measurements) · [gRPC Contract](/api/grpc/instrument-operations#guide-objects-in-6d-based-on-point-measurements)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface GuideObjectsIn6dBasedOnPointMeasurementsInput {
@@ -2412,6 +2732,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#move-objects-in-6d-using-instrument-updates) · [gRPC Contract](/api/grpc/instrument-operations#move-objects-in-6d-using-instrument-updates)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface MoveObjectsIn6dUsingInstrumentUpdatesInput {
   readonly instrument: CollectionInstrumentId;
@@ -2433,6 +2755,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Align Two Targets with Axis (WCF - X) {/* #align-two-targets-with-axis-wcf---x */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-two-targets-with-axis-wcf---x) · [gRPC Contract](/api/grpc/instrument-operations#align-two-targets-with-axis-wcf---x)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface AlignTwoTargetsWithAxisWcfXInput {
@@ -2458,6 +2782,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-interface-response-timeout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2470,7 +2796,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2479,6 +2805,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Instrument Interface Response Timeout {/* #set-instrument-interface-response-timeout */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-interface-response-timeout) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-interface-response-timeout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 // Member of BriosaClient
@@ -2493,7 +2821,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2502,6 +2830,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Current Trapping Status {/* #get-current-trapping-status */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-current-trapping-status) · [gRPC Contract](/api/grpc/instrument-operations#get-current-trapping-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 // Member of BriosaClient
@@ -2518,6 +2848,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#wait-for-trapping-to-complete) · [gRPC Contract](/api/grpc/instrument-operations#wait-for-trapping-to-complete)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2530,6 +2862,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Jump Instrument To New Location {/* #jump-instrument-to-new-location */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#jump-instrument-to-new-location) · [gRPC Contract](/api/grpc/instrument-operations#jump-instrument-to-new-location)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface JumpInstrumentToNewLocationInput {
@@ -2551,6 +2885,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Quick Align {/* #quick-align */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#quick-align) · [gRPC Contract](/api/grpc/instrument-operations#quick-align)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface QuickAlignInput {
@@ -2576,6 +2912,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#align-cloud-to-cad) · [gRPC Contract](/api/grpc/instrument-operations#align-cloud-to-cad)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AlignCloudToCadInput {
   readonly cloud: CollectionObjectName;
@@ -2600,6 +2938,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-design) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection-design)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StartGdtInspectionDesignInput {
   readonly collection: CollectionName;
@@ -2621,6 +2961,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection-rehearse) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection-rehearse)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface StartGdtInspectionRehearseInput {
   readonly collection: CollectionName;
@@ -2641,6 +2983,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Start GD&amp;T Inspection {/* #start-gdt-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#start-gdt-inspection) · [gRPC Contract](/api/grpc/instrument-operations#start-gdt-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface StartGdtInspectionInput {
@@ -2664,6 +3008,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-inspection-verification-mode) · [gRPC Contract](/api/grpc/instrument-operations#get-inspection-verification-mode)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2678,6 +3024,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Inspection Verification Mode {/* #set-inspection-verification-mode */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-inspection-verification-mode) · [gRPC Contract](/api/grpc/instrument-operations#set-inspection-verification-mode)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetInspectionVerificationModeInput {
@@ -2699,6 +3047,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-remeasure-failed-checks-only) · [gRPC Contract](/api/grpc/instrument-operations#set-remeasure-failed-checks-only)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```ts
 export interface SetRemeasureFailedChecksOnlyInput {
   readonly collection: CollectionName;
@@ -2718,6 +3068,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Associate Objects with Instrument {/* #associate-objects-with-instrument */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#associate-objects-with-instrument) · [gRPC Contract](/api/grpc/instrument-operations#associate-objects-with-instrument)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AssociateObjectsWithInstrumentInput {
@@ -2740,6 +3092,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#disassociate-objects-from-instrument) · [gRPC Contract](/api/grpc/instrument-operations#disassociate-objects-from-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface DisassociateObjectsFromInstrumentInput {
   readonly objects: readonly CollectionObjectName[];
@@ -2760,6 +3114,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments) · [gRPC Contract](/api/grpc/instrument-operations#make-collection-object-name-ref-list-from-objects-associated-with-instruments)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeCollectionObjectNameRefListFromObjectsAssociatedWithInstrumentsInput {
   readonly instruments: readonly CollectionInstrumentId[];
@@ -2779,6 +3135,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Combine Point Groups {/* #combine-point-groups */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#combine-point-groups) · [gRPC Contract](/api/grpc/instrument-operations#combine-point-groups)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CombinePointGroupsInput {
@@ -2801,6 +3159,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#dissect-point-group) · [gRPC Contract](/api/grpc/instrument-operations#dissect-point-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface DissectPointGroupInput {
   readonly groupToDissect: CollectionObjectName;
@@ -2821,6 +3181,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Synchronized Measurement (Master/Slave) {/* #synchronized-measurement-masterslave */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#synchronized-measurement-masterslave) · [gRPC Contract](/api/grpc/instrument-operations#synchronized-measurement-masterslave)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `device_session`, `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `waitForCompletion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```ts
 export interface SynchronizedMeasurementMasterSlaveInput {
@@ -2847,6 +3211,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#create-new-dynamic-reference) · [gRPC Contract](/api/grpc/instrument-operations#create-new-dynamic-reference)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```ts
 export interface CreateNewDynamicReferenceInput {
   readonly instrument: CollectionInstrumentId;
@@ -2869,11 +3235,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#calculate-tcp-fixture-uncertainties) · [gRPC Contract](/api/grpc/instrument-operations#calculate-tcp-fixture-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CalculateTcpFixtureUncertaintiesInput {
   readonly tcpFixture: CollectionObjectName;
   readonly tcpMeasurements: readonly PointName[];
-  readonly tcpInWorking?: Transform;
+  readonly tcpInWorking: Transform;
 }
 
 // Member of BriosaClient
@@ -2890,6 +3258,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct TCP Fixture {/* #construct-tcp-fixture */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-tcp-fixture) · [gRPC Contract](/api/grpc/instrument-operations#construct-tcp-fixture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructTcpFixtureInput {
@@ -2912,6 +3282,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Nominal Point to TCP Fixture {/* #add-nominal-point-to-tcp-fixture */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#add-nominal-point-to-tcp-fixture) · [gRPC Contract](/api/grpc/instrument-operations#add-nominal-point-to-tcp-fixture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddNominalPointToTcpFixtureInput {
@@ -2941,6 +3313,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix) · [gRPC Contract](/api/grpc/instrument-operations#get-last-solved-tcp-fixture-uncertainty-covariance-matrix)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetLastSolvedTcpFixtureUncertaintyCovarianceMatrixInput {
   readonly tcpFixture: CollectionObjectName;
@@ -2961,6 +3335,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-base)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2977,6 +3353,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC Contract](/api/grpc/instrument-operations#set-instrument-base-uncertainty-covariance-matrix-wrt-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 // Member of BriosaClient
 interface BriosaClient {
@@ -2992,6 +3370,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Instrument Base Uncertainty Covariance Matrix WRT WORLD {/* #get-instrument-base-uncertainty-covariance-matrix-wrt-world */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world) · [gRPC Contract](/api/grpc/instrument-operations#get-instrument-base-uncertainty-covariance-matrix-wrt-world)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetInstrumentBaseUncertaintyCovarianceMatrixWrtWorldInput {
@@ -3013,6 +3393,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#construct-measured-point-uncertainty-ellipsoids) · [gRPC Contract](/api/grpc/instrument-operations#construct-measured-point-uncertainty-ellipsoids)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructMeasuredPointUncertaintyEllipsoidsInput {
   readonly measurements: readonly PointName[];
@@ -3033,6 +3415,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#get-wrtl-channel-and-status) · [gRPC Contract](/api/grpc/instrument-operations#get-wrtl-channel-and-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface GetWrtlChannelAndStatusInput {
   readonly instrument: CollectionInstrumentId;
@@ -3052,6 +3436,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set WRTL Channel {/* #set-wrtl-channel */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations#set-wrtl-channel) · [gRPC Contract](/api/grpc/instrument-operations#set-wrtl-channel)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface SetWrtlChannelInput {
@@ -3610,4 +3996,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

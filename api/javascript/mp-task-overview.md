@@ -1,6 +1,6 @@
 ---
 title: MP Task Overview
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/mp-task-overview) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/mp-task-overview)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Task Overview Item {/* #add-task-overview-item */}
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#add-task-overview-item) · [gRPC Contract](/api/grpc/mp-task-overview#add-task-overview-item)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddTaskOverviewItemInput {
@@ -36,6 +38,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#createclear-task-overview-list) · [gRPC Contract](/api/grpc/mp-task-overview#createclear-task-overview-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface CreateClearTaskOverviewListInput {
   readonly taskNameFont?: Font;
@@ -55,6 +59,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-current-task) · [gRPC Contract](/api/grpc/mp-task-overview#set-current-task)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCurrentTaskInput {
   readonly taskIndex?: number;
@@ -72,6 +78,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Overview Image {/* #set-overview-image */}
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-overview-image) · [gRPC Contract](/api/grpc/mp-task-overview#set-overview-image)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface SetOverviewImageInput {
@@ -91,6 +99,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-overview-title) · [gRPC Contract](/api/grpc/mp-task-overview#set-overview-title)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetOverviewTitleInput {
   readonly overviewTitle?: string;
@@ -108,6 +118,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Task Item Comment {/* #set-task-item-comment */}
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-task-item-comment) · [gRPC Contract](/api/grpc/mp-task-overview#set-task-item-comment)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetTaskItemCommentInput {
@@ -127,6 +139,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Task Item Completion Values {/* #set-task-item-completion-values */}
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-task-item-completion-values) · [gRPC Contract](/api/grpc/mp-task-overview#set-task-item-completion-values)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetTaskItemCompletionValuesInput {
@@ -148,6 +162,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#set-task-item-name) · [gRPC Contract](/api/grpc/mp-task-overview#set-task-item-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetTaskItemNameInput {
   readonly taskItemIndex?: number;
@@ -166,6 +182,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Show Progress for Task Item {/* #show-progress-for-task-item */}
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#show-progress-for-task-item) · [gRPC Contract](/api/grpc/mp-task-overview#show-progress-for-task-item)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ShowProgressForTaskItemInput {
@@ -186,6 +204,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/mp-task-overview#show-task-overview-list) · [gRPC Contract](/api/grpc/mp-task-overview#show-task-overview-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ShowTaskOverviewListInput {
   readonly show?: boolean;
@@ -200,4 +220,4 @@ export declare function showTaskOverviewList(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

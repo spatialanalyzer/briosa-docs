@@ -1,6 +1,6 @@
 ---
 title: Relationship Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/relationship-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/relationship-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Enable/Disable Relationships for Optimization {/* #enabledisable-relationships-for-optimization */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#enabledisable-relationships-for-optimization)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface EnableDisableRelationshipsForOptimizationInput {
@@ -35,6 +37,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#geom-relationship-ignore-input-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GeomRelationshipIgnoreInputPointsInput {
   readonly relationshipName: CollectionObjectName;
@@ -52,6 +56,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Geom Relationship Reuse Ignored Input Points {/* #geom-relationship-reuse-ignored-input-points */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#geom-relationship-reuse-ignored-input-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GeomRelationshipReuseIgnoredInputPointsInput {
@@ -71,6 +77,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-auto-vectors)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGeomRelationshipAutoVectorsInput {
   readonly relationshipName: CollectionObjectName;
@@ -85,7 +93,7 @@ export declare function getGeomRelationshipAutoVectors(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -97,6 +105,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Geom Relationship Cardinal Points {/* #get-geom-relationship-cardinal-points */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-cardinal-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeomRelationshipCardinalPointsInput {
@@ -115,6 +125,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Geom Relationship Criteria {/* #get-geom-relationship-criteria */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeomRelationshipCriteriaInput {
@@ -135,6 +147,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-avg-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGeomRelationshipMeasuredAvgPointInput {
   readonly relationshipName: CollectionObjectName;
@@ -152,6 +166,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Geom Relationship Measured Geometry {/* #get-geom-relationship-measured-geometry */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-measured-geometry)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeomRelationshipMeasuredGeometryInput {
@@ -171,6 +187,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-avg-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGeomRelationshipNominalAvgPointInput {
   readonly relationshipName: CollectionObjectName;
@@ -188,6 +206,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Geom Relationship Nominal Geometry {/* #get-geom-relationship-nominal-geometry */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-nominal-geometry)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeomRelationshipNominalGeometryInput {
@@ -207,6 +227,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-point-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGeomRelationshipPointListInput {
   readonly relationshipName: CollectionObjectName;
@@ -224,6 +246,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Geom Relationship Projection Plane {/* #get-geom-relationship-projection-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-projection-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeomRelationshipProjectionPlaneInput {
@@ -243,6 +267,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-cut-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPipeRelationshipCutStatusInput {
   readonly relationshipName: CollectionObjectName;
@@ -260,6 +286,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Pipe Relationship Properties {/* #get-pipe-relationship-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPipeRelationshipPropertiesInput {
@@ -279,6 +307,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-pipe-relationship-weights)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPipeRelationshipWeightsInput {
   readonly relationshipName: CollectionObjectName;
@@ -296,6 +326,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Fit Constraints (Scalar Type) {/* #get-relationship-fit-constraints-scalar-type */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-fit-constraints-scalar-type)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipFitConstraintsScalarTypeInput {
@@ -315,6 +347,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-outlier-rejection-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipOutlierRejectionScalarTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -332,6 +366,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Projection Options {/* #get-relationship-projection-options */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-projection-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipProjectionOptionsInput {
@@ -351,6 +387,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipReportingFrameInput {
   readonly relationshipName: CollectionObjectName;
@@ -368,6 +406,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Sub Sampling Options {/* #get-relationship-sub-sampling-options */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-sub-sampling-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipSubSamplingOptionsInput {
@@ -387,6 +427,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipToleranceScalarTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -404,6 +446,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Tolerance (Vector Type) {/* #get-relationship-tolerance-vector-type */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-tolerance-vector-type)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipToleranceVectorTypeInput {
@@ -423,6 +467,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -441,6 +487,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-weighting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipWeightingInput {
   readonly relationshipName: CollectionObjectName;
@@ -458,6 +506,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Pipe Fitting Relationship {/* #make-pipe-fitting-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-pipe-fitting-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakePipeFittingRelationshipInput {
@@ -478,6 +528,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Pipe Relationship Cut {/* #make-pipe-relationship-cut */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-pipe-relationship-cut)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakePipeRelationshipCutInput {
@@ -503,6 +555,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#pipe-relationship-force-cut-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface PipeRelationshipForceCutToFrameInput {
   readonly relationshipName: CollectionObjectName;
@@ -525,6 +579,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetGeomRelationshipAutoVectorsNominalAvnInput {
   readonly relationshipName: CollectionObjectName;
@@ -544,6 +600,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geom Relationship Cardinal Points {/* #set-geom-relationship-cardinal-points */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-cardinal-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGeomRelationshipCardinalPointsInput {
@@ -565,6 +623,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geom Relationship Criteria {/* #set-geom-relationship-criteria */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-criteria)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGeomRelationshipCriteriaInput {
@@ -589,6 +649,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-measured-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetGeomRelationshipMeasuredGeometryInput {
   readonly relationshipName: CollectionObjectName;
@@ -607,6 +669,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geom Relationship Nominal Avg Point {/* #set-geom-relationship-nominal-avg-point */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-avg-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGeomRelationshipNominalAvgPointInput {
@@ -628,6 +692,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-nominal-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetGeomRelationshipNominalGeometryInput {
   readonly relationshipName: CollectionObjectName;
@@ -647,6 +713,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geom Relationship Projection Plane {/* #set-geom-relationship-projection-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-geom-relationship-projection-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGeomRelationshipProjectionPlaneInput {
@@ -668,6 +736,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObjectToObjectDirectionRelationshipFitConstraintsInput {
   readonly relationshipName: CollectionObjectName;
@@ -688,11 +758,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-object-to-object-direction-relationship-tolerances)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObjectToObjectDirectionRelationshipTolerancesInput {
   readonly relationshipName: CollectionItemName;
-  readonly angleBetweenVectorsTolerances?: ToleranceScalarOptions;
-  readonly mutualPerpendicularLengthTolerances?: ToleranceScalarOptions;
+  readonly angleBetweenVectorsTolerances: ToleranceScalarOptions;
+  readonly mutualPerpendicularLengthTolerances: ToleranceScalarOptions;
 }
 
 export declare function setObjectToObjectDirectionRelationshipTolerances(
@@ -707,6 +779,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Pipe Relationship Segment Properties {/* #set-pipe-relationship-segment-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-segment-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPipeRelationshipSegmentPropertiesInput {
@@ -734,6 +808,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-pipe-relationship-weights)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPipeRelationshipWeightsInput {
   readonly relationshipName: CollectionObjectName;
@@ -760,6 +836,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-auto-vectors-fit-avf)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipAutoVectorsFitAvfInput {
   readonly relationshipName: CollectionObjectName;
@@ -778,6 +856,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Desired Meas Count {/* #set-relationship-desired-meas-count */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-desired-meas-count)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipDesiredMeasCountInput {
@@ -798,6 +878,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-dormant-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipDormantStatusInput {
   readonly relationships: Iterable<CollectionItemName>;
@@ -816,6 +898,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Fit Constraints (Scalar Type) {/* #set-relationship-fit-constraints-scalar-type */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-fit-constraints-scalar-type)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipFitConstraintsScalarTypeInput {
@@ -836,6 +920,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipOrientationFitConstraintsVectorTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -855,6 +941,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-outlier-rejection-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipOutlierRejectionScalarTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -872,6 +960,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Position Fit Constraints (Vector Type) {/* #set-relationship-position-fit-constraints-vector-type */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-position-fit-constraints-vector-type)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipPositionFitConstraintsVectorTypeInput {
@@ -892,6 +982,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-projection-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipProjectionOptionsInput {
   readonly relationshipName: CollectionObjectName;
@@ -911,6 +1003,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipReportingFrameInput {
   readonly relationshipName: CollectionObjectName;
@@ -929,6 +1023,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Sub Sampling Options {/* #set-relationship-sub-sampling-options */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-sub-sampling-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipSubSamplingOptionsInput {
@@ -952,6 +1048,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipToleranceScalarTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -971,6 +1069,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-tolerance-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipToleranceVectorTypeInput {
   readonly relationshipName: CollectionObjectName;
@@ -989,6 +1089,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Voxel Cloud Display {/* #set-relationship-voxel-cloud-display */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-voxel-cloud-display)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipVoxelCloudDisplayInput {
@@ -1011,7 +1113,7 @@ export declare function setRelationshipVoxelCloudDisplay(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1021,6 +1123,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Relationship Weighting {/* #set-relationship-weighting */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-weighting)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetRelationshipWeightingInput {
@@ -1041,6 +1145,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-weights-normalized)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipWeightsNormalizedInput {
   readonly collectionName: CollectionName;
@@ -1059,6 +1165,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Generate Geometry Relationship Summary {/* #generate-geometry-relationship-summary */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#generate-geometry-relationship-summary)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GenerateGeometryRelationshipSummaryInput {
@@ -1079,6 +1187,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#edit-geometry-relationship-point-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface EditGeometryRelationshipPointListInput {
   readonly relationshipName: CollectionItemName;
@@ -1097,6 +1207,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Filter Geometry Relationship Outlier Cloud Points {/* #filter-geometry-relationship-outlier-cloud-points */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface FilterGeometryRelationshipOutlierCloudPointsInput {
@@ -1118,22 +1230,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#relationship-watch-window-template)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface RelationshipWatchWindowTemplateInput {
-  readonly watchWindowTemplateName?: CollectionObjectName;
-  readonly options?: RelationshipWatchWindowTemplateOptions;
+  readonly watchWindowTemplateName: CollectionObjectName;
+  readonly options: RelationshipWatchWindowTemplateOptions;
 }
 
 export declare function relationshipWatchWindowTemplate(
   briosa: BriosaClient,
-  input?: RelationshipWatchWindowTemplateInput,
+  input: RelationshipWatchWindowTemplateInput,
   options?: BriosaCallOptions,
 ): Promise<void>;
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1145,13 +1259,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-point-to-point-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakePointToPointRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstPointName: PointName;
   readonly secondPointName: PointName;
-  readonly tolerance?: ToleranceVectorOptions;
-  readonly constraint?: ToleranceVectorOptions;
+  readonly tolerance: ToleranceVectorOptions;
+  readonly constraint: ToleranceVectorOptions;
 }
 
 export declare function makePointToPointRelationship(
@@ -1167,13 +1283,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-frame-to-frame-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeFrameToFrameRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstFrameName: CollectionObjectName;
   readonly secondFrameName: CollectionObjectName;
-  readonly orientationTolerance?: ToleranceScalarOptions;
-  readonly positionTolerance?: ToleranceVectorOptions;
+  readonly orientationTolerance: ToleranceScalarOptions;
+  readonly positionTolerance: ToleranceVectorOptions;
 }
 
 export declare function makeFrameToFrameRelationship(
@@ -1189,12 +1307,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-points-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakePointsToObjectsRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly pointsInRelationship: Iterable<PointName>;
   readonly objectsInRelationship: Iterable<CollectionObjectName>;
-  readonly projectionOptions?: ProjectionOptions;
+  readonly projectionOptions: ProjectionOptions;
   readonly autoUpdateAVectorGroup?: boolean;
 }
 
@@ -1211,14 +1331,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-points-to-points-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakePointsToPointsRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly nominalPoints: Iterable<PointName>;
   readonly measuredPoints: Iterable<PointName>;
   readonly autoUpdateAVectorGroup?: boolean;
-  readonly tolerance?: ToleranceVectorOptions;
-  readonly constraint?: ToleranceVectorOptions;
+  readonly tolerance: ToleranceVectorOptions;
+  readonly constraint: ToleranceVectorOptions;
 }
 
 export declare function makePointsToPointsRelationship(
@@ -1234,12 +1356,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-groups-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeGroupsToObjectsRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly pointGroupsInRelationship: Iterable<CollectionObjectName>;
   readonly objectsInRelationship: Iterable<CollectionObjectName>;
-  readonly projectionOptions?: ProjectionOptions;
+  readonly projectionOptions: ProjectionOptions;
   readonly autoUpdateAVectorGroup?: boolean;
 }
 
@@ -1255,6 +1379,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Object to Object Direction Relationship {/* #make-object-to-object-direction-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-object-to-object-direction-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeObjectToObjectDirectionRelationshipInput {
@@ -1277,12 +1403,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-point-clouds-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakePointCloudsToObjectsRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly pointCloudsInRelationship: Iterable<CollectionObjectName>;
   readonly objectsInRelationship: Iterable<CollectionObjectName>;
-  readonly projectionOptions?: ProjectionOptions;
+  readonly projectionOptions: ProjectionOptions;
   readonly autoUpdateAVectorGroup?: boolean;
 }
 
@@ -1299,14 +1427,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-group-to-group-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeGroupToGroupRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstGroupName: CollectionObjectName;
   readonly secondGroupName: CollectionObjectName;
   readonly autoUpdateAVectorGroup?: boolean;
-  readonly tolerance?: ToleranceVectorOptions;
-  readonly constraint?: ToleranceVectorOptions;
+  readonly tolerance: ToleranceVectorOptions;
+  readonly constraint: ToleranceVectorOptions;
 }
 
 export declare function makeGroupToGroupRelationship(
@@ -1322,6 +1452,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-group-to-nominal-group-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `displayClosestPointWatchWindow` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface MakeGroupToNominalGroupRelationshipInput {
   readonly relationshipName: CollectionItemName;
@@ -1333,8 +1467,8 @@ export interface MakeGroupToNominalGroupRelationshipInput {
   readonly useViewZoomingWithProximity?: boolean;
   readonly ignorePointsBeyondThreshold?: boolean;
   readonly proximityThreshold?: number;
-  readonly tolerance?: ToleranceVectorOptions;
-  readonly constraint?: ToleranceVectorOptions;
+  readonly tolerance: ToleranceVectorOptions;
+  readonly constraint: ToleranceVectorOptions;
   readonly fitWeight?: number;
 }
 
@@ -1350,6 +1484,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Average Point Relationship {/* #make-average-point-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-average-point-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeAveragePointRelationshipInput {
@@ -1371,6 +1507,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Geometry Fit Only Relationship {/* #make-geometry-fit-only-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-only-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeGeometryFitOnlyRelationshipInput {
@@ -1394,6 +1532,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeGeometryFitAndCompareToNominalRelationshipInput {
   readonly relationshipName: CollectionItemName;
@@ -1416,6 +1556,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-geometry-compare-only-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeGeometryCompareOnlyRelationshipInput {
   readonly relationshipName: CollectionItemName;
@@ -1436,13 +1578,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-point-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeDynamicPointRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstReferenceGeometry: CollectionObjectName;
   readonly secondReferenceGeometry: CollectionObjectName;
-  readonly constructionMode?: DynamicPointMode;
-  readonly thirdReferenceGeometry?: CollectionObjectName;
+  readonly constructionMode: DynamicPointMode;
+  readonly thirdReferenceGeometry: CollectionObjectName;
 }
 
 export declare function makeDynamicPointRelationship(
@@ -1458,12 +1602,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-line-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeDynamicLineRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstReferenceGeometry: CollectionObjectName;
   readonly secondReferenceGeometry: CollectionObjectName;
-  readonly constructionMode?: DynamicLineMode;
+  readonly constructionMode: DynamicLineMode;
 }
 
 export declare function makeDynamicLineRelationship(
@@ -1479,12 +1625,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-plane-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeDynamicPlaneRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstReferenceGeometry: CollectionObjectName;
   readonly secondReferenceGeometry: CollectionObjectName;
-  readonly constructionMode?: DynamicPlaneMode;
+  readonly constructionMode: DynamicPlaneMode;
   readonly offsetPlaneOffset?: number;
 }
 
@@ -1501,12 +1649,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-circle-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeDynamicCircleRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstReferenceGeometry: CollectionObjectName;
   readonly secondReferenceGeometry: CollectionObjectName;
-  readonly constructionMode?: DynamicCircleMode;
+  readonly constructionMode: DynamicCircleMode;
 }
 
 export declare function makeDynamicCircleRelationship(
@@ -1522,12 +1672,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-dynamic-ellipse-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeDynamicEllipseRelationshipInput {
   readonly relationshipName: CollectionItemName;
   readonly firstReferenceGeometry: CollectionObjectName;
   readonly secondReferenceGeometry: CollectionObjectName;
-  readonly constructionMode?: DynamicEllipseMode;
+  readonly constructionMode: DynamicEllipseMode;
 }
 
 export declare function makeDynamicEllipseRelationship(
@@ -1542,6 +1694,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Vector Group To Vector Group Relationship {/* #make-vector-group-to-vector-group-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#make-vector-group-to-vector-group-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeVectorGroupToVectorGroupRelationshipInput {
@@ -1564,6 +1718,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetVectorGroupToVectorGroupCylindricalZoneInput {
   readonly vgToVgRelationship: CollectionItemName;
@@ -1584,6 +1740,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector Group To Vector Group Fit Weights {/* #set-vector-group-to-vector-group-fit-weights */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetVectorGroupToVectorGroupFitWeightsInput {
@@ -1609,6 +1767,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetVectorGroupToVectorGroupFitGradientFactorInput {
   readonly vgToVgRelationship: CollectionItemName;
@@ -1627,6 +1787,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector Group To Vector Group Relative Polarity {/* #set-vector-group-to-vector-group-relative-polarity */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-vector-group-to-vector-group-relative-polarity)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetVectorGroupToVectorGroupRelativePolarityInput {
@@ -1647,6 +1809,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#delete-relationship) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#delete-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteRelationshipInput {
   readonly relationshipName: CollectionItemName;
@@ -1665,6 +1829,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-optimization-search-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-optimization-search-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetOptimizationSearchOptionsInput {
   readonly maxNumberOfStepSizeReduction?: number;
@@ -1682,6 +1848,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Optimization Perturbation Parameters {/* #set-optimization-perturbation-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-optimization-perturbation-parameters) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-optimization-perturbation-parameters)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetOptimizationPerturbationParametersInput {
@@ -1703,13 +1871,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#do-relationship-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `useFitDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface DoRelationshipFitInput {
   readonly collectionContainingRelationships: string;
   readonly objectsToMove: Iterable<CollectionObjectName>;
   readonly instrumentsToMove: Iterable<CollectionInstrumentId>;
   readonly solverMode?: SolverMode;
-  readonly motionToAllow?: FitDofOptions;
+  readonly motionToAllow: FitDofOptions;
   readonly useFitDialog?: boolean;
 }
 
@@ -1726,12 +1898,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#move-collections-by-minimizing-relationships) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#move-collections-by-minimizing-relationships)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `useFitDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface MoveCollectionsByMinimizingRelationshipsInput {
   readonly collectionsToMove: Iterable<string>;
   readonly relationshipsToMinimize: Iterable<CollectionItemName>;
   readonly solverMode?: SolverMode;
-  readonly motionToAllow?: FitDofOptions;
+  readonly motionToAllow: FitDofOptions;
   readonly useFitDialog?: boolean;
   readonly convergenceThreshold?: number;
 }
@@ -1748,6 +1924,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get General Relationship Statistics {/* #get-general-relationship-statistics */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-general-relationship-statistics) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-general-relationship-statistics)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetGeneralRelationshipStatisticsInput {
@@ -1767,6 +1945,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-points-to-objects-relationship-statistics) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-points-to-objects-relationship-statistics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointsToObjectsRelationshipStatisticsInput {
   readonly relationshipName: CollectionItemName;
@@ -1784,6 +1964,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Start/Stop Relationship Trapping {/* #startstop-relationship-trapping */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#startstop-relationship-trapping) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#startstop-relationship-trapping)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface StartStopRelationshipTrappingInput {
@@ -1805,6 +1987,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-point-to-point-relationship-statistics) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-point-to-point-relationship-statistics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointToPointRelationshipStatisticsInput {
   readonly relationshipName: CollectionItemName;
@@ -1822,6 +2006,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Group To Nominal Group View Zooming {/* #set-group-to-nominal-group-view-zooming */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-group-to-nominal-group-view-zooming)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGroupToNominalGroupViewZoomingInput {
@@ -1846,13 +2032,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipAssociatedDataInput {
   readonly relationshipName: CollectionItemName;
-  readonly individualPoints?: Iterable<PointName>;
-  readonly pointGroups?: Iterable<CollectionObjectName>;
-  readonly pointClouds?: Iterable<CollectionObjectName>;
-  readonly objects?: Iterable<CollectionObjectName>;
+  readonly individualPoints: Iterable<PointName>;
+  readonly pointGroups: Iterable<CollectionObjectName>;
+  readonly pointClouds: Iterable<CollectionObjectName>;
+  readonly objects: Iterable<CollectionObjectName>;
   readonly ignoreEmptyArguments?: boolean;
 }
 
@@ -1868,6 +2056,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Associated Data {/* #get-relationship-associated-data */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-associated-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipAssociatedDataInput {
@@ -1887,11 +2077,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#set-points-to-points-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointsToPointsRelationshipAssociatedDataInput {
   readonly relationshipName: CollectionItemName;
-  readonly nominalPoints?: Iterable<PointName>;
-  readonly actualPoints?: Iterable<PointName>;
+  readonly nominalPoints: Iterable<PointName>;
+  readonly actualPoints: Iterable<PointName>;
   readonly ignoreEmptyArguments?: boolean;
 }
 
@@ -1907,6 +2099,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Points to Points Relationship Associated Data {/* #get-points-to-points-relationship-associated-data */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-points-to-points-relationship-associated-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPointsToPointsRelationshipAssociatedDataInput {
@@ -1926,12 +2120,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AutoFilterCloudsToNominalGeometry3DInput {
   readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly clouds: Iterable<CollectionObjectName>;
   readonly cloudThinningSettings?: CloudThinningOptions;
-  readonly filterProximitySettings3D?: FilterProximitySettings;
+  readonly filterProximitySettings3D: FilterProximitySettings;
 }
 
 export declare function autoFilterCloudsToNominalGeometry3D(
@@ -1947,12 +2143,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AutoFilterCloudsToNominalGeometry2DInput {
   readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly clouds: Iterable<CollectionObjectName>;
   readonly cloudThinningSettings?: CloudThinningOptions;
-  readonly filterProximitySettings2D?: FilterProximitySettings;
+  readonly filterProximitySettings2D: FilterProximitySettings;
   readonly geometryExtractionTolerance?: number;
 }
 
@@ -1969,11 +2167,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface AutoFilterPointsToNominalGeometry3DInput {
   readonly autoFilterTargetRelationships: Iterable<CollectionItemName>;
   readonly points: Iterable<PointName>;
-  readonly filterProximitySettings3D?: FilterProximitySettings;
+  readonly filterProximitySettings3D: FilterProximitySettings;
 }
 
 export declare function autoFilterPointsToNominalGeometry3D(
@@ -1989,14 +2189,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
 ```ts
 export interface AutoFilterPointsGroupsCloudsToSurfaceFacesInput {
-  readonly points?: Iterable<PointName>;
-  readonly groups?: Iterable<CollectionObjectName>;
-  readonly clouds?: Iterable<CollectionObjectName>;
+  readonly points: Iterable<PointName>;
+  readonly groups: Iterable<CollectionObjectName>;
+  readonly clouds: Iterable<CollectionObjectName>;
   readonly surfaceOffset?: number;
   readonly edgeOffset?: number;
-  readonly offsetDirection?: OffsetDirectionType;
+  readonly offsetDirection: OffsetDirectionType;
   readonly enforceMaxPointsPerFaceInOutput?: boolean;
   readonly maxPointsPerFace?: number;
   readonly surfaces: Iterable<CollectionObjectName>;
@@ -2018,10 +2220,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#create-points-to-objects-map)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreatePointsToObjectsMapInput {
-  readonly points?: Iterable<PointName>;
-  readonly groups?: Iterable<CollectionObjectName>;
+  readonly points: Iterable<PointName>;
+  readonly groups: Iterable<CollectionObjectName>;
   readonly objects: Iterable<CollectionObjectName>;
   readonly proximityTolerance?: number;
   readonly pointsToObjectsMapName: string;
@@ -2039,6 +2243,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Objects From Points to Objects Map (Point List) {/* #get-objects-from-points-to-objects-map-point-list */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-objects-from-points-to-objects-map-point-list)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetObjectsFromPointsToObjectsMapPointListInput {
@@ -2059,6 +2265,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#compute-geometry-relationship-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `displayResults` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface ComputeGeometryRelationshipUncertaintiesInput {
   readonly relationshipName: CollectionItemName;
@@ -2078,6 +2288,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-geom-relationship-criteria-name-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetGeomRelationshipCriteriaNameListInput {
   readonly relationshipName: CollectionItemName;
@@ -2096,6 +2308,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Relationship Status {/* #get-relationship-status */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/relationship-operations#get-relationship-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetRelationshipStatusInput {
@@ -2155,4 +2369,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

@@ -30,5 +30,17 @@ On success, SDK state is `READY`, connection state is `CONNECTED`, and
 `ready_for_mp` is `True`. The method does not launch SpatialAnalyzer, select a
 window, replace the SDK, or accept a remote host.
 
+MP admission also needs the client's latest server snapshot to report
+readiness. When this session's startup did not connect the SDK, call
+`get_server_snapshot()` after this method succeeds.
+
+The server finishes an accepted connection under its own bounds, even after the
+caller stops waiting. After a cancelled or timed-out call, refresh with
+`get_spatial_analyzer_sdk_state()` before deciding what to do, and treat
+`sdk-lifecycle-transition-in-progress` (`STATE_CONFLICT`, `REFRESH_STATE`) as
+"refresh and retry later". See
+[After an Abandoned Lifecycle Call](./lifecycle.md#after-an-abandoned-lifecycle-call).
+
 Failures use the normal lifecycle, SpatialAnalyzer, SDK, compatibility,
-timeout, and cancellation error boundaries.
+timeout, and cancellation error boundaries. A caller `timeout` raises
+`BriosaTransportError` with `transport-deadline-exceeded`.

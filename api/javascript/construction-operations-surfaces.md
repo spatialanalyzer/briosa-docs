@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Surfaces
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-surfaces) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-surfaces)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Surfaces From Objects {/* #construct-surfaces-from-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-from-objects) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-from-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfacesFromObjectsInput {
@@ -36,6 +38,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-bsplines) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-bsplines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfaceFromBSplinesInput {
   readonly resultingSurfaceName: CollectionObjectName;
@@ -56,6 +60,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Surface From Cylinder {/* #construct-surface-from-cylinder */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cylinder) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-cylinder)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfaceFromCylinderInput {
@@ -80,6 +86,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-plane) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfaceFromPlaneInput {
   readonly resultingSurfaceName: CollectionObjectName;
@@ -100,6 +108,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Surface From Sphere {/* #construct-surface-from-sphere */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-sphere) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-sphere)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfaceFromSphereInput {
@@ -122,6 +132,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cone) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-cone)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfaceFromConeInput {
   readonly resultingSurfaceName: CollectionObjectName;
@@ -142,6 +154,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Surface From a Collection of Surfaces {/* #construct-surface-from-a-collection-of-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfaceFromCollectionOfSurfacesInput {
@@ -168,6 +182,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfaceFitFromNominalSurfacesAndActualDataInput {
   readonly nominalSurface: CollectionObjectName;
@@ -190,6 +206,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-by-dissecting-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface ConstructSurfaceByDissectingSurfacesInput {
   readonly dissectionMode: SurfaceDissectionMode;
@@ -210,6 +228,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfacesByDissectingSurfacesFromRefListInput {
   readonly surfacesToDissect: Iterable<CollectionObjectName>;
@@ -229,6 +249,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Surface From Point Groups {/* #construct-surface-from-point-groups */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-point-groups) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-point-groups)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfaceFromPointGroupsInput {
@@ -252,6 +274,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-by-projecting-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfacesByProjectingPointsInput {
   readonly projectionTargetNameList: Iterable<CollectionObjectName>;
@@ -273,6 +297,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct surface by offsetting a surface {/* #construct-surface-by-offsetting-a-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-by-offsetting-a-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructSurfaceByOffsettingSurfaceInput {
@@ -296,6 +322,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-annotation-links) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-annotation-links)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructSurfaceFromAnnotationLinksInput {
   readonly annotationList: Iterable<CollectionObjectName>;
@@ -316,6 +344,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Geometry From Surfaces {/* #construct-geometry-from-surfaces */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-geometry-from-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-geometry-from-surfaces)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructGeometryFromSurfacesInput {
@@ -350,4 +380,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

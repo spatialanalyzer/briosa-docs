@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / Laser Projection
-description: Availability of proposed commands absent from Briosa Server 0.9.0.
+description: Availability of proposed commands absent from Briosa Server 0.10.0.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/instrument-operations-laser-projection) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/instrument-operations-laser-projection)
 
-:::note[Not Available in Server 0.9.0]
+:::note[Not Available in Server 0.10.0]
 
 These commands have documented proposals but no callable RPC in the released
 server and no matching public method in the current client implementations.

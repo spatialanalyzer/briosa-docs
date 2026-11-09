@@ -16,7 +16,7 @@ already be running.
 ```ts
 launchSpatialAnalyzer(
   launchOptions?: SpatialAnalyzerLaunchOptions,
-  callOptions?: BriosaLifecycleCallOptions,
+  options?: BriosaLifecycleCallOptions,
 ): Promise<SpatialAnalyzerLifecycleState>;
 ```
 
@@ -25,7 +25,7 @@ launchSpatialAnalyzer(
 | Parameter | Type | Default | Meaning |
 | --- | --- | --- | --- |
 | `launchOptions` | `SpatialAnalyzerLaunchOptions` | Empty options | Controlled application startup inputs. |
-| `callOptions.signal` | `AbortSignal` | `undefined` | Aborts this caller's launch wait. |
+| `options.signal` | `AbortSignal` | `undefined` | Aborts this caller's launch wait. |
 
 `SpatialAnalyzerLaunchOptions` provides:
 
@@ -66,3 +66,11 @@ when the owned application is closed.
 
 The method accepts no executable path, arbitrary argument list, launch-time MP,
 or option to close existing applications.
+
+Aborting the `signal` stops only your wait. Once the server has accepted a
+launch, it keeps waiting for the application window under its own bound, so
+SpatialAnalyzer may still reach `running`. Refresh application state with
+`getSpatialAnalyzerState()` before launching again, and treat
+`application-lifecycle-transition-in-progress` (`stateConflict`, `refreshState`)
+as "refresh and retry later". See
+[After an Aborted Lifecycle Call](./lifecycle.md#after-an-aborted-lifecycle-call).

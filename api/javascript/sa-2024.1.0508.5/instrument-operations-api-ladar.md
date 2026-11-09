@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Briosa 0.4.0 JavaScript and TypeScript APIs for API - LADAR MP commands.
+description: Availability of the API - LADAR commands that client 0.5.0 provides only for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,122 +8,67 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
-## setLadarAutoMeasPoint
+:::note[Not Available for SA 2024.1.0508.5]
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-point)
+The SA 2024.1.0508.5 package of client 0.5.0 has no operation for these commands,
+and Server 0.10.0 for that target has no matching RPC. The
+[SA 2026.1.0529.7 reference](/api/javascript/instrument-operations-api-ladar)
+documents them for that target.
 
-```ts
-export interface SetLadarAutoMeasPointInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly sampleTimeMilliseconds?: number;
-}
+:::
 
-function setLadarAutoMeasPoint(
-  briosa: BriosaClient,
-  input: SetLadarAutoMeasPointInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+## Set LADAR AutoMeas Point {/* #set-ladar-automeas-point */}
 
-Sample time defaults to exact MP value `0` despite the label documenting
-`1–2000`.
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point).
+No released signature is available for SA 2024.1.0508.5.
 
-## setLadarAutoMeasSphere
+## Set LADAR AutoMeas Sphere {/* #set-ladar-automeas-sphere */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-```ts
-export interface SetLadarAutoMeasSphereInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly sphereRadius?: number;
-  readonly scanLineSpacing?: number;
-  readonly sendCenterPoint?: boolean;
-  readonly sendSphere?: boolean;
-  readonly sendMeasuredCloud?: boolean;
-}
+## Set LADAR FeatureMeas Sphere {/* #set-ladar-featuremeas-sphere */}
 
-function setLadarAutoMeasSphere(
-  briosa: BriosaClient,
-  input: SetLadarAutoMeasSphereInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-Defaults are `1.1875`, `0.05`, `true`, `false`, and `false` in field order.
+## Set LADAR FeatureMeas Circle {/* #set-ladar-featuremeas-circle */}
 
-## setLadarFeatureMeasSphere
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle).
+No released signature is available for SA 2024.1.0508.5.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+## Set LADAR FeatureMeas Slot {/* #set-ladar-featuremeas-slot */}
 
-```ts
-export interface SetLadarFeatureMeasSphereInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly scanLineSpacing?: number;
-}
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot).
+No released signature is available for SA 2024.1.0508.5.
 
-function setLadarFeatureMeasSphere(
-  briosa: BriosaClient,
-  input: SetLadarFeatureMeasSphereInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+## Set LADAR FeatureMeas Cylinder {/* #set-ladar-featuremeas-cylinder */}
 
-Spacing defaults to `0.05`.
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
+No released signature is available for SA 2024.1.0508.5.
 
-## setLadarFeatureMeasCircle
+## setLadarAutoMeasPoint {/* #setladarautomeaspoint */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-```ts
-export interface SetLadarFeatureMeasCircleInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly scanLineSpacing?: number;
-  readonly widthOfExtraAreaAroundScan?: number;
-}
+## setLadarAutoMeasSphere {/* #setladarautomeassphere */}
 
-function setLadarFeatureMeasCircle(
-  briosa: BriosaClient,
-  input: SetLadarFeatureMeasCircleInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-## setLadarFeatureMeasSlot
+## setLadarFeatureMeasSphere {/* #setladarfeaturemeassphere */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-```ts
-export interface SetLadarFeatureMeasSlotInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly scanLineSpacing?: number;
-  readonly widthOfExtraAreaAroundScan?: number;
-}
+## setLadarFeatureMeasCircle {/* #setladarfeaturemeascircle */}
 
-function setLadarFeatureMeasSlot(
-  briosa: BriosaClient,
-  input: SetLadarFeatureMeasSlotInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-## setLadarFeatureMeasCylinder
+## setLadarFeatureMeasSlot {/* #setladarfeaturemeasslot */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-```ts
-export interface SetLadarFeatureMeasCylinderInput {
-  readonly instrument: CollectionInstrumentId;
-  readonly scanLineSpacing?: number;
-  readonly widthOfExtraAreaAroundScan?: number;
-}
+## setLadarFeatureMeasCylinder {/* #setladarfeaturemeascylinder */}
 
-function setLadarFeatureMeasCylinder(
-  briosa: BriosaClient,
-  input: SetLadarFeatureMeasCylinderInput,
-  options?: BriosaCallOptions,
-): Promise<void>;
-```
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-Circle, Slot, and Cylinder spacing defaults to `0.05`; extra width defaults to
-`0.0`. Briosa does not convert units or add ranges. The calls are never
-automatically replayed.
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

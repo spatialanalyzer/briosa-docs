@@ -8,7 +8,8 @@ description: Read SpatialAnalyzer application and ownership state from JavaScrip
 [SA 2026.1.0529.7](/api/javascript/get-spatial-analyzer-state) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/get-spatial-analyzer-state)
 
 Reads SpatialAnalyzer application state without changing the application or
-SA SDK.
+SA SDK. Use it to refresh application state after an aborted
+`launchSpatialAnalyzer()` call.
 
 ## Signature
 

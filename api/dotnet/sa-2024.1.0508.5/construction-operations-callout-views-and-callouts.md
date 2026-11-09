@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/construction-operations-callout-views-and-callouts) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Create Vector Callout {/* #create-vector-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task CreateVectorCalloutAsync(
@@ -40,6 +42,7 @@ public Task CreateVectorCalloutAsync(
         IEnumerable<string>? additionalNotes = null,
         bool attachCalloutToEndPoint = false,
         bool useDefaultPlacement = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -48,6 +51,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Min/Max Vector Group Callout {/* #create-minmax-vector-group-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task CreateMinMaxVectorGroupCalloutAsync(
@@ -72,6 +77,7 @@ public Task CreateMinMaxVectorGroupCalloutAsync(
         bool showUnits = false,
         bool attachCalloutToEndPoint = true,
         bool useDefaultPlacement = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -81,10 +87,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CreatePointCalloutAsync(
         CollectionItemName destinationCalloutView,
         PointName point,
+        CoordinateSystemType desiredCoordinateSystem,
         double viewXPosition = 0.0,
         double viewYPosition = 0.0,
         bool showPointCollection = false,
@@ -98,15 +107,15 @@ public Task CreatePointCalloutAsync(
         bool showUy = false,
         bool showUz = false,
         bool showUMag = false,
-        CoordinateSystemType desiredCoordinateSystem = CoordinateSystemType.Cartesian,
         IEnumerable<string>? notes = null,
         bool useDefaultPlacement = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -120,6 +129,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Create Point Comparison Callout {/* #create-point-comparison-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```csharp
 public Task CreatePointComparisonCalloutAsync(
@@ -145,6 +156,7 @@ public Task CreatePointComparisonCalloutAsync(
         string? additionalZComments = null,
         IEnumerable<string>? additionalNotes = null,
         bool useDefaultPlacement = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -154,6 +166,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-relationship-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CreateRelationshipCalloutAsync(
         CollectionItemName destinationCalloutView,
@@ -161,6 +175,7 @@ public Task CreateRelationshipCalloutAsync(
         double viewXPosition = 0.0,
         double viewYPosition = 0.0,
         IEnumerable<string>? additionalNotes = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -170,6 +185,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-picture-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CreatePictureCalloutAsync(
         CollectionItemName destinationCalloutView,
@@ -178,6 +195,7 @@ public Task CreatePictureCalloutAsync(
         double viewYPosition = 0.6,
         int scaleImagePercent = 100,
         CollectionItemName? objectForCalloutAnchorPoint = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -187,6 +205,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-text-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task CreateTextCalloutAsync(
         CollectionItemName destinationCalloutView,
@@ -194,6 +214,7 @@ public Task CreateTextCalloutAsync(
         double viewXPosition = 0.4,
         double viewYPosition = 0.6,
         PointName? calloutAnchorPoint = null,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -203,21 +224,24 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
 
-```csharp
-public Task<IReadOnlyList<CollectionItemName>> MakeCalloutViewRefListWildcardSelectionAsync(
-        string collectionWildcardCriteria = "*",
-        string calloutViewWildcardCriteria = "*",
-        CancellationToken cancellationToken = default);
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Set Default Callout View Properties {/* #set-default-callout-view-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetDefaultCalloutViewPropertiesAsync(
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+
+public Task SetDefaultCalloutViewPropertiesAsync(
+        string defaultCalloutViewName,
+        CalloutViewProperties properties,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -227,21 +251,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties)
 
-```csharp
-public Task SetCalloutViewPropertiesAsync(
-        IEnumerable<CollectionItemName> calloutViews,
-        CancellationToken cancellationToken = default);
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Delete Callout View {/* #delete-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task DeleteCalloutViewAsync(
         CollectionItemName calloutView,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -251,11 +273,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#rename-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task RenameCalloutViewAsync(
         CollectionItemName originalCalloutViewName,
         CollectionItemName newCalloutViewName,
         bool overwriteIfExists = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -265,9 +290,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task AutoArrangeCalloutViewAsync(
         CollectionItemName calloutView,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -277,9 +305,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<int> GetNumberOfCalloutsInCalloutViewAsync(
         CollectionItemName calloutView,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -289,10 +320,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<CalloutPosition> GetIthCalloutPositionInCalloutViewAsync(
         CollectionItemName calloutView,
         int calloutViewIndex,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -302,12 +336,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task SetIthCalloutPositionInCalloutViewAsync(
         CollectionItemName calloutView,
         int calloutViewIndex,
         int xPosition,
         int yPosition,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -317,4 +354,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/analysis-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Angle Between Line and Plane {/* #angle-between-line-and-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-line-and-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AngleBetweenLineAndPlaneInput {
@@ -33,7 +35,7 @@ export declare function angleBetweenLineAndPlane(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -42,6 +44,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Angle Between Two Lines {/* #angle-between-two-lines */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-two-lines)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AngleBetweenTwoLinesInput {
@@ -60,7 +64,7 @@ export declare function angleBetweenTwoLines(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -69,6 +73,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Angle Between Two Planes' normals {/* #angle-between-two-planes-normals */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#angle-between-two-planes-normals)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AngleBetweenTwoPlanesNormalsInput {
@@ -87,7 +93,7 @@ export declare function angleBetweenTwoPlanesNormals(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -96,6 +102,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#best-fit-transformation---group-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `showInterface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface BestFitTransformationGroupToGroupInput {
@@ -125,7 +135,7 @@ export declare function bestFitTransformationGroupToGroup(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -136,6 +146,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Compute Group to Group Orientation (Rx,Ry,Rz) {/* #compute-group-to-group-orientation-rxryrz */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#compute-group-to-group-orientation-rxryrz)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ComputeGroupToGroupOrientationRxRyRzInput {
@@ -155,6 +167,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Point Uncertainty Cloud Point Sets {/* #create-point-uncertainty-cloud-point-sets */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#create-point-uncertainty-cloud-point-sets)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface CreatePointUncertaintyCloudPointSetsInput {
@@ -178,6 +192,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#create-point-uncertainty-fields)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface CreatePointUncertaintyFieldsInput {
   readonly pointNameList: Iterable<PointName>;
@@ -197,6 +213,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-point-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface FitGeometryToPointGroupInput {
   readonly geometryType: GeometryType;
@@ -206,7 +226,7 @@ export interface FitGeometryToPointGroupInput {
   readonly reportDeviations?: boolean;
   readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometry: CollectionObjectName;
+  readonly startingConditionGeometry?: CollectionObjectName;
 }
 
 export declare function fitGeometryToPointGroup(
@@ -218,16 +238,20 @@ export declare function fitGeometryToPointGroup(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface FitGeometryToPointGroupProjectedToPlaneInput {
@@ -239,7 +263,7 @@ export interface FitGeometryToPointGroupProjectedToPlaneInput {
   readonly reportDeviations?: boolean;
   readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometry: CollectionObjectName;
+  readonly startingConditionGeometry?: CollectionObjectName;
 }
 
 export declare function fitGeometryToPointGroupProjectedToPlane(
@@ -251,16 +275,20 @@ export declare function fitGeometryToPointGroupProjectedToPlane(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#fit-geometry-to-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `reportDeviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface FitGeometryToPointsInput {
@@ -271,7 +299,7 @@ export interface FitGeometryToPointsInput {
   readonly reportDeviations?: boolean;
   readonly fitInterfaceTolerance?: number;
   readonly ignoreOutOfTolerancePoints?: boolean;
-  readonly startingConditionGeometry: CollectionObjectName;
+  readonly startingConditionGeometry?: CollectionObjectName;
 }
 
 export declare function fitGeometryToPoints(
@@ -283,16 +311,18 @@ export declare function fitGeometryToPoints(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fitInterfaceTolerance` | -1.0 uses the profile tolerance. |
-| `startingConditionGeometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `startingConditionGeometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-b-spline-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetBSplinePropertiesInput {
@@ -312,6 +342,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-circle-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCirclePropertiesInput {
   readonly circleName: CollectionObjectName;
@@ -330,6 +362,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-cone-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetConePropertiesInput {
   readonly coneName: CollectionObjectName;
@@ -344,7 +378,7 @@ export declare function getConeProperties(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -354,6 +388,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Coordinate for i-th Point in Point Set {/* #get-coordinate-for-i-th-point-in-point-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetCoordinateForIthPointInPointSetInput {
@@ -374,6 +410,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-cylinder-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCylinderPropertiesInput {
   readonly cylinderName: CollectionObjectName;
@@ -391,6 +429,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Ellipse Properties {/* #get-ellipse-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-ellipse-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetEllipsePropertiesInput {
@@ -410,6 +450,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-euler-parameters-for-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetEulerParametersForFrameInput {
   readonly frame: CollectionObjectName;
@@ -427,6 +469,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Euler Parameters for i-th Frame in Frame Set {/* #get-euler-parameters-for-i-th-frame-in-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetEulerParametersForIthFrameInFrameSetInput {
@@ -447,6 +491,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-i-th-collection-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetIthCollectionNameInput {
   readonly collectionIndex?: number;
@@ -464,6 +510,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get i-th Point From Group {/* #get-i-th-point-from-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-i-th-point-from-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetIthPointFromGroupInput {
@@ -484,6 +532,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-line-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetLinePropertiesInput {
   readonly lineName: CollectionObjectName;
@@ -501,6 +551,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Measurement Auxiliary Data {/* #get-measurement-auxiliary-data */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-auxiliary-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetMeasurementAuxiliaryDataInput {
@@ -521,6 +573,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-info-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetMeasurementInfoDataInput {
   readonly pointName: PointName;
@@ -539,6 +593,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-measurement-weather-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetMeasurementWeatherDataInput {
   readonly pointName: PointName;
@@ -553,7 +609,7 @@ export declare function getMeasurementWeatherData(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -564,6 +620,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Number of Collections {/* #get-number-of-collections */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-collections)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export declare function getNumberOfCollections(
@@ -577,6 +635,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Number of Frames In Frame Set {/* #get-number-of-frames-in-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-frames-in-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetNumberOfFramesInFrameSetInput {
@@ -596,6 +656,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-points-in-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNumberOfPointsInGroupInput {
   readonly groupName: CollectionObjectName;
@@ -613,6 +675,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Number of Points In Point Set {/* #get-number-of-points-in-point-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-number-of-points-in-point-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetNumberOfPointsInPointSetInput {
@@ -632,6 +696,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetObjectReportingFrameInput {
   readonly objectName: CollectionObjectName;
@@ -649,6 +715,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Plane Properties {/* #get-plane-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-plane-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPlanePropertiesInput {
@@ -668,6 +736,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointCoordinateInput {
   readonly pointName: PointName;
@@ -685,6 +755,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Point Coordinate (Cylindrical) {/* #get-point-coordinate-cylindrical */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate-cylindrical)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPointCoordinateCylindricalInput {
@@ -704,6 +776,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-coordinate-polar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointCoordinatePolarInput {
   readonly pointName: PointName;
@@ -722,6 +796,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointPropertiesInput {
   readonly pointName: PointName;
@@ -739,6 +815,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Point To Line Distance {/* #get-point-to-line-distance */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-to-line-distance)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPointToLineDistanceInput {
@@ -759,6 +837,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-to-point-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointToPointDistanceInput {
   readonly firstPoint: PointName;
@@ -778,6 +858,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-point-tolerance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointToleranceInput {
   readonly pointName: PointName;
@@ -796,6 +878,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-slot-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetSlotPropertiesInput {
   readonly slotName: CollectionObjectName;
@@ -810,7 +894,7 @@ export declare function getSlotProperties(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -823,6 +907,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Get Sphere Properties {/* #get-sphere-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-sphere-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetSpherePropertiesInput {
@@ -842,6 +928,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-surface-physical-stats)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetSurfacePhysicalStatsInput {
   readonly surfaceName: CollectionObjectName;
@@ -859,6 +947,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Timestamp for i-th Frame in Frame Set {/* #get-timestamp-for-i-th-frame-in-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetTimestampForIthFrameInFrameSetInput {
@@ -879,6 +969,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetTimestampForIthPointInPointSetInput {
   readonly pointSet: CollectionObjectName;
@@ -898,6 +990,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-torus-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetTorusPropertiesInput {
   readonly torusName: CollectionObjectName;
@@ -915,6 +1009,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Transform for i-th Frame in Frame Set {/* #get-transform-for-i-th-frame-in-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetTransformForIthFrameInFrameSetInput {
@@ -935,6 +1031,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#group-to-surface-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GroupToSurfaceFitInput {
   readonly groupToFit: CollectionObjectName;
@@ -953,7 +1051,7 @@ export declare function groupToSurfaceFit(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -963,6 +1061,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Import Geometry Fit Profiles {/* #import-geometry-fit-profiles */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#import-geometry-fit-profiles)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportGeometryFitProfilesInput {
@@ -983,6 +1083,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#is-object-of-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface IsObjectOfTypeInput {
   readonly objectName: CollectionObjectName;
@@ -1001,6 +1103,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Circle Fit Profile {/* #make-circle-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-circle-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeCircleFitProfileInput {
@@ -1027,7 +1131,7 @@ export declare function makeCircleFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1038,6 +1142,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-cone-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeConeFitProfileInput {
@@ -1061,7 +1167,7 @@ export declare function makeConeFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1071,6 +1177,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-cylinder-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeCylinderFitProfileInput {
@@ -1096,7 +1204,7 @@ export declare function makeCylinderFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1106,6 +1214,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-ellipse-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeEllipseFitProfileInput {
@@ -1132,7 +1242,7 @@ export declare function makeEllipseFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1142,6 +1252,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-line-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeLineFitProfileInput {
@@ -1166,6 +1278,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-paraboloid-fit-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeParaboloidFitProfileInput {
   readonly fitProfileName?: string;
@@ -1187,7 +1301,7 @@ export declare function makeParaboloidFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1197,6 +1311,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-plane-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakePlaneFitProfileInput {
@@ -1219,7 +1335,7 @@ export declare function makePlaneFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1228,6 +1344,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-slot-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeSlotFitProfileInput {
@@ -1256,7 +1374,7 @@ export declare function makeSlotFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1266,6 +1384,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#make-sphere-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MakeSphereFitProfileInput {
@@ -1287,7 +1407,7 @@ export declare function makeSphereFitProfile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1297,6 +1417,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Mushroom Target Hole Inspection {/* #mushroom-target-hole-inspection */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#mushroom-target-hole-inspection)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface MushroomTargetHoleInspectionInput {
@@ -1320,6 +1442,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#patch-normal-shift---hole--pin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface PatchNormalShiftHolePinInput {
   readonly planePointsGroupName: CollectionObjectName;
@@ -1340,6 +1464,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Patch Normal Shift - Point {/* #patch-normal-shift---point */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#patch-normal-shift---point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface PatchNormalShiftPointInput {
@@ -1362,6 +1488,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-clouds-to-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface QueryCloudsToObjectsInput {
   readonly cloudNames: Iterable<CollectionObjectName>;
@@ -1383,7 +1511,7 @@ export declare function queryCloudsToObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1393,6 +1521,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface QueryCloudsToSurfaceInput {
@@ -1415,7 +1545,7 @@ export declare function queryCloudsToSurface(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1425,6 +1555,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Frame to Frame {/* #query-frame-to-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-frame-to-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface QueryFrameToFrameInput {
@@ -1441,7 +1573,7 @@ export declare function queryFrameToFrame(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1452,6 +1584,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-groups-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showResultsDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface QueryGroupsToObjectsInput {
@@ -1473,7 +1609,7 @@ export declare function queryGroupsToObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1485,6 +1621,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Point to Objects {/* #query-point-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-point-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface QueryPointToObjectsInput {
@@ -1506,6 +1644,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-point-to-point-along-curve)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface QueryPointToPointAlongCurveInput {
   readonly value1stPoint: PointName;
@@ -1525,6 +1665,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Points to Circle {/* #query-points-to-circle */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-circle)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface QueryPointsToCircleInput {
@@ -1550,6 +1692,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showResultsDialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface QueryPointsToObjectsInput {
   readonly pointNames: Iterable<PointName>;
@@ -1570,7 +1716,7 @@ export declare function queryPointsToObjects(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1581,6 +1727,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Points to Single Point {/* #query-points-to-single-point */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#query-points-to-single-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `showVectorProperties` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface QueryPointsToSinglePointInput {
@@ -1602,6 +1752,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#re-compute-calculated-items)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ReComputeCalculatedItemsInput {
   readonly targetsFromShots?: boolean;
@@ -1621,6 +1773,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Rename points based on inter-point distance to reference points {/* #rename-points-based-on-inter-point-distance-to-reference-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verifyResults` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface RenamePointsBasedOnInterPointDistanceToReferencePointsInput {
@@ -1642,6 +1798,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Rename points based on proximity to reference points {/* #rename-points-based-on-proximity-to-reference-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#rename-points-based-on-proximity-to-reference-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verifyResults` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface RenamePointsBasedOnProximityToReferencePointsInput {
@@ -1665,6 +1825,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-b-splines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ReverseBSplinesInput {
   readonly bSplineList: Iterable<CollectionObjectName>;
@@ -1682,6 +1844,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Reverse Plane Normals {/* #reverse-plane-normals */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-plane-normals)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ReversePlaneNormalsInput {
@@ -1701,6 +1865,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#reverse-surface-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ReverseSurfaceNormalsInput {
   readonly surfaceList: Iterable<CollectionObjectName>;
@@ -1718,6 +1884,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Circle Properties {/* #set-circle-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-circle-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCirclePropertiesInput {
@@ -1739,6 +1907,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Cylinder Properties {/* #set-cylinder-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-cylinder-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCylinderPropertiesInput {
@@ -1767,6 +1937,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-default-colorization-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetDefaultColorizationOptionsInput {
   readonly colorizationOptions?: ColorizationOptions;
@@ -1784,6 +1956,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geometry Relationship Fit Profile {/* #set-geometry-relationship-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-geometry-relationship-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetGeometryRelationshipFitProfileInput {
@@ -1806,6 +1980,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-measurement-auxiliary-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetMeasurementAuxiliaryDataInput {
   readonly pointName: PointName;
@@ -1827,6 +2003,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetObjectReportingFrameInput {
   readonly objectName: CollectionObjectName;
@@ -1845,6 +2023,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Properties {/* #set-point-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-point-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPointPropertiesInput {
@@ -1867,6 +2047,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Weights From Uncertainties {/* #set-point-weights-from-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-point-weights-from-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPointWeightsFromUncertaintiesInput {
@@ -1891,6 +2073,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetTransformForIthFrameInFrameSetInput {
   readonly frameSet: CollectionObjectName;
@@ -1910,6 +2094,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Sphere Axis Check {/* #sphere-axis-check */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#sphere-axis-check)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SphereAxisCheckInput {
@@ -1932,6 +2118,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#temperature-compensate-a-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface TemperatureCompensateAGroupInput {
   readonly originalGroup: CollectionObjectName;
@@ -1951,7 +2139,7 @@ export declare function temperatureCompensateAGroup(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1963,6 +2151,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Transform Objects - Frame To Frame {/* #transform-objects---frame-to-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects---frame-to-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface TransformObjectsFrameToFrameInput {
@@ -1985,6 +2175,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects-by-delta-about-working-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface TransformObjectsByDeltaAboutWorkingFrameInput {
   readonly objectsToTransform: Iterable<CollectionObjectName>;
@@ -2004,6 +2196,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface TransformObjectsByDeltaWorldTransformOperatorInput {
   readonly objectsToTransform: Iterable<CollectionObjectName>;
@@ -2022,6 +2216,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Translate Objects by Delta {/* #translate-objects-by-delta */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/analysis-operations#translate-objects-by-delta)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface TranslateObjectsByDeltaInput {
@@ -2050,4 +2246,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)

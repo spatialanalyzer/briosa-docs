@@ -1,6 +1,6 @@
 ---
 title: Variables
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/variables) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/variables)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Double to Named Double List Variable {/* #add-double-to-named-double-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#add-double-to-named-double-list-variable) · [gRPC Contract](/api/grpc/variables#add-double-to-named-double-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddDoubleToNamedDoubleListVariableInput {
@@ -35,6 +37,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#clear-named-double-list-variable) · [gRPC Contract](/api/grpc/variables#clear-named-double-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ClearNamedDoubleListVariableInput {
   readonly name?: string;
@@ -53,9 +57,11 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#delete-variable) · [gRPC Contract](/api/grpc/variables#delete-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteVariableInput {
-  readonly name?: string;
+  readonly name: string;
 }
 
 export declare function deleteVariable(
@@ -67,13 +73,21 @@ export declare function deleteVariable(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Delete Variables -- Wildcard Match {/* #delete-variables----wildcard-match */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#delete-variables----wildcard-match) · [gRPC Contract](/api/grpc/variables#delete-variables----wildcard-match)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteVariablesWildcardMatchInput {
-  readonly variableWildcardCriteria?: string;
+  readonly variableWildcardCriteria: string;
 }
 
 export declare function deleteVariablesWildcardMatch(
@@ -85,9 +99,17 @@ export declare function deleteVariablesWildcardMatch(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
+Parameter and result notes:
+
+| Member | Meaning |
+| --- | --- |
+| `variableWildcardCriteria` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Get Boolean Variable {/* #get-boolean-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-boolean-variable) · [gRPC Contract](/api/grpc/variables#get-boolean-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetBooleanVariableInput {
@@ -107,6 +129,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-collection-object-name-variable) · [gRPC Contract](/api/grpc/variables#get-collection-object-name-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetCollectionObjectNameVariableInput {
   readonly name?: string;
@@ -124,6 +148,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Collection Object Ref List Variable {/* #get-collection-object-ref-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-collection-object-ref-list-variable) · [gRPC Contract](/api/grpc/variables#get-collection-object-ref-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetCollectionObjectRefListVariableInput {
@@ -143,6 +169,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-double-variable) · [gRPC Contract](/api/grpc/variables#get-double-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetDoubleVariableInput {
   readonly name?: string;
@@ -160,6 +188,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Integer Variable {/* #get-integer-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-integer-variable) · [gRPC Contract](/api/grpc/variables#get-integer-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetIntegerVariableInput {
@@ -179,6 +209,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-named-double-list-variable) · [gRPC Contract](/api/grpc/variables#get-named-double-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetNamedDoubleListVariableInput {
   readonly name?: string;
@@ -196,6 +228,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Named Double List Variable Min/Max {/* #get-named-double-list-variable-minmax */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-named-double-list-variable-minmax) · [gRPC Contract](/api/grpc/variables#get-named-double-list-variable-minmax)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetNamedDoubleListVariableMinMaxInput {
@@ -215,6 +249,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-point-name-ref-list-variable) · [gRPC Contract](/api/grpc/variables#get-point-name-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetPointNameRefListVariableInput {
   readonly name?: string;
@@ -232,6 +268,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Point Name Variable {/* #get-point-name-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-point-name-variable) · [gRPC Contract](/api/grpc/variables#get-point-name-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetPointNameVariableInput {
@@ -251,6 +289,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-relationship-ref-list-variable) · [gRPC Contract](/api/grpc/variables#get-relationship-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetRelationshipRefListVariableInput {
   readonly name?: string;
@@ -260,7 +300,7 @@ export declare function getRelationshipRefListVariable(
   briosa: BriosaClient,
   input: GetRelationshipRefListVariableInput,
   options?: BriosaCallOptions,
-): Promise<readonly CollectionObjectName[]>;
+): Promise<readonly CollectionItemName[]>;
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -268,6 +308,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Report Items Reference List Variable {/* #get-report-items-reference-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-report-items-reference-list-variable) · [gRPC Contract](/api/grpc/variables#get-report-items-reference-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetReportItemsReferenceListVariableInput {
@@ -278,7 +320,7 @@ export declare function getReportItemsReferenceListVariable(
   briosa: BriosaClient,
   input: GetReportItemsReferenceListVariableInput,
   options?: BriosaCallOptions,
-): Promise<readonly CollectionObjectName[]>;
+): Promise<readonly CollectionItemName[]>;
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -286,6 +328,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get String Ref List Variable {/* #get-string-ref-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-string-ref-list-variable) · [gRPC Contract](/api/grpc/variables#get-string-ref-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetStringRefListVariableInput {
@@ -305,6 +349,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-string-variable) · [gRPC Contract](/api/grpc/variables#get-string-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetStringVariableInput {
   readonly name?: string;
@@ -322,6 +368,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Transform Variable {/* #get-transform-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-transform-variable) · [gRPC Contract](/api/grpc/variables#get-transform-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface GetTransformVariableInput {
@@ -341,6 +389,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-vector-name-ref-list-variable) · [gRPC Contract](/api/grpc/variables#get-vector-name-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetVectorNameRefListVariableInput {
   readonly name?: string;
@@ -359,6 +409,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#get-vector-variable) · [gRPC Contract](/api/grpc/variables#get-vector-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetVectorVariableInput {
   readonly name?: string;
@@ -376,6 +428,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Boolean Variable {/* #set-boolean-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-boolean-variable) · [gRPC Contract](/api/grpc/variables#set-boolean-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetBooleanVariableInput {
@@ -396,6 +450,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-collection-object-name-variable) · [gRPC Contract](/api/grpc/variables#set-collection-object-name-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetCollectionObjectNameVariableInput {
   readonly name?: string;
@@ -414,6 +470,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Collection Object Ref List Variable {/* #set-collection-object-ref-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-collection-object-ref-list-variable) · [gRPC Contract](/api/grpc/variables#set-collection-object-ref-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetCollectionObjectRefListVariableInput {
@@ -434,6 +492,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-double-variable) · [gRPC Contract](/api/grpc/variables#set-double-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetDoubleVariableInput {
   readonly name?: string;
@@ -452,6 +512,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Font Variable {/* #set-font-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-font-variable) · [gRPC Contract](/api/grpc/variables#set-font-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetFontVariableInput {
@@ -472,6 +534,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-integer-variable) · [gRPC Contract](/api/grpc/variables#set-integer-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetIntegerVariableInput {
   readonly name?: string;
@@ -490,6 +554,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Named Double List Variable {/* #set-named-double-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-named-double-list-variable) · [gRPC Contract](/api/grpc/variables#set-named-double-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetNamedDoubleListVariableInput {
@@ -510,6 +576,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-point-name-ref-list-variable) · [gRPC Contract](/api/grpc/variables#set-point-name-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetPointNameRefListVariableInput {
   readonly name?: string;
@@ -528,6 +596,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Name Variable {/* #set-point-name-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-point-name-variable) · [gRPC Contract](/api/grpc/variables#set-point-name-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetPointNameVariableInput {
@@ -548,6 +618,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-relationship-ref-list-variable) · [gRPC Contract](/api/grpc/variables#set-relationship-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetRelationshipRefListVariableInput {
   readonly name?: string;
@@ -566,6 +638,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Report Items Reference List Variable {/* #set-report-items-reference-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-report-items-reference-list-variable) · [gRPC Contract](/api/grpc/variables#set-report-items-reference-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetReportItemsReferenceListVariableInput {
@@ -586,6 +660,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-string-ref-list-variable) · [gRPC Contract](/api/grpc/variables#set-string-ref-list-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetStringRefListVariableInput {
   readonly name?: string;
@@ -604,6 +680,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set String Variable {/* #set-string-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-string-variable) · [gRPC Contract](/api/grpc/variables#set-string-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetStringVariableInput {
@@ -624,6 +702,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-transform-variable) · [gRPC Contract](/api/grpc/variables#set-transform-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetTransformVariableInput {
   readonly name?: string;
@@ -642,6 +722,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector Name Ref List Variable {/* #set-vector-name-ref-list-variable */}
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-vector-name-ref-list-variable) · [gRPC Contract](/api/grpc/variables#set-vector-name-ref-list-variable)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface SetVectorNameRefListVariableInput {
@@ -662,6 +744,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/variables#set-vector-variable) · [gRPC Contract](/api/grpc/variables#set-vector-variable)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface SetVectorVariableInput {
   readonly name?: string;
@@ -677,4 +761,4 @@ export declare function setVectorVariable(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

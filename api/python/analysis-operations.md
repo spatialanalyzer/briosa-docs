@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/analysis-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Angle Between Line and Plane {/* #angle-between-line-and-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane) · [gRPC Contract](/api/grpc/analysis-operations#angle-between-line-and-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def angle_between_line_and_plane(
@@ -24,12 +26,13 @@ async def angle_between_line_and_plane(
         *,
         nominal_angle: float = 0.000000,
         angle_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -39,6 +42,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-lines) · [gRPC Contract](/api/grpc/analysis-operations#angle-between-two-lines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def angle_between_two_lines(
         self,
@@ -47,12 +52,13 @@ async def angle_between_two_lines(
         *,
         nominal_angle: float = 0.000000,
         angle_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -62,6 +68,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-two-planes-normals) · [gRPC Contract](/api/grpc/analysis-operations#angle-between-two-planes-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def angle_between_two_planes_normals(
         self,
@@ -70,12 +78,13 @@ async def angle_between_two_planes_normals(
         *,
         nominal_angle: float = 0.000000,
         angle_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -84,6 +93,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Best Fit Transformation - Group to Group {/* #best-fit-transformation---group-to-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group) · [gRPC Contract](/api/grpc/analysis-operations#best-fit-transformation---group-to-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def best_fit_transformation_group_to_group(
@@ -104,12 +117,13 @@ async def best_fit_transformation_group_to_group(
         lock_degrees_of_freedom: bool = False,
         generate_event: bool = False,
         file_path_for_csv_text_report: FileReference,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> BestFitTransformationGroupToGroupResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -121,11 +135,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#compute-group-to-group-orientation-rxryrz) · [gRPC Contract](/api/grpc/analysis-operations#compute-group-to-group-orientation-rxryrz)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def compute_group_to_group_orientation_rx_ry_rz(
         self,
         reference_group: CollectionObjectName,
         corresponding_group: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> ComputeGroupToGroupOrientationRxRyRzResult: ...
 ```
 
@@ -134,6 +152,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Point Uncertainty Cloud Point Sets {/* #create-point-uncertainty-cloud-point-sets */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets) · [gRPC Contract](/api/grpc/analysis-operations#create-point-uncertainty-cloud-point-sets)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_point_uncertainty_cloud_point_sets(
@@ -144,6 +164,7 @@ async def create_point_uncertainty_cloud_point_sets(
         uncertainty_reference_frame_mode: str = "With respect to WORLD",
         grouping_mode: str = "Group per point",
         point_set_mode: str = "Point clouds",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CreatePointUncertaintyCloudPointSetsResult: ...
 ```
 
@@ -153,12 +174,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-fields) · [gRPC Contract](/api/grpc/analysis-operations#create-point-uncertainty-fields)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def create_point_uncertainty_fields(
         self,
         point_name_list: Iterable[PointName],
         *,
         number_of_samples: int = 1000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -167,6 +191,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Fit Geometry to Point Group {/* #fit-geometry-to-point-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group) · [gRPC Contract](/api/grpc/analysis-operations#fit-geometry-to-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def fit_geometry_to_point_group(
@@ -179,22 +207,27 @@ async def fit_geometry_to_point_group(
         report_deviations: bool = False,
         fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane) · [gRPC Contract](/api/grpc/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def fit_geometry_to_point_group_projected_to_plane(
@@ -208,22 +241,27 @@ async def fit_geometry_to_point_group_projected_to_plane(
         report_deviations: bool = False,
         fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points) · [gRPC Contract](/api/grpc/analysis-operations#fit-geometry-to-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def fit_geometry_to_points(
@@ -236,27 +274,32 @@ async def fit_geometry_to_points(
         report_deviations: bool = False,
         fit_interface_tolerance: float = -1.000000,
         ignore_out_of_tolerance_points: bool = False,
-        starting_condition_geometry: CollectionObjectName,
+        starting_condition_geometry: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-b-spline-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_bspline_properties(
         self,
         b_spline_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetBSplinePropertiesResult: ...
 ```
 
@@ -266,10 +309,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-circle-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-circle-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_circle_properties(
         self,
         circle_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetCirclePropertiesResult: ...
 ```
 
@@ -279,16 +326,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cone-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-cone-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_cone_properties(
         self,
         cone_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetConePropertiesResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -299,12 +350,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-coordinate-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/analysis-operations#get-coordinate-for-i-th-point-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_coordinate_for_ith_point_in_point_set(
         self,
         point_set: CollectionObjectName,
         *,
         point_set_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetCoordinateForIthPointInPointSetResult: ...
 ```
 
@@ -314,10 +368,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-cylinder-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_cylinder_properties(
         self,
         cylinder_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetCylinderPropertiesResult: ...
 ```
 
@@ -327,10 +385,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-ellipse-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-ellipse-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_ellipse_properties(
         self,
         ellipse_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetEllipsePropertiesResult: ...
 ```
 
@@ -340,10 +402,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame) · [gRPC Contract](/api/grpc/analysis-operations#get-euler-parameters-for-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_euler_parameters_for_frame(
         self,
         frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetEulerParametersForFrameResult: ...
 ```
 
@@ -353,12 +419,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_euler_parameters_for_ith_frame_in_frame_set(
         self,
         frame_set: CollectionObjectName,
         *,
         frame_set_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetEulerParametersForIthFrameInFrameSetResult: ...
 ```
 
@@ -368,11 +437,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-collection-name) · [gRPC Contract](/api/grpc/analysis-operations#get-i-th-collection-name)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_ith_collection_name(
         self,
         *,
         collection_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -382,12 +454,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group) · [gRPC Contract](/api/grpc/analysis-operations#get-i-th-point-from-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_ith_point_from_group(
         self,
         group_name: CollectionObjectName,
         *,
         point_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetIthPointFromGroupResult: ...
 ```
 
@@ -397,10 +472,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-line-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-line-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_line_properties(
         self,
         line_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetLinePropertiesResult: ...
 ```
 
@@ -410,12 +489,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/analysis-operations#get-measurement-auxiliary-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_measurement_auxiliary_data(
         self,
         point_name: PointName,
         *,
         auxiliary_name: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetMeasurementAuxiliaryDataResult: ...
 ```
 
@@ -425,10 +507,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-info-data) · [gRPC Contract](/api/grpc/analysis-operations#get-measurement-info-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_measurement_info_data(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -438,16 +524,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data) · [gRPC Contract](/api/grpc/analysis-operations#get-measurement-weather-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_measurement_weather_data(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetMeasurementWeatherDataResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -459,8 +549,12 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-collections) · [gRPC Contract](/api/grpc/analysis-operations#get-number-of-collections)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
-async def get_number_of_collections(self) -> int: ...
+async def get_number_of_collections(
+        self, *, on_mp_completion: MpCompletionObserver | None = None
+    ) -> int: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -469,10 +563,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set) · [gRPC Contract](/api/grpc/analysis-operations#get-number-of-frames-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_number_of_frames_in_frame_set(
         self,
         frame_set_container: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -482,10 +580,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-group) · [gRPC Contract](/api/grpc/analysis-operations#get-number-of-points-in-group)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_number_of_points_in_group(
         self,
         group_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -495,10 +597,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set) · [gRPC Contract](/api/grpc/analysis-operations#get-number-of-points-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_number_of_points_in_point_set(
         self,
         point_set_container: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -508,10 +614,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-object-reporting-frame) · [gRPC Contract](/api/grpc/analysis-operations#get-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_object_reporting_frame(
         self,
         object_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -521,10 +631,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-plane-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-plane-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_plane_properties(
         self,
         plane_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPlanePropertiesResult: ...
 ```
 
@@ -534,10 +648,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate) · [gRPC Contract](/api/grpc/analysis-operations#get-point-coordinate)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_coordinate(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointCoordinateResult: ...
 ```
 
@@ -547,10 +665,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-cylindrical) · [gRPC Contract](/api/grpc/analysis-operations#get-point-coordinate-cylindrical)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_coordinate_cylindrical(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointCoordinateCylindricalResult: ...
 ```
 
@@ -560,10 +682,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate-polar) · [gRPC Contract](/api/grpc/analysis-operations#get-point-coordinate-polar)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_coordinate_polar(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointCoordinatePolarResult: ...
 ```
 
@@ -573,10 +699,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-point-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_properties(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointPropertiesResult: ...
 ```
 
@@ -586,11 +716,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-line-distance) · [gRPC Contract](/api/grpc/analysis-operations#get-point-to-line-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_to_line_distance(
         self,
         point: PointName,
         line: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointToLineDistanceResult: ...
 ```
 
@@ -600,11 +734,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-to-point-distance) · [gRPC Contract](/api/grpc/analysis-operations#get-point-to-point-distance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_to_point_distance(
         self,
         first_point: PointName,
         second_point: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointToPointDistanceResult: ...
 ```
 
@@ -614,10 +752,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-tolerance) · [gRPC Contract](/api/grpc/analysis-operations#get-point-tolerance)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_tolerance(
         self,
         point_name: PointName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPointToleranceResult: ...
 ```
 
@@ -627,16 +769,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-slot-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-slot-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_slot_properties(
         self,
         slot_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetSlotPropertiesResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -650,10 +796,14 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-sphere-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-sphere-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_sphere_properties(
         self,
         sphere_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetSpherePropertiesResult: ...
 ```
 
@@ -663,10 +813,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-surface-physical-stats) · [gRPC Contract](/api/grpc/analysis-operations#get-surface-physical-stats)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_surface_physical_stats(
         self,
         surface_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetSurfacePhysicalStatsResult: ...
 ```
 
@@ -676,12 +830,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_timestamp_for_ith_frame_in_frame_set(
         self,
         frame_set: CollectionObjectName,
         *,
         frame_set_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -691,12 +848,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-point-in-point-set) · [gRPC Contract](/api/grpc/analysis-operations#get-timestamp-for-i-th-point-in-point-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_timestamp_for_ith_point_in_point_set(
         self,
         point_set: CollectionObjectName,
         *,
         point_set_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -706,10 +866,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-torus-properties) · [gRPC Contract](/api/grpc/analysis-operations#get-torus-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_torus_properties(
         self,
         torus_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetTorusPropertiesResult: ...
 ```
 
@@ -719,12 +883,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/analysis-operations#get-transform-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_transform_for_ith_frame_in_frame_set(
         self,
         frame_set: CollectionObjectName,
         *,
         frame_set_index: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> Transform: ...
 ```
 
@@ -733,6 +900,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Group To Surface Fit {/* #group-to-surface-fit */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit) · [gRPC Contract](/api/grpc/analysis-operations#group-to-surface-fit)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def group_to_surface_fit(
@@ -743,12 +912,13 @@ async def group_to_surface_fit(
         do_conventional_fit: bool = False,
         rms_tolerance: float = 0.000000,
         maximum_absolute_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GroupToSurfaceFitResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -759,12 +929,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#import-geometry-fit-profiles) · [gRPC Contract](/api/grpc/analysis-operations#import-geometry-fit-profiles)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```python
 async def import_geometry_fit_profiles(
         self,
         geometry_fit_profiles_file_path: FileReference,
         *,
         overwrite_profiles_with_same_name: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -774,12 +947,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#is-object-of-type) · [gRPC Contract](/api/grpc/analysis-operations#is-object-of-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def is_object_of_type(
         self,
         object_name: CollectionObjectName,
         *,
         object_type: ObjectType = ObjectType.ANY,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> bool: ...
 ```
 
@@ -788,6 +964,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Circle Fit Profile {/* #make-circle-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-circle-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_circle_fit_profile(
@@ -805,12 +983,13 @@ async def make_circle_fit_profile(
         make_cardinal_points: bool = True,
         cardinal_pt_1_center: bool = True,
         cardinal_pt_2_point_on_normal: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -821,6 +1000,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cone Fit Profile {/* #make-cone-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cone-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cone-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_cone_fit_profile(
@@ -835,12 +1016,13 @@ async def make_cone_fit_profile(
         cardinal_pt_1_vertex: bool = True,
         cardinal_pt_2_point_on_axis: bool = True,
         cardinal_pt_3_cut_point_on_axis: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -850,6 +1032,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Cylinder Fit Profile {/* #make-cylinder-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-cylinder-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_cylinder_fit_profile(
@@ -871,12 +1055,13 @@ async def make_cylinder_fit_profile(
         cardinal_pt_1_begin_pt: bool = True,
         cardinal_pt_2_end_pt: bool = True,
         cardinal_pt_3_center: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -886,6 +1071,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Ellipse Fit Profile {/* #make-ellipse-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-ellipse-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-ellipse-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_ellipse_fit_profile(
@@ -903,12 +1090,13 @@ async def make_ellipse_fit_profile(
         cardinal_pt_2_point_on_normal: bool = True,
         cardinal_pt_3_focal_pt_1: bool = True,
         cardinal_pt_4_focal_pt_2: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -918,6 +1106,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Line Fit Profile {/* #make-line-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-line-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-line-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_line_fit_profile(
@@ -929,6 +1119,7 @@ async def make_line_fit_profile(
         cardinal_pt_1_point_a: bool = True,
         cardinal_pt_2_point_b: bool = True,
         cardinal_pt_3_mid_point: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -937,6 +1128,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Paraboloid Fit Profile {/* #make-paraboloid-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-paraboloid-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_paraboloid_fit_profile(
@@ -950,12 +1143,13 @@ async def make_paraboloid_fit_profile(
         make_cardinal_points: bool = True,
         cardinal_pt_1_vertex: bool = True,
         cardinal_pt_2_focal_point: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -965,6 +1159,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Plane Fit Profile {/* #make-plane-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-plane-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-plane-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_plane_fit_profile(
@@ -978,12 +1174,13 @@ async def make_plane_fit_profile(
         make_cardinal_points: bool = True,
         cardinal_pt_1_centroid: bool = True,
         cardinal_pt_2_point_on_normal: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -992,6 +1189,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Slot Fit Profile {/* #make-slot-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-slot-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_slot_fit_profile(
@@ -1011,12 +1210,13 @@ async def make_slot_fit_profile(
         cardinal_pt_2_point_on_normal: bool = True,
         cardinal_pt_3_centerline_pt_1: bool = True,
         cardinal_pt_4_centerline_pt_2: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1026,6 +1226,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Make Sphere Fit Profile {/* #make-sphere-fit-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-sphere-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#make-sphere-fit-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_sphere_fit_profile(
@@ -1038,12 +1240,13 @@ async def make_sphere_fit_profile(
         make_cardinal_points: bool = True,
         cardinal_pt_1_center: bool = True,
         computation_method: SphereFitComputationMode = SphereFitComputationMode.STANDARD,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1054,6 +1257,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#mushroom-target-hole-inspection) · [gRPC Contract](/api/grpc/analysis-operations#mushroom-target-hole-inspection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def mushroom_target_hole_inspection(
         self,
@@ -1063,6 +1268,7 @@ async def mushroom_target_hole_inspection(
         sphere_target_radius: float = 0.000000,
         target_contact_plane: CollectionObjectName,
         point_to_create_at_hole: PointName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> MushroomTargetHoleInspectionResult: ...
 ```
 
@@ -1072,6 +1278,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---hole--pin) · [gRPC Contract](/api/grpc/analysis-operations#patch-normal-shift---hole--pin)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def patch_normal_shift_hole_pin(
         self,
@@ -1080,6 +1288,7 @@ async def patch_normal_shift_hole_pin(
         resulting_point_name: PointName,
         *,
         additional_material_thickness: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1089,6 +1298,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#patch-normal-shift---point) · [gRPC Contract](/api/grpc/analysis-operations#patch-normal-shift---point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def patch_normal_shift_point(
         self,
@@ -1097,6 +1308,7 @@ async def patch_normal_shift_point(
         resulting_point_name: PointName,
         *,
         additional_material_thickness: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1105,6 +1317,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Clouds to Objects {/* #query-clouds-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-clouds-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def query_clouds_to_objects(
@@ -1118,12 +1332,13 @@ async def query_clouds_to_objects(
         skip_factor: int = 0,
         rms_tolerance: float = 0.000000,
         maximum_absolute_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryCloudsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1133,6 +1348,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Clouds to Surface {/* #query-clouds-to-surface */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-surface) · [gRPC Contract](/api/grpc/analysis-operations#query-clouds-to-surface)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def query_clouds_to_surface(
@@ -1146,12 +1363,13 @@ async def query_clouds_to_surface(
         skip_factor: int = 0,
         rms_tolerance: float = 0.000000,
         maximum_absolute_tolerance: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryCloudsToSurfaceResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1162,17 +1380,21 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-frame-to-frame) · [gRPC Contract](/api/grpc/analysis-operations#query-frame-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def query_frame_to_frame(
         self,
         reference_frame_name: CollectionObjectName,
         corresponding_frame_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryFrameToFrameResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1183,6 +1405,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Query Groups to Objects {/* #query-groups-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-groups-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_results_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def query_groups_to_objects(
@@ -1195,12 +1421,13 @@ async def query_groups_to_objects(
         rms_tolerance: float = 0.000000,
         maximum_absolute_tolerance: float = 0.000000,
         show_results_dialog: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryGroupsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1213,6 +1440,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-point-to-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def query_point_to_objects(
         self,
@@ -1220,6 +1449,7 @@ async def query_point_to_objects(
         objects: Iterable[CollectionObjectName],
         *,
         ignore_target_offset: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryPointToObjectsResult: ...
 ```
 
@@ -1229,12 +1459,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-point-to-point-along-curve) · [gRPC Contract](/api/grpc/analysis-operations#query-point-to-point-along-curve)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def query_point_to_point_along_curve(
         self,
         value_1st_point: PointName,
         value_2nd_point: PointName,
         curve: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -1243,6 +1477,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Points to Circle {/* #query-points-to-circle */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-circle) · [gRPC Contract](/api/grpc/analysis-operations#query-points-to-circle)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def query_points_to_circle(
@@ -1255,6 +1491,7 @@ async def query_points_to_circle(
         vector_group_name_for_radial: CollectionObjectName,
         vector_group_name_for_planar: CollectionObjectName,
         vector_group_name_for_combined: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1263,6 +1500,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Query Points to Objects {/* #query-points-to-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-objects) · [gRPC Contract](/api/grpc/analysis-operations#query-points-to-objects)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_results_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def query_points_to_objects(
@@ -1275,12 +1516,13 @@ async def query_points_to_objects(
         rms_tolerance: float = 0.000000,
         maximum_absolute_tolerance: float = 0.000000,
         show_results_dialog: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> QueryPointsToObjectsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1292,6 +1534,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-single-point) · [gRPC Contract](/api/grpc/analysis-operations#query-points-to-single-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_vector_properties` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def query_points_to_single_point(
         self,
@@ -1299,6 +1545,7 @@ async def query_points_to_single_point(
         single_point: PointName,
         *,
         show_vector_properties: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1308,6 +1555,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items) · [gRPC Contract](/api/grpc/analysis-operations#re-compute-calculated-items)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def re_compute_calculated_items(
         self,
@@ -1316,6 +1565,7 @@ async def re_compute_calculated_items(
         hidden_points: bool = False,
         relationships: bool = False,
         refresh_filtered_cloud_data: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1325,6 +1575,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points) · [gRPC Contract](/api/grpc/analysis-operations#rename-points-based-on-inter-point-distance-to-reference-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verify_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def rename_points_based_on_inter_point_distance_to_reference_points(
         self,
@@ -1333,6 +1587,7 @@ async def rename_points_based_on_inter_point_distance_to_reference_points(
         *,
         distance_threshold: float = 0.000000,
         verify_results: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1341,6 +1596,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Rename points based on proximity to reference points {/* #rename-points-based-on-proximity-to-reference-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points) · [gRPC Contract](/api/grpc/analysis-operations#rename-points-based-on-proximity-to-reference-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verify_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def rename_points_based_on_proximity_to_reference_points(
@@ -1351,6 +1610,7 @@ async def rename_points_based_on_proximity_to_reference_points(
         proximity_threshold: float = 0.000000,
         verify_results: bool = False,
         rename_all_proximate_points: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1360,10 +1620,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-b-splines) · [gRPC Contract](/api/grpc/analysis-operations#reverse-b-splines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def reverse_bsplines(
         self,
         b_spline_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1373,10 +1637,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals) · [gRPC Contract](/api/grpc/analysis-operations#reverse-plane-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def reverse_plane_normals(
         self,
         plane_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1386,10 +1654,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-surface-normals) · [gRPC Contract](/api/grpc/analysis-operations#reverse-surface-normals)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def reverse_surface_normals(
         self,
         surface_list: Iterable[CollectionObjectName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1399,6 +1671,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-circle-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-circle-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_circle_properties(
         self,
@@ -1407,6 +1681,7 @@ async def set_circle_properties(
         normal_direction: Vector,
         *,
         radius: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1415,6 +1690,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Cone Properties {/* #set-cone-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-cone-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-cone-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_cone_properties(
@@ -1428,12 +1705,13 @@ async def set_cone_properties(
         cone_theta_span: float = 0.000000,
         cone_included_angle: float = 0.000000,
         cut_length_from_apex: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1443,6 +1721,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Cylinder Properties {/* #set-cylinder-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-cylinder-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-cylinder-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_cylinder_properties(
@@ -1458,6 +1738,7 @@ async def set_cylinder_properties(
         enable_theta_extent_display_mode: bool = True,
         theta_start_in_degrees: float = 0.000000,
         theta_span_in_degrees: float = 360.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1467,11 +1748,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-default-colorization-options) · [gRPC Contract](/api/grpc/analysis-operations#set-default-colorization-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_default_colorization_options(
         self,
         *,
         colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1480,6 +1764,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Ellipse Properties {/* #set-ellipse-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-ellipse-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_ellipse_properties(
@@ -1490,6 +1776,7 @@ async def set_ellipse_properties(
         *,
         major_axis_radius: float = 0.000000,
         minor_axis_radius: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1499,6 +1786,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-geometry-relationship-fit-profile) · [gRPC Contract](/api/grpc/analysis-operations#set-geometry-relationship-fit-profile)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geometry_relationship_fit_profile(
         self,
@@ -1507,6 +1796,7 @@ async def set_geometry_relationship_fit_profile(
         *,
         fit_profile_name: str = "",
         apply_cardinal_point_settings: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1516,6 +1806,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-line-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-line-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_line_properties(
         self,
@@ -1524,12 +1816,13 @@ async def set_line_properties(
         end_coordinate: Vector,
         *,
         length: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1539,6 +1832,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-measurement-auxiliary-data) · [gRPC Contract](/api/grpc/analysis-operations#set-measurement-auxiliary-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_measurement_auxiliary_data(
         self,
@@ -1547,6 +1842,7 @@ async def set_measurement_auxiliary_data(
         auxiliary_name: str = "",
         value: float = 0.000000,
         units: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1556,11 +1852,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-object-reporting-frame) · [gRPC Contract](/api/grpc/analysis-operations#set-object-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_object_reporting_frame(
         self,
         object_name: CollectionObjectName,
         reporting_frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1569,6 +1869,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Properties {/* #set-point-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-properties) · [gRPC Contract](/api/grpc/analysis-operations#set-point-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_point_properties(
@@ -1579,6 +1881,7 @@ async def set_point_properties(
         radial_offset: float = 0.000000,
         position_tolerance: ToleranceVectorOptions,
         component_weights: Vector,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1587,6 +1890,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Point Weights From Uncertainties {/* #set-point-weights-from-uncertainties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties) · [gRPC Contract](/api/grpc/analysis-operations#set-point-weights-from-uncertainties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_point_weights_from_uncertainties(
@@ -1598,6 +1903,7 @@ async def set_point_weights_from_uncertainties(
         weight_normalization_mode: str = "Set to fixed value",
         fixed_weight_value: float = 1.000000,
         output_weighted_point_group: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[PointName]: ...
 ```
 
@@ -1607,6 +1913,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-transform-for-i-th-frame-in-frame-set) · [gRPC Contract](/api/grpc/analysis-operations#set-transform-for-i-th-frame-in-frame-set)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_transform_for_ith_frame_in_frame_set(
         self,
@@ -1614,6 +1922,7 @@ async def set_transform_for_ith_frame_in_frame_set(
         *,
         frame_set_index: int = 0,
         transform_in_working: Transform,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1623,6 +1932,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#sphere-axis-check) · [gRPC Contract](/api/grpc/analysis-operations#sphere-axis-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def sphere_axis_check(
         self,
@@ -1631,6 +1942,7 @@ async def sphere_axis_check(
         sphere_target_radius: float = 0.000000,
         point_to_create_at_sphere_center: PointName,
         line_defining_the_axis: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> SphereAxisCheckResult: ...
 ```
 
@@ -1639,6 +1951,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Temperature Compensate a group {/* #temperature-compensate-a-group */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#temperature-compensate-a-group) · [gRPC Contract](/api/grpc/analysis-operations#temperature-compensate-a-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def temperature_compensate_a_group(
@@ -1650,12 +1964,13 @@ async def temperature_compensate_a_group(
         initial_temperature: float = 0.000000,
         final_temperature: float = 0.000000,
         scaled_group_name: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1668,6 +1983,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects---frame-to-frame) · [gRPC Contract](/api/grpc/analysis-operations#transform-objects---frame-to-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def transform_objects_frame_to_frame(
         self,
@@ -1676,6 +1993,7 @@ async def transform_objects_frame_to_frame(
         destination_frame_name: CollectionObjectName,
         *,
         number_of_steps: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1685,11 +2003,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-about-working-frame) · [gRPC Contract](/api/grpc/analysis-operations#transform-objects-by-delta-about-working-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def transform_objects_by_delta_about_working_frame(
         self,
         objects_to_transform: Iterable[CollectionObjectName],
         delta_transform: Transform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1699,11 +2021,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator) · [gRPC Contract](/api/grpc/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def transform_objects_by_delta_world_transform_operator(
         self,
         objects_to_transform: Iterable[CollectionObjectName],
         delta_transform: WorldTransform,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1713,14 +2039,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#translate-objects-by-delta) · [gRPC Contract](/api/grpc/analysis-operations#translate-objects-by-delta)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def translate_objects_by_delta(
         self,
         objects_to_translate: Iterable[CollectionObjectName],
         delta_translation: Vector,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2026.1.0529.7)

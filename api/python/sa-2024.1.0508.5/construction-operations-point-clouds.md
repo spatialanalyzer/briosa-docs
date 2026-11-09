@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Point Clouds
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,19 +8,23 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-point-clouds) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-point-clouds)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Point Clouds from Existing Point Group {/* #construct-point-clouds-from-existing-point-group */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_point_clouds_from_existing_point_group(
         self,
         point_group_name: CollectionObjectName,
         cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -30,10 +34,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def construct_point_clouds_from_existing_cloud_points_runtime_select(
         self,
         cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -42,6 +50,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Clouds from Existing Clouds - Uniform Spacing {/* #construct-point-clouds-from-existing-clouds---uniform-spacing */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_point_clouds_from_existing_clouds_uniform_spacing(
@@ -52,6 +62,7 @@ async def construct_point_clouds_from_existing_clouds_uniform_spacing(
         desired_point_spacing: float = 0.02,
         minimum_points_per_output_point: int = 3,
         hide_original_point_clouds: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -61,6 +72,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_point_cloud_from_existing_clouds(
         self,
@@ -69,6 +82,7 @@ async def construct_point_cloud_from_existing_clouds(
         *,
         cloud_thinning_settings: CloudThinningOptions | None = None,
         hide_original_point_clouds: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -78,11 +92,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_point_cloud_from_visible_cloud_points(
         self,
         source_clouds: Iterable[CollectionObjectName],
         destination_cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -92,11 +110,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-boundary-points-from-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-boundary-points-from-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_boundary_points_from_cloud(
         self,
         source_cloud_name: CollectionObjectName,
         destination_cloud_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -105,6 +127,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Cloud Limiting Probing Directions {/* #construct-point-cloud-limiting-probing-directions */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_point_cloud_limiting_probing_directions(
@@ -115,6 +139,7 @@ async def construct_point_cloud_limiting_probing_directions(
         *,
         acceptance_angle: float = 30.0,
         hide_source_cloud: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -123,6 +148,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Cross Section Cloud {/* #construct-cross-section-cloud */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-cross-section-cloud)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 ```python
 async def construct_cross_section_cloud(
@@ -138,9 +165,10 @@ async def construct_cross_section_cloud(
         limit_cross_section_extent: bool = False,
         radius_limit: float = 0.0,
         project_to_reference_surface: bool = False,
-        reference_object: CollectionObjectName | None = None,
+        reference_object: CollectionObjectName,
         cloud_thinning_settings: CloudThinningOptions | None = None,
         update_existing_cloud: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -149,6 +177,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Cross Section Cloud - User Select {/* #construct-cross-section-cloud---user-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud---user-select) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#construct-cross-section-cloud---user-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `destructive`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```python
 async def construct_cross_section_cloud_user_select(
@@ -163,6 +193,7 @@ async def construct_cross_section_cloud_user_select(
         project_to_reference_surface: bool = False,
         cloud_thinning_settings: CloudThinningOptions | None = None,
         update_existing_cloud: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -171,6 +202,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Extract Sphere Centers from Point Cloud {/* #extract-sphere-centers-from-point-cloud */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def extract_sphere_centers_from_point_cloud(
@@ -183,6 +216,7 @@ async def extract_sphere_centers_from_point_cloud(
         minimum_point_count: int = 50,
         perform_final_fit: bool = True,
         final_fit_cone_angle: float = 120.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -200,4 +234,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: GDT Operations / GDT Analysis
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,18 +8,22 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/gdt-analysis) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/gdt-analysis)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Get Feature Check Datum References {/* #get-feature-check-datum-references */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-datum-references) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-datum-references)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_feature_check_datum_references(
         self,
         feature_check: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> FeatureCheckDatumReferencesResult: ...
 ```
 
@@ -29,10 +33,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-datum-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_datum_measurements(
         self,
         datum: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GdtMeasurements: ...
 ```
 
@@ -42,6 +50,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-datum-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-datum-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def set_datum_measurements(
         self,
@@ -50,6 +60,7 @@ async def set_datum_measurements(
         cloud_names: Iterable[CollectionObjectName],
         *,
         replace_existing_measurements: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -59,10 +70,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_feature_check_measurements(
         self,
         feature_check: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GdtMeasurements: ...
 ```
 
@@ -72,6 +87,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-measurements) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-measurements)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def set_feature_check_measurements(
         self,
@@ -80,6 +97,7 @@ async def set_feature_check_measurements(
         cloud_names: Iterable[CollectionObjectName],
         *,
         replace_existing_measurements: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -89,10 +107,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-cylinder-eval-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-cylinder-eval-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_feature_check_cylinder_eval_options(
         self,
         feature_check: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> FeatureCheckCylinderEvalOptions: ...
 ```
 
@@ -102,6 +124,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-cylinder-eval-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-cylinder-eval-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_feature_check_cylinder_eval_options(
         self,
@@ -109,6 +133,7 @@ async def set_feature_check_cylinder_eval_options(
         *,
         enable_actual_diameter_override: bool = False,
         actual_diameter_override: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -118,22 +143,25 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#feature-inspection-auto-filter) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#feature-inspection-auto-filter)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def feature_inspection_auto_filter(
         self,
+        point_names: Iterable[PointName],
+        group_names: Iterable[CollectionObjectName],
+        cloud_names: Iterable[CollectionObjectName],
         *,
-        point_names: Iterable[PointName] | None = None,
-        group_names: Iterable[CollectionObjectName] | None = None,
-        cloud_names: Iterable[CollectionObjectName] | None = None,
         surface_offset: float = 0.1,
         edge_offset: float = 0.1,
-        offset_direction: OffsetDirectionType = OffsetDirectionType.BOTH,
+        offset_direction: OffsetDirectionType,
         include_points_within_cylinder_axis_proximity: bool = False,
         enforce_max_points_per_face_in_output: bool = False,
         max_points_per_face: int = 0,
-        feature_check_name_list: Iterable[CollectionItemName] | None = None,
+        feature_check_name_list: Iterable[CollectionItemName],
         include_datums: bool = True,
         create_cloud_for_each_datum_or_check: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -143,11 +171,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-global-force-simultaneous-evaluation) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-global-force-simultaneous-evaluation)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_global_force_simultaneous_evaluation(
         self,
         *,
         global_simultaneous_evaluation: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -157,6 +188,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def evaluate_feature_check(
         self,
@@ -164,6 +197,7 @@ async def evaluate_feature_check(
         *,
         perform_evaluation: bool = True,
         simultaneous_evaluation: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EvaluateFeatureCheckResult: ...
 ```
 
@@ -173,6 +207,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-checks) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#evaluate-feature-checks)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def evaluate_feature_checks(
         self,
@@ -180,6 +216,7 @@ async def evaluate_feature_checks(
         *,
         simultaneous_evaluation: bool = False,
         restrict_evaluations_to_listed_checks: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> EvaluateFeatureChecksResult: ...
 ```
 
@@ -189,12 +226,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#generate-feature-check-summary) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#generate-feature-check-summary)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def generate_feature_check_summary(
         self,
         feature_check_list: Iterable[CollectionItemName],
         *,
         summary_table_name: str = "GDT Feature Check Summary",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -204,6 +244,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#startstop-feature-check-trapping) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#startstop-feature-check-trapping)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def start_stop_feature_check_trapping(
         self,
@@ -211,6 +253,7 @@ async def start_stop_feature_check_trapping(
         instrument_id: CollectionInstrumentId,
         *,
         start_trapping: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -220,6 +263,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#enabledisable-datum-alignment-for-feature-check) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#enabledisable-datum-alignment-for-feature-check)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def enable_disable_datum_alignment_for_feature_check(
         self,
@@ -228,7 +273,8 @@ async def enable_disable_datum_alignment_for_feature_check(
         enable_datum_alignment: bool = True,
         enable_custom_initial_alignment: bool = False,
         enable_initial_datum_alignment: bool = True,
-        alignment: CollectionItemName | None = None,
+        alignment: CollectionItemName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -238,6 +284,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#datum-alignment) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#datum-alignment)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def datum_alignment(
         self,
@@ -246,6 +294,7 @@ async def datum_alignment(
         instruments_to_move: Iterable[CollectionInstrumentId],
         *,
         apply_feature_check_transform: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -255,9 +304,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-gdt-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-gdt-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_gdt_options(
         self,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GdtOptions: ...
 ```
 
@@ -267,6 +320,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-gdt-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-gdt-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_gdt_options(
         self,
@@ -274,12 +329,13 @@ async def set_gdt_options(
         use_high_points: bool = False,
         extrapolate_axial_extent: bool = True,
         exclude_from_auto_evaluation: bool = True,
-        distance_between_mode: GdtDistanceBetweenMode = GdtDistanceBetweenMode.CENTROID,
-        evaluation_method: GdtEvaluationMethod = GdtEvaluationMethod.NONE,
+        distance_between_mode: GdtDistanceBetweenMode,
+        evaluation_method: GdtEvaluationMethod,
         create_actual_features: bool = False,
         create_solved_points: bool = False,
         cross_section_criteria: float = 0.039370,
         enable_auto_feature_detection: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -289,10 +345,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#refresh-datumsfeature-checks-from-annotations) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#refresh-datumsfeature-checks-from-annotations)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def refresh_datums_feature_checks_from_annotations(
         self,
         collection: CollectionName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -302,11 +362,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_feature_check_reporting_frame(
         self,
         feature_check: CollectionItemName,
         reporting_frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -316,10 +380,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_feature_check_reporting_frame(
         self,
         feature_check: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -328,6 +396,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Feature Check Reporting Options {/* #set-feature-check-reporting-options */}
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#set-feature-check-reporting-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_feature_check_reporting_options(
@@ -340,6 +410,7 @@ async def set_feature_check_reporting_options(
         show_feature_summary: bool = False,
         show_point_details_summary: bool = False,
         show_lower_tier_tables: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -349,10 +420,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-options) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/gdt-analysis#get-feature-check-reporting-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_feature_check_reporting_options(
         self,
         feature_check: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> FeatureCheckReportingOptions: ...
 ```
 
@@ -382,4 +457,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

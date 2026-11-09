@@ -1,6 +1,6 @@
 ---
 title: File Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/file-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/file-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Backup Now {/* #backup-now */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#backup-now) · [gRPC Contract](/api/grpc/file-operations#backup-now)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 ```ts
 export declare function backupNow(
@@ -28,6 +30,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Copy General File {/* #copy-general-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#copy-general-file) · [gRPC Contract](/api/grpc/file-operations#copy-general-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface CopyGeneralFileInput {
@@ -49,6 +53,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#delete-general-file) · [gRPC Contract](/api/grpc/file-operations#delete-general-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_delete`, `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteGeneralFileInput {
   readonly fileName: FileReference;
@@ -66,6 +72,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Direct CAD Access {/* #direct-cad-access */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#direct-cad-access) · [gRPC Contract](/api/grpc/file-operations#direct-cad-access)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `promptOnMissingComponents` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `selectiveImport` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface DirectCadAccessInput {
@@ -110,16 +122,19 @@ export declare function directCadAccess(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
 | `surfaceNormalsMode` | MP qualifier: 1 or 2. |
+| `promptOnMissingComponents` | Defaults to false (major 3). |
 | `cadFileUnits` | An empty value uses the units specified in the file. |
 
 ## Export ASCII Frame Set {/* #export-ascii-frame-set */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-frame-set) · [gRPC Contract](/api/grpc/file-operations#export-ascii-frame-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportAsciiFrameSetInput {
@@ -145,6 +160,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-frames) · [gRPC Contract](/api/grpc/file-operations#export-ascii-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportAsciiFramesInput {
   readonly asciiFilePath: FileReference;
@@ -165,6 +182,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export ASCII Point Clouds {/* #export-ascii-point-clouds */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-clouds) · [gRPC Contract](/api/grpc/file-operations#export-ascii-point-clouds)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportAsciiPointCloudsInput {
@@ -189,6 +208,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export ASCII Point Set {/* #export-ascii-point-set */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-point-set) · [gRPC Contract](/api/grpc/file-operations#export-ascii-point-set)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportAsciiPointSetInput {
@@ -216,7 +237,7 @@ export declare function exportAsciiPointSet(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -225,6 +246,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Export ASCII Points {/* #export-ascii-points */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ascii-points) · [gRPC Contract](/api/grpc/file-operations#export-ascii-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportAsciiPointsInput {
@@ -257,7 +280,7 @@ export declare function exportAsciiPoints(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -266,6 +289,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Export DXF {/* #export-dxf */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-dxf) · [gRPC Contract](/api/grpc/file-operations#export-dxf)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportDxfInput {
@@ -288,6 +313,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-embedded-file) · [gRPC Contract](/api/grpc/file-operations#export-embedded-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportEmbeddedFileInput {
   readonly embeddedFileCollectionName: CollectionName;
@@ -309,6 +336,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-hidden-point-bar-xml-file) · [gRPC Contract](/api/grpc/file-operations#export-hidden-point-bar-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportHiddenPointBarXmlFileInput {
   readonly xmlFilePath: FileReference;
@@ -326,6 +355,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export IGES File  - Entire Model {/* #export-iges-file----entire-model */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-iges-file----entire-model) · [gRPC Contract](/api/grpc/file-operations#export-iges-file----entire-model)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportIgesFileEntireModelInput {
@@ -345,6 +376,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-iges-file---partial-model) · [gRPC Contract](/api/grpc/file-operations#export-iges-file---partial-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportIgesFilePartialModelInput {
   readonly igesFilePath: FileReference;
@@ -363,6 +396,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export PTX Point Clouds {/* #export-ptx-point-clouds */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-ptx-point-clouds) · [gRPC Contract](/api/grpc/file-operations#export-ptx-point-clouds)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportPtxPointCloudsInput {
@@ -385,6 +420,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-qdas-characteristics) · [gRPC Contract](/api/grpc/file-operations#export-qdas-characteristics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportQdasCharacteristicsInput {
   readonly qdasExportFilePath: FileReference;
@@ -398,7 +435,7 @@ export interface ExportQdasCharacteristicsInput {
   readonly k0006BatchNumber?: string;
   readonly k0014PartId?: string;
   readonly k0053OrderNumber?: string;
-  readonly k0004DateTimeStamp?: string;
+  readonly k0004DateTimeStamp: string;
   readonly k0008OperatorIdentifier?: number;
   readonly k0010MachineIdentifier?: number;
   readonly k0012GageIdentifier?: number;
@@ -420,6 +457,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-qdas-data-list) · [gRPC Contract](/api/grpc/file-operations#export-qdas-data-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportQdasDataListInput {
   readonly qdasExportFilePath: FileReference;
@@ -437,6 +476,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export Scan Stripe Mesh to STL File {/* #export-scan-stripe-mesh-to-stl-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-scan-stripe-mesh-to-stl-file) · [gRPC Contract](/api/grpc/file-operations#export-scan-stripe-mesh-to-stl-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportScanStripeMeshToStlFileInput {
@@ -457,6 +498,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-step-file---entire-model) · [gRPC Contract](/api/grpc/file-operations#export-step-file---entire-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportStepFileEntireModelInput {
   readonly stepFilePath: FileReference;
@@ -474,6 +517,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export STEP File - Partial Model {/* #export-step-file---partial-model */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-step-file---partial-model) · [gRPC Contract](/api/grpc/file-operations#export-step-file---partial-model)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportStepFilePartialModelInput {
@@ -494,6 +539,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vdafs-file----entire-model) · [gRPC Contract](/api/grpc/file-operations#export-vdafs-file----entire-model)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportVdaFsFileEntireModelInput {
   readonly vdaFsFilePath: FileReference;
@@ -511,6 +558,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Export VDA/FS File - Partial Model {/* #export-vdafs-file---partial-model */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vdafs-file---partial-model) · [gRPC Contract](/api/grpc/file-operations#export-vdafs-file---partial-model)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface ExportVdaFsFilePartialModelInput {
@@ -531,6 +580,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#export-vector-container-to-ascii-file) · [gRPC Contract](/api/grpc/file-operations#export-vector-container-to-ascii-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface ExportVectorContainerToAsciiFileInput {
   readonly asciiFilePath: FileReference;
@@ -550,7 +601,7 @@ export declare function exportVectorContainerToAsciiFile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -560,6 +611,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Find Files in Directory {/* #find-files-in-directory */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#find-files-in-directory) · [gRPC Contract](/api/grpc/file-operations#find-files-in-directory)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
 
 ```ts
 export interface FindFilesInDirectoryInput {
@@ -581,6 +634,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#find-sub-directories-in-directory) · [gRPC Contract](/api/grpc/file-operations#find-sub-directories-in-directory)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```ts
 export interface FindSubDirectoriesInDirectoryInput {
   readonly directory?: string;
@@ -599,6 +654,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Boolean From DataShare File {/* #get-boolean-from-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-boolean-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-boolean-from-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface GetBooleanFromDataShareFileInput {
@@ -619,6 +676,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-double-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-double-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface GetDoubleFromDataShareFileInput {
   readonly dataShareFilePath: FileReference;
@@ -637,6 +696,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Integer From DataShare File {/* #get-integer-from-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-integer-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-integer-from-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface GetIntegerFromDataShareFileInput {
@@ -657,6 +718,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-qdas-catalog-entries) · [gRPC Contract](/api/grpc/file-operations#get-qdas-catalog-entries)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface GetQdasCatalogEntriesInput {
   readonly kFieldTarget?: string;
@@ -674,6 +737,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get String From DataShare File {/* #get-string-from-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-string-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-string-from-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface GetStringFromDataShareFileInput {
@@ -694,6 +759,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-transform-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-transform-from-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface GetTransformFromDataShareFileInput {
   readonly dataShareFilePath: FileReference;
@@ -712,6 +779,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Vector From DataShare File {/* #get-vector-from-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-vector-from-datashare-file) · [gRPC Contract](/api/grpc/file-operations#get-vector-from-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface GetVectorFromDataShareFileInput {
@@ -732,14 +801,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#get-working-directory) · [gRPC Contract](/api/grpc/file-operations#get-working-directory)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```ts
-// Member of BriosaClient
-interface BriosaClient {
-  getWorkingDirectory(
-    timeoutMs: number | null,
-    signal?: AbortSignal,
-  ): Promise<string>;
-}
+export declare function getWorkingDirectory(
+  client: BriosaClient,
+  options?: BriosaCallOptions,
+): Promise<string>;
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
@@ -747,6 +815,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import ASCII: Predefined Formats {/* #import-ascii-predefined-formats */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-ascii-predefined-formats) · [gRPC Contract](/api/grpc/file-operations#import-ascii-predefined-formats)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportAsciiPredefinedFormatsInput {
@@ -773,6 +843,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-ascii-predefined-frame-set-formats) · [gRPC Contract](/api/grpc/file-operations#import-ascii-predefined-frame-set-formats)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportAsciiPredefinedFrameSetFormatsInput {
   readonly asciiFilePath: FileReference;
@@ -795,6 +867,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import E57 File {/* #import-e57-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-e57-file) · [gRPC Contract](/api/grpc/file-operations#import-e57-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `automaticallyCloseConverter` to false also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface ImportE57FileInput {
@@ -820,6 +896,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-file-as-embedded-file) · [gRPC Contract](/api/grpc/file-operations#import-file-as-embedded-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportFileAsEmbeddedFileInput {
   readonly externalFileName: FileReference;
@@ -838,6 +916,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import File as Picture {/* #import-file-as-picture */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-file-as-picture) · [gRPC Contract](/api/grpc/file-operations#import-file-as-picture)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportFileAsPictureInput {
@@ -858,6 +938,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-hidden-point-bar-xml-file) · [gRPC Contract](/api/grpc/file-operations#import-hidden-point-bar-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportHiddenPointBarXmlFileInput {
   readonly xmlFilePath: FileReference;
@@ -877,6 +959,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-iges-file) · [gRPC Contract](/api/grpc/file-operations#import-iges-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportIgesFileInput {
   readonly igesFilePath: FileReference;
@@ -894,6 +978,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import Leica GSI File {/* #import-leica-gsi-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-leica-gsi-file) · [gRPC Contract](/api/grpc/file-operations#import-leica-gsi-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportLeicaGsiFileInput {
@@ -915,6 +1001,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-leica-sdb-file) · [gRPC Contract](/api/grpc/file-operations#import-leica-sdb-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportLeicaSdbFileInput {
   readonly instrumentId: CollectionInstrumentId;
@@ -935,6 +1023,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-mp-file-as-embedded-mp) · [gRPC Contract](/api/grpc/file-operations#import-mp-file-as-embedded-mp)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportMpFileAsEmbeddedMpInput {
   readonly externalMpFileName: FileReference;
@@ -954,6 +1044,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-nominals-from-xml-file) · [gRPC Contract](/api/grpc/file-operations#import-nominals-from-xml-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportNominalsFromXmlFileInput {
   readonly filePath: FileReference;
@@ -971,6 +1063,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import Polyworks File {/* #import-polyworks-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-polyworks-file) · [gRPC Contract](/api/grpc/file-operations#import-polyworks-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `long_running`
 
 ```ts
 export interface ImportPolyworksFileInput {
@@ -991,6 +1085,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-qdas-catalog-file) · [gRPC Contract](/api/grpc/file-operations#import-qdas-catalog-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportQdasCatalogFileInput {
   readonly qdasDfdFilePath: FileReference;
@@ -1009,6 +1105,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sa-file) · [gRPC Contract](/api/grpc/file-operations#import-sa-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `allowOperatorSelections` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```ts
 export interface ImportSaFileInput {
   readonly saFileName: FileReference;
@@ -1025,7 +1125,7 @@ export declare function importSaFile(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1034,6 +1134,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Import SA Windows Placement {/* #import-sa-windows-placement */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sa-windows-placement) · [gRPC Contract](/api/grpc/file-operations#import-sa-windows-placement)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportSaWindowsPlacementInput {
@@ -1053,6 +1155,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-sat-file) · [gRPC Contract](/api/grpc/file-operations#import-sat-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportSatFileInput {
   readonly satFilePath: FileReference;
@@ -1070,6 +1174,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import STEP File {/* #import-step-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-step-file) · [gRPC Contract](/api/grpc/file-operations#import-step-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `displayEntityFilters` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
+A request that sets `displayResiduals` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```ts
 export interface ImportStepFileInput {
@@ -1090,6 +1200,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import STL File {/* #import-stl-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-stl-file) · [gRPC Contract](/api/grpc/file-operations#import-stl-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportStlFileInput {
@@ -1112,6 +1224,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vdafs-file) · [gRPC Contract](/api/grpc/file-operations#import-vdafs-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportVdaFsFileInput {
   readonly vdaFsFilePath: FileReference;
@@ -1129,6 +1243,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Import VSTARS .xyz File {/* #import-vstars-xyz-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vstars-xyz-file) · [gRPC Contract](/api/grpc/file-operations#import-vstars-xyz-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface ImportVstarsXyzFileInput {
@@ -1148,6 +1264,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#import-vstars-cameras) · [gRPC Contract](/api/grpc/file-operations#import-vstars-cameras)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 ```ts
 export interface ImportVstarsCamerasInput {
   readonly filePath: FileReference;
@@ -1165,6 +1283,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Load HTML Form {/* #load-html-form */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#load-html-form) · [gRPC Contract](/api/grpc/file-operations#load-html-form)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface LoadHtmlFormInput {
@@ -1192,6 +1312,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#load-html-form-in-edge-browser) · [gRPC Contract](/api/grpc/file-operations#load-html-form-in-edge-browser)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `filesystem_write`, `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface LoadHtmlFormInEdgeBrowserInput {
   readonly inputHtmlFormPath: FileReference;
@@ -1215,6 +1337,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#make-embedded-file-name-list) · [gRPC Contract](/api/grpc/file-operations#make-embedded-file-name-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface MakeEmbeddedFileNameListInput {
   readonly collectionWildcardCriteria?: string;
@@ -1233,6 +1357,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Merge Measurements into XML File {/* #merge-measurements-into-xml-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#merge-measurements-into-xml-file) · [gRPC Contract](/api/grpc/file-operations#merge-measurements-into-xml-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface MergeMeasurementsIntoXmlFileInput {
@@ -1253,6 +1379,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#new-sa-file) · [gRPC Contract](/api/grpc/file-operations#new-sa-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export declare function newSaFile(
   briosa: BriosaClient,
@@ -1265,6 +1393,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Open SA File {/* #open-sa-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#open-sa-file) · [gRPC Contract](/api/grpc/file-operations#open-sa-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `long_running`
 
 ```ts
 export interface OpenSaFileInput {
@@ -1284,6 +1414,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#open-template-file) · [gRPC Contract](/api/grpc/file-operations#open-template-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface OpenTemplateFileInput {
   readonly templateFileName: FileReference;
@@ -1301,6 +1433,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Pop PolyBay Analysis Window {/* #pop-polybay-analysis-window */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#pop-polybay-analysis-window) · [gRPC Contract](/api/grpc/file-operations#pop-polybay-analysis-window)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface PopPolyBayAnalysisWindowInput {
@@ -1321,6 +1455,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#prepare-qdas-data-list) · [gRPC Contract](/api/grpc/file-operations#prepare-qdas-data-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface PrepareQdasDataListInput {
   readonly k1001PartNumber?: string;
@@ -1333,7 +1469,7 @@ export interface PrepareQdasDataListInput {
   readonly k0006BatchNumber?: string;
   readonly k0014PartId?: string;
   readonly k0053OrderNumber?: string;
-  readonly k0004DateTimeStamp?: string;
+  readonly k0004DateTimeStamp: string;
   readonly k0008OperatorIdentifier?: number;
   readonly k0010MachineIdentifier?: number;
   readonly k0012GageIdentifier?: number;
@@ -1355,6 +1491,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#rename-general-file) · [gRPC Contract](/api/grpc/file-operations#rename-general-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `filesystem_read`, `filesystem_write`, `filesystem_delete` · **Duration Class:** `quick`
+
 ```ts
 export interface RenameGeneralFileInput {
   readonly sourceFileName: FileReference;
@@ -1375,6 +1513,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save) · [gRPC Contract](/api/grpc/file-operations#save)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
 ```ts
 export declare function save(
   briosa: BriosaClient,
@@ -1387,6 +1527,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Save As Read-Only Template {/* #save-as-read-only-template */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as-read-only-template) · [gRPC Contract](/api/grpc/file-operations#save-as-read-only-template)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface SaveAsReadOnlyTemplateInput {
@@ -1405,6 +1547,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Save As... {/* #save-as */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#save-as) · [gRPC Contract](/api/grpc/file-operations#save-as)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 ```ts
 export interface SaveAsInput {
@@ -1426,6 +1570,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-boolean-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-boolean-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface SetBooleanInDataShareFileInput {
   readonly dataShareFilePath: FileReference;
@@ -1445,6 +1591,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Double In DataShare File {/* #set-double-in-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-double-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-double-in-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface SetDoubleInDataShareFileInput {
@@ -1466,6 +1614,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-integer-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-integer-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface SetIntegerInDataShareFileInput {
   readonly dataShareFilePath: FileReference;
@@ -1485,6 +1635,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set String In DataShare File {/* #set-string-in-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-string-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-string-in-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface SetStringInDataShareFileInput {
@@ -1506,6 +1658,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-transform-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-transform-in-datashare-file)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 ```ts
 export interface SetTransformInDataShareFileInput {
   readonly dataShareFilePath: FileReference;
@@ -1525,6 +1679,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector In DataShare File {/* #set-vector-in-datashare-file */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#set-vector-in-datashare-file) · [gRPC Contract](/api/grpc/file-operations#set-vector-in-datashare-file)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 ```ts
 export interface SetVectorInDataShareFileInput {
@@ -1546,6 +1702,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#terminate-all-running-mps) · [gRPC Contract](/api/grpc/file-operations#terminate-all-running-mps)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `destructive`, `code_execution` · **Duration Class:** `quick`
+
 ```ts
 export declare function terminateAllRunningMPs(
   briosa: BriosaClient,
@@ -1558,6 +1716,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Use NRKXML Library {/* #use-nrkxml-library */}
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#use-nrkxml-library) · [gRPC Contract](/api/grpc/file-operations#use-nrkxml-library)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 ```ts
 export interface UseNrkxmlLibraryInput {
@@ -1577,6 +1737,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#verify-general-file-exists) · [gRPC Contract](/api/grpc/file-operations#verify-general-file-exists)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```ts
 export interface VerifyGeneralFileExistsInput {
   readonly fileName: FileReference;
@@ -1595,6 +1757,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/file-operations#verify-mp-file-exists) · [gRPC Contract](/api/grpc/file-operations#verify-mp-file-exists)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** `filesystem_metadata` · **Duration Class:** `quick`
+
 ```ts
 export interface VerifyMpFileExistsInput {
   readonly mpFileName: FileReference;
@@ -1609,4 +1773,4 @@ export declare function verifyMpFileExists(
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

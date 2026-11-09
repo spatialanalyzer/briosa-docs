@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-callout-views-and-callouts) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Create Vector Callout {/* #create-vector-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-vector-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_vector_callout(
@@ -42,6 +44,7 @@ async def create_vector_callout(
         additional_notes: Iterable[str] | None = None,
         attach_callout_to_end_point: bool = False,
         use_default_placement: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -50,6 +53,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Min/Max Vector Group Callout {/* #create-minmax-vector-group-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-minmax-vector-group-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_min_max_vector_group_callout(
@@ -76,6 +81,7 @@ async def create_min_max_vector_group_callout(
         show_units: bool = False,
         attach_callout_to_end_point: bool = True,
         use_default_placement: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -84,6 +90,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Point Callout {/* #create-point-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_point_callout(
@@ -104,15 +112,16 @@ async def create_point_callout(
         show_uy: bool = False,
         show_uz: bool = False,
         show_u_mag: bool = False,
-        desired_coordinate_system: CoordinateSystemType = CoordinateSystemType.CARTESIAN,
+        desired_coordinate_system: CoordinateSystemType,
         notes: Iterable[str] | None = None,
         use_default_placement: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -126,6 +135,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Create Point Comparison Callout {/* #create-point-comparison-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-comparison-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-point-comparison-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_point_comparison_callout(
@@ -153,6 +164,7 @@ async def create_point_comparison_callout(
         additional_z_comments: str | None = None,
         additional_notes: Iterable[str] | None = None,
         use_default_placement: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -161,6 +173,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Relationship Callout {/* #create-relationship-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-relationship-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-relationship-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_relationship_callout(
@@ -171,6 +185,7 @@ async def create_relationship_callout(
         view_x_position: float = 0.0,
         view_y_position: float = 0.0,
         additional_notes: Iterable[str] | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -179,6 +194,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Picture Callout {/* #create-picture-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-picture-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-picture-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_picture_callout(
@@ -190,6 +207,7 @@ async def create_picture_callout(
         view_y_position: float = 0.6,
         scale_image_percent: int = 100,
         object_for_callout_anchor_point: CollectionItemName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -198,6 +216,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Create Text Callout {/* #create-text-callout */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-text-callout) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#create-text-callout)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def create_text_callout(
@@ -208,6 +228,7 @@ async def create_text_callout(
         view_x_position: float = 0.4,
         view_y_position: float = 0.6,
         callout_anchor_point: PointName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -217,20 +238,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
 
-```python
-async def make_callout_view_ref_list_wildcard_selection(
-        self,
-        *,
-        collection_wildcard_criteria: str = "*",
-        callout_view_wildcard_criteria: str = "*",
-    ) -> list[CollectionItemName]: ...
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Set Default Callout View Properties {/* #set-default-callout-view-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-default-callout-view-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_default_callout_view_properties(
@@ -238,6 +253,7 @@ async def set_default_callout_view_properties(
         *,
         default_callout_view_name: str = "Callout 1",
         properties: CalloutViewProperties | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -247,25 +263,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties)
 
-```python
-async def set_callout_view_properties(
-        self,
-        callout_views: Iterable[CollectionItemName],
-        *,
-        properties: CalloutViewProperties | None = None,
-    ) -> None: ...
-```
-
-The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+Client 0.5.0 removed this method with behavioral contract major 3. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
+is available in this release. Client 0.4.0 and earlier keep it; its method history shows that contract.
 
 ## Delete Callout View {/* #delete-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#delete-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_callout_view(
         self,
         callout_view: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -275,6 +287,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#rename-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#rename-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def rename_callout_view(
         self,
@@ -282,6 +296,7 @@ async def rename_callout_view(
         new_callout_view_name: CollectionItemName,
         *,
         overwrite_if_exists: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -291,10 +306,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#auto-arrange-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#auto-arrange-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def auto_arrange_callout_view(
         self,
         callout_view: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -304,10 +323,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_number_of_callouts_in_callout_view(
         self,
         callout_view: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> int: ...
 ```
 
@@ -317,11 +340,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_ith_callout_position_in_callout_view(
         self,
         callout_view: CollectionItemName,
         callout_view_index: int,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CalloutPosition: ...
 ```
 
@@ -331,6 +358,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-i-th-callout-position-in-callout-view)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_ith_callout_position_in_callout_view(
         self,
@@ -338,6 +367,8 @@ async def set_ith_callout_position_in_callout_view(
         callout_view_index: int,
         x_position: int,
         y_position: int,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -347,4 +378,4 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

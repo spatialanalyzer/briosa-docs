@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Surfaces
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,17 +8,20 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/construction-operations-surfaces) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/construction-operations-surfaces)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Construct Surfaces From Objects {/* #construct-surfaces-from-objects */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-from-objects) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-from-objects)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfacesFromObjectsAsync(
         IEnumerable<CollectionObjectName> objects,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -28,10 +31,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-bsplines) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-bsplines)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromBSplinesAsync(
         CollectionObjectName resultingSurfaceName,
         IEnumerable<CollectionObjectName> bSplineList,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -41,12 +47,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cylinder) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-cylinder)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromCylinderAsync(
         CollectionObjectName resultingSurfaceName,
         CollectionObjectName cylinderName,
         bool internalCylinder = true,
         bool useThetaExtentMode = false,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -56,10 +65,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-plane) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromPlaneAsync(
         CollectionObjectName resultingSurfaceName,
         CollectionObjectName planeName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -69,10 +81,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-sphere) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-sphere)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromSphereAsync(
         CollectionObjectName resultingSurfaceName,
         CollectionObjectName sphereName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -82,10 +97,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-cone) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-cone)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromConeAsync(
         CollectionObjectName resultingSurfaceName,
         CollectionObjectName coneName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -95,6 +113,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-a-collection-of-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromCollectionOfSurfacesAsync(
         IEnumerable<CollectionObjectName> surfacesToCombine,
@@ -103,6 +123,7 @@ public Task ConstructSurfaceFromCollectionOfSurfacesAsync(
         bool deleteOriginalSurfaces = false,
         bool enableSewingTolerance = false,
         double sewingTolerance = -1.0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -112,11 +133,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-fit-from-nominal-surfaces-and-actual-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFitFromNominalSurfacesAndActualDataAsync(
         CollectionObjectName nominalSurface,
         IEnumerable<PointName> actualDataPointList,
         CollectionObjectName resultingSurfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -126,9 +150,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-dissecting-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-by-dissecting-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>> ConstructSurfaceByDissectingSurfacesAsync(
         SurfaceDissectionMode dissectionMode,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -138,9 +165,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-by-dissecting-surfaces-from-ref-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>> ConstructSurfacesByDissectingSurfacesFromRefListAsync(
         IEnumerable<CollectionObjectName> surfacesToDissect,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -150,10 +180,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-point-groups) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-point-groups)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromPointGroupsAsync(
         IEnumerable<CollectionObjectName> groupNameList,
         CollectionObjectName resultingSurfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+
+public Task ConstructSurfaceFromPointGroupsAsync(
+        IEnumerable<CollectionObjectName> groupNameList,
+        BSplineFitOptions bSplineFitOptions,
+        CollectionObjectName resultingSurfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -163,11 +203,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surfaces-by-projecting-points) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surfaces-by-projecting-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfacesByProjectingPointsAsync(
         IEnumerable<CollectionObjectName> projectionTargetNameList,
         IEnumerable<PointName> pointList,
         CollectionObjectName resultingSurfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -177,11 +220,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-by-offsetting-a-surface) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-by-offsetting-a-surface)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceByOffsettingSurfaceAsync(
         IEnumerable<CollectionObjectName> referenceSurface,
         double surfaceOffset = 0.0,
         bool hideOriginalSurface = true,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -191,10 +237,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-surface-from-annotation-links) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-surface-from-annotation-links)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task ConstructSurfaceFromAnnotationLinksAsync(
         IEnumerable<CollectionObjectName> annotationList,
         CollectionObjectName resultingSurfaceName,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -204,6 +253,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-surfaces#construct-geometry-from-surfaces) · [gRPC Contract](/api/grpc/construction-operations-surfaces#construct-geometry-from-surfaces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```csharp
 public Task<IReadOnlyList<CollectionObjectName>> ConstructGeometryFromSurfacesAsync(
         IEnumerable<CollectionObjectName> surfaces,
@@ -212,6 +263,7 @@ public Task<IReadOnlyList<CollectionObjectName>> ConstructGeometryFromSurfacesAs
         CollectionObjectName? referenceFrame = null,
         CollectionName? destinationCollectionName = null,
         string baseName = "Geometry Object",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -277,4 +329,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)

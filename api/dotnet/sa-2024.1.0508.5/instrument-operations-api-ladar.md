@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Briosa 0.4.0 .NET APIs for API - LADAR MP commands.
+description: Availability of the API - LADAR commands that client 0.5.0 provides only for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,80 +8,67 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
-## SetLadarAutoMeasPointAsync
+:::note[Not Available for SA 2024.1.0508.5]
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-point)
+The SA 2024.1.0508.5 package of client 0.5.0 has no method for these commands,
+and Server 0.10.0 for that target has no matching RPC. The
+[SA 2026.1.0529.7 reference](/api/dotnet/instrument-operations-api-ladar)
+documents them for that target.
 
-```csharp
-public Task SetLadarAutoMeasPointAsync(
-    CollectionInstrumentId instrument,
-    int sampleTimeMilliseconds = 0,
-    CancellationToken cancellationToken = default);
-```
+:::
 
-The exact MP default is `0` despite the MP label documenting `1–2000`.
+## Set LADAR AutoMeas Point {/* #set-ladar-automeas-point */}
 
-## SetLadarAutoMeasSphereAsync
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point).
+No released signature is available for SA 2024.1.0508.5.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+## Set LADAR AutoMeas Sphere {/* #set-ladar-automeas-sphere */}
 
-```csharp
-public Task SetLadarAutoMeasSphereAsync(
-    CollectionInstrumentId instrument,
-    double sphereRadius = 1.1875,
-    double scanLineSpacing = 0.05,
-    bool sendCenterPoint = true,
-    bool sendSphere = false,
-    bool sendMeasuredCloud = false,
-    CancellationToken cancellationToken = default);
-```
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-## SetLadarFeatureMeasSphereAsync
+## Set LADAR FeatureMeas Sphere {/* #set-ladar-featuremeas-sphere */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere).
+No released signature is available for SA 2024.1.0508.5.
 
-```csharp
-public Task SetLadarFeatureMeasSphereAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    CancellationToken cancellationToken = default);
-```
+## Set LADAR FeatureMeas Circle {/* #set-ladar-featuremeas-circle */}
 
-## SetLadarFeatureMeasCircleAsync
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle).
+No released signature is available for SA 2024.1.0508.5.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+## Set LADAR FeatureMeas Slot {/* #set-ladar-featuremeas-slot */}
 
-```csharp
-public Task SetLadarFeatureMeasCircleAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot).
+No released signature is available for SA 2024.1.0508.5.
 
-## SetLadarFeatureMeasSlotAsync
+## Set LADAR FeatureMeas Cylinder {/* #set-ladar-featuremeas-cylinder */}
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
+No released signature is available for SA 2024.1.0508.5.
 
-```csharp
-public Task SetLadarFeatureMeasSlotAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
+## SetLadarAutoMeasPointAsync {/* #setladarautomeaspointasync */}
 
-## SetLadarFeatureMeasCylinderAsync
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-[MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+## SetLadarAutoMeasSphereAsync {/* #setladarautomeassphereasync */}
 
-```csharp
-public Task SetLadarFeatureMeasCylinderAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
+Use the entries above. This retained anchor preserves existing bookmarks.
 
-Briosa does not convert units or add ranges to these instrument-specific
-settings. The calls are never automatically replayed.
+## SetLadarFeatureMeasSphereAsync {/* #setladarfeaturemeassphereasync */}
+
+Use the entries above. This retained anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasCircleAsync {/* #setladarfeaturemeascircleasync */}
+
+Use the entries above. This retained anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasSlotAsync {/* #setladarfeaturemeasslotasync */}
+
+Use the entries above. This retained anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasCylinderAsync {/* #setladarfeaturemeascylinderasync */}
+
+Use the entries above. This retained anchor preserves existing bookmarks.
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2024.1.0508.5)

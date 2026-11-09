@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Point Clouds
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/construction-operations-point-clouds) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/construction-operations-point-clouds)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Point Clouds from Existing Point Group {/* #construct-point-clouds-from-existing-point-group */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointCloudsFromExistingPointGroupInput {
@@ -37,6 +39,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-clouds-from-existing-cloud-points---runtime-select)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```ts
 export interface ConstructPointCloudsFromExistingCloudPointsRuntimeSelectInput {
   readonly cloudName: CollectionObjectName;
@@ -56,6 +60,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Clouds from Existing Clouds - Uniform Spacing {/* #construct-point-clouds-from-existing-clouds---uniform-spacing */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointCloudsFromExistingCloudsUniformSpacingInput {
@@ -81,6 +87,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-cloud-from-existing-clouds)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointCloudFromExistingCloudsInput {
   readonly existingPointCloudList: Iterable<CollectionObjectName>;
@@ -105,6 +113,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-cloud-from-visible-cloud-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructPointCloudFromVisibleCloudPointsInput {
   readonly sourceClouds: Iterable<CollectionObjectName>;
@@ -126,6 +136,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-boundary-points-from-cloud) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-boundary-points-from-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructBoundaryPointsFromCloudInput {
   readonly sourceCloudName: CollectionObjectName;
@@ -146,6 +158,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Point Cloud Limiting Probing Directions {/* #construct-point-cloud-limiting-probing-directions */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ConstructPointCloudLimitingProbingDirectionsInput {
@@ -171,6 +185,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-cross-section-cloud)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface ConstructCrossSectionCloudInput {
   readonly crossSectionCloudName: CollectionObjectName;
@@ -183,7 +199,7 @@ export interface ConstructCrossSectionCloudInput {
   readonly limitCrossSectionExtent?: boolean;
   readonly radiusLimit?: number;
   readonly projectToReferenceSurface?: boolean;
-  readonly referenceObject?: CollectionObjectName;
+  readonly referenceObject: CollectionObjectName;
   readonly cloudThinningSettings?: CloudThinningOptions;
   readonly updateExistingCloud?: boolean;
 }
@@ -202,6 +218,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Cross Section Cloud - User Select {/* #construct-cross-section-cloud---user-select */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud---user-select) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#construct-cross-section-cloud---user-select)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `destructive`, `interactive_ui` · **Duration Class:** `interactive`
 
 ```ts
 export interface ConstructCrossSectionCloudUserSelectInput {
@@ -230,6 +248,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Extract Sphere Centers from Point Cloud {/* #extract-sphere-centers-from-point-cloud */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud) · [gRPC Contract](/api/grpc/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface ExtractSphereCentersFromPointCloudInput {
@@ -265,4 +285,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2026.1.0529.7)

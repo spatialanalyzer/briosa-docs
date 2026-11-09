@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / Nikon Metrology Laser Radars LR
-description: Released dotnet 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,19 +8,22 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations-nikon-metrology-laser-radars-lr) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## LR Hardware Connect {/* #lr-hardware-connect */}
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
 
 ```csharp
 public Task LrHardwareConnectAsync(
         CollectionInstrumentId instrument,
         string host,
         int port,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -30,9 +33,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-disconnect)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task LrHardwareDisconnectAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -42,9 +48,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<bool> LrVerifyHardwareConnectionAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -54,10 +63,13 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-set-red-laser-intensity)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 ```csharp
 public Task LrSetRedLaserIntensityAsync(
         CollectionInstrumentId instrument,
         int intensity = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -67,15 +79,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<LrSnrInfo> LrGetMostRecentSnrInfoAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -86,15 +101,18 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<LrSelfTestResult> LrSelfTestAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -106,15 +124,18 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---linearization)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<double> LrSelfTestLinearizationAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -124,15 +145,18 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<LrFlipTestResult> LrSelfTestFlipTestAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -150,17 +174,20 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<LrLoSeparationTestResult> LrSelfTestLoSepAsync(
         CollectionInstrumentId instrument,
         int region = 0,
         int numRangeMeasurements = 0,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -175,12 +202,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-perform-mcm-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task LrApdisPerformMcmCalibrationAsync(
         CollectionInstrumentId instrument,
         CollectionObjectName nominalGroup,
         bool useMatteToolingBall = true,
         string newCalibrationName = "",
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -190,11 +220,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<string> LrApdisActivateMcmCalibrationAsync(
         CollectionInstrumentId instrument,
         string calibrationName = "",
         int calibrationId = -1,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -204,9 +237,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration) · [gRPC Contract](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-get-active-mcm-calibration)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```csharp
 public Task<string> LrApdisGetActiveMcmCalibrationAsync(
         CollectionInstrumentId instrument,
+        Action<MpCompletion>? onMpCompletion = null,
         CancellationToken cancellationToken = default);
 ```
 
@@ -264,4 +300,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)

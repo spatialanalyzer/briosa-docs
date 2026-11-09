@@ -39,17 +39,22 @@ connects and verifies MP readiness.
 
 ```csharp
 public Task<string> GetWorkingDirectoryAsync(
+    Action<MpCompletion>? onMpCompletion = null,
     CancellationToken cancellationToken = default);
 ```
 
-The command has no MP inputs. The optional `cancellationToken` controls how long
-the caller waits; it is not part of the MP command.
+The command has no MP inputs. The optional `onMpCompletion` observer receives
+how the MP command completed when the call succeeds, and the optional
+`cancellationToken` controls how long the caller waits. Neither is part of the
+MP command; pass the token by name when you leave the observer out.
 
 ## Return Value
 
 The task completes with the working directory reported by SpatialAnalyzer. The
 client validates the required MP output and does not expose the generated gRPC
-result envelope.
+result envelope. A partial success (MP code 4) still returns the directory; the
+observer reports it as `PartialSuccess`. See
+[MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
 
 ## Failures and Cancellation
 

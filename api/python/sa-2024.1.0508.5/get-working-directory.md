@@ -43,11 +43,16 @@ cleans up the local Briosa session and SDK while leaving SpatialAnalyzer open.
 ## Signature
 
 ```python
-async def get_working_directory(self) -> str:
-    ...
+async def get_working_directory(
+    self,
+    *,
+    on_mp_completion: MpCompletionObserver | None = None,
+) -> str: ...
 ```
 
-The command has no MP inputs or per-call transport arguments. Applications can
+The command has no MP inputs. Like every MP method in client 0.5.0, it is an
+ordinary MP operation and takes the keyword-only
+[`on_mp_completion`](./lifecycle.md#mp-completion) observer. Applications can
 set a client-wide command timeout or use normal `asyncio` cancellation and
 timeout facilities around the call.
 
@@ -55,7 +60,8 @@ timeout facilities around the call.
 
 The coroutine returns the working directory reported by SpatialAnalyzer. The
 client validates the required MP output and does not expose the generated gRPC
-result message.
+result message. A missing directory is the protocol error
+`required-output-missing:directory`, as for any other missing output.
 
 ## Failures and Cancellation
 

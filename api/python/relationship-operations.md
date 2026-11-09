@@ -1,6 +1,6 @@
 ---
 title: Relationship Operations
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/relationship-operations) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/relationship-operations)
 
-This reference covers **SA 2026.1.0529.7**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Enable/Disable Relationships for Optimization {/* #enabledisable-relationships-for-optimization */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization) · [gRPC Contract](/api/grpc/relationship-operations#enabledisable-relationships-for-optimization)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def enable_disable_relationships_for_optimization(
@@ -22,6 +24,7 @@ async def enable_disable_relationships_for_optimization(
         relationships: Iterable[CollectionItemName],
         *,
         enable: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -31,10 +34,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#geom-relationship-ignore-input-points) · [gRPC Contract](/api/grpc/relationship-operations#geom-relationship-ignore-input-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def geom_relationship_ignore_input_points(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -44,10 +51,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#geom-relationship-reuse-ignored-input-points) · [gRPC Contract](/api/grpc/relationship-operations#geom-relationship-reuse-ignored-input-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def geom_relationship_reuse_ignored_input_points(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -57,16 +68,20 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-auto-vectors)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_auto_vectors(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetGeomRelationshipAutoVectorsResult: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -79,10 +94,14 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-cardinal-points) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-cardinal-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_cardinal_points(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[PointName]: ...
 ```
 
@@ -92,12 +111,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-criteria)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_criteria(
         self,
         relationship_name: CollectionObjectName,
         *,
         criteria: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetGeomRelationshipCriteriaResult: ...
 ```
 
@@ -107,10 +129,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-avg-point) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-measured-avg-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_measured_avg_point(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> PointName: ...
 ```
 
@@ -120,10 +146,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-measured-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_measured_geometry(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -133,10 +163,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-avg-point) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-avg-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_nominal_avg_point(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> PointName: ...
 ```
 
@@ -146,10 +180,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-nominal-geometry) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-nominal-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_nominal_geometry(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -159,10 +197,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-point-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_point_list(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetGeomRelationshipPointListResult: ...
 ```
 
@@ -172,10 +214,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-projection-plane) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-projection-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_projection_plane(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -185,10 +231,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status) · [gRPC Contract](/api/grpc/relationship-operations#get-pipe-relationship-cut-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_pipe_relationship_cut_status(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPipeRelationshipCutStatusResult: ...
 ```
 
@@ -198,10 +248,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties) · [gRPC Contract](/api/grpc/relationship-operations#get-pipe-relationship-properties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_pipe_relationship_properties(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPipeRelationshipPropertiesResult: ...
 ```
 
@@ -211,10 +265,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-weights) · [gRPC Contract](/api/grpc/relationship-operations#get-pipe-relationship-weights)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_pipe_relationship_weights(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetPipeRelationshipWeightsResult: ...
 ```
 
@@ -224,10 +282,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-fit-constraints-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-fit-constraints-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_fit_constraints_scalar_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipFitConstraintsScalarTypeResult: ...
 ```
 
@@ -237,10 +299,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-outlier-rejection-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-outlier-rejection-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_outlier_rejection_scalar_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipOutlierRejectionScalarTypeResult: ...
 ```
 
@@ -250,10 +316,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-projection-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_projection_options(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipProjectionOptionsResult: ...
 ```
 
@@ -263,10 +333,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-reporting-frame) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_reporting_frame(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> CollectionObjectName: ...
 ```
 
@@ -276,10 +350,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-sigmoidal-gap-fit-constraints)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_sigmoidal_gap_fit_constraints(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> SigmoidalGapFitConstraints: ...
 ```
 
@@ -289,10 +367,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-sub-sampling-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_sub_sampling_options(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipSubSamplingOptionsResult: ...
 ```
 
@@ -302,10 +384,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-tolerance-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_tolerance_scalar_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipToleranceScalarTypeResult: ...
 ```
 
@@ -315,10 +401,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-tolerance-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_tolerance_vector_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GetRelationshipToleranceVectorTypeResult: ...
 ```
 
@@ -328,10 +418,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-type) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> str: ...
 ```
 
@@ -341,10 +435,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-weighting) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-weighting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_weighting(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -354,12 +452,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-pipe-fitting-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_pipe_fitting_relationship(
         self,
         relationship_name: CollectionObjectName,
         pipe_1_object_name: CollectionObjectName,
         pipe_2_object_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -368,6 +470,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Pipe Relationship Cut {/* #make-pipe-relationship-cut */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut) · [gRPC Contract](/api/grpc/relationship-operations#make-pipe-relationship-cut)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_pipe_relationship_cut(
@@ -380,6 +484,7 @@ async def make_pipe_relationship_cut(
         pipe_2_make_cut: bool = True,
         pipe_2_create_frame: bool = False,
         pipe_2_frame_name: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -388,6 +493,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Pipe Relationship Force Cut to Frame {/* #pipe-relationship-force-cut-to-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#pipe-relationship-force-cut-to-frame) · [gRPC Contract](/api/grpc/relationship-operations#pipe-relationship-force-cut-to-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def pipe_relationship_force_cut_to_frame(
@@ -398,6 +505,7 @@ async def pipe_relationship_force_cut_to_frame(
         pipe_1_frame_name: CollectionObjectName,
         pipe_2_force_cut_to_frame: bool = True,
         pipe_2_frame_name: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -407,6 +515,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_auto_measure_nominal_feature(
         self,
@@ -415,12 +525,13 @@ async def set_geom_relationship_auto_measure_nominal_feature(
         trap_clouds: bool = True,
         instrument_id: CollectionInstrumentId,
         measurement_mode: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -429,6 +540,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Set Geom Relationship Auto Vectors Nominal (AVN) {/* #set-geom-relationship-auto-vectors-nominal-avn */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-auto-vectors-nominal-avn)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_geom_relationship_auto_vectors_nominal_avn(
@@ -439,6 +552,7 @@ async def set_geom_relationship_auto_vectors_nominal_avn(
         points_type: PointFilterInputType = PointFilterInputType.CARDINAL_POINTS,
         use_vector_group_custom_prefix: bool = False,
         vector_group_custom_prefix: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -448,6 +562,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-cardinal-points) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-cardinal-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_cardinal_points(
         self,
@@ -456,6 +572,7 @@ async def set_geom_relationship_cardinal_points(
         create_cardinal_pts_when_fitting: bool = True,
         prefix_cardinal_pts_name_with_rel_name: bool = True,
         cardinal_pts_group_name: str = "GR-Cardinal Pts",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -464,6 +581,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Geom Relationship Criteria {/* #set-geom-relationship-criteria */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-criteria)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_geom_relationship_criteria(
@@ -475,6 +594,7 @@ async def set_geom_relationship_criteria(
         tolerance_options: ToleranceScalarOptions = ToleranceScalarOptions.DEFAULT,
         optimization_delta_weight: float = 0.000000,
         optimization_out_of_tolerance_weight: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -484,11 +604,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-measured-geometry) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-measured-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_measured_geometry(
         self,
         relationship_name: CollectionObjectName,
         measured_geometry: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -498,6 +622,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-avg-point)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_nominal_avg_point(
         self,
@@ -505,6 +631,7 @@ async def set_geom_relationship_nominal_avg_point(
         *,
         compare_to_nominal: bool = True,
         nominal_average_point: PointName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -514,6 +641,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-geometry) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-nominal-geometry)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_nominal_geometry(
         self,
@@ -521,6 +650,7 @@ async def set_geom_relationship_nominal_geometry(
         *,
         compare_to_nominal: bool = True,
         nominal_geometry: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -530,6 +660,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane) · [gRPC Contract](/api/grpc/relationship-operations#set-geom-relationship-projection-plane)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_geom_relationship_projection_plane(
         self,
@@ -537,6 +669,7 @@ async def set_geom_relationship_projection_plane(
         *,
         project_to_plane: bool = True,
         projection_plane_name: CollectionObjectName,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -546,6 +679,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-fit-constraints) · [gRPC Contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-fit-constraints)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_object_to_object_direction_relationship_fit_constraints(
         self,
@@ -553,6 +688,7 @@ async def set_object_to_object_direction_relationship_fit_constraints(
         *,
         angle_between_vectors_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
         mutual_perpendicular_length_fit_constraints: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -562,13 +698,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-object-to-object-direction-relationship-tolerances) · [gRPC Contract](/api/grpc/relationship-operations#set-object-to-object-direction-relationship-tolerances)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_object_to_object_direction_relationship_tolerances(
         self,
         relationship_name: CollectionItemName,
+        angle_between_vectors_tolerances: ToleranceScalarOptions,
+        mutual_perpendicular_length_tolerances: ToleranceScalarOptions,
         *,
-        angle_between_vectors_tolerances: ToleranceScalarOptions | None = None,
-        mutual_perpendicular_length_tolerances: ToleranceScalarOptions | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -577,6 +716,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Pipe Relationship Segment Properties {/* #set-pipe-relationship-segment-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties) · [gRPC Contract](/api/grpc/relationship-operations#set-pipe-relationship-segment-properties)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_pipe_relationship_segment_properties(
@@ -591,6 +732,7 @@ async def set_pipe_relationship_segment_properties(
         pipe_2_outer_diameter: float = 0.000000,
         pipe_2_cut_begin: float = 0.000000,
         pipe_2_cut_end: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -599,6 +741,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Pipe Relationship Weights {/* #set-pipe-relationship-weights */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-weights) · [gRPC Contract](/api/grpc/relationship-operations#set-pipe-relationship-weights)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_pipe_relationship_weights(
@@ -613,6 +757,7 @@ async def set_pipe_relationship_weights(
         out_of_material_offset: float = 1.000000,
         constrain_region_at_od: bool = False,
         constrain_id_od_overlap: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -622,6 +767,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-fit-avf) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-fit-avf)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_auto_vectors_fit_avf(
         self,
@@ -630,6 +777,7 @@ async def set_relationship_auto_vectors_fit_avf(
         create_auto_vectors_avf: bool = False,
         use_vector_group_custom_prefix: bool = False,
         vector_group_custom_prefix: str = "",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -639,6 +787,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-auto-vectors-group-default-prefix) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-auto-vectors-group-default-prefix)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_auto_vectors_group_default_prefix(
         self,
@@ -646,6 +796,7 @@ async def set_relationship_auto_vectors_group_default_prefix(
         geom_rel_avn_vg_default_prefix: str = "GR-AVN-",
         geom_rel_avf_vg_default_prefix: str = "GR-AVF-",
         non_geom_rel_vg_default_prefix: str = "Auto Vectors: ",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -655,12 +806,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-desired-meas-count) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-desired-meas-count)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_desired_meas_count(
         self,
         relationship_name: CollectionObjectName,
         *,
         desired_measurement_count: int = 0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -670,12 +824,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-dormant-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_dormant_status(
         self,
         relationships: Iterable[CollectionItemName],
         *,
         dormant_status: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -685,12 +842,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-fit-constraints-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-fit-constraints-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_fit_constraints_scalar_type(
         self,
         relationship_name: CollectionObjectName,
         *,
         fit_constraint_options: FitConstraintScalarOptions = FitConstraintScalarOptions.DEFAULT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -700,11 +860,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_orientation_fit_constraints_vector_type(
         self,
         relationship_name: CollectionObjectName,
         orientation_vector_constraint: ToleranceVectorOptions,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -714,10 +878,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-outlier-rejection-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-outlier-rejection-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_outlier_rejection_scalar_type(
         self,
         relationship_name: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -727,11 +895,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-position-fit-constraints-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_position_fit_constraints_vector_type(
         self,
         relationship_name: CollectionObjectName,
         position_vector_constraint: ToleranceVectorOptions,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -741,12 +913,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-projection-options) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-projection-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_projection_options(
         self,
         relationship_name: CollectionObjectName,
         *,
         projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -756,11 +931,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-reporting-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_reporting_frame(
         self,
         relationship_name: CollectionObjectName,
         reporting_frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -770,12 +949,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-sigmoidal-gap-fit-constraints)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_sigmoidal_gap_fit_constraints(
         self,
         relationship_name: CollectionObjectName,
         *,
         use_sigmoidal_gap_constraints: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -784,6 +966,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Sub Sampling Options {/* #set-relationship-sub-sampling-options */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-sub-sampling-options)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_relationship_sub_sampling_options(
@@ -794,6 +978,7 @@ async def set_relationship_sub_sampling_options(
         i_value: int = 20,
         use_no_more_than_n_points: bool = True,
         n_value: int = 10000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -803,12 +988,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-scalar-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-tolerance-scalar-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_tolerance_scalar_type(
         self,
         relationship_name: CollectionObjectName,
         *,
         tolerance_options: ToleranceScalarOptions = ToleranceScalarOptions.DEFAULT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -818,11 +1006,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-tolerance-vector-type) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-tolerance-vector-type)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_tolerance_vector_type(
         self,
         relationship_name: CollectionObjectName,
         vector_tolerance: ToleranceVectorOptions,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -831,6 +1023,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Relationship Voxel Cloud Display {/* #set-relationship-voxel-cloud-display */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-voxel-cloud-display)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_relationship_voxel_cloud_display(
@@ -844,12 +1038,13 @@ async def set_relationship_voxel_cloud_display(
         surface_analysis_mode: SurfaceAnalysisMode = SurfaceAnalysisMode.RELATIONSHIP,
         colorization_options: ColorizationOptions = ColorizationOptions.DEFAULT,
         show_color_bar_in_view: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -860,12 +1055,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-weighting) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-weighting)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_weighting(
         self,
         relationship_name: CollectionObjectName,
         *,
         weight: float = 0.000000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -875,12 +1073,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-weights-normalized)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_weights_normalized(
         self,
         collection_name: CollectionName,
         *,
         pick_weighting_mode: RelWeightingMode = RelWeightingMode.NORMALIZE_EQUATION_COUNT,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -890,12 +1091,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#generate-geometry-relationship-summary) · [gRPC Contract](/api/grpc/relationship-operations#generate-geometry-relationship-summary)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def generate_geometry_relationship_summary(
         self,
         relationship_ref_list: Iterable[CollectionItemName],
         *,
         summary_table_name: str = "Geometry Relationship Summary",
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -905,12 +1109,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#edit-geometry-relationship-point-list) · [gRPC Contract](/api/grpc/relationship-operations#edit-geometry-relationship-point-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def edit_geometry_relationship_point_list(
         self,
         relationship_name: CollectionItemName,
         *,
         point_edit_mode: GeometryRelationshipPointEditMode = GeometryRelationshipPointEditMode.POINT_LIST,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -920,6 +1127,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points) · [gRPC Contract](/api/grpc/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def filter_geometry_relationship_outlier_cloud_points(
         self,
@@ -927,6 +1136,7 @@ async def filter_geometry_relationship_outlier_cloud_points(
         *,
         sigma_threshold: float = 3.0,
         modify_existing_input_clouds: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GeometryRelationshipOutlierFilterMetrics: ...
 ```
 
@@ -936,18 +1146,21 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template) · [gRPC Contract](/api/grpc/relationship-operations#relationship-watch-window-template)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def relationship_watch_window_template(
         self,
+        watch_window_template_name: CollectionObjectName,
+        options: RelationshipWatchWindowTemplateOptions,
         *,
-        watch_window_template_name: CollectionObjectName | None = None,
-        options: RelationshipWatchWindowTemplateOptions | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -959,15 +1172,18 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-point-to-point-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-point-to-point-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_point_to_point_relationship(
         self,
         relationship_name: CollectionItemName,
         first_point_name: PointName,
         second_point_name: PointName,
+        tolerance: ToleranceVectorOptions,
+        constraint: ToleranceVectorOptions,
         *,
-        tolerance: ToleranceVectorOptions | None = None,
-        constraint: ToleranceVectorOptions | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -977,15 +1193,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-frame-to-frame-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_frame_to_frame_relationship(
         self,
         relationship_name: CollectionItemName,
         first_frame_name: CollectionObjectName,
         second_frame_name: CollectionObjectName,
+        orientation_tolerance: ToleranceScalarOptions,
+        position_tolerance: ToleranceVectorOptions,
         *,
-        orientation_tolerance: ToleranceScalarOptions | None = None,
-        position_tolerance: ToleranceVectorOptions | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -995,15 +1214,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-points-to-objects-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-points-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_points_to_objects_relationship(
         self,
         relationship_name: CollectionItemName,
         points_in_relationship: Iterable[PointName],
         objects_in_relationship: Iterable[CollectionObjectName],
+        projection_options: ProjectionOptions,
         *,
-        projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
         auto_update_a_vector_group: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1013,6 +1235,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-points-to-points-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_points_to_points_relationship(
         self,
@@ -1021,8 +1245,9 @@ async def make_points_to_points_relationship(
         measured_points: Iterable[PointName],
         *,
         auto_update_a_vector_group: bool = False,
-        tolerance: ToleranceVectorOptions | None = None,
-        constraint: ToleranceVectorOptions | None = None,
+        tolerance: ToleranceVectorOptions,
+        constraint: ToleranceVectorOptions,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1032,15 +1257,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-groups-to-objects-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-groups-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_groups_to_objects_relationship(
         self,
         relationship_name: CollectionItemName,
         point_groups_in_relationship: Iterable[CollectionObjectName],
         objects_in_relationship: Iterable[CollectionObjectName],
+        projection_options: ProjectionOptions,
         *,
-        projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
         auto_update_a_vector_group: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1050,6 +1278,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-object-to-object-direction-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-object-to-object-direction-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_object_to_object_direction_relationship(
         self,
@@ -1058,6 +1288,7 @@ async def make_object_to_object_direction_relationship(
         second_object_in_relationship: CollectionObjectName,
         *,
         nominal_angle: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1067,15 +1298,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-point-clouds-to-objects-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_point_clouds_to_objects_relationship(
         self,
         relationship_name: CollectionItemName,
         point_clouds_in_relationship: Iterable[CollectionObjectName],
         objects_in_relationship: Iterable[CollectionObjectName],
+        projection_options: ProjectionOptions,
         *,
-        projection_options: ProjectionOptions = ProjectionOptions.DEFAULT,
         auto_update_a_vector_group: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1085,6 +1319,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-group-to-group-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_group_to_group_relationship(
         self,
@@ -1093,8 +1329,9 @@ async def make_group_to_group_relationship(
         second_group_name: CollectionObjectName,
         *,
         auto_update_a_vector_group: bool = False,
-        tolerance: ToleranceVectorOptions | None = None,
-        constraint: ToleranceVectorOptions | None = None,
+        tolerance: ToleranceVectorOptions,
+        constraint: ToleranceVectorOptions,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1103,6 +1340,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Group to Nominal Group Relationship {/* #make-group-to-nominal-group-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-group-to-nominal-group-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `display_closest_point_watch_window` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 ```python
 async def make_group_to_nominal_group_relationship(
@@ -1117,9 +1358,10 @@ async def make_group_to_nominal_group_relationship(
         use_view_zooming_with_proximity: bool = False,
         ignore_points_beyond_threshold: bool = False,
         proximity_threshold: float = 0.01,
-        tolerance: ToleranceVectorOptions | None = None,
-        constraint: ToleranceVectorOptions | None = None,
+        tolerance: ToleranceVectorOptions,
+        constraint: ToleranceVectorOptions,
         fit_weight: float = 1.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1129,6 +1371,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-average-point-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-average-point-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_average_point_relationship(
         self,
@@ -1137,6 +1381,7 @@ async def make_average_point_relationship(
         *,
         average_point_name: PointName | None = None,
         nominal_point_name: PointName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1145,6 +1390,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Geometry Fit Only Relationship {/* #make-geometry-fit-only-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-geometry-fit-only-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_geometry_fit_only_relationship(
@@ -1155,6 +1402,7 @@ async def make_geometry_fit_only_relationship(
         *,
         resulting_object_name: CollectionObjectName | None = None,
         fit_profile_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1163,6 +1411,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Geometry Fit and Compare to Nominal Relationship {/* #make-geometry-fit-and-compare-to-nominal-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-geometry-fit-and-compare-to-nominal-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_geometry_fit_and_compare_to_nominal_relationship(
@@ -1173,6 +1423,7 @@ async def make_geometry_fit_and_compare_to_nominal_relationship(
         *,
         resulting_object_name: CollectionObjectName | None = None,
         fit_profile_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1182,12 +1433,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-compare-only-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-geometry-compare-only-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_geometry_compare_only_relationship(
         self,
         relationship_name: CollectionItemName,
         nominal_geometry: CollectionObjectName,
         measured_geometry: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1197,15 +1452,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-dynamic-point-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_dynamic_point_relationship(
         self,
         relationship_name: CollectionItemName,
         first_reference_geometry: CollectionObjectName,
         second_reference_geometry: CollectionObjectName,
+        third_reference_geometry: CollectionObjectName,
         *,
-        construction_mode: DynamicPointMode = DynamicPointMode.INTERSECTION_LINE_AND_PLANE,
-        third_reference_geometry: CollectionObjectName | None = None,
+        construction_mode: DynamicPointMode,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1215,6 +1473,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-line-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-dynamic-line-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_dynamic_line_relationship(
         self,
@@ -1222,7 +1482,8 @@ async def make_dynamic_line_relationship(
         first_reference_geometry: CollectionObjectName,
         second_reference_geometry: CollectionObjectName,
         *,
-        construction_mode: DynamicLineMode = DynamicLineMode.INTERSECTION_OF_TWO_PLANES,
+        construction_mode: DynamicLineMode,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1232,6 +1493,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-dynamic-plane-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_dynamic_plane_relationship(
         self,
@@ -1239,8 +1502,9 @@ async def make_dynamic_plane_relationship(
         first_reference_geometry: CollectionObjectName,
         second_reference_geometry: CollectionObjectName,
         *,
-        construction_mode: DynamicPlaneMode = DynamicPlaneMode.BISECT_TWO_PLANES,
+        construction_mode: DynamicPlaneMode,
         offset_plane_offset: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1250,6 +1514,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-circle-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-dynamic-circle-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_dynamic_circle_relationship(
         self,
@@ -1257,7 +1523,8 @@ async def make_dynamic_circle_relationship(
         first_reference_geometry: CollectionObjectName,
         second_reference_geometry: CollectionObjectName,
         *,
-        construction_mode: DynamicCircleMode = DynamicCircleMode.CYLINDER_AND_PLANE_HOLD_PLANE_NORMAL,
+        construction_mode: DynamicCircleMode,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1267,6 +1534,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-dynamic-ellipse-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_dynamic_ellipse_relationship(
         self,
@@ -1274,7 +1543,8 @@ async def make_dynamic_ellipse_relationship(
         first_reference_geometry: CollectionObjectName,
         second_reference_geometry: CollectionObjectName,
         *,
-        construction_mode: DynamicEllipseMode = DynamicEllipseMode.CYLINDER_AND_PLANE_INTERSECTION,
+        construction_mode: DynamicEllipseMode,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1284,6 +1554,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-vector-group-to-vector-group-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-vector-group-to-vector-group-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def make_vector_group_to_vector_group_relationship(
         self,
@@ -1292,6 +1564,7 @@ async def make_vector_group_to_vector_group_relationship(
         corresponding_vector_group: CollectionObjectName,
         *,
         set_opposing_vector_group_polarity: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1301,6 +1574,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone) · [gRPC Contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-cylindrical-zone)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_vector_group_to_vector_group_cylindrical_zone(
         self,
@@ -1309,6 +1584,7 @@ async def set_vector_group_to_vector_group_cylindrical_zone(
         radial_offset: float = 1.0,
         minimum_axial_offset: float = -10.0,
         maximum_axial_offset: float = 10.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1317,6 +1593,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Vector Group To Vector Group Fit Weights {/* #set-vector-group-to-vector-group-fit-weights */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights) · [gRPC Contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-weights)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_vector_group_to_vector_group_fit_weights(
@@ -1329,6 +1607,7 @@ async def set_vector_group_to_vector_group_fit_weights(
         maximum_gap_fit_weight: float = 10.0,
         nominal_gap: float = 0.0,
         nominal_gap_fit_weight: float = 1.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1338,12 +1617,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor) · [gRPC Contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-fit-gradient-factor)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_vector_group_to_vector_group_fit_gradient_factor(
         self,
         vg_to_vg_relationship: CollectionItemName,
         *,
         fit_gradient_factor: float = 50.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1353,12 +1635,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-relative-polarity) · [gRPC Contract](/api/grpc/relationship-operations#set-vector-group-to-vector-group-relative-polarity)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_vector_group_to_vector_group_relative_polarity(
         self,
         vg_to_vg_relationship: CollectionItemName,
         *,
         set_opposing_vector_group_polarity: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1368,10 +1653,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#delete-relationship) · [gRPC Contract](/api/grpc/relationship-operations#delete-relationship)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```python
 async def delete_relationship(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1381,11 +1670,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-optimization-search-options) · [gRPC Contract](/api/grpc/relationship-operations#set-optimization-search-options)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_optimization_search_options(
         self,
         *,
         max_number_of_step_size_reduction: int = 5,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1395,6 +1687,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-optimization-perturbation-parameters) · [gRPC Contract](/api/grpc/relationship-operations#set-optimization-perturbation-parameters)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_optimization_perturbation_parameters(
         self,
@@ -1402,6 +1696,7 @@ async def set_optimization_perturbation_parameters(
         length_perturbation: float = 0.0001,
         angular_perturbation: float = 0.0001,
         damping: float = 1.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1411,6 +1706,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#do-relationship-fit) · [gRPC Contract](/api/grpc/relationship-operations#do-relationship-fit)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `use_fit_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def do_relationship_fit(
         self,
@@ -1419,9 +1718,10 @@ async def do_relationship_fit(
         instruments_to_move: Iterable[CollectionInstrumentId],
         *,
         solver_mode: SolverMode = SolverMode.GAUSS_NEWTON,
-        motion_to_allow: FitDofOptions | None = None,
+        motion_to_allow: FitDofOptions,
         enable_randomized_start: bool = False,
         use_fit_dialog: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RelationshipFitResult: ...
 ```
 
@@ -1431,6 +1731,10 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#move-collections-by-minimizing-relationships) · [gRPC Contract](/api/grpc/relationship-operations#move-collections-by-minimizing-relationships)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `use_fit_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def move_collections_by_minimizing_relationships(
         self,
@@ -1438,9 +1742,10 @@ async def move_collections_by_minimizing_relationships(
         relationships_to_minimize: Iterable[CollectionItemName],
         *,
         solver_mode: SolverMode = SolverMode.GAUSS_NEWTON,
-        motion_to_allow: FitDofOptions | None = None,
+        motion_to_allow: FitDofOptions,
         use_fit_dialog: bool = False,
         convergence_threshold: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1450,10 +1755,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-general-relationship-statistics) · [gRPC Contract](/api/grpc/relationship-operations#get-general-relationship-statistics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_general_relationship_statistics(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> GeneralRelationshipStatistics: ...
 ```
 
@@ -1463,10 +1772,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-points-to-objects-relationship-statistics) · [gRPC Contract](/api/grpc/relationship-operations#get-points-to-objects-relationship-statistics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_points_to_objects_relationship_statistics(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> PointsToObjectsRelationshipStatistics: ...
 ```
 
@@ -1476,6 +1789,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#startstop-relationship-trapping) · [gRPC Contract](/api/grpc/relationship-operations#startstop-relationship-trapping)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```python
 async def start_stop_relationship_trapping(
         self,
@@ -1483,6 +1798,7 @@ async def start_stop_relationship_trapping(
         instrument_id: CollectionInstrumentId,
         *,
         start_trapping: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1492,10 +1808,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-point-to-point-relationship-statistics) · [gRPC Contract](/api/grpc/relationship-operations#get-point-to-point-relationship-statistics)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_point_to_point_relationship_statistics(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> PointToPointRelationshipStatistics: ...
 ```
 
@@ -1504,6 +1824,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Group To Nominal Group View Zooming {/* #set-group-to-nominal-group-view-zooming */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-group-to-nominal-group-view-zooming) · [gRPC Contract](/api/grpc/relationship-operations#set-group-to-nominal-group-view-zooming)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def set_group_to_nominal_group_view_zooming(
@@ -1515,6 +1837,7 @@ async def set_group_to_nominal_group_view_zooming(
         use_view_zooming: bool = True,
         ignore_points_beyond_threshold: bool = True,
         proximity_threshold: float = 0.01,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1524,16 +1847,19 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data) · [gRPC Contract](/api/grpc/relationship-operations#set-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_relationship_associated_data(
         self,
         relationship_name: CollectionItemName,
+        individual_points: Iterable[PointName],
+        point_groups: Iterable[CollectionObjectName],
+        point_clouds: Iterable[CollectionObjectName],
+        objects: Iterable[CollectionObjectName],
         *,
-        individual_points: Iterable[PointName] | None = None,
-        point_groups: Iterable[CollectionObjectName] | None = None,
-        point_clouds: Iterable[CollectionObjectName] | None = None,
-        objects: Iterable[CollectionObjectName] | None = None,
         ignore_empty_arguments: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1543,10 +1869,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-associated-data) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_associated_data(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RelationshipAssociatedData: ...
 ```
 
@@ -1556,14 +1886,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data) · [gRPC Contract](/api/grpc/relationship-operations#set-points-to-points-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def set_points_to_points_relationship_associated_data(
         self,
         relationship_name: CollectionItemName,
+        nominal_points: Iterable[PointName],
+        actual_points: Iterable[PointName],
         *,
-        nominal_points: Iterable[PointName] | None = None,
-        actual_points: Iterable[PointName] | None = None,
         ignore_empty_arguments: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1573,10 +1906,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-points-to-points-relationship-associated-data) · [gRPC Contract](/api/grpc/relationship-operations#get-points-to-points-relationship-associated-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_points_to_points_relationship_associated_data(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> PointsToPointsRelationshipAssociatedData: ...
 ```
 
@@ -1586,6 +1923,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d) · [gRPC Contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def auto_filter_clouds_to_nominal_geometry_3d(
         self,
@@ -1593,8 +1932,9 @@ async def auto_filter_clouds_to_nominal_geometry_3d(
         clouds: Iterable[CollectionObjectName],
         *,
         cloud_thinning_settings: CloudThinningOptions | None = None,
-        filter_proximity_settings_3d: FilterProximitySettings | None = None,
+        filter_proximity_settings_3d: FilterProximitySettings,
         use_feature_specific_filter_settings: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1604,6 +1944,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d) · [gRPC Contract](/api/grpc/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def auto_filter_clouds_to_nominal_geometry_2d(
         self,
@@ -1611,9 +1953,10 @@ async def auto_filter_clouds_to_nominal_geometry_2d(
         clouds: Iterable[CollectionObjectName],
         *,
         cloud_thinning_settings: CloudThinningOptions | None = None,
-        filter_proximity_settings_2d: FilterProximitySettings | None = None,
+        filter_proximity_settings_2d: FilterProximitySettings,
         geometry_extraction_tolerance: float = 0.01,
         use_feature_specific_filter_settings: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1623,13 +1966,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-points-to-nominal-geometry-3d) · [gRPC Contract](/api/grpc/relationship-operations#auto-filter-points-to-nominal-geometry-3d)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def auto_filter_points_to_nominal_geometry_3d(
         self,
         auto_filter_target_relationships: Iterable[CollectionItemName],
         points: Iterable[PointName],
+        filter_proximity_settings_3d: FilterProximitySettings,
         *,
-        filter_proximity_settings_3d: FilterProximitySettings | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1639,22 +1985,25 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces) · [gRPC Contract](/api/grpc/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
 ```python
 async def auto_filter_points_groups_clouds_to_surface_faces(
         self,
         surfaces: Iterable[CollectionObjectName],
         *,
-        points: Iterable[PointName] | None = None,
-        groups: Iterable[CollectionObjectName] | None = None,
-        clouds: Iterable[CollectionObjectName] | None = None,
+        points: Iterable[PointName],
+        groups: Iterable[CollectionObjectName],
+        clouds: Iterable[CollectionObjectName],
         surface_offset: float = 0.1,
         edge_offset: float = 0.1,
-        offset_direction: OffsetDirectionType = OffsetDirectionType.BOTH,
+        offset_direction: OffsetDirectionType,
         enforce_max_points_per_face_in_output: bool = False,
         max_points_per_face: int = 0,
         cloud_thinning_settings: CloudThinningOptions | None = None,
         output_cloud_base_name: str = "InspAutoFilteredCloud",
         use_face_ids_for_suffix: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1664,6 +2013,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#extract-geometry-from-point-clouds) · [gRPC Contract](/api/grpc/relationship-operations#extract-geometry-from-point-clouds)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def extract_geometry_from_point_clouds(
         self,
@@ -1671,11 +2022,12 @@ async def extract_geometry_from_point_clouds(
         cloud_name: CollectionObjectName,
         seed_points: Iterable[PointName],
         *,
-        geometry_type: GeometryType = GeometryType.CIRCLE,
-        bounding_points: Iterable[PointName] | None = None,
+        geometry_type: GeometryType,
+        bounding_points: Iterable[PointName],
         tolerance: float = 0.1,
         reverse_normal: bool = False,
         planar_point_count: int = 1000,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1685,15 +2037,18 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#create-points-to-objects-map) · [gRPC Contract](/api/grpc/relationship-operations#create-points-to-objects-map)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def create_points_to_objects_map(
         self,
         points_to_objects_map_name: str,
         objects: Iterable[CollectionObjectName],
         *,
-        points: Iterable[PointName] | None = None,
-        groups: Iterable[CollectionObjectName] | None = None,
+        points: Iterable[PointName],
+        groups: Iterable[CollectionObjectName],
         proximity_tolerance: float = 0.0,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1703,11 +2058,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-objects-from-points-to-objects-map-point-list) · [gRPC Contract](/api/grpc/relationship-operations#get-objects-from-points-to-objects-map-point-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_objects_from_points_to_objects_map_point_list(
         self,
         points_to_objects_map_name: str,
         points: Iterable[PointName],
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> tuple[CollectionObjectName, ...]: ...
 ```
 
@@ -1717,12 +2076,17 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#compute-geometry-relationship-uncertainties) · [gRPC Contract](/api/grpc/relationship-operations#compute-geometry-relationship-uncertainties)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `display_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 ```python
 async def compute_geometry_relationship_uncertainties(
         self,
         relationship_name: CollectionItemName,
         *,
         display_results: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1731,6 +2095,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Make Cloud to Swatch Relationship {/* #make-cloud-to-swatch-relationship */}
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship) · [gRPC Contract](/api/grpc/relationship-operations#make-cloud-to-swatch-relationship)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def make_cloud_to_swatch_relationship(
@@ -1744,6 +2110,7 @@ async def make_cloud_to_swatch_relationship(
         maximum_radial_offset: float = 0.125,
         minimum_axial_offset: float = -0.125,
         maximum_axial_offset: float = 0.125,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -1753,12 +2120,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria-name-list) · [gRPC Contract](/api/grpc/relationship-operations#get-geom-relationship-criteria-name-list)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_geom_relationship_criteria_name_list(
         self,
         relationship_name: CollectionItemName,
         *,
         include_all_criteria: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> tuple[str, ...]: ...
 ```
 
@@ -1768,10 +2138,14 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-status) · [gRPC Contract](/api/grpc/relationship-operations#get-relationship-status)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def get_relationship_status(
         self,
         relationship_name: CollectionItemName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> RelationshipStatusFlags: ...
 ```
 
@@ -1797,4 +2171,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2026.1.0529.7)

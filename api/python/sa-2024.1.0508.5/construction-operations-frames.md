@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Frames
-description: Released python 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released python 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,17 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/python/construction-operations-frames) · [SA 2024.1.0508.5](/api/python/sa-2024.1.0508.5/construction-operations-frames)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The keyword-only `on_mp_completion` observer reports how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Construct Frame with Wizard {/* #construct-frame-with-wizard */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-with-wizard) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-with-wizard)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `wait_for_completion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 ```python
 async def construct_frame_with_wizard(
@@ -22,6 +26,7 @@ async def construct_frame_with_wizard(
         new_frame_name: CollectionObjectName,
         *,
         wait_for_completion: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -31,12 +36,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame(
         self,
         new_frame_name: CollectionObjectName,
+        transform_in_working_coordinates: Transform,
         *,
-        transform_in_working_coordinates: Transform | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -46,12 +54,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-from-transform-in-world) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-transform-in-world)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_from_transform_in_world(
         self,
         new_frame_name: CollectionObjectName,
+        transform_in_world_coordinates: Transform,
         *,
-        transform_in_world_coordinates: Transform | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -61,12 +72,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-on-instrument-base) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-instrument-base)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_on_instrument_base(
         self,
         instrument_id: CollectionInstrumentId,
         *,
         frame_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -76,12 +90,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-on-object) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-on-object)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_on_object(
         self,
         reference_object: CollectionObjectName,
         *,
         frame_name: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -90,6 +107,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame, 3 Points {/* #construct-frame-3-points */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-3-points) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-points)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_frame_three_points(
@@ -100,6 +119,7 @@ async def construct_frame_three_points(
         secondary_axis_point: PointName,
         *,
         frame_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -109,6 +129,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-point-with-working-z-and-clocked-axis)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_at_point_with_working_z_and_clocked_axis(
         self,
@@ -117,6 +139,7 @@ async def construct_frame_at_point_with_working_z_and_clocked_axis(
         clocking_point: PointName,
         *,
         frame_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -126,6 +149,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-pick-origin-and-point-on-x-axis---clock-z-along-working-z)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 ```python
 async def construct_frame_pick_origin_and_point_on_x_axis_clock_z_along_working_z(
         self,
@@ -133,6 +158,7 @@ async def construct_frame_pick_origin_and_point_on_x_axis_clock_z_along_working_
         point_on_x_axis: PointName,
         *,
         frame_name: str | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -141,6 +167,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame, Known Origin, Object Direction, Object Direction {/* #construct-frame-known-origin-object-direction-object-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_frame_known_origin_object_direction_object_direction(
@@ -153,6 +181,7 @@ async def construct_frame_known_origin_object_direction_object_direction(
         secondary_axis_defines_which_axis: AxisIdentifier,
         *,
         frame_name: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -161,6 +190,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frame, 3 Planes {/* #construct-frame-3-planes */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-3-planes) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-3-planes)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_frame_three_planes(
@@ -173,6 +204,7 @@ async def construct_frame_three_planes(
         z_value_on_plane: float,
         *,
         frame_name: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -182,6 +214,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame---copy-and-make-left-handed) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---copy-and-make-left-handed)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_copy_and_make_left_handed(
         self,
@@ -189,6 +223,7 @@ async def construct_frame_copy_and_make_left_handed(
         axis_to_reverse: FrameAxis,
         *,
         frame_name: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -198,12 +233,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame---average-of-other-object-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame---average-of-other-object-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_average_of_other_object_frames(
         self,
         objects: Iterable[CollectionObjectName],
         *,
         frame_name: CollectionObjectName | None = None,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -213,12 +251,16 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-at-robot-link) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-at-robot-link)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_at_robot_link(
         self,
         machine_id: CollectionMachineId,
         link_name: str,
         resulting_frame: CollectionObjectName,
+        *,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -228,12 +270,15 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-from-point-measurement-probing-frames) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frame-from-point-measurement-probing-frames)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frame_from_point_measurement_probing_frames(
         self,
         point_list: Iterable[PointName],
         *,
         show_frame: bool = False,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -243,6 +288,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-mirror-cube-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-mirror-cube-frame)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_mirror_cube_frame(
         self,
@@ -251,6 +298,7 @@ async def construct_mirror_cube_frame(
         *,
         use_current_measurements_marked_as_mirror_shots: bool = True,
         nominal_cube_face_angle: float = 90,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> float: ...
 ```
 
@@ -260,6 +308,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-frame-direction)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 ```python
 async def construct_frames_by_projecting_frames_on_mesh_along_frame_direction(
         self,
@@ -268,6 +318,7 @@ async def construct_frames_by_projecting_frames_on_mesh_along_frame_direction(
         mesh_serving_as_projection_target: CollectionObjectName,
         *,
         bi_directional_projection: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -276,6 +327,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Construct Frames By Projecting Frames On Mesh Along Reference Direction {/* #construct-frames-by-projecting-frames-on-mesh-along-reference-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def construct_frames_by_projecting_frames_on_mesh_along_reference_direction(
@@ -286,6 +339,7 @@ async def construct_frames_by_projecting_frames_on_mesh_along_reference_directio
         mesh_serving_as_projection_target: CollectionObjectName,
         *,
         bi_directional_projection: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> list[CollectionObjectName]: ...
 ```
 
@@ -294,6 +348,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Add Surface To Mesh Offset Along Reference Direction {/* #add-surface-to-mesh-offset-along-reference-direction */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```python
 async def add_surface_to_mesh_offset_along_reference_direction(
@@ -306,6 +362,7 @@ async def add_surface_to_mesh_offset_along_reference_direction(
         *,
         surface_offset_range: float = 10,
         bi_directional_projection: bool = True,
+        on_mp_completion: MpCompletionObserver | None = None,
     ) -> None: ...
 ```
 
@@ -319,4 +376,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-py/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

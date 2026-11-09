@@ -1,6 +1,6 @@
 ---
 title: Robot Calibration Appliance Node Operations
-description: Released javascript 0.4.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released javascript 0.5.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,13 +8,15 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/javascript/robot-calibration-appliance-node-operations) · [SA 2024.1.0508.5](/api/javascript/sa-2024.1.0508.5/robot-calibration-appliance-node-operations)
 
-This reference covers **SA 2024.1.0508.5**, client **0.4.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
-[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. A method that takes `BriosaCallOptions` can pass `onMpCompletion` to observe how a successful call's MP command completed; see [MP Completion](./lifecycle.md#mp-completion).
 
 ## Add Calibration Appliance Node {/* #add-calibration-appliance-node */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#add-calibration-appliance-node) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#add-calibration-appliance-node)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 ```ts
 export interface AddCalibrationApplianceNodeInput {
@@ -36,6 +38,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#delete-calibration-appliance-node) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#delete-calibration-appliance-node)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 ```ts
 export interface DeleteCalibrationApplianceNodeInput {
   readonly calibrationApplianceNodeToDelete: CollectionObjectName;
@@ -55,6 +59,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Connect/Disconnect Calibration Appliance Node {/* #connectdisconnect-calibration-appliance-node */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#connectdisconnect-calibration-appliance-node)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface ConnectDisconnectCalibrationApplianceNodeInput {
@@ -77,6 +83,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetCalibrationApplianceNodeInstrumentInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -97,6 +105,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Measurement Profile {/* #set-calibration-appliance-node-measurement-profile */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-profile)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementProfileInput {
@@ -119,6 +129,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-target)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementTargetInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -139,6 +151,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Enable/Disable Calibration Appliance Node Instrument Auto Point {/* #enabledisable-calibration-appliance-node-instrument-auto-point */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-instrument-auto-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface EnableDisableCalibrationApplianceNodeInstrumentAutoPointInput {
@@ -161,6 +175,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-instrument-dwell-time)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetCalibrationApplianceNodeInstrumentDwellTimeInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -178,7 +194,7 @@ interface BriosaClient {
 
 The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -187,6 +203,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 ## Skip Calibration Appliance Node Measurement {/* #skip-calibration-appliance-node-measurement */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#skip-calibration-appliance-node-measurement)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface SkipCalibrationApplianceNodeMeasurementInput {
@@ -207,6 +225,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Measurement Frame {/* #set-calibration-appliance-node-measurement-frame */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-frame)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementFrameInput {
@@ -229,10 +249,12 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-offset-transform)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementOffsetTransformInput {
   readonly calibrationApplianceNode: CollectionObjectName;
-  readonly measurementOffsetTransform?: Transform;
+  readonly measurementOffsetTransform: Transform;
 }
 
 // Member of BriosaClient
@@ -249,6 +271,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Measurement Point Group {/* #set-calibration-appliance-node-measurement-point-group */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-measurement-point-group)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeMeasurementPointGroupInput {
@@ -271,6 +295,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-calibration-appliance-ip-address)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_config`, `external_io` · **Duration Class:** `quick`
+
 ```ts
 export interface SetCalibrationApplianceNodeCalibrationApplianceIpAddressInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -291,6 +317,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Trapping Node ID {/* #set-calibration-appliance-node-trapping-node-id */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-trapping-node-id)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeTrappingNodeIdInput {
@@ -313,6 +341,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#enabledisable-calibration-appliance-node-trap-manager)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface EnableDisableCalibrationApplianceNodeTrapManagerInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -334,6 +364,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#clear-calibration-appliance-node-trap-manager-requests)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `destructive`, `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface ClearCalibrationApplianceNodeTrapManagerRequestsInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -353,6 +385,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Integer Value {/* #set-calibration-appliance-node-integer-value */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-integer-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeIntegerValueInput {
@@ -376,6 +410,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#get-calibration-appliance-node-integer-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetCalibrationApplianceNodeIntegerValueInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -396,6 +432,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Real Value {/* #set-calibration-appliance-node-real-value */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-real-value)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeRealValueInput {
@@ -419,6 +457,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#get-calibration-appliance-node-real-value)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetCalibrationApplianceNodeRealValueInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -439,6 +479,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Data {/* #set-calibration-appliance-node-data */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-data)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeDataInput {
@@ -461,6 +503,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#get-calibration-appliance-node-data)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 ```ts
 export interface GetCalibrationApplianceNodeDataInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -481,6 +525,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Set Calibration Appliance Node Display Robot {/* #set-calibration-appliance-node-display-robot */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#set-calibration-appliance-node-display-robot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 ```ts
 export interface SetCalibrationApplianceNodeDisplayRobotInput {
@@ -503,6 +549,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#update-calibration-appliance-node-display-robot-joints)
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 ```ts
 export interface UpdateCalibrationApplianceNodeDisplayRobotJointsInput {
   readonly calibrationApplianceNode: CollectionObjectName;
@@ -523,6 +571,8 @@ The signature records required inputs and language defaults. The gRPC contract r
 ## Get Calibration Appliance Node Status {/* #get-calibration-appliance-node-status */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status) · [gRPC Contract](/api/grpc/sa-2024.1.0508.5/robot-calibration-appliance-node-operations#get-calibration-appliance-node-status)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 ```ts
 export interface GetCalibrationApplianceNodeStatusInput {
@@ -644,4 +694,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa-js/tree/v0.4.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa-js/tree/feda30f3bd0bdae8cf9b02ae307146de259e2167/targets/2024.1.0508.5)
