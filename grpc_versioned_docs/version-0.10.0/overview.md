@@ -1,0 +1,87 @@
+---
+title: Briosa gRPC API
+sidebar_label: Briosa gRPC API
+description: Released Briosa gRPC services, protobuf contracts, and supported SpatialAnalyzer MP commands for SA 2026.1.0529.7.
+slug: /
+---
+
+# Briosa gRPC API
+
+[SA 2026.1.0529.7](/api/grpc) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5)
+
+This reference documents **Briosa Server 0.10.0** for exact SpatialAnalyzer
+target **2026.1.0529.7**. It covers lifecycle services, MP operations,
+request and result types, and execution outcomes.
+
+Download the server through [Install Briosa](/install). Use the
+[.NET](/api/dotnet), [Python](/api/python), or
+[JavaScript/TypeScript](/api/javascript) reference for the idiomatic client
+source APIs. The three client families are published as version 0.5.0 for both exact targets.
+
+:::warning[Local-Only API]
+
+The client, server, SDK, and SpatialAnalyzer run on the same Windows machine.
+The public endpoint is loopback-only. Secure remote connections remain
+[planned for a future release](https://github.com/spatialanalyzer/briosa/issues/156).
+
+:::
+
+## Lifecycle Services
+
+The public server can be live without an active SpatialAnalyzer application or
+SDK. The [lifecycle services](./lifecycle.md) manage these resources separately:
+
+- `briosa.SpatialAnalyzerLifecycle` observes, launches, and closes an owned application.
+- `briosa.SpatialAnalyzerSdkLifecycle` starts, connects, reconnects, stops,
+  diagnoses, and recovers the isolated SDK generation.
+
+MP execution requires verified runtime identities and a ready execution channel.
+Starting or recovering the SDK leaves it disconnected. Stopping the server
+never implicitly closes SpatialAnalyzer. Recovery does not replay an earlier
+command or establish its unknown outcome.
+
+## MP Operations
+
+Browse **MP Commands** in the sidebar or find an exact MP label in the
+[command catalog](/mp-command-catalog). Each operation documents its RPC,
+arguments, defaults, results, and validation qualification.
+
+`DiscoveryService/ListCapabilities` reports the operations that the running
+server's admission profile admits, with each operation's reviewed risk flags,
+duration class, validation status, and admission. Each operation page shows the
+profiles that admit it, its risk flags, and its duration class; see
+[Operation Admission](/docs/deployment/operation-admission). Inclusion in this
+reference does not override those controls or imply that an operation is ready
+to run in the current session.
+
+Behavioral contract major 3 removed nine operations that SpatialAnalyzer rejects,
+or that no operator could complete, on these exact targets. Their pages remain
+as unavailable views that explain the removal and link to the contract that
+Server 0.9.2 and earlier serve.
+
+The server contains both read-only and mutating operations. Follow each
+operation's replay guidance; do not retry an ambiguously completed command
+automatically. See [Execution Outcomes](/docs/concepts/execution-outcomes).
+
+## Release and Validation Status
+
+This is a released **v0.x API**, with explicit validation limits. Portable tests
+and local licensed observations do not establish complete real-SA validation
+for every command. Hardware, external software, interactive workflows, and
+fixture-dependent operations retain their individual At Risk qualifications.
+See [Release Status](/docs/releases) for the current v1.0 gates.
+
+`RunCribSheet`, `ProjectObjects`, and `StopProjection` are documented proposals
+but are not exposed by the 0.10.0 service. Their reference pages state that limit.
+
+The [candidate protobuf source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/proto/briosa)
+and handwritten runtime registration define the implemented API. Catalog
+membership and retained message types do not create an RPC.
+
+## Exact Target
+
+This section covers **SA 2026.1.0529.7**. Select [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5) for its released signatures and types.
+
+## Discovery and Shared Values
+
+See [Server Discovery](./discovery.md) for identity, compatibility, and capability RPCs; see [MP Value Types](./value-types.md) for exact-target protobuf values.

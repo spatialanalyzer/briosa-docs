@@ -1,0 +1,142 @@
+---
+title: Instrument Operations / API - LADAR
+description: Released dotnet 0.5.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+toc_max_heading_level: 2
+---
+
+# Instrument Operations / API - LADAR
+
+[SA 2026.1.0529.7](/api/dotnet/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations-api-ladar)
+
+This reference covers **SA 2026.1.0529.7**, client **0.5.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+
+[MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation. The optional `onMpCompletion` observer reports how a successful call's MP command completed; see [MP Command Outcomes](./lifecycle.md#mp-command-outcomes).
+
+## Set LADAR AutoMeas Point {/* #set-ladar-automeas-point */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-point)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarAutoMeasPointAsync(
+        CollectionInstrumentId instrument,
+        int sampleTimeMilliseconds = 0,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set LADAR AutoMeas Sphere {/* #set-ladar-automeas-sphere */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-automeas-sphere)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarAutoMeasSphereAsync(
+        CollectionInstrumentId instrument,
+        double sphereRadius = 1.1875,
+        double scanLineSpacing = 0.05,
+        bool sendCenterPoint = true,
+        bool sendSphere = false,
+        bool sendMeasuredCloud = false,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set LADAR FeatureMeas Sphere {/* #set-ladar-featuremeas-sphere */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarFeatureMeasSphereAsync(
+        CollectionInstrumentId instrument,
+        double scanLineSpacing = 0.05,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set LADAR FeatureMeas Circle {/* #set-ladar-featuremeas-circle */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarFeatureMeasCircleAsync(
+        CollectionInstrumentId instrument,
+        double scanLineSpacing = 0.05,
+        double widthOfExtraAreaAroundScan = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set LADAR FeatureMeas Slot {/* #set-ladar-featuremeas-slot */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarFeatureMeasSlotAsync(
+        CollectionInstrumentId instrument,
+        double scanLineSpacing = 0.05,
+        double widthOfExtraAreaAroundScan = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## Set LADAR FeatureMeas Cylinder {/* #set-ladar-featuremeas-cylinder */}
+
+[MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC Contract](/api/grpc/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
+```csharp
+public Task SetLadarFeatureMeasCylinderAsync(
+        CollectionInstrumentId instrument,
+        double scanLineSpacing = 0.05,
+        double widthOfExtraAreaAroundScan = 0.0,
+        Action<MpCompletion>? onMpCompletion = null,
+        CancellationToken cancellationToken = default);
+```
+
+The signature records required inputs and language defaults. The gRPC contract records exact MP argument and output bindings.
+
+## SetLadarAutoMeasPointAsync {/* #setladarautomeaspointasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## SetLadarAutoMeasSphereAsync {/* #setladarautomeassphereasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasSphereAsync {/* #setladarfeaturemeassphereasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasCircleAsync {/* #setladarfeaturemeascircleasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasSlotAsync {/* #setladarfeaturemeasslotasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+## SetLadarFeatureMeasCylinderAsync {/* #setladarfeaturemeascylinderasync */}
+
+Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa-dotnet/tree/3823369030dc0a286d698a4795b9442b4c7f9bf1/targets/2026.1.0529.7)
