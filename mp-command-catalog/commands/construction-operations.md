@@ -10,7 +10,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 These entries cover the 14 commands observed directly in the Construction
 Operations root group for SA 2026.1.0529.7. The group's subgroups are reviewed
-separately. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+separately. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -233,7 +233,10 @@ frame. A licensed SA 2026.1.0529.7 setter-only probe confirmed that the exact
 SDK accepts all three documented plane values through `SetStringArg`, despite
 the MP Editor export marking this argument `NOT_SUPPORTED`. The probe never
 called `ExecuteStep`; actual copy and move behavior still requires a protected
-fixture scenario.
+fixture scenario. Licensed probes on October 7, 2026 then ran the step through
+Briosa on both exact targets: with the frame plane sent through `SetStringArg`,
+SpatialAnalyzer returned MP code -1. Contract major 3 removes this operation;
+the evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
 
 **API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations/mirror-objects) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations/mirror-objects) · [Python](/api/python/sa-2026.1.0529.7/construction-operations/mirror-objects) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations/mirror-objects)
 
@@ -964,7 +967,7 @@ from `Any` through `Vertex Points`, followed by `Point Offset`. A second
 exported `Object Type` setter with `Entire Solid` and `Select Faces` choices is
 an SA View SDK Code export defect and is not part of the command signature.
 
-Included in Briosa Server 0.9.2 because callers may intentionally coordinate an
+Included in Briosa Server 0.10.0 because callers may intentionally coordinate an
 operator-driven CAD selection workflow. Briosa requires `Object Type` rather
 than defaulting it to `Any`; choosing a specific type avoids the additional
 type-selection dialog, while callers can still select `Any` when that dialog is

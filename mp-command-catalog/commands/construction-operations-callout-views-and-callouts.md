@@ -471,7 +471,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are `Destination Callout View`, `Relationship Name`, X/Y positions
-(default 0), and optional edit-text notes. Included in Briosa Server 0.9.2. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-relationship-callout)
+(default 0), and optional edit-text notes. Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-relationship-callout)
 
 ## Create Picture Callout
 
@@ -516,7 +516,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 
 Inputs are the destination callout view, picture name, X/Y positions (defaults
 0.4/0.6), image scale percentage (default 100), and an optional anchor object.
-Included in Briosa Server 0.9.2. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-picture-callout)
+Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-picture-callout)
 
 ## Create Text Callout
 
@@ -559,7 +559,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
 Inputs are the destination callout view, required edit-text lines, X/Y
-positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.9.2.
+positions (defaults 0.4/0.6), and an optional anchor point. Included in Briosa Server 0.10.0.
 [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/create-text-callout)
 
 ## Make a Callout View Ref List
@@ -851,7 +851,7 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 Inputs define the default name, view recall flags, leader and border thickness
 and colors, text-divider behavior, and font. Exact defaults include gray leader
 RGB `(128, 128, 128)`, blue border RGB `(0, 0, 255)`, and `MS Shell Dlg` at 8
-points. Included in Briosa Server 0.9.2. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-default-callout-view-properties)
+points. Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-default-callout-view-properties)
 
 ## Set Callout View Properties
 
@@ -901,7 +901,9 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 Applies the same visual settings to a required callout-view list. ObjectiveSA
 uses the generic collection-object ref-list setter for the export's
 `NOT_SUPPORTED` input; exact-target binding and visual validation remain
-required. [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-callout-view-properties)
+required. Licensed probes on October 7, 2026 sent the list through that setter
+on both exact targets, and SpatialAnalyzer returned MP code -1. Contract major 3
+removes this operation; the evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310). [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-callout-view-properties)
 
 ## Delete Callout View
 

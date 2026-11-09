@@ -8,7 +8,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 
 # Analysis Operations Commands
 
-These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.9.2; runtime policy and readiness still apply.
+These canonical entries document the reviewed 2026.1.0529.7 command surface once. Current entries are included in Briosa Server 0.10.0; runtime policy and readiness still apply.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
@@ -2233,7 +2233,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Report Deviations` | Boolean | false | false |
 | Input | `Fit Interface Tolerance (-1.0 use profile)` | Double | -1.000000 | -1.000000 |
 | Input | `Ignore Out of Tolerance Points` | Boolean | false | false |
-| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Required |
+| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Omitted |
 
 ### Briosa Disposition
 
@@ -2306,7 +2306,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Report Deviations` | Boolean | false | false |
 | Input | `Fit Interface Tolerance (-1.0 use profile)` | Double | -1.000000 | -1.000000 |
 | Input | `Ignore Out of Tolerance Points` | Boolean | false | false |
-| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Required |
+| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Omitted |
 
 ### Briosa Disposition
 
@@ -2377,7 +2377,7 @@ Collection-object inputs use the [2024 collection/name binding](/mp-command-cata
 | Input | `Report Deviations` | Boolean | false | false |
 | Input | `Fit Interface Tolerance (-1.0 use profile)` | Double | -1.000000 | -1.000000 |
 | Input | `Ignore Out of Tolerance Points` | Boolean | false | false |
-| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Required |
+| Input | `Starting Condition Geometry (optional)` | Collection Object Name | See MP definition | Omitted |
 
 ### Briosa Disposition
 

@@ -30,7 +30,7 @@ admitted by policy.
   <Link
     className="catalog-group-card"
     to="/mp-command-catalog/2026.1.0529.7/overview">
-    <span className="catalog-group-kicker">Released · 1,027 Current Operations</span>
+    <span className="catalog-group-kicker">Released · 1,018 Current Operations</span>
     <strong>SpatialAnalyzer 2026.1.0529.7</strong>
     <p>Browse 1,371 reviewed commands and their released support: 1,360 in the SA-native group hierarchy plus 11 documentation-only commands.</p>
     <span className="catalog-group-link">Open target catalog →</span>
@@ -38,7 +38,7 @@ admitted by policy.
   <Link
     className="catalog-group-card"
     to="/mp-command-catalog/2024.1.0508.5/overview">
-    <span className="catalog-group-kicker">Released · 996 Current Operations</span>
+    <span className="catalog-group-kicker">Released · 987 Current Operations</span>
     <strong>SpatialAnalyzer 2024.1.0508.5</strong>
     <p>Browse 1,283 reviewed commands, their released support, and version differences.</p>
     <span className="catalog-group-link">Open target catalog →</span>
@@ -93,10 +93,10 @@ scenario does not by itself make a command intentionally excluded.
 
 ## Released Availability
 
-Released availability reflects Briosa Server **0.9.2** for both SA **2026.1.0529.7** (1,027 Current operations) and SA **2024.1.0508.5** (996 Current operations).
+Released availability reflects Briosa Server **0.10.0** for both SA **2026.1.0529.7** (1,018 Current operations) and SA **2024.1.0508.5** (987 Current operations).
 Browse command groups to find exact MP labels, inputs, outputs, API links,
 and alternatives.
 
 Released server support and client-package publication are separate. The .NET,
 Python, and JavaScript/TypeScript clients are published as package version
-**0.4.0** for each exact target. See [Release Status](/docs/releases).
+**0.5.0** for each exact target.{/* release-pending */} See [Release Status](/docs/releases).

@@ -9,7 +9,7 @@ description: Reviewed Analysis Operations / GDT Operations commands and released
 <p className="catalog-path">SA 2024.1.0508.5 <span aria-hidden="true">/</span> Analysis Operations <span aria-hidden="true">/</span> GDT Operations</p>
 
 This group contains 30 reviewed command entries. **Current** means implemented
-in Briosa Server 0.9.2 for this exact target. Runtime readiness and policy still apply. Follow a
+in Briosa Server 0.10.0 for this exact target. Runtime readiness and policy still apply. Follow a
 command link for its exact-target signature, disposition, and version differences.
 
 | MP Command | Status | Validation |

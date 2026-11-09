@@ -204,5 +204,9 @@ The installed help omits `Single Surface?`, but exact-target SDK evidence
 includes it, so Briosa preserves it. `Circle Line Mode` is exposed as a
 controlled Circle/Line enum. Its generic string-setter mapping requires an
 exact-target setter probe before this operation is considered validated.
+Licensed probes on October 7, 2026 ran it through Briosa on both exact targets
+with each mode: SpatialAnalyzer rejected `Circle Line Mode` sent through
+`SetStringArg` for both `Circle` and `Line`, with MP code -1. Contract major 3
+removes this operation; the evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
 
 [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces)

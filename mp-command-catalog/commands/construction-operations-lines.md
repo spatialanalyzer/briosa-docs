@@ -9,7 +9,7 @@ import CatalogFilter from '@site/src/components/CatalogFilter';
 # Construction Operations / Lines Commands
 
 These entries cover the nine commands observed under **Construction Operations
-→ Lines** in SA 2026.1.0529.7. Every command is included in Briosa Server 0.9.2.
+→ Lines** in SA 2026.1.0529.7. Every command is included in Briosa Server 0.10.0.
 
 <p>Choose an SA target to filter command availability. The summary follows the selected target; each command below records its target-specific status.</p>
 
