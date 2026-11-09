@@ -142,10 +142,11 @@ test('product guides and landing pages use the DocSearch content selectors', () 
 test('API results keep exact current release/SA context and method-section destinations', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
-      const release = family === 'grpc' ? '0.9.0' : '0.4.0';
+      const release = family === 'grpc' ? '0.10.0' : '0.5.0';
+      const previous = family === 'grpc' ? '0.9.0' : '0.4.0';
       const route = `api/${family}/sa-${target}/analysis-operations/angle-between-line-and-plane`;
       const records = run(route);
-      assert.equal(run(`api/${family}/sa-${target}/${release}/analysis-operations/angle-between-line-and-plane`).length, 0);
+      assert.equal(run(`api/${family}/sa-${target}/${previous}/analysis-operations/angle-between-line-and-plane`).length, 0);
       assert.ok(records.length > 1);
       for (const record of records) {
         assert.equal(record.sa_target, target);

@@ -68,7 +68,7 @@ message AutoRangeAndSetVectorGroupColorizationAllResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -103,7 +103,7 @@ message AutoRangeAndSetVectorGroupColorizationSelectedResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -136,7 +136,7 @@ message DeleteIthVectorFromVectorGroupResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -169,7 +169,7 @@ message DeleteVectorByNameResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

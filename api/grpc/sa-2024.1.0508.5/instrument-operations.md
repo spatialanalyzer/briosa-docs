@@ -334,7 +334,7 @@ message GetCurrentInstrumentPositionUpdateResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -450,7 +450,7 @@ message MeasureExistingSinglePointManualGuideResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -795,7 +795,7 @@ message DeleteMeasurementObservationResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -834,7 +834,7 @@ message MoveMeasurementObservationResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1348,7 +1348,7 @@ message LocateInstrumentsUsmnResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1408,7 +1408,7 @@ message CreateTemplatedInstrumentUsmnResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1651,7 +1651,7 @@ message GetTrackerEdmTheodoliteUncertaintiesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1696,7 +1696,7 @@ message SetTrackerEdmTheodoliteUncertaintiesResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1861,7 +1861,7 @@ message GetInstrumentWeatherSettingResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1902,7 +1902,7 @@ message SetInstrumentWeatherSettingResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1938,7 +1938,7 @@ message GetInstrumentPartTemperatureResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1975,7 +1975,7 @@ message ComputeCteScaleFactorResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2010,7 +2010,7 @@ message SetMultiplyInstrumentScaleFactorResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2043,7 +2043,7 @@ message SetAbsoluteInstrumentScaleFactorResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -2333,7 +2333,7 @@ message GetObservationInfoResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -3375,7 +3375,7 @@ message GetInstrumentInterfaceResponseTimeoutResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -3408,7 +3408,7 @@ message SetInstrumentInterfaceResponseTimeoutResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

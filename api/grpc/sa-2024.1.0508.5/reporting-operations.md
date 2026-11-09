@@ -522,7 +522,7 @@ message CreateChartFromVectorGroupResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -573,7 +573,7 @@ message DefineReportTemplateResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1010,7 +1010,7 @@ message MakeNewSaReportResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1268,7 +1268,7 @@ message QuickReportResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1348,7 +1348,7 @@ message RemoveReportTagResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1437,7 +1437,7 @@ message SaveCurrentViewBmpJpgPngGifTiffResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

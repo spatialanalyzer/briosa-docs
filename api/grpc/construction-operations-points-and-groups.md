@@ -773,7 +773,7 @@ message GetGradientAtProjectedPointOnSurfaceEdgeResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1115,7 +1115,7 @@ message ConstructPointsCylindricallyShiftedResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1548,7 +1548,7 @@ message CreateHiddenPointRodResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

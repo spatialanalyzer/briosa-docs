@@ -264,7 +264,7 @@ test('search prefers the release of the reference being read, including release-
   assert.deepEqual(searchFilters('/api/grpc/file-operations/direct-cad-access', current), ['api_family:grpc']);
   assert.equal(searchFilters('/docs/intro', current), undefined);
   const built = JSON.parse(readFileSync(path.join(root, '.docusaurus', 'globalData.json'), 'utf8'))['briosa-api-reference'].default.current;
-  for (const [family, release] of Object.entries({grpc: '0.9.0', dotnet: '0.4.0', python: '0.4.0', javascript: '0.4.0'})) {
+  for (const [family, release] of Object.entries({grpc: '0.10.0', dotnet: '0.5.0', python: '0.5.0', javascript: '0.5.0'})) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) assert.equal(built[family][target], release, `${family} ${target}`);
   }
 });
@@ -359,13 +359,17 @@ test('method pages render their contract as an operation panel with highlighted,
   // Copy and expand controls need JavaScript and are added after hydration, so
   // the served page and its search records carry no button text.
   assert.equal($('.api-contract button').length, 0);
-  // The gRPC reference names the later servers that serve its contract unchanged:
-  // in a chip, and in a site note kept apart from the released text.
-  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
-  assert.equal($('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
-  assert.equal($('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
-  assert.doesNotMatch($('.api-contract').text(), /same contract/);
-  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.9\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The current reference has no later same-contract servers.
+  assert.deepEqual($('.api-applies .sl-chip').toArray().map((n) => $(n).text()), ['SA 2026.1.0529.7', 'Server 0.10.0']);
+  assert.equal($('.api-same-contract').length, 0);
+  assert.match($('#execution-notes').nextUntil('h2').text(), /Server 0\.10\.0\. Choose the SpatialAnalyzer target above;/, 'the released sentence is unchanged');
+  // The Server 0.9.0 reference names the later servers that serve its contract
+  // unchanged: in a chip, and in a site note kept apart from the released text.
+  const earlier = read('/api/grpc/sa-2026.1.0529.7/0.9.0/file-operations');
+  assert.deepEqual(earlier('.api-applies .sl-chip').toArray().map((n) => earlier(n).text()), ['SA 2026.1.0529.7', 'Server 0.9.0', 'Same Contract 0.9.1 · 0.9.2']);
+  assert.equal(earlier('.api-same-contract').text(), 'Servers 0.9.1 and 0.9.2 serve this same contract; Release Status lists their runtime corrections.');
+  assert.equal(earlier('.api-same-contract a').attr('href'), '/docs/releases#documentation-versions');
+  assert.doesNotMatch(earlier('.api-contract').text(), /same contract/);
   // The first-call walkthrough's grpcurl example is highlighted in the served page.
   const walkthrough = read('/api/grpc/sa-2026.1.0529.7/file-operations/get-working-directory')('.api-code[data-language="powershell"]');
   assert.equal(walkthrough.length, 1);
@@ -406,11 +410,14 @@ test('titles never show literal backticks, and overview links read as the overvi
 test('release-qualified addresses redirect statically to current references or history without indexing', () => {
   const map = sitemap();
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const [currentRelease, olderRelease] = family === 'grpc' ? ['0.9.0', '0.7.0'] : ['0.4.0', '0.2.0'];
+    // Releases cut after release-independent addresses get no release-qualified
+    // addresses, so every published release-qualified method address now leads
+    // to the method's history.
+    const [previousRelease, olderRelease] = family === 'grpc' ? ['0.9.0', '0.7.0'] : ['0.4.0', '0.2.0'];
     const target = '2024.1.0508.5';
     const method = 'analysis-operations/angle-between-line-and-plane';
     const canonical = `/api/${family}/sa-${target}/${method}`;
-    for (const [from, to] of [[`/api/${family}/sa-${target}/${currentRelease}/${method}`, canonical], [`/api/${family}/sa-${target}/${olderRelease}/${method}`, `/api/${family}/${method}#${pair(olderRelease, target)}`]]) {
+    for (const [from, to] of [[`/api/${family}/sa-${target}/${previousRelease}/${method}`, `/api/${family}/${method}#${pair(previousRelease, target)}`], [`/api/${family}/sa-${target}/${olderRelease}/${method}`, `/api/${family}/${method}#${pair(olderRelease, target)}`]]) {
       const $ = read(from);
       assert.match($('meta[name="robots"]').attr('content'), /noindex/, from);
       assert.equal($('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + to, from);

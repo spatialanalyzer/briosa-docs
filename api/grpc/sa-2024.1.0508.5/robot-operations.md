@@ -219,7 +219,7 @@ message SetRobotMachineParameterResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -332,7 +332,7 @@ message SetRobotMachineModelLinkParametersResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -595,7 +595,7 @@ message MoveRobotMachineToJointPoseSixDofResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -689,7 +689,7 @@ message DeleteRobotCalibrationResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -933,7 +933,7 @@ message SetRobotCalibrationToolFrameResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -968,7 +968,7 @@ message SetRobotCalibrationMeasurementOffsetInToolFrameResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

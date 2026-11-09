@@ -13,7 +13,7 @@ const revision = (family, id, release, target) => {
 
 test('current, historical, and exact-target references have distinct identities', () => {
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
-    const current = family === 'grpc' ? '0.9.0' : '0.4.0';
+    const current = family === 'grpc' ? '0.10.0' : '0.5.0';
     const previous = family === 'grpc' ? '0.5.1' : '0.1.0';
     const root = `api/${family}`;
     assert.match(html(`${root}/sa-2026.1.0529.7/analysis-operations`)('title').text(), new RegExp(`${current} · SA 2026`));
@@ -46,6 +46,35 @@ test('client discovery references expose the current selector and reports', () =
       const content = html(`api/${family}${target}/0.2.0/installation-selection`)('article').text();
       for (const model of ['BriosaServerSelection', 'BriosaInstallation', 'BriosaDiscoveryReport', 'BriosaDiscoveryDiagnostic']) assert.ok(content.includes(model));
     }
+  }
+});
+
+test('contract major 3 keeps retired methods as unavailable views with their history', () => {
+  for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
+    const release = family === 'grpc' ? '0.9.0' : '0.4.0';
+    for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
+      const $ = html(`api/${family}/sa-${target}/construction-operations/mirror-objects`);
+      assert.match($('meta[name="robots"]').attr('content'), /noindex/, `${family} ${target}`);
+      assert.match($('article').text(), /contract major 3/i, `${family} ${target}`);
+      assert.ok(revision(family, 'construction-operations/mirror-objects', release, target).length, `${family} ${target} keeps the ${release} contract`);
+    }
+  }
+});
+
+test('current operation pages show admission profiles, risk flags, and duration class', () => {
+  for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
+    for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
+      const text = html(`api/${family}/sa-${target}/file-operations/get-working-directory`)('.api-op').text();
+      assert.match(text, /Admission Profiles:\s*read-only, standard, device, full · Risk Flags:\s*none · Duration Class:\s*quick/, `${family} ${target}`);
+      const cad = html(`api/${family}/sa-${target}/file-operations/direct-cad-access`)('.api-op').text();
+      assert.match(cad, /interactive opt-in/, `${family} ${target} names its request-option guard`);
+    }
+  }
+});
+
+test('the published Server 0.9.0 discovery contract lists every worker runtime state', () => {
+  for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
+    assert.match(html(`api/grpc/sa-${target}/0.9.0/discovery`)('article').text(), /WORKER_RUNTIME_STATE_STOPPING = 5;/, target);
   }
 });
 

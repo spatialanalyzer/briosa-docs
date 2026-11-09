@@ -109,7 +109,7 @@ message ConstructPlanesBoundingPointGroupResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |

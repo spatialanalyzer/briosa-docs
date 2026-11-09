@@ -124,7 +124,7 @@ message GetGeomRelationshipAutoVectorsResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -960,7 +960,7 @@ message SetGeomRelationshipAutoMeasureNominalFeatureResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1746,7 +1746,7 @@ message SetRelationshipVoxelCloudDisplayResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
@@ -1943,7 +1943,7 @@ message RelationshipWatchWindowTemplateResult {
 }
 ```
 
-Parameter and result notes (units, defaults, and presence are unchanged):
+Parameter and result notes:
 
 | Member | Meaning |
 | --- | --- |
