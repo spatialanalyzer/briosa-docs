@@ -1,6 +1,6 @@
 ---
 title: Reporting Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/reporting-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/reporting-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-charts-to-report-bar)
 
 `/briosa.ReportingOperations/AddChartsToReportBar` · Operation ID: `reporting_operations.add_charts_to_report_bar`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -42,6 +44,10 @@ message AddChartsToReportBarResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-custom-table-to-sa-report)
 
 `/briosa.ReportingOperations/AddCustomTableToSaReport` · Operation ID: `reporting_operations.add_custom_table_to_sa_report`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -70,6 +76,8 @@ message AddCustomTableToSaReportResult {
 
 `/briosa.ReportingOperations/AddCustomTablesToReportBar` · Operation ID: `reporting_operations.add_custom_tables_to_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `custom_tables_to_report` | `repeated CollectionItemName` | Custom Table(s) To Report | Required |
@@ -94,6 +102,8 @@ message AddCustomTablesToReportBarResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-datums-to-report-bar)
 
 `/briosa.ReportingOperations/AddDatumsToReportBar` · Operation ID: `reporting_operations.add_datums_to_report_bar`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -120,6 +130,8 @@ message AddDatumsToReportBarResult {
 
 `/briosa.ReportingOperations/AddEventsToReportBar` · Operation ID: `reporting_operations.add_events_to_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `events` | `repeated CollectionItemName` | Event(s) | Required |
@@ -145,6 +157,8 @@ message AddEventsToReportBarResult {
 
 `/briosa.ReportingOperations/AddFeatureChecksToReportBar` · Operation ID: `reporting_operations.add_feature_checks_to_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_checks` | `repeated CollectionItemName` | Feature Check(s) | Required |
@@ -169,6 +183,10 @@ message AddFeatureChecksToReportBarResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-item-to-sa-report-at-location)
 
 `/briosa.ReportingOperations/AddItemToSaReportAtLocation` · Operation ID: `reporting_operations.add_item_to_sa_report_at_location`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -203,6 +221,8 @@ message AddItemToSaReportAtLocationResult {
 
 `/briosa.ReportingOperations/AddObjectsToReportBar` · Operation ID: `reporting_operations.add_objects_to_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects` | `repeated CollectionObjectName` | Object(s) | Required |
@@ -227,6 +247,8 @@ message AddObjectsToReportBarResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#add-pictures-to-report-bar)
 
 `/briosa.ReportingOperations/AddPicturesToReportBar` · Operation ID: `reporting_operations.add_pictures_to_report_bar`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -253,6 +275,8 @@ message AddPicturesToReportBarResult {
 
 `/briosa.ReportingOperations/AddRelationshipsToReportBar` · Operation ID: `reporting_operations.add_relationships_to_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationships` | `repeated CollectionItemName` | Relationship(s) | Required |
@@ -277,6 +301,10 @@ message AddRelationshipsToReportBarResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#append-items-to-sa-report)
 
 `/briosa.ReportingOperations/AppendItemsToSaReport` · Operation ID: `reporting_operations.append_items_to_sa_report`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -307,6 +335,8 @@ message AppendItemsToSaReportResult {
 
 `/briosa.ReportingOperations/CaptureCurrentView` · Operation ID: `reporting_operations.capture_current_view`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `picture_name` | `optional CollectionItemName` | Picture Name | Required |
@@ -329,6 +359,8 @@ message CaptureCurrentViewResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#capture-screen-to-file-bmpjpgpnggiftiff)
 
 `/briosa.ReportingOperations/CaptureScreenToFileBmpJpgPngGifTiff` · Operation ID: `reporting_operations.capture_screen_to_file_bmp_jpg_png_gif_tiff`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -353,6 +385,8 @@ message CaptureScreenToFileBmpJpgPngGifTiffResult {
 
 `/briosa.ReportingOperations/ClearCustomTable` · Operation ID: `reporting_operations.clear_custom_table`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -376,6 +410,8 @@ message ClearCustomTableResult {
 
 `/briosa.ReportingOperations/CloseAllReports` · Operation ID: `reporting_operations.close_all_reports`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -398,6 +434,8 @@ message CloseAllReportsResult {
 
 `/briosa.ReportingOperations/CloseHtmlDisplayBoard` · Operation ID: `reporting_operations.close_html_display_board`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -419,6 +457,10 @@ message CloseHtmlDisplayBoardResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#combine-sa-reports)
 
 `/briosa.ReportingOperations/CombineSaReports` · Operation ID: `reporting_operations.combine_sa_reports`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -447,6 +489,10 @@ message CombineSaReportsResult {
 
 `/briosa.ReportingOperations/CreateChartFromVectorGroup` · Operation ID: `reporting_operations.create_chart_from_vector_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_chart_name` | `optional ChartName` | New Chart Name | Required |
@@ -454,7 +500,7 @@ message CombineSaReportsResult {
 | Request | 3 | `chart_type` | `optional ChartType` | Chart Type | Required |
 | Request | 4 | `data_set_to_chart` | `optional DatasetType` | Data Set to Chart | Required |
 | Request | 5 | `aux_data_set_to_chart` | `optional DatasetType` | Aux Data Set to Chart | Required |
-| Request | 6 | `template_chart_name` | `optional ChartName` | Template Chart Name (optional) | Required |
+| Request | 6 | `template_chart_name` | `optional ChartName` | Template Chart Name (optional) | Omitted |
 | Request | 7 | `show_interface` | `optional bool` | Show Interface? | false |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -480,13 +526,17 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 | Member | Meaning |
 | --- | --- |
-| `template_chart_name` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `template_chart_name` | Optional (major 3): omitted when absent; an empty name is rejected. A name that matches no chart opens a blocking SpatialAnalyzer dialog. |
 
 ## Define Report Template {/* #define-report-template */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#define-report-template)
 
 `/briosa.ReportingOperations/DefineReportTemplate` · Operation ID: `reporting_operations.define_report_template`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_generated_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -535,6 +585,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.ReportingOperations/DeleteChart` · Operation ID: `reporting_operations.delete_chart`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `chart_name` | `optional CollectionObjectName` | Chart Name | Required |
@@ -557,6 +609,8 @@ message DeleteChartResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-custom-table)
 
 `/briosa.ReportingOperations/DeleteCustomTable` · Operation ID: `reporting_operations.delete_custom_table`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -581,6 +635,8 @@ message DeleteCustomTableResult {
 
 `/briosa.ReportingOperations/DeletePicture` · Operation ID: `reporting_operations.delete_picture`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `picture_name` | `optional CollectionItemName` | Picture Name | Required |
@@ -603,6 +659,8 @@ message DeletePictureResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#delete-sa-doc)
 
 `/briosa.ReportingOperations/DeleteSaDoc` · Operation ID: `reporting_operations.delete_sa_doc`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -627,6 +685,8 @@ message DeleteSaDocResult {
 
 `/briosa.ReportingOperations/DeleteSaReport` · Operation ID: `reporting_operations.delete_sa_report`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_name` | `optional CollectionObjectName` | Report Name | Required |
@@ -650,6 +710,8 @@ message DeleteSaReportResult {
 
 `/briosa.ReportingOperations/DeleteSaReportTemplate` · Operation ID: `reporting_operations.delete_sa_report_template`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_template_name` | `optional CollectionObjectName` | Report Template Name | Required |
@@ -672,6 +734,10 @@ message DeleteSaReportTemplateResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#generate-quick-report-from-tab-order)
 
 `/briosa.ReportingOperations/GenerateQuickReportFromTabOrder` · Operation ID: `reporting_operations.generate_quick_report_from_tab_order`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `open_report` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -698,6 +764,8 @@ message GenerateQuickReportFromTabOrderResult {
 
 `/briosa.ReportingOperations/GenerateStandardHtmlReport` · Operation ID: `reporting_operations.generate_standard_html_report`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `html_output_file` | `optional FileReference` | HTML Output File | Required |
@@ -723,6 +791,8 @@ message GenerateStandardHtmlReportResult {
 
 `/briosa.ReportingOperations/GenerateUpdateTemplatedReport` · Operation ID: `reporting_operations.generate_update_templated_report`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_template` | `optional CollectionObjectName` | Report Template | Required |
@@ -745,6 +815,8 @@ message GenerateUpdateTemplatedReportResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-custom-table-cell-double)
 
 `/briosa.ReportingOperations/GetCustomTableCellDouble` · Operation ID: `reporting_operations.get_custom_table_cell_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -775,6 +847,8 @@ message GetCustomTableCellDoubleResult {
 
 `/briosa.ReportingOperations/GetCustomTableCellString` · Operation ID: `reporting_operations.get_custom_table_cell_string`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -804,6 +878,8 @@ message GetCustomTableCellStringResult {
 
 `/briosa.ReportingOperations/GetDefinedReportTags` · Operation ID: `reporting_operations.get_defined_report_tags`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `defined_tags` | `repeated string` | Defined Tags | — |
@@ -827,6 +903,8 @@ message GetDefinedReportTagsResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#get-report-tag-value)
 
 `/briosa.ReportingOperations/GetReportTagValue` · Operation ID: `reporting_operations.get_report_tag_value`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -857,6 +935,8 @@ message GetReportTagValueResult {
 
 `/briosa.ReportingOperations/HtmlDisplayBoard` · Operation ID: `reporting_operations.html_display_board`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `input_html_file` | `optional FileReference` | Input HTML File | Required |
@@ -882,6 +962,8 @@ message HtmlDisplayBoardResult {
 
 `/briosa.ReportingOperations/MakeCustomTable` · Operation ID: `reporting_operations.make_custom_table`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -906,6 +988,8 @@ message MakeCustomTableResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#make-new-sa-report)
 
 `/briosa.ReportingOperations/MakeNewSaReport` · Operation ID: `reporting_operations.make_new_sa_report`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -937,6 +1021,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#make-utility-chart)
 
 `/briosa.ReportingOperations/MakeUtilityChart` · Operation ID: `reporting_operations.make_utility_chart`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
+A request that sets `show_chart_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -975,6 +1063,8 @@ message MakeUtilityChartResult {
 
 `/briosa.ReportingOperations/NotifyUserDouble` · Operation ID: `reporting_operations.notify_user_double`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `leading_text` | `optional string` | Leading Text | Empty |
@@ -1006,6 +1096,8 @@ message NotifyUserDoubleResult {
 
 `/briosa.ReportingOperations/NotifyUserHtml` · Operation ID: `reporting_operations.notify_user_html`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `html_file` | `optional FileReference` | HTML File | Required |
@@ -1028,6 +1120,8 @@ message NotifyUserHtmlResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#notify-user-integer)
 
 `/briosa.ReportingOperations/NotifyUserInteger` · Operation ID: `reporting_operations.notify_user_integer`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1058,6 +1152,8 @@ message NotifyUserIntegerResult {
 
 `/briosa.ReportingOperations/NotifyUserTextArray` · Operation ID: `reporting_operations.notify_user_text_array`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `notification_text` | `repeated string` | Notification Text | Required |
@@ -1087,6 +1183,10 @@ message NotifyUserTextArrayResult {
 
 `/briosa.ReportingOperations/OutputSaReportToExcel` · Operation ID: `reporting_operations.output_sa_report_to_excel`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `show_file` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_name` | `optional CollectionObjectName` | Report Name | Required |
@@ -1114,6 +1214,10 @@ message OutputSaReportToExcelResult {
 
 `/briosa.ReportingOperations/OutputSaReportToPdf` · Operation ID: `reporting_operations.output_sa_report_to_pdf`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
+
+A request that sets `show_pdf` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_name` | `optional CollectionObjectName` | Report Name | Required |
@@ -1140,6 +1244,8 @@ message OutputSaReportToPdfResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#quick-report)
 
 `/briosa.ReportingOperations/QuickReport` · Operation ID: `reporting_operations.quick_report`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1174,6 +1280,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.ReportingOperations/RefreshCalloutViewsInSaReport` · Operation ID: `reporting_operations.refresh_callout_views_in_sa_report`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `report_name` | `optional CollectionItemName` | Report Name | Required |
@@ -1197,6 +1305,8 @@ message RefreshCalloutViewsInSaReportResult {
 
 `/briosa.ReportingOperations/RefreshReportBar` · Operation ID: `reporting_operations.refresh_report_bar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
@@ -1219,9 +1329,11 @@ message RefreshReportBarResult {
 
 `/briosa.ReportingOperations/RemoveReportTag` · Operation ID: `reporting_operations.remove_report_tag`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `tag_name` | `optional string` | Tag Name | Empty |
+| Request | 1 | `tag_name` | `optional string` | Tag Name | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -1236,11 +1348,19 @@ message RemoveReportTagResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `tag_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Rename Picture {/* #rename-picture */}
 
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#rename-picture)
 
 `/briosa.ReportingOperations/RenamePicture` · Operation ID: `reporting_operations.rename_picture`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1269,6 +1389,8 @@ message RenamePictureResult {
 
 `/briosa.ReportingOperations/SaveChartToJPegFile` · Operation ID: `reporting_operations.save_chart_to_jpeg_file`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `chart_to_save` | `optional ChartName` | Chart to Save | Required |
@@ -1293,6 +1415,8 @@ message SaveChartToJPegFileResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#save-current-view-bmpjpgpnggiftiff)
 
 `/briosa.ReportingOperations/SaveCurrentViewBmpJpgPngGifTiff` · Operation ID: `reporting_operations.save_current_view_bmp_jpg_png_gif_tiff`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1325,6 +1449,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.ReportingOperations/SetCustomTableCellColor` · Operation ID: `reporting_operations.set_custom_table_cell_color`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -1355,6 +1481,8 @@ message SetCustomTableCellColorResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-double)
 
 `/briosa.ReportingOperations/SetCustomTableCellDouble` · Operation ID: `reporting_operations.set_custom_table_cell_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1389,6 +1517,8 @@ message SetCustomTableCellDoubleResult {
 
 `/briosa.ReportingOperations/SetCustomTableCellFont` · Operation ID: `reporting_operations.set_custom_table_cell_font`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -1417,6 +1547,8 @@ message SetCustomTableCellFontResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-custom-table-cell-string)
 
 `/briosa.ReportingOperations/SetCustomTableCellString` · Operation ID: `reporting_operations.set_custom_table_cell_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1449,6 +1581,8 @@ message SetCustomTableCellStringResult {
 
 `/briosa.ReportingOperations/SetCustomTableHeaderCell` · Operation ID: `reporting_operations.set_custom_table_header_cell`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -1480,6 +1614,8 @@ message SetCustomTableHeaderCellResult {
 
 `/briosa.ReportingOperations/SetCustomTableHeaderRow` · Operation ID: `reporting_operations.set_custom_table_header_row`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -1507,6 +1643,8 @@ message SetCustomTableHeaderRowResult {
 
 `/briosa.ReportingOperations/SetCustomTableTitle` · Operation ID: `reporting_operations.set_custom_table_title`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `table_name` | `optional CollectionObjectName` | Table Name | Required |
@@ -1533,6 +1671,8 @@ message SetCustomTableTitleResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-point-group-report-options)
 
 `/briosa.ReportingOperations/SetPointGroupReportOptions` · Operation ID: `reporting_operations.set_point_group_report_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1583,6 +1723,8 @@ message SetPointGroupReportOptionsResult {
 
 `/briosa.ReportingOperations/SetRelationshipReportOptions` · Operation ID: `reporting_operations.set_relationship_report_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1608,6 +1750,8 @@ message SetRelationshipReportOptionsResult {
 
 `/briosa.ReportingOperations/SetReportBarVisibility` · Operation ID: `reporting_operations.set_report_bar_visibility`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `show_report_bar` | `optional bool` | Show Report Bar? | false |
@@ -1631,6 +1775,8 @@ message SetReportBarVisibilityResult {
 
 `/briosa.ReportingOperations/SetReportOptionsForObject` · Operation ID: `reporting_operations.set_report_options_for_object`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object` | `optional CollectionObjectName` | Object | Required |
@@ -1653,6 +1799,8 @@ message SetReportOptionsForObjectResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-double)
 
 `/briosa.ReportingOperations/SetReportTagValueFromDouble` · Operation ID: `reporting_operations.set_report_tag_value_from_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1679,6 +1827,8 @@ message SetReportTagValueFromDoubleResult {
 
 `/briosa.ReportingOperations/SetReportTagValueFromInteger` · Operation ID: `reporting_operations.set_report_tag_value_from_integer`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `tag_name` | `optional string` | Tag Name | Empty |
@@ -1703,6 +1853,8 @@ message SetReportTagValueFromIntegerResult {
 [MP Catalog](/mp-command-catalog/commands/reporting-operations#set-report-tag-value-from-string)
 
 `/briosa.ReportingOperations/SetReportTagValueFromString` · Operation ID: `reporting_operations.set_report_tag_value_from_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1729,6 +1881,8 @@ message SetReportTagValueFromStringResult {
 
 `/briosa.ReportingOperations/SetScaleForPicture` · Operation ID: `reporting_operations.set_scale_for_picture`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `picture_name` | `optional CollectionItemName` | Picture Name | Required |
@@ -1754,6 +1908,8 @@ message SetScaleForPictureResult {
 
 `/briosa.ReportingOperations/SetVectorGroupReportOptions` · Operation ID: `reporting_operations.set_vector_group_report_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vector_group` | `optional CollectionObjectName` | Vector Group | Required |
@@ -1773,4 +1929,4 @@ message SetVectorGroupReportOptionsResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

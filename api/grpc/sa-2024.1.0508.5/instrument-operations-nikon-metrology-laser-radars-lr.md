@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / Nikon Metrology Laser Radars LR
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/instrument-operations-nikon-metrology-laser-radars-lr) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/instrument-operations-nikon-metrology-laser-radars-lr)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-hardware-connect)
 
 `/briosa.InstrumentOperations/LrHardwareConnect` · Operation ID: `instrument_operations.lr_hardware_connect`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session`, `external_io` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -45,6 +47,8 @@ message LrHardwareConnectResult {
 
 `/briosa.InstrumentOperations/LrHardwareDisconnect` · Operation ID: `instrument_operations.lr_hardware_disconnect`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -67,6 +71,8 @@ message LrHardwareDisconnectResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-verify-hardware-connection)
 
 `/briosa.InstrumentOperations/LrVerifyHardwareConnection` · Operation ID: `instrument_operations.lr_verify_hardware_connection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -93,6 +99,8 @@ message LrVerifyHardwareConnectionResult {
 
 `/briosa.InstrumentOperations/LrSetRedLaserIntensity` · Operation ID: `instrument_operations.lr_set_red_laser_intensity`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -117,6 +125,8 @@ message LrSetRedLaserIntensityResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-get-most-recent-snr-info)
 
 `/briosa.InstrumentOperations/LrGetMostRecentSnrInfo` · Operation ID: `instrument_operations.lr_get_most_recent_snr_info`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -149,6 +159,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test)
 
 `/briosa.InstrumentOperations/LrSelfTest` · Operation ID: `instrument_operations.lr_self_test`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -205,6 +217,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.InstrumentOperations/LrSelfTestLinearization` · Operation ID: `instrument_operations.lr_self_test_linearization`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -235,6 +249,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---flip-test)
 
 `/briosa.InstrumentOperations/LrSelfTestFlipTest` · Operation ID: `instrument_operations.lr_self_test_flip_test`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -274,6 +290,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-self-test---lo-sep)
 
 `/briosa.InstrumentOperations/LrSelfTestLoSep` · Operation ID: `instrument_operations.lr_self_test_lo_sep`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -315,6 +333,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.InstrumentOperations/LrApdisPerformMcmCalibration` · Operation ID: `instrument_operations.lr_apdis_perform_mcm_calibration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -343,6 +363,8 @@ message LrApdisPerformMcmCalibrationResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-nikon-metrology-laser-radars-lr#lr-apdis-activate-mcm-calibration)
 
 `/briosa.InstrumentOperations/LrApdisActivateMcmCalibration` · Operation ID: `instrument_operations.lr_apdis_activate_mcm_calibration`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -373,6 +395,8 @@ message LrApdisActivateMcmCalibrationResult {
 
 `/briosa.InstrumentOperations/LrApdisGetActiveMcmCalibration` · Operation ID: `instrument_operations.lr_apdis_get_active_mcm_calibration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -400,4 +424,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

@@ -30,4 +30,4 @@ The returned name is application data and is not logged by default. After MP
 success, the worker retrieves `Resultant Name`; getter failure produces a
 data-loss outcome rather than an empty name.
 
-[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/v0.9.0/targets/2026.1.0529.7/docs/operations/get-i-th-collection-name.md).
+[View the authoritative operation source](https://github.com/spatialanalyzer/briosa/blob/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7/docs/operations/get-ith-collection-name.md).

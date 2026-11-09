@@ -1,6 +1,6 @@
 ---
 title: Robot Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/robot-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/robot-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/robot-operations#add-robotmachine-samachine)
 
 `/briosa.RobotOperations/AddRobotMachineSaMachine` · Operation ID: `robot_operations.add_robot_machine_sa_machine`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -41,6 +43,8 @@ message AddRobotMachineSaMachineResult {
 
 `/briosa.RobotOperations/AddRobotMachineManipKin` · Operation ID: `robot_operations.add_robot_machine_manip_kin`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `manip_kin_file` | `optional FileReference` | .ManipKin File | Omitted |
@@ -63,6 +67,8 @@ message AddRobotMachineManipKinResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#delete-robotmachine)
 
 `/briosa.RobotOperations/DeleteRobotMachine` · Operation ID: `robot_operations.delete_robot_machine`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -87,12 +93,16 @@ message DeleteRobotMachineResult {
 
 `/briosa.RobotOperations/MoveRobotMachineToFrame` · Operation ID: `robot_operations.move_robot_machine_to_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `destination_frame` | `optional CollectionObjectName` | Destination Frame | Required |
 | Request | 3 | `use_sa_kinematics` | `optional bool` | Use SA Kinematics | false |
-| Request | 4 | `acknowledge_arrival` | `optional bool` | Acknowledge Arrival | false |
+| Request | 4 | `acknowledge_arrival` | `optional bool` | Acknowledge Arrival | true |
 | Result | 1 | `actual_transform_in_working` | `optional Transform` | Actual Transform In Working (result) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -117,6 +127,10 @@ message MoveRobotMachineToFrameResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#move-robotmachine-through-path)
 
 `/briosa.RobotOperations/MoveRobotMachineThroughPath` · Operation ID: `robot_operations.move_robot_machine_through_path`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -149,11 +163,15 @@ message MoveRobotMachineThroughPathResult {
 
 `/briosa.RobotOperations/MoveRobotMachineToNamedDestination` · Operation ID: `robot_operations.move_robot_machine_to_named_destination`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `acknowledge_arrival` to false is denied under every setting, because the call would return before the work it starts has finished.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `destination_name` | `optional string` | Destination Name | Empty |
-| Request | 3 | `acknowledge_arrival` | `optional bool` | Acknowledge Arrival | false |
+| Request | 3 | `acknowledge_arrival` | `optional bool` | Acknowledge Arrival | true |
 | Result | 1 | `actual_transform_in_working` | `optional Transform` | Actual Transform In Working (result) | — |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -178,11 +196,13 @@ message MoveRobotMachineToNamedDestinationResult {
 
 `/briosa.RobotOperations/SetRobotMachineParameter` · Operation ID: `robot_operations.set_robot_machine_parameter`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session`, `device_config` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `parameter_name` | `optional string` | Parameter Name | Empty |
-| Request | 3 | `parameter_value` | `optional double` | Parameter Value | 0.000000 |
+| Request | 3 | `parameter_value` | `optional double` | Parameter Value | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -199,11 +219,19 @@ message SetRobotMachineParameterResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `parameter_value` | Required (major 3): an omitted value is rejected before dispatch instead of being sent as 0. |
+
 ## Get Robot/Machine Parameter {/* #get-robotmachine-parameter */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-parameter)
 
 `/briosa.RobotOperations/GetRobotMachineParameter` · Operation ID: `robot_operations.get_robot_machine_parameter`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -233,34 +261,36 @@ message GetRobotMachineParameterResult {
 
 `/briosa.RobotOperations/SetRobotMachineModelLinkParameters` · Operation ID: `robot_operations.set_robot_machine_model_link_parameters`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
 | Request | 2 | `link_name` | `optional string` | Link Name | Empty |
 | Request | 3 | `link_type` | `optional RobotModelLinkType` | Link Type | DH |
-| Request | 4 | `dh_alpha_component` | `optional double` | DH ALPHA Component | 0.000000 |
-| Request | 5 | `dh_a_component` | `optional double` | DH A Component | 0.000000 |
-| Request | 6 | `dh_d_component` | `optional double` | DH D Component | 0.000000 |
-| Request | 7 | `dh_theta_component` | `optional double` | DH THETA Component | 0.000000 |
-| Request | 8 | `dh_x_axis_deflection_factor` | `optional double` | DH X-Axis Deflection Factor | 0.000000 |
-| Request | 9 | `dh_y_axis_deflection_factor` | `optional double` | DH Y-Axis Deflection Factor | 0.000000 |
-| Request | 10 | `dh_z_axis_deflection_factor` | `optional double` | DH Z-Axis Deflection Factor | 0.000000 |
-| Request | 11 | `six_dof_x_component` | `optional double` | 6DOF X Component | 0.000000 |
-| Request | 12 | `six_dof_y_component` | `optional double` | 6DOF Y Component | 0.000000 |
-| Request | 13 | `six_dof_z_component` | `optional double` | 6DPF Z Component | 0.000000 |
-| Request | 14 | `six_dof_rx_component` | `optional double` | 6DOF RX Component | 0.000000 |
-| Request | 15 | `six_dof_ry_component` | `optional double` | 6DOF RY Component | 0.000000 |
-| Request | 16 | `six_dof_rz_component` | `optional double` | 6DOF RZ Component | 0.000000 |
+| Request | 4 | `dh_alpha_component` | `optional double` | DH ALPHA Component | Required |
+| Request | 5 | `dh_a_component` | `optional double` | DH A Component | Required |
+| Request | 6 | `dh_d_component` | `optional double` | DH D Component | Required |
+| Request | 7 | `dh_theta_component` | `optional double` | DH THETA Component | Required |
+| Request | 8 | `dh_x_axis_deflection_factor` | `optional double` | DH X-Axis Deflection Factor | Required |
+| Request | 9 | `dh_y_axis_deflection_factor` | `optional double` | DH Y-Axis Deflection Factor | Required |
+| Request | 10 | `dh_z_axis_deflection_factor` | `optional double` | DH Z-Axis Deflection Factor | Required |
+| Request | 11 | `six_dof_x_component` | `optional double` | 6DOF X Component | Required |
+| Request | 12 | `six_dof_y_component` | `optional double` | 6DOF Y Component | Required |
+| Request | 13 | `six_dof_z_component` | `optional double` | 6DPF Z Component | Required |
+| Request | 14 | `six_dof_rx_component` | `optional double` | 6DOF RX Component | Required |
+| Request | 15 | `six_dof_ry_component` | `optional double` | 6DOF RY Component | Required |
+| Request | 16 | `six_dof_rz_component` | `optional double` | 6DOF RZ Component | Required |
 | Request | 17 | `active_joint_component` | `optional RobotActiveJointComponent` | Active Joint Component | NONE |
-| Request | 18 | `encoder_offset_value` | `optional double` | Encoder Offset Value | 0.000000 |
-| Request | 19 | `minimum_encoder_limit` | `optional double` | Minimum Encoder Limit | 0.000000 |
-| Request | 20 | `maximum_encoder_limit` | `optional double` | Maximum Encoder Limit | 0.000000 |
-| Request | 21 | `encoder_sense_negative` | `optional bool` | Encoder Sense Negative | false |
-| Request | 22 | `include_additional_encoder` | `optional bool` | Include Additional Encoder | false |
-| Request | 23 | `additional_encoder_index_offset` | `optional int32` | Additional Encoder Index Offset | 0 |
-| Request | 24 | `additional_encoder_sense_negative` | `optional bool` | Additional Encoder Sense Negative | false |
-| Request | 25 | `segment_origin_mass_kg` | `optional double` | Segment Origin Mass in Kg | 0.000000 |
-| Request | 26 | `segment_cg_mass_kg` | `optional double` | Segment CG Mass in Kg | 0.000000 |
+| Request | 18 | `encoder_offset_value` | `optional double` | Encoder Offset Value | Required |
+| Request | 19 | `minimum_encoder_limit` | `optional double` | Minimum Encoder Limit | Required |
+| Request | 20 | `maximum_encoder_limit` | `optional double` | Maximum Encoder Limit | Required |
+| Request | 21 | `encoder_sense_negative` | `optional bool` | Encoder Sense Negative | Required |
+| Request | 22 | `include_additional_encoder` | `optional bool` | Include Additional Encoder | Required |
+| Request | 23 | `additional_encoder_index_offset` | `optional int32` | Additional Encoder Index Offset | Required |
+| Request | 24 | `additional_encoder_sense_negative` | `optional bool` | Additional Encoder Sense Negative | Required |
+| Request | 25 | `segment_origin_mass_kg` | `optional double` | Segment Origin Mass in Kg | Required |
+| Request | 26 | `segment_cg_mass_kg` | `optional double` | Segment CG Mass in Kg | Required |
 | Request | 27 | `segment_cg_in_segment` | `optional Vector` | Segment CG In Segment | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
@@ -302,11 +332,40 @@ message SetRobotMachineModelLinkParametersResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `dh_alpha_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_a_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_d_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_theta_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_x_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_y_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `dh_z_axis_deflection_factor` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_x_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_y_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_z_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_rx_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_ry_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `six_dof_rz_component` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `encoder_offset_value` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `minimum_encoder_limit` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `maximum_encoder_limit` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `encoder_sense_negative` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `include_additional_encoder` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `additional_encoder_index_offset` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `additional_encoder_sense_negative` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `segment_origin_mass_kg` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+| `segment_cg_mass_kg` | Required (major 3): an omitted value is rejected before dispatch instead of overwriting the parameter with 0 or false. |
+
 ## Get Robot/Machine Model Link Parameters {/* #get-robotmachine-model-link-parameters */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#get-robotmachine-model-link-parameters)
 
 `/briosa.RobotOperations/GetRobotMachineModelLinkParameters` · Operation ID: `robot_operations.get_robot_machine_model_link_parameters`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -385,6 +444,8 @@ message GetRobotMachineModelLinkParametersResult {
 
 `/briosa.RobotOperations/SetRobotMachineBaseTransform` · Operation ID: `robot_operations.set_robot_machine_base_transform`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -414,6 +475,8 @@ message SetRobotMachineBaseTransformResult {
 
 `/briosa.RobotOperations/StartRobotMachineInterface` · Operation ID: `robot_operations.start_robot_machine_interface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 4 | `machine_id` | `optional CollectionInstrumentId` | Machine ID | Required |
@@ -442,6 +505,8 @@ message StartRobotMachineInterfaceResult {
 
 `/briosa.RobotOperations/StopRobotMachineInterface` · Operation ID: `robot_operations.stop_robot_machine_interface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 2 | `machine_id` | `optional CollectionInstrumentId` | Machine ID | Required |
@@ -465,6 +530,8 @@ message StopRobotMachineInterfaceResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#compute-robotmachine-adjusted-goal-frame)
 
 `/briosa.RobotOperations/ComputeRobotMachineAdjustedGoalFrame` · Operation ID: `robot_operations.compute_robot_machine_adjusted_goal_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -497,15 +564,17 @@ message ComputeRobotMachineAdjustedGoalFrameResult {
 
 `/briosa.RobotOperations/MoveRobotMachineToJointPoseSixDof` · Operation ID: `robot_operations.move_robot_machine_to_joint_pose_six_dof`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
-| Request | 2 | `joint_1` | `optional double` | Joint 1 | 0.000000 |
-| Request | 3 | `joint_2` | `optional double` | Joint 2 | 0.000000 |
-| Request | 4 | `joint_3` | `optional double` | Joint 3 | 0.000000 |
-| Request | 5 | `joint_4` | `optional double` | Joint 4 | 0.000000 |
-| Request | 6 | `joint_5` | `optional double` | Joint 5 | 0.000000 |
-| Request | 7 | `joint_6` | `optional double` | Joint 6 | 0.000000 |
+| Request | 2 | `joint_1` | `optional double` | Joint 1 | Required |
+| Request | 3 | `joint_2` | `optional double` | Joint 2 | Required |
+| Request | 4 | `joint_3` | `optional double` | Joint 3 | Required |
+| Request | 5 | `joint_4` | `optional double` | Joint 4 | Required |
+| Request | 6 | `joint_5` | `optional double` | Joint 5 | Required |
+| Request | 7 | `joint_6` | `optional double` | Joint 6 | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -526,11 +595,24 @@ message MoveRobotMachineToJointPoseSixDofResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `joint_1` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_2` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_3` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_4` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_5` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+| `joint_6` | Required (major 3): an omitted joint is rejected before dispatch instead of being sent as 0. |
+
 ## Simulate Robot/Machine Path, Output CSV File {/* #simulate-robotmachine-path-output-csv-file */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#simulate-robotmachine-path-output-csv-file)
 
 `/briosa.RobotOperations/SimulateRobotMachinePathOutputCsvFile` · Operation ID: `robot_operations.simulate_robot_machine_path_output_csv_file`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -559,6 +641,8 @@ message SimulateRobotMachinePathOutputCsvFileResult {
 
 `/briosa.RobotOperations/CreateRobotCalibration` · Operation ID: `robot_operations.create_robot_calibration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -584,10 +668,12 @@ message CreateRobotCalibrationResult {
 
 `/briosa.RobotOperations/DeleteRobotCalibration` · Operation ID: `robot_operations.delete_robot_calibration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
-| Request | 2 | `calibration_name` | `optional string` | Calibration Name | Empty |
+| Request | 2 | `calibration_name` | `optional string` | Calibration Name | Required |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -603,11 +689,19 @@ message DeleteRobotCalibrationResult {
 }
 ```
 
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `calibration_name` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
 ## Import Poses Match to Measurements {/* #import-poses-match-to-measurements */}
 
 [MP Catalog](/mp-command-catalog/commands/robot-operations#import-poses-match-to-measurements)
 
 `/briosa.RobotOperations/ImportPosesMatchToMeasurements` · Operation ID: `robot_operations.import_poses_match_to_measurements`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -638,6 +732,8 @@ message ImportPosesMatchToMeasurementsResult {
 
 `/briosa.RobotOperations/ImportPosesMatchToFrames` · Operation ID: `robot_operations.import_poses_match_to_frames`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -666,6 +762,10 @@ message ImportPosesMatchToFramesResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration)
 
 `/briosa.RobotOperations/PerformRobotCalibration` · Operation ID: `robot_operations.perform_robot_calibration`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -704,6 +804,10 @@ message PerformRobotCalibrationResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#perform-robot-calibration-alternate)
 
 `/briosa.RobotOperations/PerformRobotCalibrationAlternate` · Operation ID: `robot_operations.perform_robot_calibration_alternate`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `physical_motion`, `device_session` · **Duration Class:** `long_running`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -748,6 +852,8 @@ message PerformRobotCalibrationAlternateResult {
 
 `/briosa.RobotOperations/StartStopRobotCalibrationTrapping` · Operation ID: `robot_operations.start_stop_robot_calibration_trapping`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -777,6 +883,8 @@ message StartStopRobotCalibrationTrappingResult {
 
 `/briosa.RobotOperations/SetActiveRobotCalibration` · Operation ID: `robot_operations.set_active_robot_calibration`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -801,6 +909,8 @@ message SetActiveRobotCalibrationResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-robot-calibration-tool-frame)
 
 `/briosa.RobotOperations/SetRobotCalibrationToolFrame` · Operation ID: `robot_operations.set_robot_calibration_tool_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -835,6 +945,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RobotOperations/SetRobotCalibrationMeasurementOffsetInToolFrame` · Operation ID: `robot_operations.set_robot_calibration_measurement_offset_in_tool_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -868,6 +980,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RobotOperations/GetRobotPoseForAFrame` · Operation ID: `robot_operations.get_robot_pose_for_a_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `machine_id` | `optional CollectionMachineId` | Machine ID | Required |
@@ -899,6 +1013,8 @@ message GetRobotPoseForAFrameResult {
 
 `/briosa.RobotOperations/GetCalibrationApplianceIntegerValue` · Operation ID: `robot_operations.get_calibration_appliance_integer_value`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `index_offset` | `optional int32` | Index Offset | 0 |
@@ -923,6 +1039,8 @@ message GetCalibrationApplianceIntegerValueResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-integer-value)
 
 `/briosa.RobotOperations/SetCalibrationApplianceIntegerValue` · Operation ID: `robot_operations.set_calibration_appliance_integer_value`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -949,6 +1067,8 @@ message SetCalibrationApplianceIntegerValueResult {
 
 `/briosa.RobotOperations/GetCalibrationApplianceRealValue` · Operation ID: `robot_operations.get_calibration_appliance_real_value`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `index_offset` | `optional int32` | Index Offset | 0 |
@@ -973,6 +1093,8 @@ message GetCalibrationApplianceRealValueResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-real-value)
 
 `/briosa.RobotOperations/SetCalibrationApplianceRealValue` · Operation ID: `robot_operations.set_calibration_appliance_real_value`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -999,6 +1121,8 @@ message SetCalibrationApplianceRealValueResult {
 
 `/briosa.RobotOperations/GetCalibrationApplianceData` · Operation ID: `robot_operations.get_calibration_appliance_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `real_value_count` | `optional int32` | See Typed Binding | Required |
@@ -1023,6 +1147,8 @@ message GetCalibrationApplianceDataResult {
 [MP Catalog](/mp-command-catalog/commands/robot-operations#set-calibration-appliance-data)
 
 `/briosa.RobotOperations/SetCalibrationApplianceData` · Operation ID: `robot_operations.set_calibration_appliance_data`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `full` · **Risk Flags:** `device_session`, `device_config`, `external_io` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1053,4 +1179,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

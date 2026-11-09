@@ -180,6 +180,8 @@ enum SpatialAnalyzerLifecycleFailureKind {
   SPATIAL_ANALYZER_LIFECYCLE_FAILURE_KIND_SDK_NOT_STOPPED = 7;
   SPATIAL_ANALYZER_LIFECYCLE_FAILURE_KIND_TIMEOUT = 8;
   SPATIAL_ANALYZER_LIFECYCLE_FAILURE_KIND_INTERNAL = 9;
+  SPATIAL_ANALYZER_LIFECYCLE_FAILURE_KIND_CALLER_CANCELLED = 10;
+  SPATIAL_ANALYZER_LIFECYCLE_FAILURE_KIND_CALLER_DEADLINE_EXCEEDED = 11;
 }
 ```
 
@@ -216,6 +218,8 @@ enum SpatialAnalyzerSdkLifecycleFailureKind {
   SPATIAL_ANALYZER_SDK_LIFECYCLE_FAILURE_KIND_SDK_CONNECTION_FAILED = 16;
   SPATIAL_ANALYZER_SDK_LIFECYCLE_FAILURE_KIND_RECONNECT_NOT_REQUIRED = 17;
   SPATIAL_ANALYZER_SDK_LIFECYCLE_FAILURE_KIND_SDK_RECOVERY_REQUIRED = 18;
+  SPATIAL_ANALYZER_SDK_LIFECYCLE_FAILURE_KIND_CALLER_CANCELLED = 19;
+  SPATIAL_ANALYZER_SDK_LIFECYCLE_FAILURE_KIND_CALLER_DEADLINE_EXCEEDED = 20;
 }
 
 enum LifecycleRecoveryGuidance {
@@ -235,6 +239,44 @@ registry value, license information, identity evidence reference, MP argument,
 or MP result. An MP call interrupted by SDK loss separately returns the normal
 typed operation error, including its execution disposition and replay guidance.
 
+## Caller Cancellation and Deadlines
+
+A caller's cancellation or gRPC deadline never rolls back or interrupts a
+lifecycle transition that the server has accepted. `StartSpatialAnalyzerSdk`,
+`ConnectToSpatialAnalyzer`, `ReconnectToSpatialAnalyzer`,
+`RecoverSpatialAnalyzerSdk`, and `LaunchSpatialAnalyzer` each pass one acceptance
+point after their state checks and before their first transition:
+
+- **Before acceptance**, cancellation withdraws the request. Nothing is
+  launched, sent, or changed. The detail carries diagnostic
+  `sdk-lifecycle-request-withdrawn` or `application-lifecycle-request-withdrawn`
+  and recovery guidance `NONE`.
+- **After acceptance**, the transition continues detached under the server's
+  own startup, readiness, and shutdown bounds, and records its terminal state
+  as it would for a caller that waited. The detail carries
+  `sdk-lifecycle-caller-stopped-waiting` or
+  `application-lifecycle-caller-stopped-waiting`, the state at that moment, and
+  recovery guidance `REFRESH_STATE`. A startup the caller abandoned can still
+  produce a ready SDK generation, and an abandoned launch can still bring
+  SpatialAnalyzer to `RUNNING`.
+
+`StopSpatialAnalyzerSdk` keeps its caller waiting for an accepted teardown;
+cancellation before the stop is accepted withdraws it the same way.
+
+A caller that cancelled gets `CANCELLED` with failure kind `CALLER_CANCELLED`.
+A caller whose gRPC deadline had passed gets `DEADLINE_EXCEEDED` with
+`CALLER_DEADLINE_EXCEEDED`. gRPC delivers no response to a caller that cancelled
+or exceeded its deadline, so a remote caller observes only the transport status;
+the typed detail and its audit record serve in-process callers and operators.
+`TIMEOUT` still means that a server-side bound expired.
+
+While an accepted transition holds the lifecycle, a concurrent lifecycle request
+fails with `ABORTED`, kind `STATE_CONFLICT`, diagnostic
+`sdk-lifecycle-transition-in-progress` or
+`application-lifecycle-transition-in-progress`, and guidance `REFRESH_STATE`.
+Refresh state and retry later. Stop an owned generation only after the accepted
+transition has ended.
+
 ## Lifecycle Rules
 
 - Starting SpatialAnalyzer and starting the SDK are separate operations.
@@ -249,7 +291,11 @@ typed operation error, including its execution disposition and replay guidance.
 - Briosa never closes arbitrary SpatialAnalyzer or SDK processes that it did
   not create and still identify exactly.
 - Lifecycle transitions are serialized. A conflicting transition fails rather
-  than racing another request.
+  than racing another request, with a `*-transition-in-progress` diagnostic
+  while an accepted transition is still running.
+- A caller's cancellation or deadline withdraws a transition only before the
+  server accepts it; afterwards the transition continues detached. Refresh
+  state after a cancelled lifecycle call.
 - These RPCs are loopback-only. Remote administration requires a later release
   with authenticated transport, authorization, and exclusive-controller policy.
 

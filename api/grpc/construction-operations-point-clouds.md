@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Point Clouds
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-point-clouds) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-point-clouds)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-point-group)
 
 `/briosa.ConstructionOperations/ConstructPointCloudsFromExistingPointGroup` · Operation ID: `construction_operations.construct_point_clouds_from_existing_point_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -43,6 +45,8 @@ message ConstructPointCloudsFromExistingPointGroupResult {
 
 `/briosa.ConstructionOperations/ConstructPointCloudsFromExistingCloudPointsRuntimeSelect` · Operation ID: `construction_operations.construct_point_clouds_from_existing_cloud_points_runtime_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_name` | `optional CollectionObjectName` | Cloud Name | Required |
@@ -65,6 +69,8 @@ message ConstructPointCloudsFromExistingCloudPointsRuntimeSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-clouds-from-existing-clouds---uniform-spacing)
 
 `/briosa.ConstructionOperations/ConstructPointCloudsFromExistingCloudsUniformSpacing` · Operation ID: `construction_operations.construct_point_clouds_from_existing_clouds_uniform_spacing`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -97,6 +103,8 @@ message ConstructPointCloudsFromExistingCloudsUniformSpacingResult {
 
 `/briosa.ConstructionOperations/ConstructPointCloudFromExistingClouds` · Operation ID: `construction_operations.construct_point_cloud_from_existing_clouds`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `existing_point_cloud_list` | `repeated CollectionObjectName` | Existing Point Cloud List | Required |
@@ -128,6 +136,8 @@ message ConstructPointCloudFromExistingCloudsResult {
 
 `/briosa.ConstructionOperations/ConstructPointCloudFromVisibleCloudPoints` · Operation ID: `construction_operations.construct_point_cloud_from_visible_cloud_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_clouds` | `repeated CollectionObjectName` | Source Clouds | Required |
@@ -153,6 +163,8 @@ message ConstructPointCloudFromVisibleCloudPointsResult {
 
 `/briosa.ConstructionOperations/ConstructBoundaryPointsFromCloud` · Operation ID: `construction_operations.construct_boundary_points_from_cloud`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `source_cloud_name` | `optional CollectionObjectName` | Source Cloud Name | Required |
@@ -177,6 +189,8 @@ message ConstructBoundaryPointsFromCloudResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-point-cloud-limiting-probing-directions)
 
 `/briosa.ConstructionOperations/ConstructPointCloudLimitingProbingDirections` · Operation ID: `construction_operations.construct_point_cloud_limiting_probing_directions`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -208,6 +222,8 @@ message ConstructPointCloudLimitingProbingDirectionsResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#construct-cross-section-cloud)
 
 `/briosa.ConstructionOperations/ConstructCrossSectionCloud` · Operation ID: `construction_operations.construct_cross_section_cloud`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -256,6 +272,8 @@ message ConstructCrossSectionCloudResult {
 
 `/briosa.ConstructionOperations/ConstructCrossSectionCloudUserSelect` · Operation ID: `construction_operations.construct_cross_section_cloud_user_select`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `destructive`, `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cross_section_cloud_name` | `optional CollectionObjectName` | Cross Section Cloud Name | Required |
@@ -294,6 +312,8 @@ message ConstructCrossSectionCloudUserSelectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-point-clouds#extract-sphere-centers-from-point-cloud)
 
 `/briosa.ConstructionOperations/ExtractSphereCentersFromPointCloud` · Operation ID: `construction_operations.extract_sphere_centers_from_point_cloud`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -334,4 +354,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

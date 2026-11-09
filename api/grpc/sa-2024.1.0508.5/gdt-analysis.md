@@ -1,6 +1,6 @@
 ---
 title: GDT Operations / GDT Analysis
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/gdt-analysis) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/gdt-analysis)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-datum-references)
 
 `/briosa.GdtOperations/GetFeatureCheckDatumReferences` · Operation ID: `gdt_operations.get_feature_check_datum_references`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -47,6 +49,8 @@ message GetFeatureCheckDatumReferencesResult {
 
 `/briosa.GdtOperations/GetDatumMeasurements` · Operation ID: `gdt_operations.get_datum_measurements`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `datum` | `optional CollectionItemName` | Datum | Required |
@@ -71,6 +75,8 @@ message GetDatumMeasurementsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-datum-measurements)
 
 `/briosa.GdtOperations/SetDatumMeasurements` · Operation ID: `gdt_operations.set_datum_measurements`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -101,6 +107,8 @@ message SetDatumMeasurementsResult {
 
 `/briosa.GdtOperations/GetFeatureCheckMeasurements` · Operation ID: `gdt_operations.get_feature_check_measurements`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check` | `optional CollectionItemName` | Feature Check | Required |
@@ -125,6 +133,8 @@ message GetFeatureCheckMeasurementsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-measurements)
 
 `/briosa.GdtOperations/SetFeatureCheckMeasurements` · Operation ID: `gdt_operations.set_feature_check_measurements`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -155,6 +165,8 @@ message SetFeatureCheckMeasurementsResult {
 
 `/briosa.GdtOperations/GetFeatureCheckCylinderEvalOptions` · Operation ID: `gdt_operations.get_feature_check_cylinder_eval_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check` | `optional CollectionItemName` | Feature Check | Required |
@@ -179,6 +191,8 @@ message GetFeatureCheckCylinderEvalOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-cylinder-eval-options)
 
 `/briosa.GdtOperations/SetFeatureCheckCylinderEvalOptions` · Operation ID: `gdt_operations.set_feature_check_cylinder_eval_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -206,6 +220,8 @@ message SetFeatureCheckCylinderEvalOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#feature-inspection-auto-filter)
 
 `/briosa.GdtOperations/FeatureInspectionAutoFilter` · Operation ID: `gdt_operations.feature_inspection_auto_filter`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -252,6 +268,8 @@ message FeatureInspectionAutoFilterResult {
 
 `/briosa.GdtOperations/SetGlobalForceSimultaneousEvaluation` · Operation ID: `gdt_operations.set_global_force_simultaneous_evaluation`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `global_simultaneous_evaluation` | `optional bool` | Global Simultaneous Evaluation? | false |
@@ -274,6 +292,8 @@ message SetGlobalForceSimultaneousEvaluationResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#evaluate-feature-check)
 
 `/briosa.GdtOperations/EvaluateFeatureCheck` · Operation ID: `gdt_operations.evaluate_feature_check`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -340,6 +360,8 @@ message EvaluateFeatureCheckResult {
 
 `/briosa.GdtOperations/EvaluateFeatureChecks` · Operation ID: `gdt_operations.evaluate_feature_checks`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check_list` | `repeated CollectionItemName` | Feature Check List | Required |
@@ -373,6 +395,8 @@ message EvaluateFeatureChecksResult {
 
 `/briosa.GdtOperations/GenerateFeatureCheckSummary` · Operation ID: `gdt_operations.generate_feature_check_summary`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check_list` | `repeated CollectionItemName` | Feature Check List | Required |
@@ -397,6 +421,8 @@ message GenerateFeatureCheckSummaryResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#startstop-feature-check-trapping)
 
 `/briosa.GdtOperations/StartStopFeatureCheckTrapping` · Operation ID: `gdt_operations.start_stop_feature_check_trapping`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -424,6 +450,8 @@ message StartStopFeatureCheckTrappingResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#enabledisable-datum-alignment-for-feature-check)
 
 `/briosa.GdtOperations/EnableDisableDatumAlignmentForFeatureCheck` · Operation ID: `gdt_operations.enable_disable_datum_alignment_for_feature_check`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -456,6 +484,8 @@ message EnableDisableDatumAlignmentForFeatureCheckResult {
 
 `/briosa.GdtOperations/DatumAlignment` · Operation ID: `gdt_operations.datum_alignment`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check` | `optional CollectionItemName` | Feature Check | Required |
@@ -485,6 +515,8 @@ message DatumAlignmentResult {
 
 `/briosa.GdtOperations/GetGdtOptions` · Operation ID: `gdt_operations.get_gdt_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `options` | `optional GdtOptions` | Enable Auto Feature Detection? | — |
@@ -506,6 +538,8 @@ message GetGdtOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-gdt-options)
 
 `/briosa.GdtOperations/SetGdtOptions` · Operation ID: `gdt_operations.set_gdt_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -546,6 +580,8 @@ message SetGdtOptionsResult {
 
 `/briosa.GdtOperations/RefreshDatumsFeatureChecksFromAnnotations` · Operation ID: `gdt_operations.refresh_datums_feature_checks_from_annotations`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection` | `optional CollectionName` | Collection | Required |
@@ -568,6 +604,8 @@ message RefreshDatumsFeatureChecksFromAnnotationsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-frame)
 
 `/briosa.GdtOperations/SetFeatureCheckReportingFrame` · Operation ID: `gdt_operations.set_feature_check_reporting_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -594,6 +632,8 @@ message SetFeatureCheckReportingFrameResult {
 
 `/briosa.GdtOperations/GetFeatureCheckReportingFrame` · Operation ID: `gdt_operations.get_feature_check_reporting_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `feature_check` | `optional CollectionItemName` | Feature Check | Required |
@@ -618,6 +658,8 @@ message GetFeatureCheckReportingFrameResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#set-feature-check-reporting-options)
 
 `/briosa.GdtOperations/SetFeatureCheckReportingOptions` · Operation ID: `gdt_operations.set_feature_check_reporting_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -653,6 +695,8 @@ message SetFeatureCheckReportingOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/gdt-analysis#get-feature-check-reporting-options)
 
 `/briosa.GdtOperations/GetFeatureCheckReportingOptions` · Operation ID: `gdt_operations.get_feature_check_reporting_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -701,4 +745,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

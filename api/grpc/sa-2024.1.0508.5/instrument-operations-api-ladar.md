@@ -10,7 +10,7 @@ toc_max_heading_level: 2
 
 :::note[Released Server API]
 
-These operations are included in Briosa Server **0.9.0** for SpatialAnalyzer
+These operations are included in Briosa Server **0.10.0** for SpatialAnalyzer
 **2024.1.0508.5**. Runtime policy and readiness determine whether a particular
 call is admitted. Validation qualifications below remain independent of release
 availability; an At Risk entry is not a claim of licensed-SA validation.

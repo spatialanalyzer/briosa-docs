@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Frames
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-frames) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-frames)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,10 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-with-wizard)
 
 `/briosa.ConstructionOperations/ConstructFrameWithWizard` · Operation ID: `construction_operations.construct_frame_with_wizard`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
+A request that sets `wait_for_completion` to false is denied under every setting, because the call would return before the work it starts has finished.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -43,6 +47,8 @@ message ConstructFrameWithWizardResult {
 
 `/briosa.ConstructionOperations/ConstructFrame` · Operation ID: `construction_operations.construct_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_frame_name` | `optional CollectionObjectName` | New Frame Name | Required |
@@ -67,6 +73,8 @@ message ConstructFrameResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-from-transform-in-world)
 
 `/briosa.ConstructionOperations/ConstructFrameFromTransformInWorld` · Operation ID: `construction_operations.construct_frame_from_transform_in_world`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -93,6 +101,8 @@ message ConstructFrameFromTransformInWorldResult {
 
 `/briosa.ConstructionOperations/ConstructFrameOnInstrumentBase` · Operation ID: `construction_operations.construct_frame_on_instrument_base`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument_id` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -118,6 +128,8 @@ message ConstructFrameOnInstrumentBaseResult {
 
 `/briosa.ConstructionOperations/ConstructFrameOnObject` · Operation ID: `construction_operations.construct_frame_on_object`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_object` | `optional CollectionObjectName` | Reference Object | Required |
@@ -142,6 +154,8 @@ message ConstructFrameOnObjectResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-3-points)
 
 `/briosa.ConstructionOperations/ConstructFrameThreePoints` · Operation ID: `construction_operations.construct_frame_three_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -174,6 +188,8 @@ message ConstructFrameThreePointsResult {
 
 `/briosa.ConstructionOperations/ConstructFrameAtPointWithWorkingZAndClockedAxis` · Operation ID: `construction_operations.construct_frame_at_point_with_working_z_and_clocked_axis`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `origin_point` | `optional PointName` | Origin Point | Required |
@@ -203,6 +219,8 @@ message ConstructFrameAtPointWithWorkingZAndClockedAxisResult {
 
 `/briosa.ConstructionOperations/ConstructFramePickOriginAndPointOnXAxisClockZAlongWorkingZ` · Operation ID: `construction_operations.construct_frame_pick_origin_and_point_on_x_axis_clock_z_along_working_z`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `origin_point` | `optional PointName` | Origin Point | Required |
@@ -229,6 +247,8 @@ message ConstructFramePickOriginAndPointOnXAxisClockZAlongWorkingZResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-known-origin-object-direction-object-direction)
 
 `/briosa.ConstructionOperations/ConstructFrameKnownOriginObjectDirectionObjectDirection` · Operation ID: `construction_operations.construct_frame_known_origin_object_direction_object_direction`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -265,6 +285,8 @@ message ConstructFrameKnownOriginObjectDirectionObjectDirectionResult {
 
 `/briosa.ConstructionOperations/ConstructFrameThreePlanes` · Operation ID: `construction_operations.construct_frame_three_planes`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `x_plane` | `optional CollectionObjectName` | X Plane | Required |
@@ -300,6 +322,8 @@ message ConstructFrameThreePlanesResult {
 
 `/briosa.ConstructionOperations/ConstructFrameCopyAndMakeLeftHanded` · Operation ID: `construction_operations.construct_frame_copy_and_make_left_handed`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_frame` | `optional CollectionObjectName` | Reference Frame | Required |
@@ -327,6 +351,8 @@ message ConstructFrameCopyAndMakeLeftHandedResult {
 
 `/briosa.ConstructionOperations/ConstructFrameAverageOfOtherObjectFrames` · Operation ID: `construction_operations.construct_frame_average_of_other_object_frames`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects` | `repeated CollectionObjectName` | Objects | Required |
@@ -351,6 +377,8 @@ message ConstructFrameAverageOfOtherObjectFramesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frame-at-robot-link)
 
 `/briosa.ConstructionOperations/ConstructFrameAtRobotLink` · Operation ID: `construction_operations.construct_frame_at_robot_link`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -379,6 +407,8 @@ message ConstructFrameAtRobotLinkResult {
 
 `/briosa.ConstructionOperations/ConstructFrameFromPointMeasurementProbingFrames` · Operation ID: `construction_operations.construct_frame_from_point_measurement_probing_frames`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_list` | `repeated PointName` | Point List | Required |
@@ -403,6 +433,8 @@ message ConstructFrameFromPointMeasurementProbingFramesResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-mirror-cube-frame)
 
 `/briosa.ConstructionOperations/ConstructMirrorCubeFrame` · Operation ID: `construction_operations.construct_mirror_cube_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -435,6 +467,8 @@ message ConstructMirrorCubeFrameResult {
 
 `/briosa.ConstructionOperations/ConstructFramesByProjectingFramesOnMeshAlongFrameDirection` · Operation ID: `construction_operations.construct_frames_by_projecting_frames_on_mesh_along_frame_direction`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_frame_names` | `repeated CollectionObjectName` | Reference Frame Names | Required |
@@ -465,6 +499,8 @@ message ConstructFramesByProjectingFramesOnMeshAlongFrameDirectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#construct-frames-by-projecting-frames-on-mesh-along-reference-direction)
 
 `/briosa.ConstructionOperations/ConstructFramesByProjectingFramesOnMeshAlongReferenceDirection` · Operation ID: `construction_operations.construct_frames_by_projecting_frames_on_mesh_along_reference_direction`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -498,6 +534,8 @@ message ConstructFramesByProjectingFramesOnMeshAlongReferenceDirectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-frames#add-surface-to-mesh-offset-along-reference-direction)
 
 `/briosa.ConstructionOperations/AddSurfaceToMeshOffsetAlongReferenceDirection` · Operation ID: `construction_operations.add_surface_to_mesh_offset_along_reference_direction`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -536,4 +574,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Relationship Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/relationship-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/relationship-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#enabledisable-relationships-for-optimization)
 
 `/briosa.RelationshipOperations/EnableDisableRelationshipsForOptimization` · Operation ID: `relationship_operations.enable_disable_relationships_for_optimization`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -43,6 +45,8 @@ message EnableDisableRelationshipsForOptimizationResult {
 
 `/briosa.RelationshipOperations/GeomRelationshipIgnoreInputPoints` · Operation ID: `relationship_operations.geom_relationship_ignore_input_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -66,6 +70,8 @@ message GeomRelationshipIgnoreInputPointsResult {
 
 `/briosa.RelationshipOperations/GeomRelationshipReuseIgnoredInputPoints` · Operation ID: `relationship_operations.geom_relationship_reuse_ignored_input_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -88,6 +94,8 @@ message GeomRelationshipReuseIgnoredInputPointsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-auto-vectors)
 
 `/briosa.RelationshipOperations/GetGeomRelationshipAutoVectors` · Operation ID: `relationship_operations.get_geom_relationship_auto_vectors`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -131,6 +139,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RelationshipOperations/GetGeomRelationshipCardinalPoints` · Operation ID: `relationship_operations.get_geom_relationship_cardinal_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -155,6 +165,8 @@ message GetGeomRelationshipCardinalPointsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-criteria)
 
 `/briosa.RelationshipOperations/GetGeomRelationshipCriteria` · Operation ID: `relationship_operations.get_geom_relationship_criteria`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -201,6 +213,8 @@ message GetGeomRelationshipCriteriaResult {
 
 `/briosa.RelationshipOperations/GetGeomRelationshipMeasuredAvgPoint` · Operation ID: `relationship_operations.get_geom_relationship_measured_avg_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -225,6 +239,8 @@ message GetGeomRelationshipMeasuredAvgPointResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-measured-geometry)
 
 `/briosa.RelationshipOperations/GetGeomRelationshipMeasuredGeometry` · Operation ID: `relationship_operations.get_geom_relationship_measured_geometry`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -251,6 +267,8 @@ message GetGeomRelationshipMeasuredGeometryResult {
 
 `/briosa.RelationshipOperations/GetGeomRelationshipNominalAvgPoint` · Operation ID: `relationship_operations.get_geom_relationship_nominal_avg_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -276,6 +294,8 @@ message GetGeomRelationshipNominalAvgPointResult {
 
 `/briosa.RelationshipOperations/GetGeomRelationshipNominalGeometry` · Operation ID: `relationship_operations.get_geom_relationship_nominal_geometry`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -300,6 +320,8 @@ message GetGeomRelationshipNominalGeometryResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-geom-relationship-point-list)
 
 `/briosa.RelationshipOperations/GetGeomRelationshipPointList` · Operation ID: `relationship_operations.get_geom_relationship_point_list`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -330,6 +352,8 @@ message GetGeomRelationshipPointListResult {
 
 `/briosa.RelationshipOperations/GetGeomRelationshipProjectionPlane` · Operation ID: `relationship_operations.get_geom_relationship_projection_plane`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -354,6 +378,8 @@ message GetGeomRelationshipProjectionPlaneResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-cut-status)
 
 `/briosa.RelationshipOperations/GetPipeRelationshipCutStatus` · Operation ID: `relationship_operations.get_pipe_relationship_cut_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -385,6 +411,8 @@ message GetPipeRelationshipCutStatusResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-pipe-relationship-properties)
 
 `/briosa.RelationshipOperations/GetPipeRelationshipProperties` · Operation ID: `relationship_operations.get_pipe_relationship_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -429,6 +457,8 @@ message GetPipeRelationshipPropertiesResult {
 
 `/briosa.RelationshipOperations/GetPipeRelationshipWeights` · Operation ID: `relationship_operations.get_pipe_relationship_weights`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -468,6 +498,8 @@ message GetPipeRelationshipWeightsResult {
 
 `/briosa.RelationshipOperations/GetRelationshipFitConstraintsScalarType` · Operation ID: `relationship_operations.get_relationship_fit_constraints_scalar_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -501,6 +533,8 @@ message GetRelationshipFitConstraintsScalarTypeResult {
 
 `/briosa.RelationshipOperations/GetRelationshipOutlierRejectionScalarType` · Operation ID: `relationship_operations.get_relationship_outlier_rejection_scalar_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -531,6 +565,8 @@ message GetRelationshipOutlierRejectionScalarTypeResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-projection-options)
 
 `/briosa.RelationshipOperations/GetRelationshipProjectionOptions` · Operation ID: `relationship_operations.get_relationship_projection_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -565,6 +601,8 @@ message GetRelationshipProjectionOptionsResult {
 
 `/briosa.RelationshipOperations/GetRelationshipReportingFrame` · Operation ID: `relationship_operations.get_relationship_reporting_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -590,6 +628,8 @@ message GetRelationshipReportingFrameResult {
 
 `/briosa.RelationshipOperations/GetRelationshipSigmoidalGapFitConstraints` · Operation ID: `relationship_operations.get_relationship_sigmoidal_gap_fit_constraints`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -614,6 +654,8 @@ message GetRelationshipSigmoidalGapFitConstraintsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-sub-sampling-options)
 
 `/briosa.RelationshipOperations/GetRelationshipSubSamplingOptions` · Operation ID: `relationship_operations.get_relationship_sub_sampling_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -645,6 +687,8 @@ message GetRelationshipSubSamplingOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-scalar-type)
 
 `/briosa.RelationshipOperations/GetRelationshipToleranceScalarType` · Operation ID: `relationship_operations.get_relationship_tolerance_scalar_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -678,6 +722,8 @@ message GetRelationshipToleranceScalarTypeResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-tolerance-vector-type)
 
 `/briosa.RelationshipOperations/GetRelationshipToleranceVectorType` · Operation ID: `relationship_operations.get_relationship_tolerance_vector_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -736,6 +782,8 @@ message GetRelationshipToleranceVectorTypeResult {
 
 `/briosa.RelationshipOperations/GetRelationshipType` · Operation ID: `relationship_operations.get_relationship_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -761,6 +809,8 @@ message GetRelationshipTypeResult {
 
 `/briosa.RelationshipOperations/GetRelationshipWeighting` · Operation ID: `relationship_operations.get_relationship_weighting`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -785,6 +835,8 @@ message GetRelationshipWeightingResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-fitting-relationship)
 
 `/briosa.RelationshipOperations/MakePipeFittingRelationship` · Operation ID: `relationship_operations.make_pipe_fitting_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -812,6 +864,8 @@ message MakePipeFittingRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-pipe-relationship-cut)
 
 `/briosa.RelationshipOperations/MakePipeRelationshipCut` · Operation ID: `relationship_operations.make_pipe_relationship_cut`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -848,6 +902,8 @@ message MakePipeRelationshipCutResult {
 
 `/briosa.RelationshipOperations/PipeRelationshipForceCutToFrame` · Operation ID: `relationship_operations.pipe_relationship_force_cut_to_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -878,6 +934,8 @@ message PipeRelationshipForceCutToFrameResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-auto-measure-nominal-feature)
 
 `/briosa.RelationshipOperations/SetGeomRelationshipAutoMeasureNominalFeature` · Operation ID: `relationship_operations.set_geom_relationship_auto_measure_nominal_feature`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -914,6 +972,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RelationshipOperations/SetGeomRelationshipAutoVectorsNominalAvn` · Operation ID: `relationship_operations.set_geom_relationship_auto_vectors_nominal_avn`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -945,6 +1005,8 @@ message SetGeomRelationshipAutoVectorsNominalAvnResult {
 
 `/briosa.RelationshipOperations/SetGeomRelationshipCardinalPoints` · Operation ID: `relationship_operations.set_geom_relationship_cardinal_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -973,6 +1035,8 @@ message SetGeomRelationshipCardinalPointsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-criteria)
 
 `/briosa.RelationshipOperations/SetGeomRelationshipCriteria` · Operation ID: `relationship_operations.set_geom_relationship_criteria`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1007,6 +1071,8 @@ message SetGeomRelationshipCriteriaResult {
 
 `/briosa.RelationshipOperations/SetGeomRelationshipMeasuredGeometry` · Operation ID: `relationship_operations.set_geom_relationship_measured_geometry`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1031,6 +1097,8 @@ message SetGeomRelationshipMeasuredGeometryResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-nominal-avg-point)
 
 `/briosa.RelationshipOperations/SetGeomRelationshipNominalAvgPoint` · Operation ID: `relationship_operations.set_geom_relationship_nominal_avg_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1059,6 +1127,8 @@ message SetGeomRelationshipNominalAvgPointResult {
 
 `/briosa.RelationshipOperations/SetGeomRelationshipNominalGeometry` · Operation ID: `relationship_operations.set_geom_relationship_nominal_geometry`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1085,6 +1155,8 @@ message SetGeomRelationshipNominalGeometryResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-geom-relationship-projection-plane)
 
 `/briosa.RelationshipOperations/SetGeomRelationshipProjectionPlane` · Operation ID: `relationship_operations.set_geom_relationship_projection_plane`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1113,6 +1185,8 @@ message SetGeomRelationshipProjectionPlaneResult {
 
 `/briosa.RelationshipOperations/SetObjectToObjectDirectionRelationshipFitConstraints` · Operation ID: `relationship_operations.set_object_to_object_direction_relationship_fit_constraints`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1140,6 +1214,8 @@ message SetObjectToObjectDirectionRelationshipFitConstraintsResult {
 
 `/briosa.RelationshipOperations/SetObjectToObjectDirectionRelationshipTolerances` · Operation ID: `relationship_operations.set_object_to_object_direction_relationship_tolerances`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -1166,6 +1242,8 @@ message SetObjectToObjectDirectionRelationshipTolerancesResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-pipe-relationship-segment-properties)
 
 `/briosa.RelationshipOperations/SetPipeRelationshipSegmentProperties` · Operation ID: `relationship_operations.set_pipe_relationship_segment_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1206,6 +1284,8 @@ message SetPipeRelationshipSegmentPropertiesResult {
 
 `/briosa.RelationshipOperations/SetPipeRelationshipWeights` · Operation ID: `relationship_operations.set_pipe_relationship_weights`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1245,6 +1325,8 @@ message SetPipeRelationshipWeightsResult {
 
 `/briosa.RelationshipOperations/SetRelationshipAutoVectorsFitAvf` · Operation ID: `relationship_operations.set_relationship_auto_vectors_fit_avf`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1274,6 +1356,8 @@ message SetRelationshipAutoVectorsFitAvfResult {
 
 `/briosa.RelationshipOperations/SetRelationshipAutoVectorsGroupDefaultPrefix` · Operation ID: `relationship_operations.set_relationship_auto_vectors_group_default_prefix`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `geom_rel_avn_vg_default_prefix` | `optional string` | Geom Rel AVN VG Default Prefix | GR-AVN- |
@@ -1301,6 +1385,8 @@ message SetRelationshipAutoVectorsGroupDefaultPrefixResult {
 
 `/briosa.RelationshipOperations/SetRelationshipDesiredMeasCount` · Operation ID: `relationship_operations.set_relationship_desired_meas_count`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1325,6 +1411,8 @@ message SetRelationshipDesiredMeasCountResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-dormant-status)
 
 `/briosa.RelationshipOperations/SetRelationshipDormantStatus` · Operation ID: `relationship_operations.set_relationship_dormant_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1351,6 +1439,8 @@ message SetRelationshipDormantStatusResult {
 
 `/briosa.RelationshipOperations/SetRelationshipFitConstraintsScalarType` · Operation ID: `relationship_operations.set_relationship_fit_constraints_scalar_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1375,6 +1465,8 @@ message SetRelationshipFitConstraintsScalarTypeResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-orientation-fit-constraints-vector-type)
 
 `/briosa.RelationshipOperations/SetRelationshipOrientationFitConstraintsVectorType` · Operation ID: `relationship_operations.set_relationship_orientation_fit_constraints_vector_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1401,6 +1493,8 @@ message SetRelationshipOrientationFitConstraintsVectorTypeResult {
 
 `/briosa.RelationshipOperations/SetRelationshipOutlierRejectionScalarType` · Operation ID: `relationship_operations.set_relationship_outlier_rejection_scalar_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1423,6 +1517,8 @@ message SetRelationshipOutlierRejectionScalarTypeResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-position-fit-constraints-vector-type)
 
 `/briosa.RelationshipOperations/SetRelationshipPositionFitConstraintsVectorType` · Operation ID: `relationship_operations.set_relationship_position_fit_constraints_vector_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1449,6 +1545,8 @@ message SetRelationshipPositionFitConstraintsVectorTypeResult {
 
 `/briosa.RelationshipOperations/SetRelationshipProjectionOptions` · Operation ID: `relationship_operations.set_relationship_projection_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1473,6 +1571,8 @@ message SetRelationshipProjectionOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-reporting-frame)
 
 `/briosa.RelationshipOperations/SetRelationshipReportingFrame` · Operation ID: `relationship_operations.set_relationship_reporting_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1499,6 +1599,8 @@ message SetRelationshipReportingFrameResult {
 
 `/briosa.RelationshipOperations/SetRelationshipSigmoidalGapFitConstraints` · Operation ID: `relationship_operations.set_relationship_sigmoidal_gap_fit_constraints`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1523,6 +1625,8 @@ message SetRelationshipSigmoidalGapFitConstraintsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-sub-sampling-options)
 
 `/briosa.RelationshipOperations/SetRelationshipSubSamplingOptions` · Operation ID: `relationship_operations.set_relationship_sub_sampling_options`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1555,6 +1659,8 @@ message SetRelationshipSubSamplingOptionsResult {
 
 `/briosa.RelationshipOperations/SetRelationshipToleranceScalarType` · Operation ID: `relationship_operations.set_relationship_tolerance_scalar_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1580,6 +1686,8 @@ message SetRelationshipToleranceScalarTypeResult {
 
 `/briosa.RelationshipOperations/SetRelationshipToleranceVectorType` · Operation ID: `relationship_operations.set_relationship_tolerance_vector_type`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1604,6 +1712,8 @@ message SetRelationshipToleranceVectorTypeResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-voxel-cloud-display)
 
 `/briosa.RelationshipOperations/SetRelationshipVoxelCloudDisplay` · Operation ID: `relationship_operations.set_relationship_voxel_cloud_display`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1649,6 +1759,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RelationshipOperations/SetRelationshipWeighting` · Operation ID: `relationship_operations.set_relationship_weighting`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionObjectName` | Relationship Name | Required |
@@ -1673,6 +1785,8 @@ message SetRelationshipWeightingResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-weights-normalized)
 
 `/briosa.RelationshipOperations/SetRelationshipWeightsNormalized` · Operation ID: `relationship_operations.set_relationship_weights_normalized`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1699,6 +1813,8 @@ message SetRelationshipWeightsNormalizedResult {
 
 `/briosa.RelationshipOperations/GenerateGeometryRelationshipSummary` · Operation ID: `relationship_operations.generate_geometry_relationship_summary`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_ref_list` | `repeated CollectionItemName` | Relationship Ref List | Required |
@@ -1724,6 +1840,8 @@ message GenerateGeometryRelationshipSummaryResult {
 
 `/briosa.RelationshipOperations/EditGeometryRelationshipPointList` · Operation ID: `relationship_operations.edit_geometry_relationship_point_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -1748,6 +1866,8 @@ message EditGeometryRelationshipPointListResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#filter-geometry-relationship-outlier-cloud-points)
 
 `/briosa.RelationshipOperations/FilterGeometryRelationshipOutlierCloudPoints` · Operation ID: `relationship_operations.filter_geometry_relationship_outlier_cloud_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1777,6 +1897,8 @@ message FilterGeometryRelationshipOutlierCloudPointsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#relationship-watch-window-template)
 
 `/briosa.RelationshipOperations/RelationshipWatchWindowTemplate` · Operation ID: `relationship_operations.relationship_watch_window_template`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1835,6 +1957,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.RelationshipOperations/MakePointToPointRelationship` · Operation ID: `relationship_operations.make_point_to_point_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -1865,6 +1989,8 @@ message MakePointToPointRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-frame-to-frame-relationship)
 
 `/briosa.RelationshipOperations/MakeFrameToFrameRelationship` · Operation ID: `relationship_operations.make_frame_to_frame_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1897,6 +2023,8 @@ message MakeFrameToFrameRelationshipResult {
 
 `/briosa.RelationshipOperations/MakePointsToObjectsRelationship` · Operation ID: `relationship_operations.make_points_to_objects_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -1927,6 +2055,8 @@ message MakePointsToObjectsRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-points-to-points-relationship)
 
 `/briosa.RelationshipOperations/MakePointsToPointsRelationship` · Operation ID: `relationship_operations.make_points_to_points_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1961,6 +2091,8 @@ message MakePointsToPointsRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeGroupsToObjectsRelationship` · Operation ID: `relationship_operations.make_groups_to_objects_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -1992,6 +2124,8 @@ message MakeGroupsToObjectsRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeObjectToObjectDirectionRelationship` · Operation ID: `relationship_operations.make_object_to_object_direction_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2020,6 +2154,8 @@ message MakeObjectToObjectDirectionRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-point-clouds-to-objects-relationship)
 
 `/briosa.RelationshipOperations/MakePointCloudsToObjectsRelationship` · Operation ID: `relationship_operations.make_point_clouds_to_objects_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2051,6 +2187,8 @@ message MakePointCloudsToObjectsRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-group-relationship)
 
 `/briosa.RelationshipOperations/MakeGroupToGroupRelationship` · Operation ID: `relationship_operations.make_group_to_group_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2084,6 +2222,10 @@ message MakeGroupToGroupRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-group-to-nominal-group-relationship)
 
 `/briosa.RelationshipOperations/MakeGroupToNominalGroupRelationship` · Operation ID: `relationship_operations.make_group_to_nominal_group_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `display_closest_point_watch_window` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2130,6 +2272,8 @@ message MakeGroupToNominalGroupRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeAveragePointRelationship` · Operation ID: `relationship_operations.make_average_point_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2158,6 +2302,8 @@ message MakeAveragePointRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-geometry-fit-only-relationship)
 
 `/briosa.RelationshipOperations/MakeGeometryFitOnlyRelationship` · Operation ID: `relationship_operations.make_geometry_fit_only_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2190,6 +2336,8 @@ message MakeGeometryFitOnlyRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeGeometryFitAndCompareToNominalRelationship` · Operation ID: `relationship_operations.make_geometry_fit_and_compare_to_nominal_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2221,6 +2369,8 @@ message MakeGeometryFitAndCompareToNominalRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeGeometryCompareOnlyRelationship` · Operation ID: `relationship_operations.make_geometry_compare_only_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2247,6 +2397,8 @@ message MakeGeometryCompareOnlyRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-point-relationship)
 
 `/briosa.RelationshipOperations/MakeDynamicPointRelationship` · Operation ID: `relationship_operations.make_dynamic_point_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2279,6 +2431,8 @@ message MakeDynamicPointRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeDynamicLineRelationship` · Operation ID: `relationship_operations.make_dynamic_line_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2307,6 +2461,8 @@ message MakeDynamicLineRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-plane-relationship)
 
 `/briosa.RelationshipOperations/MakeDynamicPlaneRelationship` · Operation ID: `relationship_operations.make_dynamic_plane_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2339,6 +2495,8 @@ message MakeDynamicPlaneRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeDynamicCircleRelationship` · Operation ID: `relationship_operations.make_dynamic_circle_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2367,6 +2525,8 @@ message MakeDynamicCircleRelationshipResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-dynamic-ellipse-relationship)
 
 `/briosa.RelationshipOperations/MakeDynamicEllipseRelationship` · Operation ID: `relationship_operations.make_dynamic_ellipse_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2397,6 +2557,8 @@ message MakeDynamicEllipseRelationshipResult {
 
 `/briosa.RelationshipOperations/MakeVectorGroupToVectorGroupRelationship` · Operation ID: `relationship_operations.make_vector_group_to_vector_group_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `new_vg_to_vg_relationship` | `optional CollectionItemName` | New VG To VG Relationship | Required |
@@ -2426,6 +2588,8 @@ message MakeVectorGroupToVectorGroupRelationshipResult {
 
 `/briosa.RelationshipOperations/SetVectorGroupToVectorGroupCylindricalZone` · Operation ID: `relationship_operations.set_vector_group_to_vector_group_cylindrical_zone`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vg_to_vg_relationship` | `optional CollectionItemName` | VG To VG Relationship | Required |
@@ -2454,6 +2618,8 @@ message SetVectorGroupToVectorGroupCylindricalZoneResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-fit-weights)
 
 `/briosa.RelationshipOperations/SetVectorGroupToVectorGroupFitWeights` · Operation ID: `relationship_operations.set_vector_group_to_vector_group_fit_weights`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2490,6 +2656,8 @@ message SetVectorGroupToVectorGroupFitWeightsResult {
 
 `/briosa.RelationshipOperations/SetVectorGroupToVectorGroupFitGradientFactor` · Operation ID: `relationship_operations.set_vector_group_to_vector_group_fit_gradient_factor`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `vg_to_vg_relationship` | `optional CollectionItemName` | VG To VG Relationship | Required |
@@ -2514,6 +2682,8 @@ message SetVectorGroupToVectorGroupFitGradientFactorResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-vector-group-to-vector-group-relative-polarity)
 
 `/briosa.RelationshipOperations/SetVectorGroupToVectorGroupRelativePolarity` · Operation ID: `relationship_operations.set_vector_group_to_vector_group_relative_polarity`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2540,6 +2710,8 @@ message SetVectorGroupToVectorGroupRelativePolarityResult {
 
 `/briosa.RelationshipOperations/DeleteRelationship` · Operation ID: `relationship_operations.delete_relationship`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2563,6 +2735,8 @@ message DeleteRelationshipResult {
 
 `/briosa.RelationshipOperations/SetOptimizationSearchOptions` · Operation ID: `relationship_operations.set_optimization_search_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `max_number_of_step_size_reduction` | `optional int32` | Max Number of Step Size Reduction | 5 |
@@ -2585,6 +2759,8 @@ message SetOptimizationSearchOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-optimization-perturbation-parameters)
 
 `/briosa.RelationshipOperations/SetOptimizationPerturbationParameters` · Operation ID: `relationship_operations.set_optimization_perturbation_parameters`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2612,6 +2788,10 @@ message SetOptimizationPerturbationParametersResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#do-relationship-fit)
 
 `/briosa.RelationshipOperations/DoRelationshipFit` · Operation ID: `relationship_operations.do_relationship_fit`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `use_fit_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2656,6 +2836,10 @@ message DoRelationshipFitResult {
 
 `/briosa.RelationshipOperations/MoveCollectionsByMinimizingRelationships` · Operation ID: `relationship_operations.move_collections_by_minimizing_relationships`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
+
+A request that sets `use_fit_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collections_to_move` | `repeated string` | Collections To Move | Empty |
@@ -2689,6 +2873,8 @@ message MoveCollectionsByMinimizingRelationshipsResult {
 
 `/briosa.RelationshipOperations/GetGeneralRelationshipStatistics` · Operation ID: `relationship_operations.get_general_relationship_statistics`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2721,6 +2907,8 @@ message GetGeneralRelationshipStatisticsResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-points-to-objects-relationship-statistics)
 
 `/briosa.RelationshipOperations/GetPointsToObjectsRelationshipStatistics` · Operation ID: `relationship_operations.get_points_to_objects_relationship_statistics`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2765,6 +2953,8 @@ message GetPointsToObjectsRelationshipStatisticsResult {
 
 `/briosa.RelationshipOperations/StartStopRelationshipTrapping` · Operation ID: `relationship_operations.start_stop_relationship_trapping`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** none; an exclusive workflow, which no profile, flag, or override admits · **Risk Flags:** `device_session` · **Duration Class:** `long_running`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2791,6 +2981,8 @@ message StartStopRelationshipTrappingResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-point-to-point-relationship-statistics)
 
 `/briosa.RelationshipOperations/GetPointToPointRelationshipStatistics` · Operation ID: `relationship_operations.get_point_to_point_relationship_statistics`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2825,6 +3017,8 @@ message GetPointToPointRelationshipStatisticsResult {
 
 `/briosa.RelationshipOperations/SetGroupToNominalGroupViewZooming` · Operation ID: `relationship_operations.set_group_to_nominal_group_view_zooming`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2857,6 +3051,8 @@ message SetGroupToNominalGroupViewZoomingResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-relationship-associated-data)
 
 `/briosa.RelationshipOperations/SetRelationshipAssociatedData` · Operation ID: `relationship_operations.set_relationship_associated_data`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2891,6 +3087,8 @@ message SetRelationshipAssociatedDataResult {
 
 `/briosa.RelationshipOperations/GetRelationshipAssociatedData` · Operation ID: `relationship_operations.get_relationship_associated_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2915,6 +3113,8 @@ message GetRelationshipAssociatedDataResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#set-points-to-points-relationship-associated-data)
 
 `/briosa.RelationshipOperations/SetPointsToPointsRelationshipAssociatedData` · Operation ID: `relationship_operations.set_points_to_points_relationship_associated_data`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2945,6 +3145,8 @@ message SetPointsToPointsRelationshipAssociatedDataResult {
 
 `/briosa.RelationshipOperations/GetPointsToPointsRelationshipAssociatedData` · Operation ID: `relationship_operations.get_points_to_points_relationship_associated_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -2969,6 +3171,8 @@ message GetPointsToPointsRelationshipAssociatedDataResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-3d)
 
 `/briosa.RelationshipOperations/AutoFilterCloudsToNominalGeometry3D` · Operation ID: `relationship_operations.auto_filter_clouds_to_nominal_geometry_3d`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3000,6 +3204,8 @@ message AutoFilterCloudsToNominalGeometry3DResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-clouds-to-nominal-geometry-2d)
 
 `/briosa.RelationshipOperations/AutoFilterCloudsToNominalGeometry2D` · Operation ID: `relationship_operations.auto_filter_clouds_to_nominal_geometry_2d`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3034,6 +3240,8 @@ message AutoFilterCloudsToNominalGeometry2DResult {
 
 `/briosa.RelationshipOperations/AutoFilterPointsToNominalGeometry3D` · Operation ID: `relationship_operations.auto_filter_points_to_nominal_geometry_3d`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `auto_filter_target_relationships` | `repeated CollectionItemName` | Auto Filter Target Relationships | Required |
@@ -3060,6 +3268,8 @@ message AutoFilterPointsToNominalGeometry3DResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#auto-filter-pointsgroupsclouds-to-surface-faces)
 
 `/briosa.RelationshipOperations/AutoFilterPointsGroupsCloudsToSurfaceFaces` · Operation ID: `relationship_operations.auto_filter_points_groups_clouds_to_surface_faces`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `long_running`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3106,6 +3316,8 @@ message AutoFilterPointsGroupsCloudsToSurfaceFacesResult {
 
 `/briosa.RelationshipOperations/ExtractGeometryFromPointClouds` · Operation ID: `relationship_operations.extract_geometry_from_point_clouds`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -3143,6 +3355,8 @@ message ExtractGeometryFromPointCloudsResult {
 
 `/briosa.RelationshipOperations/CreatePointsToObjectsMap` · Operation ID: `relationship_operations.create_points_to_objects_map`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `points` | `optional PointNameList` | Points | Required |
@@ -3174,6 +3388,8 @@ message CreatePointsToObjectsMapResult {
 
 `/briosa.RelationshipOperations/GetObjectsFromPointsToObjectsMapPointList` · Operation ID: `relationship_operations.get_objects_from_points_to_objects_map_point_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `points_to_objects_map_name` | `optional string` | Points to Objects Map Name | Empty |
@@ -3201,6 +3417,10 @@ message GetObjectsFromPointsToObjectsMapPointListResult {
 
 `/briosa.RelationshipOperations/ComputeGeometryRelationshipUncertainties` · Operation ID: `relationship_operations.compute_geometry_relationship_uncertainties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `display_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -3225,6 +3445,8 @@ message ComputeGeometryRelationshipUncertaintiesResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#make-cloud-to-swatch-relationship)
 
 `/briosa.RelationshipOperations/MakeCloudToSwatchRelationship` · Operation ID: `relationship_operations.make_cloud_to_swatch_relationship`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3263,6 +3485,8 @@ message MakeCloudToSwatchRelationshipResult {
 
 `/briosa.RelationshipOperations/GetGeomRelationshipCriteriaNameList` · Operation ID: `relationship_operations.get_geom_relationship_criteria_name_list`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `relationship_name` | `optional CollectionItemName` | Relationship Name | Required |
@@ -3289,6 +3513,8 @@ message GetGeomRelationshipCriteriaNameListResult {
 [MP Catalog](/mp-command-catalog/commands/relationship-operations#get-relationship-status)
 
 `/briosa.RelationshipOperations/GetRelationshipStatus` · Operation ID: `relationship_operations.get_relationship_status`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3329,4 +3555,4 @@ Use the exact operation entries above and [MP Value Types](./value-types.md). Th
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

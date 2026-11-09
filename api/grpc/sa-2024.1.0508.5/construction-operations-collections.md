@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Collections
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-collections) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-collections)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-collections#set-or-construct-default-collection)
 
 `/briosa.ConstructionOperations/SetOrConstructDefaultCollection` · Operation ID: `construction_operations.set_or_construct_default_collection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -40,6 +42,8 @@ message SetOrConstructDefaultCollectionResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-collections#construct-collection)
 
 `/briosa.ConstructionOperations/ConstructCollection` · Operation ID: `construction_operations.construct_collection`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -68,6 +72,8 @@ message ConstructCollectionResult {
 
 `/briosa.ConstructionOperations/GetActiveCollectionName` · Operation ID: `construction_operations.get_active_collection_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `currently_active_collection_name` | `optional string` | Currently Active Collection Name | — |
@@ -92,6 +98,8 @@ message GetActiveCollectionNameResult {
 
 `/briosa.ConstructionOperations/DeleteCollection` · Operation ID: `construction_operations.delete_collection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection_name` | `optional CollectionName` | Name of Collection to Delete | Required |
@@ -115,9 +123,11 @@ message DeleteCollectionResult {
 
 `/briosa.ConstructionOperations/DeleteCollectionsByWildcard` · Operation ID: `construction_operations.delete_collections_by_wildcard`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `search_string` | `optional string` | Search String | Empty |
+| Request | 1 | `search_string` | `optional string` | Search String | Required |
 | Request | 2 | `case_sensitive_search` | `optional bool` | Case Sensitive Search | true |
 | Request | 3 | `allow_deleting_all_collections` | `optional bool` | Allow Deleting all Collections | false |
 | Result | 1 | `num_deleted` | `optional int32` | Num Deleted | — |
@@ -140,4 +150,10 @@ message DeleteCollectionsByWildcardResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+Parameter and result notes (units, defaults, and presence are unchanged):
+
+| Member | Meaning |
+| --- | --- |
+| `search_string` | Required and not empty (major 3): an omitted, empty or whitespace-only value is rejected before dispatch. |
+
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

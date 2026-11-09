@@ -1,6 +1,6 @@
 ---
 title: Process Flow Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/process-flow-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/process-flow-operations)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/process-flow-operations#ask-for-double)
 
 `/briosa.ProcessFlowOperations/AskForDouble` · Operation ID: `process_flow_operations.ask_for_double`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -53,6 +55,8 @@ message AskForDoubleResult {
 
 `/briosa.ProcessFlowOperations/AskForInteger` · Operation ID: `process_flow_operations.ask_for_integer`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `question_to_ask` | `optional string` | Question to ask | Empty |
@@ -88,6 +92,8 @@ message AskForIntegerResult {
 
 `/briosa.ProcessFlowOperations/AskForPointName` · Operation ID: `process_flow_operations.ask_for_point_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `question_to_ask` | `optional string` | Question to ask | Empty |
@@ -116,6 +122,8 @@ message AskForPointNameResult {
 [MP Catalog](/mp-command-catalog/commands/process-flow-operations#ask-for-string)
 
 `/briosa.ProcessFlowOperations/AskForString` · Operation ID: `process_flow_operations.ask_for_string`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -148,6 +156,8 @@ message AskForStringResult {
 
 `/briosa.ProcessFlowOperations/AskForStringPullDownVersion` · Operation ID: `process_flow_operations.ask_for_string_pull_down_version`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `question_or_statement` | `repeated string` | Question or Statement | Required |
@@ -178,6 +188,8 @@ message AskForStringPullDownVersionResult {
 [MP Catalog](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-image)
 
 `/briosa.ProcessFlowOperations/AskForUserDecisionFromImage` · Operation ID: `process_flow_operations.ask_for_user_decision_from_image`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `filesystem_read`, `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -218,6 +230,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/process-flow-operations#ask-for-user-decision-from-strings)
 
 `/briosa.ProcessFlowOperations/AskForUserDecisionFromStrings` · Operation ID: `process_flow_operations.ask_for_user_decision_from_strings`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full`, each only with the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations) · **Risk Flags:** `interactive_ui` · **Duration Class:** `interactive`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -260,6 +274,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.ProcessFlowOperations/ObjectExistenceTestCheckOnly` · Operation ID: `process_flow_operations.object_existence_test_check_only`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name` | `optional CollectionObjectName` | Object Name | Required |
@@ -279,4 +295,4 @@ message ObjectExistenceTestCheckOnlyResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

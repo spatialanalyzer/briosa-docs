@@ -5,19 +5,19 @@
  *
  * - Versions: docs/releases.md ("Available Products") and src/pages/install.md.
  * - SA 2026 operations: mp-command-catalog/2026.1.0529.7/overview.md
- *   ("The server registry includes 1,027 MP operations").
+ *   ("The server registry includes 1,018 MP operations").
  * - SA 2024 dispositions: mp-command-catalog/2024.1.0508.5/overview.md
- *   (1,283 captured commands, 996 Current) and mp-command-catalog/overview.md.
- * - gRPC services: the gRPC 0.9.0 reference for SA 2026.1.0529.7
- *   (grpc_versioned_docs/version-0.9.0): 20 MP operation services plus
+ *   (1,283 captured commands, 987 Current) and mp-command-catalog/overview.md.
+ * - gRPC services: the gRPC 0.10.0 reference for SA 2026.1.0529.7
+ *   (grpc_versioned_docs/version-0.10.0): 20 MP operation services plus
  *   DiscoveryService, SpatialAnalyzerLifecycle, and SpatialAnalyzerSdkLifecycle.
  * - MP root groups: mp-command-catalog/2026.1.0529.7/group-hierarchy.md, the
  *   observed SetStep count of each root group (1,360 in all).
  */
 
 export const versions = {
-  server: '0.9.2',
-  clients: '0.4.0',
+  server: '0.10.0',
+  clients: '0.5.0',
   installer: '0.4.0',
 } as const;
 
@@ -27,8 +27,8 @@ export const targets = {
 } as const;
 
 export const grpcServices = 23;
-export const currentOperations2026 = 1027;
-export const currentOperations2024 = 996;
+export const currentOperations2026 = 1018;
+export const currentOperations2024 = 987;
 export const reviewedCommands2024 = 1283;
 
 export type MpGroup = {readonly name: string; readonly n: number};
@@ -117,7 +117,7 @@ export const featuredOperations = [
   },
 ] as const;
 
-/** Released RPC names for the decorative ticker; each exists in the gRPC 0.9.0 reference. */
+/** Released RPC names for the decorative ticker; each exists in the gRPC 0.10.0 reference. */
 export const tickerRpcs = [
   [
     'GetPointCoordinate', 'GetPointToPointDistance', 'ConstructPointInWorkingCoordinates',
@@ -125,12 +125,12 @@ export const tickerRpcs = [
     'GetActiveCollectionName', 'SetActiveUnits', 'GetWorkingFrameProperties',
     'FitGeometryToPointGroupProjectedToPlane', 'MakeLineFitProfile', 'ReComputeCalculatedItems',
     'GetNumberOfPointsInGroup', 'GetPointTolerance', 'ConstructCone', 'ConstructSurfaceFromCylinder',
-    'ConstructPolygonizedSurfaceFromPointClouds', 'ConstructBSplineFromIntersectionOfSurfaces',
+    'ConstructSurfaceFromSphere', 'ConstructBSplineFromIntersectionOfSurfaces',
     'CopyObjectsPointToPointDelta', 'SetInstrumentTargeting',
   ],
   [
     'WatchClosestPoint', 'GetCurrentTrappingStatus', 'FilterCloudsToSurface', 'GenerateGeneralMesh',
-    'MeshVolume', 'DeleteCloudPointsByXYZRange', 'GetCloudRGBValues', 'EvaluateFeatureChecks',
+    'MeshVolume', 'FitGeometryToPoints', 'GetCloudRGBValues', 'EvaluateFeatureChecks',
     'GetDatumMeasurements', 'RefreshDatumsFeatureChecksFromAnnotations', 'SetGeomRelationshipCriteria',
     'MoveCollectionsByMinimizingRelationships', 'GenerateStandardHtmlReport', 'AddPicturesToReportBar',
     'ScaleObjects', 'GetPointNotes', 'StartSpatialAnalyzerSdk', 'ConnectToSpatialAnalyzer',

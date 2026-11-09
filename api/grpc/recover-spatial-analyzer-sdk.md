@@ -63,6 +63,7 @@ local SDK-addressable application is available.
 | `FAILED_PRECONDITION` | `OPERATOR_ACTION_REQUIRED` | The environment is not yet safe for replacement. |
 | `UNAVAILABLE` | `SDK_RECOVERY_FAILED` | The replacement SDK could not be started. |
 | `DEADLINE_EXCEEDED` | `TIMEOUT` | The recovery bound expired. Query state before retrying. |
-| `CANCELLED` | — | The caller cancelled its wait; query state before another transition. |
+| `CANCELLED` | `CALLER_CANCELLED` | The caller cancelled its wait. `sdk-lifecycle-request-withdrawn` means nothing changed; `sdk-lifecycle-caller-stopped-waiting` means the accepted transition continues detached, so query SDK state before another transition. |
+| `DEADLINE_EXCEEDED` | `CALLER_DEADLINE_EXCEEDED` | The caller's gRPC deadline ended its wait, with the same two diagnostics. |
 
 Recovery never changes an earlier `STARTED_OUTCOME_UNKNOWN` disposition.

@@ -1,6 +1,6 @@
 ---
 title: Construction Operations / Callout Views and Callouts
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2024.1.0508.5.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/construction-operations-callout-views-and-callouts) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts)
 
-This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2024.1.0508.5**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2024.1.0508.5**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-vector-callout)
 
 `/briosa.ConstructionOperations/CreateVectorCallout` · Operation ID: `construction_operations.create_vector_callout`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -83,6 +85,8 @@ message CreateVectorCalloutResult {
 
 `/briosa.ConstructionOperations/CreateMinMaxVectorGroupCallout` · Operation ID: `construction_operations.create_min_max_vector_group_callout`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `destination_callout_view` | `optional CollectionItemName` | Destination Callout View | Required |
@@ -145,6 +149,8 @@ message CreateMinMaxVectorGroupCalloutResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-point-callout)
 
 `/briosa.ConstructionOperations/CreatePointCallout` · Operation ID: `construction_operations.create_point_callout`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -214,6 +220,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.ConstructionOperations/CreatePointComparisonCallout` · Operation ID: `construction_operations.create_point_comparison_callout`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `destination_callout_view` | `optional CollectionItemName` | Destination Callout View | Required |
@@ -279,6 +287,8 @@ message CreatePointComparisonCalloutResult {
 
 `/briosa.ConstructionOperations/CreateRelationshipCallout` · Operation ID: `construction_operations.create_relationship_callout`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `destination_callout_view` | `optional CollectionItemName` | Destination Callout View | Required |
@@ -309,6 +319,8 @@ message CreateRelationshipCalloutResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#create-picture-callout)
 
 `/briosa.ConstructionOperations/CreatePictureCallout` · Operation ID: `construction_operations.create_picture_callout`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -343,6 +355,8 @@ message CreatePictureCalloutResult {
 
 `/briosa.ConstructionOperations/CreateTextCallout` · Operation ID: `construction_operations.create_text_callout`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `destination_callout_view` | `optional CollectionItemName` | Destination Callout View | Required |
@@ -372,34 +386,16 @@ message CreateTextCalloutResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)
 
-`/briosa.ConstructionOperations/MakeCalloutViewRefListWildcardSelection` · Operation ID: `construction_operations.make_callout_view_ref_list_wildcard_selection`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `collection_wildcard_criteria` | `optional string` | Collection Wildcard Criteria | * |
-| Request | 2 | `callout_view_wildcard_criteria` | `optional string` | Callout View Wildcard Criteria | * |
-| Result | 1 | `callout_views` | `repeated CollectionItemName` | Resultant Callout View List | — |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc MakeCalloutViewRefListWildcardSelection(MakeCalloutViewRefListWildcardSelectionRequest) returns (MakeCalloutViewRefListWildcardSelectionResult);
-
-message MakeCalloutViewRefListWildcardSelectionRequest {
-  optional string collection_wildcard_criteria = 1; // default "*"
-  optional string callout_view_wildcard_criteria = 2; // default "*"
-}
-
-message MakeCalloutViewRefListWildcardSelectionResult {
-  repeated CollectionItemName callout_views = 1;
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Set Default Callout View Properties {/* #set-default-callout-view-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-default-callout-view-properties)
 
 `/briosa.ConstructionOperations/SetDefaultCalloutViewProperties` · Operation ID: `construction_operations.set_default_callout_view_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -424,32 +420,16 @@ message SetDefaultCalloutViewPropertiesResult {
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#set-callout-view-properties)
 
-`/briosa.ConstructionOperations/SetCalloutViewProperties` · Operation ID: `construction_operations.set_callout_view_properties`
-
-| Message | Field | Name | Type | MP Argument | Briosa Default |
-| --- | ---: | --- | --- | --- | --- |
-| Request | 1 | `callout_views` | `repeated CollectionItemName` | Callout View List | Required |
-| Request | 2 | `properties` | `optional CalloutViewProperties` | See Typed Binding | Required |
-| Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
-
-```proto
-rpc SetCalloutViewProperties(SetCalloutViewPropertiesRequest) returns (SetCalloutViewPropertiesResult);
-
-message SetCalloutViewPropertiesRequest {
-  repeated CollectionItemName callout_views = 1;
-  optional CalloutViewProperties properties = 2;
-}
-
-message SetCalloutViewPropertiesResult {
-  MpExecutionDetails execution = 1000;
-}
-```
+Contract major 3 removed this operation from Server 0.10.0. SpatialAnalyzer returned MP code -1 on both exact targets. No replacement sets callout view properties on a list. Set Default Callout View Properties remains. No released signature
+is available in this release. Server 0.9.2 and earlier keep it; its method history shows that contract.
 
 ## Delete Callout View {/* #delete-callout-view */}
 
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#delete-callout-view)
 
 `/briosa.ConstructionOperations/DeleteCalloutView` · Operation ID: `construction_operations.delete_callout_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -473,6 +453,8 @@ message DeleteCalloutViewResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#rename-callout-view)
 
 `/briosa.ConstructionOperations/RenameCalloutView` · Operation ID: `construction_operations.rename_callout_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `destructive` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -501,6 +483,8 @@ message RenameCalloutViewResult {
 
 `/briosa.ConstructionOperations/AutoArrangeCalloutView` · Operation ID: `construction_operations.auto_arrange_callout_view`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `callout_view` | `optional CollectionItemName` | Callout View | Required |
@@ -523,6 +507,8 @@ message AutoArrangeCalloutViewResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-number-of-callouts-in-callout-view)
 
 `/briosa.ConstructionOperations/GetNumberOfCalloutsInCalloutView` · Operation ID: `construction_operations.get_number_of_callouts_in_callout_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -548,6 +534,8 @@ message GetNumberOfCalloutsInCalloutViewResult {
 [MP Catalog](/mp-command-catalog/commands/construction-operations-callout-views-and-callouts#get-i-th-callout-position-in-callout-view)
 
 `/briosa.ConstructionOperations/GetIthCalloutPositionInCalloutView` · Operation ID: `construction_operations.get_ith_callout_position_in_callout_view`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -586,6 +574,8 @@ message GetIthCalloutPositionInCalloutViewResult {
 
 `/briosa.ConstructionOperations/SetIthCalloutPositionInCalloutView` · Operation ID: `construction_operations.set_ith_callout_position_in_callout_view`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `callout_view` | `optional CollectionItemName` | Callout View | Required |
@@ -613,4 +603,4 @@ message SetIthCalloutPositionInCalloutViewResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2024.1.0508.5)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2024.1.0508.5)

@@ -1,6 +1,6 @@
 ---
 title: Analysis Operations
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/analysis-operations) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/analysis-operations)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#angle-between-line-and-plane)
 
 `/briosa.AnalysisOperations/AngleBetweenLineAndPlane` · Operation ID: `analysis_operations.angle_between_line_and_plane`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -55,6 +57,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/AngleBetweenTwoLines` · Operation ID: `analysis_operations.angle_between_two_lines`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `line_1` | `optional CollectionObjectName` | Line 1 | Required |
@@ -92,6 +96,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/AngleBetweenTwoPlanesNormals` · Operation ID: `analysis_operations.angle_between_two_planes_normals`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `plane_a` | `optional CollectionObjectName` | Plane A | Required |
@@ -128,6 +134,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#best-fit-transformation---group-to-group)
 
 `/briosa.AnalysisOperations/BestFitTransformationGroupToGroup` · Operation ID: `analysis_operations.best_fit_transformation_group_to_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_write` · **Duration Class:** `quick`
+
+A request that sets `show_interface` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -202,6 +212,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/ComputeGroupToGroupOrientationRxRyRz` · Operation ID: `analysis_operations.compute_group_to_group_orientation_rx_ry_rz`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_group` | `optional CollectionObjectName` | Reference Group | Required |
@@ -232,6 +244,8 @@ message ComputeGroupToGroupOrientationRxRyRzResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#create-point-uncertainty-cloud-point-sets)
 
 `/briosa.AnalysisOperations/CreatePointUncertaintyCloudPointSets` · Operation ID: `analysis_operations.create_point_uncertainty_cloud_point_sets`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -270,6 +284,8 @@ message CreatePointUncertaintyCloudPointSetsResult {
 
 `/briosa.AnalysisOperations/CreatePointUncertaintyFields` · Operation ID: `analysis_operations.create_point_uncertainty_fields`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name_list` | `repeated PointName` | Point Name List | Required |
@@ -295,6 +311,10 @@ message CreatePointUncertaintyFieldsResult {
 
 `/briosa.AnalysisOperations/FitGeometryToPointGroup` · Operation ID: `analysis_operations.fit_geometry_to_point_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `geometry_type` | `optional GeometryType` | Geometry Type | Required |
@@ -304,7 +324,7 @@ message CreatePointUncertaintyFieldsResult {
 | Request | 5 | `report_deviations` | `optional bool` | Report Deviations | false |
 | Request | 6 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 7 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Omitted |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -331,13 +351,17 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Point Group Projected to Plane {/* #fit-geometry-to-point-group-projected-to-plane */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-point-group-projected-to-plane)
 
 `/briosa.AnalysisOperations/FitGeometryToPointGroupProjectedToPlane` · Operation ID: `analysis_operations.fit_geometry_to_point_group_projected_to_plane`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -349,7 +373,7 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 | Request | 6 | `report_deviations` | `optional bool` | Report Deviations | false |
 | Request | 7 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 8 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 9 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 9 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Omitted |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -377,13 +401,17 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Fit Geometry to Points {/* #fit-geometry-to-points */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#fit-geometry-to-points)
 
 `/briosa.AnalysisOperations/FitGeometryToPoints` · Operation ID: `analysis_operations.fit_geometry_to_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `report_deviations` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -394,7 +422,7 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 | Request | 5 | `report_deviations` | `optional bool` | Report Deviations | false |
 | Request | 6 | `fit_interface_tolerance` | `optional double` | Fit Interface Tolerance (-1.0 use profile) | -1.000000 |
 | Request | 7 | `ignore_out_of_tolerance_points` | `optional bool` | Ignore Out of Tolerance Points | false |
-| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Required |
+| Request | 8 | `starting_condition_geometry` | `optional CollectionObjectName` | Starting Condition Geometry (optional) | Omitted |
 | Result | 1000 | `execution` | `MpExecutionDetails` | Execution Details | — |
 
 ```proto
@@ -421,13 +449,15 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 | Member | Meaning |
 | --- | --- |
 | `fit_interface_tolerance` | -1.0 uses the profile tolerance. |
-| `starting_condition_geometry` | Optional in the MP editor; the existing API presence and omission behavior is unchanged. |
+| `starting_condition_geometry` | Optional (major 3): omitted when absent, so SpatialAnalyzer fits without a starting geometry; an empty name is rejected. |
 
 ## Get B-Spline Properties {/* #get-b-spline-properties */}
 
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-b-spline-properties)
 
 `/briosa.AnalysisOperations/GetBSplineProperties` · Operation ID: `analysis_operations.get_bspline_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -464,6 +494,8 @@ message GetBSplinePropertiesResult {
 
 `/briosa.AnalysisOperations/GetCircleProperties` · Operation ID: `analysis_operations.get_circle_properties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `circle_name` | `optional CollectionObjectName` | Circle Name | Required |
@@ -494,6 +526,8 @@ message GetCirclePropertiesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cone-properties)
 
 `/briosa.AnalysisOperations/GetConeProperties` · Operation ID: `analysis_operations.get_cone_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -539,6 +573,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/GetCoordinateForIthPointInPointSet` · Operation ID: `analysis_operations.get_coordinate_for_ith_point_in_point_set`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_set` | `optional CollectionObjectName` | Point Set | Required |
@@ -567,6 +603,8 @@ message GetCoordinateForIthPointInPointSetResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-cylinder-properties)
 
 `/briosa.AnalysisOperations/GetCylinderProperties` · Operation ID: `analysis_operations.get_cylinder_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -613,6 +651,8 @@ message GetCylinderPropertiesResult {
 
 `/briosa.AnalysisOperations/GetEllipseProperties` · Operation ID: `analysis_operations.get_ellipse_properties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `ellipse_name` | `optional CollectionObjectName` | Ellipse Name | Required |
@@ -643,6 +683,8 @@ message GetEllipsePropertiesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-frame)
 
 `/briosa.AnalysisOperations/GetEulerParametersForFrame` · Operation ID: `analysis_operations.get_euler_parameters_for_frame`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -680,6 +722,8 @@ message GetEulerParametersForFrameResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-euler-parameters-for-i-th-frame-in-frame-set)
 
 `/briosa.AnalysisOperations/GetEulerParametersForIthFrameInFrameSet` · Operation ID: `analysis_operations.get_euler_parameters_for_ith_frame_in_frame_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -720,6 +764,8 @@ message GetEulerParametersForIthFrameInFrameSetResult {
 
 `/briosa.AnalysisOperations/GetIthCollectionName` · Operation ID: `analysis_operations.get_ith_collection_name`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `collection_index` | `optional int32` | Collection Index | 0 |
@@ -744,6 +790,8 @@ message GetIthCollectionNameResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-i-th-point-from-group)
 
 `/briosa.AnalysisOperations/GetIthPointFromGroup` · Operation ID: `analysis_operations.get_ith_point_from_group`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -775,6 +823,8 @@ message GetIthPointFromGroupResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-line-properties)
 
 `/briosa.AnalysisOperations/GetLineProperties` · Operation ID: `analysis_operations.get_line_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -813,6 +863,8 @@ message GetLinePropertiesResult {
 
 `/briosa.AnalysisOperations/GetMeasurementAuxiliaryData` · Operation ID: `analysis_operations.get_measurement_auxiliary_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -842,6 +894,8 @@ message GetMeasurementAuxiliaryDataResult {
 
 `/briosa.AnalysisOperations/GetMeasurementInfoData` · Operation ID: `analysis_operations.get_measurement_info_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -866,6 +920,8 @@ message GetMeasurementInfoDataResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-measurement-weather-data)
 
 `/briosa.AnalysisOperations/GetMeasurementWeatherData` · Operation ID: `analysis_operations.get_measurement_weather_data`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -904,6 +960,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/GetNumberOfCollections` · Operation ID: `analysis_operations.get_number_of_collections`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Result | 1 | `total_count` | `optional int32` | Total Count | — |
@@ -927,6 +985,8 @@ message GetNumberOfCollectionsResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-frames-in-frame-set)
 
 `/briosa.AnalysisOperations/GetNumberOfFramesInFrameSet` · Operation ID: `analysis_operations.get_number_of_frames_in_frame_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -953,6 +1013,8 @@ message GetNumberOfFramesInFrameSetResult {
 
 `/briosa.AnalysisOperations/GetNumberOfPointsInGroup` · Operation ID: `analysis_operations.get_number_of_points_in_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `group_name` | `optional CollectionObjectName` | Group Name | Required |
@@ -977,6 +1039,8 @@ message GetNumberOfPointsInGroupResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-number-of-points-in-point-set)
 
 `/briosa.AnalysisOperations/GetNumberOfPointsInPointSet` · Operation ID: `analysis_operations.get_number_of_points_in_point_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1003,6 +1067,8 @@ message GetNumberOfPointsInPointSetResult {
 
 `/briosa.AnalysisOperations/GetObjectReportingFrame` · Operation ID: `analysis_operations.get_object_reporting_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name` | `optional CollectionObjectName` | Object Name | Required |
@@ -1027,6 +1093,8 @@ message GetObjectReportingFrameResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-plane-properties)
 
 `/briosa.AnalysisOperations/GetPlaneProperties` · Operation ID: `analysis_operations.get_plane_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1056,6 +1124,8 @@ message GetPlanePropertiesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-coordinate)
 
 `/briosa.AnalysisOperations/GetPointCoordinate` · Operation ID: `analysis_operations.get_point_coordinate`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1088,6 +1158,8 @@ message GetPointCoordinateResult {
 
 `/briosa.AnalysisOperations/GetPointCoordinateCylindrical` · Operation ID: `analysis_operations.get_point_coordinate_cylindrical`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -1117,6 +1189,8 @@ message GetPointCoordinateCylindricalResult {
 
 `/briosa.AnalysisOperations/GetPointCoordinatePolar` · Operation ID: `analysis_operations.get_point_coordinate_polar`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -1145,6 +1219,8 @@ message GetPointCoordinatePolarResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-properties)
 
 `/briosa.AnalysisOperations/GetPointProperties` · Operation ID: `analysis_operations.get_point_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1185,6 +1261,8 @@ message GetPointPropertiesResult {
 
 `/briosa.AnalysisOperations/GetPointToLineDistance` · Operation ID: `analysis_operations.get_point_to_line_distance`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point` | `optional PointName` | Point | Required |
@@ -1220,6 +1298,8 @@ message GetPointToLineDistanceResult {
 
 `/briosa.AnalysisOperations/GetPointToPointDistance` · Operation ID: `analysis_operations.get_point_to_point_distance`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `first_point` | `optional PointName` | First Point | Required |
@@ -1254,6 +1334,8 @@ message GetPointToPointDistanceResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-point-tolerance)
 
 `/briosa.AnalysisOperations/GetPointTolerance` · Operation ID: `analysis_operations.get_point_tolerance`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1312,6 +1394,8 @@ message GetPointToleranceResult {
 
 `/briosa.AnalysisOperations/GetSlotProperties` · Operation ID: `analysis_operations.get_slot_properties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `slot_name` | `optional CollectionObjectName` | Slot Name | Required |
@@ -1361,6 +1445,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/GetSphereProperties` · Operation ID: `analysis_operations.get_sphere_properties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `sphere_name` | `optional CollectionObjectName` | Sphere Name | Required |
@@ -1390,6 +1476,8 @@ message GetSpherePropertiesResult {
 
 `/briosa.AnalysisOperations/GetSurfacePhysicalStats` · Operation ID: `analysis_operations.get_surface_physical_stats`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surface_name` | `optional CollectionObjectName` | Surface Name | Required |
@@ -1416,6 +1504,8 @@ message GetSurfacePhysicalStatsResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-timestamp-for-i-th-frame-in-frame-set)
 
 `/briosa.AnalysisOperations/GetTimestampForIthFrameInFrameSet` · Operation ID: `analysis_operations.get_timestamp_for_ith_frame_in_frame_set`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1444,6 +1534,8 @@ message GetTimestampForIthFrameInFrameSetResult {
 
 `/briosa.AnalysisOperations/GetTimestampForIthPointInPointSet` · Operation ID: `analysis_operations.get_timestamp_for_ith_point_in_point_set`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_set` | `optional CollectionObjectName` | Point Set | Required |
@@ -1470,6 +1562,8 @@ message GetTimestampForIthPointInPointSetResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#get-torus-properties)
 
 `/briosa.AnalysisOperations/GetTorusProperties` · Operation ID: `analysis_operations.get_torus_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1502,6 +1596,8 @@ message GetTorusPropertiesResult {
 
 `/briosa.AnalysisOperations/GetTransformForIthFrameInFrameSet` · Operation ID: `analysis_operations.get_transform_for_ith_frame_in_frame_set`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `frame_set` | `optional CollectionObjectName` | Frame Set | Required |
@@ -1528,6 +1624,8 @@ message GetTransformForIthFrameInFrameSetResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#group-to-surface-fit)
 
 `/briosa.AnalysisOperations/GroupToSurfaceFit` · Operation ID: `analysis_operations.group_to_surface_fit`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1573,6 +1671,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/ImportGeometryFitProfiles` · Operation ID: `analysis_operations.import_geometry_fit_profiles`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** `filesystem_read`, `destructive` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `geometry_fit_profiles_file_path` | `optional FileReference` | Geometry Fit Profiles File Path | Required |
@@ -1597,6 +1697,8 @@ message ImportGeometryFitProfilesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#is-object-of-type)
 
 `/briosa.AnalysisOperations/IsObjectOfType` · Operation ID: `analysis_operations.is_object_of_type`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1624,6 +1726,8 @@ message IsObjectOfTypeResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-circle-fit-profile)
 
 `/briosa.AnalysisOperations/MakeCircleFitProfile` · Operation ID: `analysis_operations.make_circle_fit_profile`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1678,6 +1782,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MakeConeFitProfile` · Operation ID: `analysis_operations.make_cone_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
@@ -1723,6 +1829,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-cylinder-fit-profile)
 
 `/briosa.AnalysisOperations/MakeCylinderFitProfile` · Operation ID: `analysis_operations.make_cylinder_fit_profile`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1784,6 +1892,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MakeEllipseFitProfile` · Operation ID: `analysis_operations.make_ellipse_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
@@ -1836,6 +1946,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MakeLineFitProfile` · Operation ID: `analysis_operations.make_line_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
@@ -1868,6 +1980,8 @@ message MakeLineFitProfileResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-paraboloid-fit-profile)
 
 `/briosa.AnalysisOperations/MakeParaboloidFitProfile` · Operation ID: `analysis_operations.make_paraboloid_fit_profile`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -1913,6 +2027,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MakePlaneFitProfile` · Operation ID: `analysis_operations.make_plane_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
@@ -1955,6 +2071,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#make-slot-fit-profile)
 
 `/briosa.AnalysisOperations/MakeSlotFitProfile` · Operation ID: `analysis_operations.make_slot_fit_profile`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2012,6 +2130,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MakeSphereFitProfile` · Operation ID: `analysis_operations.make_sphere_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `fit_profile_name` | `optional string` | Fit Profile Name | Empty |
@@ -2054,6 +2174,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/MushroomTargetHoleInspection` · Operation ID: `analysis_operations.mushroom_target_hole_inspection`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `name_prefix_for_intermediate_constructions` | `optional string` | Name Prefix for Intermediate Constructions | Empty |
@@ -2089,6 +2211,8 @@ message MushroomTargetHoleInspectionResult {
 
 `/briosa.AnalysisOperations/PatchNormalShiftHolePin` · Operation ID: `analysis_operations.patch_normal_shift_hole_pin`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `plane_points_group_name` | `optional CollectionObjectName` | Plane Points Group Name | Required |
@@ -2118,6 +2242,8 @@ message PatchNormalShiftHolePinResult {
 
 `/briosa.AnalysisOperations/PatchNormalShiftPoint` · Operation ID: `analysis_operations.patch_normal_shift_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `plane_points_group_name` | `optional CollectionObjectName` | Plane Points Group Name | Required |
@@ -2146,6 +2272,8 @@ message PatchNormalShiftPointResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-clouds-to-objects)
 
 `/briosa.AnalysisOperations/QueryCloudsToObjects` · Operation ID: `analysis_operations.query_clouds_to_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2195,6 +2323,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/QueryCloudsToSurface` · Operation ID: `analysis_operations.query_clouds_to_surface`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cloud_names` | `repeated CollectionObjectName` | Cloud Names | Required |
@@ -2243,6 +2373,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/QueryFrameToFrame` · Operation ID: `analysis_operations.query_frame_to_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_frame_name` | `optional CollectionObjectName` | Reference Frame Name | Required |
@@ -2287,6 +2419,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-groups-to-objects)
 
 `/briosa.AnalysisOperations/QueryGroupsToObjects` · Operation ID: `analysis_operations.query_groups_to_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_results_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2340,6 +2476,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/QueryPointToObjects` · Operation ID: `analysis_operations.query_point_to_objects`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -2377,6 +2515,8 @@ message QueryPointToObjectsResult {
 
 `/briosa.AnalysisOperations/QueryPointToPointAlongCurve` · Operation ID: `analysis_operations.query_point_to_point_along_curve`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `value_1st_point` | `optional PointName` | 1st Point | Required |
@@ -2405,6 +2545,8 @@ message QueryPointToPointAlongCurveResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-circle)
 
 `/briosa.AnalysisOperations/QueryPointsToCircle` · Operation ID: `analysis_operations.query_points_to_circle`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2440,6 +2582,10 @@ message QueryPointsToCircleResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#query-points-to-objects)
 
 `/briosa.AnalysisOperations/QueryPointsToObjects` · Operation ID: `analysis_operations.query_points_to_objects`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_results_dialog` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2492,6 +2638,10 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/QueryPointsToSinglePoint` · Operation ID: `analysis_operations.query_points_to_single_point`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `read-only`, `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `show_vector_properties` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_names` | `repeated PointName` | Point Names | Required |
@@ -2518,6 +2668,8 @@ message QueryPointsToSinglePointResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#re-compute-calculated-items)
 
 `/briosa.AnalysisOperations/ReComputeCalculatedItems` · Operation ID: `analysis_operations.re_compute_calculated_items`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2548,6 +2700,10 @@ message ReComputeCalculatedItemsResult {
 
 `/briosa.AnalysisOperations/RenamePointsBasedOnInterPointDistanceToReferencePoints` · Operation ID: `analysis_operations.rename_points_based_on_inter_point_distance_to_reference_points`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verify_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `reference_group_name` | `optional CollectionObjectName` | Reference Group Name | Required |
@@ -2576,6 +2732,10 @@ message RenamePointsBasedOnInterPointDistanceToReferencePointsResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#rename-points-based-on-proximity-to-reference-points)
 
 `/briosa.AnalysisOperations/RenamePointsBasedOnProximityToReferencePoints` · Operation ID: `analysis_operations.rename_points_based_on_proximity_to_reference_points`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
+A request that sets `verify_results` to true also needs the [interactive opt-in](/docs/deployment/operation-admission#interactive-operations), because SpatialAnalyzer then opens operator UI.
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2608,6 +2768,8 @@ message RenamePointsBasedOnProximityToReferencePointsResult {
 
 `/briosa.AnalysisOperations/ReverseBSplines` · Operation ID: `analysis_operations.reverse_bsplines`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `b_spline_list` | `repeated CollectionObjectName` | B-Spline List | Required |
@@ -2630,6 +2792,8 @@ message ReverseBSplinesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#reverse-plane-normals)
 
 `/briosa.AnalysisOperations/ReversePlaneNormals` · Operation ID: `analysis_operations.reverse_plane_normals`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2654,6 +2818,8 @@ message ReversePlaneNormalsResult {
 
 `/briosa.AnalysisOperations/ReverseSurfaceNormals` · Operation ID: `analysis_operations.reverse_surface_normals`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `surface_list` | `repeated CollectionObjectName` | Surface List | Required |
@@ -2676,6 +2842,8 @@ message ReverseSurfaceNormalsResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-circle-properties)
 
 `/briosa.AnalysisOperations/SetCircleProperties` · Operation ID: `analysis_operations.set_circle_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2705,6 +2873,8 @@ message SetCirclePropertiesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-cone-properties)
 
 `/briosa.AnalysisOperations/SetConeProperties` · Operation ID: `analysis_operations.set_cone_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2750,6 +2920,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/SetCylinderProperties` · Operation ID: `analysis_operations.set_cylinder_properties`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `cylinder_name` | `optional CollectionObjectName` | Cylinder Name | Required |
@@ -2791,6 +2963,8 @@ message SetCylinderPropertiesResult {
 
 `/briosa.AnalysisOperations/SetDefaultColorizationOptions` · Operation ID: `analysis_operations.set_default_colorization_options`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `colorization_options` | `optional ColorizationOptions` | Colorization Options | Red |
@@ -2813,6 +2987,8 @@ message SetDefaultColorizationOptionsResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-ellipse-properties)
 
 `/briosa.AnalysisOperations/SetEllipseProperties` · Operation ID: `analysis_operations.set_ellipse_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2845,6 +3021,8 @@ message SetEllipsePropertiesResult {
 
 `/briosa.AnalysisOperations/SetGeometryRelationshipFitProfile` · Operation ID: `analysis_operations.set_geometry_relationship_fit_profile`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `geometry_type` | `optional GeometryType` | Geometry Type | Required |
@@ -2873,6 +3051,8 @@ message SetGeometryRelationshipFitProfileResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-line-properties)
 
 `/briosa.AnalysisOperations/SetLineProperties` · Operation ID: `analysis_operations.set_line_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2909,6 +3089,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/SetMeasurementAuxiliaryData` · Operation ID: `analysis_operations.set_measurement_auxiliary_data`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `point_name` | `optional PointName` | Point Name | Required |
@@ -2938,6 +3120,8 @@ message SetMeasurementAuxiliaryDataResult {
 
 `/briosa.AnalysisOperations/SetObjectReportingFrame` · Operation ID: `analysis_operations.set_object_reporting_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name` | `optional CollectionObjectName` | Object Name | Required |
@@ -2962,6 +3146,8 @@ message SetObjectReportingFrameResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-properties)
 
 `/briosa.AnalysisOperations/SetPointProperties` · Operation ID: `analysis_operations.set_point_properties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -2993,6 +3179,8 @@ message SetPointPropertiesResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#set-point-weights-from-uncertainties)
 
 `/briosa.AnalysisOperations/SetPointWeightsFromUncertainties` · Operation ID: `analysis_operations.set_point_weights_from_uncertainties`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3029,6 +3217,8 @@ message SetPointWeightsFromUncertaintiesResult {
 
 `/briosa.AnalysisOperations/SetTransformForIthFrameInFrameSet` · Operation ID: `analysis_operations.set_transform_for_ith_frame_in_frame_set`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `frame_set` | `optional CollectionObjectName` | Frame Set | Required |
@@ -3055,6 +3245,8 @@ message SetTransformForIthFrameInFrameSetResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#sphere-axis-check)
 
 `/briosa.AnalysisOperations/SphereAxisCheck` · Operation ID: `analysis_operations.sphere_axis_check`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3099,6 +3291,8 @@ message SphereAxisCheckResult {
 
 `/briosa.AnalysisOperations/TemperatureCompensateAGroup` · Operation ID: `analysis_operations.temperature_compensate_a_group`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `original_group` | `optional CollectionObjectName` | Original Group | Required |
@@ -3141,6 +3335,8 @@ Parameter and result notes (units, defaults, and presence are unchanged):
 
 `/briosa.AnalysisOperations/TransformObjectsFrameToFrame` · Operation ID: `analysis_operations.transform_objects_frame_to_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `object_name_list` | `repeated CollectionObjectName` | Object Name List | Required |
@@ -3170,6 +3366,8 @@ message TransformObjectsFrameToFrameResult {
 
 `/briosa.AnalysisOperations/TransformObjectsByDeltaAboutWorkingFrame` · Operation ID: `analysis_operations.transform_objects_by_delta_about_working_frame`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_transform` | `repeated CollectionObjectName` | Objects to Transform | Required |
@@ -3194,6 +3392,8 @@ message TransformObjectsByDeltaAboutWorkingFrameResult {
 [MP Catalog](/mp-command-catalog/commands/analysis-operations#transform-objects-by-delta-world-transform-operator)
 
 `/briosa.AnalysisOperations/TransformObjectsByDeltaWorldTransformOperator` · Operation ID: `analysis_operations.transform_objects_by_delta_world_transform_operator`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -3220,6 +3420,8 @@ message TransformObjectsByDeltaWorldTransformOperatorResult {
 
 `/briosa.AnalysisOperations/TranslateObjectsByDelta` · Operation ID: `analysis_operations.translate_objects_by_delta`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `standard`, `device`, `full` · **Risk Flags:** none · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `objects_to_translate` | `repeated CollectionObjectName` | Objects to Translate | Required |
@@ -3239,4 +3441,4 @@ message TranslateObjectsByDeltaResult {
 }
 ```
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

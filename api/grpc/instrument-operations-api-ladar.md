@@ -1,6 +1,6 @@
 ---
 title: Instrument Operations / API - LADAR
-description: Released grpc 0.9.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
+description: Released grpc 0.10.0 operations, exact signatures, and defaults for SA 2026.1.0529.7.
 toc_max_heading_level: 2
 ---
 
@@ -8,7 +8,7 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/grpc/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
-This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
+This reference covers **SA 2026.1.0529.7**, Server **0.10.0**. Choose the other exact target in the sidebar; command availability and input choices differ. Runtime policy and readiness still apply. Released implementation does not establish licensed execution of every operation. Follow the linked catalog qualifications, including hardware, fixture, and interactive requirements.
 
 [MP Value Types](./value-types.md) defines the referenced types and exact-target choices. Caller cancellation does not prove that in-flight SA work stopped. Never automatically replay an uncertain operation.
 
@@ -17,6 +17,8 @@ This reference covers **SA 2026.1.0529.7**, Server **0.9.0**. Choose the other e
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point)
 
 `/briosa.InstrumentOperations/SetLadarAutoMeasPoint` · Operation ID: `instrument_operations.set_ladar_auto_meas_point`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -42,6 +44,8 @@ message SetLadarAutoMeasPointResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
 `/briosa.InstrumentOperations/SetLadarAutoMeasSphere` · Operation ID: `instrument_operations.set_ladar_auto_meas_sphere`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -76,6 +80,8 @@ message SetLadarAutoMeasSphereResult {
 
 `/briosa.InstrumentOperations/SetLadarFeatureMeasSphere` · Operation ID: `instrument_operations.set_ladar_feature_meas_sphere`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -100,6 +106,8 @@ message SetLadarFeatureMeasSphereResult {
 [MP Catalog](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
 `/briosa.InstrumentOperations/SetLadarFeatureMeasCircle` · Operation ID: `instrument_operations.set_ladar_feature_meas_circle`
+
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
 
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
@@ -128,6 +136,8 @@ message SetLadarFeatureMeasCircleResult {
 
 `/briosa.InstrumentOperations/SetLadarFeatureMeasSlot` · Operation ID: `instrument_operations.set_ladar_feature_meas_slot`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -155,6 +165,8 @@ message SetLadarFeatureMeasSlotResult {
 
 `/briosa.InstrumentOperations/SetLadarFeatureMeasCylinder` · Operation ID: `instrument_operations.set_ladar_feature_meas_cylinder`
 
+**[Admission Profiles](/docs/deployment/operation-admission):** `device`, `full` · **Risk Flags:** `device_config` · **Duration Class:** `quick`
+
 | Message | Field | Name | Type | MP Argument | Briosa Default |
 | --- | ---: | --- | --- | --- | --- |
 | Request | 1 | `instrument` | `optional CollectionInstrumentId` | Instrument ID | Required |
@@ -180,4 +192,4 @@ message SetLadarFeatureMeasCylinderResult {
 
 Use the exact operation entries above and [MP Value Types](./value-types.md). This retained grouping anchor preserves existing bookmarks.
 
-[Released Source](https://github.com/spatialanalyzer/briosa/tree/v0.9.0/targets/2026.1.0529.7)
+[Candidate Source](https://github.com/spatialanalyzer/briosa/tree/2960705eb3152646513dca2b5d2043cd7cfffb75/targets/2026.1.0529.7)

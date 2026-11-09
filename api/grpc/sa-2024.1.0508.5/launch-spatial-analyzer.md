@@ -108,8 +108,9 @@ by default.
 | `FAILED_PRECONDITION` | `APPLICATION_AMBIGUOUS` | Existing applications make SDK-port ownership ambiguous. |
 | `NOT_FOUND` | `LAUNCH_FAILED` | The approved exact-target installation or requested job file could not be resolved. |
 | `UNAVAILABLE` | `LAUNCH_FAILED` | The process exited or failed during startup. |
-| `DEADLINE_EXCEEDED` | `TIMEOUT` | The server-side application-startup bound expired. |
-| `CANCELLED` | — | The caller cancelled its wait; query application state before another transition. |
+| `DEADLINE_EXCEEDED` | `TIMEOUT` | The server-side application-startup bound expired. The launched process keeps running and stays `STARTING` until a later observation sees its window or its exit; the server does not close it. Refresh application state before launching again. |
+| `CANCELLED` | `CALLER_CANCELLED` | The caller cancelled its wait. `application-lifecycle-request-withdrawn` means nothing started; `application-lifecycle-caller-stopped-waiting` means the accepted launch continues, so query application state before another transition. |
+| `DEADLINE_EXCEEDED` | `CALLER_DEADLINE_EXCEEDED` | The caller's gRPC deadline ended its wait, with the same two diagnostics. |
 | `INTERNAL` | `INTERNAL` | Briosa could not preserve a valid lifecycle state. |
 
 Do not blindly repeat a cancelled or timed-out launch. Call

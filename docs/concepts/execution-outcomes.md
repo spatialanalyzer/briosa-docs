@@ -23,9 +23,12 @@ server and expose it through these client exceptions:
 
 | Client | Exception | Useful Members |
 | --- | --- | --- |
-| .NET | `BriosaCallException` | `CompletionUnknown`, `ReconciliationRequired`, `OperationError` |
-| Python | `BriosaCallError` | `completion_unknown`, `reconciliation_required`, `operation_error` |
-| JavaScript/TypeScript | `BriosaCallError` | `completionUnknown`, `reconciliationRequired`, `operationError` |
+| .NET | `BriosaOperationException` | `Kind`, `ExecutionDisposition`, `ReplayGuidance`, `MpExecution` |
+| Python | `BriosaOperationError` | `completion_unknown`, `reconciliation_required`, `failure` (with `mp_execution`) |
+| JavaScript/TypeScript | `BriosaOperationError` | `completionUnknown`, `reconciliationRequired`, `mpExecution` |
+
+The MP execution details carry the MP state, the MP result code, and the
+retrieval of each output when the failure relates to the MP command.
 
 This means an application using a Briosa client does not need to call the
 native SA SDK, interpret numeric MP result codes, inspect gRPC metadata, or
@@ -45,26 +48,63 @@ you call through a Briosa client library.
 A successful return from the SA SDK's `ExecuteStep` method means only that the
 SDK accepted the execution request. Briosa then calls `GetMPStepResult` to learn
 whether the MP command itself succeeded. For the current SpatialAnalyzer target,
-MP result code `2` indicates success.
+MP result code `2` indicates success, and code `4` a partial success.
 
 Briosa retrieves command outputs only after it confirms MP success. If an output
 cannot be retrieved, Briosa reports that problem instead of substituting an
 empty string, zero, or another value that could be mistaken for a real result.
 
+## When a Command Partly Succeeds
+
+SpatialAnalyzer reports MP code `4` (`PARTIAL SUCCESS`) when a command did its
+work but not its full intended effect, for example a fit that exceeded its
+tolerance or a command that processed some, but not all, of the named objects.
+Server 0.10.0 reports it as a success: the call returns its outputs, the MP
+execution state is `PartialSuccess` with code `4`, and the command is
+**completed**. Do not repeat the call to change its outcome.
+
+Four operations are the exception, because their documentation says code `4`
+leaves the requested work undone: `construct_point_from_survey_target_center`,
+`open_sa_file`, `open_template_file`, and `set_report_options_for_object`. For
+these, code `4` is an ordinary MP failure.
+
+A partial success does not change a method's return type. To see whether a call
+fully or partly succeeded, pass the per-call completion observer:
+
+| Client | Observer |
+| --- | --- |
+| .NET | The `onMpCompletion` parameter, an `Action<MpCompletion>`, before the `CancellationToken` |
+| Python | The keyword-only `on_mp_completion` argument |
+| JavaScript/TypeScript | `onMpCompletion` in `BriosaCallOptions` |
+
+The client calls the observer once, after it checks the completion and before it
+maps the outputs. Every client checks each MP success, whether or not you pass
+an observer: a success must report `Succeeded` with code `2` or
+`PartialSuccess` with code `4`, and anything else is a protocol error. If an
+output then fails, the failure keeps `PartialSuccess` and code `4` in its MP
+execution details.
+
 ## When the SDK Raises an Exception
 
-Starting with Server 0.9.2, an exception from the SA SDK during an MP sequence
-does not stop the Briosa worker. Briosa reports the phase it can prove, with a
-diagnostic code and without the exception text:
+An exception from the SA SDK during an MP sequence does not stop the Briosa
+worker. Server 0.10.0 reports it with the dedicated failure kind
+`SdkCallFaulted`, the phase it can prove, and a diagnostic code, without the
+exception text:
 
 - **Before `ExecuteStep`**, for example while setting the step or an input, the
-  command is **not started**. Briosa currently reports this as an internal
-  error marked **do not replay**.
-- **During `ExecuteStep` or `GetMPStepResult`**, the **outcome is unknown**,
-  and the error asks you to reconcile before replay.
-- **In an output getter after MP success**, the command is **completed**, but
-  that output is reported as unavailable rather than replaced with a default
-  value.
+  command is **not started** (`sdk-call-faulted-before-execute`). The error
+  says **do not replay**, because the SDK just threw; refresh SDK state and
+  retry deliberately.
+- **During `ExecuteStep` or `GetMPStepResult`**, the **outcome is unknown**
+  (`sdk-execute-step-faulted` or `sdk-mp-result-retrieval-faulted`), and the
+  error asks you to reconcile before replay.
+- **In an output getter after MP success or partial success**, the command is
+  **completed** (`sdk-output-getter-faulted`). That output is reported as
+  unavailable rather than replaced with a default value, and the other outputs
+  are still retrieved.
+
+Server 0.9.2 reported these faults through interim kinds, such as `Internal`
+for a fault before `ExecuteStep`; `SdkCallFaulted` replaces them.
 
 The worker stays in service for later commands. An exception that leaves the
 worker's SDK thread in an untrustworthy state still stops the worker, and the
@@ -81,7 +121,24 @@ Briosa reports what it can prove about each command:
   confirm what ultimately happened
 
 An unknown outcome can occur when a request times out, the caller stops waiting,
-the Briosa worker exits, or a response is lost after execution begins.
+the Briosa worker exits, or a response is lost after execution begins. A request
+that is still queued when its caller cancels or its deadline passes is
+abandoned instead: it never reaches SpatialAnalyzer, and the server records it
+as not started with diagnostic `queued-request-abandoned`. A gRPC caller that
+cancelled does not receive that detail, so it still treats the outcome as
+unknown.
+
+## When a SpatialAnalyzer Dialog Blocks a Command
+
+Job state or an argument value can make SpatialAnalyzer open a modal dialog,
+which holds the command until someone dismisses it. When the command's
+execution budget then expires, Briosa reports a watchdog timeout whose outcome
+is unknown, with diagnostic `sa-modal-dialog-open` and guidance that operator
+intervention is required. Read and dismiss the dialog in SpatialAnalyzer before
+recovering the SDK; the clients never retry such a command. The
+`Briosa:SpatialAnalyzer:InteractionMode` server setting can make SpatialAnalyzer
+show fewer dialogs on an unattended station; see
+[Windows Deployment](/docs/deployment/windows#spatialanalyzer-interaction-mode).
 
 Replacing the worker can restore Briosa's availability, but it cannot determine
 what SpatialAnalyzer already did. Likewise, cancelling a Briosa request stops
