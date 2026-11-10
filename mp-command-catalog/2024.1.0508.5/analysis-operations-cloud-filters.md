@@ -15,7 +15,7 @@ command link for its exact-target signature, disposition, and version difference
 | MP Command | Status | Validation |
 | --- | --- | --- |
 | [Delete Cloud Points by Radial Distance from Points](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-radial-distance-from-points) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
-| [Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Delete Cloud Points by X Y Z Range](/mp-command-catalog/commands/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Filter Clouds to BSplines](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-bsplines) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 | [Filter Clouds to Group](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-group) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 | [Filter Clouds to Line Segment](/mp-command-catalog/commands/cloud-and-mesh-operations#filter-clouds-to-line-segment) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |

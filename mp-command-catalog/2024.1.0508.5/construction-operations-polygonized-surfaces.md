@@ -14,6 +14,6 @@ command link for its exact-target signature, disposition, and version difference
 
 | MP Command | Status | Validation |
 | --- | --- | --- |
-| [Construct Polygonized Surface from Point Clouds](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Polygonized Surface from Point Clouds](/mp-command-catalog/commands/construction-operations-polygonized-surfaces#construct-polygonized-surface-from-point-clouds) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)

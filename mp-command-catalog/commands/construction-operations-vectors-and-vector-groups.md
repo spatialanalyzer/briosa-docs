@@ -73,17 +73,17 @@ These entries cover the 14 commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
-<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="uncommitted" data-validation="licensed-execution-probe"><td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Vector Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="uncommitted" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-vector-name-ref-list---runtime-select">Make a Vector Name Ref List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--uncommitted">Uncommitted</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-interactive-fixture"><td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive fixture</td></tr>
-<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="excluded" data-validation="licensed-execution-probe"><td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Collection Vector Group Name Ref List - Runtime Select" data-group="Construction Operations / Vectors and Vector Groups" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-collection-vector-group-name-ref-list---runtime-select">Make a Collection Vector Group Name Ref List - Runtime Select</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-vector-group-fixture"><td><a href="#make-vector-names-unique-in-vector-group">Make Vector Names Unique in Vector Group</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — vector-group fixture</td></tr>
 <tr data-command="Make Vector Names Unique in Vector Group" data-group="Construction Operations / Vectors and Vector Groups" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -460,19 +460,19 @@ Vector Group.
 ## Make a Vector Name Ref List - Runtime Select
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-interactive-fixture">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="uncommitted" data-group="Construction Operations / Vectors and Vector Groups" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At Risk — interactive fixture</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="uncommitted" data-group="Construction Operations / Vectors and Vector Groups" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--uncommitted">Uncommitted</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-vector-name-ref-list---runtime-select)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-vectors-and-vector-groups/make-a-vector-name-ref-list---runtime-select) · [.NET](/api/dotnet/construction-operations-vectors-and-vector-groups/make-a-vector-name-ref-list---runtime-select) · [Python](/api/python/construction-operations-vectors-and-vector-groups/make-a-vector-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/construction-operations-vectors-and-vector-groups/make-a-vector-name-ref-list---runtime-select)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -492,6 +492,10 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Uncommitted in Briosa Server 0.10.0.** Contract major 3 removed this operation. No operator could complete its selection on either exact target in a licensed session, so it is unverified. SpatialAnalyzer never rejected it. It can return in a later 3.x revision once a licensed session verifies it. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** Build a vector name list directly, or from a vector group with Make a Vector Name Ref List From a Vector Group.
+
 Prompts the operator to select vectors in SpatialAnalyzer and returns their
 Vector Name reference list. The user prompt defaults to the exact MP text
 ` Select Vectors (ENTER when done) `.
@@ -499,19 +503,19 @@ Vector Name reference list. The user prompt defaults to the exact MP text
 ## Make a Collection Vector Group Name Ref List - Runtime Select
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-interactive-fixture">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Vectors and Vector Groups" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At Risk — interactive fixture</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Vectors and Vector Groups" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Vectors and Vector Groups" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Vectors and Vector Groups</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-vectors-and-vector-groups#make-a-collection-vector-group-name-ref-list---runtime-select)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-vectors-and-vector-groups/make-a-collection-vector-group-name-ref-list---runtime-select) · [.NET](/api/dotnet/construction-operations-vectors-and-vector-groups/make-a-collection-vector-group-name-ref-list---runtime-select) · [Python](/api/python/construction-operations-vectors-and-vector-groups/make-a-collection-vector-group-name-ref-list---runtime-select) · [JavaScript/TypeScript](/api/javascript/construction-operations-vectors-and-vector-groups/make-a-collection-vector-group-name-ref-list---runtime-select)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -530,6 +534,10 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 </details>
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
+
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the selected vector groups could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No replacement selects vector groups at run time on these exact targets.
 
 Prompts the operator to select Vector Groups and returns their structured
 collection and Vector Group identities. The prompt defaults to an empty string.

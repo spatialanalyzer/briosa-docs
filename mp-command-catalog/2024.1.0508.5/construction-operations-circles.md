@@ -15,7 +15,7 @@ command link for its exact-target signature, disposition, and version difference
 | MP Command | Status | Validation |
 | --- | --- | --- |
 | [Construct Circle](/mp-command-catalog/commands/construction-operations-circles#construct-circle) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
-| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
+| [Construct Circles (Lines) From Surfaces](/mp-command-catalog/commands/construction-operations-circles#construct-circles-lines-from-surfaces) | <span className="catalog-status catalog-status--excluded">Excluded</span> | Licensed execution probe |
 | [Construct Circles From Surface Faces - Runtime Select](/mp-command-catalog/commands/construction-operations-circles#construct-circles-from-surface-faces---runtime-select) | <span className="catalog-status catalog-status--current">Current</span> | At Risk — no 2024 runtime validation |
 
 [All 2024 Groups](./group-hierarchy.md) · [Review Notes](./review-notes.md)

@@ -41,13 +41,13 @@ Operations → Circles** in SA 2026.1.0529.7.
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-setter-probe-and-fixture-validation-required">
-  <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — setter probe and fixture validation required</td>
+<tr data-target="2026.1.0529.7" data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="excluded" data-validation="licensed-execution-probe">
+  <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td>
 </tr>
-<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Construct Circles (Lines) From Surfaces" data-group="Construction Operations / Circles" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#construct-circles-lines-from-surfaces">Construct Circles (Lines) From Surfaces</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 </tbody>
 </table>
@@ -147,19 +147,19 @@ replays the operation.
 ## Construct Circles (Lines) From Surfaces
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Circles" data-validation="at-risk-setter-probe-and-fixture-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Circles" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Circles</span>
-  <span className="catalog-target-validation">At Risk — setter probe and fixture validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Circles" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Circles" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Circles</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-circles#construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-circles#construct-circles-lines-from-surfaces) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-circles#construct-circles-lines-from-surfaces) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-circles#construct-circles-lines-from-surfaces)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-circles/construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/construction-operations-circles/construct-circles-lines-from-surfaces) · [Python](/api/python/construction-operations-circles/construct-circles-lines-from-surfaces) · [JavaScript/TypeScript](/api/javascript/construction-operations-circles/construct-circles-lines-from-surfaces)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -188,6 +188,10 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code -1 for both the Circle and the Line mode on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No replacement extracts circles or lines from surfaces on these exact targets.
+
 | Direction | Exact MP Argument | MP Type | MP Editor Default | Briosa Default |
 | --- | --- | --- | --- | --- |
 | Input | `Surfaces` | Collection Object Name Ref List | Empty | Required |
@@ -206,7 +210,6 @@ controlled Circle/Line enum. Its generic string-setter mapping requires an
 exact-target setter probe before this operation is considered validated.
 Licensed probes on October 7, 2026 ran it through Briosa on both exact targets
 with each mode: SpatialAnalyzer rejected `Circle Line Mode` sent through
-`SetStringArg` for both `Circle` and `Line`, with MP code -1. Contract major 3
-removes this operation; the evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
+`SetStringArg` for both `Circle` and `Line`, with MP code -1. The evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310).
 
-[gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-circles/construct-circles-lines-from-surfaces)
+[gRPC](/api/grpc/construction-operations-circles/construct-circles-lines-from-surfaces) · [.NET](/api/dotnet/construction-operations-circles/construct-circles-lines-from-surfaces) · [Python](/api/python/construction-operations-circles/construct-circles-lines-from-surfaces) · [JavaScript](/api/javascript/construction-operations-circles/construct-circles-lines-from-surfaces)

@@ -27,9 +27,9 @@ entry with its exact-target group, disposition, signature, and reviewed differen
 | Status | Commands | Meaning for This Target |
 | --- | ---: | --- |
 | <span className="catalog-status catalog-status--current">Current</span> | 987 | Implemented in Server 0.10.0; runtime admission and readiness apply. |
-| <span className="catalog-status catalog-status--excluded">Excluded</span> | 171 | Existing product or workflow rationale also applies to 2024. |
+| <span className="catalog-status catalog-status--excluded">Excluded</span> | 179 | Existing product or workflow rationale also applies to 2024. |
 | <span className="catalog-status catalog-status--sdk-unavailable">SDK Unavailable</span> | 75 | No complete reviewed useful SDK mapping is available. |
-| <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | 41 | Retained for reference, with no release commitment. |
+| <span className="catalog-status catalog-status--uncommitted">Uncommitted</span> | 42 | Retained for reference, with no release commitment. |
 
 The review matched every captured command to an existing canonical entry and
 carried forward applicable 2026 decisions. Version differences were reviewed

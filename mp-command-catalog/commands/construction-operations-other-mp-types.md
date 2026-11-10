@@ -262,11 +262,11 @@ languages instead of becoming network calls.
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-output-binding-and-fixture-validation-required"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output binding and fixture</td></tr>
-<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="licensed-execution-probe"><td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Add Collection Instruments to a Ref List - WildCard Selection" data-group="Construction Operations / Other MP Types" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#add-collection-instruments-to-a-ref-list---wildcard-selection">Add Collection Instruments to a Ref List - WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-interactive-validation-required"><td><a href="#make-a-collection-instrument-reference-list--runtime-select">Make a Collection Instrument Reference List- Runtime Select</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — interactive validation required</td></tr>
 <tr data-command="Make a Collection Instrument Reference List- Runtime Select" data-group="Construction Operations / Other MP Types" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -1974,19 +1974,19 @@ Append a caller-supplied instrument identity in the client language.
 ## Add Collection Instruments to a Ref List - WildCard Selection
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-output-binding-and-fixture-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At Risk — output binding and fixture</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Other MP Types" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Other MP Types" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Other MP Types</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-other-mp-types#add-collection-instruments-to-a-ref-list---wildcard-selection)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript/TypeScript](/api/javascript/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -2007,12 +2007,16 @@ The MP inputs, outputs, and choices match the 2026 counterpart. Its disposition 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the instrument list could not be read back, and the MP documents no other output. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** A reference list is a client-side value in Briosa, so build the instrument list directly.
+
 Takes a required starting `Collection Instrument Reference List`; collection
 and instrument wildcard criteria each default to `*`. It returns the updated
 list after adding matching live instruments. Retrieving the MP's mutated input
 argument requires exact-target validation.
 
-**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection)
+**API References (Server 0.9.2 and Client 0.4.0):** [gRPC](/api/grpc/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection) · [JavaScript and TypeScript](/api/javascript/construction-operations-other-mp-types/add-collection-instruments-to-a-ref-list---wildcard-selection)
 
 ## Make a Collection Instrument Reference List- Runtime Select
 

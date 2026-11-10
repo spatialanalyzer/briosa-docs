@@ -270,17 +270,17 @@ These canonical entries document the reviewed 2026.1.0529.7 command surface once
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="current" data-validation="at-risk-destructive-fixture-validation-required">
+<tr data-target="2026.1.0529.7" data-command="Delete Cloud Points by X Y Z Range" data-group="Cloud and Mesh Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe">
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Cloud and Mesh Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — destructive fixture validation required</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
-<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-command="Delete Cloud Points by X Y Z Range" data-group="Analysis Operations / Cloud Filters" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#delete-cloud-points-by-x-y-z-range">Delete Cloud Points by X Y Z Range</a></td>
   <td>Analysis Operations / Cloud Filters</td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Generate General Mesh" data-group="Cloud and Mesh Operations / Mesh Operations" data-status="current" data-validation="at-risk-fixture-or-interactive-validation-required">
   <td><a href="#generate-general-mesh">Generate General Mesh</a></td>
@@ -1761,19 +1761,19 @@ mesh behavior through a reviewed exact-target SDK command.
 ## Delete Cloud Points by X Y Z Range
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="at-risk-destructive-fixture-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Cloud and Mesh Operations / Cloud Filters" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Cloud and Mesh Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — destructive fixture validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Analysis Operations / Cloud Filters" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Analysis Operations / Cloud Filters" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Analysis Operations / Cloud Filters</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [Python](/api/python/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/cloud-and-mesh-operations#delete-cloud-points-by-x-y-z-range)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript/TypeScript](/api/javascript/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -1801,10 +1801,14 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. With bounds set, SpatialAnalyzer returned MP code -1 on both exact targets and deleted no points. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No X Y Z box delete replaces it. Delete Cloud Points by Radial Distance from Points deletes by distance from points instead; its semantics differ, and it has no licensed validation yet.
+
 <div className="catalog-command-meta">
   <div><span>Reviewed SA Target</span><strong>2026.1.0529.7</strong></div>
   <div><span>MP Group Path</span><strong>Cloud and Mesh Operations / Cloud Filters</strong></div>
-  <div><span>Validation</span><strong>At Risk — destructive fixture validation required</strong></div>
+  <div><span>Validation</span><strong>Licensed execution probe</strong></div>
   <div><span>SDK Observation</span><strong>Present</strong></div>
 </div>
 
@@ -1833,12 +1837,9 @@ points. SA rejects the substituted bound setters; the same `Cloud Names` list
 works with Delete Cloud Points by Radial Distance from Points. A request that
 omits all six bounds sends no bound setter and has not been tested. If SA treats
 unset bounds as unlimited, that request with `Delete Inside` true deletes every
-point in the named clouds. Contract major 3 removes this operation.
+point in the named clouds.
 
-Included in Briosa Server 0.9.2 because it exposes SpatialAnalyzer-owned cloud or
-mesh behavior through a reviewed exact-target SDK command.
-
-**API References:** [gRPC](/api/grpc/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript and TypeScript](/api/javascript/sa-2026.1.0529.7/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)
+**API References (Server 0.9.2 and Client 0.4.0):** [gRPC](/api/grpc/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [.NET](/api/dotnet/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [Python](/api/python/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range) · [JavaScript and TypeScript](/api/javascript/cloud-and-mesh-operations/delete-cloud-points-by-x-y-z-range)
 
 ## Generate General Mesh
 

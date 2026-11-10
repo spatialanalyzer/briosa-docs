@@ -73,11 +73,11 @@ These entries cover the 21 commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
   <td>Evidence review</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-output-binding-validation-required"><td><a href="#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — output-binding validation required</td></tr>
-<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe"><td><a href="#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Make a Callout View Ref List - WildCard Selection" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#make-a-callout-view-ref-list---wildcard-selection">Make a Callout View Ref List - WildCard Selection</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Add a Callout View to Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="portable-contract-review"><td><a href="#add-a-callout-view-to-callout-view-ref-list">Add a Callout View to Callout View Ref List</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Portable contract review</td></tr>
 <tr data-command="Add a Callout View to Callout View Ref List" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="evidence-review" data-target="2024.1.0508.5" hidden>
@@ -109,11 +109,11 @@ These entries cover the 21 commands observed under **Construction Operations
   <td><span className="catalog-status catalog-status--current">Current</span></td>
   <td>At Risk — no 2024 runtime validation</td>
 </tr>
-<tr data-target="2026.1.0529.7" data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-input-binding-and-fixture-validation-required"><td><a href="#set-callout-view-properties">Set Callout View Properties</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — input-binding and fixture validation required</td></tr>
-<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
+<tr data-target="2026.1.0529.7" data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe"><td><a href="#set-callout-view-properties">Set Callout View Properties</a></td><td><span className="catalog-status catalog-status--excluded">Excluded</span></td><td>Licensed execution probe</td></tr>
+<tr data-command="Set Callout View Properties" data-group="Construction Operations / Callout Views and Callouts" data-status="excluded" data-validation="licensed-execution-probe" data-target="2024.1.0508.5" hidden>
   <td><a href="#set-callout-view-properties">Set Callout View Properties</a></td>
-  <td><span className="catalog-status catalog-status--current">Current</span></td>
-  <td>At Risk — no 2024 runtime validation</td>
+  <td><span className="catalog-status catalog-status--excluded">Excluded</span></td>
+  <td>Licensed execution probe</td>
 </tr>
 <tr data-target="2026.1.0529.7" data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-destructive-fixture-validation-required"><td><a href="#delete-callout-view">Delete Callout View</a></td><td><span className="catalog-status catalog-status--current">Current</span></td><td>At Risk — destructive fixture validation required</td></tr>
 <tr data-command="Delete Callout View" data-group="Construction Operations / Callout Views and Callouts" data-status="current" data-validation="at-risk-no-2024-runtime-validation" data-target="2024.1.0508.5" hidden>
@@ -602,19 +602,19 @@ collection types instead of asking the server to construct a transient MP list.
 ## Make a Callout View Ref List - WildCard Selection
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-output-binding-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Callout Views and Callouts" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
-  <span className="catalog-target-validation">At Risk — output-binding validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Callout Views and Callouts" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#make-a-callout-view-ref-list---wildcard-selection)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [JavaScript/TypeScript](/api/javascript/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -639,6 +639,10 @@ The exporter places `Resultant Callout View List` in its input position without 
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code 2 on both exact targets, but the callout view list could not be read back. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** Make a Collection Item Name Reference List - WildCard Selection, with the callout-view item type, selects callout views through a different MP step. That item type has not been observed on a licensed run.
+
 | Direction | Exact MP Argument | MP Type | Briosa Default |
 | --- | --- | --- | --- |
 | Input | `Collection Wildcard Criteria` | String | `*` |
@@ -648,7 +652,7 @@ The exporter places `Resultant Callout View List` in its input position without 
 Unlike the local list helpers, this command queries live SA state. The exact
 export does not spell out the specialized output getter, so retrieving it
 through the SDK's collection-item-compatible ref-list representation requires
-exact-target validation. [gRPC](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [JavaScript](/api/javascript/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection)
+exact-target validation. [gRPC](/api/grpc/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [Python](/api/python/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection) · [JavaScript](/api/javascript/construction-operations-callout-views-and-callouts/make-a-callout-view-ref-list---wildcard-selection)
 
 ## Add a Callout View to Callout View Ref List
 
@@ -856,19 +860,19 @@ points. Included in Briosa Server 0.10.0. [API contracts](/api/grpc/sa-2026.1.05
 ## Set Callout View Properties
 
 <div className="catalog-target-contexts">
-<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-input-binding-and-fixture-validation-required">
-  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2026.1.0529.7" data-status="excluded" data-group="Construction Operations / Callout Views and Callouts" data-validation="licensed-execution-probe">
+  <strong>SA 2026.1.0529.7</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
-  <span className="catalog-target-validation">At Risk — input-binding and fixture validation required</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
-<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="current" data-group="Construction Operations / Callout Views and Callouts" data-validation="at-risk-no-2024-runtime-validation">
-  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--current">Current</span>
+<div className="catalog-target-context" data-target="2024.1.0508.5" data-status="excluded" data-group="Construction Operations / Callout Views and Callouts" data-validation="licensed-execution-probe">
+  <strong>SA 2024.1.0508.5</strong> <span className="catalog-status catalog-status--excluded">Excluded</span>
   <span className="catalog-target-group">Construction Operations / Callout Views and Callouts</span>
-  <span className="catalog-target-validation">At Risk — no 2024 runtime validation</span>
+  <span className="catalog-target-validation">Licensed execution probe</span>
 </div>
 </div>
 
-<p>SA 2024 Released References: [gRPC](/api/grpc/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [.NET](/api/dotnet/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [Python](/api/python/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties) · [JavaScript/TypeScript](/api/javascript/sa-2024.1.0508.5/construction-operations-callout-views-and-callouts#set-callout-view-properties)</p>
+<p>SA 2024 References (Server 0.9.2 and Client 0.4.0): [gRPC](/api/grpc/construction-operations-callout-views-and-callouts/set-callout-view-properties) · [.NET](/api/dotnet/construction-operations-callout-views-and-callouts/set-callout-view-properties) · [Python](/api/python/construction-operations-callout-views-and-callouts/set-callout-view-properties) · [JavaScript/TypeScript](/api/javascript/construction-operations-callout-views-and-callouts/set-callout-view-properties)</p>
 
 <details className="catalog-target-review">
 <summary>SA 2024.1.0508.5: Signature and Disposition</summary>
@@ -898,12 +902,15 @@ A missing exported binding is recorded explicitly. Existing limitations retain t
 
 <p className="catalog-reference-scope">Reference below: SA 2026.1.0529.7. API links and Briosa defaults apply to that target.</p>
 
+**Excluded in Briosa Server 0.10.0.** Contract major 3 removed this operation. SpatialAnalyzer returned MP code -1 on both exact targets. Server 0.9.2 and client 0.4.0 and earlier keep it; the API references in this entry lead to that contract.
+
+**Recommended Alternative:** No replacement sets callout view properties on a list. Set Default Callout View Properties remains.
+
 Applies the same visual settings to a required callout-view list. ObjectiveSA
 uses the generic collection-object ref-list setter for the export's
 `NOT_SUPPORTED` input; exact-target binding and visual validation remain
 required. Licensed probes on October 7, 2026 sent the list through that setter
-on both exact targets, and SpatialAnalyzer returned MP code -1. Contract major 3
-removes this operation; the evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310). [API contracts](/api/grpc/sa-2026.1.0529.7/construction-operations-callout-views-and-callouts/set-callout-view-properties)
+on both exact targets, and SpatialAnalyzer returned MP code -1. The evidence is recorded in [briosa#310](https://github.com/spatialanalyzer/briosa/issues/310). [API contracts](/api/grpc/construction-operations-callout-views-and-callouts/set-callout-view-properties)
 
 ## Delete Callout View
 
