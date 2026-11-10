@@ -574,7 +574,11 @@ class RpcStatusCode(StrEnum):
 `BriosaTransportError` reports a transport failure without one. Its
 `diagnostic_code` is `transport-` followed by the gRPC status name in lower
 kebab case, such as `transport-deadline-exceeded` or `transport-unavailable`
-(a malformed typed detail reports `typed-error-malformed`).
+(a malformed typed detail reports `typed-error-malformed`). An enum number
+the client doesn't know, including a negative one, fails as
+`typed-error-malformed` in an operation error or its MP execution details,
+and raises `BriosaProtocolError` (`unknown-enum-value`) in a lifecycle state
+or lifecycle error.
 Task cancellation stays `asyncio.CancelledError`.
 
 - **MP execution details.** `OperationFailure.mp_execution` carries the
