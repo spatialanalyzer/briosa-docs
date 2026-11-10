@@ -116,7 +116,10 @@ test('the command index preserves one disposition per command and exact target',
       assert.ok(row.attr('hidden') !== undefined, href);
     }
   }
-  assert.equal(statuses2024.current, 996);
+  // Server 0.10.0 registers 987 SA 2024 operations; contract major 3 retired nine.
+  assert.equal(statuses2024.current, 987);
+  assert.equal(statuses2024.excluded, 179);
+  assert.equal(statuses2024.uncommitted, 42);
   assert.equal(statuses2024.next, undefined);
   assert.ok(statuses2024['sdk-unavailable'] > 0);
 });
