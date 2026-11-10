@@ -8,80 +8,47 @@ toc_max_heading_level: 2
 
 [SA 2026.1.0529.7](/api/dotnet/instrument-operations-api-ladar) · [SA 2024.1.0508.5](/api/dotnet/sa-2024.1.0508.5/instrument-operations-api-ladar)
 
+:::warning[Correction (November 10, 2026)]
+
+This page listed six methods for SA 2024.1.0508.5 that the SA 2024.1.0508.5
+package of client 0.3.0 never had, and no Briosa Server for that target
+has a matching RPC. The commands remain available for SA 2026.1.0529.7; see the
+[SA 2026.1.0529.7 reference](/api/dotnet/instrument-operations-api-ladar).
+
+:::
+
 ## SetLadarAutoMeasPointAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-point)
 
-```csharp
-public Task SetLadarAutoMeasPointAsync(
-    CollectionInstrumentId instrument,
-    int sampleTimeMilliseconds = 0,
-    CancellationToken cancellationToken = default);
-```
-
-The exact MP default is `0` despite the MP label documenting `1–2000`.
+No released signature is available for SA 2024.1.0508.5.
 
 ## SetLadarAutoMeasSphereAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-automeas-sphere)
 
-```csharp
-public Task SetLadarAutoMeasSphereAsync(
-    CollectionInstrumentId instrument,
-    double sphereRadius = 1.1875,
-    double scanLineSpacing = 0.05,
-    bool sendCenterPoint = true,
-    bool sendSphere = false,
-    bool sendMeasuredCloud = false,
-    CancellationToken cancellationToken = default);
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## SetLadarFeatureMeasSphereAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-sphere)
 
-```csharp
-public Task SetLadarFeatureMeasSphereAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    CancellationToken cancellationToken = default);
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## SetLadarFeatureMeasCircleAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-circle)
 
-```csharp
-public Task SetLadarFeatureMeasCircleAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## SetLadarFeatureMeasSlotAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-slot)
 
-```csharp
-public Task SetLadarFeatureMeasSlotAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
+No released signature is available for SA 2024.1.0508.5.
 
 ## SetLadarFeatureMeasCylinderAsync
 
 [MP command](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder) · [gRPC contract](/api/grpc/sa-2024.1.0508.5/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder)
 
-```csharp
-public Task SetLadarFeatureMeasCylinderAsync(
-    CollectionInstrumentId instrument,
-    double scanLineSpacing = 0.05,
-    double widthOfExtraAreaAroundScan = 0.0,
-    CancellationToken cancellationToken = default);
-```
-
-Briosa does not convert units or add ranges to these instrument-specific
-settings. The calls are never automatically replayed.
+No released signature is available for SA 2024.1.0508.5.
