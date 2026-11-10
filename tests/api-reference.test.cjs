@@ -26,7 +26,7 @@ const revision = (family, id, release, target) => {
 
 async function reference() {
   const {loadReference} = await import('../plugins/api-reference/content.mjs');
-  const {contexts, releases} = await loadReference(root);
+  const {contexts, releases, compatibility} = await loadReference(root);
   // Each SA target is read at the newest release that documents it.
   const current = new Set();
   for (const family of Object.keys(releases)) for (const target of new Set(contexts.filter((c) => c.family === family).map((c) => c.target))) {
@@ -34,7 +34,7 @@ async function reference() {
     current.add(`${family}/${release}/${target}`);
   }
   for (const ctx of contexts) ctx.current = current.has(`${ctx.family}/${ctx.release}/${ctx.target}`);
-  return {contexts, releases};
+  return {contexts, releases, compatibility};
 }
 
 test('SA target roots and release roots serve real HTML instead of a client-recovered 404', async (t) => {
@@ -270,7 +270,7 @@ test('search prefers the release of the reference being read, including release-
 });
 
 test('every released MP method preserves its original code at its current page or history revision', async () => {
-  const {contexts} = await reference();
+  const {contexts, compatibility} = await reference();
   let methods = 0;
   const codesByPage = new Map();
   const key = (ctx, id) => `${ctx.family}/${ctx.release}/${ctx.target}/${id}`;
@@ -280,8 +280,12 @@ test('every released MP method preserves its original code at its current page o
   for (const [ctx, page] of entries) {
     methods++;
     const exact = ctx.base + '/' + page.id;
-    const stub = read(exact);
-    assert.match(stub('meta[name="robots"]').attr('content'), /noindex/, exact);
+    // Only releases published with release-qualified addresses have a stub there
+    // (targets.json compatibilityAddresses); later releases never add one.
+    const published = compatibility[ctx.family]?.includes(ctx.release);
+    assert.equal(existsSync(path.join(root, 'build', exact.slice(1) + '.html')), Boolean(published), exact);
+    const stub = published ? read(exact) : null;
+    if (stub) assert.match(stub('meta[name="robots"]').attr('content'), /noindex/, exact);
     let code;
     if (ctx.current) {
       const route = `/api/${ctx.family}/sa-${ctx.target}/${page.id}`;
@@ -291,7 +295,7 @@ test('every released MP method preserves its original code at its current page o
       assert.equal($('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, route);
       assert.equal($('meta[name="briosa:sa-target"]').attr('content'), ctx.target);
       assert.equal($('#sa-compatibility').length, 1, `${route} shows SpatialAnalyzer compatibility`);
-      assert.equal(stub('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, exact);
+      if (stub) assert.equal(stub('link[rel="canonical"]').attr('href'), 'https://briosa.dev' + route, exact);
       code = $('.api-contract pre code').toArray().map((n) => $(n).text().trimEnd());
     } else {
       const history = `/api/${ctx.family}/${page.id}`;
@@ -299,7 +303,7 @@ test('every released MP method preserves its original code at its current page o
       const section = revision(ctx.family, page.id, ctx.release, ctx.target);
       if (!page.available) { assert.equal(section.length, 0, `${exact} is not presented as documented`); continue; }
       assert.equal(section.length, 1, `${exact} has a history revision`);
-      assert.equal(stub('link[rel="canonical"]').attr('href'), `https://briosa.dev${history}#${pair(ctx.release, ctx.target)}`, exact);
+      if (stub) assert.equal(stub('link[rel="canonical"]').attr('href'), `https://briosa.dev${history}#${pair(ctx.release, ctx.target)}`, exact);
       const $ = read(history);
       code = section.find('.api-revision-contract pre code').toArray().map((n) => $(n).text().trimEnd());
     }
@@ -428,7 +432,7 @@ test('release-qualified addresses redirect statically to current references or h
     assert.ok(!existsSync(path.join(root, 'build', `api/${family}/${olderRelease}/sa-${target}/${method}.html`)), 'release-first method aliases are retired');
     const toolbar = read(canonical)('.api-toolbar');
     assert.deepEqual(toolbar.find('.api-version-label').toArray().map((n) => n.children[0].data), ['SpatialAnalyzer', family === 'grpc' ? 'Server Release' : 'Client Release']);
-    for (const base of [`/api/${family}/sa-${target}`, `/api/${family}/sa-${target}/${currentRelease}`, `/api/${family}/sa-${target}/${olderRelease}`]) {
+    for (const base of [`/api/${family}/sa-${target}`, `/api/${family}/sa-${target}/${previousRelease}`, `/api/${family}/sa-${target}/${olderRelease}`]) {
       assert.equal(readFileSync(path.join(root, 'build', base, 'index.html'), 'utf8'), readFileSync(path.join(root, 'build', base + '.html'), 'utf8'));
     }
   }
@@ -443,9 +447,12 @@ test('older aggregate JavaScript signatures keep their history without inferred 
 });
 
 test('all old grouped command anchors have useful HTML links without JavaScript', async () => {
-  const {contexts, releases} = await reference();
+  const {contexts, releases, compatibility} = await reference();
   for (const ctx of contexts) {
-    const latest = ctx.release === releases[ctx.family][0];
+    // Pre-redesign group addresses exist only for releases published with them;
+    // the newest of those owns the unversioned address.
+    if (!compatibility[ctx.family]?.includes(ctx.release)) continue;
+    const latest = ctx.release === releases[ctx.family].find((r) => compatibility[ctx.family].includes(r));
     const prefix = `/api/${ctx.family}${latest ? '' : '/' + ctx.release}${ctx.target.startsWith('2024') ? '/sa-' + ctx.target : ''}`;
     for (const group of Object.values(ctx.pages).filter((p) => p.kind === 'group')) {
       const $ = read(prefix + '/' + group.id);

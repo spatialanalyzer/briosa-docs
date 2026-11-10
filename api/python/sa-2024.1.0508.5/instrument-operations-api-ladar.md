@@ -17,58 +17,34 @@ documents them for that target.
 
 :::
 
-## Set LADAR AutoMeas Point {/* #set-ladar-automeas-point */}
+## Set LADAR AutoMeas Point {/* #set_ladar_auto_meas_point */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-point).
 No released signature is available for SA 2024.1.0508.5.
 
-## Set LADAR AutoMeas Sphere {/* #set-ladar-automeas-sphere */}
+## Set LADAR AutoMeas Sphere {/* #set_ladar_auto_meas_sphere */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-automeas-sphere).
 No released signature is available for SA 2024.1.0508.5.
 
-## Set LADAR FeatureMeas Sphere {/* #set-ladar-featuremeas-sphere */}
+## Set LADAR FeatureMeas Sphere {/* #set_ladar_feature_meas_sphere */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-sphere).
 No released signature is available for SA 2024.1.0508.5.
 
-## Set LADAR FeatureMeas Circle {/* #set-ladar-featuremeas-circle */}
+## Set LADAR FeatureMeas Circle {/* #set_ladar_feature_meas_circle */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-circle).
 No released signature is available for SA 2024.1.0508.5.
 
-## Set LADAR FeatureMeas Slot {/* #set-ladar-featuremeas-slot */}
+## Set LADAR FeatureMeas Slot {/* #set_ladar_feature_meas_slot */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-slot).
 No released signature is available for SA 2024.1.0508.5.
 
-## Set LADAR FeatureMeas Cylinder {/* #set-ladar-featuremeas-cylinder */}
+## Set LADAR FeatureMeas Cylinder {/* #set_ladar_feature_meas_cylinder */}
 
 See the [MP catalog entry](/mp-command-catalog/commands/instrument-operations-api-ladar#set-ladar-featuremeas-cylinder).
 No released signature is available for SA 2024.1.0508.5.
-
-## set_ladar_auto_meas_point {/* #set_ladar_auto_meas_point */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
-
-## set_ladar_auto_meas_sphere {/* #set_ladar_auto_meas_sphere */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
-
-## set_ladar_feature_meas_sphere {/* #set_ladar_feature_meas_sphere */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
-
-## set_ladar_feature_meas_circle {/* #set_ladar_feature_meas_circle */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
-
-## set_ladar_feature_meas_slot {/* #set_ladar_feature_meas_slot */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
-
-## set_ladar_feature_meas_cylinder {/* #set_ladar_feature_meas_cylinder */}
-
-Use the entries above. This retained anchor preserves existing bookmarks.
 
 [Candidate Source](https://github.com/spatialanalyzer/briosa-py/tree/6a04ff934d554be0767bea997f9517676674b8a4/targets/2024.1.0508.5)

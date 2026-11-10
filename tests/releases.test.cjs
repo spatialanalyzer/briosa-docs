@@ -65,7 +65,7 @@ test('current operation pages show admission profiles, risk flags, and duration 
   for (const family of ['grpc', 'dotnet', 'python', 'javascript']) {
     for (const target of ['2024.1.0508.5', '2026.1.0529.7']) {
       const text = html(`api/${family}/sa-${target}/file-operations/get-working-directory`)('.api-op').text();
-      assert.match(text, /Admission Profiles:\s*read-only, standard, device, full · Risk Flags:\s*none · Duration Class:\s*quick/, `${family} ${target}`);
+      assert.match(text, /Admission Profiles:\s*read-only, standard, device, full · Risk Flags:\s*filesystem_metadata · Duration Class:\s*quick/, `${family} ${target}`);
       const cad = html(`api/${family}/sa-${target}/file-operations/direct-cad-access`)('.api-op').text();
       assert.match(cad, /interactive opt-in/, `${family} ${target} names its request-option guard`);
     }
